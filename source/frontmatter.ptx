@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+	<bibinfo>
+		<author>
+			<personname>Alyssa J. Pasquale, Ph.D.</personname>
+			<institution>College of DuPage</institution>
+		</author>
+		<date><today /></date>
+		<website><url href="https://doctor-pasquale.com">doctor-pasquale.com</url></website>
+	    <copyright>
+    		<year>2021<ndash />2026</year>
+      		<holder>Alyssa J. Pasquale, Ph.D.</holder>
+      		<shortlicense>
+				<p>This book is licensed under creative commons as CC-BY-SA-NC. This license allows reusers to distribute, remix, adapt, and build upon the material in any medium or format for noncommercial purposes only, and only so long as attribution is given to the creator. If you remix, adapt, or build upon the material, you must license the modified material under identical terms. For more information, visit <url href="https://creativecommons.org">https://creativecommons.org</url>.</p>
+        		
+				<p>This license (CC-BY-SA-NC) includes the following elements:</p>
+
+				<ul>
+					<li><p>BY - Credit must be given to the creator</p></li>
+					<li><p>NC - Only noncommercial uses of the work are permitted</p></li>
+					<li><p>SA - Adaptations must be shared under the same terms</p></li>
+				</ul>
+        	
+				<p> The suggested attribution for this book is Circuit Analysis by Alyssa J. Pasquale, Ph.D., College of DuPage, is licensed under CC BY-NC-SA 4.0.</p>
+
+				<p>The entirety of this work was created by Alyssa J. Pasquale, Ph.D. The cover photograph is by the author and is a collection of circuit components (capacitors, trimmer pots, trimmer capacitors, soft potentiometers, inductors, toggle switches, transistors, resistors, diodes, light-emitting diodes, and incandescent lamps). All circuit diagrams, equations, and figures in this text were created by the author using LaTeX libraries.</p>
+			</shortlicense>
+    	</copyright>
+  	</bibinfo>
+
+	<titlepage>
+		<titlepage-items/>
+	</titlepage>
+
+	<colophon xml:id="front-colophon">
+		<colophon-items/>
+	</colophon>
+
+	<preface xml:id="preface">
+
+		<paragraphs>
+			<title>Purpose</title>
+
+			<p>This book was written for students taking Circuit Analysis (ENGIN-2210) at the College of DuPage. The book was originally written using my lecture notes as my template. Eventually it was adapted into a book using <pretext/>. I want students to have a free resource that they can use instead of paying hundreds of dollars for a book that they may not read and does not align exactly with my course content.</p>
+
+			<p>You do not have to be a COD student to use this textbook. All uses that abide by the license (refer to this book's colophon for license information) are allowed and encouraged.</p>
+
+		</paragraphs>
+
+		<paragraphs>
+			<title>Note to readers</title>
+
+			<p>This book will always be a work in progress. I make frequent revisions based on student feedback and issues I see students struggle with in class.</p>
+		
+			<p>I cannot guarantee that this book is free from typos. I will, however, do my best to implement your feedback if you find any issues with the text. Feel free to e-mail me at pasqualea185@cod.edu with your notes.</p>
+			
+		</paragraphs>
+
+		<paragraphs>
+			<title>Note to faculty</title>
+
+			<p>You are free to adapt or use this book for your class, provided you follow the Creative Commons guidelines expressed in this book's colophon. Additional information, including ancillary materials, are available <url href="https://doctor-pasquale.com/books/" visual="on the books page of my website" />.</p>
+			
+		</paragraphs>
+
+	<paragraphs>
+			<title>Note on generative AI</title>
+
+			<p>Generative AI was <alert>not used</alert> in any part of the process of writing or editing this book.</p>
+			
+		</paragraphs>
+
+		<paragraphs>
+			<title>Symbols</title>
+
+			<p>DC quantities will be represented by capital letters such as <m>V</m> for voltage, <m>I</m> for current, and <m>P</m> for power. Time-varying quantities will be represented by lowercase letters such as <m>v(t)</m> for voltage, <m>i(t)</m> for current, and <m>p(t)</m> for power.</p>
+			
+		</paragraphs>
+		
+		<paragraphs>
+			<title>Precision</title>
+
+			<p>Examples in this textbook have been worked out with a TI-83+ graphing calculator, as well as with calculating software such as Matlab and Microsoft Excel. Final answers are rounded to three significant digits. It's possible that your answers may be slightly different due to rounding errors. This does not mean that you are solving a problem incorrectly.</p>
+			
+		</paragraphs>
+		
+
+	   <!-- <table xml:id="ch1changelogtable" width="100%">
+			<title>Changelog</title>
+  			<tabular halign="left" break="yes">
+				<col />
+				<col />
+				<col width="60%" />
+    			<row header="yes" bottom="medium" >
+    				<cell>Date</cell>
+    				<cell>Chapter(s)</cell>
+    				<cell>Description</cell>
+    			</row>
+    			<row bottom="minor">
+    				<cell>2021/02/15</cell>
+    				<cell>all</cell>
+    				<cell><p>Changed license to CC-BY-NC-SA</p></cell>
+    			</row>
+				<row bottom="minor">
+					<cell>2021/07/12</cell>
+					<cell>all</cell>
+					<cell><p>Modified formatting and moved all figures to be in-line with the text</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2021/07/12</cell>
+					<cell><xref ref="ch1-intro" /></cell>
+					<cell><p>Included clarifying details on top-down vs. bottom-up design</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2021/07/12</cell>
+					<cell><xref ref="ch1-designtools" /></cell>
+					<cell><p>Updated list of simulation software tools used in digital systems</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2021/07/12</cell>
+					<cell><xref ref="ch1-designtools" /></cell>
+					<cell><p>Added caveat about limitations to Tinkercad's Arduino simulation</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2021/07/12</cell>
+					<cell><xref ref="ch2-memory" /></cell>
+					<cell><p>Added more explanation about what is meant by random-access memory and included information on its opposite (sequential-access memory)</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2021/07/12</cell>
+					<cell><xref ref="ch4-pinoutdiagrams" /></cell>
+					<cell><p>Included more information on each type of chip package</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2021/07/12</cell>
+					<cell><xref ref="ch10-serial" /></cell>
+					<cell><p>Changed terminology used in serial communication architecture</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2021/07/14</cell>
+					<cell>Colophon</cell>
+					<cell><p>Added attribution information</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2022/03/23</cell>
+					<cell><xref ref="ch9-atmega328ppwmmodes" /></cell>
+					<cell><p>Added more information on fast PWM and phase-correct PWM</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2022/04/18</cell>
+					<cell><xref ref="ch4-sreg" /></cell>
+					<cell><p>Added a reference for packed BCD addition in the half carry flag section</p></cell>
+				</row>
+				<row bottom="minor">
+					<cell>2025/11/24</cell>
+					<cell>all</cell>
+					<cell><p>Significant revisions to all chapters and conversion to PreTeXt.</p></cell>
+				</row>
+			</tabular>
+		</table>-->
+	
+	</preface>
+
+</frontmatter>
+

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch12-555timer">
+	<title>Practical Application: The 555 Timer</title>
+
+	<introduction>
+
+		<p>Now that comparators and capacitors are well-understood, the 555 timer can be analyzed. The 555 timer is an integrated circuit chip that is capable of performing many functions. Two of those functions are as an astable oscillator (clock) and a monostable pulse generator. The pinout diagram of a 555 timer integrated circuit chip is shown in <xref ref="555pinout" />. A pinout diagram is used to determine which pins on a chip correspond to each of the input and output signals of a functioning device. Each of these control signals will be explained as the functionality of the 555 timer is outlined below.</p>
+
+		<figure xml:id="555pinout">
+  			<caption>Pinout diagram of a 555 timer integrated circuit chip.</caption>
+			<image width="30%" xml:id="ch12-555pinout">
+				<shortdescription>Pinout diagram of the 555 timer chip, depicted as a DIP chip. Pin 1: GND. Pin 2: TRIG. Pin 3: OUT. Pin 4: RST. Pin 5: CTRL. Pin 6: THR. Pin 7: DIS. Pin 8: VCC.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\node [dipchip, num pins=8, external pins width=0] (555) at (0,0) {555};
+						\draw (555.pin 1) --++ (left:0.25) node[left] {GND};
+						\draw (555.pin 2) --++ (left:0.25) node[left] {TRIG};
+						\draw (555.pin 3) --++ (left:0.25) node[left] {OUT};
+						\draw (555.pin 4) --++ (left:0.25) node[left] {RST};
+						\draw (555.pin 5) --++ (right:0.25) node[right] {CTRL};
+						\draw (555.pin 6) --++ (right:0.25) node[right] {THR};
+						\draw (555.pin 7) --++ (right:0.25) node[right] {DIS};
+						\draw (555.pin 8) --++ (right:0.25) node[right] {VCC};
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>A 555 timer is composed of transistors, resistors, and other components. However the nature of each discrete component will be ignored and the device will be analyzed functionally. Functionally, the 555 timer consists of a voltage divider, two comparators, a digital device called an SR latch, a transistor, and an output driver. A schematic representation of this functional diagram is shown in <xref ref="555timerschematic" />. Each of the labeled connections corresponds to a pin on the integrated circuit chip (missing from the labeled connections is GROUND). Note the use of the term VCC which corresponds to the logical HIGH voltage value (usually 5<nbsp />V). Each of the comparator power connections are not shown, but are VCC for the positive supply and ground for the negative supply.</p>
+
+		<figure xml:id="555timerschematic">
+  			<caption>Functional schematic of a 555 timer.</caption>
+			<image width="100%" xml:id="ch12-555timerschematic">
+				<shortdescription>Internal circuitry of a 555 timer chip.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\tikzset{SR/.style={flipflop, flipflop def={t1=\sffamily{R}, t3=\sffamily{S}, n5=1, tu=\sffamily{RESET}, nu=1}}}
+						\draw[]	(0,0.25) node[above] {VCC} to [R, bipoles/length=1cm, resistors/zigs=2] (0,-2);
+						\draw[]	(0,-2) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-4.1);
+						\draw[]	(0,-4.1) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-6) node[ground] {};
+						\draw[]	(1,-2) node[op amp, anchor=-, scale=0.6, yscale=-1] (thresh) {};
+						\draw[]	(thresh.+) --++ (left:2) node[left] {THRESHOLD};
+						\draw[]	(thresh.-) to [short, -*] ++ (left:1);
+						\draw[]	($(thresh.-)-(0.25,0)$) to [short, *-] ++ (up:2) node[above, anchor=south west, align=left] {CONTROL};
+						\draw[]	(1,-4.1) node[op amp, scale=0.6, anchor=+] (trig) {};
+						\draw[]	(trig.-) --++ (left:2) node[left] {TRIGGER};
+						\draw[]	(trig.+) to [short, -*] ++ (left:1);
+						\node [SR, anchor=east, align=center, scale=0.8] (SR) at (5,-2.75) {};
+						\draw[]	(thresh.out) |- (SR.pin 1);
+						\draw[]	(trig.out) |- (SR.pin 3);
+						\draw[]	(SR.up) to [short] ++ (up:1) node[above] {RESET};
+						\draw (7,-2.75) node[buffer port, anchor=in 1] (NOT) {};
+						\draw[]	(SR.pin 5) to [short, -o] ($(NOT.bin 1)-(0.05,0)$);
+						\draw[]	(NOT.out) --++ (right:1) node[right] {OUT};
+						\node [npn, anchor=B, rotate=-90] (NPN) at (6,-5) {};
+						\draw[]	(NPN.B) to [short, -*] ++(up:2.25);
+						\draw[]	(NPN.C) --++ (right:2) node[right] {DISCHARGE};
+						\draw[]	(NPN.E) to [short, -*] ++(left:5.225);
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>On the left-hand side of the schematic are three resistors acting as a voltage divider. The reference voltage for the upper comparator (the threshold comparator) is therefore 2/3 VCC (which would be 3.3<nbsp />V given a VCC of 5<nbsp />V). As soon as the voltage on the THRESHOLD pin exceeds 3.3<nbsp />V, the output of the threshold comparator will saturate at VCC. The threshold comparator output is connected to the R input of an SR latch. The R stands for reset. That will cause the output of the latch to be LOW; however, since the latch output is inverted (which is the meaning of the bubble), the latch output will be HIGH. Two things happen with this signal. First, the transistor will be activated, causing a short between the DISCHARGE pin and ground. Second, the output driver will invert the HIGH value and cause the output to be LOW (0<nbsp />V). If the THRESHOLD voltage is less than 3.3<nbsp />V, then the output of the comparator will saturate LOW. The reset input of the latch will not be activated.</p>
+
+		<p>The reference voltage for the lower comparator (the trigger comparator) is 1/3 VCC (1.7<nbsp />V given a VCC of 5<nbsp />V). If the voltage on the TRIGGER pin becomes less than 1.7<nbsp />V, the output of the trigger comparator will saturate HIGH, causing the S input to be activated. This input stands for set. This will cause the output of the latch to be HIGH; however, since the latch output is inverted, the latch output will be LOW. This will cause the transistor to be deactivated, electrically disconnecting the DISCHARGE pin from ground. Second, the output driver will invert the LOW value and cause the output to be HIGH (5<nbsp />V). If the TRIGGER voltage is greater than 1.7<nbsp />V, then the output of the comparator will saturate LOW. The set input of the latch will not be activated.</p>
+
+		<p>If both the set and reset inputs (S and R) on the SR latch are LOW, the output of the latch will continue to be whatever value was previously stored on that output. (For more information about latches, please refer to my <url href="https://doctor-pasquale.com/wp-content/uploads/2020/11/DigitalSystemsBook.pdf" visual="Digital Systems textbook" />.)</p>
+
+		<p>The other two input pins are CONTROL and RESET. The CONTROL pin can be used to change the value of the voltage divider at the threshold comparator. It will not be discussed in this book. When unused, it should be connected to ground via a 10<nbsp />nF capacitor that will remove any noise from the voltage divider. The RESET pin can be used to manually force the output of the timer to be LOW. When unused, it should be connected to VCC.</p>
+	
+  	</introduction>
+
+  	<section xml:id="ch12-astablemode">
+		<title>Astable Mode</title>
+
+		<p>An astable oscillator is simply a name for a circuit whose output oscillates between two different values. This is particularly important for digital logic circuits that require clock signals. A clock signal is simply a square wave that oscillates between LOW and HIGH voltage values. An example of a clock signal is depicted in <xref ref="clocksignalfigure" />.</p>
+
+		<figure xml:id="clocksignalfigure">
+  			<caption>Graphical depiction of a digital clock signal.</caption>
+			<image width="100%" xml:id="ch12-clocksignalfigure">
+				<shortdescription>Graph of a clock signal. The signal is LOW from 0 to some arbitrary time, and then goes HIGH until <m>T</m>. This pattern repeats periodically for a few cycles.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\begin{axis}[xlabel=$t$~(arbitrary), xmin=0, xmax=3, xtick={0, 1, 2}, xticklabels={0, $T$, $2T$}, ymin=0, ymax=1.05, ytick={0, 1}, yticklabels={LOW,HIGH}, width=\linewidth, height=3.5cm, axis x line=bottom, axis y line = left]
+							\addplot[black, thick] coordinates {(0,1) (0.5,1) (0.5,0) (1,0) (1,1) (1.5,1) (1.5,0) (2,0) (2,1) (2.5,1) (2.5,0) (3,0)};
+	    				\end{axis}
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>The idea is to connect the TRIGGER and THRESHOLD pins and connect them to an RC circuit such that the voltage drop over the capacitor continuously changes. As it changes from 1/3<nbsp />VCC to 2/3<nbsp />VCC, the output will oscillate between HIGH and LOW. The 555 timer in astable mode is connected as shown in <xref ref="555timerastable" />. (The CONTROL pin is connected to a noise-reducing capacitor and the RESET pin is connected to VCC.)</p>
+
+		<figure xml:id="555timerastable">
+  			<caption>Functional schematic of a 555 timer connected in astable mode.</caption>
+			<image width="100%" xml:id="ch12-555timerastable">
+				<shortdescription>Internal circuitry of a 555 timer chip. Resistor R1 is connected between pins VCC and DISCHARGE. Resistor R2 is connected between DISCHARGE and THRESHOLD. Capacitor C is connected between THRESHOLD and GND. THRESHOLD and TRIGGER are shorted together.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\tikzset{SR/.style={flipflop, flipflop def={t1=\sffamily{R}, t3=\sffamily{S}, n5=1, tu=\sffamily{RESET}, nu=1}}}
+						\draw[]	(0,0.25) node[above] {VCC} to [R, bipoles/length=1cm, resistors/zigs=2] (0,-2);
+						\draw[]	(0,-2) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-4.1);
+						\draw[]	(0,-4.1) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-6) node[ground] {};
+						\draw[]	(1,-2) node[op amp, anchor=-, scale=0.6, yscale=-1] (thresh) {};
+						\draw[]	(thresh.+) --++ (left:2) node[left] {THRESHOLD};
+						\draw[]	(thresh.-) to [short, -*] ++ (left:1);
+						\draw[]	($(thresh.-)-(0.25,0)$) to [short, *-] ++ (up:1.5);
+						\draw[]	($(thresh.-)+(-0.25,1.5)$) to [C, l^=10~nF] ++(right:2) node[ground] {};
+						\draw[]	(1,-4.1) node[op amp, scale=0.6, anchor=+] (trig) {};
+						\draw[]	(trig.-) --++ (left:2) node[left] {TRIGGER};
+						\draw[]	(trig.+) to [short, -*] ++ (left:1);
+						\node [SR, anchor=east, align=center, scale=0.8] (SR) at (5,-2.75) {};
+						\draw[]	(thresh.out) |- (SR.pin 1);
+						\draw[]	(trig.out) |- (SR.pin 3);
+						\draw[]	(SR.up) to [short] ++ (up:0.5) node[above] {VCC};
+						\draw (7,-2.75) node[buffer port, anchor=in 1] (NOT) {};
+						\draw[]	(SR.pin 5) to [short, -o] ($(NOT.bin 1)-(0.05,0)$);
+						\draw[]	(NOT.out) --++ (right:1) node[right] {OUT};
+						\node [npn, anchor=B, rotate=-90] (NPN) at (6,-5) {};
+						\draw[]	(NPN.B) to [short, -*] ++(up:2.25);
+						\draw[]	(NPN.C) --++ (right:2) node[right] {DISCHARGE};
+						\draw[]	(NPN.E) to [short, -*] ++(left:5.225);
+						\draw[]	($(thresh.+)-(1.5,0)$) to [short, *-*] ($(trig.-)-(1.5,0)$);
+						\draw[]	($(trig.-)-(1.5,0)$) to [short] ++(down:3.25);
+						\draw[]	($(trig.-)-(1.5,3.25)$) to [C, bipoles/length=1cm, l^=$C$, v_=$v_C(t)$] ++(left:2) node[ground] {};
+						\draw[]	($(trig.-)-(1.5,3.25)$) to [R, l^=$R_2$, *-] ++ (right:8.5);
+						\draw[]	($(trig.-)+(7,-3.25)$) to [short, -*] ++(up:0.93);
+						\draw[]	($(trig.-)+(7,-2.32)$) to [R, l^=$R_1$, bipoles/length=1cm, resistors/zigs=2] ++(up:1.5) node[above] {VCC};
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>In the beginning, the capacitor will have no voltage drop. Because TRIGGER will be less than 1/3<nbsp />VCC, the output will be HIGH, and the transistor will be deactivated. A pathway between VCC and ground exists through the capacitor, and it will begin to charge up. This is depicted in <xref ref="555timerastablecharging" />.</p>
+
+		<figure xml:id="555timerastablecharging">
+  			<caption>Functional schematic of a 555 timer connected in astable mode. When the output is HIGH (TRIGGER is less than 1/3<nbsp />VCC), the transistor is deactivated and current will flow as shown to charge the capacitor.</caption>
+			<image width="100%" xml:id="ch12-555timerastablecharging">
+				<shortdescription>Internal circuitry of a 555 timer chip connected in astable mode. The path from VCC through R1, R2, and C to GND is highlighted in red.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\tikzset{SR/.style={flipflop, flipflop def={t1=\sffamily{R}, t3=\sffamily{S}, n5=1, tu=\sffamily{RESET}, nu=1}}}
+						\draw[]	(0,0.25) node[above] {VCC} to [R, bipoles/length=1cm, resistors/zigs=2] (0,-2);
+						\draw[]	(0,-2) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-4.1);
+						\draw[]	(0,-4.1) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-6) node[ground] {};
+						\draw[]	(1,-2) node[op amp, anchor=-, scale=0.6, yscale=-1] (thresh) {};
+						\draw[]	(thresh.+) --++ (left:2) node[left] {THRESHOLD};
+						\draw[]	(thresh.-) to [short, -*] ++ (left:1);
+						\draw[]	($(thresh.-)-(0.25,0)$) to [short, *-] ++ (up:1.5);
+						\draw[]	($(thresh.-)+(-0.25,1.5)$) to [C, l^=10~nF] ++(right:2) node[ground] {};
+						\draw[]	(1,-4.1) node[op amp, scale=0.6, anchor=+] (trig) {};
+						\draw[]	(trig.-) --++ (left:2) node[left] {TRIGGER};
+						\draw[]	(trig.+) to [short, -*] ++ (left:1);
+						\node [SR, anchor=east, align=center, scale=0.8] (SR) at (5,-2.75) {};
+						\draw[]	(thresh.out) |- (SR.pin 1);
+						\draw[]	(trig.out) |- (SR.pin 3);
+						\draw[]	(SR.up) to [short] ++ (up:0.5) node[above] {VCC};
+						\draw (7,-2.75) node[buffer port, anchor=in 1] (NOT) {};
+						\draw[]	(SR.pin 5) to [short, -o] ($(NOT.bin 1)-(0.05,0)$);
+						\draw[]	(NOT.out) --++ (right:1) node[right] {OUT};
+						\node [npn, anchor=B, rotate=-90] (NPN) at (6,-5) {};
+						\draw[]	(NPN.B) to [short, -*] ++(up:2.25);
+						\draw[]	(NPN.C) --++ (right:2) node[right] {DISCHARGE};
+						\draw[]	(NPN.E) to [short, -*] ++(left:5.225);
+						\draw[]	($(thresh.+)-(1.5,0)$) to [short, *-*] ($(trig.-)-(1.5,0)$);
+						\draw[]	($(trig.-)-(1.5,0)$) to [short] ++(down:3.25);
+						\draw[red]	($(trig.-)-(1.5,3.25)$) to [C, bipoles/length=1cm, l^=$C$, v_=$v_C(t)$, color=red] ++(left:2) node[ground] {};
+						\draw[red]	($(trig.-)-(1.5,3.25)$) to [R, l^=$R_2$, *-, color=red] ++ (right:8.5);
+						\draw[red]	($(trig.-)+(7,-3.25)$) to [short, -*, color=red] ++(up:0.93);
+						\draw[red]	($(trig.-)+(7,-2.32)$) to [R, l^=$R_1$, bipoles/length=1cm, resistors/zigs=2, color=red] ++(up:1.5) node[above] {VCC};
+						\draw [-Stealth, thick, rounded corners=2.5mm] (8.25,-4.25) --++ (down:2.75) --++ (left:10.5);
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>As soon as <m>v_C(t)</m> reaches 1/3<nbsp />VCC, the trigger comparator will saturate LOW, disabling the set pin on the latch. Once <m>v_C(t)</m> exceeds 2/3<nbsp />VCC, the threshold comparator will saturate HIGH, causing the latch to reset. This will activate the transistor and cause the capacitor to discharge through <m>R_2</m>, as shown in <xref ref="555timerastabledischarging" />.</p>
+
+		<figure xml:id="555timerastabledischarging">
+  			<caption>Functional schematic of a 555 timer connected in astable mode. When the output is LOW (THRESHOLD is greater than 2/3<nbsp />VCC), the transistor is activated and current will flow as shown to discharge the capacitor.</caption>
+			<image width="100%" xml:id="ch12-555timerastabledischarging">
+				<shortdescription>Internal circuitry of a 555 timer chip connected in astable mode. The path from the capacitor through R2 to GND is highlighted in blue.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\tikzset{SR/.style={flipflop, flipflop def={t1=\sffamily{R}, t3=\sffamily{S}, n5=1, tu=\sffamily{RESET}, nu=1}}}
+						\draw[]	(0,0.25) node[above] {VCC} to [R, bipoles/length=1cm, resistors/zigs=2] (0,-2);
+						\draw[]	(0,-2) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-4.1);
+						\draw[]	(0,-4.1) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-6) node[ground] {};
+						\draw[]	(1,-2) node[op amp, anchor=-, scale=0.6, yscale=-1] (thresh) {};
+						\draw[]	(thresh.+) --++ (left:2) node[left] {THRESHOLD};
+						\draw[]	(thresh.-) to [short, -*] ++ (left:1);
+						\draw[]	($(thresh.-)-(0.25,0)$) to [short, *-] ++ (up:1.5);
+						\draw[]	($(thresh.-)+(-0.25,1.5)$) to [C, l^=10~nF] ++(right:2) node[ground] {};
+						\draw[]	(1,-4.1) node[op amp, scale=0.6, anchor=+] (trig) {};
+						\draw[]	(trig.-) --++ (left:2) node[left] {TRIGGER};
+						\draw[]	(trig.+) to [short, -*] ++ (left:1);
+						\node [SR, anchor=east, align=center, scale=0.8] (SR) at (5,-2.75) {};
+						\draw[]	(thresh.out) |- (SR.pin 1);
+						\draw[]	(trig.out) |- (SR.pin 3);
+						\draw[]	(SR.up) to [short] ++ (up:0.5) node[above] {VCC};
+						\draw (7,-2.75) node[buffer port, anchor=in 1] (NOT) {};
+						\draw[]	(SR.pin 5) to [short, -o] ($(NOT.bin 1)-(0.05,0)$);
+						\draw[]	(NOT.out) --++ (right:1) node[right] {OUT};
+						\node [npn, anchor=B, rotate=-90, color=blue] (NPN) at (6,-5) {};
+						\draw[]	(NPN.B) to [short, -*] ++(up:2.25);
+						\draw[blue]	(NPN.C) --++ (right:2) node[right, color=black] {DISCHARGE};
+						\draw[blue]	(NPN.E) to [short, -*, color=blue] ++(left:5.225);
+						\draw[]	($(thresh.+)-(1.5,0)$) to [short, *-*] ($(trig.-)-(1.5,0)$);
+						\draw[]	($(trig.-)-(1.5,0)$) to [short] ++(down:3.25);
+						\draw[blue]	($(trig.-)-(1.5,3.25)$) to [C, bipoles/length=1cm, l^=$C$, v_=$v_C(t)$, color=blue] ++(left:2) node[ground] {};
+						\draw[blue]	($(trig.-)-(1.5,3.25)$) to [R, l^=$R_2$, *-, color=blue] ++ (right:8.5);
+						\draw[blue]	($(trig.-)+(7,-3.25)$) to [short, -*, color=blue] ++(up:0.93);
+						\draw[]	($(trig.-)+(7,-2.32)$) to [R, l^=$R_1$, bipoles/length=1cm, resistors/zigs=2] ++(up:1.5) node[above] {VCC};
+						\draw [-Stealth, thick, rounded corners=2.5mm] (-0.5,-7) --++ (right:8.75) --++ (up:1) --++ (left:7.75) --++ (down:0.5);
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>Once the voltage drop over the capacitor decreases below 1/3<nbsp />VCC, the trigger comparator will then saturate HIGH. This cycle will repeat itself where the capacitor charges from 1/3<nbsp />VCC to 2/3<nbsp />VCC and then discharges back to 1/3<nbsp />VCC. Meanwhile, the digital nature of the comparators and the output driver creates a square wave output signal.</p>
+
+		<p>Because the capacitor charges through <m>R_1</m> and <m>R_2</m> and discharges only through <m>R_2</m>, the capacitor will spend more time charging than discharging. The output therefore does not have an equal amount of time spent HIGH and LOW. (In other words, the duty cycle will be greater than 50%.) An example waveform that shows <m>v_C(t)</m> as well as the output signal is shown in <xref ref="555astableoutput" />. In this example, <m>R_1=R_2=1~\textrm{k}\Omega</m> and <m>C=10~\mu\textrm{F}</m>. (Note also that the first waveform has an even higher duty cycle due to the fact that the capacitor must charge from 0 rather than from 1/3<nbsp />VCC.)</p>
+
+		<figure xml:id="555astableoutput">
+  			<caption>Voltage drop over the capacitor (top graph) and output voltage (bottom graph) in astable mode. <m>R_1=R_2=1~\textrm{k}\Omega</m> and <m>C=10~\mu\textrm{F}</m>.</caption>
+			<image width="100%" xml:id="ch12-555astableoutput">
+				<shortdescription>Graph of the charging and discharging of capacitor C in astable mode, as well as the contemporaneous value on the OUT pin.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\begin{groupplot}[group style={group name=my plots, group size=1 by 2, vertical sep=0pt, xlabels at=edge bottom, xticklabels at=edge bottom,}, width=\linewidth, height=3.5cm, xlabel=$t$~(s), xmin=0, xmax=0.065, ymin=0, ymax=5.5]
+						\nextgroupplot[ylabel=$v_C(t)$~(V), ytick={0,2.5,5}]
+							\addplot[thick, domain=0:0.02197, samples=50]			{5-5*e^-(50*x)};
+							\addplot[thick, domain=0.02197:0.0289, samples=50]	{3.333*e^(-100*(x-0.02197))};
+							\addplot[thick, domain=0.0289:0.0428, samples=50]	{5-3.333*e^(-50*(x-0.0289))};
+							\addplot[thick, domain=0.0428:0.0497, samples=50]	{3.333*e^(-100*(x-0.0428))};
+							\addplot[thick, domain=0.0497:0.0636, samples=50]	{5-3.333*e^(-50*(x-0.0497))};
+							\addplot[thick, domain=0.0636:0.065, samples=50]	{3.333*e^(-100*(x-0.0636))};
+							\addplot[dashed] coordinates {(0,1.666666666) (1,1.666666666)};
+							\addplot[dashed] coordinates {(0,3.333333333) (1,3.333333333)};
+						\nextgroupplot[ylabel=$v_{OUT}(t)$~(V), ytick={0,2.5,5}]
+							\addplot[thick] coordinates {(0,5) (0.02197,5) (0.02197,0) (0.0289,0) (0.0289,5) (0.0428, 5) (0.0428, 0) (0.0497, 0) (0.0497, 5) (0.0636,5) (0.0636,0) (1,0)};
+						\end{groupplot}
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p><xref ref="ch5-homogeneousrctransient" /> and <xref ref="ch5-eqrcchargingvoltage" /> can be used to determine the amount of time the output signal is HIGH (<m>T_{HIGH}</m>) as well as the amount of time the output signal is LOW (<m>T_{LOW}</m>). These values are expressed in <xref ref="555astabletimes1" /> and <xref ref="555astabletimes2" />.</p>
+
+		<p>
+			<md number="yes">
+				<mrow xml:id="555astabletimes1">T_{HIGH} \amp= C(R_1+R_2)\ln{2}</mrow>
+				<mrow xml:id="555astabletimes2">T_{LOW} \amp= CR_2\ln{2}</mrow>
+			</md>
+		</p>
+
+	</section>
+
+	<section xml:id="ch12-monostablemode">
+		<title>Monostable Mode</title>
+
+		<p>In monostable mode, the 555 timer is capable of creating a single pulse upon a trigger event. The pulse-width will be related to the value of the resistor and capacitor used in the external circuitry. In this case, the TRIGGER pin will be connected to an external trigger (perhaps a pushbutton or another electronic signal). When the value on the TRIGGER pin is less than 1/3<nbsp />VCC, it will cause the capacitor to charge up a single time, creating one pulse. The 555 timer connected in monostable mode is shown in <xref ref="555timermonostable" />.</p>
+
+		<figure xml:id="555timermonostable">
+  			<caption>Functional schematic of a 555 timer connected in monostable mode.</caption>
+			<image width="100%" xml:id="ch12-555timermonostable">
+				<shortdescription>Internal circuitry of a 555 timer chip. Resistor R is connected between pins VCC and DISCHARGE. DISCHARGE and THRESHOLD are shorted. Capacitor C is connected between THRESHOLD and GND.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\tikzset{SR/.style={flipflop, flipflop def={t1=\sffamily{R}, t3=\sffamily{S}, n5=1, tu=\sffamily{RESET}, nu=1}}}
+						\draw[]	(0,0.25) node[above] {VCC} to [R, bipoles/length=1cm, resistors/zigs=2] (0,-2);
+						\draw[]	(0,-2) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-4.1);
+						\draw[]	(0,-4.1) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-6) node[ground] {};
+						\draw[]	(1,-2) node[op amp, anchor=-, scale=0.6, yscale=-1] (thresh) {};
+						\draw[]	(thresh.+) --++ (left:2) node[left] {THRESHOLD};
+						\draw[]	(thresh.-) to [short, -*] ++ (left:1);
+						\draw[]	($(thresh.-)-(0.25,0)$) to [short, *-] ++ (up:1.5);
+						\draw[]	($(thresh.-)+(-0.25,1.5)$) to [C, l^=10~nF] ++(right:2) node[ground] {};
+						\draw[]	(1,-4.1) node[op amp, scale=0.6, anchor=+] (trig) {};
+						\draw[]	(trig.-) --++ (left:2) node[left] {TRIGGER};
+						\draw[]	(trig.+) to [short, -*] ++ (left:1);
+						\node [SR, anchor=east, align=center, scale=0.8] (SR) at (5,-2.75) {};
+						\draw[]	(thresh.out) |- (SR.pin 1);
+						\draw[]	(trig.out) |- (SR.pin 3);
+						\draw[]	(SR.up) to [short] ++ (up:0.5) node[above] {VCC};
+						\draw (7,-2.75) node[buffer port, anchor=in 1] (NOT) {};
+						\draw[]	(SR.pin 5) to [short, -o] ($(NOT.bin 1)-(0.05,0)$);
+						\draw[]	(NOT.out) --++ (right:1) node[right] {OUT};
+						\node [npn, anchor=B, rotate=-90] (NPN) at (6,-5) {};
+						\draw[]	(NPN.B) to [short, -*] ++(up:2.25);
+						\draw[]	(NPN.C) --++ (right:2) node[right, color=black] {DISCHARGE};
+						\draw[]	(NPN.E) to [short, -*] ++(left:5.225);
+						\draw[]	($(thresh.+)-(1.5,0)$) to [short, *-] ($(trig.-)-(1.5,0)$);
+						\draw[]	($(trig.-)-(1.5,0)$) to [short] ++(down:3.25);
+						\draw[]	($(trig.-)-(1.5,3.25)$) to [C, bipoles/length=1cm, l^=$C$, v_=$v_C(t)$] ++(left:2) node[ground] {};
+						\draw[]	($(trig.-)-(1.5,3.25)$) to [short, *-] ++ (right:8.5);
+						\draw[]	($(trig.-)+(7,-3.25)$) to [short, -*] ++(up:0.93);
+						\draw[]	($(trig.-)+(7,-2.32)$) to [R, l^=$R$, bipoles/length=1cm, resistors/zigs=2] ++(up:1.5) node[above] {VCC};
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>In the beginning, <m>v_C</m> will be zero. The THRESHOLD value will be less than 2/3<nbsp />VCC, and as long as TRIGGER is held at a voltage higher than 1/3<nbsp />VCC, the OUTPUT will be LOW and the capacitor will be connected to ground via the transistor. This will continue to be the case as long as the TRIGGER input does not change. As soon as a voltage less than 1/3<nbsp />VCC is presented on the TRIGGER pin, the OUTPUT signal will become HIGH. This will cause current to flow and the capacitor to charge, as shown in <xref ref="555timermonostablecharging" />.</p>
+
+		<figure xml:id="555timermonostablecharging">
+  			<caption>Functional schematic of a 555 timer connected in monostable mode. When a voltage of less than 1/3<nbsp />VCC is present on TRIGGER, the capacitor will charge, as shown.</caption>
+			<image width="100%" xml:id="ch12-555timermonostablecharging">
+				<shortdescription>Internal circuitry of a 555 timer chip connected in monostable mode. The path from VCC through R and C to GND is highlighted in red.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\tikzset{SR/.style={flipflop, flipflop def={t1=\sffamily{R}, t3=\sffamily{S}, n5=1, tu=\sffamily{RESET}, nu=1}}}
+						\draw[]	(0,0.25) node[above] {VCC} to [R, bipoles/length=1cm, resistors/zigs=2] (0,-2);
+						\draw[]	(0,-2) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-4.1);
+						\draw[]	(0,-4.1) to [R, bipoles/length=1cm, resistors/zigs=2] (0,-6) node[ground] {};
+						\draw[]	(1,-2) node[op amp, anchor=-, scale=0.6, yscale=-1] (thresh) {};
+						\draw[]	(thresh.+) --++ (left:2) node[left] {THRESHOLD};
+						\draw[]	(thresh.-) to [short, -*] ++ (left:1);
+						\draw[]	($(thresh.-)-(0.25,0)$) to [short, *-] ++ (up:1.5);
+						\draw[]	($(thresh.-)+(-0.25,1.5)$) to [C, l^=10~nF] ++(right:2) node[ground] {};
+						\draw[]	(1,-4.1) node[op amp, scale=0.6, anchor=+] (trig) {};
+						\draw[]	(trig.-) --++ (left:2) node[left] {TRIGGER};
+						\draw[]	(trig.+) to [short, -*] ++ (left:1);
+						\node [SR, anchor=east, align=center, scale=0.8] (SR) at (5,-2.75) {};
+						\draw[]	(thresh.out) |- (SR.pin 1);
+						\draw[]	(trig.out) |- (SR.pin 3);
+						\draw[]	(SR.up) to [short] ++ (up:0.5) node[above] {VCC};
+						\draw (7,-2.75) node[buffer port, anchor=in 1] (NOT) {};
+						\draw[]	(SR.pin 5) to [short, -o] ($(NOT.bin 1)-(0.05,0)$);
+						\draw[]	(NOT.out) --++ (right:1) node[right] {OUT};
+						\node [npn, anchor=B, rotate=-90] (NPN) at (6,-5) {};
+						\draw[]	(NPN.B) to [short, -*] ++(up:2.25);
+						\draw[]	(NPN.C) --++ (right:2) node[right, color=black] {DISCHARGE};
+						\draw[]	(NPN.E) to [short, -*] ++(left:5.225);
+						\draw[]	($(thresh.+)-(1.5,0)$) to [short, *-] ($(trig.-)-(1.5,0)$);
+						\draw[]	($(trig.-)-(1.5,0)$) to [short] ++(down:3.25);
+						\draw[red]	($(trig.-)-(1.5,3.25)$) to [C, bipoles/length=1cm, l^=$C$, v_=$v_C(t)$, color=red] ++(left:2) node[ground] {};
+						\draw[red]	($(trig.-)-(1.5,3.25)$) to [short, *-, color=red] ++ (right:8.5);
+						\draw[red]	($(trig.-)+(7,-3.25)$) to [short, -*, color=red] ++(up:0.93);
+						\draw[red]	($(trig.-)+(7,-2.32)$) to [R, l^=$R$, bipoles/length=1cm, resistors/zigs=2, color=red] ++(up:1.5) node[above] {VCC};
+						\draw [-Stealth, thick, rounded corners=2.5mm] (8.25,-4.25) --++ (down:2.75) --++ (left:10.5);
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>Because the TRIGGER pulse was short-lived, the trigger comparator will saturate LOW as soon as the TRIGGER signal returns HIGH. This will cause the SR latch output to remain unchanged. As soon as the voltage drop over the capacitor reaches 2/3<nbsp />VCC, the threshold comparator will saturate HIGH, causing the SR latch to reset (OUTPUT will be LOW gain). The capacitor will discharge directly to ground through the transistor without going through any resistance, causing an abrupt discharge to zero. The output will remain in equilibrium unless the TRIGGER pin is sent LOW again.</p>
+
+		<p>A graph of the TRIGGER pulse and the resulting values of <m>v_C(t)</m> and the OUTPUT signal are shown in <xref ref="555monostableoutput" />.</p>
+
+		<figure xml:id="555monostableoutput">
+  			<caption>Trigger input (top graph), voltage drop over the capacitor (center graph), and output voltage (bottom graph) in monostable mode. <m>R = 1~\textrm{k}\Omega</m> and <m>C = 1~\mu\textrm{F}</m>.</caption>
+			<image width="100%" xml:id="ch12-555monostableoutput">
+				<shortdescription>Graph of the charging of capacitor C in monostable mode, as well as the contemporaneous value on the OUT pin.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\begin{groupplot}[group style={group name=my plots, group size=1 by 3, vertical sep=0pt, xlabels at=edge bottom, xticklabels at=edge bottom,}, width=\linewidth-10pt, height=3.5cm, xlabel=$t$~(s), xmin=0, xmax=0.024, ymin=0, ymax=5.5]
+						\nextgroupplot[ylabel=TRIGGER~(V), ytick={0,2.5,5}]
+							\addplot[thick] coordinates {(0,5) (0.005,5) (0.005,0) (0.006,0) (0.006,5) (0.024,5)};
+						\nextgroupplot[ylabel=$v_C(t)$~(V), ytick={0,2.5,5}]
+							\addplot[thick] coordinates {(0,0) (0.005,0)};
+							\addplot[thick, domain=0.005:0.015986, samples=50]	{5-5*e^(-100*(x-0.005))};
+							\addplot[thick] coordinates {(0.015986,3.3333) (0.015986,0) (0.1,0)};
+							\addplot[dashed] coordinates {(0,3.333333333) (0.024,3.333333333)};
+						\nextgroupplot[ylabel=$v_{OUT}(t)$~(V), ytick={0,2.5,5}]
+							\addplot[thick] coordinates {(0,0) (0.005,0) (0.005,5) (00.015986,5) (0.015986,0) (0.024,0)};
+						\end{groupplot}
+					\end{tikzpicture}
+				</latex-image>
+			</image>
+		</figure>
+
+		<p><xref ref="ch5-eqrcchargingvoltage" /> can be used to calculate the amount of time the output signal is HIGH (<m>T_{HIGH}</m>). This value is expressed in <xref ref="555monostabletimesequation" />.</p>
+
+		<p>
+			<md number="yes" xml:id="555monostabletimesequation">T_{HIGH} = CR\ln{3}</md>
+		</p>
+
+		<p>Because the TRIGGER pin is connected externally, there are two important consequences. First, the output will remain HIGH for the entire time that the TRIGGER pin voltage is lower than 1/3<nbsp />VCC, which may be longer than the amount of time described in <xref ref="555monostabletimesequation" />. Therefore it is important to ensure that the TRIGGER pulse-width is shorter than the amount of time given in <xref ref="555monostabletimesequation" />.</p>
+
+		<p>Second, any subsequent TRIGGER event needs to occur after the capacitor has charged to 2/3<nbsp />VCC and then discharged back to zero again. Otherwise, the second event will not generate an output pulse.</p>
+
+	</section>
+
+
+</chapter>

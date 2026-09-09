@@ -1,0 +1,2379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch11-laplace">
+	<title>Laplace Transforms and s-Domain Analysis</title>
+
+	<introduction>
+
+		<p>Laplace transforms and s-domain analysis allows us to solve circuit analysis problems in a new way that solves some of the difficulties experienced in earlier methods, particularly in <xref ref="ch7-variableinput" />.</p>
+		
+		<p>The process for solving a circuit using Laplace transforms follows.</p>
+		
+		<p>
+			<ol>
+				<li><p>Convert a time-domain circuit into an <m>s</m>-domain circuit.</p></li>
+				<li><p>Solve for the output in the <m>s</m>-domain.</p></li>
+				<li><p>Use partial fraction expansion to represent the output as a sum of partial fractions.</p></li>
+				<li><p>Use the inverse Laplace transform to derive the output in the time domain.</p></li>
+			</ol>
+		</p>
+	
+  	</introduction>
+
+  	<section xml:id="ch11-laplacetransform">
+		<title>The Laplace Transform</title>
+
+		<p>The Laplace transform converts a time-domain function (a function that is represented by the variable <m>t</m>) into the <m>s</m>-domain. The variable <m>s</m> is a complex variable defined by <xref ref="ch11-eq-definition-of-s" />. As discussed in <xref ref="ch9-funcpolezero" /> of this book (although we did not formally use the variable <m>s</m> yet at that point), <m>s</m> relates to the location of a pole or zero on the complex axis. The real part (<m>\sigma</m>) relates to decaying exponential terms and the imaginary part (<m>\omega</m>) relates to oscillatory (sinusoidal) terms. Phasor analysis performed a similar transformation where <m>\sigma = 0</m> (the circuits were purely sinusoidal).</p>
+		
+		<p>
+			<md number="yes" xml:id="ch11-eq-definition-of-s">s = \sigma + j\omega</md>
+		</p>
+
+		<p>The Laplace transform is used to simplify the analysis of circuits containing energy-storage elements such as capacitors and inductors. As was the case in phasor analysis, using the Laplace transform converts calculus to algebra.</p>
+
+		<p>The Laplace transform is defined in <xref ref="ch11-eq-laplace-transform-definition" />.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch11-eq-laplace-transform-definition">\Laplace\{f(t)\} = \int_{0^-}^\infty f(t)\textrm{e}^{-st}\,dt</md>
+		</p>
+
+		<p>This textbook will not rigorously derive Laplace transforms for various elementary functions. Instead, Laplace transforms used for several frequently-used time-varying functions are given in <xref ref="ch11-table-of-laplace-transforms" />. These transforms will be directly applied to functions in the time domain to convert them to the <m>s</m>-domain without requiring the direct use of <xref ref="ch11-eq-laplace-transform-definition" /> (which frequently necessitates the use of integration by parts). The reader is encouraged to derive the equations themselves if they would like to convince themselves of their veracity.</p>
+
+		<table xml:id="ch11-table-of-laplace-transforms">
+			<title>Laplace transforms of commonly-used time-varying functions.</title>
+  			<tabular halign="left" width="100%">
+				<col width="50%" />
+				<col width="50%" />
+    			<row header="yes" bottom="none">
+      				<cell><p>Function</p></cell>
+      				<cell><p>Laplace Transform</p></cell>
+	    		</row>
+				<row header="yes" bottom="medium">
+      				<cell><m>f(t)</m></cell>
+      				<cell><m>F(s) = \Laplace\{f(t)\}</m></cell>
+	    		</row>
+    			<row bottom="minor">
+      				<cell><m>\delta(t)</m></cell>
+      				<cell><m>1</m></cell>
+				</row>
+    			<row bottom="minor">
+      				<cell><m>u(t)</m></cell>
+      				<cell><m>\frac{1}{s}</m></cell>
+				</row>
+    			<row bottom="minor">
+      				<cell><m>t~u(t)</m></cell>
+      				<cell><m>\frac{1}{s^2}</m></cell>
+				</row>
+    			<row bottom="minor">
+      				<cell><m>\textrm{e}^{-\alpha t}~u(t)</m></cell>
+      				<cell><m>\frac{1}{s+\alpha}</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><m>t~\textrm{e}^{-\alpha t}~u(t)</m></cell>
+      				<cell><m>\frac{1}{(s+\alpha)^2}</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><m>\sin(\omega t)~u(t)</m></cell>
+      				<cell><m>\frac{\omega}{s^2 + \omega^2}</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><m>\cos(\omega t)~u(t)</m></cell>
+      				<cell><m>\frac{s}{s^2 + \omega^2}</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><m>\textrm{e}^{-\alpha t}~\sin(\omega t)~u(t)</m></cell>
+      				<cell><m>\frac{\omega}{(s+\alpha)^2 + \omega^2}</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><m>\textrm{e}^{-\alpha t}~\cos(\omega t)~u(t)</m></cell>
+      				<cell><m>\frac{s+\alpha}{(s+\alpha)^2 + \omega^2}</m></cell>
+				</row>
+			</tabular>
+		</table>
+		
+		<example>
+			<title>Laplace transform</title>
+			
+			<statement>
+				<p>Derive the Laplace transform of </p>
+				
+				<p>
+					<md>f(t)  = \textrm{e}^{-10t}~u(t)</md>.
+				</p>
+
+				<p>The Laplace transform is</p>
+				
+				<p>
+					<md>F(s) = \frac{1}{s+10}</md>.
+				</p>
+			</statement>
+		</example>
+
+		<p>The Laplace transform has many properties that can also be used to transform more complicated functions into the <m>s</m>-domain. These properties include multiplication, addition, and differentiation, and are included in <xref ref="ch10-table-of-laplace-properties" />. (While Laplace transforms are especially important in many applications (such as signal processing), their focus will be limited to analysis of linear circuits in this textbook. As a result, some Laplace transform properties (convolution, for example) will not be covered in this textbook.)</p>
+		
+		<table xml:id="ch10-table-of-laplace-properties">
+			<title>Properties of the Laplace transform.</title>
+  			<tabular halign="left" width="100%">
+				<col width="50%" />
+				<col width="50%" />
+    			<row header="yes" bottom="medium">
+      				<cell><p>Property</p></cell>
+      				<cell><p>Laplace Transform</p></cell>
+	    		</row>
+    			<row bottom="minor">
+      				<cell><p>Scalar multiplication</p></cell>
+      				<cell><m>\Laplace\{Kf(t)\} = KF(s)</m></cell>
+				</row>
+    			<row bottom="minor">
+      				<cell><p>Addition and subtraction</p></cell>
+      				<cell><m>\Laplace\{f_1(t) \pm f_2(t)\} = F_1(s) \pm F_2(s)</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><p>Derivative</p></cell>
+      				<cell><m>\Laplace\{\frac{d}{dt}f(t)\} = sF(s) - f(0^-)</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><p>Second derivative</p></cell>
+      				<cell><m>\Laplace\{\frac{d^2}{dt^2}f(t)\} = s^2F(s) - sf(0^-) - f'(0)</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><p>Integral</p></cell>
+      				<cell><m>\Laplace\{\int_{0^-}^t f(x)\,dx\} = \frac{F(s)}{s}</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><p>Time translation</p></cell>
+      				<cell><m>\Laplace\{f(t-\alpha)~u(t-\alpha)\} = \textrm{e}^{-\alpha s}F(s), \alpha \gt 0</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><p>Frequency translation</p></cell>
+      				<cell><m>\Laplace\{\textrm{e}^{-\alpha t}~f(t)\} = F(s+\alpha)</m></cell>
+				</row>
+				<row bottom="minor">
+      				<cell><p>Scaling</p></cell>
+      				<cell><m>\Laplace\{f(\alpha t)\} = \frac{1}{\alpha} F(\frac{s}{\alpha})</m></cell>
+				</row>
+			</tabular>
+		</table>
+
+		<p>Using <xref ref="ch11-table-of-laplace-transforms" /> and <xref ref="ch10-table-of-laplace-properties" />, Laplace transforms of every time-domain function derived in this book can be computed.</p>
+
+		<p>For the most part, the circuit analysis in this book will not use the Laplace transform directly. Instead, circuits will be analyzed in the <m>s</m>-domain, and then the inverse Laplace transform (introduced in <xref ref="ch11-inverselaplace" />) will be used to derive a time-domain function. The two examples below therefore demonstrate the reverse process to what we will mostly utilize in this book.</p>
+
+		<example>
+			<title>Laplace transform</title>
+			
+			<statement>
+				<p>Derive the Laplace transform of the voltage dropped over a circuit element. The time-domain response has been derived as</p>
+
+				<p>
+					<md>v(t) = \left[40~\textrm{V} + \textrm{e}^{-10t}\left(2~\textrm{V}~\cos(20t) + 1~\textrm{V}~\sin(20t)\right)\right]~u(t)</md>.
+				</p>
+
+				<p>Use the addition and subtraction property to analyze each individual term. (Note that units are being dropped from this point forward.)</p>
+				
+				<p>
+					<md>V(s) = \Laplace\{40~u(t)\} + \Laplace\{2\textrm{e}^{-10t}~\cos(20t)~u(t)\} + \Laplace\{\textrm{e}^{-10t}~\sin(20t)~u(t)\}</md>
+				</p>
+
+				<p>Use the multiplication property to factor out coefficients.</p>
+				
+				<p>
+					<md>V(s) = 40\Laplace\{u(t)\} + 2\Laplace\{\textrm{e}^{-10t}~\cos(20t)~u(t)\} + \Laplace\{\textrm{e}^{-10t}~\sin(20t)~u(t)\}</md>
+				</p>
+
+				<p>Use <xref ref="ch11-table-of-laplace-transforms" /> to calculate the Laplace transform.</p>
+				
+				<p>
+					<md>V(s) = 40\frac{1}{s} + 2\frac{(s+10)}{(s+10)^2+20^2} + \frac{20}{(s+10)^2+20^2}</md>
+				</p>
+
+				<p>Find a common denominator for all terms and multiply through.</p>
+				
+				<p>
+					<md>V(s) = \frac{40\left[(s+10)^2+400\right] + 2(s+10)s + 20s}{s\left[(s+10)^2+400\right]}</md>
+				</p>
+
+				<p>Simplify so there is a simple polynomial in both the numerator and the denominator. Factor the denominator so that the order of the polynomial is two.</p>
+				
+				<p>
+					<md>V(s) = \frac{42s^2 + 840s + 20000}{s(s^2 + 20s + 500)}</md>
+				</p>
+			</statement>
+		</example>
+
+		<example>
+			<title>Laplace transform of a differential equation</title>
+			
+			<statement>
+				<p>Derive the Laplace transform of the current described by the differential equation in <xref ref="ch7-homogeneous-numerical-diffeq-example" />. The differential equation is</p>
+				
+				<p>
+					<md>0 = \frac{d^2i(t)}{dt^2} + 250\frac{di(t)}{dt} + 10500i(t)</md>.
+				</p>
+
+				<p>The initial current <m>i(0) = 0.1~\textrm{A}</m> and the first derivative of the current is zero.</p>
+
+				<p>Use the addition and subtraction property to analyze each individual term.</p>
+
+				<p>
+					<md>0 = \Laplace\{ \frac{d^2i(t)}{dt^2}\} + \Laplace\{250\frac{di(t)}{dt}\} + \Laplace\{10500i(t)\}</md>
+				</p>
+
+				<p>Use the multiplication property to factor out coefficients.</p>
+
+				<p>
+					<md>0 = \Laplace\{ \frac{d^2i(t)}{dt^2}\} + 250\Laplace\{\frac{di(t)}{dt}\} + 10500\Laplace\{i(t)\}</md>
+				</p>
+
+				<p>Use the derivative and second derivative properties to find an equation in terms of <m>I(s)</m>.</p>
+				
+				<p>
+					<md>0 = s^2I(s) - si(0) - i'(0) + 250\left[sI(s) -i(0)\right] + 10500I(s)</md>
+				</p>
+
+				<p>Plug in the initial conditions and simplify to calculate <m>I(s)</m>.</p>
+				
+				<p>
+					<md>
+						<mrow>0 \amp= s^2I(s) - 0.1s + 250\left[sI(s) -0.1\right] + 10500I(s)</mrow>
+						<mrow>0.1s + 25 \amp= s^2I(s) + 250sI(s) + 10500I(s)</mrow>
+						<mrow>I(s) \amp= \frac{0.1s + 25}{s^2 + 250s + 10500}</mrow>
+					</md>
+				</p>
+			</statement>
+		</example>
+
+	</section>
+
+	<section xml:id="ch11-inverselaplace">
+		<title>Inverse Laplace Transform</title>
+
+		<introduction>
+		
+			<p>To most easily derive a time-domain function of current or voltage in a circuit, an analysis can be done in the <m>s</m>-domain (which will be introduced in <xref ref="ch11-sdomain" />) to derive an <m>s</m>-domain function such as <m>V(s)</m> or <m>I(s)</m>. That <m>s</m>-domain function can then be inverse transformed back into the time domain. That inverse transform process will be described in this section.</p>
+
+			<p>Rather than applying a mathematical expression (such as that defined in <xref ref="ch11-eq-laplace-transform-definition" />), a Laplace transform is broken into individual components using partial fraction expansion. Then, <xref ref="ch11-table-of-laplace-transforms" /> can be used to derive the time-domain expression.</p>
+
+		</introduction>
+
+		<subsection xml:id="ch11-partialfraction">
+			<title>Partial Fraction Expansion</title>
+
+			<p>A function in the <m>s</m>-domain can be represented as a polynomial in the numerator and a polynomial in the denominator. The denominator can then be factored. Similar to <xref ref="ch9-eq-poles-zeros-function" />, the factored denominator contains the poles of the circuit. A generalized factored <m>s</m>-domain expression is given in <xref ref="ch11-s-domain-factored-equation" />, where <m>N(s)</m> is the numerator and <m>p</m> are the poles of the denominator.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch11-s-domain-factored-equation">F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)...(s-p_n)}</md>
+			</p>
+
+			<p>The circuits and equations in this textbook will have a denominator with a higher order than the numerator (i.e. there are more poles than zeros). Otherwise, the partial fraction expansion process will require a different process that will not be described in this book.</p>
+
+			<p>The partial fraction expansion process converts a factored expression (such as that given in <xref ref="ch11-s-domain-factored-equation" />) into a sum of many expressions (shown in <xref ref="ch11-s-domain-expanded-equation" />), which can then be converted to time-domain expressions using <xref ref="ch11-table-of-laplace-transforms" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch11-s-domain-expanded-equation">F(s) = \frac{K_1}{(s-p_1)} + \frac{K_2}{(s-p_2)} + \frac{K_3}{(s-p_3)} + ... + \frac{K_n}{(s-p_n)}</md>
+			</p>
+
+			<p>One possibility will be that poles are real and unique, such as those shown in <xref ref="ch11-s-domain-real-unique-roots" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch11-s-domain-real-unique-roots">F(s) = \frac{K_1}{s+n} + \frac{K_2}{s+m}</md>
+			</p>
+
+			<p>The process for calculating the coefficients follows.</p>
+			
+			<p>
+				<ol>
+					<li><p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s+n)</m> and solve at <m>s=-n</m>.</p></li>
+					<li><p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+m)</m> and solve at <m>s=-m</m>.</p></li>
+				</ol>
+			</p>
+			
+			<example>
+				<title>Partial fraction expansion with unique real roots</title>
+				
+				<statement>
+					<p>Compute the partial fraction expansion of the following function, then convert into the time domain.</p>
+					
+					<p>
+						<md>F(s) = \frac{4s-5}{s^2+6s+5}</md>
+					</p>
+
+					<p>First, factor the denominator.</p>
+					
+					<p>
+						<md>
+							<mrow>F(s) \amp= \frac{4s-5}{(s+1)(s+5)}</mrow>
+							<mrow>\amp= \frac{K_1}{s+1} + \frac{K_2}{s+5}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s+1)</m> and solve at <m>s=-1</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(4s-5)(s+1)}{(s+1)(s+5)}\Big|_{s=-1} \amp= \frac{K_1(s+1)}{s+1}\Big|_{s=-1} + \frac{K_2(s+1)}{s+5}\Big|_{s=-1}</mrow>
+							<mrow>\frac{4s-5}{s+5}\Big|_{s=-1} \amp= K_1\Big|_{s=-1} + \frac{K_2(s+1)}{s+5}\Big|_{s=-1}</mrow>
+							<mrow>\frac{4(-1)-5}{(-1)+5} \amp= K_1 + \frac{K_2((-1)+1)}{(-1)+5}</mrow>
+							<mrow>\frac{-4-5}{4} \amp= K_1 + \frac{K_2(0)}{4}</mrow>
+							<mrow>\frac{-9}{4} \amp= K_1 + 0</mrow>
+							<mrow>K_1 \amp= -2.25</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+5)</m> and solve at <m>s=-5</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(4s-5)(s+5)}{(s+1)(s+5)}\Big|_{s=-5} \amp= \frac{K_1(s+5)}{s+1}\Big|_{s=-5} + \frac{K_2(s+5)}{s+5}\Big|_{s=-5}</mrow>
+							<mrow>\frac{4s-5}{s+1}\Big|_{s=-5} \amp= \frac{K_1(s+5)}{s+1}\Big|_{s=-5} + K_2\Big|_{s=-5}</mrow>
+							<mrow>\frac{4(-5)-5}{(-5)+1} \amp= \frac{K_1((-5)+5)}{(-5)+1} + K_2</mrow>
+							<mrow>\frac{-20-5}{(-5)+1} \amp= \frac{K_1(0)}{-4} + K_2</mrow>
+							<mrow>\frac{-25}{-4} \amp= K_2</mrow>
+							<mrow>K_2 \amp= 6.25</mrow>
+						</md>
+					</p>
+
+					<p>The expanded version of <m>F(s)</m> is shown below.</p>
+					
+					<p>
+						<md>F(s) = \frac{-2.25}{s+1} + \frac{6.25}{s+5}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>f(t) = \left[-2.25~\textrm{e}^{-t} + 6.25~\textrm{e}^{-5t}\right]~u(t)</md>
+					</p>
+				</statement>
+			</example>
+
+			<p>A second possibility will be that the poles are real and repeated, such as those shown in <xref ref="ch11-s-domain-real-repeated-roots" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch11-s-domain-real-repeated-roots">F(s) = \frac{K_1}{(s+n)^2} + \frac{K_2}{s+n}</md>
+			</p>
+
+			<p>The process for calculating the coefficients follows.</p>
+			
+			<p>
+				<ol>
+					<li><p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s+n)^2</m> and solve at <m>s=-n</m>.</p></li>
+					<li><p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+n)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-n</m>.</p></li>
+				</ol>
+			</p>
+
+			<example>
+				<title>Partial fraction expansion with repeated real roots</title>
+				
+				<statement>
+					<p>Compute the partial fraction expansion of the following function, then convert into the time domain.</p>
+					
+					<p>
+						<md>F(s) = \frac{-2s}{s^2+10s+25}</md>
+					</p>
+
+					<p>First, factor the denominator.</p>
+					
+					<p>
+						<md>
+							<mrow>F(s) \amp= \frac{-2s}{(s+5)^2}</mrow>
+							<mrow>\amp= \frac{K_1}{(s+5)^2} + \frac{K_2}{s+5}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s+5)^2</m> and solve at <m>s=-5</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(-2s)(s+5)^2}{(s+5)^2}\Big|_{s=-5} \amp= \frac{K_1(s+5)^2}{(s+5)^2}\Big|_{s=-5} + \frac{K_2(s+5)^2}{s+5}\Big|_{s=-5}</mrow>
+							<mrow>-2s\Big|_{s=-5} \amp= K_1\Big|_{s=-5} + K_2(s+5)\Big|_{s=-5}</mrow>
+							<mrow>-2(-5) \amp= K_1 + K_2((-5)+5)</mrow>
+							<mrow>10 \amp= K_1 + 0</mrow>
+							<mrow>K_1 = 10</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+5)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-5</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{d}{ds}\frac{(-2s)(s+5)^2}{(s+5)^2}\Big|_{s=-5} \amp= \frac{d}{ds}\frac{K_1(s+5)^2}{(s+5)^2}\Big|_{s=-5} + \frac{d}{ds}\frac{K_2(s+5)^2}{s+5}\Big|_{s=-5}</mrow>
+							<mrow>\frac{d}{ds}-2s\Big|_{s=-5} \amp= \frac{d}{ds}K_1\Big|_{s=-5} + \frac{d}{ds}K_2(s+5)\Big|_{s=-5}</mrow>
+							<mrow>-2\Big|_{s=-5} \amp= 0\Big|_{s=-5} + K_2\Big|_{s=-5}</mrow>
+							<mrow>-2 \amp= 0 + K_2</mrow>
+							<mrow>K_2 \amp= -2</mrow>
+						</md>
+					</p>
+
+					<p>The expanded version of <m>F(s)</m> is given below.</p>
+					
+					<p>
+						<md>F(s) = \frac{10}{(s+5)^2} + \frac{-2}{s+5}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>f(t) = \left[10~t~\textrm{e}^{-5t}-2~\textrm{e}^{-5t}\right]~u(t)</md>
+					</p>
+				</statement>
+			</example>
+
+			<p>The third possibility will be that the poles are complex conjugate pairs, such as those shown in <xref ref="ch11-s-domain-complex-conjugate-roots" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch11-s-domain-complex-conjugate-roots">F(s) = \frac{K_1}{s+\alpha+j\beta} + \frac{K_2}{s+\alpha-j\beta}</md>
+			</p>
+
+			<p>Coefficients <m>K_1</m> and <m>K_2</m> will be complex conjugate pairs that take the form of <m>X \pm jY</m>.</p>
+			
+			<p>
+				<ol>
+					<li><p>To calculate <m>K_1</m>, multiply both sides of the equation by <m>(s+\alpha+j\beta)</m> and solve at <m>s=-\alpha-j\beta</m>.</p></li>
+					<li><p><m>K_2</m> is the complex conjugate of <m>K_1</m>.</p></li>
+				</ol>
+			</p>
+
+			<p>Because the coefficients are complex conjugates, the solution takes the form given in <xref ref="ch11-eq-partial-fraction-complex-conjugate-solution" />. This is derived in <xref ref="ch11-partial-fraction-complex-proof" /> using Euler's equations for sine and cosine.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch11-eq-partial-fraction-complex-conjugate-solution">f(t) = \textrm{e}^{-\alpha t}\left[2X\cos(\beta t) + 2Y\sin(\beta t)\right]~u(t)</md>
+			</p>
+
+			<proof xml:id="ch11-partial-fraction-complex-proof">
+				<p>
+					<md>
+						<mrow>F(s) \amp= \frac{X+jY}{s+\alpha+j\beta} + \frac{X-jY}{s+\alpha-j\beta}</mrow>
+						<mrow>f(t) \amp= \left[(X+jY)~\textrm{e}^{(-\alpha-j\beta)t} + (X-jY)~\textrm{e}^{(-\alpha+j\beta)t} \right]~u(t)</mrow>
+						<mrow>\amp= \textrm{e}^{-\alpha t}\left[(X+jY)~\textrm{e}^{-j\beta t} + (X-jY)~\textrm{e}^{j\beta t}\right]~u(t)</mrow>
+						<mrow>\amp= \textrm{e}^{-\alpha t}\left[X~\textrm{e}^{-j\beta t} + X~\textrm{e}^{j\beta t} + jY~\textrm{e}^{-j\beta t} -jY~\textrm{e}^{j\beta t}\right]~u(t)</mrow>
+						<mrow>\amp= \textrm{e}^{-\alpha t}\left[2X\frac{\textrm{e}^{-j\beta t} + \textrm{e}^{j\beta t}}{2} + 2Y\frac{-\textrm{e}^{-j\beta t} +~\textrm{e}^{j\beta t}}{j2}\right]~u(t)</mrow>
+						<mrow>\amp= \textrm{e}^{-\alpha t}\left[2X~\cos(\beta t) + 2Y~\sin(\beta t)\right]~u(t)</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<example>
+				<title>Partial fraction expansion with complex conjugate roots</title>
+				
+				<statement>
+					<p>Compute the partial fraction expansion of the following function, then convert into the time domain.</p>
+					
+					<p>
+						<md>F(s) = \frac{-40s+5200}{s^2+40s+40400}</md>
+					</p>
+
+					<p>First, factor the denominator.</p>
+					
+					<p>
+						<md>
+							<mrow>F(s) \amp= \frac{-40s+5200}{(s+20+j200)(s+20-j200)}</mrow>
+							<mrow>\amp= \frac{K_1}{s+20+j200} + \frac{K_2}{s+20-j200}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate <m>K_1</m>, multiply both sides of the equation by <m>(s+20+j200)</m> and solve at <m>s=-20-j200</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(-40s+5200)(s+20+j200)}{(s+20+j200)(s+20-j200)}\Big|_{s=-20-j200} \amp= \frac{K_1(s+20+j200)}{s+20+j200}\Big|_{s=-20-j200} + \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}</mrow>
+							<mrow>\frac{-40s+5200}{s+20-j200}\Big|_{s=-20-j200} \amp= K_1\Big|_{s=-20-j200} + \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}</mrow>
+							<mrow>\frac{-40(-20-j200)+5200}{(-20-j200)+20-j200} \amp= K_1 + \frac{K_2((-20-j200)+20+j200)}{(-20-j200)+20-j200}</mrow>
+							<mrow>\frac{6000+j8000}{-j400} \amp= K_1 + \frac{K_2(0)}{-j400}</mrow>
+							<mrow>K_1 \amp= -20 + j15</mrow>
+						</md>
+					</p>
+
+					<p><m>K_2</m> is the complex conjugate of <m>K_1</m>.</p>
+					
+					<p>
+						<md>K_2 = -20 - j15</md>
+					</p>
+
+					<p>The expanded version of <m>F(s)</m> is given below.</p>
+					
+					<p>
+						<md>F(s) = \frac{-20+j15}{s+20+j200} + \frac{-20-j15}{s+20-j200}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-eq-partial-fraction-complex-conjugate-solution" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>f(t) = \textrm{e}^{-20t}\left[-40~\cos(200t)+30~\sin(200t)\right]~u(t)</md>
+					</p>
+				</statement>
+			</example>
+
+			<example>
+				<title>Partial fraction expansion with mixed roots</title>
+				
+				<statement>
+					<p>Compute the partial fraction expansion of the following function, then convert into the time domain.</p>
+					
+					<p>
+						<md>F(s) = \frac{s+100}{s(s^2+400)(s^2+6.5s+10)}</md>
+					</p>
+
+					<p>First, factor the denominator.</p>
+					
+					<p>
+						<md>
+							<mrow>F(s) \amp= \frac{s+100}{s(s+j20)(s-j20)(s+2.5)(s+4)}</mrow>
+							<mrow>\amp= \frac{K_1}{s} + \frac{K_2}{s+j20} + \frac{K_3}{s-j20} + \frac{K_4}{s+2.5} + \frac{K_5}{s+4}</mrow>
+						</md>
+					</p>
+
+					<p><m>K_1</m> corresponds to a single real root. To calculate <m>K_1</m>, multiply both sides of the equation by <m>s</m> and solve at <m>s=0</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(s+100)(s)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0} + \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0} + \frac{K_5(s)}{s+4}\Big|_{s=0}</mrow>
+							<mrow>\frac{s+100}{(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0} + \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0} + \frac{K_5(s)}{s+4}\Big|_{s=0}</mrow>
+							<mrow>\frac{0+100}{(0+j20)(0-j20)(0+2.5)(0+4)} \amp= K_1 + \frac{K_2(0)}{0+j20} + \frac{K_3(0)}{0-j20} + \frac{K_4(0)}{0+2.5} + \frac{K_5(0)}{0+4}</mrow>
+							<mrow>\frac{100}{4000} \amp= K_1 + \frac{K_2(0)}{j20} + \frac{K_3(0)}{-j20} + \frac{K_4(0)}{2.5} + \frac{K_5(0)}{4}</mrow>
+							<mrow>K_1 \amp= 0.025</mrow>
+						</md>
+					</p>
+
+					<p><m>K_2</m> and <m>K_3</m> correspond to complex conjugate roots. To calculate <m>K_2</m>, multiply both sides of the equation by <m>(s+j20)</m> and solve at <m>s=-j20</m>. <m>K_3</m> is the complex conjugate of <m>K_2</m> and does not need to be solved for separately.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(s+100)(s+j20)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20} + \frac{K_2(s+j20)}{s+j20}\Big|_{s=-j20} + \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20} + \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20} + \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}</mrow>
+							<mrow>\frac{s+100}{s(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20} + K_2\Big|_{s=-j20} + \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20} + \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20} + \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}</mrow>
+							<mrow>\frac{(-j20)+100}{(-j20)((-j20)-j20)((-j20)+2.5)((-j20)+4)} \amp= \frac{K_1((-j20)+j20)}{(-j20)} + K_2 + \frac{K_3((-j20)+j20)}{(-j20)-j20} + \frac{K_4((-j20)+j20)}{(-j20)+2.5} + \frac{K_5((-j20)+j20)}{(-j20)+4}</mrow>
+							<mrow>\frac{100-j20}{312000+j104000} \amp= \frac{K_1(0)}{-j20} + K_2 + \frac{K_3(0)}{-j40} + \frac{K_4(0)}{2.5-j20} + \frac{K_5(0)}{4-j20}</mrow>
+							<mrow>K_2 \amp= 2.672 \times 10^{-4} -j1.538\times 10^{-4}</mrow>
+							<mrow>K_3 \amp= 2.672 \times 10^{-4} +j1.538\times 10^{-4}</mrow>
+						</md>
+					</p>
+
+					<p><m>K_4</m> and <m>K_5</m> correspond to unique real roots. To calculate <m>K_4</m>, multiply both sides of the equation by <m>(s+2.5)</m> and solve at <m>s=-2.5</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(s+100)(s+2.5)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5} + \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5} + \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5} + \frac{K_4(s+2.5)}{s+2.5}\Big|_{s=-2.5} + \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}</mrow>
+							<mrow>\frac{s+100}{s(s+j20)(s-j20)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5} + \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5} + \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5} + K_4\Big|_{s=-2.5} + \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}</mrow>
+							<mrow>\frac{(-2.5)+100}{(-2.5)((-2.5)+j20)((-2.5)-j20)((-2.5)+4)} \amp= \frac{K_1((-2.5)+2.5)}{(-2.5)} + \frac{K_2((-2.5)+2.5)}{(-2.5)+j20} + \frac{K_3((-2.5)+2.5)}{(-2.5)-j20} + K_4 + \frac{K_5((-2.5)+2.5)}{(-2.5)+4}</mrow>
+							<mrow>\frac{97.5}{-1523.4375} \amp= \frac{K_1(0)}{-2.5} + \frac{K_2(0)}{-2.5+j20} + \frac{K_3(0)}{-2.5-j20} + K_4 + \frac{K_5(0)}{1.5}</mrow>
+							<mrow>K_4 \amp= -0.064</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_5</m>, multiply both sides of the equation by <m>(s+4)</m> and solve at <m>s=-4</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(s+100)(s+4)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4} + \frac{K_2(s+4)}{s+j20}\Big|_{s=-4} + \frac{K_3(s+4)}{s-j20}\Big|_{s=-4} + \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4} + \frac{K_5(s+4)}{s+4}\Big|_{s=-4}</mrow>
+							<mrow>\frac{s+100}{s(s+j20)(s-j20)(s+2.5)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4} + \frac{K_2(s+4)}{s+j20}\Big|_{s=-4} + \frac{K_3(s+4)}{s-j20}\Big|_{s=-4} + \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4} + K_5\Big|_{s=-4}</mrow>
+							<mrow>\frac{(-4)+100}{(-4)((-4)+j20)((-4)-j20)((-4)+2.5)} \amp= \frac{K_1((-4)+4)}{(-4)} + \frac{K_2((-4)+4)}{(-4)+j20} + \frac{K_3((-4)+4)}{(-4)-j20} + \frac{K_4((-4)+4)}{(-4)+2.5} + K_5</mrow>
+							<mrow>\frac{96}{2496} \amp= \frac{K_1(0)}{-4} + \frac{K_2(0)}{-4+j20} + \frac{K_3(0)}{-4-j20} + \frac{K_4(0)}{-1.5} + K_5</mrow>
+							<mrow>K_5 \amp= 0.0385</mrow>
+						</md>
+					</p>
+
+					<p>The expanded version of <m>F(s)</m> is given below.</p>
+
+					<p>
+						<md>F(s) = \frac{0.025}{s} + \frac{2.7\times10^{-4} - j1.5\times10^{-4}}{s+j20} + \frac{2.7\times10^{-4} + j1.5\times10^{-4}}{s-j20} + \frac{-0.064}{s+2.5} + \frac{0.0385}{s+4}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-eq-partial-fraction-complex-conjugate-solution" /> and <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>f(t) = \left[ 0.025 + 0.000538~\cos(20t) - 0.000308~\sin(20t) -0.064~\textrm{e}^{-2.5t} + 0.038~\textrm{e}^{-4t}\right]~u(t)</md>
+					</p>
+				</statement>
+			</example>
+
+		</subsection>
+
+	</section>
+
+	<section xml:id="ch11-sdomain">
+		<title><m>s</m>-Domain Analysis</title>
+
+		<introduction>
+		
+			<p>It is possible to fully analyze a circuit in the <m>s</m>-domain and use the inverse Laplace transform to derive a time-domain function. While this is not always easier than a differential equation analysis, it is frequently more convenient, especially when the equation is non-constant input non-homogeneous or when the circuit is higher than second order.</p>
+			
+			<p>To perform an <m>s</m>-domain analysis, transform each individual circuit component into the s domain. This is similar to phasor analysis, with the notable difference being that <m>s</m>-domain analysis includes initial conditions in the circuit transformation. Once all circuit elements are transformed into the <m>s</m>-domain, perform any circuit analysis technique to obtain an equation for <m>V(s)</m> or <m>I(s)</m>. Then perform an inverse Laplace transform to obtain a time-domain expression.</p>
+
+		</introduction>
+
+		<subsection xml:id="ch11-resistor">
+			<title>Resistor</title>
+
+			<p>The voltage and current properties of a resistor are defined by Ohm's law: <xref ref="ohmslawveq" />. Converting to the <m>s</m>-domain, the relationship between voltage and current becomes that defined in <xref ref="ch11-eq-s-domain-resistor" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch11-eq-s-domain-resistor">V(s) = RI(s)</md>
+			</p>
+
+			<p>Therefore, in the <m>s</m>-domain, a resistor is expressed simply as a resistor. This transform is depicted in <xref ref="fig-s-domain-resistor" />.</p>
+
+			<figure xml:id="fig-s-domain-resistor">
+  				<caption>Transformation of a resistor from the time domain into the <m>s</m>-domain.</caption>
+				<image width="50%" xml:id="ch11-fig-s-domain-resistor">
+					<shortdescription>Left: resistor R with voltage drop v(t) and current i(t). Right: resistor R with voltage drop V(s) and current I(s).</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(0,2.5) to [R, l_=$R$, v^=$v(t)$, i_=$i(t)$]		(0,0);
+							\node[align=center] at (2,1.25) {$\Longleftrightarrow$};
+							\draw[]	(4,2.5) to [R, l_=$R$, v^=$V(s)$, i_=$I(s)$]	(4,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+		</subsection>
+
+		<subsection xml:id="ch11-capacitor">
+			<title>Capacitor</title>
+
+			<p>The voltage and current properties of a capacitor are defined in <xref ref="ch5-ivcapequation" />. In the <m>s</m>-domain, this corresponds to the relationship shown in <xref ref="ch11-eq-s-domain-capacitor" /> (where <m>v(0)</m> is equal to the initial voltage dropped over the capacitor at <m>t=0</m>) and derived in <xref ref="ch11-s-domain-capacitor-proof" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch11-eq-s-domain-capacitor">V(s) = \frac{1}{sC}I(s) + \frac{v(0)}{s}</md>
+			</p>
+
+			<proof xml:id="ch11-s-domain-capacitor-proof">
+				<p>
+					<md>
+						<mrow>i(t) \amp= C\frac{dv(t)}{dt}</mrow>
+						<mrow>I(s) \amp= C\left[sV(s) - v(0)\right]</mrow>
+						<mrow>\amp= sCV(s) - Cv(0)</mrow>
+						<mrow>V(s) \amp= \frac{1}{sC}I(s) + \frac{v(0)}{s}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>Therefore, in the s domain, a capacitor is expressed as a capacitor (with impedance of <m>(sC)^{-1}</m>) in series with a voltage source corresponding to the initial voltage drop over the capacitor. This transform is depicted in <xref ref="fig-s-domain-capacitor" />.</p>
+
+			<figure xml:id="fig-s-domain-capacitor">
+  				<caption>Transformation of a capacitor from the time domain into the <m>s</m>-domain.</caption>
+				<image width="60%" xml:id="ch11-fig-s-domain-capacitor">
+					<shortdescription>Left: capacitor C with voltage drop v(t) and current i(t). Right: capacitor 1/(sC) in series with voltage source v(0)/s with collective voltage drop V(s) and current I(s).</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(0,2.5) to [C, l_=$C$, v^=$v(t)$, i_=$i(t)$]		(0,0);
+							\node[align=center] at (2,1.25) {$\Longleftrightarrow$};
+							\draw[]	(4,4) to [C, l_=$\frac{1}{sC}$, i_=$I(s)$]		(4,2);
+							\draw[]	(4,2) to [V, l_=$\frac{v(0)}{s}$]				(4,0);
+							\draw[]	(5,4) to [open, v=$V(s)$]					(5,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+		</subsection>
+
+		<subsection xml:id="ch11-inductor">
+			<title>Inductor</title>
+
+			<p>The voltage and current properties of an inductor are defined in <xref ref="ch6-voltageinductor" />. In the <m>s</m>-domain, this corresponds to the relationship shown in <xref ref="ch11-eq-s-domain-inductor" /> (where <m>i(0)</m> is equal to the initial current through the inductor at <m>t=0</m>) and derived in <xref ref="ch11-s-domain-inductor-proof" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch11-eq-s-domain-inductor">I(s) = \frac{1}{sL}V(s) + \frac{i(0)}{s}</md>
+			</p>
+
+			<proof xml:id="ch11-s-domain-inductor-proof">
+				<p>
+					<md>
+						<mrow>v(t) \amp= L\frac{di(t)}{dt}</mrow>
+						<mrow>V(s) \amp= L\left[sI(s) - i(0)\right]</mrow>
+						<mrow>\amp= sLI(s) - Li(0)</mrow>
+						<mrow>I(s) \amp= \frac{1}{sL}V(s) + \frac{i(0)}{s}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>Therefore, in the <m>s</m>-domain, an inductor is expressed as an inductor (with impedance of <m>sL</m>) in parallel with a current source corresponding to the initial current through the inductor. This transform is depicted in <xref ref="fig-s-domain-inductor" />.</p>
+
+			<figure xml:id="fig-s-domain-inductor">
+  				<caption>Transformation of an inductor from the time domain into the <m>s</m>-domain.</caption>
+				<image width="80%" xml:id="ch11-fig-s-domain-inductor">
+					<shortdescription>Left: inductor L with voltage drop v(t) and current i(t). Right: inductor sL in parallel with current source i(0)/s with collective voltage drop V(s) and current I(s).</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(0,2.5) to [L, l_=$L$, v^=$v(t)$, i_=$i(t)$]		(0,0);
+							\node[align=center] at (2,1.25) {$\Longleftrightarrow$};
+							\draw[]	(4,2.5) to [L, l_=$sL$, v^=$V(s)$]			(4,0);
+							\draw[]	(6,2.5) to [I, l^=$\frac{i(0)}{s}$]				(6,0);
+							\draw[]	(4,2.5) to [short]						(6,2.5);
+							\draw[]	(4,0) to [short]							(6,0);
+							\draw[]	(5,3.5) to [short, -*, i_=$I(s)$]				(5,2.5);
+							\draw[]	(5,0) to [short, *-]						(5,-1);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+		</subsection>
+
+		<subsection xml:id="ch11-sources">
+			<title>Switched Sources</title>
+
+			<p>Frequently, to demonstrate a change in a circuit leading to a transient response, a source will be connected to a circuit via an opening or closing switch.</p>
+			
+			<p>Sources connected via an opening switch (that are disconnected from the steady-state response of the circuit) contribute to initial conditions that are included in the <m>s</m>-domain model of a capacitor (<xref ref="fig-s-domain-capacitor" />) and inductor (<xref ref="fig-s-domain-inductor" />). These need to be consulted in the initial analysis of the circuit to calculate <m>v(0)</m> and/or <m>i(0)</m>, as needed.</p>
+
+			<p>Sources that are connected via a closing switch do not contribute to the initial conditions, but do contribute to the transient and/or steady-state response. Therefore, a source connected via a closing switch can be represented as <m>v(t)~u(t)</m> or <m>i(t)~u(t)</m>. When transformed into the <m>s</m>-domain, this becomes <m>V(s)/s</m> or <m>I(s)/s</m>. This transformation is depicted in <xref ref="fig-s-domain-closing-switch" /> for a voltage source.</p>
+
+			<figure xml:id="fig-s-domain-closing-switch">
+  				<caption>Transformation of a switched voltage source from the time domain into the <m>s</m>-domain.</caption>
+				<image width="100%" xml:id="ch11-fig-s-domain-closing-switch">
+					<shortdescription>Left: voltage source v(t) connected in series with a closing switch. Middle: voltage source v(t)*u(t). Right: voltage source V(s)/s.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(0,2.5) to [V, l_=$v(t)$]					(0,0);
+							\draw[]	(0,2.5) to [spst]							(2.5,2.5);
+							\draw[]	(0,0) to [short]							(2.5,0);
+							\node[align=center] at (3.25,1.25) {$\Longleftrightarrow$};
+							\draw[]	(6,2.5) to [V, l_=$v(t)~u(t)$]				(6,0);
+							\draw[]	(6,2.5) to [short]						(8.5,2.5);
+							\draw[]	(6,0) to [short]							(8.5,0);
+							\node[align=center] at (9.25,1.25) {$\Longleftrightarrow$};
+							\draw[]	(11.5,2.5) to [V, l_=$\frac{V(s)}{s}$]			(11.5,0);
+							\draw[]	(11.5,2.5) to [short]						(14,2.5);
+							\draw[]	(11.5,0) to [short]						(14,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<example>
+				<title>First-order circuit <m>s</m>-domain analysis</title>
+				
+				<statement>
+					<p>Calculate <m>V(s)</m> for the circuit given below, and then use the inverse Laplace transform to derive an equation for <m>v(t)</m>.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="80%" xml:id="ch11-sdomain-example1-figure1">
+							<shortdescription>Circuit with five nodes consisting of voltage sources Vs1 and Vs2, an SPST switch, resistors R1, R2, and R3, and capacitor C. The high-potential end of Vs1 connects to R1 at node a. R1, R2, and the SPST switch connect at node b. The SPST switch, C, and R3 connect at node c. R3 and the high-potential end of Vs2 connect at node d. The low-potential end of both sources, R2, and C connect at node e. Voltage v(t) drops over C from node c to node e. The switch is depicted as closing.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{S1}$]					(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$]					(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=$R_2$, *-*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [cute closing switch]			(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=$C$, v^=$v(t)$, *-*]		(5,0);
+									\draw[]	(5,2.5) to [R, l^=$R_3$]					(7.5,2.5);
+									\draw[]	(7.5,2.5) to [V, l_=$V_{S2}$]				(7.5,0);
+									\draw[]	(0,0) to [short]							(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the initial value of the voltage drop over the capacitor (<m>v(0)</m>). Only <m>V_{S2}</m> is connected to the capacitor at this time. The capacitor can be replaced by an open in this DC steady-state condition.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="30%" xml:id="ch11-sdomain-example1-figure2">
+							<shortdescription>Circuit with 3 nodes consisting of resistor R3 and voltage source Vs2. R3 floats at node a. R3 connects to the high-potential end of Vs2 at node b. The low-potential end of Vs2 floats at node c. Voltage v(0) drops from node a to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(4.5,2.5) to [open, v^=$v(0)$]		(4.5,0);
+									\draw[]	(4.5,2.5) to [R, l^=$R_3$]			(7,2.5);
+									\draw[]	(7,2.5) to [V, l_=$V_{S2}$]			(7,0);
+									\draw[]	(4.5,0) to [short]					(7,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>
+						<md>v(0) = V_{S2}</md>
+					</p>
+
+					<p>Transform the circuit into the <m>s</m>-domain.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="80%" xml:id="ch11-sdomain-example1-figure3">
+							<shortdescription>Circuit with three meshes and five nodes consisting of voltage sources Vs1/s, v(0)/s, and Vs2/s. Resistors R1, R2, and R3. And capacitor (1/(sC)). The high-potential end of Vs1/s connects to R1 at node a. R1, R2, the capacitor, and R3 connect at node b. The capacitor and the high-potential end of v(0)/s connect at node c. R3 and the high-potential end of Vs2/s connect at node d. The low-potential end of all sources and R2 connect at node e. Voltage V(s) drops from node b to node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [V, l_=$V_{S1}/s$]					(0,0);
+									\draw[]	(0,5) to [R, l^=$R_1$]						(2.5,5);
+									\draw[]	(2.5,5) to [R, l_=$R_2$, v^=$V(s)$, *-*]	(2.5,0);
+									\draw[]	(2.5,5) to [short]							(5,5);
+									\draw[]	(5,5) to [C, l_=$1/(sC)$, *-]				(5,2.5);
+									\draw[]	(5,2.5) to [V, l_=$v(0)/s$, -*]				(5,0);
+									\draw[]	(5,5) to [R, l^=$R_3$]						(7.5,5);
+									\draw[]	(7.5,5) to [V, l_=$V_{S2}/s$]				(7.5,0);
+									\draw[]	(0,0) to [short]							(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Perform KCL at the node between all three resistors and the capacitor. Group like terms and normalize to derive <m>V(s)</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{\frac{V_{S1}}{s}-V(s)}{R_1} \amp= \frac{V(s)}{R_2} + \frac{V(s) - \frac{v(0)}{s}}{\frac{1}{sC}} + \frac{V(s) - \frac{V_{S2}}{s}}{R_3}</mrow>
+							<mrow>\frac{V_{S1}}{sR_1} \amp= \frac{V(s)}{R_1} + \frac{V(s)}{R_2} + sCV(s) - \frac{sCv(0)}{s} + \frac{V(s)}{R_3} - \frac{V_{S2}}{sR_3}</mrow>
+							<mrow>\frac{V_{S1}}{sR_1} + \frac{V_{S2}}{sR_3} + \frac{sCv(0)}{s} \amp= sCV(s) + \left[\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\right]V(s)</mrow>
+							<mrow>\frac{1}{s}\left[sv(0) + \frac{R_3V_{S1}+R_1V_{S2}}{CR_1R_3}\right] \amp= sV(s) + \left[\frac{1}{CR_1} + \frac{1}{CR_2} + \frac{1}{CR_3}\right]V(s)</mrow>
+							<mrow>V(s) \amp= \frac{sv(0) + \frac{R_3V_{S1}+R_1V_{S2}}{CR_1R_3}}{s\left(s + \left[\frac{1}{CR_1} + \frac{1}{CR_2} + \frac{1}{CR_3}\right]\right)}</mrow>
+						</md>
+					</p>
+
+					<p>The parameter values are: <m>V_{S1} = 5~\textrm{V}</m>, <m>V_{S2} = 10~\textrm{V}</m>, <m>C = 40~\mu\textrm{F}</m>, <m>R_1 = 5~\Omega</m>, <m>R_2 = 10~\Omega</m>, and <m>R_3 = 10~\Omega</m>. Derive a numeric expression for <m>V(s)</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>V(s) \amp= \frac{10s + 50000}{s\left(s + 10000\right)}</mrow>
+							<mrow>\amp= \frac{K_1}{s} + \frac{K_2}{s+10000}</mrow>
+						</md>
+					</p>
+
+					<p>Perform a partial fraction expansion to calculate the coefficients.</p>
+					
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s)</m> and solve at <m>s=0</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(10s + 50000)(s)}{s(s + 10000)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{s+10000}\Big|_{s=0}</mrow>
+							<mrow>\frac{10s + 50000}{s + 10000}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{s+10000}\Big|_{s=0}</mrow>
+							<mrow>\frac{10(0) + 50000}{(0) + 10000} \amp= K_1 + \frac{K_2(0)}{(0)+10000}</mrow>
+							<mrow>\frac{50000}{10000} \amp= K_1 + 0</mrow>
+							<mrow>K_1 \amp= 5~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+10000)</m> and solve at <m>s=-10000</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(10s + 50000)(s+10000)}{s(s + 10000)}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000} + \frac{K_2(s+10000)}{s+10000}\Big|_{s=-10000}</mrow>
+							<mrow>\frac{10s + 50000}{s}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000} + K_2\Big|_{s=-10000}</mrow>
+							<mrow>\frac{10(-10000) + 50000}{(-10000)} \amp= \frac{K_1((-10000)+10000)}{(-10000)} + K_2</mrow>
+							<mrow>\frac{-50000}{-10000} \amp= \frac{K_1(0)}{(-10000)} + K_2</mrow>
+							<mrow>K_2 \amp= 5~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>The expanded version of <m>V(s)</m> is given below.</p>
+					
+					<p>
+						<md>V(s) = \frac{5}{s} + \frac{5}{s+10000}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>v(t) = \left[5~\textrm{V} + 5~\textrm{V}~\textrm{e}^{-10000t}\right]~u(t)</md>
+					</p>
+				</statement>
+			</example>
+
+			<example>
+				<title>Second-order circuit <m>s</m>-domain analysis, symbolic</title>
+				
+				<statement>
+					<p>Calculate <m>V(s)</m> for the circuit given below.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="80%" xml:id="ch11-sdomain-example2-figure1">
+							<shortdescription>Circuit with five nodes consisting of voltage source Vdc, resistors R1 and R2, SPST switch, inductor L, and capacitor C. The high-potential end of Vdc connects to R1 at node a. R1 connects to the SPST switch at node b. The SPST switch, L and R2 connect at node c. R2 and C connect at node d. The low-potential end of Vdc, L, and C connect at node e. Voltage v(t) drops from node c to node e. The switch is depicted as opening.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [V, l_=$V_{DC}$]			(0,0);
+									\draw[]	(0,5) to [R, l^=$R_1$]				(2.5,5);
+									\draw[]	(2.5,5) to [cute opening switch]	(4.5,5);
+									\draw[]	(4.5,5) to [L, l_=$L$, *-*]			(4.5,0);
+									\draw[]	(4.5,5) to [short]					(7,5);
+									\draw[]	(7,5) to [R, l_=$R_2$]				(7,2.5);
+									\draw[]	(7,2.5) to [C, l_=$C$]				(7,0);
+									\draw[]	(8,5) to [open, v_=$v(t)$]			(8,0);
+									\draw[]	(0,0) to [short]					(7,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the initial conditions (<m>i(0)</m> and <m>v(0)</m>) of the circuit. The capacitor can be replaced by an open and the inductor can be replaced by a short.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="60%" xml:id="ch11-sdomain-example2-figure2">
+							<shortdescription>Circuit with three nodes consisting of voltage source Vdc, resistor R1, and a short. The high-potential end of Vdc connects to R1 at node a. R1 connects to the short at node b. The short connects to the low-potential end of Vdc at node c. Branch current i(0) flows through the short from node b to node c. Voltage v(0) drops from node b to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{DC}$]				(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [short]					(5,2.5);
+									\draw[]	(2.5,2.5) to [short, i^=$i(0)$, *-*]	(2.5,0);
+									\draw[]	(5,2.5) to [open, v_=$v(0)$]			(5,0);
+									\draw[]	(0,0) to [short]						(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>
+						<md>
+							<mrow>v(0) \amp= 0</mrow>
+							<mrow>i(0) \amp= \frac{V_{DC}}{R_1}</mrow>
+						</md>
+					</p>
+
+					<p>Transform the circuit into the <m>s</m>-domain.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="80%" xml:id="ch11-sdomain-example2-figure3">
+							<shortdescription>Circuit with two meshes and three nodes consisting of current source i(0)/s, inductor sL, resistor R2, and capacitor (1/(sC)). The current source, inductor, and R2 connect at node a. The current source flows out of node a. R2 and the capacitor connect at node b. The current source, inductor, and capacitor connect at node c. The current source flows into node c. Voltage V(s) drops from node a to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [I, l_=$i(0)/s$]			(0,0);
+									\draw[]	(0,5) to [short]					(5,5);
+									\draw[]	(2.5,5) to [L, l_=$sL$, *-*]		(2.5,0);
+									\draw[]	(5,5) to [R, l_=$R_2$]				(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=$1/(sC)$]			(5,0);
+									\draw[]	(6,5) to [open, v_=$V(s)$]			(6,0);
+									\draw[]	(0,0) to [short]					(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Perform KCL. Group like terms and normalize to derive <m>V(s)</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{-i(0)}{s} \amp= \frac{V(s)}{sL} + \frac{V(s)}{R_2+\frac{1}{sC}}</mrow>
+							<mrow>\frac{-i(0)}{s}\left[R_2+\frac{1}{sC}\right] \amp= \frac{V(s)}{sL}\left[R_2+\frac{1}{sC}\right] + V(s)</mrow>
+							<mrow>\frac{-R_2i(0)}{s} - \frac{i(0)}{s^2C} \amp= \frac{R_2}{sL}V(s) + \frac{1}{s^2LC}V(s) + V(s)</mrow>
+							<mrow>-sR_2i(0) - \frac{i(0)}{C} \amp= s^2V(s) + \frac{R_2}{L}sV(s) + \frac{1}{LC}V(s)</mrow>
+							<mrow>V(s) \amp= \frac{-R_2i(0)s - \frac{i(0)}{C}}{s^2 + \frac{R_2}{L}s + \frac{1}{LC}}</mrow>
+						</md>
+					</p>
+
+				</statement>
+			</example>
+
+			<example>
+				<title>Second-order circuit <m>s</m>-domain analysis, numeric</title>
+				
+				<statement>
+					<p>Calculate <m>I(s)</m> for the circuit given below, and then use the inverse Laplace transform to derive an equation for <m>i(t)</m>.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="90%" xml:id="ch11-sdomain-example3-figure1">
+							<shortdescription>Circuit with five nodes consisting of voltage source Vm*cos(omega*t), resistors R1 and R2, SPST switch, capacitor C, and inductor L. The high-potential end of the voltage source connects to R1 at node a. R1 connects to the SPST switch at node b. The SPST switch, C, and L connect at node c. L and R2 connect at node d. The low-potential end of the voltage source, C, and R2 connect at node e. Branch current i(t) flows through L from node c to node d. The switch is depicted as closing.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [V, l_=$Vm~\cos(\omega t)$]		(0,0);
+									\draw[]	(0,5) to [R, l^=$R_1$]						(2.5,5);
+									\draw[]	(2.5,5) to [cute closing switch]			(4.5,5);
+									\draw[]	(4.5,5) to [C, l_=$C$, *-*, v^=$v_X(t)$]	(4.5,0);
+									\draw[]	(4.5,5) to [short]							(7,5);
+									\draw[]	(7,5) to [L, l_=L, i^=$i(t)$]				(7,2.5);
+									\draw[]	(7,2.5) to [R, l_=$R_2$]					(7,0);
+									\draw[]	(0,0) to [short]							(7,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The initial conditions are zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m>-domain.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="80%" xml:id="ch11-sdomain-example3-figure2">
+							<shortdescription>Circuit with two meshes and four nodes consisting of s-domain transformed voltage source, resistors R1 and R2, capacitor (1/(sC)), and inductor sL. The high-potential end of the voltage source connects to R1 at node a. R1, the capacitor, and the inductor connect at node b. The inductor and R2 connect at node c. The low-potential end of the voltage source, capacitor, and R2 connect at node d. Branch current I(s) flows through the inductor from node b to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [V, l_=$Vm~s/(s^2 + \omega^2$)]		(0,0);
+									\draw[]	(0,5) to [R, l^=$R_1$]							(2.5,5);
+									\draw[]	(2.5,5) to [C, l_=$1/(sC)$, *-*, v^=$V_X(s)$]	(2.5,0);
+									\draw[]	(2.5,5) to [short]								(5,5);
+									\draw[]	(5,5) to [L, l_=$sL$, i^=$I(s)$]				(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=$R_2$]						(5,0);
+									\draw[]	(0,0) to [short]								(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Perform KCL at the node connecting <m>R_1</m>, <m>C</m>, and <m>L</m>. Group like terms and normalize to derive <m>I(s)</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{\frac{V_ms}{s^2+\omega^2}-V_X}{R_1} \amp= sCV_X + I(s)</mrow>
+							<mrow>\frac{V_ms}{R_1(s^2+\omega^2)} \amp= \frac{V_X}{R_1} + sCV_X + I(s)</mrow>
+							<mrow>V_X \amp= sLI(s) + R_2I(s)</mrow>
+							<mrow>\frac{V_ms}{R_1(s^2+\omega^2)} \amp=  frac{1}{R_1}\left[sLI(s) + R_2I(s)\right] + sC\left[sLI(s) + R_2I(s)\right] + I(s)</mrow>
+							<mrow>\amp= LCs^2I(s) + \left[\frac{L}{R_1} + CR_2\right]sI(s) + \left[\frac{R_2}{R_1}+1\right]I(s)</mrow>
+							<mrow>\frac{V_ms}{LCR_1(s^2+\omega^2)} \amp= s^2I(s) + \left[\frac{1}{CR_1} + \frac{R_2}{L}\right]sI(s) + \left[\frac{R_1+R_2}{LCR_1}\right]I(s)</mrow>
+							<mrow>I(s) \amp= \frac{\frac{V_ms}{LCR_1}}{(s^2+\omega^2)\left(s^2+\left[\frac{1}{CR_1} + \frac{R_2}{L}\right]s+\left[\frac{R_1+R_2}{LCR_1}\right]\right)}</mrow>
+						</md>
+					</p>
+
+					<p>The parameter values are: <m>Vm = 0.5~\textrm{V}</m>, <m>\omega = 50~\textrm{rad/s}</m>, <m>R_1 = 200~\Omega</m>, <m>R_2 = 1~\Omega</m>, <m>C = 50~\mu\textrm{F}</m>, and <m>L = 4~\textrm{mH}</m>. Derive a numeric expression for <m>I(s)</m>.</p>
+
+					<p>
+						<md>
+							<mrow>I(s) \amp= \frac{12500s}{(s^2+2500)(s^2+350s+5025000)}</mrow>
+							<mrow>\amp= \frac{K_1}{s+j50} + \frac{K_2}{s-j50} + \frac{K_3}{s+175+j2234.8} + \frac{K_4}{s+175-j2234.8}</mrow>
+						</md>
+					</p>
+
+					<p>Perform a partial fraction expansion to calculate the coefficients.</p>
+					
+					<p>To calculate <m>K_1</m>, multiply both sides of the equation by <m>(s+j50)</m> and solve at <m>s=-j50</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(12500s)(s+j50)}{(s+j50)(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= \frac{K_1(s+j50)}{s+j50}\Big|_{s=-j50} + \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50} + \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50} + \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}</mrow>
+							<mrow>\frac{12500s}{(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= K_1\Big|_{s=-j50} + \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50} + \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50} + \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}</mrow>
+							<mrow>\frac{12500(-j50)}{((-j50)-j50)((-j50)^2+350(-j50)+5025000)} \amp= K_1 + \frac{K_2((-j50)+j50)}{(-j50)-j50} + \frac{K_3((-j50)+j50)}{(-j50)+175+j2234.8} + \frac{K_4((-j50)+j50)}{(-j50)+175-j2234.8}</mrow>
+							<mrow>\frac{-j625000}{-1750000-j502250000} \amp= K_1 + \frac{K_2(0)}{-j100} + \frac{K_3(0)}{175+j2184.8} + \frac{K_4(0)}{175-j2284.8}</mrow>
+							<mrow>K_1 \amp= 0.001244 + j0.0000043~\textrm{A}</mrow>
+							<mrow>\amp= 1.24 + j0.0043~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p><m>K_2</m> is the complex conjugate of <m>K_1</m>.</p>
+
+					<p>
+						<md>K_2 = 1.24 - j0.0043~\textrm{mA}</md>
+					</p>
+
+					<p>To calculate <m>K_3</m>, multiply both sides of the equation by <m>(s+175+j2234.8)</m> and solve at <m>s=-175-j2234.8</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(12500s)(s+175+j2234.8)}{(s^2+2500)(s+175+j2234.8)(s+175-j2234.8)}\Big|_{s=-175-j2234.8} \amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8} + \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8} + \frac{K_3(s+175+j2234.8)}{s+175+j2234.8}\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\frac{12500s}{(s^2+2500)(s+175-j2234.8)}\Big|_{s=-175-j2234.8} \amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8} + \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8} + K_3\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\frac{12500(-175-j2234.8)}{((-175-j2234.8)^2+2500)((-175-j2234.8)+175-j2234.8)} \amp= \frac{K_1(-175-j2234.8+175+j2234.8)}{(-175-j2234.8)+j50} + \frac{K_2((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)-j50} + K_3 + \frac{K_4((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)+175-j2234.8}</mrow>
+							<mrow>\frac{-2187500-j2.7935\times 10^7}{3.4960 \times 10^9 + j2.2175 \times 10^{10}} \amp= \frac{K_1(0)}{(-175-j2234.8)+j50} + \frac{K_2(0)}{(-175-j2234.8)-j50} + K_3 + \frac{K_4(0)}{(-175-j2234.8)+175-j2234.8}</mrow>
+							<mrow>K_3 \amp=  -0.0012 - j0.0001~\textrm{A}</mrow>
+							<mrow>\amp= -1.2444 - j0.0975~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p><m>K_4</m> is the complex conjugate of <m>K_3</m>.</p>
+					
+					<p>
+						<md>K_4 = -1.2444 + j0.0975~\textrm{mA}</md>
+					</p>
+
+					<p>The time-domain function is</p>
+
+					<p>
+						<md>
+							<mrow>i(t) \amp= [2.49~\textrm{mA}~\cos(50t) + 0.00867~\textrm{mA}~\sin(50t)</mrow>
+							<mrow>\amp+ \textrm{e}^{-175t}\left(-2.49~\textrm{mA}~\cos(2234.8t) - 0.195~\textrm{mA}~\sin(2234.8t)\right)]~u(t)</mrow>
+						</md>.
+					</p>
+
+					<p>The time-domain function is plotted below. The high frequency oscillations represent the transient response. The low frequency oscillations represent the steady-state response.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="100%" xml:id="ch11-sdomain-example3-figure3">
+							<shortdescription>Time-domain plot of i(t) depicting slow oscillations representing the source and quick oscillations that dampen out quickly representing the transient response.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[width=\linewidth, height=5cm, xlabel=$t$~(ms), xmin=-20, xmax=100, ylabel=$i(t)$~(mA)]
+										\addplot[thick] coordinates {(-20,0) (0,0)};
+										\addplot[thick, domain=0:20, samples=100] {2.489*cos(deg(0.05*x))+0.009*sin(deg(0.05*x))+exp(-0.175*x)*(-2.4888*cos(deg(2.23*x))-0.1951*sin(deg(2.23*x)))};
+										\addplot[thick, domain=20:100] {2.489*cos(deg(0.05*x))+0.009*sin(deg(0.05*x))+exp(-0.175*x)*(-2.4888*cos(deg(2.23*x))-0.1951*sin(deg(2.23*x)))};
+									\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+			</example>
+
+		</subsection>
+
+	</section>
+
+	<exercises>
+    	<title>Practice Problems</title>
+
+    	<subexercises>
+			<title>Laplace Transforms</title>
+		
+			<exercise>
+				<statement>
+					<p>Derive the Laplace transform of</p>
+					
+					<p>
+						<md>f(t) = 2~\textrm{e}^{-5t}~u(t)</md>.
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>F(s) = \frac{2}{s+5}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use the Laplace transform describing the exponential function as well as the multiplication property.</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive the Laplace transform of</p>
+					
+					<p>
+						<md>f(t) = \left[6~t~\textrm{e}^{-4t}+2~\textrm{e}^{-4t} + 5\right]~u(t)</md>.
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>F(s) = \frac{7s^2 + 54s + 80}{s(s^2 + 8s + 16)}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use the Laplace transforms describing the exponential function, exponential function times time, and constant.</p>
+
+					<p>
+						<md>F(s) = \frac{6}{(s+4)^2} + \frac{2}{(s+4)} + \frac{5}{s}</md>
+					</p>
+
+					<p>Multiply all terms so they share a common denominator, and simplify to derive <m>F(s)</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>F(s) \amp= \frac{6s + 2s(s+4) + 5(s+4)^2}{s(s+4)^2}</mrow>
+							<mrow>\amp= \frac{7s^2 + 54s + 80}{s(s^2 + 8s + 16)}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive the Laplace transform of</p>
+					
+					<p>
+						<md>f(t) = \textrm{e}^{-t}\left[2\cos(10t) + 4\sin(10t)\right]~u(t)</md>.
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>F(s) = \frac{2s+42}{s^2 + 2s + 101}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use the Laplace transforms describing exponential functions multiplied by sine and cosine. Simplify to derive <m>F(s)</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>F(s) \amp= \frac{2(s+1)}{(s+1)^2+100} + \frac{40}{(s+1)^2+100}</mrow>
+							<mrow>\amp= \frac{2s+42}{s^2 + 2s + 101}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive <m>V(s)</m>, the Laplace transform of <m>v(t)</m>. The differential equation describing <m>v(t)</m> and the initial condition of the voltage are given below.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{dv(t)}{dt} + 0.25v(t) \amp= 0</mrow>
+							<mrow>v(0) \amp= 3~\textrm{V}</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>V(s) = \frac{3}{s+0.25}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use the differentiation property of the Laplace transform, then solve for <m>V(s)</m>. Base units are used in all calculations.</p>
+					
+					<p>
+						<md>
+							<mrow>0 \amp= sV(s) - v(0) + 0.25V(s)</mrow>
+							<mrow>\amp= sV(s) - 3 + 0.25V(s)</mrow>
+							<mrow>V(s) \amp= \frac{3}{s+0.25}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive the Laplace transform of <m>i(t)</m>. The differential equation describing <m>i(t)</m> and the initial conditions of the current are given below.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{d^2i(t)}{dt^2} + 6\frac{di(t)}{dt} + 109i(t) \amp= 0</mrow>
+							<mrow>i(0) \amp= 10~\textrm{A}</mrow>
+							<mrow>i'(0) \amp= -5~\textrm{A/s}</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>I(s) = \frac{10s + 55}{s^2 + 6s + 109}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use the differentiation property of the Laplace transform, then solve for <m>I(s)</m>. Base units are used in all calculations.</p>
+					
+					<p>
+						<md>
+							<mrow>0 \amp= s^2I(s) - si(0) - i'(0) + 6\left(sI(s) - i(0)\right) + 109I(s)</mrow>
+							<mrow>\amp= s^2I(s) - 10s + 5 + 6sI(s) - 60 + 109I(s)</mrow>
+							<mrow>10s + 55 \amp= s^2I(s) + 6sI(s) + 109I(s)</mrow>
+							<mrow>I(s) \amp= \frac{10s + 55}{s^2 + 6s + 109}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Inverse Laplace Transforms</title>
+		
+			<exercise>
+				<statement>
+					<p>Derive <m>f(t)</m> by calculating the inverse Laplace transform of <m>F(s)</m>, given below. Identify the terms that contribute to the transient response, then identify the terms that contribute to the steady-state response.</p>
+					
+					<p>
+						<md>F(s) = \frac{10}{s+10}</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>f(t) = 10~\textrm{e}^{-10t}~u(t)</md>
+					</p>
+
+					<p>The only term in <m>f(t)</m> represents the transient response. There are no steady-state terms.</p>
+				</answer>
+
+				<solution>
+					<p>Use the Laplace transform describing the exponential function as well as the multiplication property. Because the term is a decaying exponential, it contributes to the transient response. There are no steady-state terms.</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive <m>f(t)</m> by calculating the inverse Laplace transform of <m>F(s)</m>, given below. Identify the terms that contribute to the transient response, then identify the terms that contribute to the steady-state response.</p>
+					
+					<p>
+						<md>F(s) = \frac{10s^2 + 10}{s(s^2+10s+25)}</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>f(t) = \left[0.4 - 52~t~\textrm{e}^{-5t} + 9.6~\textrm{e}^{-5t}\right]~u(t)</md>
+					</p>
+
+					<p>Terms representing the transient response:</p>
+
+					<p>
+						<md>f_{tr} = \left[- 52~t~\textrm{e}^{-5t} + 9.6~\textrm{e}^{-5t}\right]~u(t)</md>
+					</p>
+					
+					<p>Terms representing the steady-state response:</p>
+
+					<p>
+						<md>f_{ss} = 0.4~u(t)</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Factor the denominator of <m>F(s)</m>.</p>
+					
+					<p>
+						<md>F(s) = \frac{10s^2 + 10}{s(s+5)^2}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+					
+					<p>
+						<md>F(s) = \frac{K_1}{s} + \frac{K_2}{(s+5)^2} + \frac{K_3}{(s+5)}</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s)</m> and solve at <m>s=0</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(10s^2 + 10)(s)}{s(s+5)^2}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+5)^2}\Big|_{s=0} + \frac{K_3(s)}{(s+5)(s)}\Big|_{s=0}</mrow>
+							<mrow>\frac{10s^2 + 10}{(s+5)^2}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+5)^2}\Big|_{s=0} + \frac{K_3(s)}{(s+5)(s)}\Big|_{s=0}</mrow>
+							<mrow>\frac{10(0)^2 + 10}{(0+5)^2} \amp= K_1 + \frac{K_2(0)}{(0+5)^2} + \frac{K_3(0)}{(0+5)(s)}</mrow>
+							<mrow>\frac{10}{(5)^2} \amp= K_1 + 0 + 0</mrow>
+							<mrow>K_1 \amp= \frac{10}{25}</mrow>
+							<mrow>\amp= 0.4</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+5)^2</m> and solve at <m>s=-5</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(10s^2 + 10)(s+5)^2}{s(s+5)^2}\Big|_{s=-5} \amp= \frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{K_2(s+5)^2}{(s+5)^2}\Big|_{s=-5} + \frac{K_3(s+5)^2}{(s+5)}\Big|_{s=-5}</mrow>
+							<mrow>\frac{10s^2 + 10}{s}\Big|_{s=-5} \amp= \frac{K_1(s+5)^2}{s}\Big|_{s=-5} + K_2\Big|_{s=-5} + K_3(s+5)\Big|_{s=-5}</mrow>
+							<mrow>\frac{10(-5)^2 + 10}{-5} \amp= \frac{K_1((-5)+5)^2}{-5} + K_2 + K_3((-5)+5)</mrow>
+							<mrow>\frac{10(25) + 10}{-5} \amp= \frac{K_1(0)}{-5} + K_2 + K_3(0)</mrow>
+							<mrow>K_2 \amp= -52</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_3</m>, multiply both sides of the equation by <m>(s+5)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-5</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{d}{ds}\frac{(10s^2 + 10)(s+5)^2}{s(s+5)^2}\Big|_{s=-5} \amp= \frac{d}{ds}\frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{d}{ds}\frac{K_2(s+5)^2}{(s+5)^2}\Big|_{s=-5} + \frac{d}{ds}\frac{K_3(s+5)^2}{(s+5)}\Big|_{s=-5}</mrow>
+							<mrow>\frac{d}{ds}\frac{10s^2 + 10}{s}\Big|_{s=-5} \amp= \frac{d}{ds}\frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{d}{ds}K_2\Big|_{s=-5} + \frac{d}{ds}K_3(s+5)\Big|_{s=-5}</mrow>
+							<mrow>\left(10-\frac{10}{s^2}\right)\Big|_{s=-5} \amp= \left(\frac{K_1(s^2-25)}{s^2}\right)\Big|_{s=-5} + 0\Big|_{s=-5} + K_3\Big|_{s=-5}</mrow>
+							<mrow>\left(10-\frac{10}{(-5)^2}\right) \amp= \left(\frac{K_1((-5)^2-25)}{(-5)^2}\right) + K_3</mrow>
+							<mrow>10 - \frac{10}{25} \amp= \frac{K_1(0)}{25} + K_3</mrow>
+							<mrow>K_3 \amp= 9.6</mrow>
+						</md>
+					</p>
+
+					<p>The expanded form of <m>F(s)</m> is given below.</p>
+					
+					<p>
+						<md>F(s) = \frac{0.4}{s} + \frac{-52}{(s+5)^2} + \frac{9.6}{(s+5)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>f(t) = \left[0.4 - 52~t~\textrm{e}^{-5t} + 9.6~\textrm{e}^{-5t}\right]~u(t)</md>
+					</p>
+
+					<p>The steady-state solution is described by terms without decaying exponentials.</p>
+					
+					<p>
+						<md>f_{ss} = 0.4~u(t)</md>
+					</p>
+
+					<p>The transient solution is described by terms with decaying exponentials.</p>
+					
+					<p>
+						<md>f_{tr} = \left[- 52~t~\textrm{e}^{-5t} + 9.6~\textrm{e}^{-5t}\right]~u(t)</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive <m>f(t)</m> by calculating the inverse Laplace transform of <m>F(s)</m>, given below. Identify the terms that contribute to the transient response, then identify the terms that contribute to the steady-state response.</p>
+
+					<p>
+						<md>F(s) = \frac{s^2+4}{(s^2+16)(s^2+5s+4)}</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>f(t) = \left[0.11~\cos(4t) + 0.066~\sin(4t) + 0.098~\textrm{e}^{-t} - 0.208~\textrm{e}^{-4t}\right]~u(t)</md>
+					</p>
+
+					<p>Terms representing the transient response:</p>
+
+					<p>
+						<md>f_{tr} = \left[0.098~\textrm{e}^{-t} - 0.208~\textrm{e}^{-4t}\right]~u(t)</md>
+					</p>
+					
+					<p>Terms representing the steady-state response:</p>
+
+					<p>
+						<md>f_{ss} = \left[0.11~\cos(4t) + 0.066~\sin(4t)\right]~u(t)</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Factor the denominator of <m>F(s)</m>.</p>
+
+					<p>
+						<md>F(s) = \frac{s^2+4}{(s+j4)(s-j4)(s+1)(s+4)}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+					
+					<p>
+						<md>F(s) = \frac{K_1}{(s+j4)} + \frac{K_2}{(s-j4)} + \frac{K_3}{(s+1)} + \frac{K_4}{(s+4)}</md>
+					</p>
+
+					<p>To calculate <m>K_1</m>, multiply both sides of the equation by <m>(s+j4)</m> and solve at <m>s=-j4</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(s^2+4)(s+j4)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-j4} \amp= \frac{K_1(s+j4)}{(s+j4)}\Big|_{s=-j4} + \frac{K_2(s+j4)}{(s-j4)}\Big|_{s=-j4} + \frac{K_3(s+j4)}{(s+1)}\Big|_{s=-j4} + \frac{K_4(s+j4)}{(s+4)}\Big|_{s=-j4}</mrow>
+							<mrow>\frac{s^2+4}{(s-j4)(s+1)(s+4)}\Big|_{s=-j4} \amp= K_1\Big|_{s=-j4} + \frac{K_2(s+j4)}{(s-j4)}\Big|_{s=-j4} + \frac{K_3(s+j4)}{(s+1)}\Big|_{s=-j4} + \frac{K_4(s+j4)}{(s+4)}\Big|_{s=-j4}</mrow>
+							<mrow>\frac{(-j4)^2+4}{((-j4)-j4)((-j4)+1)((-j4)+4)} \amp= K_1 + \frac{K_2((-j4)+j4)}{((-j4)-j4)} + \frac{K_3((-j4)+j4)}{((-j4)+1)} + \frac{K_4((-j4)+j4)}{((-j4)+4)}</mrow>
+							<mrow>\frac{-12}{-160 - j96} \amp= K_1 + \frac{K_2(0)}{-j8} + \frac{K_3(0)}{1-j4} + \frac{K_4(0)}{4-j4}</mrow>
+							<mrow>K_1 \amp= 0.0551 + j0.0331</mrow>
+						</md>
+					</p>
+
+					<p><m>K_2</m> is equal to the complex conjugate of <m>K_1</m>.</p>
+					
+					<p>
+						<md>K_2 = 0.0551 - j0.0331</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_3</m>, multiply both sides of the equation by <m>(s+1)</m> and solve at <m>s=-1</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(s^2+4)(s+1)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-1} \amp= \frac{K_1(s+1)}{(s+j4)}\Big|_{s=-1} + \frac{K_2(s+1)}{(s-j4)}\Big|_{s=-1} + \frac{K_3(s+1)}{(s+1)}\Big|_{s=-1} + \frac{K_4(s+1)}{(s+4)}\Big|_{s=-1}</mrow>
+							<mrow>\frac{s^2+4}{(s+j4)(s-j4)(s+4)}\Big|_{s=-1} \amp= \frac{K_1(s+1)}{(s+j4)}\Big|_{s=-1} + \frac{K_2(s+1)}{(s-j4)}\Big|_{s=-1} + K_3\Big|_{s=-1} + \frac{K_4(s+1)}{(s+4)}\Big|_{s=-1}</mrow>
+							<mrow>\frac{(-1)^2+4}{((-1)+j4)((-1)-j4)((-1)+4)} \amp= \frac{K_1((-1)+1)}{((-1)+j4)}+ \frac{K_2((-1)+1)}{((-1)-j4)} + K_3 + \frac{K_4((-1)+1)}{((-1)+4)}</mrow>
+							<mrow>\frac{5}{51} \amp= \frac{K_1(0)}{-1+j4}+ \frac{K_2(0)}{-1-j4} + K_3 + \frac{K_4(0)}{3}</mrow>
+							<mrow>K_3 \amp= 0.0980</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_4</m>, multiply both sides of the equation by <m>(s+4)</m> and solve at <m>s=-4</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(s^2+4)(s+4)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{(s+j4)}\Big|_{s=-4} + \frac{K_2(s+4)}{(s-j4)}\Big|_{s=-4} + \frac{K_3(s+4)}{(s+1)}\Big|_{s=-4} + \frac{K_4(s+4)}{(s+4)}\Big|_{s=-4}</mrow>
+							<mrow>\frac{s^2+4}{(s+j4)(s-j4)(s+1)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{(s+j4)}\Big|_{s=-4} + \frac{K_2(s+4)}{(s-j4)}\Big|_{s=-4} + \frac{K_3(s+4)}{(s+1)}\Big|_{s=-4} + K_4\Big|_{s=-4}</mrow>
+							<mrow>\frac{(-4)^2+4}{((-4)+j4)((-4)-j4)((-4)+1)} \amp= \frac{K_1((-4)+4)}{((-4)+j4)} + \frac{K_2((-4)+4)}{((-4)-j4)} + \frac{K_3((-4)+4)}{((-4)+1)} + K_4</mrow>
+							<mrow>\frac{20}{-96} \amp= \frac{K_1(0)}{-4+j4} + \frac{K_2(0)}{-4-j4} + \frac{K_3(0)}{-3} + K_4</mrow>
+							<mrow>K_4 \amp= -0.2083</mrow>
+						</md>
+					</p>
+
+					<p>The expanded form of <m>F(s)</m> is given below.</p>
+					
+					<p>
+						<md>F(s) = \frac{0.055+j0.033}{(s+j4)} + \frac{0.055-j0.033}{(s-j4)} + \frac{0.098}{(s+1)} + \frac{-0.208}{(s+4)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>f(t) = \left[0.11~\cos(4t) + 0.066~\sin(4t) + 0.098~\textrm{e}^{-t} - 0.208~\textrm{e}^{-4t}\right]~u(t)</md>
+					</p>
+
+					<p>The steady-state solution is described by terms without decaying exponentials.</p>
+					
+					<p>
+						<md>f_{ss} = \left[0.11~\cos(4t) + 0.066~\sin(4t)\right]~u(t)</md>
+					</p>
+
+					<p>The transient solution is described by terms with decaying exponentials.</p>
+					
+					<p>
+						<md>f_{tr} = \left[0.098~\textrm{e}^{-t} - 0.208~\textrm{e}^{-4t}\right]~u(t)</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive <m>f(t)</m> by calculating the inverse Laplace transform of <m>F(s)</m>, given below. Identify the terms that contribute to the transient response, then identify the terms that contribute to the steady-state response.</p>
+					
+					<p>
+						<md>F(s) = \frac{5s^2+10s+3}{(s+2)^2(s^2+5s+64)}</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>f(t) = \left[0.052~t~\textrm{e}^{-2t} - 0.173~\textrm{e}^{-2t} + \textrm{e}^{-2.5t}\left(0.173~\cos(7.6t) + 0.663~\sin(7.6t)\right)\right]~u(t)</md>
+					</p>
+
+					<p>All terms in <m>f(t)</m> represent the transient response. There are no steady-state terms.</p>
+				</answer>
+
+				<solution>
+					<p>Factor the denominator of <m>F(s)</m>.</p>
+					
+					<p>
+						<md>F(s) = \frac{5s^2+10s+3}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+					
+					<p>
+						<md>F(s) = \frac{K_1}{(s+2)^2} + \frac{K_2}{(s+2)} + \frac{K_3}{(s+2.5+j7.6)} + \frac{K_4}{(s+2.5-j7.6)}</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s+2)^2</m> and solve at <m>s=-2</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(5s^2+10s+3)(s+2)^2}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= \frac{K_1(s+2)^2}{(s+2)^2}\Big|_{s=-2} + \frac{K_2(s+2)^2}{(s+2)}\Big|_{s=-2} + \frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\frac{(5s^2+10s+3)}{(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= K_1\Big|_{s=-2} + K_2(s+2)\Big|_{s=-2} + \frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\frac{(5(-2)^2+10(-2)+3)}{((-2)+2.5+j7.6)((-2)+2.5-j7.6)} \amp= K_1 + K_2((-2)+2) + \frac{K_3((-2)+2)^2}{((-2)+2.5+j7.6)} + \frac{K_4((-2)+2)^2}{((-2)+2.5-j7.6)}</mrow>
+							<mrow>\frac{3}{58} \amp= K_1 + K_2(0) + \frac{K_3(0)}{0.5+j7.6} + \frac{K_4(0)}{0.5-j7.6}</mrow>
+							<mrow>K_1 \amp= 0.0517</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+2)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-2</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{d}{ds}\frac{(5s^2+10s+3)(s+2)^2}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= \frac{d}{ds}\frac{K_1(s+2)^2}{(s+2)^2}\Big|_{s=-2} + \frac{d}{ds}\frac{K_2(s+2)^2}{(s+2)}\Big|_{s=-2} + \frac{d}{ds}\frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{d}{ds}\frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\frac{d}{ds}\frac{(5s^2+10s+3)}{(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= \frac{d}{ds}K_1\Big|_{s=-2} + \frac{d}{ds}K_2(s+2)\Big|_{s=-2} + \frac{d}{ds}\frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{d}{ds}\frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\frac{15s^2 + 634s + 625}{(s^2+5s+64)^2}\Big|_{s=-2} \amp= 0\Big|_{s=-2}  + K_2\Big|_{s=-2} + \frac{K_3(s+2)(s+3+j15.2)}{(s+2.5+j7.6)^2}\Big|_{s=-2} + \frac{K_4(s+2)(s+3-j15.2)}{(s+2.5-j7.6)^2}\Big|_{s=-2}</mrow>
+							<mrow>\frac{15(-2)^2 + 634(-2) + 625}{((-2)^2+5(-2)+64)^2} \amp= K_2 + \frac{K_3((-2)+2)((-2)+3+j15.2)}{((-2)+2.5+j7.6)^2} + \frac{K_4((-2)+2)((-2)+3-j15.2)}{((-2)+2.5-j7.6)^2}</mrow>
+							<mrow>\frac{-583}{3364} \amp= K_2 + \frac{K_3(0)}{(0.5+j7.6)^2} + \frac{K_4(0)}{(0.5-j7.6)^2}</mrow>
+							<mrow>K_2 \amp= -0.1733</mrow>
+						</md>
+					</p>
+
+					<p>To calculate <m>K_3</m>, multiply both sides of the equation by <m>(s+2.5+j7.6)</m> and solve at <m>s=-2.5-j7.6</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(5s^2+10s+3)(s+2.5+j7.6)}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6} \amp= \frac{K_1(s+2.5+j7.6)}{(s+2)^2}\Big|_{s=-2.5-j7.6} + \frac{K_2(s+2.5+j7.6)}{(s+2)}\Big|_{s=-2.5-j7.6} + \frac{K_3(s+2.5+j7.6)}{(s+2.5+j7.6)}\Big|_{s=-2.5-j7.6} + \frac{K_4(s+2.5+j7.6)}{(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\frac{5s^2+10s+3}{(s+2)^2(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6} \amp= \frac{K_1(s+2.5+j7.6)}{(s+2)^2}\Big|_{s=-2.5-j7.6} + \frac{K_2(s+2.5+j7.6)}{(s+2)}\Big|_{s=-2.5-j7.6} + K_3\Big|_{s=-2.5-j7.6} + \frac{K_4(s+2.5+j7.6)}{(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\frac{5(-2.5-j7.6)^2+10(-2.5-j7.6)+3}{((-2.5-j7.6)+2)^2((-2.5-j7.6)+2.5-j7.6)} \amp= \frac{K_1((-2.5-j7.6)+2.5+j7.6)}{((-2.5-j7.6)+2)^2} + \frac{K_2((-2.5-j7.6)+2.5+j7.6)}{((-2.5-j7.6)+2)} + K_3 + \frac{K_4((-2.5-j7.6)+2.5+j7.6)}{((-2.5-j7.6)+2.5-j7.6)}</mrow>
+							<mrow>\frac{-279.55 + j114.00}{115.52 + j874.15} \amp= \frac{K_1(0)}{((-2.5-j7.6)+2)^2} + \frac{K_2(0)}{((-2.5-j7.6)+2)} + K_3 + \frac{K_4(0)}{((-2.5-j7.6)+2.5-j7.6)}</mrow>
+							<mrow>K_3 \amp= 0.0866 + j0.3312</mrow>
+						</md>
+					</p>
+
+					<p><m>K_4</m> is equal to the complex conjugate of <m>K_3</m>.</p>
+					
+					<p>
+						<md>K_4 = 0.0866 - j0.3312</md>
+					</p>
+
+					<p>The expanded form of <m>F(s)</m> is given below.</p>
+					
+					<p>
+						<md>F(s) = \frac{0.052}{(s+2)^2} + \frac{-0.173}{(s+1)} + \frac{0.087+j0.331}{(s+2.5+j7.6)} + \frac{0.087-j0.331}{(s+2.5-j7.6)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+
+					<p>
+						<md>f(t) = \left[0.052~t~\textrm{e}^{-2t} - 0.173~\textrm{e}^{-2t} + \textrm{e}^{-2.5t}\left(0.173~\cos(7.6t) + 0.663~\sin(7.6t)\right)\right]~u(t)</md>
+					</p>
+
+					<p>All output terms represent the transient response. There are no steady-state terms in the output, as all terms are multiplied by a decaying exponential.</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Derive <m>f(t)</m> by calculating the inverse Laplace transform of <m>F(s)</m>, given below. Identify the terms that contribute to the transient response, then identify the terms that contribute to the steady-state response.</p>
+
+					<p>
+						<md>F(s) = \frac{-4s^2+10}{s(s^2+25)(s^2+20s+100)}</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>f(t) = \left[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t) + 0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\right]~u(t)</md>
+					</p>
+
+					<p>Terms representing the transient response:</p>
+
+					<p>
+						<md>f_{tr} = \left[0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\right]~u(t)</md>
+					</p>
+					
+					<p>Terms representing the steady-state response:</p>
+
+					<p>
+						<md>f_{ss} = \left[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t)\right]~u(t)</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Factor the denominator of <m>F(s)</m>.</p>
+					
+					<p>
+						<md>F(s) = \frac{-4s^2+10}{s(s+j5)(s-j5)(s+10)^2}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+					
+					<p>
+						<md>F(s) = \frac{K_1}{s} + \frac{K_2}{(s+j5)} + \frac{K_3}{(s-j5)} + \frac{K_4}{(s+10)^2} + \frac{K_5}{(s+10)}</md>
+					</p>
+
+					<p>To calculate <m>K_1</m>, multiply both sides of the equation by <m>(s)</m> and solve at <m>s=0</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(-4s^2+10)(s)}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+j5)}\Big|_{s=0} + \frac{K_3(s)}{(s-j5)}\Big|_{s=0} + \frac{K_4(s)}{(s+10)^2}\Big|_{s=0} + \frac{K_5(s)}{(s+10)}\Big|_{s=0}</mrow>
+							<mrow>\frac{-4s^2+10}{(s+j5)(s-j5)(s+10)^2}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+j5)}\Big|_{s=0} + \frac{K_3(s)}{(s-j5)}\Big|_{s=0} + \frac{K_4(s)}{(s+10)^2}\Big|_{s=0} + \frac{K_5(s)}{(s+10)}\Big|_{s=0}</mrow>
+							<mrow>\frac{-4(0)^2+10}{(0+j5)(0-j5)(0+10)^2} \amp= K_1 + \frac{K_2(0)}{(0+j5)} + \frac{K_3(0)}{(0-j5)} + \frac{K_4(0)}{(0+10)^2} + \frac{K_5(0)}{(0+10)}</mrow>
+							<mrow>\frac{10}{2500} \amp= K_1 + 0 + 0 + 0 + 0</mrow>
+							<mrow>K_1 \amp= 0.004</mrow>
+						</md>
+					</p>
+
+					<p>To calculate <m>K_2</m>, multiply both sides of the equation by <m>(s+j5)</m> and solve at <m>s=-j5</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(-4s^2+10)(s+j5)}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-j5} \amp= \frac{K_1(s+j5)}{s}\Big|_{s=-j5} + \frac{K_2(s+j5)}{(s+j5)}\Big|_{s=-j5} + \frac{K_3(s+j5)}{(s-j5)}\Big|_{s=-j5} + \frac{K_4(s+j5)}{(s+10)^2}\Big|_{s=-j5} + \frac{K_5(s+j5)}{(s+10)}\Big|_{s=-j5}</mrow>
+							<mrow>\frac{-4s^2+10}{s(s-j5)(s+10)^2}\Big|_{s=-j5} \amp= \frac{K_1(s+j5)}{s}\Big|_{s=-j5} + K_2\Big|_{s=-j5} + \frac{K_3(s+j5)}{(s-j5)}\Big|_{s=-j5} + \frac{K_4(s+j5)}{(s+10)^2}\Big|_{s=-j5} + \frac{K_5(s+j5)}{(s+10)}\Big|_{s=-j5}</mrow>
+							<mrow>\frac{-4(-j5)^2+10}{(-j5)((-j5)-j5)((-j5)+10)^2} \amp= \frac{K_1((-j5)+j5)}{(-j5)} + K_2 + \frac{K_3((-j5)+j5)}{((-j5)-j5)} + \frac{K_4((-j5)+j5)}{((-j5)+10)^2} + \frac{K_5((-j5)+j5)}{((-j5)+10)}</mrow>
+							<mrow>\frac{110}{-3750 + j5000} \amp= \frac{K_1(0)}{-j5} + K_2 + \frac{K_3(0)}{-j10} + \frac{K_4(0)}{((-j5)+10)^2} + \frac{K_5(0)}{10-j5}</mrow>
+							<mrow>K_2 \amp= -0.0106 - j0.0141</mrow>
+						</md>
+					</p>
+
+					<p><m>K_3</m> is equal to the complex conjugate of <m>K_2</m>.</p>
+					
+					<p>
+						<md>K_3 = -0.0106 + j0.0141</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_4</m>, multiply both sides of the equation by <m>(s+10)^2</m> and solve at <m>s=-10</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{(-4s^2+10)(s+10)^2}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-10} \amp= \frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + \frac{K_4(s+10)^2}{(s+10)^2}\Big|_{s=-10} + \frac{K_5(s+10)^2}{(s+10)}\Big|_{s=-10}</mrow>
+							<mrow>\frac{-4s^2+10}{s(s+j5)(s-j5)}\Big|_{s=-10} \amp= \frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + K_4\Big|_{s=-10} + K_5(s+10)\Big|_{s=-10}</mrow>
+							<mrow>\frac{-4(-10)^2+10}{(-10)((-10)+j5)((-10)-j5)} \amp= \frac{K_1((-10)+10)^2}{(-10)} + \frac{K_2((-10)+10)^2}{((-10)+j5)} + \frac{K_3((-10)+10)^2}{((-10)-j5)} + K_4 + K_5((-10)+10)</mrow>
+							<mrow>\frac{-390}{-1250} \amp= \frac{K_1(0)}{-10} + \frac{K_2(0)}{-10+j5} + \frac{K_3(0)}{-10-j5} + K_4 + K_5(0)</mrow>
+							<mrow>K_4 \amp= 0.312</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_5</m>, multiply both sides of the equation by <m>(s+10)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-10</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{d}{ds}\frac{(-4s^2+10)(s+10)^2}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-10} \amp= \frac{d}{ds}\frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{d}{ds}\frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{d}{ds}\frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + \frac{d}{ds}\frac{K_4(s+10)^2}{(s+10)^2}\Big|_{s=-10} + \frac{d}{ds}\frac{K_5(s+10)^2}{(s+10)}\Big|_{s=-10}</mrow>
+							<mrow>\frac{d}{ds}\frac{-4s^2+10}{s(s+j5)(s-j5)}\Big|_{s=-10} \amp= \frac{d}{ds}\frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{d}{ds}\frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{d}{ds}\frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + \frac{d}{ds}K_4\Big|_{s=-10} + \frac{d}{ds}K_5(s+10)\Big|_{s=-10}</mrow>
+							<mrow>\frac{2(2s^4-65s^2-125)}{s^2(s^2+25)^2}\Big|_{s=-10} \amp= \frac{K_1(s^2-100)}{s^2}\Big|_{s=-10} + \frac{K_2(s-10-j10)(s+10)}{(s+j5)^2}\Big|_{s=-10} + \frac{K_3(s-10+j10)(s+10)}{(s-j5)^2}\Big|_{s=-10} + 0\Big|_{s=-10} + K_5\Big|_{s=-10}</mrow>
+							<mrow>\frac{2(2(-10)^4-65(-10)^2-125)}{(-10)^2((-10)^2+25)^2} \amp= \frac{K_1((-10)^2-100)}{(-10)^2} + \frac{K_2((-10)-10-j10)((-10)+10)}{((-10)+j5)^2} + \frac{K_3((-10)-10+j10)((-10)+10)}{((-10)-j5)^2} + 0 + K_5</mrow>
+							<mrow>\frac{26750}{1562500} \amp= \frac{K_1(0)}{100} + \frac{K_2(0)}{((-10)+j5)^2} + \frac{K_3(0)}{((-10)-j5)^2} + K_5</mrow>
+							<mrow>K_5 \amp= 0.0171</mrow>
+						</md>
+					</p>
+
+					<p>The expanded form of <m>F(s)</m> is given below.</p>
+					
+					<p>
+						<md>F(s) = \frac{0.004}{s} + \frac{-0.011-j0.014}{(s+j5)} + \frac{-0.011+j0.014}{(s-j5)} + \frac{0.312}{(s+10)^2} + \frac{0.017}{(s+10)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+
+					<p>
+						<md>f(t) = \left[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t) + 0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\right]~u(t)</md>
+					</p>
+
+					<p>The steady-state solution is described by terms without decaying exponentials.</p>
+					
+					<p>
+						<md>f_{ss} = \left[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t)\right]~u(t)</md>
+					</p>
+
+					<p>The transient solution is described by terms with decaying exponentials.</p>
+					
+					<p>
+						<md>f_{tr} = \left[0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\right]~u(t)</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title><m>s</m>-Domain Analysis</title>
+		
+			<exercise xml:id="ch11-sdomain-analysis-exercise1">
+				<statement>
+					<p>Use <m>s</m>-domain analysis to calculate <m>V(s)</m> and <m>v(t)</m> of the circuit shown in <xref ref="sdomain-analysis-exercise1-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The component values are: <m>V_{S1} = 3~\textrm{V}</m>, <m>V_{S2} = 2~\textrm{V}</m>, <m>R_1 = 50~\Omega</m>, <m>R_2 = 100~\Omega</m>, and <m>C = 250~\mu\textrm{F}</m>.</p>
+					
+					<figure xml:id="sdomain-analysis-exercise1-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch11-sdomain-analysis-exercise1" />.</caption>
+  						<image width="80%" xml:id="ch11-sdomain-analysis-exercise1-diagram">
+    						<shortdescription>Circuit with 6 nodes consisting of an op-amp, voltage source Vs1, voltage source Vs2, resistors R1 and R2, capacitor C, and SPDT switch. The high-potential end of Vs1 connects to input a of the SPST switch at node a. The high-potential end of Vs2 connects to input b of the SPST switch at node b. The output of the SPST switch connects to R1 at node c. R1, R2, and C connect to the inverting input of the op-amp at node d. R2 and C connect to the output of the op-amp at node e. The low-potential end of both voltage sources and the non-inverting input of the op-amp connect to ground at node f. Voltage v(t) drops from node e to node f. The SPST switch is depicted as being in position a.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) node[op amp] (opamp) {};
+									\draw[]	(opamp.+) node[ground] {};
+									\draw[]	(opamp.-) to [R, l_=$R_1$]					++(left:2);
+									\draw[]	(opamp.-) to [short, *-]						++(up:2.5);
+									\draw[]	($(opamp.-)+(0,1)$) to [C, l^=$C$, *-*]			($(opamp.out)+(0,1.5)$);
+									\draw[]	($(opamp.-)+(0,2.5)$) to [R, l^=$R_2$]			($(opamp.out)+(0,3)$);
+									\draw[]	(opamp.out) to [short]						++(up:3);
+									\draw[]	(opamp.out) to [short, *-]						++(right:1) node[right] {$v(t)$};
+									\draw[]	($(opamp.-)-(2,0)$) node[cute spdt up, rotate=180, yscale=-1, anchor=in] (switch) {};
+									\draw[]	(switch.out 1) node[above] {a} to [short]			++(left:2);
+									\draw[]	($(switch.out 1)-(2,0)$) to [V, l_=$V_{S1}$]		++(down:2.5);
+									\draw[]	(switch.out 2) node[above] {b} to [V, l_=$V_{S2}$, -*]	++(down:2) node[ground] {};
+									\draw[]	($(switch.out 1)-(2,2.5)$)						|- ($(switch.out 2)-(0,2)$);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>V(s) \amp= \frac{-6s - 160}{s(s+40)}</mrow>
+							<mrow>v(t) \amp= \left[-4~\textrm{V} - 2~\textrm{V}~\textrm{e}^{-40t}\right]~u(t)</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Calculate the initial conditions of the circuit. At <m>t \gt 0</m> the switch is in position a and the capacitor can be treated as an open.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch11-sdomain-analysis-exercise1-figure1">
+							<shortdescription>Inverting op-amp with voltage source Vs1, input resistor R1, and feedback resistor R2. The output voltage is v(0).</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) node[op amp] (opamp) {};
+									\draw[]	(opamp.+) node[ground] {};
+									\draw[]	(opamp.-) to [R, l_=$R_1$]					++(left:2.5);
+									\draw[]	(opamp.-) to [short, *-]	++(up:1.25) to [R, l^=$R_2$]	++(right:2.25) -| (opamp.out);
+									\draw[]	(opamp.out) to [short, *-o]				++(right:0.5) node[right] {$v(0)$};
+									\draw[]	($(opamp.-)-(2.5,0)$) to [V, l_=$V_{S1}$]		++(down:2.5) node[tlground] {};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>
+						<md>
+							<mrow>v(0) \amp= -V_{S1}\left(\frac{R_2}{R_1}\right)</mrow>
+							<mrow>\amp= -3~\textrm{V}\left(\frac{100~\Omega}{50~\Omega}\right)</mrow>
+							<mrow>\amp= -6~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>Transform the circuit into the <m>s</m>-domain.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="80%" xml:id="ch11-sdomain-analysis-exercise1-figure2">
+							<shortdescription>Circuit with five nodes consisting of voltage source Vs2/s, voltage source v(0)/s, resistors R1 and R2, and capacitor (1/(sC)). The high-potential end of the Vs2/s source connects to R1 at node a. R1, R2, and the capacitor connect to the inverting input of the op-amp at node b. The capacitor and high-potential end of v(0)/s connect at node c. R2, the low-potential end of v(0)/s, and the output of the op-amp connect at node d. The low-potential end of Vs2/s and the non-inverting input of the op-amp connect to ground at node e. Voltage V(s) drops from node d to node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) node[op amp] (opamp) {};
+									\draw[]	(opamp.+) node[ground] {};
+									\draw[]	(opamp.-) to [R, l_=$R_1$]				++(left:2);
+									\draw[]	(opamp.-) to [short, *-]					++(up:2.5);
+									\draw[]	($(opamp.-)+(0,1)$) to [C, l^=$1/(sC)$, *-]		++(right:2);
+									\draw[]	($(opamp.-)+(2,1)$) to [V, l^=$v(0)/s$, -*]		($(opamp.out)+(1.5,1.5)$);
+									\draw[]	($(opamp.-)+(0,2.5)$) to [R, l^=$R_2$]		($(opamp.out)+(1.5,3)$);
+									\draw[]	($(opamp.out)+(1.5,0)$) to [short]			++(up:3);
+									\draw[]	(opamp.out) to [short]					++(right:1.5);
+									\draw[]	($(opamp.out)+(1.5,0)$) to [short, *-o]			++(right:1) node[right] {$V(s)$};
+									\draw[]	($(opamp.-)-(2,0)$) to [V, l_=$V_{S2}/s$] 		++(down:2) node[ground] {};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use KCL at the inverting node of the op-amp to derive an equation in terms of <m>V(s)</m>. Then, solve for <m>V(s)</m> and normalize.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{V_{S2}}{sR_1} \amp= \frac{-V(s)}{R_2} + \frac{-V(s) + \frac{v(0)}{s}}{\frac{1}{sC}}</mrow>
+							<mrow>\amp= \frac{-V(s)}{R_2} - sCV(s) + Cv(0)</mrow>
+							<mrow>-\frac{V_{S2}}{sR_1} + Cv(0) \amp= \frac{V(s)}{R_2} + sCV(s)</mrow>
+							<mrow>-\frac{V_{S2}}{sCR_1} + v(0) \amp= \frac{V(s)}{CR_2} + sV(s)</mrow>
+							<mrow>V(s) \amp= \frac{sv(0) - \frac{V_{S2}}{CR_1}}{s(s+\frac{1}{CR_2})}</mrow>
+						</md>
+					</p>
+
+					<p>Plug in component values using base units.</p>
+					
+					<p>
+						<md>V(s) = \frac{-6s - 160}{s(s+40)}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+					
+					<p>
+						<md>V(s) = \frac{K_1}{s} + \frac{K_2}{(s+40)}</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s)</m> and solve at <m>s=-0</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(-6s - 160)(s)}{s(s+40)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+40)}\Big|_{s=0}</mrow>
+							<mrow>\frac{-6s - 160}{s+40}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+40)}\Big|_{s=0}</mrow>
+							<mrow>\frac{-6(0) - 160}{0+40} \amp= K_1 + \frac{K_2(0)}{(0+40)}</mrow>
+							<mrow>\frac{-160}{40} \amp= K_1</mrow>
+							<mrow>K_1 \amp= -4~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+40)</m> and solve at <m>s=-40</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(-6s - 160)(s+40)}{s(s+40)}\Big|_{s=-40} \amp= \frac{K_1(s+40)}{s}\Big|_{s=-40} + \frac{K_2(s+40)}{(s+40)}\Big|_{s=-40}</mrow>
+							<mrow>\frac{-6s - 160}{s}\Big|_{s=-40} \amp= \frac{K_1(s+40)}{s}\Big|_{s=-40} + K_2\Big|_{s=-40}</mrow>
+							<mrow>\frac{-6(-40) - 160}{(-40)} \amp= \frac{K_1((-40)+40)}{(-40)} + K_2</mrow>
+							<mrow>\frac{80}{-40} \amp= \frac{K_1(0)}{-40} + K_2</mrow>
+							<mrow>K_2 \amp= -2~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>The expanded form of <m>V(s)</m> is given below.</p>
+
+					<p>
+						<md>V(s) = \frac{-4}{s} + \frac{-2}{(s+40)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+					
+					<p>
+						<md>v(t) = \left[-4~\textrm{V} - 2~\textrm{V}~\textrm{e}^{-40t}\right]~u(t)</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch11-sdomain-analysis-exercise2">
+				<statement>
+					<p>Use <m>s</m>-domain analysis to calculate <m>V(s)</m> of the circuit shown in <xref ref="sdomain-analysis-exercise2-diagram" />. The switch is open for a very long time before closing at a time of zero seconds.</p>
+
+					<figure xml:id="sdomain-analysis-exercise2-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch11-sdomain-analysis-exercise2" />.</caption>
+  						<image width="80%" xml:id="ch11-sdomain-analysis-exercise2-diagram">
+    						<shortdescription>Circuit with five nodes consisting of voltage source Vdc, resistors R1 and R2, capacitor C, inductor L, and SPST switch. The high-potential end of Vdc connects to R1 at node a. R1 and the SPST switch connect at node b. The SPST switch, L, and C connect at node c. C and R2 connect at node d. R2, L, and the low-potential end of Vdc connect at node e. Voltage v(t) drops from node d to node e. The SPST switch is depicted as closing.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{DC}$]						(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$]						(2.5,2.5);
+									\draw[]	(2.5,2.5) to [cute closing switch]				(5,2.5);
+									\draw[]	(5,2.5) to [L, l_=$L$, *-*, v^=$v_X(t)$]		(5,0);
+									\draw[]	(5,2.5) to [C, l^=$C$]							(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=$R_2$, v^=$v(t)$]			(7.5,0);
+									\draw[]	(0,0) to [short]								(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>V(s) = \frac{\left[\frac{V_{DC}R_2}{R_1+R_2}\right]s}{s^2+\left[\frac{L+CR_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{R_1}{LC(R_1+R_2)}\right]}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m>-domain.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="70%" xml:id="ch11-sdomain-analysis-exercise2-figure1">
+							<shortdescription>Circuit with two meshes and four nodes consisting of voltage source Vdc, resistors R1 and R2, capacitor (1/(sC)), and inductor sL. The high-potential end of Vdc connects to R1 at node a. R1, sL, and the capacitor connect at node b. The capacitor and R2 connect at node c. R2, sL, and the low-potential end of Vdc connect at node d. Voltage V(s) drops from node c to node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{DC}/s$]					(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$]						(2.5,2.5);
+									\draw[]	(2.5,2.5) to [L, l_=$sL$, *-*, v^=$V_X(s)$]		(2.5,0);
+									\draw[]	(2.5,2.5) to [C, l^=$1/(sC)$]					(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=$R_2$, v^=$V(s)$]				(5,0);
+									\draw[]	(0,0) to [short]								(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Perform KCL and KVL to obtain an equation in terms of <m>V(s)</m>. Then, solve for <m>V(s)</m> and normalize.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{\frac{V_{DC}}{s} - V_X}{R_1} \amp= \frac{V_X}{sL} + \frac{V(s)}{R_2}</mrow>
+							<mrow>\frac{V_{DC}}{R_1s} \amp= V_X\left[\frac{1}{R_1} + \frac{1}{sL}\right] + \frac{V(s)}{R_2}</mrow>
+							<mrow>V_X \amp= \frac{V(s)}{sCR_2} + V(s)</mrow>
+							<mrow>\frac{V_{DC}}{R_1s} \amp= \left[\frac{1}{R_1} + \frac{1}{sL}\right]\left[\frac{V(s)}{sCR_2} + V(s)\right]+ \frac{V(s)}{R_2}</mrow>
+							<mrow>\amp= \frac{V(s)}{sCR_1R_2} + \frac{V(s)}{R_1} + \frac{V(s)}{s^2LCR_2} + \frac{V(s)}{sL} + \frac{V(s)}{R_2}</mrow>
+							<mrow>\frac{sV_{DC}}{R_1} \amp= \left[\frac{1}{R_1} + \frac{1}{R_2}\right]s^2V(s) + \left[\frac{1}{CR_1R_2} + \frac{1}{L}\right]sV(s) + \left[\frac{1}{LCR_2}\right]V(s)</mrow>
+							<mrow>\frac{sR_2V_{DC}}{R_1+R_2} \amp= s^2V(s) + \left[\frac{L+CR_1R_2}{R_1+R_2}\right]sV(s) + \left[\frac{R_1}{LC(R_1+R_2)}\right]V(s)</mrow>
+							<mrow>V(s) \amp= \frac{\left[\frac{V_{DC}R_2}{R_1+R_2}\right]s}{s^2+\left[\frac{L+CR_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{R_1}{LC(R_1+R_2)}\right]}</mrow>
+						</md>
+					</p>
+
+					<p>No component values have been provided, therefore, this is as far as the solution can go. Feel free to come up with component values to practice deriving the time-domain function <m>v(t)</m>.</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch11-sdomain-analysis-exercise3">
+				<statement>
+					<p>Use <m>s</m>-domain analysis to calculate <m>V(s)</m> and <m>v(t)</m> of the circuit shown in <xref ref="sdomain-analysis-exercise3-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The component values are: <m>V_{S1} = 6~\textrm{V}</m>, <m>V_{S2} = 20~\textrm{V}</m>, <m>R_1 = 4~\Omega</m>, <m>R_2 = 2~\Omega</m>, <m>C = 50~\mu\textrm{F}</m>, and <m>L = 1~\textrm{mH}</m>.</p>
+
+					<figure xml:id="sdomain-analysis-exercise3-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch11-sdomain-analysis-exercise3" />.</caption>
+  						<image width="100%" xml:id="ch11-sdomain-analysis-exercise3-diagram">
+    						<shortdescription>Circuit with 6 nodes consisting of voltage sources Vs1 and Vs2, resistors R1 and R2, inductor L, capacitor C, and SPDT switch. The high-potential end of Vs1 connects to input a of the SPDT switch at node a. The high-potential end of Vs2 connects to the SPDT switch at node b. The output of the SPDT switch connects to R1 at node c. R1 and L connect at node d. L, R2, and C connect at node e. The low-potential end of both sources connect to R2 and C at node f. Voltage v(t) drops from node e to node f. The SPDT switch is depicted as being in position a.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(2.5,2.5) node[cute spdt up, rotate=180, yscale=-1, anchor=out 1] (switch) {};
+									\draw[]	(switch.out 1) node[above] {a} --++ (left:2.5) to [V, l_=$V_{S1}$]	++(down:3.25) |- ($(switch.out 2)-(0.5,2.5)$);
+									\draw[]	(switch.out 2) node[above left] {b} --++(left:0.5) to [V, l_=$V_{S2}$, -*]	++(down:2.5);	
+									\draw[]	(switch.in) to [R, l^=$R_1$]						++(right:2.5);
+									\draw[]	($(switch.in)+(2.5,0)$) to [L, l^=$L$]				++(right:2.5);
+									\draw[]	($(switch.in)+(5,0)$) to [R, l_=$R_2$, *-*]			++(down:2.92);
+									\draw[]	($(switch.in)+(5,0)$) to [short]					++(right:2.5);
+									\draw[]	($(switch.in)+(7.5,0)$) to [C, l_=$C$, v^=$v(t)$]	++(down:2.5) |- ($(switch.out 2)-(0.5,2.5)$);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>V(s) \amp= \frac{2s^2 + 28000s + 4 \times 10^8}{s (s^2+14000s + 6 \times 10^7 )}</mrow>
+							<mrow>v(t) \amp= \left[6.67~\textrm{V} + \textrm{e}^{-7000t}\left(-4.67~\textrm{V}~\cos(3316.63t) - 9.85~\textrm{V}~\sin(3316.63t)\right)\right]</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Calculate the initial conditions of the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="40%" xml:id="ch11-sdomain-analysis-exercise3-figure1">
+							<shortdescription>Circuit with one mesh and three nodes consisting of voltage source Vs1, resistor R1, and resistor R2. The high-potential end of Vs1 connects to R1 at node a. R1 and R2 connect at node b. The low-potential end of Vs1 connects to R2 at node c. Branch current i(0) flows through R1 from node a to node b. Voltage v(0) drops from node b to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{S1}$]						(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$, i^=$i(0)$]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=$R_2$, v^=$v(0)$]			(2.5,0);
+									\draw[]	(0,0) to [short]								(2.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>
+						<md>
+							<mrow>i(0) \amp= \frac{V_{S1}}{R_1+R_2}</mrow>
+							<mrow>\amp= 1~\textrm{A}</mrow>
+							<mrow>v(0) \amp= V_{S1}\left(\frac{R_2}{R_1+R_2}\right)</mrow>
+							<mrow>\amp= 2~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>Transform the circuit into the <m>s</m>-domain.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="90%" xml:id="ch11-sdomain-analysis-exercise3-figure2">
+							<shortdescription>Circuit with three meshes and five nodes consisting of voltage source Vs2/s, voltage source v(0)/s, current source i(0)/s, resistors R1 and R2, inductor sL, and capacitor (1/(sC)). The high-potential end of Vs2/s connects to R1 at node a. R1, sL, and i(0)/s connect at node b. i(0)/s flows out of node b. i(0)/s, sL, R2, and the capacitor connect at node c. i(0)/s flows into node c. The capacitor and high-potential end of v(0)/s connect at node d. The low-potential end of both voltage sources and R2 connect at node e. Voltage V(s) drops from node c to node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{S2}/s$]		(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$]			(2.5,2.5);
+									\draw[]	(2.5,2.5) to [L, l^=$sL$]			(5,2.5);
+									\draw[]	(2.5,2.5) to [short, *-]			(2.5,4);
+									\draw[]	(5,2.5) to [short, *-]				(5,4);
+									\draw[]	(2.5,4) to [I, l^=$i(0)/s$]			(5,4);
+									\draw[]	(5,2.5) to [R, l_=$R_2$, -*]		(5,0);
+									\draw[]	(5,4) to [short, *-]				(7.5,4);
+									\draw[]	(7.5,4) to [C, l_=$1/(sC)$]			(7.5,2);
+									\draw[]	(7.5,2) to [V, l_=$v(0)/s$]			(7.5,0);
+									\draw[]	(8.5,4) to [open, v=$V(s)$]			(8.5,0);
+									\draw[]	(0,0) to [short]					(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Perform KCL to find an equation in terms of <m>V(s)</m>. Then, solve for <m>V(s)</m> and normalize.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{\frac{V_{S2}}{s}+\frac{LV_{S1}}{R_1+R_2} - V(s)}{R_1+sL} \amp= \frac{V(s)}{R_2} + \frac{V(s)-\frac{V_{S1}R_2}{s(R_1+R_2)}}{\frac{1}{sC}}</mrow>
+							<mrow>\frac{V_{S2}}{s} + \frac{LV_{S1}}{R_1+R_2} \amp= V(s) + (R_1+sL)\left[\frac{V(s)}{R_2} + sCV(s) - \frac{CV_{S1}R_2}{R_1+R_2}\right]</mrow>
+							<mrow>\amp= V(s) + \frac{R_1}{R_2}V(s) + \frac{sL}{R_2}V(s) + sCR_1V(s) + s^2LCV(s) </mrow>
+							<mrow>\amp- \frac{CV_{S1}R_1R_2}{R_1+R_2} - \frac{sLCV_{S1}R_2}{R_1+R_2}</mrow>
+							<mrow>\frac{V_{S2}}{s} + \frac{LV_{S1}}{R_1+R_2} + \frac{CV_{S1}R_1R_2}{R_1+R_2} + \frac{sLCV_{S1}R_2}{R_1+R_2} \amp= (LC)s^2V(s) + \left[\frac{L}{R_2} + CR_1\right]sV(s) + \left[\frac{R_1+R_2}{R_2}\right]V(s)</mrow>
+							<mrow>\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right] + \left[\frac{V_{S2}}{LC}\right]\frac{1}{s} \amp= s^2V(s) + \left[\frac{1}{CR_2} + \frac{R_1}{L}\right]sV(s) + \left[\frac{R_1+R_2}{LCR_2}\right]V(s)</mrow>
+							<mrow>\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s^2 + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{V_{S2}}{LC}\right] \amp= s\left(s^2V(s) + \left[\frac{1}{CR_2} + \frac{R_1}{L}\right]sV(s) + \left[\frac{R_1+R_2}{LCR_2}\right]V(s)\right)</mrow>
+							<mrow>V(s) \amp= \frac{\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s^2 + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{V_{S2}}{LC}\right]}{s\left(s^2+\left[\frac{1}{R_2C}+\frac{R_1}{L}\right]s + \left[\frac{R_1+R_2}{LCR_2}\right]\right)}</mrow>
+						</md>
+					</p>
+
+					<p>Plug in component values using base units.</p>
+					
+					<p>
+						<md>V(s) = \frac{2s^2 + 28000s + 4\textrm{E}8}{s\left(s^2+14000s + 6\textrm{E}7\right)}</md>
+					</p>
+
+					<p>Factor the denominator of <m>V(s)</m>.</p>
+					
+					<p>
+						<md>V(s) = \frac{2s^2 + 28000s + 4\textrm{E}8}{s(s+7000+j3166.6)(s+7000-j3166.6)}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+
+					<p>
+						<md>V(s) = \frac{K_1}{s} + \frac{K_2}{(s+7000+j3166.6)} + \frac{K_3}{(s+7000-j3166.6)}</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s)</m> and solve at <m>s=0</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(2s^2 + 28000s + 4\textrm{E}8)(s)}{s(s+7000+j3316.6)(s+7000-j3316.6)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+7000+j3316.6)}\Big|_{s=0} + \frac{K_3(s)}{(s+7000-j3316.6)}\Big|_{s=0}</mrow>
+							<mrow>\frac{2s^2 + 28000s + 4\textrm{E}8}{(s+7000+j3316.6)(s+7000-j3316.6)}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+7000+j3316.6)}\Big|_{s=0} + \frac{K_3(s)}{(s+7000-j3316.6)}\Big|_{s=0}</mrow>
+							<mrow>\frac{2(0)^2 + 28000(0) + 4\textrm{E}8}{(0+7000+j3316.6)(0+7000-j3316.6)} \amp= K_1 + \frac{K_2(0)}{(0+7000+j3316.6)} + \frac{K_3(0)}{(0+7000-j3316.6)}</mrow>
+							<mrow>\frac{400000000}{60000000} \amp= K_1 + 0 + 0</mrow>
+							<mrow>K_1 \amp= 6.6667~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+7000+j3316.6)</m> and solve at <m>s=-7000-j3316.6</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(2s^2 + 28000s + 4\textrm{E}8)(s+7000+j3316.6)}{s(s+7000+j3316.6)(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6} \amp= \frac{K_1(s+7000+j3316.6)}{s}\Big|_{s=-7000-j3316.6} + \frac{K_2(s+7000+j3316.6)}{(s+7000+j3316.6)}\Big|_{s=-7000-j3316.6} + \frac{K_3(s+7000+j3316.6)}{(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6}</mrow>
+							<mrow>\frac{2s^2 + 28000s + 4\textrm{E}8}{s(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6} \amp= \frac{K_1(s+7000+j3316.6)}{s}\Big|_{s=-7000-j3316.6} + K_2\Big|_{s=-7000-j3316.6} + \frac{K_3(s+7000+j3316.6)}{(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6}</mrow>
+							<mrow>\frac{2(-7000-j3316.6)^2 + 28000(-7000-j3316.6) + 4\textrm{E}8}{(-7000-j3316.6)((-7000-j3316.6)+7000-j3316.6)} \amp= \frac{K_1((-7000-j3316.6)+7000+j3316.6)}{(-7000-j3316.6)} + K_2 + \frac{K_3((-7000-j3316.6)+7000+j3316.6)}{((-7000-j3316.6)+7000-j3316.6)}</mrow>
+							<mrow>\frac{280000000}{-2.2\textrm{E}7 + j4.6433\textrm{E}7} \amp= \frac{K_1(0)}{(-7000-j3316.6)} + K_2 + \frac{K_3(0)}{((-7000-j3316.6)+7000-j3316.6)}</mrow>
+							<mrow>K_2 \amp= -2.3333 - j4.9247</mrow>
+						</md>
+					</p>
+
+					<p><m>K_3</m> is equal to the complex conjugate of <m>K_2</m>.</p>
+					
+					<p>
+						<md>K_3 = -2.3333 + j4.9247</md>
+					</p>
+
+					<p>The expanded form of <m>V(s)</m> is given below.</p>
+					
+					<p>
+						<md>V(s) = \frac{6.67}{s} + \frac{-2.333-j4.925}{(s+7000+j3316.6)} + \frac{-2.333+j4.925}{(s+7000-j3316.6)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+
+					<p>
+						<md>v(t) = \left[6.67~\textrm{V} + \textrm{e}^{-7000t}\left(-4.67~\textrm{V}~\cos(3316.63t) - 9.85~\textrm{V}~\sin(3316.63t)\right)\right]~u(t)</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch11-sdomain-analysis-exercise4">
+				<statement>
+					<p>Use <m>s</m>-domain analysis to calculate <m>I(s)</m> and <m>i(t)</m> of the circuit shown in <xref ref="sdomain-analysis-exercise4-diagram" />. The switch is in position b for a very long time before moving to position a at a time of zero seconds. The component values are: <m>V_{S1} = 40~\textrm{V}</m>, <m>\alpha = 4~\textrm{rad/s}</m>, <m>V_{S2} = 10~\textrm{V}</m>, <m>R = 50~\Omega</m>, <m>C = 10~\mu\textrm{F}</m>, and <m>L = 400~\textrm{mH}</m>.</p>
+
+					<figure xml:id="sdomain-analysis-exercise4-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch11-sdomain-analysis-exercise4" />.</caption>
+  						<image width="100%" xml:id="ch11-sdomain-analysis-exercise4-diagram">
+    						<shortdescription>Circuit with six nodes consisting of exponential voltage source, voltage source Vs2, SPDT switch, resistor R, inductor L, and capacitor C. The high-potential end of the exponential voltage source connects to input a of the SPDT switch at node a. The high-potential end of Vs2 connects to input b of the SPDT switch at node b. The output of the SPDT switch connects to R at node c. R and L connect at node d. L and C connect at node e. The low-potential end of both sources connect to C at node f. Voltage v(t) drops from node e to node f. Branch current i(t) flows through C from node e to node f. The SPDT switch is depicted as being in position b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(2,2.5) node[cute spdt up, rotate=180, anchor=out 2] (switch) {};
+									\draw[]	(switch.out 2) node[above] {a} --++ (left:2.5) node[below left] {+} to [rmeter, t=te$^{-t}$, l_=$V_{S1}~t~\textrm{e}^{-\alpha t}$] ++(down:3)	|- ($(switch.out 1)-(0.5,2.5)$);
+									\draw[]	(switch.out 1) node[above left] {b} --++ (left:0.5) to [V, l_=$V_{S2}$, -*]	++(down:2.5);
+									\draw[]	(switch.in) to [R, l^=$R$]						++(right:2.5);
+									\draw[]	($(switch.in)+(2.5,0)$) to [L, l^=$L$]				++(right:2.5);
+									\draw[]	($(switch.in)+(5,0)$) to [C, l_=$C$, i^=$i(t)$]		++(down:2.75) |- ($(switch.out 1)-(0.5,2.5)$);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>I(s) \amp= \frac{-25s^2 -100s -400}{(s+4)^2\left(s^2 + 125s + 2.5\textrm{E}5\right)}</mrow>
+							<mrow>i(t) \amp= [-1.6~\textrm{mA/s}~t~\textrm{e}^{-4t} + 0.4~\textrm{mA}~\textrm{e}^{-4t} + \textrm{e}^{-62.5t}\left(-0.4~\textrm{mA}~\cos(496t) - 50.4~\textrm{mA}~\sin(496t)\right)]~u(t)</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Calculate the initial conditions of the circuit. The inductor acts like a short and the capacitor acts like an open. For this reason, <m>i(0)</m> is zero and <m>v(0)</m> is equal to <m>V_{S2}</m>. Transform the circuit into the <m>s</m>-domain.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch11-sdomain-analysis-exercise4-figure1">
+							<shortdescription>Circuit with 1 mesh and 5 nodes consisting of Laplace transformed exponential voltage source, voltage source Vs2/s, resistor R, inductor sL, and capacitor (1/(sC)). The high-potential end of the exponential source connects to R at node a. R and sL connect at node b. sL and the capacitor connect at node c. The capacitor and the high-potential end of Vs2/s connect at node d. The low-potential end of both sources connect at node e. Branch current I(s) flows through the capacitor from node c to node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,4) to [V, l_=$V_{S1}/(s+\alpha)^2$]		(0,0);
+									\draw[]	(0,4) to [R, l^=$R$]						(2.5,4);
+									\draw[]	(2.5,4) to [L, l^=$sL$]						(5,4);
+									\draw[]	(5,4) to [C, l_=$1/(sC)$, i^=$I(s)$]		(5,2);
+									\draw[]	(5,2) to [V, l_=$V_{S2}/s$]					(5,0);
+									\draw[]	(0,0) to [short]							(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Perform KVL around the loop to obtain an equation in terms of <m>I(s)</m>. Then, solve for <m>I(s)</m> and normalize.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{V_{S1}}{(s+\alpha)^2} - \frac{V_{S2}}{s} \amp= RI(s) + sLI(s) + \frac{I(s)}{sC}</mrow>
+							<mrow>\frac{sCV_{S1}}{(s+\alpha)^2} - CV_{S2} \amp= sCRI(s) + s^2LCI(s) + I(s)</mrow>
+							<mrow>\frac{sV_{S1}}{L(s+\alpha)^2} - \frac{V_{S2}}{L} \amp= s^2I(s) + \frac{R}{L}sI(s) + \frac{1}{LC}I(s)</mrow>
+							<mrow>\frac{sV_{S1}-V_{S2}(s+\alpha)^2}{L(s+\alpha)^2} \amp= s^2I(s) + \frac{R}{L}sI(s) + \frac{1}{LC}I(s)</mrow>
+							<mrow>\frac{sV_{S1}-V_{S2}s^2 - s2\alpha V_{S2} - V_{S2}\alpha^2}{L(s+\alpha)^2} \amp= s^2I(s) + \frac{R}{L}sI(s) + \frac{1}{LC}I(s)</mrow>
+							<mrow>I(s) \amp= \frac{\left[\frac{-V_{S2}}{L}\right]s^2 + \left[\frac{V_{S1}-2\alpha V_{S2}}{L}\right]s + \left[\frac{-V_{S2}\alpha^2}{L}\right]}{(s+\alpha)^2\left(s^2+\left[\frac{R}{L}\right]s + \left[\frac{1}{LC}\right]\right)}</mrow>
+						</md>
+					</p>
+
+					<p>Plug in component values using base units.</p>
+					
+					<p>
+						<md>I(s) = \frac{-25s^2 -100s -400}{(s+4)^2\left(s^2 + 125s + 2.5\textrm{E}5\right)}</md>
+					</p>
+
+					<p>Factor the denominator.</p>
+					
+					<p>
+						<md>I(s) = \frac{-25s^2 -100s -400}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+					
+					<p>
+						<md>I(s) = \frac{K_1}{(s+4)^2} + \frac{K_2}{(s+4)} + \frac{K_3}{(s+62.5+j496)} + \frac{K_4}{(s+62.5-j496)}</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s+4)^2</m> and solve at <m>s=-4</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(-25s^2 -100s -400)(s+4)^2}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= \frac{K_1(s+4)^2}{(s+4)^2}\Big|_{s=-4} + \frac{K_2(s+4)^2}{(s+4)}\Big|_{s=-4} + \frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\frac{-25s^2 -100s -400}{(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= K_1\Big|_{s=-4} + K_2(s+4)\Big|_{s=-4} + \frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\frac{-25(-4)^2 -100(-4) -400}{((-4)+62.5+j496)((-4)+62.5-j496)} \amp= K_1 + K_2((-4)+4) + \frac{K_3((-4)+4)^2}{((-4)+62.5+j496)} + \frac{K_4((-4)+4)^2}{((-4)+62.5-j496)}</mrow>
+							<mrow>\frac{-400}{249516} \amp= K_1 + K_2(0) + \frac{K_3(0)}{58.5+j496} + \frac{K_4(0)}{58.5-j496}</mrow>
+							<mrow>K_1 \amp= -0.0016~\textrm{A}</mrow>
+							<mrow>\amp= -1.6031~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+4)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-4</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{d}{ds}\frac{(-25s^2 -100s -400)(s+4)^2}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= \frac{d}{ds}\frac{K_1(s+4)^2}{(s+4)^2}\Big|_{s=-4} + \frac{d}{ds}\frac{K_2(s+4)^2}{(s+4)}\Big|_{s=-4} + \frac{d}{ds}\frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{d}{ds}\frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\frac{d}{ds}\frac{-25s^2 -100s -400}{(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= \frac{d}{ds}K_1\Big|_{s=-4} + \frac{d}{ds}K_2(s+4)\Big|_{s=-4} + \frac{d}{ds}\frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{d}{ds}\frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\frac{-3025(s^2+4131.97s+8247.93)}{(s^2+125s+2.5\textrm{E}5)^2}\Big|_{s=-4} \amp= 0\Big|_{s=-4} + K_2\Big|_{s=-4} + \frac{K_3(s+4)(s+121+j992)}{(s+62.5+j496)^2}\Big|_{s=-4} + \frac{K_4(s+4)(s+121-j992)}{(s+62.5-j496)^2}\Big|_{s=-4}</mrow>
+							<mrow>\frac{-3025((-4)^2+4131.97(-4)+8247.93)}{((-4)^2+125(-4)+2.5\textrm{E}5)^2} \amp= K_2 + \frac{K_3((-4)+4)((-4)+121+j992)}{((-4)+62.5+j496)^2} + \frac{K_4((-4)+4)((-4)+121-j992)}{((-4)+62.5-j496)^2}</mrow>
+							<mrow>\frac{2.4998\textrm{E}7}{6.2258\textrm{E}10} \amp= K_2 + \frac{K_3(0)}{(58.5+j496)^2} + \frac{K_4(0)}{(58.5-j496)^2}</mrow>
+							<mrow>K_2 \amp= 4.0153\textrm{E}-4~\textrm{A}</mrow>
+							<mrow>\amp= 0.4015~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p>To calculate <m>K_3</m>, multiply both sides of the equation by <m>(s+62.5+j496)</m> and solve at <m>s=-62.5-j496</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(-25s^2 -100s -400)(s+62.5+j496)}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-62.5-j496} \amp= \frac{K_1(s+62.5+j496)}{(s+4)^2}\Big|_{s=-62.5-j496} + \frac{K_2(s+62.5+j496)}{(s+4)}\Big|_{s=-62.5-j496} + \frac{K_3(s+62.5+j496)}{(s+62.5+j496)}\Big|_{s=-62.5-j496} + \frac{K_4(s+62.5+j496)}{(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\frac{(-25s^2 -100s -400)}{(s+4)^2(s+62.5-j496)}\Big|_{s=-62.5-j496} \amp= \frac{K_1(s+62.5+j496)}{(s+4)^2}\Big|_{s=-62.5-j496} + \frac{K_2(s+62.5+j496)}{(s+4)}\Big|_{s=-62.5-j496} + K_3\Big|_{s=-62.5-j496} + \frac{K_4(s+62.5+j496)}{(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\frac{(-25(-62.5-j496)^2 -100(-62.5-j496) -400)}{((-62.5-j496)+4)^2((-62.5-j496)+62.5-j496)} \amp= \frac{K_1((-62.5-j496)+62.5+j496)}{((-62.5-j496)+4)^2} + \frac{K_2((-62.5-j496)+62.5+j496)}{((-62.5-j496)+4)}+ K_3 + \frac{K_4((-62.5-j496)+62.5+j496)}{((-62.5-j496)+62.5-j496)}</mrow>
+							<mrow>\frac{6.0605\textrm{E}6 - j1.5006\textrm{E}6}{5.7586\textrm{E}7 + j2.4077\textrm{E}8} \amp= \frac{K_1(0)}{((-62.5-j496)+4)^2} + \frac{K_2(0)}{((-62.5-j496)+4)}+ K_3 + \frac{K_4((0)}{((-62.5-j496)+62.5-j496)}</mrow>
+							<mrow>K_3 \amp= -0.0002 - j0.0252~\textrm{A}</mrow>
+							<mrow>\amp= -0.2008 - j25.2197~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p><m>K_4</m> is the complex conjugate of <m>K_3</m>.</p>
+					
+					<p>
+						<md>K_4 = -0.2008 + j25.2197~\textrm{mA}</md>
+					</p>
+
+					<p>The expanded form of <m>I(s)</m> is given below. (The unit of each numerator is mA.)</p>
+
+					<p>
+						<md>I(s) = \frac{-1.603}{(s+4)^2} + \frac{0.4}{(s+4)} + \frac{-0.201 -j25.220}{(s+62.5+j496)} + \frac{-0.201 +j25.220}{(s+62.5-j496)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+
+					<p>
+						<md>
+							<mrow>i(t) \amp= [-1.6~\textrm{mA/s}~t~\textrm{e}^{-4t} + 0.4~\textrm{mA}~\textrm{e}^{-4t}</mrow>
+							<mrow>\amp+ \textrm{e}^{-62.5t}\left(-0.4~\textrm{mA}~\cos(496t) - 50.4~\textrm{mA}~\sin(496t)\right)]~u(t)</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch11-sdomain-analysis-exercise5">
+				<statement>
+					<p>Use <m>s</m>-domain analysis to calculate <m>I(s)</m> and <m>i(t)</m> of the circuit shown in <xref ref="sdomain-analysis-exercise5-diagram" />. The switch closes at a time of zero seconds. The component values are: <m>I_m = 500~\textrm{mA}</m>, <m>\omega = 60~\textrm{rad/s}</m>, <m>R_1 = 200~\Omega</m>, <m>R_2 = 2~\Omega</m>, <m>R_3 = 1~\Omega</m>, <m>C = 20~\mu\textrm{F}</m>, and <m>L = 50~\textrm{mH}</m>.</p>
+
+					<figure xml:id="sdomain-analysis-exercise5-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch11-sdomain-analysis-exercise5" />.</caption>
+  						<image width="100%" xml:id="ch11-sdomain-analysis-exercise5-diagram">
+    						<shortdescription>Circuit with five nodes consisting of cosine current source, SPST switch, resistors R1, R2, and R3, inductor L, and capacitor C. The high-potential end of the current source connects to the SPST switch at node a. The SPST switch, R1, L, and C connect at node b. L and R2 connect at node c. C and R3 connect at node d. The low-potential end of the source, R1, R2, and R3 connect at node e. Branch current i(t) flows through R2 from node c to node e. Voltage v(t) drops from node b to node e. The SPST switch is depicted as closing.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[below left] {+} to [sV, l_=$I_m~\cos(\omega t)$]		(0,0);
+									\draw[]	(0,5) to [cute closing switch]									(2.5,5);
+									\draw[]	(2.5,5) to [R, l_=$R_1$, *-*, v^=$v(t)$]						(2.5,0);
+									\draw[]	(2.5,5) to [short]												(7.5,5);
+									\draw[]	(5,5) to [L, l_=$L$, *-]										(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=$R_2$, -*, i^=$i(t)$]							(5,0);
+									\draw[]	(7.5,5) to [C, l_=$C$]											(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=$R_3$]										(7.5,0);
+									\draw[]	(0,0) to [short]												(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>I(s) \amp= \frac{9.95s^2 + 497512.44s}{(s^2+3600)\left(s^2 + 308.66s + 1004975.12\right)}</mrow>
+							<mrow>i(t) \amp= [500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t) + \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)]~u(t)</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m>-domain.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch11-sdomain-analysis-exercise5-figure1">
+							<shortdescription>Circuit with three meshes and four nodes consisting of Laplace transformed cosine current source, resistors R1, R2, and R3, capacitor (1/(sC)), and inductor sL. The high-potential end of the source, R1, sL, and the capacitor connect at node a. sL and R2 connect at node b. The capacitor and R3 connect at node c. The low-potential end of the source, R1, R2, and R3 connect at node d. Branch current I(s) flows through R2 from node b to node d. Voltage V(s) drops from node a to node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[below left] {+} to [sV, l_=$I_ms/(s^2+\omega^2)$]	(0,0);
+									\draw[]	(2.5,5) to [R, l_=$R_1$, *-*, v^=$V(s)$]						(2.5,0);
+									\draw[]	(0,5) to [short]												(7.5,5);
+									\draw[]	(5,5) to [L, l_=$sL$, *-]										(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=$R_2$, -*, i^=$I(s)$]							(5,0);
+									\draw[]	(7.5,5) to [C, l_=$1/(sC)$]										(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=$R_3$]										(7.5,0);
+									\draw[]	(0,0) to [short]												(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Perform KCL and KVL to obtain an equation in terms of <m>I(s)</m>. Then, solve for <m>I(s)</m> and normalize.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{I_ms}{s^2+\omega^2} \amp= \frac{V(s)}{R_1} + I(s) + \frac{V(s)}{R_3+\frac{1}{sC}}</mrow>
+							<mrow>V(s) \amp= sLI(s) + R_2I(s)</mrow>
+							<mrow>\frac{I_ms}{s^2+\omega^2} \amp= \frac{sLI(s)}{R_1} + \frac{R_2I(s)}{R_1} + I(s) + \frac{sLI(s) + R_2I(s)}{R_3 + \frac{1}{sC}}</mrow>
+							<mrow>\left(\frac{I_ms}{s^2+\omega^2}\right)\left(R_3 + \frac{1}{sC}\right) \amp= \frac{sLI(s)}{R_1}\left(R_3 + \frac{1}{sC}\right) + \frac{R_2I(s)}{R_1}\left(R_3 + \frac{1}{sC}\right) + I(s)\left(R_3 + \frac{1}{sC}\right) + sLI(s) + R_2I(s)</mrow>
+							<mrow>\frac{I_mR_3s}{s^2+\omega^2} + \frac{I_m}{C(s^2+\omega^2)} \amp= \frac{sLR_3I(s)}{R_1} + \frac{L}{R_1C}I(s) + \frac{R_2R_3I(s)}{R_1} + \frac{R_2}{sCR_1}I(s) + R_3I(s) + \frac{1}{sC}I(s) + sLI(s) + R_2I(s)</mrow>
+							<mrow>\frac{CI_mR_3s^2 + I_ms}{C(s^2+\omega^2)} \amp= \left[\frac{LR_3}{R_1} + L\right]s^2I(s) + \left[\frac{L}{R_1C} + \frac{R_2R_3}{R_1} + R_3 + R_2\right]sI(s) + \left[\frac{R_2}{CR_1} + \frac{1}{C}\right]I(s)</mrow>
+							<mrow>\frac{CI_mR_1R_3s^2 + R_1I_ms}{LC(R_1+R_3)(s^2+\omega^2)} \amp= s^2I(s) + \left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3+R_1R_3+R_1R_2}{L(R_1+R_3)}\right]sI(s) + \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]I(s)</mrow>
+							<mrow>I(s) \amp= \frac{\left[\frac{CR_1R_3I_m}{LC(R_1+R_3)}\right]s^2 + \left[\frac{R_1I_m}{LC(R_1+R_3)}\right]s}{(s^2+\omega^2)\left(s^2+\left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3 + R_1R_3 + R_1R_2}{L(R_1+R_3)}\right]s + \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]\right)}</mrow>
+						</md>
+					</p>
+
+					<p>Plug in component values using base units.</p>
+					
+					<p>
+						<md>I(s) = \frac{9.95s^2 + 497512.44s}{(s^2+3600)\left(s^2 + 308.66s + 1004975.12\right)}</md>
+					</p>
+
+					<p>Factor the denominator.</p>
+					
+					<p>
+						<md>I(s) = \frac{9.95s^2 + 497512.44s}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}</md>
+					</p>
+
+					<p>The partial fraction expansion will take the form shown below.</p>
+					
+					<p>
+						<md>I(s) = \frac{K_1}{(s+j60)} + \frac{K_2}{(s-j60)} + \frac{K_3}{(s+154+j991)} + \frac{K_4}{(s+154-j991)}</md>
+					</p>
+
+					<p>To calculate <m>K_1</m>, multiply both sides of the equation by <m>(s+j60)</m> and solve at <m>s=-j60</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(9.95s^2 + 497512.44s)(s+j60)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60} \amp= \frac{K_1(s+j60)}{(s+j60)}\Big|_{s=-j60} + \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60} + \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60} + \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\frac{9.95s^2 + 497512.44s}{(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60} \amp= K_1\Big|_{s=-j60} + \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60} + \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60} + \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\frac{9.95(-j60)^2 + 497512.44(-j60)}{((-j60)-j60)((-j60)+154+j991)((-j60)+154-j991)} \amp= K_1 + \frac{K_2((-j60)+j60)}{((-j60)-j60)} + \frac{K_3((-j60)+j60)}{((-j60)+154+j991)} + \frac{K_4((-j60)+j60)}{((-j60)+154-j991)}</mrow>
+							<mrow>\frac{-3.5821\textrm{E}4 - j2.9851\textrm{E}7}{-2.2223\textrm{E}6 - j1.2017\textrm{E}8} \amp= K_1 + \frac{K_2(0)}{-j120} + \frac{K_3(0)}{154+j931} + \frac{K_4(0)}{154-j1051}</mrow>
+							<mrow>K_1 \amp= 0.2483 + j0.0043~\textrm{A}</mrow>
+							<mrow>\amp= 248.34 + j4.2946~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p><m>K_2</m> is the complex conjugate of <m>K_1</m>.</p>
+
+					<p>
+						<md>K_2 = 248.34 - j4.2946~\textrm{mA}</md>
+					</p>
+
+					<p>To calculate <m>K_3</m>, multiply both sides of the equation by <m>(s+154+j991)</m> and solve at <m>s=-154-j991</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\frac{(9.95s^2 + 497512.44s)(s+154+j991)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-154-j991} \amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991} + \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991} + \frac{K_3(s+154+j991)}{(s+154+j991)}\Big|_{s=-154-j991} + \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\frac{9.95s^2 + 497512.44s}{(s+j60)(s-j60)(s+154-j991)}\Big|_{s=-154-j991} \amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991} + \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991} + K_3\Big|_{s=-154-j991} + \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\frac{9.95(-154-j991)^2 + 497512.44(-154-j991)}{((-154-j991)+j60)((-154-j991)-j60)((-154-j991)+154-j991)} \amp= \frac{K_1((-154-j991)+154+j991)}{((-154-j991)+j60)} + \frac{K_2((-154-j991)+154+j991)}{((-154-j991)-j60)} + K_3 + \frac{K_4((-154-j991)+154+j991)}{((-154-j991)+154-j991)}</mrow>
+							<mrow>\frac{-8.6306\textrm{E}7 - j4.8976\textrm{E}8}{6.0568\textrm{E}8 + j1.8894\textrm{E}9} \amp= \frac{K_1(0)}{((-154-j991)+j60)} + \frac{K_2(0)}{((-154-j991)-j60)} + K_3 + \frac{K_4(0)}{((-154-j991)+154-j991)}</mrow>
+							<mrow>K_3 \amp= -0.2483 - j0.0339~\textrm{A}</mrow>
+							<mrow>\amp= -248.34 - j33.929~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p><m>K_4</m> is the complex conjugate of <m>K_3</m>.</p>
+
+					<p>
+						<md>K_4 = -248.34 + j33.929~\textrm{mA}</md>
+					</p>
+
+					<p>The expanded form of <m>I(s)</m> is given below. (The unit of each numerator is mA.)</p>
+
+					<p>
+						<md>I(s) = \frac{248.34 + j4.2946}{(s+j60)} + \frac{248.34 - j4.2946}{(s-j60)} + \frac{-248.34 - j33.929}{(s+154+j991)} + \frac{-248.34 + j33.929}{(s+154-j991)}</md>
+					</p>
+
+					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
+
+					<p>
+						<md>i(t) = [500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t) + \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)]~u(t)</md>
+					</p>
+				</solution>
+
+				
+			</exercise>
+			
+		</subexercises>
+	</exercises>
+
+</chapter>

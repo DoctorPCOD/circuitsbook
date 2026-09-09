@@ -1,0 +1,2271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch1-properties">
+	<title>Properties of Electric Circuits</title>
+	
+	<introduction>
+
+    	<p>Electric circuits have many different properties. Some of these properties describe quantities that we are interested in measuring in a circuit. Properties such as voltage and current are things that engineers are interested in designing circuits around; we want circuits to have particular values of voltage or current at specific points in a design. It's important for engineers to have a solid understanding of these properties. They will form the basis for the remainder of the content of this textbook.</p>
+		
+	</introduction>
+
+ 	<section xml:id="ch1-charge">
+		<title>Charge</title>
+
+		<p><term>Charge</term> is a fundamental property of matter just as mass is a fundamental property of matter. Charge is important because it interacts through electromagnetic forces. By physically separating two or more charges, an electric field is generated that creates either attractive or repulsive forces. These forces can direct the movement of charges throughout a circuit.</p>
+		
+		<p>Charge comes from protons and electrons. Protons each contain one unit of positive charge (usually denoted as <m>+e</m>), which is equal to <m>1.6\times 10^{-19}~\textrm{C}</m>. C stands for coulomb, which is the SI unit used for charge. Electrons each contain one unit of negative charge, which is equal to <m>-1.6\times 10^{-19}~\textrm{C}</m>. The symbol used for charge is <m>Q</m>.</p>
+
+		<remark>
+			<title>Summary of charge</title>
+
+			<p>
+				<ul>
+					<li><p>Symbol: <m>Q</m></p></li>
+					<li><p>Unit: C (coulomb)</p></li>
+				</ul>
+			</p>
+		</remark>
+
+ 	</section>
+
+	<section xml:id="ch1-voltage">
+		<title>Voltage</title>
+
+		<introduction>
+
+			<p><term>Voltage</term>, also referred to as electric potential, potential difference, or electromotive force, is another important property of circuits. Voltage defines how much work is done per unit of charge to move a test charge between two points. While voltage can be an abstract property to understand, it is one of the three most important properties of electric circuits (they are: voltage, current, and resistance). The symbol used for voltage is <m>V</m> and the unit is V (volt).</p>
+
+			<remark>
+				<title>Summary of voltage</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>V</m></p></li>
+						<li><p>Unit: V (volt)</p></li>
+					</ul>
+				</p>
+			</remark>
+
+			<p>A useful way to understand voltage can be to compare it with its gravitational equivalent. While gravitational forces and electromagnetic forces have many differences, they also have many similarities. Gravitational potential energy describes the amount of energy that an object has by virtue of its mass and its distance away from a reference mass. However, if that object were to disappear, the reference mass would still exist, and that reference mass has the <em>potential</em> to generate energy if an object of mass were to find itself some distance (<m>r</m>) away from the reference mass. This is depicted schematically in <xref ref="gravitationalpotential" />. This <em>potential</em> to have energy is known as gravitational potential.</p>
+
+			<figure xml:id="gravitationalpotential">
+  				<caption>Schematic depiction of gravitational potential energy and gravitational potential.</caption>
+  				<image width="100%" xml:id="ch1-gravitationalpotential">
+    				<shortdescription>Two diagrams. Both have a line depicting the floor and a rectangle with a height r (labeled) between the floor and the top of the rectangle. The floor is labeled "reference object of mass m." The rectangle depicts a surface an object can rest upon. The left diagram depicts a square labeled "m1" which represents an object of mass m1. This depicts gravitational potential energy (GPE). There's an equation at the top of the diagram reading "GPE = Gmm1/r." The right diagram does not have a square on top. This depicts gravitational potential (GP). There's an equation at the top of the diagram reading "GP = Gm/r."</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\node[align=left, anchor=south west] at (-2,3) {$GPE = Gmm_1/r$};
+							\draw[] (-2,0) -- (2,0);
+							\fill[pattern = north east lines] (-2,-1) rectangle (2,0);
+							\node[fill=white, align=center] at (0,-0.5) {reference object of mass $m$};
+							\draw[thick] (-1.5,0) rectangle (0.5,2);
+							\draw[thick] (-0.25,2) rectangle (0.5,2.75);
+							\node at (0.175,2.375) {$m_1$};
+							\draw[thick,Stealth-Stealth] (1,0) -- (1,2);
+							\fill[white] (0.75,0.75) rectangle (1.25,1.25);
+							\node at (1,1) {$r$};
+							\node[align=left, anchor=south west] at (5,3) {$GP = Gm/r$};
+							\draw[] (5,0) -- (9,0);
+							\fill[pattern = north east lines] (5,-1) rectangle (9,0);
+							\node[fill=white, align=center] at (7,-0.5) {reference object of mass $m$};
+							\draw[thick] (5.5,0) rectangle (7.5,2);
+							\draw[thick,Stealth-Stealth] (8,0) -- (8,2);
+							\fill[white] (7.75,0.75) rectangle (8.25,1.25);
+							\node at (8,1) {$r$};
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>As humans living on the planet Earth, gravitational potential depends on the mass of the Earth, the radius of the Earth, and the universal gravitational constant (<m>G = 6.7 \times 10^{-11}~\textrm{Nm}^2/\textrm{kg}^2</m>). While gravitational potential energy is a concept that you have probably studied extensively in your physics classes, you have probably not spent as much time on gravitational potential.</p>
+
+			<p><term>Electric potential energy</term> describes the energy that an object has by virtue of its charge and its distance away from a reference charge. However, if that object were to disappear, the reference charge would still exist, and that reference charge has the <em>potential</em> to generate energy if an object of charge were to find itself some distance (<m>r</m>) away from the reference charge. This is depicted schematically in <xref ref="electricpotential" />. This potential to have energy is known as electric potential, or voltage.</p>
+
+			<figure xml:id="electricpotential">
+  				<caption>Schematic depiction of electric potential energy and electric potential (voltage).</caption>
+  				<image width="100%" xml:id="ch1-electricpotential">
+    				<shortdescription>Two diagrams. Both have a circle labeled "q" depicting a reference charge and an arrow pointing to a distance r away from the reference charge (this is labeled). The left diagram contains a second circle a distance r away from the reference charge which is labeled "q1." The top of the diagram contains an equation of "EPE = kqq1/r." The right diagram does not have a second circle. The top of that diagram contains an equation of "EP = kq/r."</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\node[align=left, anchor=south west] at (-2.5,1) {$EPE = kqq_1/r$};
+							\draw[thick] (-2,0) circle (0.25);
+							\node at (-2,0) {$q$};
+							\draw[thick] (2,0) circle (0.25);
+							\node at (2,0) {$q_1$};
+							\draw[thick,Stealth-Stealth] (-2,0.5) -- (2,0.5);
+							\fill[white] (-0.25,0.25) rectangle (0.25,0.75);
+							\node at (0,0.5) {$r$};
+							\node[align=left, anchor=south west] at (4.5,1) {$EP = kq/r$};
+							\draw[thick] (5,0) circle (0.25);
+							\node at (5,0) {$q$};
+							\draw[thick,Stealth-Stealth] (5,0.5) -- (9,0.5);
+							\fill[white] (6.75,0.25) rectangle (7.25,0.75);
+							\node at (7,0.5) {$r$};
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>Voltage therefore depends on the charge of the reference object, the distance between the two objects, as well as Coulomb's constant (<m>k = 8.99 \times 10^9~\textrm{Nm}^2/\textrm{C}^2</m>).</p>
+
+			<p>What is important in the context of circuit analysis is where voltage comes from and how it will be treated as a quantity. Voltage can be generated in several different ways. Static electric fields are generated by physically separating charges and keeping them apart from each other, which is what a battery accomplishes using chemical means. Voltage can also be created by a time-varying magnetic field or charges moving through a static magnetic field. These methods are how generators and power plants work.</p>
+
+			<p>In an electromagnetic physics class, the emphasis is generally on using Maxwell's equations to solve for voltage as a quantity. In electrical engineering, we will treat voltage as either a source that is applied to a circuit (by means of a power supply, batteries, or function generator) or as a quantity to be measured over various circuit elements.</p>
+
+		</introduction>
+
+		<subsection xml:id="ch1-voltagedifference">
+			<title>Voltage as a Difference</title>
+
+			<p>It is important to note that voltage is a potential <em>difference.</em> This implies that voltage must be measured with respect to two points in a circuit. The terminology used in this book is to mention the <q>voltage dropped over an element.</q> Voltage is also <em>relative,</em> which means that care needs to be taken in the measurement or calculation of voltage drops. In other words, measuring the voltage drop with voltmeter leads in one orientation will lead to the negative value of the measurement with the leads in the other orientation. (In mathematical terms, <m>V_{ab} = - V_{ba}</m>.) Because voltage is relative, it is important to keep in mind what the reference is when understanding what is meant by a positive or a negative voltage drop.</p>
+
+			<p>It is also important to discuss the concept of a reference potential. Generally, we use <term>ground</term> as a reference potential of zero volts. The symbol for ground that is used on a circuit diagram resembles an upside-down tree and is depicted in <xref ref="groundsymbol" />.</p>
+
+			<figure xml:id="groundsymbol">
+  				<caption>Circuit symbol used for ground.</caption>
+  				<image width="5%" xml:id="ch1-groundsymbol">
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\draw (0,0) to [short] (0,-0.1) node[ground] {};
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>The Earth serves as a good choice of zero potential (ground) in circuits. The Earth can absorb very large amounts of charge without experiencing a change in this potential. Equipment with Earth ground connections will typically have a copper wire that is buried into the Earth in order to facilitate this ability to transfer charge.</p>
+
+			<p>Some objects (such as cars, airplanes, and some consumer electronic devices with portable power sources) do not have a physical connection to Earth ground, but still make use of a reference voltage of zero potential. For example, an airplane will typically use the metal chassis as a ground. However, this can lead to static buildup as charge cannot always dissipate from the metal chassis. When an airplane is refueled, this can be a particular hazard. For this reason, a fuel truck will ground itself to the airplane chassis to reduce any possibility of static buildup and discharge. Electrostatic discharge can also be a hazard when using integrated circuits, particularly those used for assembling computers. Care and consideration must be taken to ensure that people are properly grounded before and during working with these objects.</p>
+
+		</subsection>
+		
+		<subsection xml:id="ch1-measuringvoltage">
+			<title>Measuring Voltage</title>
+
+			<p>Voltage can be measured in a circuit using a device called a <term>voltmeter</term>. (A device that can measure multiple properties <mdash /> such as voltage, current, and resistance <mdash /> is called a multimeter.) The circuit symbol for a voltmeter is shown in <xref ref="voltmeter" />. A voltmeter contains two leads: a positive and a reference (or common) lead. When placed across the elements of a circuit, the potential difference between the two points (potential at positive lead minus the potential at common lead) is measured. Modern digital voltmeters typically use analog to digital converters and microcontrollers to turn a voltage measurement into a digital readout. Note that it is important to establish the reference potential and ensure that the leads are placed with the correct orientation. Otherwise, the voltmeter will display the negative of the desired value. (<m>V_{ab} = - V_{ba}</m>.)</p>
+
+			<figure xml:id="voltmeter">
+  				<caption>Circuit symbol used for a voltmeter.</caption>
+  				<image width="15%" xml:id="ch1-voltmeter">
+    				<shortdescription>Circle with the letter V inside the circle.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\draw (0,0) to [rmeter, t=V] (2,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>Due to Kirchhoff's voltage law (introduced in <xref ref="ch2-kvl" />), voltages must be measured in parallel. In other words, if the voltage drop over a particular circuit element is to be measured, then one lead of the voltmeter should be on one end of the element with the other lead of the voltmeter on the other end of the element. This is shown graphically in <xref ref="measuringvoltage" />.</p>
+
+			<figure xml:id="measuringvoltage">
+  				<caption>A diagram of how voltage is measured in parallel (across a component).</caption>
+  				<image width="30%" xml:id="ch1-measuringvoltagefig">
+    				<shortdescription>A voltmeter is shown with + and - terminals. A generic circuit element is depicted as a rectangle with wires protruding from the two short ends. A wire connects the + side of the voltmeter to one of the wires of the circuit element. A second wire connects the - side of the voltmeter to the other wire of the circuit element.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\draw (0.5,1.5) to [qvprobe] (3.5,1.5);
+							\draw[-Stealth] (0.5,1.5) -- (0.5,0);
+							\draw[-Stealth] (3.5,1.5) -- (3.5,0);
+							\draw (0,0) to [generic] (4,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>It is important for a measuring tool to provide minimal impact on the functionality of a circuit. Because a voltmeter is placed in parallel with a circuit element, it is important for current into the voltmeter to be minimal. If current were to flow into the voltmeter, then it would change the current through the circuit and would impact the measurement of the voltage. For this reason, voltmeters are designed with a very high internal resistance. (Resistance is a concept that will be introduced in <xref ref="ch2-resistor" />.) This makes voltmeters rather safe to use, as placing a voltmeter incorrectly cannot lead to an accidental low-resistance short circuit.</p>
+
+		</subsection>
+
+ 	</section>
+
+ 	<section xml:id="ch1-current">
+		<title>Current</title>
+		<introduction>
+
+			<p><term>Current</term> quantifies the amount of charge moving past a point per unit of time; if charge changes with time, then current is equal to the time derivative of charge, defined in <xref ref="ch1-currentequation" />. The symbol for current is <m>I</m>.</p>
+	
+			<p>
+				<md number="yes" xml:id="ch1-currentequation">
+					i(t) = \frac{dq(t)}{dt}
+				</md>
+			</p>
+
+			<p>Because the unit of charge is C (coulomb) and the unit of time is s (second), the unit for current is C/s (coulombs per second), also known as A (ampere or amp).</p>
+
+			<remark>
+				<title>Summary of current</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>I</m></p></li>
+						<li><p>Unit: A (amp)</p></li>
+					</ul>
+				</p>
+			</remark>
+
+			<p>Negatively charged particles will move through a conductor in the presence of an electric field to an area of high potential (positive charge). Current is defined opposite to the motion of negative charges. In other words: <alert>current is defined opposite to the motion of electrons in a circuit</alert>.</p>
+
+			<p><alert>Current will only flow through a closed circuit.</alert> That is, there must be a complete path for electrons to move. Current will be zero through any circuit (or circuit branch) that is not closed. <xref ref="open-and-closed-circuit" /> depicts an open circuit (left) and a closed circuit (right).</p>
+			
+			<figure xml:id="open-and-closed-circuit">
+  				<caption>An open circuit (left) and a closed circuit (right).</caption>
+				<image width="80%" xml:id="ch1-open-and-closed-circuit">
+					<shortdescription>Left: circuit with a voltage source and generic circuit element connected without a complete path between the two circuit elements. Right: circuit with a voltage source and generic circuit element connected in a complete path.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(0,2.5) to [V, l_=$V_S$]	(0,0);
+							\draw[]	(0,2.5) to [generic]		(2.5,2.5);
+							\draw[]	(0,0) to [short]			(2.5,0);
+							\draw[]	(5,2.5) to [V, l_=$V_S$]	(5,0);
+							\draw[]	(5,2.5) to [generic]		(7.5,2.5);
+							\draw[]	(7.5,2.5) to [short] 		(7.5,0) --++ (left:2.5);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+    		
+		</introduction>
+
+		<subsection xml:id="ch1-currentflow">
+			<title>Current as a Flow</title>
+
+			<p>Current relates to the flow of charge through an object. Because the charge is moving in a particular direction, the sign of current correlates to the direction of the current. It is possible to calculate or measure current in any arbitrary direction. If the calculation or measurement yields a positive result, it means that the direction that was chosen is indeed the direction in which current is flowing. If the calculation or measurement yields a negative result, it means that current is flowing in the opposite direction.</p>
+
+			<p>As an example, let's assume that we have a circuit element and we believe that current is traveling from left to right, as shown in <xref ref="currentdirectionexample" />. If we measure or calculate the current and obtain a positive result, it means that the current is indeed flowing from left to right. However, if our measurement or calculation leads to a negative result, it means that the current is flowing from right to left.</p>
+
+			<figure xml:id="currentdirectionexample">
+  				<caption>A circuit element; we are assuming that current flows from left to right.</caption>
+  				<image width="30%" xml:id="ch1-currentdirectionexample">
+    				<shortdescription>A generic circuit element is depicted as a rectangle with wires protruding from each of the two short ends. An arrow labeled "I" placed adjacent to one of these wires points from left to right.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\draw (0,0) to [generic, f_=$I$] (4,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+	
+		</subsection>
+
+		<subsection xml:id="ch1-measuringcurrent">
+			<title>Measuring Current</title>
+
+			<p>Current can be measured in a circuit using a device called an <term>ammeter</term>. The circuit schematic for an ammeter is shown in <xref ref="ammeter" />. An ammeter contains two leads. Current enters through one lead and exits through the reference (common) lead. When placed in series with a circuit element, the current through the ammeter is measured. An ammeter will measure the current flowing from one lead to the common lead; therefore it is important to verify the orientation of the leads to ensure that the readout is not going to be the negative value of what is desired. </p>
+
+			<figure xml:id="ammeter">
+  				<caption>Circuit symbol used for an ammeter.</caption>
+  				<image width="15%" xml:id="ch1-ammeter">
+    				<shortdescription>A circle with the letter A inside.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\draw (0,0) to [rmeter, t=A] (2,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>Modern digital ammeters use a resistor with a very small value (called a shunt resistor) over which the voltage can be measured using an analog to digital converter. Using Ohm's law, the current can be calculated using a microcontroller and displayed on a screen.</p>
+
+			<p>Due to Kirchhoff's current law (explained in <xref ref="ch2-kcl" />), currents must be measured in series. In other words, the path of the circuit must be broken open, and the ammeter must be inserted into that path in order to measure the current through that path. This is shown graphically in <xref ref="measuringcurrentseries" />.</p>
+
+			<figure xml:id="measuringcurrentseries">
+  				<caption>A diagram of how current is measured in series (in the same path as a component).</caption>
+  				<image width="40%" xml:id="ch1-measuringcurrentseries">
+    				<shortdescription>An ammeter is shown with a wire inside with an arrow pointing in the direction of positive flow. A generic circuit element is depicted as a rectangle with wires protruding from the two short ends. One of these wires connects to the wire inside the ammeter.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\draw (2,0) to [qiprobe] (4,0);
+							\draw (-0.5,0) to [generic] (2,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>Just as with a voltmeter, it is important for an ammeter to disturb the functionality of the circuit as little as possible. An ideal ammeter would contribute no voltage drop to the circuit. However, as a shunt resistor is required to measure current, that means the shunt resistor should have as small a value as possible. (The reason behind this will hopefully become clear once we introduce Ohm's law in <xref ref="ch2-ohmslaw" />.) Because the internal resistance of an ammeter is so low, it is imperative to use caution when connecting an ammeter. If a lot of current is caused to flow through an ammeter (by connecting the ammeter in a path with very low resistance, for example by connecting it in parallel with an element rather than in series with an element), then the internal circuitry can be damaged or a fuse blown.</p>
+
+		</subsection>
+
+ 	</section>
+
+ 	<section xml:id="ch1-power">
+		<title>Power</title>
+
+		<introduction>
+
+			<p>Energy is lost or gained at particular rates in each element in a circuit. This rate of energy loss (or gain) is known as <term>power</term>. The symbol for power is <m>P</m>, and the unit is W (watt). In general, power is defined as the time derivative of energy or work in a circuit element (<m>\frac{dw(t)}{dt}</m>). The instantaneous power consumed by a circuit element is defined in <xref ref="ch1-instantaneouspower" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-instantaneouspower">
+					p(t) = i(t)v(t)
+				</md>
+			</p>
+
+			<remark>
+				<title>Summary of power</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>P</m></p></li>
+						<li><p>Unit: W (watt)</p></li>
+					</ul>
+				</p>
+			</remark>
+
+		</introduction>
+
+		<subsection xml:id="ch1-conservationofpower">
+			<title>Conservation of Power</title>
+
+			<p>Conservation of power, which comes from conservation of energy, is an important concept in electric circuits. This tells us that <em>all power that is created or delivered in a circuit is equal to all of the power that is absorbed or consumed in that circuit.</em> Some circuit elements create or deliver power. Other circuit elements absorb power. To determine which thing (delivering or absorbing) a circuit element is doing, there are two methods to use. The first by being told what the circuit element is. Batteries, power supplies, and function generators deliver power. Resistors absorb power. (Some circuit elements neither create nor consume power. This concept will be introduced in <xref ref="ch10-acpower" />.)</p>
+
+			<p>The second method is by analyzing the voltage drop over and current through a circuit element. If current flows from high potential to low potential in a circuit element, the element absorbs power. If current flows from low potential to high potential in a circuit element, the circuit delivers power.</p>
+
+			<example>
+				<title>Determining if circuit elements deliver or absorb power</title>
+
+				<statement>
+
+					<p>For each circuit element in <xref ref="powerdeliverorabsorb" />, determine if it delivers or absorbs power.</p>
+
+					<figure xml:id="powerdeliverorabsorb">
+  						<caption>A circuit composed of four unknown circuit elements all connected in series.</caption>
+  						<image width="50%" xml:id="ch1-powerdeliverorabsorb">
+    						<shortdescription>One circuit element is labeled A and has a voltage of VA measured from top to bottom. The + end of element A is connected to the - end of element B, labeled with a voltage of VB measured from left to right. The current I is depicted as flowing left to right through this element. The - end of element B is connected to the - end of element C, labeled with a voltage of VC measured from top to bottom. The + end of element C is connected to the + end of element D, labeled with a voltage of VD measured from right to left. The - end of element D is connected to the - end of element A.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (0,3) to [generic, l_=A, v^=$V_A$] (0,0);
+									\draw (0,3) to [generic, l^=B, v_=$V_B$, i^=$I$] (3,3);
+									\draw (3,0) to [generic, l_=C, v^=$V_C$] (3,3);
+									\draw (3,0) to [generic, l^=D, v_=$V_D$] (0,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Current flows from high to low potential in elements B and D: therefore B and D are absorbing power. Current flows from low to high potential in elements A and C: therefore A and C are delivering power.</p>
+
+				</statement>
+
+			</example>
+
+		</subsection>
+
+ 	</section>
+
+ 	<section xml:id="ch1-powersources">
+		<title>Power Sources</title>
+
+		<introduction>
+
+			<p>Power sources are used in a circuit to generate energy and distribute it to other circuit elements. The types of power supplies that are typically used in circuits include batteries, constant voltage sources, constant current sources, and function generators. </p>
+
+		</introduction>
+
+
+		<subsection xml:id="ch1-dcsources">
+			<title>Direct Current (DC) Sources</title>
+
+			<p>Some sources are <term>direct current (DC)</term>, which means that the value of the current or voltage supplied by the source does not change with time. Three circuit symbols for DC power sources are shown in <xref ref="dcpowersources" />.</p>
+
+			<figure xml:id="dcpowersources">
+  				<caption>Three types of DC power sources: a voltage source, battery, and current source.</caption>
+  				<image width="60%" xml:id="ch1-dcpowersources">
+    				<shortdescription>Left: circuit symbol for a DC voltage source which is a circle with + and - signs inside. Middle: circuit symbol for a battery which is composed of two lines, a long line representing high potential and a short end representing low potential. Right: circuit symbol for a DC current source which is a circle with an arrow inside.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\foreach \x/\item/\label in {0/V/DC Voltage, 3/battery1/Battery, 6/I/DC Current} {
+								\draw (\x,2) to [\item] (\x,0) node[below, align=center] {\label};
+							}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>The DC voltage symbol contains plus and minus signs. The plus sign represents the side of the supply that corresponds to high potential. The minus sign represents the side of the supply that corresponds to low potential. The battery does not contain plus or minus signs but instead has two lines: one long and one short. The long end (which is the upper line in <xref ref="dcpowersources" />) corresponds to high potential, and the short end corresponds to low potential. In the symbol for a current source, the arrow depicts the direction of current (assuming that the source is properly connected in a complete circuit).</p>
+
+		</subsection>
+
+		<subsection xml:id="ch1-acsources">
+			<title>Alternating Current (AC) Sources</title>
+
+			<p>In <term>alternating current (AC)</term> sources, the voltage or current supplied by the source varies with time. Four circuit symbols for AC power supplies are shown in <xref ref="acpowersources" />.</p>
+
+			<figure xml:id="acpowersources">
+  				<caption>Four types of AC power sources: sinusoidal voltage, sinusoidal current, square wave, and triangular wave.</caption>
+  				<image width="80%" xml:id="ch1-acpowersources">
+    				<shortdescription>Far left: circuit symbol for a sinusoidal voltage source which is a circle with a sine-wave-shaped squiggle inside. A label "Vs" is present adjacent to the circle. Middle left: circuit symbol for a sinusoidal current source which is a circle with a sine-wave-shaped squiggle inside. A label "Is" is present adjacent to the circle. Middle right: circuit symbol for a square wave source which is a circle with a square wave shape inside. Far right: circuit symbol for a triangular wave source which is a circle with a triangle wave shape inside.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\foreach \x/\item/\label/\text in {0/sV/Sinusoidal Voltage/Vs, 3/sI/Sinusoidal Current/Is, 6/sqV/Square Wave/~, 9/tV/Triangular Wave/~} {
+								\draw (\x,2) to [\item, l^=\text] (\x,0) node[below, align=center] {\label};
+							}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>The key to analyzing AC power supply circuit symbols is to look at the labels on the sources. The symbol within the circle depicts the nature of the time-varying source: sinusoidal, square wave, or triangular wave. The text or unit on the label (given in V, A, or mA) depicts if the source is a voltage source or current source. A plus sign on a circuit diagram using an AC power supply will be used to depict the high-potential end of the source. For a voltage source, the + sign depicts the high-potential end of the source. For a current source, the + sign depicts the direction of current flow. This is shown for both a voltage and current source in <xref ref="voltage-current-plus-signs" />.</p>
+			
+			<figure xml:id="voltage-current-plus-signs">
+  				<caption>The + sign on a sinusoidal voltage or current source depicts the point of high-potential of the source.</caption>
+				<image width="80%" xml:id="ch1-voltage-current-plus-signs">
+					<shortdescription>Left: circuit diagram consisting of a sinusoidal voltage source in series with two generic circuit elements. A plus sign depicts the point of high-potential of the source. Right: circuit diagram consisting of a sinusoidal current source in series with two generic circuit elements. A plus sign depicts the point of high-potential of the source.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$V_{AC}$]		(0,0);
+							\draw[]	(0,2.5) to [generic]					(2.5,2.5);
+							\draw[]	(2.5,2.5) to [generic]					(2.5,0) --++ (left:2.5);
+							\draw[]	(5,2.5) node[below left] {+} to [sV, l_=$I_{AC}$]		(5,0);
+							\draw[]	(5,2.5) to [generic]					(7.5,2.5);
+							\draw[]	(7.5,2.5) to [generic] 					(7.5,0) --++ (left:2.5);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>While square waves and triangular waves will be explored in this textbook, the major type of time-varying source that will be used is a sinusoidal wave. It is important to recall the anatomy of a sine wave, shown below in <xref ref="sinewave" />.</p>
+
+			<figure xml:id="sinewave">
+  				<caption>A graph of the voltage of a sinusoidal voltage source plotted with respect to time.</caption>
+  				<image width="100%" xml:id="ch1-sinewave">
+    				<shortdescription>X-axis goes from 0 to 20 and represents time in ms. Y-axis goes from -2 to +2 and represents voltage in V. The data represents two oscillations of a sinusoidal wave that oscillates between -2 V and +2 V. The zero-crossings occur at times of 0 s, 5 s, 10 s, 15 s, and 20 s.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[ylabel={$v(t)$~(V)}, xlabel={$t$~(ms)}, width=\linewidth, height=5cm, xmin=-0.1, xmax=20.1, xtick={0,2,...,20}, ytick={-2,0,...,2}]
+							\addplot[ultra thick, samples=60, domain=0:20] {2*sin(deg(x*pi/5))};
+							\draw[Stealth-Stealth] (axis cs:2.5,0) -- (axis cs:2.5,2) node[midway, anchor=west] {$V_m$};
+							\draw[Stealth-Stealth] (axis cs:2.5,2.1) -- (axis cs:12.5,2.1) node[midway, anchor=north] {$T$};
+							\draw[Stealth-Stealth] (axis cs:12.5,-2) -- (axis cs:12.5,2) node[midway, anchor=west] {$V_{PP}$};
+	   						\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>A cosine wave is expressed mathematically as defined in <xref ref="ch1-eqcosinewaveperiod" />, <xref ref="ch1-eqcosinewavefrequency" />, and <xref ref="ch1-eqcosinewaveangularfrequency" />.</p>
+
+			<p>
+				<md number="yes">
+					<mrow xml:id="ch1-eqcosinewaveperiod">v(t) \amp = V_m \cos \left(\frac{2\pi t}{T} + \phi\right) + V_{DC}</mrow>
+					<mrow xml:id="ch1-eqcosinewavefrequency"> \amp = V_m \cos (2\pi ft + \phi) + V_{DC}</mrow>
+					<mrow xml:id="ch1-eqcosinewaveangularfrequency">\amp= V_m \cos (\omega t + \phi) + V_{DC}</mrow>
+				</md>
+			</p>
+
+			<p>While the equations above are expressed in terms of voltage, they depict the same format that is used to describe current, power, or any other quantity that oscillates with respect to time. Each of the terms in the equation gives important information about the source.</p>
+
+			<p>
+				<ul>
+					<li><p><m>V_m</m> is the <term>amplitude</term> of the source, which is defined as the maximum displacement from the equilibrium position. The unit of this quantity will be equal to the unit of the parameter being measured (V, A, W, etc.).</p></li>
+					<li><p><m>V_{PP}</m>, while not part of the equation, describes the <term>peak-to-peak</term> value of the source. This is equal to twice the amplitude, or the difference between the maximum and minimum values. The unit of this quantity will be equal to the unit of the parameter being measured (V, A, W, etc.).</p></li>
+					<li><p><m>V_{DC}</m> is a constant (DC) value added to a cosine wave if the equilibrium of the wave is not equal to zero. This parameter is known as the <term>DC offset</term> of the wave. The unit of this quantity will be equal to the unit of the parameter being measured (V, A, W, etc.).</p></li>
+					<li><p><m>T</m> is equal to the <term>period</term> of the wave, which describes how long it takes for one oscillation to occur. The unit used for period is s (second).</p></li>
+					<li><p><m>f</m> is the wave <term>frequency</term>. This is the inverse of period, defined in <xref ref="ch1-periodfrequency" />, and describes how many oscillations occur per unit of time. The unit used for frequency is Hz (hertz).</p></li>
+					<li><p><m>\omega</m> is equal to the <term>angular frequency</term> of the wave. The relationship between frequency and angular frequency is defined in <xref ref="ch1-angularvsnormalfrequency" />. The unit used for angular frequency is rad/s (radians per second).</p></li>
+					<li><p><m>\phi</m> is the <term>phase</term> of the wave. It describes the angular offset of the start of the wave. The unit used for phase is rad (radian).</p></li>
+				</ul>
+			</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-periodfrequency">
+					f = \frac{1}{T}
+				</md>
+			</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-angularvsnormalfrequency">
+					\omega = 2 \pi f
+				</md>
+			</p>
+
+			<p>To convert between degrees and radians, the conversion factor in <xref ref="ch1-radian-to-degree-conversion" /> can be applied.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch1-radian-to-degree-conversion">
+					180~^\circ = \pi~\textrm{rad}
+				</md>
+			</p>
+
+		</subsection>
+
+		<subsection xml:id="ch1-dependentsources">
+			<title>Dependent Sources</title>
+
+			<p>All of the sources described in the previous two subsections are independent sources. That is, the values of the sources are independent of any other property or characteristic of the circuit. This is the type of source that you would expect when using a power supply or a battery that has a given voltage rating. It doesn't matter what values exist elsewhere in the circuit; a AA battery will always supply a voltage of 1.5<nbsp />V.</p>
+
+			<p>This subsection describes <term>dependent sources</term>. These sources deliver voltage and current proportionally to other circuit characteristics. It is important to note that dependent sources aren't generally describing something that you can buy and put into a circuit (such as a battery) but are used to model otherwise complicated circuit elements (such as operational amplifiers and transistors).</p>
+
+			<p>There are four types of dependent sources. The circuit symbols are shown in <xref ref="dependentsourcesfigure" />. Note that whereas independent sources are circular, dependent sources are diamond shaped.</p>
+
+			<figure xml:id="dependentsourcesfigure">
+  				<caption>The four types of dependent sources: voltage-controlled voltage source (VCVS), voltage-controlled current source (VCCS), current-controlled voltage source (CCVS), and current-controlled current source (CCCS).</caption>
+  				<image width="80%" xml:id="ch1-dependentsourcesfigure">
+    				<shortdescription>Far left: circuit symbol for a VCVS which is a diamond with a + and - sign inside. A label "k*Vc" is present adjacent to the diamond. Middle left: circuit symbol for a VCCS which is a diamond with an arrow inside. A label "gm*Vc" is present adjacent to the diamond. Middle right: circuit symbol for a CCVS which is a diamond with a + and - sign inside. A label "rm*Ic" is present adjacent to the diamond. Far right: circuit symbol for a CCCS which is a diamond with an arrow inside. A label "ki*Ic" is present adjacent to the diamond.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\foreach \x/\item/\label/\text in {0/cV/VCVS/{$k\cdot V_c$}, 3/cI/VCCS/{$g_m \cdot V_c$}, 6/cV/CCVS/{$r_m\cdot I_c$}, 9/cI/CCCS/{$k_i \cdot I_c$}} {
+								\draw (\x,2) to [\item, l_=\text] (\x,0) node[below, align=center] {\label};
+							}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>Each dependent source has a magnitude that's equal to a proportionality constant multiplied by a controlling value. Each of these values is described in <xref ref="ch1-tableofdependentsources" />.</p>
+
+			<table xml:id="ch1-tableofdependentsources">
+				<title>Descriptions of the magnitude, proportionality constant, and controlling value for each type of dependent source</title>
+  				<tabular halign="left" width="100%">
+					<col width="35%" />
+					<col width="20%" />
+					<col width="25%" />
+					<col width="20%" />
+    				<row header="yes" bottom="medium">
+      					<cell><p>Source Type</p></cell>
+      					<cell><p>Magnitude</p></cell>
+      					<cell><p>Proportionality Constant</p></cell>
+						<cell><p>Controlling Value</p></cell>
+	    			</row>
+    				<row bottom="minor">
+      					<cell><p>Voltage-controlled voltage source (VCVS)</p></cell>
+      					<cell><m>V_d</m> (V)</cell>
+      					<cell><m>k</m> (unitless)</cell>
+      					<cell><m>V_c</m> (V)</cell>
+					</row>
+    				<row bottom="minor">
+      					<cell><p>Voltage-controlled current source (VCCS)</p></cell>
+      					<cell><m>I_d</m> (A)</cell>
+      					<cell><m>g_m</m> (A/V)</cell>
+      					<cell><m>V_c</m> (V)</cell>
+					</row>
+    				<row bottom="minor">
+      					<cell><p>Current-controlled voltage source (CCVS)</p></cell>
+      					<cell><m>V_d</m> (V)</cell>
+      					<cell><m>r_m</m> (V/A, &#8486;)</cell>
+      					<cell><m>I_c</m> (A)</cell>
+					</row>
+    				<row bottom="minor">
+      					<cell><p>Current-controlled current source (CCCS)</p></cell>
+      					<cell><m>I_d</m> (A)</cell>
+      					<cell><m>k_i</m> (unitless)</cell>
+      					<cell><m>I_c</m> (A)</cell>
+					</row>
+				</tabular>
+			</table>
+
+		</subsection>
+
+		<subsection xml:id="ch1-equivalentsources">
+			<title>Equivalent Sources</title>
+
+			<p>If a circuit contains multiple sources (whether they be DC or AC; dependent or independent), it may be possible to combine sources together into an equivalent source. This is the first tool that we can use to help simplify circuits.</p>
+
+			<p>Voltage sources can be added together if they are in series with each other. If there are any other components between the sources, then the sources can still be added together as long as every circuit component is in series. <alert>If it is necessary to measure the voltage at a node in between sources, then the sources should not be combined.</alert></p>
+
+			<example>
+				<title>Combining voltage sources that are in series</title>
+
+				<statement>
+
+					<p>Reduce the circuit shown in <xref ref="exampletwoseriesvoltages" /> to a circuit with a single voltage source.</p>
+
+					<figure xml:id="exampletwoseriesvoltages">
+  						<caption>A circuit consisting of two independent DC voltage sources.</caption>
+  						<image width="30%" xml:id="ch1-exampletwoseriesvoltages">
+    						<shortdescription>A node labeled a is connected to the low-potential end of a DC voltage source labeled 2 V. The high-potential end of that source is connected to the high-potential end of a second DC voltage source labeled 5 V. The low-potential end of the 5 V source is labeled node b.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (0,2) to [V, l_=5~V, -o] (0,0) node[below] {b};
+									\draw (0,2) to [V, l^=2~V, -o] (2,2) node[right] {a};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The two voltage sources can be combined because they are in series with each other. The total voltage drop between nodes a and b is <m>-2~\textrm{V} + 5~\textrm{V} = 3~\textrm{V}</m>. The two voltage sources can therefore be combined into a single voltage source with the equivalent voltage of 3<nbsp />V. This is depicted in <xref ref="exampletwoseriesvoltagesafter" />.</p>
+
+					<figure xml:id="exampletwoseriesvoltagesafter">
+  						<caption>A circuit consisting of a single independent DC voltage source.</caption>
+  						<image width="15%" xml:id="ch1-exampletwoseriesvoltagesafter">
+    						<shortdescription>A node labeled a is connected to the high-potential end of a DC voltage source labeled 3 V. The low-potential end of this source is labeled node b.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (6,2) node[above] {a} to [V, l_=3~V, o-o] (6,0) node[below] {b};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+				</statement>
+
+			</example>
+
+			<example>
+				<title>Combining voltage sources that are in series with other components</title>
+
+				<statement>
+
+					<p>Reduce the circuit shown in <xref ref="exampletwoseriesvoltagesother" /> to a circuit with a single voltage source.</p>
+
+					<figure xml:id="exampletwoseriesvoltagesother">
+  						<caption>A circuit consisting of two independent DC voltage sources in series with a resistor.</caption>
+  						<image width="50%" xml:id="ch1-exampletwoseriesvoltagesother">
+    						<shortdescription>A node labeled a is connected to the high-potential end of a DC voltage source labeled 5 V. The low-potential end of that source is connected to one end of a resistor with the node labeled "y." The other end of the resistor is labeled "x" and is connected to the high-potential end of a second DC voltage source labeled 1 V. The low-potential end of the 1 V source is labeled node b.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (0,2) to [V, l_=1~V, -o] (0,0) node[below] {b};
+									\draw (4,2) node[right] {a} to [V, l_=5~V, o-] (2,2);
+									\draw (0,2) node[above] {x} to [R, l^=$R$, *-*] (2,2) node[above] {y};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Even though a resistor is placed between the two voltage sources, they can still be combined because the voltage sources are in series with each other. Note that if the voltage drop between node x and ground (or between node y and ground) needs to be measured, combining the voltage sources will lead to incorrect measurements. The reduced circuit is shown in <xref ref="exampletwoseriesvoltagesotherafter" />.</p>
+
+					<figure xml:id="exampletwoseriesvoltagesotherafter">
+  						<caption>A circuit consisting of a single independent DC voltage source in series with a resistor.</caption>
+  						<image width="35%" xml:id="ch1-exampletwoseriesvoltagesotherafter">
+    						<shortdescription>A node labeled a is connected to one end of a resistor. The other end of the resistor is connected to the high-potential end of a DC voltage source labeled 6 V. The low-potential end of the 6 V source is labeled node b.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (8,2)to [V, l_=6~V, -o] (8,0) node[below] {b};
+									\draw (8,2) to [R, l^=$R$, -o] (10,2) node[right] {a};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+				</statement>
+
+			</example>
+
+			<example>
+				<title>When voltage sources cannot be combined</title>
+				
+				<statement>
+					<p><alert>Possibility 1: the voltage sources are not in series</alert></p>
+
+					<p>The circuit diagram below demonstrates two voltage sources that are not in series with each other. These two sources cannot be combined together.</p>
+					
+					<figure>
+  						<caption>Circuit diagram with voltage sources that are not in series and, therefore, cannot be combined.</caption>
+						<image width="60%" xml:id="ch1-voltage-sources-that-cannot-be-combined-possibility1">
+							<shortdescription>needtowrite</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{S1}$]			(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$]			(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=$R_2$, *-*]		(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l^=$R_3$]			(5,2.5);
+									\draw[]	(5,2.5) to [V, l_=$V_{S2}$] 		(5,0);
+									\draw[]	(0,0) to [short]					(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+
+
+					<p><alert>Possibility 2: voltage needs to be measured between sources</alert></p>
+
+					<p>The circuit diagram below demonstrates two voltage sources that are in series with each other. However, a voltage needs to be measured between the two sources. These two sources should not be combined together as they will lead to an incorrect calculation of <m>V_X</m>.</p>
+					
+					<figure>
+  						<caption>Circuit diagram with a voltage that needs to be measured between series voltage sources.</caption>
+						<image width="60%" xml:id="ch1-voltage-sources-that-cannot-be-combined-possibility2">
+							<shortdescription>needtowrite</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=$V_{S1}$]				(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_1$]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l^=$R_2$, v_=$V_X$]	(5,2.5);
+									\draw[]	(5,2.5) to [V, l_=$V_{S2}$] 			(5,0);
+									\draw[]	(0,0) to [short]						(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+				
+			</example>
+
+			<p>Current sources can be added together if they are in parallel with each other. If there are any other components between the sources, the sources can still be added together as long as every circuit component is in parallel. <alert>If it is necessary to measure the current through a branch in between sources, then the sources should not be combined.</alert></p>
+
+			<example>
+				<title>Combining current sources that are in parallel</title>
+
+				<statement>
+
+					<p>Reduce the circuit shown in <xref ref="exampletwoseriescurrents" /> to a circuit with a single current source.</p>
+
+					<figure xml:id="exampletwoseriescurrents">
+  						<caption>A circuit consisting of two independent DC current sources.</caption>
+  						<image width="40%" xml:id="ch1-exampletwoseriescurrents">
+    						<shortdescription>Node a is connected to two current sources and node b is connected to the other lead of both current sources. One current source is labeled 2 mA and the arrow points from b to a. The other current source is labeled 1 mA and the arrow points from a to b.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (0,0) to [I, l^=2~mA] (0,2);
+									\draw (2,2) to [I, l_=1~mA] (2,0);
+									\draw (0,0) to [short] (2,0);
+									\draw (1,0) to [short, *-o] (1,-0.5) node[below] {b};
+									\draw (0,2) to [short] (2,2);
+									\draw (1,2) to [short, *-o] (1,2.5) node[above] {a};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The two current sources can be combined because they are in parallel with each other. The current from b to a is <m>2~\textrm{mA} - 1~\textrm{mA} = 1~\textrm{mA}</m>. The two sources can therefore be combined into a single source with the equivalent current of 1<nbsp />mA. This is depicted in <xref ref="exampletwoseriescurrentsafter" />.</p>
+
+					<figure xml:id="exampletwoseriescurrentsafter">
+  						<caption>A circuit consisting of a single independent DC current source.</caption>
+  						<image width="15%" xml:id="ch1-exampletwoseriescurrentsafter">
+    						<shortdescription>Node a is connected to a single current source and node b is connected to the other lead of the current source. The current source is labeled 1 mA and the arrow points from b to a.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (5,0) node[below] {b} to [I, l^=1~mA, o-o] (5,2) node[above] {a};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+				</statement>
+
+			</example>
+
+			<example>
+				<title>Combining current sources that are in parallel with other components</title>
+
+				<statement>
+
+					<p>Reduce the circuit shown in <xref ref="exampletwoparallelcurrentsother" /> to a circuit with a single current source.</p>
+
+					<figure xml:id="exampletwoparallelcurrentsother">
+  						<caption>A circuit consisting of two independent DC current sources in parallel with two resistors.</caption>
+  						<image width="50%" xml:id="ch1-exampletwoparallelcurrentsother">
+    						<shortdescription>Node a is connected to two current sources and two resistors and node b is connected to the other lead of both current sources and both resistors. One current source is labeled 6 mA and the arrow points from a to b. The other current source is labeled 5 mA and the arrow points from a to b.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (0,0) to [I, l^=5~mA] (2,0);
+									\draw (0,1.25) to [R, *-*] (2,1.25);
+									\draw (0,2.5) to [I, l^=6~mA, *-*] (2,2.5);
+									\draw (0,3.75) to [R] (2,3.75);
+									\draw (0,0) to [short] (0,3.75);
+									\draw (0,1.875) to [short, *-o] (-0.5,1.875) node[left] {a};
+									\draw (2,0) to [short] (2,3.75);
+									\draw (2,1.875) to [short, *-o] (2.5,1.875) node[right] {b};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The two current sources can be combined because they are in parallel with each other. The presence of the two resistors does not change anything about the configuration of the circuit. The total current from a to b is <m>6~\textrm{mA} + 5~\textrm{mA} = 11~\textrm{mA}</m>. The reduced circuit is shown in <xref ref="exampletwoparallelcurrentsotherafter" />.</p>
+
+					<figure xml:id="exampletwoparallelcurrentsotherafter">
+  						<caption>A circuit consisting of a single independent DC current source in parallel with two resistors.</caption>
+  						<image width="50%" xml:id="ch1-exampletwoparallelcurrentsotherafter">
+    						<shortdescription>Node a is connected to one current sources and two resistors and node b is connected to the other lead of the current source and both resistors. The current source is labeled 11 mA and the arrow points from a to b.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw (4.5,3.125) to [I, l^=11~mA] (6.5,3.125);
+									\draw (4.5,1.875) to [R] (6.5,1.875);
+									\draw (4.5,0.625) to [R] (6.5,0.625);
+									\draw (4.5,0.625) to [short] (4.5,3.125);
+									\draw (4.5,1.875) to [short, *-o] (4.0,1.875) node[left] {a};
+									\draw (6.5,0.625) to [short] (6.5,3.125);
+									\draw (6.5,1.875) to [short, *-o] (7,1.875) node[right] {b};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+				</statement>
+
+			</example>
+
+			<example>
+				<title>When current sources cannot be combined</title>
+				
+				<statement>
+					<p><alert>Possibility 1: the current sources are not in parallel</alert></p>
+
+					<p>The circuit diagram below demonstrates two current sources that are not in parallel with each other. These two sources cannot be combined together.</p>
+					
+					<figure>
+  						<caption>Circuit diagram with current sources that are not in parallel and, therefore, cannot be combined.</caption>
+						<image width="80%" xml:id="ch1-current-sources-that-cannot-be-combined-possibility1">
+							<shortdescription>needtowrite</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(-2.5,0) to [I, l^=$I_{S1}$]		(-2.5,2.5);
+									\draw[]	(-2.5,2.5) to [short]				(0,2.5);
+									\draw[]	(0,2.5) to [R, l_=$R_1$, *-*]		(0,0);
+									\draw[]	(0,2.5) to [R, l^=$R_2$]			(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=$R_3$, *-*]		(2.5,0);
+									\draw[]	(2.5,2.5) to [short]				(5,2.5);
+									\draw[]	(5,0) to [I, l^=$I_{S2}$] 			(5,2.5);
+									\draw[]	(-2.5,0) to [short]					(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+
+					<p><alert>Possibility 2: current needs to be measured between sources</alert></p>
+
+
+					<p>The circuit diagram below demonstrates two current sources that are in parallel with each other. However, a current needs to be measured between the two sources. These two sources should not be combined together as they will lead to an incorrect calculation of <m>I_X</m>.</p>
+					
+					<figure>
+  						<caption>Circuit diagram with a current that needs to be measured between parallel current sources.</caption>
+						<image width="80%" xml:id="ch1-current-sources-that-cannot-be-combined-possibility2">
+							<shortdescription>needtowrite</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(-2.5,0) to [I, l^=$I_{S1}$]		(-2.5,2.5);
+									\draw[]	(-2.5,2.5) to [short]				(0,2.5);
+									\draw[]	(0,2.5) to [R, l_=$R_1$, *-*]		(0,0);
+									\draw[]	(0,2.5) to [short, i^=$I_X$]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=$R_2$, *-*]		(2.5,0);
+									\draw[]	(2.5,2.5) to [short]				(5,2.5);
+									\draw[]	(5,0) to [I, l^=$I_{S2}$] 			(5,2.5);
+									\draw[]	(-2.5,0) to [short]					(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+				
+			</example>
+
+		</subsection>
+
+	</section>
+
+ 	<section xml:id="ch1-elementarysignals">
+		<title>Elementary Signals</title>
+
+		<introduction>
+
+			<p>Elementary signals are used to mathematically describe the types of signals used as sources, or signals that are commonly encountered in the analog circuit world. Each of the signals can be expressed mathematically.</p>
+
+		</introduction>
+
+		<subsection xml:id="ch1-deltafunction">
+			<title>Dirac Delta Function</title>
+
+			<p>The <term>Dirac delta function</term> is a useful approximation of a <q>spike.</q> It is used to model an impulse, and is commonly used in signal processing (including Fourier analysis). It is defined as a normal (Gaussian) distribution when the variance is equal to zero. The mathematical expression used to define the Dirac delta function is defined in <xref ref="ch1-diracdelta" />,  where <m>A</m> is the amplitude of the function and <m>\tau</m> is the time at which the function occurs.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-diracdelta">f(t) = A\delta(t-\tau)</md>
+			</p>
+
+			<p>The Dirac delta function defined in <xref ref="ch1-diracdelta" /> is depicted graphically in <xref ref="diracdeltafigure" />.</p>
+
+			<figure xml:id="diracdeltafigure">
+  				<caption>Graphical depiction of a Dirac delta function.</caption>
+  				<image width="100%" xml:id="ch1-diracdeltafigure">
+    				<shortdescription>X-axis represents time with a unit of s. Y-axis is arbitrary. Delta function with amplitude A is positioned at time tau.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[xlabel=$t$~(s), xmin=1, xmax=3, xtick={2}, xticklabel={$\tau$}, ymin=0, ymax=3, ytick={0,3}, yticklabels={0,$A$}, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left]
+							\addplot+[ycomb,black,thick,samples=2,domain=2:4,mark options={black}] {x+1};
+	    					\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<example>
+				<title>Plotting a signal composed of Dirac delta functions</title>
+
+				<statement>
+
+					<p>Plot <m>f(t) = 4\delta(t-1) - 2\delta(t+3)</m>. The first term has an amplitude of <m>A = 4</m> and is located at <m>t = 1~\textrm{s}</m>. The second term has an amplitude of <m>A = -2</m> and is located at <m>t = -3~\textrm{s}</m>. The graph is shown in <xref ref="diracdeltafunctionexample" />.</p>
+
+					<figure xml:id="diracdeltafunctionexample">
+  						<caption>The graph of <m>f(t) = 4\delta(t-1) - 2\delta(t+3)</m>.</caption>
+  						<image width="100%" xml:id="ch1-diracdeltafunctionexample">
+    						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). One delta function with amplitude -2 is positioned at time -3. A second delta function with amplitude 4 is positioned at time 1.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-4, xmax=4, ymin=-4, ymax=4, width=\linewidth, height=5cm, axis x line=center, axis y line = left, ytick={-4,0,4}, xtick={-4,-2,...,4}]
+									\addplot+[ycomb, black, thick] plot coordinates {(-3,-2) (1,4)};
+	    							\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+				</statement>
+
+			</example>
+
+			<p>The Dirac delta function has a <term>sifting property</term>. It is capable of being used to determine the value of a continuous function at a certain point. This property is defined in <xref ref="ch1-sifting" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-sifting">
+					\int_{-\infty}^\infty f(t)\delta(t-a)\, dt = f(a)
+				</md>
+			</p>
+
+		</subsection>
+
+
+		<subsection xml:id="ch1-stepfunction">
+			<title>Step Function</title>
+
+			<p>The <term>unit step function</term> is a piecewise function whose value is zero when the argument is negative, and equal to one when the argument is zero or positive. This function is described in <xref ref="ch1-piecewisestepfunctiondefinition" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-piecewisestepfunctiondefinition">
+					u(\tau) =
+					\begin{cases}
+						0 \amp \text{if } \tau \lt 0\\
+						1 \amp \text{if } \tau \geq 0
+					\end{cases}
+				</md>
+			</p>
+
+			<p>The unit step function comes from integrating the Dirac delta function, as shown in <xref ref="ch1-intdirac" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-intdirac">
+					u(t) = \int_{-\infty}^{t} \delta(\tau) \, d\tau
+				</md>
+			</p>
+
+			<p>The step function is very useful for describing a source that is off for a long period of time before being turned on at some moment. Mathematically, the step function is defined in <xref ref="ch1-stepfunctionequation" />, where <m>A</m> is the amplitude of the function and <m>\tau</m> is the time at which the step starts.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-stepfunctionequation">
+					f(t) = Au(t-\tau)
+				</md>
+			</p>
+
+			<p>The step function defined in <xref ref="ch1-stepfunctionequation" /> is depicted graphically in <xref ref="stepfunctionfigure" />.</p>
+
+			<figure xml:id="stepfunctionfigure">
+  				<caption>Graphical depiction of a step function.</caption>
+  				<image width="100%" xml:id="ch1-stepfunctionfigure">
+    				<shortdescription>X-axis represents time with a unit of s. Y-axis is arbitrary. Step function with amplitude A initiates at time tau.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[xlabel=$t$~(s), xmin=1, xmax=3, xtick={2}, xticklabel={$\tau$}, ymin=0, ymax=1, ytick={0,0.99}, yticklabels={0,$A$}, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left]
+							\addplot[black, thick] coordinates {(0,0) (2,0) (2,0.99) (4,0.99)};
+	    					\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>Typically in this textbook, we will see the unit step function used to depict a function that starts at a particular period in time. (This will specifically be the case in <xref ref="ch5-capacitors" />, <xref ref="ch6-inductors" />, <xref ref="ch7-secondorder" />, and <xref ref="ch11-laplace" />.)</p>
+
+			<example>
+				<title>Deriving the equation of a signal composed of step functions</title>
+
+				<statement>
+
+					<p>Derive an equation corresponding to the graph shown in <xref ref="stepfunctionexamplegraph" />.</p>
+
+					<figure xml:id="stepfunctionexamplegraph">
+  						<caption>A function composed of multiple step functions.</caption>
+  						<image width="100%" xml:id="ch1-stepfunctionexamplegraph">
+    						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). Graph starts at f(t) = 0 at time 0. At t = -2 the graph abruptly increases to a value of 1. At t = 0 the graph abruptly increases to a value of 3. At t = 2 the graph abruptly decreases to a value of -2. At t = 5 the graph abruptly increases toa  value of 0 and remains at that value for the remainder of the graph.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-4, xmax=6, ymin=-3, ymax=3, width=\linewidth, height=5cm, axis x line=center, axis y line = left, ytick={-3,0,3}, xtick={-4,-2,...,6}]
+									\addplot[black, thick] plot coordinates {(-4,0) (-2,0) (-2,1) (0,1) (0,2.96) (2,2.96) (2,-2) (5,-2) (5,0) (6,0)};
+	    							\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>This signal is composed of four different step functions. The first occurs at <m>t = -2~\textrm{s}</m> and has an amplitude of <m>A = 1</m>. The second step function occurs at <m>t = 0~\textrm{s}</m>. It must have an amplitude of <m>A = 2</m> in order to bring the total amplitude from 1 to 3. The third step function occurs at <m>t = 2~\textrm{s}</m>. Because the signal goes from a value of 3 to <minus />2, the step function must have an amplitude of <m>A = -5</m>. The last step function occurs at <m>t = 5~\textrm{s}</m> and has an amplitude of <m>A = 2</m> to bring the signal value back to zero.</p>
+
+					<p>The equation defining this function is given in <xref ref="ch1-stepfunctionexampleequation" />.</p>
+
+					<p>
+						<md number="yes" xml:id="ch1-stepfunctionexampleequation">
+							f(t) = u(t+2) + 2u(t) - 5u(t-2) + 2u(t-5)
+						</md>
+					</p>
+
+				</statement>
+
+			</example>
+
+			<p>When differentiating functions including the step function, it is important to determine if the function is continuous. (Function continuity is reviewed in <xref ref="ch5-discontinuous" />.) As long as the function is continuous, there is no trick to differentiating a function modified by the unit step function. Note that the solution to the derivative will likely itself be a piecewise function that must be modified by the unit step function.</p>
+
+			<p>(Discontinuous piecewise functions will not be differentiated in this textbook. However, as described in <xref ref="ch1-intdirac" />, as the integral of the Dirac delta function leads to the step function, the derivative of a step function discontinuity will include a Dirac delta function term.)</p>
+
+			<example>
+				<title>Differentiating a function modified by the unit step function</title>
+				
+				<statement>
+					<p>Consider the voltage measured over a circuit element known as a capacitor that's defined by <xref ref="ch1-differentiatestepfunctionexample" />.</p>
+
+					<p>
+						<md number="yes" xml:id="ch1-differentiatestepfunctionexample">
+							v(t) = 3~\textrm{V}~\textrm{e}^{-10t}~u(t) + 3~\textrm{V}~u(-t)
+						</md>
+					</p>
+
+					<p>This function is graphed in <xref ref="differentiatingstepfunctiongraph" />.</p>
+
+					<figure xml:id="differentiatingstepfunctiongraph">
+  						<caption>Graph depicting <xref ref="ch1-differentiatestepfunctionexample" />.</caption>
+						<image width="100%" xml:id="ch1-differentiatingstepfunctiongraph">
+							<shortdescription>Graph of the function defined above.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[ylabel={$v(t)$~(V)}, xlabel={$t$~(s)}, width=\linewidth, height=5cm, xmin=-0.2, xmax=0.8, ymin=0, ymax=5, ytick={0,1,...,5}]
+										\addplot[black, thick] coordinates {(-1,3) (0,3)};
+										\addplot[black, thick, domain=0:0.8, samples=50] {3*e^(-10*x)};
+	    							\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The current through this circuit element, having a value of <m>C = 0.03~\textrm{F}</m>, is defined by the equation <m>i(t) = C dv(t)/dt</m> (this will be introduced and explained in detail in <xref ref="ch5-vicap" />).</p>
+
+					<p>Plugging <xref ref="ch1-differentiatestepfunctionexample" /> into the equation for current, we see that</p>
+
+					<p>
+						<md>i(t) = (0.03~\textrm{F}) \frac{d}{dt} \left[3~\textrm{V}~\textrm{e}^{-10t}~u(t) + 3~\textrm{V}~u(-t)\right]</md>.
+					</p>
+
+					<p>The term in the voltage equation containing <m>u(t)</m> describes the function when <m>t \geq 0</m>, and the derivative of this part of the function will also only be valid when <m>t \geq 0</m>.</p>
+
+					<p>Similarly, the term containing <m>u(-t)</m> describes the function when <m>t \lt 0</m>, and the derivative of this part of the function will also only be valid when <m>t \lt 0</m>.</p>
+
+					<p>This means we can effectively pull the step functions out of the derivative, as they will define the piecewise nature of the solution. The function becomes</p>
+
+					<p>
+						<md>i(t) = (0.03~\textrm{F}) \frac{d}{dt} \left[3~\textrm{V}~\textrm{e}^{-10t}\right]~u(t) + (0.03~\textrm{F}) \frac{d}{dt} \left[3~\textrm{V}\right]~u(-t)</md>.
+					</p>
+
+					<p>Now we can complete the differentiation and solve for <m>i(t)</m>.</p>
+
+					<p>
+						<md>
+							<mrow>i(t) \amp= (0.03~\textrm{F}) \frac{d}{dt} \left[3~\textrm{V}~\textrm{e}^{-10t}\right]~u(t) + (0.03~\textrm{F}) \frac{d}{dt} \left[3~\textrm{V}\right]~u(-t)</mrow>
+							<mrow>\amp= (0.03~\textrm{F}) (-30~\textrm{V/s})~\textrm{e}^{-10t}~u(t) + (0.03~\textrm{F}) (0)~u(-t)</mrow>
+							<mrow>\amp= -0.9~\textrm{A}~\textrm{e}^{-10t}~u(t)</mrow>
+						</md>
+						
+					</p>
+				</statement>
+			</example>
+
+			<p>When integrating functions including the step function, the step function may modify the limits of integration of any definite integrals. For example, a definite integral with limits of integration between negative infinity and infinity of a function containing the term <m>u(t)</m> will have its limits of integration changed to zero through infinity, as the function is equal to zero prior to <m>t = 0</m>.</p>
+
+			<p>Additionally, the solution to the integral may also itself be a piecewise function that must be modified by the unit step function.</p>
+
+			<example>
+				<title>Integrating a function modified by the unit step function</title>
+				
+				<statement>
+					<p>Consider the voltage measured over a circuit element known as an inductor that's defined by <xref ref="ch1-integratingstepfunctionexampleeq" />.</p>
+
+					<p>
+						<md number="yes" xml:id="ch1-integratingstepfunctionexampleeq">v(t) = 120~\textrm{V}~\textrm{e}^{-400t}~u(t)</md>
+					</p>
+
+					<p>This function is graphed in <xref ref="integratingstepfunctiongraph" />.</p>
+
+					<figure xml:id="integratingstepfunctiongraph">
+  						<caption>Graph depicting <xref ref="ch1-integratingstepfunctionexampleeq" />.</caption>
+						<image width="100%" xml:id="ch1-integratingstepfunctiongraph">
+							<shortdescription>Graph of the function defined above.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[ylabel={$v(t)$~(V)}, xlabel={$t$~(ms)}, width=\linewidth, height=5cm, xmin=-2, xmax=20, ymin=-30, ymax=150, ytick={-30,0,...,150}]
+										\addplot[thick] coordinates {(-3,0) (0,0)};
+										\addplot[only marks,fill=white,mark=*]coordinates{(0,0)};
+										\addplot[only marks,mark=*]coordinates{(0,120)};
+										\addplot[thick, domain=0:20, samples=50] {120*exp(-0.4*x)};
+	    							\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The current through this circuit element, having a value of <m>L = 5~\textrm{H}</m>, is defined by the equation <m>i(t) = \frac{1}{L} \int_{-\infty}^{t} v(\tau)\,d\tau</m> (this will be introduced and explained in detail in <xref ref="ch6-viinductance" />).</p>
+
+					<p>Plugging <xref ref="ch1-integratingstepfunctionexampleeq" /> into the equation for current, we see that</p>
+
+					<p>
+						<md>i(t) = \frac{1}{5~\textrm{H}} \int_{-\infty}^{t} \left[120~\textrm{V}~\textrm{e}^{-400\tau}~u(\tau)\right]\,d\tau</md>.
+					</p>
+
+					<p>The function has a value of 0 for all values of time less than 0. Therefore, the lower limit of integration can be changed from <m>-\infty</m> to zero. In addition, the solution will be a piecewise function that is only valid for time values greater than zero. Therefore, the unit step function can be pulled out of the integral. The function becomes</p>
+
+					<p>
+						<md>i(t) = \frac{1}{5~\textrm{H}} \int_{0}^{t} \left[120~\textrm{V}~\textrm{e}^{-400\tau}\right]\,d\tau~u(t)</md>.
+					</p>
+
+					<p>Now we can complete the integration and solve for <m>i(t)</m>.</p>
+
+					<p>
+						<md>
+							<mrow>i(t) \amp= \frac{1}{5~\textrm{H}} \int_{0}^{t} \left[120~\textrm{V}~\textrm{e}^{-400\tau}\right]\,d\tau~u(t)</mrow>
+							<mrow>\amp= \frac{120~\textrm{V}}{5~\textrm{H}} \int_{0}^{t} \left[\textrm{e}^{-400\tau}\right]\,d\tau~u(t)</mrow>
+							<mrow>\amp= \left(24~\textrm{A/s}\right)\left(\frac{1}{400}~\textrm{s}\right) \left|\textrm{e}^{-400\tau}\right|_{0}^{t}~u(t)</mrow>
+							<mrow>\amp= -0.06~\textrm{A} \left[\textrm{e}^{-400t} - \textrm{e}^{0}\right]~u(t)</mrow>
+							<mrow>\amp= -0.06~\textrm{A} \left[\textrm{e}^{-400t} - 1\right]~u(t)</mrow>
+							<mrow>\amp= 0.06~\textrm{A} \left[1 - \textrm{e}^{-400t}\right]~u(t)</mrow>
+						</md>
+						
+					</p>
+				</statement>
+			</example>
+
+
+		</subsection>
+
+		<subsection xml:id="ch1-rampfunction">
+			<title>Ramp Function</title>
+
+			<p>The <term>ramp function</term> is a signal whose value is zero when the argument is negative, and then has a constant linear upward slope when the argument is positive. The ramp function comes from integrating the step function, as expressed in <xref ref="ch1-intstep" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-intstep">
+					r(t) = \int_{-\infty}^{t} u(\tau) \, d\tau
+				</md>
+			</p>
+
+			<p>The equation used to express the ramp function is given in <xref ref="ch1-rampfunctioneq" />, where <m>A</m> represents the slope of the ramp and <m>\tau</m> describes the time that the ramp function initiates.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-rampfunctioneq">
+					r(t) = A(t-\tau)u(t-\tau)
+				</md>
+			</p>
+
+			<p>The graphical depiction of a ramp function is shown in <xref ref="rampfunctiongraph" />.</p>
+
+			<figure xml:id="rampfunctiongraph">
+  				<caption>Graphical depiction of a ramp function.</caption>
+  				<image width="100%" xml:id="ch1-rampfunctiongraph">
+    				<shortdescription>X-axis represents time with a unit of s. Y-axis is arbitrary. Ramp function initiates at time tau.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[xlabel=$t$~(s), xmin=1, xmax=3, xtick={2}, xticklabel={$\tau$}, ymin=0, ymax=1, ytick={0}, yticklabels={0}, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left]
+							\addplot[black, thick] coordinates {(0,0) (2,0) (4,2)};
+	    					\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<example>
+				<title>Calculating current from ramp function charge</title>
+
+				<statement>
+
+					<p>The charge entering a circuit element is shown in <xref ref="rampfunctionexamplegraph" />. Use it to calculate the current.</p>
+
+					<figure xml:id="rampfunctionexamplegraph">
+  						<caption>A function representing charge that's composed of multiple ramp functions.</caption>
+  						<image width="100%" xml:id="ch1-rampfunctionexamplegraph">
+    						<shortdescription>X-axis represents time with a unit of s. Y-axis represents charge with a unit of mC. Piecewise description of graph with all components linear: (0,0) to (2,1) to (4,-1) to (7,0) to (8,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$q(t)$~(mC), xmin=0, xmax=8, ymin=-1, ymax=1, width=\linewidth, height=5cm, axis x line=center, axis y line = left, ytick={-1,0,1}, xtick={0,-2,...,8}]
+									\addplot[black, thick] plot coordinates {(0,0) (2,0.98) (4,-0.98) (7,0) (8,0)};
+	    							\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Current is equal to the time derivative of charge. The time derivative is plotted in <xref ref="rampfunctionexamplegraphderiv" />.</p>
+
+					<figure xml:id="rampfunctionexamplegraphderiv">
+  						<caption>A function representing current that's composed of multiple step functions.</caption>
+  						<image width="100%" xml:id="ch1-rampfunctionexamplegraphderiv">
+    						<shortdescription>X-axis represents time with a unit of s. Y-axis represents current with a unit of mA. Piecewise description of graph with all components linear: (0,0.5) to (2,0.5) to (2,-1) to (4,1/3) to (7,1/3) to (7,0) to (8,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$i(t)$~(mA), xmin=0, xmax=8, ymin=-1, ymax=1, width=\linewidth, height=5cm, axis x line=center, axis y line = left, ytick={-1,0,1}, xtick={0,-2,...,8}]
+									\addplot[black, thick] plot coordinates {(0,0.5) (2,0.5) (2,-0.98) (4,-0.98) (4,1/3) (7,1/3) (7,0) (8,0)};
+	   							 	\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The equation defining the current is given in <xref ref="ch1-rampfunctionexampleequation" />.</p>
+
+					<p>
+						<md number="yes" xml:id="ch1-rampfunctionexampleequation">
+							i(t) = 0.5~\textrm{mA}~u(t) - 1.5~\textrm{mA}~u(t-2) + 1.\overline{3}~\textrm{mA}~u(t-4) - 0.\overline{3}~\textrm{mA}~u(t-7)
+						</md>
+					</p>
+
+				</statement>
+
+			</example>
+
+		</subsection>
+
+		<subsection xml:id="ch1-rectpulse">
+			<title>Rectangular Pulse</title>
+
+			<p>A <term>rectangular pulse</term> describes a signal that is initially zero, takes on a particular value for a finite interval of time, and then returns instantaneously to zero. It is different from the step function in that the step function never returns to zero again. A rectangular pulse is especially relevant in electrical engineering as it can be used to describe periodic square waves that are commonly used as clock sources in computer processors. The mathematical equation for a rectangular pulse is given in <xref ref="ch1-rectpulseeq" />, where <m>A</m> defines the amplitude of the pulse, <m>\tau</m> defines the width of the pulse, and <m>\lambda</m> defines the center of the pulse.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-rectpulseeq">
+					f(t) = A \textrm{rect} \left(\frac{t-\lambda}{\tau}\right)
+				</md>
+			</p>
+
+			<p> A rectangular pulse is depicted graphically in <xref ref="rectpulsefig" />.</p>
+
+			<figure xml:id="rectpulsefig">
+  				<caption>Graphical depiction of a rectangular pulse.</caption>
+  				<image width="100%" xml:id="ch1-rectpulsefig">
+    				<shortdescription>X-axis represents time with a unit of s. Y-axis is arbitrary. Rectangular function with amplitude A has a center at time lambda. The rectangular pulse starts at a time of lambda - tau/2 and ends at a time of lambda + tau/2.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[xlabel=$t$~(s), xmin=0, xmax=4, xtick={1,2,3}, xticklabels={$\lambda-\tau/2$,$\lambda$,$\lambda+\tau/2$}, ymin=0, ymax=1.01, ytick={0,1}, yticklabels={0,$A$}, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left]
+							\addplot[black, thick] coordinates {(0,0) (1,0) (1,1) (3,1) (3,0) (4,0)};
+	    					\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<example>
+				<title>Plotting a signal composed of rectangular pulses</title>
+
+				<statement>
+
+					<p>Plot <m>f(t) = -3\textrm{rect}((t+5)/2) + 2\textrm{rect}((t-5)/4)</m>. The first term has an amplitude of <m>A = -3</m>, a width of <m>\tau = 2~\textrm{s}</m>, and is centered at <m>\lambda = -5~\textrm{s}</m>. The second term has an amplitude of <m>A = 2</m>, a width of <m>\tau = 4~\textrm{s}</m>, and is centered at <m>\lambda = 5~\textrm{s}.</m></p>
+
+					<p>The graph is shown in <xref ref="rectpulseexamplegraph" />.</p>
+
+					<figure xml:id="rectpulseexamplegraph">
+  						<caption>The graph of <m>f(t) = -3\textrm{rect}((t+5)/2) + 2\textrm{rect}((t-5)/4)</m>.</caption>
+  						<image width="100%" xml:id="ch1-rectpulseexamplegraph">
+    						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). Piecewise description of graph with all components linear: (-10,0) to (-6,0) to (-6,-3) to (-4,-3) to (-4,0) to (3,0) to (3,2) to (7,2) to (7,0) to (10,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-10, xmax=10, ymin=-3, ymax=3, width=\linewidth, height=5cm, axis x line=center, axis y line = left, ytick={-3,0,3}, xtick={-10,-8,...,10}]
+									\addplot[thick] plot coordinates {(-10,0) (-6,0) (-6,-2.95) (-4,-2.95) (-4,0) (3,0) (3,2) (7,2) (7,0) (10,0)};
+	    							\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+				</statement>
+
+			</example>
+
+		</subsection>
+
+		<subsection xml:id="ch1-trianglepulse">
+			<title>Triangular Pulse</title>
+
+			<p>The <term>triangular pulse</term> is defined as a function that is zero, linearly ramps up to a particular value, and then linearly ramps down to zero again. As the rectangular pulse is to the step function; the triangular pulse is to the ramp function. The equation for a triangular pulse is given in <xref ref="ch1-tripulseeq" />, where <m>A</m> describes the amplitude of the pulse, <m>\tau</m> is the half-width of the pulse, and <m>\lambda</m> is the center of the pulse. Note that the definitions for the width of a rectangular and triangular pulse are different!</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-tripulseeq">
+					f(t) = A \textrm{tri} \left(\frac{t-\lambda}{\tau}\right)
+				</md>
+			</p>
+
+			<p>A triangular pulse is shown graphically in <xref ref="triangularpulsegraph" />.</p>
+
+			<figure xml:id="triangularpulsegraph">
+  				<caption>Graphical depiction of a triangular pulse.</caption>
+  				<image width="100%" xml:id="ch1-triangularpulsegraph">
+    				<shortdescription>X-axis represents time with a unit of s. Y-axis is arbitrary. Triangular function with amplitude A has a center at time lambda. The rectangular pulse starts at a time of lambda - tau and ends at a time of lambda + tau.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[xlabel=$t$~(s), xmin=0, xmax=4, xtick={1,2,3}, xticklabels={$\lambda-\tau$,$\lambda$,$\lambda+\tau$}, ymin=0, ymax=2, ytick={0,2}, yticklabels={0,$A$}, width=\textwidth, height=5cm, axis x line=bottom, axis y line = left]
+							\addplot[black, thick] coordinates {(0,0) (1,0) (2,1.98) (3,0) (4,0)};
+	    					\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<example>
+				<title>Deriving the equation of a rectangular and triangular waveform</title>
+
+				<statement>
+
+					<p>Derive the equation corresponding to <m>f(t)</m>, as graphed in <xref ref="triangularpulseexamplegraph" />.</p>
+
+					<figure xml:id="triangularpulseexamplegraph">
+  						<caption>Graph of a function composed of rectangular and triangular pulses.</caption>
+  						<image width="100%" xml:id="ch1-triangularpulseexamplegraph">
+    						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). Piecewise description of graph with all components linear: (-5,0) to (-3,0) to (-3,2) to (0,5) to (3,2) to (3,0) to (5,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-5, xmax=5, ymin=0, ymax=5, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ytick={0,1,...,5}, xtick={-5,-4,...,5}]
+									\addplot[thick] plot coordinates {(-5,0) (-3,0) (-3,2) (0,5) (3,2) (3,0) (5,0)};
+	    							\end{axis}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The function is composed of a rectangular pulse and a triangular pulse. The rectangular pulse has an amplitude of <m>A = 2</m>, is centered at <m>\lambda = 0~\textrm{s}</m>, and has a width of <m>\tau = 6~\textrm{s}</m>. The triangular pulse has an amplitude of <m>A = 3</m>, is centered at <m>\lambda = 0~\textrm{s}</m>, and has a half-width of <m>\tau = 3~\textrm{s}</m>. The equation representing this function is expressed in <xref ref="ch1-trirectpulseexampleeq" />.</p>
+
+					<p>
+						<md number="yes" xml:id="ch1-trirectpulseexampleeq">
+							f(t) = 2\textrm{rect}(t/6) + 3\textrm{tri}(t/3)
+						</md>
+					</p>
+
+				</statement>
+
+			</example>
+
+		</subsection>
+
+		<subsection xml:id="ch1-expdecay">
+			<title>Exponential Decay</title>
+
+			<p>The <term>exponential function</term> is ubiquitous in engineering. Specifically, a decaying exponential is found as the solution to many engineering problems. (A rising exponential function is not stable as it would eventually require an infinite amount of energy to sustain.) An exponential is defined in <xref ref="ch1-exponentialdecayfunction" />, where <m>A</m> describes the initial amplitude of the exponential function, <m>\tau</m> is the time at which the exponential begins its decay, and <m>\alpha</m> describes how quickly the exponential decays to zero.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-exponentialdecayfunction">
+					f(t) = A\mathrm{e}^{-\alpha(t-\tau)}u(t-\tau)
+				</md>
+			</p>
+
+			<p>A decaying exponential function is depicted graphically in <xref ref="exponentialdecaygraph" />.</p>
+
+			<figure xml:id="exponentialdecaygraph">
+  				<caption>Graphical depiction of exponential decay.</caption>
+  				<image width="100%" xml:id="ch1-exponentialdecaygraph">
+    				<shortdescription>X-axis represents time with a unit of s. Y-axis is arbitrary. Exponential decay function initiates at time tau with an initial amplitude of A.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[xlabel=$t$~(s), xmin=0, xmax=4, xtick={2}, xticklabels={$\tau$}, ymin=0, ymax=2, ytick={0,2}, yticklabels={0,$A$}, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left]
+							\addplot[black, thick] coordinates {(0,0) (2,0) (2,2)};
+							\addplot[black, thick, samples=100, domain=2:20] {14.8*exp(-(x))};
+	    					\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+		</subsection>
+
+		<subsection xml:id="ch1-dampedsinusoid">
+			<title>Damped Sinusoid</title>
+
+			<p>A <term>damped sinusoid</term> describes the behavior of almost all harmonic motion (such as a mass on a spring, a door swinging open and closed on a hinge, or a second-order circuit). A damped sinusoid is defined as a sinusoidal signal multiplied by a decaying exponential, as described in <xref ref="ch1-dampedsineeq" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch1-dampedsineeq">
+					f(t) = A\mathrm{e}^{-\alpha(t-\tau)}\sin(\omega (t-\tau))u(t-\tau)
+				</md>
+			</p>
+
+			<p>In <xref ref="ch1-dampedsineeq" />, all of the terms are the same as those given for the exponential decay. <m>\omega</m> defines the angular frequency of the sinusoidal wave. A damped sinusoid is shown graphically in <xref ref="dampedsinegraph" />.</p>
+
+			<figure xml:id="dampedsinegraph">
+  				<caption>Graphical depiction of a damped sinusoid.</caption>
+  				<image width="100%" xml:id="ch1-dampedsinegraph">
+    				<shortdescription>X-axis represents time with a unit of s. Y-axis is arbitrary. Decaying sinusoid function initiates at time tau.</shortdescription>
+					<latex-image >
+						\begin{tikzpicture}[font=\sffamily]
+							\begin{axis}[xlabel=$t$~(s), xmin=0, xmax=4, xtick={2}, xticklabels={$\tau$}, ymin=-2, ymax=2, ytick={-2,0,2}, yticklabels={$-A$,0,$A$}, width=\linewidth, height=5cm, axis x line=center, axis y line = left]
+							\addplot[black, thick] coordinates {(0,0) (2,0)};
+							\addplot[black, thick, samples=100, domain=2:4] {exp(-(x))*14.8*sin(deg(4*x*pi))};
+	    					\end{axis}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+		</subsection>
+	</section>
+
+	<exercises>
+    	<title>Practice Problems</title>
+
+		<subexercises>
+			<title>Power</title>
+		
+			<exercise xml:id="power11exercise">
+				<statement>
+					<p>How much power is supplied by the unknown element shown in <xref ref="circuit11exercise" />?</p>
+
+					<figure xml:id="circuit11exercise">
+  						<caption>Circuit schematic corresponding to <xref ref="power11exercise" />.</caption>
+  						<image width="50%" xml:id="ch1-circuit11exercise">
+    						<shortdescription>Four generic circuit elements connected in series. One is labeled +10 mW. One is labeled -5 mW. One is labeled ??. One is labeled +3 mW.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [generic, l_=+10~mW]	(0,0);
+									\draw[]	(0,2.5) to [generic, l^=$-$5~mW]	(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, l^=??]		(2.5,0);
+									\draw[]	(0,0) to [generic, l^=+3~mW]		(2.5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>P = 8 mW</p>
+				</answer>
+
+				<solution>
+					<p>Use conservation of power to calculate the power consumed by the unknown circuit element.</p>
+					
+					<p>
+						<md>
+							<mrow>10~\textrm{mW} + 3~\textrm{mW} -5~\textrm{mW} + P \amp = 0</mrow>
+							<mrow>P \amp = -8~\textrm{mW}</mrow>
+						</md>
+					</p>
+					
+					<p>The negative sign indicates that the circuit element <em>supplies</em> 8<nbsp />mW of power (hence the positive sign in the answer).</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>A voltage source supplies 12<nbsp />V and has a power consumption of 5<nbsp />W. How much current is the voltage source supplying to the circuit?</p>
+				</statement>
+
+				<hint>
+					<p>Use <xref ref="ch1-instantaneouspower" />.</p>
+				</hint>
+
+				<answer>
+					<p><m>I = 417~\textrm{mA}</m></p>
+				</answer>
+
+				<solution>
+					<p>
+						<md>
+							<mrow> i(t) \amp = \frac{p(t)}{v(t)} </mrow>
+							<mrow> \amp = \frac{5~\textrm{W}}{12~\textrm{V}}</mrow>
+							<mrow> \amp = 0.417~\textrm{A}</mrow>
+							<mrow> \amp = 417~\textrm{mA}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="power13exercise">
+				<statement>
+					<p>Which of the circuit elements shown in <xref ref="circuit13exercise" /> absorb power and which circuit elements deliver power? Current flows clockwise through the circuit.</p>
+
+					<figure xml:id="circuit13exercise">
+  						<caption>Circuit schematic corresponding to <xref ref="power13exercise" />.</caption>
+  						<image width="40%" xml:id="ch1-circuit13exercise">
+    						<shortdescription>Four circuit elements connected in series. Clockwise from lower left: generic element with Va measured from high to low potential, generic element with Vb measured from high to low potential, generic element with Vc measured from high to low potential, generic element with Vd measured from low to high potential.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) to [generic, v^=$V_A$]		(0,2.5);
+									\draw[]	(0,2.5) to [generic, v^=$V_B$]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, v^=$V_C$]	(2.5,0);
+									\draw[]	(0,0) to [generic, v^=$V_D$]		(2.5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>Circuit elements A, B, and C absorb power. Circuit element D supplies power.</p>
+				</answer>
+
+				<solution>
+					<p>Analyze the direction of current relative to the voltage drops. Current flows from high to low potential in elements A, B, and C. Therefore elements A, B, and C absorb power. Current flows from low to high potential in element D. Therefore element D supplies power.</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate the power consumed by a circuit when <m>v(t) = 5~\textrm{V}~\cos(2\pi 50t)</m> and <m>i(t) = 0.1~\textrm{A}~\cos(2\pi50t)</m>.</p>
+				</statement>
+
+				<hint>
+					<p>Use <xref ref="ch1-instantaneouspower" />.</p>
+				</hint>
+
+				<answer>
+					<p><m>p(t) = 0.5~\textrm{W}~\cos^2(2\pi50t)</m></p>
+				</answer>
+
+				<solution>
+					<p>
+						<md>
+							<mrow> p(t) \amp = i(t) v(t)</mrow>
+							<mrow> \amp = \left(0.1~\textrm{A}~\cos(2\pi50t)\right)\left(5~~\textrm{V}\cos(2\pi 50t)\right)</mrow>
+							<mrow> \amp = 0.5~\textrm{W}~\cos^2(2\pi50t)</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate the power consumed by a circuit when <m>v(t) = 3~\textrm{V/s}~t</m> and <m>i(t) = 40~\textrm{mA}~\delta(t-5)</m>.</p>
+				</statement>
+							
+				<hint>
+					<p>Use <xref ref="ch1-instantaneouspower" />.</p>
+				</hint>
+
+				<answer>
+					<p><m>p(t) = 120~\textrm{mW/s}~t~\delta(t-5)</m></p>
+				</answer>
+
+				<solution>
+					<p>
+						<md>
+							<mrow> p(t) \amp = i(t) v(t)</mrow>
+							<mrow> \amp = (40~\textrm{mA}~\delta(t-5))(3~\textrm{V/s}~t)</mrow>
+							<mrow> \amp = 120~\textrm{mW/s}~t~\delta(t-5)</mrow>
+						</md>
+					</p>
+
+					<p>The unit of power is mW because the unit of current is mA.</p>
+				</solution>
+
+			</exercise>
+			
+		</subexercises>
+
+    	<subexercises>
+			<title>Sinusoidal Waves</title>
+		
+			<exercise>
+				<statement>
+					<p>Calculate <m>V_m</m>, <m>V_{DC}</m>, <m>f</m>, and <m>\phi</m> of the function <m>v(t)=3.8~\textrm{V}\cos(2\pi20t + \frac{25\pi}{180})+3~\textrm{V}</m>.</p>
+				</statement>
+
+				<hint>
+					<p>Refer to <xref ref="ch1-eqcosinewavefrequency" />.</p>
+				</hint>
+
+				<answer>
+					<p>
+						<md>
+							<mrow> V_m \amp = 3.8~\textrm{V}</mrow>
+							<mrow> V_{DC} \amp = 3~\textrm{V}</mrow>
+							<mrow> f \amp = 20~\textrm{Hz}</mrow>
+							<mrow> \phi \amp = 25~^\circ</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>A sinusoidal wave takes the form given in <xref ref="ch1-eqcosinewavefrequency" />, where <m>f</m> has a unit of Hz and <m>\phi</m> has a unit of rad. Carefully analyze the function to determine the values of each property.</p>
+
+					<p>The phase <m>\phi</m> of the wave can be converted to a unit of degrees by multiplying by the conversion factor.</p>
+
+					<p>
+						<md>
+							<mrow> \phi \amp = \left(\frac{25\pi}{180}~\textrm{rad}\right)\left(\frac{180~^\circ}{\pi~\textrm{rad}}\right)</mrow>
+							<mrow> \amp = 25~^\circ </mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate <m>V_m</m>, <m>V_{PP}</m>, and <m>T</m> of the function <m>v(t) = 2.19~\textrm{V}\cos(2\pi40t - \frac{20\pi}{180})+6~\textrm{V}</m>.</p>
+				</statement>
+
+				<hint>
+					<p>Refer to <xref ref="ch1-eqcosinewavefrequency" /> and <xref ref="ch1-periodfrequency" />.</p>
+				</hint>
+
+				<answer>
+					<p>
+						<md>
+							<mrow> V_m \amp = 2.19~\textrm{V}</mrow>
+							<mrow> V_{PP} \amp = 4.38~\textrm{V}</mrow>
+							<mrow> T \amp = 0.025~\textrm{s}</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>A sinusoidal wave takes the form given in <xref ref="ch1-eqcosinewavefrequency" />, where <m>f</m> has a unit of Hz. The period of the wave (<m>T</m>) is equal to the reciprocal of the frequency (<m>f</m>) as defined in <xref ref="ch1-periodfrequency" />. Use this to calculate the period.</p>
+
+					<p>
+						<md>
+							<mrow> T \amp = \frac{1}{f}</mrow>
+							<mrow> \amp = \frac{1}{40~\textrm{Hz}}</mrow>
+							<mrow> \amp = 0.025~\textrm{s}</mrow>
+						</md>
+					</p>
+
+					<p>The peak-to-peak voltage is equal to twice the amplitude of the wave.</p>
+
+					<p>
+						<md>
+							<mrow> V_{PP} \amp = 2V_m</mrow>
+							<mrow> \amp = 2(2.19~\textrm{V})</mrow>
+							<mrow> \amp = 4.38~\textrm{V}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="sinusoidwave18exercise">
+				<statement>
+					<p>Calculate <m>V_m</m>, <m>V_{DC}</m>, and <m>f</m> of the function shown in <xref ref="circuit18exercise" />.</p>
+
+					<figure xml:id="circuit18exercise">
+  						<caption>Waveform corresponding to <xref ref="sinusoidwave18exercise" />.</caption>
+  						<image width="100%" xml:id="ch1-circuit18exercise">
+    						<shortdescription>Graph of time (x-axis, unit: ms) and voltage (y-axis: unit: V). The graph starts at (0,3) and oscillates regularly in a sinusoidal pattern. The points on the graph describing one full oscillation are (0,3) (2,1), (4,-1), (6,1), and (8,3).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[ylabel={$v(t)$~(V)}, xlabel={$t$~(ms)}, width=\linewidth, height=5cm, xmin=0, xmax=20, xtick={0,2,...,20}, ytick={-1,0,...,3}]
+									\addplot[thick, samples=60, domain=0:20] {2*cos(deg(x*pi/4))+1};
+	   								 \end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<hint>
+					<p>Refer to <xref ref="sinewave" /> and <xref ref="ch1-periodfrequency" />.</p>
+				</hint>
+
+				<answer>
+					<p>
+						<md>
+							<mrow> V_m \amp = 2~\textrm{V}</mrow>
+							<mrow> V_{DC} \amp = 1~\textrm{V}</mrow>
+							<mrow> f \amp = 125~\textrm{Hz}</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>The sinusoidal wave voltages oscillate between <minus />1<nbsp />V and 3<nbsp />V with an average value of 1<nbsp />V. The amplitude is equal to the distance between equilibrium (1<nbsp />V) and peak displacement (3<nbsp />V).</p>
+
+					<p>
+						<md>
+							<mrow> V_m \amp = 3~\textrm{V} - 1~\textrm{V}</mrow>
+							<mrow> \amp = 2~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>The DC offset is equal to the average value of the waveform, which is 1<nbsp />V.</p>
+
+					<p>To calculate the frequency, first calculate the period. Determine how much time it takes to complete one oscillation. This can be defined as the amount of time that passes between subsequent peaks on the graph. The first peak shown on the graph occurs at 0<nbsp />s with the second peak occurring at 8<nbsp />ms.</p>
+					
+					<p>
+						<md>
+							<mrow> T \amp = 8~\textrm{ms} - 0~\textrm{ms}</mrow>
+							<mrow> \amp = 8~\textrm{ms}</mrow>
+							<mrow> \amp = 0.008~\textrm{s}</mrow>
+						</md>
+					</p>
+					
+					<p>Then, use the relationship between period and frequency defined in <xref ref="ch1-periodfrequency" /> to calculate the frequency of the wave.</p>
+
+					<p>
+						<md>
+							<mrow> f \amp =\frac{1}{T}</mrow>
+							<mrow> \amp = \frac{1}{0.008~\textrm{s}}</mrow>
+							<mrow> \amp = 125~\textrm{Hz}</mrow>
+						</md>
+					</p>
+				</solution>
+
+			</exercise>
+
+			<exercise xml:id="sinusoidwave19exercise">
+				<statement>
+					<p>Sketch the function <m>i(t) = 400~\textrm{mA}\cos(2\pi100t + \frac{45\pi}{180})+200~\textrm{mA}</m>.</p>
+				</statement>
+
+				<hint>
+					<p>Refer to <xref ref="sinewave" /> and <xref ref="ch1-periodfrequency" />.</p>
+				</hint>
+
+				<answer>
+					<figure>
+  						<caption>Waveform corresponding to <xref ref="sinusoidwave19exercise" />.</caption>
+  						<image width="100%" xml:id="ch1-sinusoidwave19exercise">
+    						<shortdescription>Graph of time (x-axis, unit: ms) and current (y-axis: unit: mA). The graph depicts the function defined in the problem statement.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[ylabel={$i(t)$~(mA)}, xlabel={$t$~(ms)}, width=\linewidth, height=5cm, xmin=0, xmax=20, xtick={0,2,...,20}]
+									\addplot[thick, samples=60, domain=0:20] {400*cos(deg(x*pi/5)+45)+200};
+	   								\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>Identify the waveform properties by referring to <xref ref="ch1-periodfrequency" />. (Note that as mentioned in <xref ref="ch1-acsources" />, while the equation is expressed with terms representing voltage, the same equation can be used with terms representing current.)</p>
+
+					<p>
+						<md>
+							<mrow> I_m \amp = 400~\textrm{mA}</mrow>
+							<mrow> I_{DC} \amp = 200~\textrm{mA}</mrow>
+							<mrow> f \amp = 100~\textrm{Hz}</mrow>
+							<mrow> \phi \amp = 45~^\circ </mrow>
+						</md>
+					</p>
+
+					<p>The minimum and maximum currents can be calculated based on the values of <m>I_m</m> and <m>I_{DC}</m>.</p>
+
+					<p>
+						<md>
+							<mrow> I_{max} \amp = I_{DC} + I_m</mrow>
+							<mrow> \amp = 200~\textrm{mA} + 400~\textrm{mA}</mrow>
+							<mrow> \amp = 600~\textrm{mA}</mrow>
+							<mrow> I_{min} \amp = I_{DC} - I_m</mrow>
+							<mrow> \amp = 200~\textrm{mA} - 400~\textrm{mA}</mrow>
+							<mrow> \amp = -200~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p>The first minimum will occur when the argument of the cosine function is equal to <m>\pi</m>. This is because <m>\cos(\pi) = -1</m>, which represents the minimum of the cosine function. This calculation establishes the time shift (rather than degree shift) of the function.</p>
+
+					<p>
+						<md>
+							<mrow> \pi \amp = 2\pi100t_{min} + \frac{45\pi}{180}</mrow>
+							<mrow> 200t_{min} \amp = 1 - \frac{45}{180}</mrow>
+							<mrow> t_{min} \amp = \frac{1-\frac{45}{180}}{200}</mrow>
+							<mrow> \amp = 0.00375~\textrm{s}</mrow>
+							<mrow> \amp = 3.75~\textrm{ms}</mrow>
+						</md>
+					</p>
+
+					<p>The period of the wave can be calculated by applying <xref ref="ch1-periodfrequency" /> to the argument of the cosine function.</p>
+
+					<p>
+						<md>
+							<mrow>T \amp= \frac{1}{100~\textrm{Hz}}</mrow>
+							<mrow>\amp= 0.01~\textrm{s}</mrow>
+							<mrow>\amp= 10~\textrm{ms}</mrow>
+						</md>
+					</p>
+					
+					<p>This means that each subsequent minimum will occur in intervals of 10<nbsp />ms. Maxima will occur at 10<nbsp />ms intervals as well, and they will be located halfway between minima.</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>What minimum DC offset should be added to <m>i(t) = 30~\textrm{mA}\cos(2\pi200t - \frac{50\pi}{180})</m> to prevent any negative values from occurring on the output?</p>
+				</statement>
+
+				<answer>
+					<p><m>I_{DC,min} = 30~\textrm{mA}</m></p>
+				</answer>
+
+				<solution>
+					<p>For <m>i(t)</m> to remain positive, the minimum allowable current will be 0<nbsp />mA. Use the relationship between minimum value, DC offset, and amplitude to calculate this value.</p>
+
+					<p>
+						<md>
+							<mrow> I_{min} \amp = I_{DC,min} - I_m</mrow>
+							<mrow> I_{DC,min} \amp = I_{min} + I_m</mrow>
+							<mrow> \amp = 0~\textrm{mA} + 30~\textrm{mA}</mrow>
+							<mrow> \amp = 30~\textrm{mA}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Sources</title>
+		
+			<exercise xml:id="sources11exercise">
+				<statement>
+					<p>What kind of dependent source is depicted in <xref ref="circuit111exercise" />? How do you know?</p>
+
+					<figure xml:id="circuit111exercise">
+  						<caption>Circuit diagram corresponding to <xref ref="sources11exercise" />.</caption>
+  						<image width="60%" xml:id="ch1-circuit111exercise">
+    						<shortdescription>Circuit diagram. A source with a diamond shape has a label of 4*Vx. The symbol inside this source is "+ -." The + end of the diamond-shaped source connects to one end of an unknown circuit element. The other end of that circuit element connects to the high-potential end of Vx, which is dropped over another unknown circuit element. The low-potential end of Vx connects to the + end of a second source that has a circular shape. The symbol inside this shape is "+ -." The - end of the two sources are connected together.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [cV, v_=$4V_X$]			(0,0);
+									\draw[]	(0,2.5) to [generic]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, v^=$V_X$]	(5,2.5);
+									\draw[]	(5,2.5) to [V]						(5,0);
+									\draw[]	(0,0) to [short]					(5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>The dependent source is a voltage-controlled voltage source (VCVS). The controlling value is a voltage and the source itself is a voltage source.</p>
+				</answer>
+
+				<solution>
+					<p>The controlling value is <m>V_X</m>. Because the symbol contains the letter <m>V</m>, that means this quantity represents a voltage drop. This means the source must be either a VCVS or a VCCS.</p>
+					
+					<p>To determine if the source is a voltage source or a current source, compare to the circuit symbols shown in <xref ref="dcpowersources" />. The symbol on the dependent source contains a + and <minus /> sign indicating that it is a voltage source. This means the source is a VCVS.</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="sources12exercise">
+				<statement>
+					<p>What kind of dependent source is depicted in <xref ref="circuit112exercise" />? How do you know?</p>
+
+					<figure xml:id="circuit112exercise">
+  						<caption>Circuit diagram corresponding to <xref ref="sources12exercise" />.</caption>
+  						<image width="100%" xml:id="ch1-circuit112exercise">
+    						<shortdescription>A circuit diagram containing three sources. One has no label, is shaped like a circle, and has an arrow in the circle. One has a label of "3.2*Ix," is shaped like a diamond, and has a "+ -" symbol in the diamond. One has no label, is shaped like a circle, and has an arrow in the circle.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) to [I]							(0,2.5);
+									\draw[]	(0,2.5) to [short]						(2.5,2.5);
+									\draw[]	(2.5,0) to [generic, *-*]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic]					(5,2.5);
+									\draw[]	(5,2.5) to [cV, v^=3.2$I_X$]			(7.5,2.5);
+									\draw[]	(7.5,2.5) to [generic, *-*, i_=$I_X$]	(7.5,0);
+									\draw[]	(7.5,2.5) to [short]					(10,2.5);
+									\draw[]	(10,0) to [I]							(10,2.5);
+									\draw[]	(0,0) to [short]						(10,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>The dependent source is a current-controlled voltage source (CCVS). The controlling value is a current and the source itself is a voltage source.</p>
+				</answer>
+
+				<solution>
+					<p>The controlling value is <m>I_X</m>. Because the symbol contains the letter <m>I</m>, that means this quantity represents a current. This means the source must be either a CCVS or a CCCS.</p>
+					
+					<p>To determine if the source is a voltage source or a current source, compare to the circuit symbols shown in <xref ref="dcpowersources" />. The symbol on the dependent source contains a + and <minus /> sign indicating that it is a voltage source. This means the source is a CCVS.</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="sources13exercise">
+				<statement>
+					<p>Calculate the current supplied by the dependent source as depicted in <xref ref="circuit113exercise" />.</p>
+
+					<figure xml:id="circuit113exercise">
+  						<caption>Circuit diagram corresponding to <xref ref="sources13exercise" />.</caption>
+  						<image width="90%" xml:id="ch1-circuit113exercise">
+    						<shortdescription>A circuit that contains: a CCCS, two unknown circuit elements, ammeter, and DC power supply. The CCCS is labeled "0.2*Ix" and the current flows into a connection between one of the unknown circuit elements and the + end of the DC power supply. The other end of the unknown circuit element connects to the other end of the CCCS. The - end of the DC power supply connects to the + side of the ammeter, labeled "4.8 mA." The - side of the ammeter connects to an unknown circuit element, whose other end also connects to the other unknown circuit element / CCCS. This second unknown circuit element has a label of "Ix" defined as pointing in the opposite direction as the ammeter.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) to [cI, l^=0.2$I_X$]									(0,2.5);
+									\draw[]	(0,2.5) to [short]											(2.5,2.5);
+									\draw[]	(2.5,0) to [generic, *-*]									(2.5,2.5);
+									\draw[]	(2.5,2.5) to [V]											(5,2.5);
+									\draw[]	(5,2.5) node[below right] {+} to [rmeter, t=A, l^=4.8~mA]	(5,0);
+									\draw[]	(2.5,0) to [generic, i=$I_X$]								(5,0);
+									\draw[]	(0,0) to [short]											(2.5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<hint>
+					<p>Refer to <xref ref="ch1-tableofdependentsources" /> and <xref ref="ch1-measuringcurrent" />.</p>
+
+					<p>In particular, note if the ammeter's measured current is in the same or the opposite direction as <m>I_X</m>.</p>
+				</hint>
+
+				<answer>
+					<p><m>I = -0.96~\textrm{mA}</m></p>
+				</answer>
+
+				<solution>
+					<p>The ammeter reads a value of 4.8<nbsp />mA, which means that the current <m>I_X</m> must be equal to <minus />4.8<nbsp />mA because the ammeter is in series with the current <m>I_X</m>. The negative sign comes from the fact that the + sign of the ammeter does not correspond to the direction of the current <m>I_X</m>. (The negative end of the ammeter is implied to be at the <q>bottom</q> of the diagram, which means that <m>I_X</m> flows from minus to plus through the ammeter.)</p>
+					
+					<p>Use the relationship of a CCCS defined in <xref ref="ch1-tableofdependentsources" /> to determine the value of the source current.</p>
+
+					<p>
+						<md>
+							<mrow> I_S \amp = 0.2I_X</mrow>
+							<mrow> \amp = 0.2(-4.8~\textrm{mA})</mrow>
+							<mrow> \amp = -0.96~\textrm{mA}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="sources14exercise">
+				<statement>
+					<p>Reduce the circuit shown in <xref ref="circuit114exercise" /> to a circuit that contains only one independent source.</p>
+
+					<figure xml:id="circuit114exercise">
+  						<caption>Circuit diagram corresponding to <xref ref="sources14exercise" />.</caption>
+  						<image width="50%" xml:id="ch1-circuit114exercise">
+    						<shortdescription>The + end of a DC voltage source labeled 3V is connected to an unknown circuit element. The other end of the unknown circuit element connects to the - end of another DC voltage source labeled 4V. The + end of the 4V supply connects to the - end of the 3V supply.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=3~V]			(0,0);
+									\draw[]	(0,2.5) to [generic]			(2.5,2.5);
+									\draw[]	(2.5,0) to [V, l_=4~V]			(2.5,2.5);
+									\draw[]	(0,0) to [short]				(2.5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<figure>
+  						<caption>Circuit diagram corresponding to the reduced circuit from <xref ref="sources14exercise" />.</caption>
+  						<image width="40%">
+    						<shortdescription>The + end of a DC voltage source labeled 7V is connected to an unknown circuit element. The other end of the unknown circuit element connects to the - end of that same DC voltage source.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=7~V]			(0,0);
+									\draw[]	(0,2.5) to [generic]			(2.5,2.5);
+									\draw[]	(2.5,0) to [short]				(2.5,2.5);
+									\draw[]	(0,0) to [short]				(2.5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>The two voltage sources can be added because they are in series with each other. The voltage of the combined source is calculated below. The two sources add because their polarities are in the same direction.</p>
+
+					<p>
+						<md>
+							<mrow> V \amp = 3~\textrm{V} + 4~\textrm{V}</mrow>
+							<mrow> \amp = 7~\textrm{V}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="sources15exercise">
+				<statement>
+					<p>Reduce the circuit shown in <xref ref="circuit115exercise" /> as much as possible. Assume that no voltages need to be calculated or measured in between sources. The unit of the proportionality constant (<m>r_m</m>) on the dependent source is V/mA.</p>
+
+					<figure xml:id="circuit115exercise">
+  						<caption>Circuit diagram corresponding to <xref ref="sources15exercise" />.</caption>
+  						<image width="90%" xml:id="ch1-circuit115exercise">
+    						<shortdescription>The + end of a DC voltage source labeled 10V is connected to the first unknown circuit element. The other end of this first unknown circuit element connects to the + end of a dependent source labeled 0.4*Ix (with a symbol of "+ -" inside the source). The - end of the dependent source connects to two other circuit elements: one end of a second unknown circuit element, and one end of a third unknown circuit element. The other end of the second unknown circuit element connects to the - end of the two DC voltage sources. The other end of the third unknown circuit element connects to the + end of a DC voltage source labeled 8V.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=10~V]				(0,0);
+									\draw[]	(0,2.5) to [generic]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [cV, l^=0.4$I_X$]		(5,2.5);
+									\draw[]	(5,2.5) to [generic, i_=$I_X$, *-*]	(5,0);
+									\draw[]	(5,2.5) to [generic]				(7.5,2.5);
+									\draw[]	(7.5,2.5) to [V, l^=8~V]			(7.5,0);
+									\draw[]	(0,0) to [short]					(7.5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<figure>
+  						<caption>Circuit diagram corresponding to the reduced circuit from <xref ref="sources15exercise" />.</caption>
+  						<image width="90%">
+    						<shortdescription>The + end of a voltage source labeled "10V - 0.4*Ix" is connected to the first unknown circuit element. The other end of this first unknown circuit element connects to two other circuit elements: one end of a second unknown circuit element, and one end of a third unknown circuit element. The other end of the second unknown circuit element connects to the - end of the two DC voltage sources. The other end of the third unknown circuit element connects to the + end of a DC voltage source labeled 8V.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=10~V$-$0.4$I_X$]		(0,0);
+									\draw[]	(0,2.5) to [generic]					(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, i_=$I_X$, *-*]	(2.5,0);
+									\draw[]	(2.5,2.5) to [generic]					(5,2.5);
+									\draw[]	(5,2.5) to [V, l^=8~V]					(5,0);
+									\draw[]	(0,0) to [short]						(5,0);
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>The 10<nbsp />V independent source can be combined with the dependent source because they are both in series with each other. The dependent source has the opposite polarity to the independent source, so it should be subtracted to calculate the total voltage of the combined sources. The unit of the proportionality constant is in V/mA, so no unit conversion needs to be done prior to the subtraction operation (any value of <m>I_X</m> used to calculate the voltage must have a unit of mA).</p>
+
+					<p>
+						<md>V = 10~\textrm{V} - 0.4I_X</md>
+					</p>
+						
+					<p>The 8<nbsp />V source cannot be combined with the other two sources because it is not in series with them.</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Elementary Signals</title>
+		
+			<exercise xml:id="elementarysignals116exercise">
+				<statement>
+					<p>Derive an equation for the signal shown in <xref ref="circuit116exercise" />.</p>
+
+					<figure xml:id="circuit116exercise">
+  						<caption>Waveform corresponding to <xref ref="elementarysignals116exercise" />.</caption>
+  						<image width="100%" xml:id="ch1-circuit116exercise">
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. A spike at a time of -4 seconds has a height of +2. A spike at a time of -2 seconds has a height of -1. A spike at a time of 0 seconds has a height of -1. A spike at a time of 5 seconds has a height of 1.5.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\addplot+[ycomb, black, thick, mark options={black}] plot coordinates {(-4,2) (-2,-1) (0,-1) (5,1.5)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p><m>f(t) = 2\delta(t+4) - \delta(t+2) - \delta(t) + 1.5\delta(t-5)</m></p>
+				</answer>
+
+				<solution>
+					<p>The left-most delta function in <xref ref="circuit116exercise" /> occurs at <m>\tau = -4~\textrm{s}</m> and has an amplitude of <m>A = 2</m>.</p> 
+					
+					<p>The next delta function occurs at <m>\tau = -2~\textrm{s}</m> and has an amplitude of <m>A = -1</m>.</p> 
+					
+					<p>The next delta function occurs at <m>\tau = 0~\textrm{s}</m> and has an amplitude of <m>A = -1</m>.</p> 
+					
+					<p>The right-most delta function occurs at <m>\tau = 5~\textrm{s}</m> and has an amplitude of <m>A = 1.5</m>.</p>
+					
+					<p>The function <m>f(t)</m> is derived by adding each of the individual delta functions together.</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="elementarysignals117exercise">
+				<statement>
+					<p>Derive an equation for the signal shown in <xref ref="circuit117exercise" />.</p>
+
+					<figure xml:id="circuit117exercise">
+  						<caption>Waveform corresponding to <xref ref="elementarysignals117exercise" />.</caption>
+  						<image width="100%" xml:id="ch1-circuit117exercise">
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2.02, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\addplot[black, thick] plot coordinates {(-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<hint>
+					<p>There is more than one correct answer to this question.</p>
+				</hint>
+
+				<answer>
+					<p>Using the step function: <m>f(t) = u(t+4) + u(t+1) -3u(t-1) +u(t-4)</m></p>
+
+					<p>Using the rectangular pulse function: <m>f(t) = \textrm{rect}\left(\frac{t+2.5}{3}\right) +2~\textrm{rect}\left(\frac{t}{2}\right) - \textrm{rect}\left(\frac{t-2.5}{3}\right)</m></p>
+				</answer>
+
+				<solution>
+					<p>Option one is to use step functions to create this signal. The first step function occurs at <m>t = -4~\textrm{s}</m> and has an amplitude of <m>A = 1</m>. This is equal to <m>u(t+4)</m>.</p>
+					
+					<p>At <m>t = -1~\textrm{s}</m>, another step function with amplitude of <m>A = 1</m> is added. This is equal to <m>u(t+1)</m>. The total amplitude of the function becomes 2 at this point (this is equal to the sum of the amplitudes of this and the previous step function).</p>
+					
+					<p>At <m>t = 1~\textrm{s}</m>, another step function of amplitude <m>A = -3</m> is added. This is equal to <m>-3u(t-1)</m>. The total amplitude of the function becomes <minus />1 at this point (this is equal to the sum of the amplitudes of this and the previous two step functions).</p>
+					
+					<p>At <m>t = 4~\textrm{s}</m> a step function with amplitude of <m>A = 1</m> is added. This is equal to <m>u(t-4)</m>. The total amplitude of the function becomes zero at this point (this is equal to the sum of the amplitudes of this and the previous three step functions). After that point, the signal remains constant at zero.</p>
+
+					<p>Option two is to use the rectangular pulse function to create this signal. A rectangular pulse can be used to define each individual rectangular area of the graph. The first is highlighted in yellow below.</p>
+
+					<figure>
+						<caption>The first rectangular area in <xref ref="circuit117exercise" /> is highlighted in yellow.</caption>
+  						<image width="100%">
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (-4,0) (-4,1) (-1,1) (-1,0) is highlighted in yellow.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2.02, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\coordinate (a0) at (axis cs:-4,0);
+									\coordinate (a1) at (axis cs:-1,1);
+									\fill[yellow]	(a0) rectangle (a1);
+									\addplot[black, thick] plot coordinates {(-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+						
+					<p>This pulse spans between <m>t = -4~\textrm{s}</m> and <m>t = -1~\textrm{s}</m>, which means it's centered at <m>\lambda = -2.5~\textrm{s}</m> and has a width of <m>\tau = 3~\textrm{s}</m>. The amplitude of this rectangle is <m>A = 1</m>. This is equal to <m>\textrm{rect}\left(\frac{t + 2.5}{3}\right)</m>.</p>
+					
+					<p>The second rectangular area is highlighted in yellow below.</p>
+
+					<figure>
+						<caption>The second rectangular area in <xref ref="circuit117exercise" /> is highlighted in yellow.</caption>
+  						<image width="100%">
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (-1,0) (-1,2) (1,2) (1,0) is highlighted in yellow.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2.02, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\coordinate (a0) at (axis cs:-1,0);
+									\coordinate (a1) at (axis cs:1,2);
+									\fill[yellow]	(a0) rectangle (a1);
+									\addplot[black, thick] plot coordinates {(-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+					
+					<p>This pulse spans between <m>t = -1~\textrm{s}</m> and <m>t = 1~\textrm{s}</m>, which means it's centered at <m>\lambda = 0~\textrm{s}</m> and has a width of <m>\tau = 2~\textrm{s}</m>. The amplitude of this rectangle is <m>A = 2</m>. This is equal to <m>2\textrm{rect}\left(\frac{t}{2}\right)</m>.</p>
+
+					<p>The third and last rectangular area is highlighted in yellow below.</p>
+
+					<figure>
+						<caption>The third rectangular area in <xref ref="circuit117exercise" /> is highlighted in yellow.</caption>
+  						<image width="100%">
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (1,-1) (1,0) (4,0) (4,-1) is highlighted in yellow.</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2.02, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\coordinate (a0) at (axis cs:1,-1);
+									\coordinate (a1) at (axis cs:4,0);
+									\fill[yellow]	(a0) rectangle (a1);
+									\addplot[black, thick] plot coordinates {(-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>This pulse spans between <m>t = 1~\textrm{s}</m> and <m>t = 4~\textrm{s}</m>, which means it's centered at <m>\lambda = 2.5~\textrm{s}</m> and has a width of <m>\tau = 3~\textrm{s}</m>. The amplitude of this rectangle is <m>A = -1</m>. This is equal to <m>-\textrm{rect}\left(\frac{t-2.5}{3}\right)</m>.</p>					
+				</solution>
+			</exercise>
+
+			<exercise xml:id="elementarysignals118exercise">
+				<statement>
+					<p>Sketch the function <m>f(t) = 3~\textrm{tri}(t+2) -2~\textrm{tri}\left(\frac{t-5}{5}\right)</m>.</p>
+				</statement>
+
+				<answer>
+					<figure>
+  						<caption>Waveform corresponding to <xref ref="elementarysignals118exercise" />.</caption>
+  						<image width="100%">
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-4,0) (-3,0) (-2,3) (-1,0) (0,0) (5,-2) (10,0) (12,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-4, xmax=12, ymin=-2, ymax=3, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\addplot[black, thick] plot coordinates {(-4,0) (-3,0) (-2,3) (-1,0) (0,0) (5,-2) (10,0) (12,0)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>The first term in the expression is a triangle function centered at <m>t = -2~\textrm{s}</m> with a half-width of <m>\tau = 1~\textrm{s}</m> and an amplitude of <m>A = 3</m>.</p>
+					
+					<p>The second term in the expression is a triangle function centered at <m>t = 5~\textrm{s}</m> with a half-width of <m>\tau = 5~\textrm{s}</m> and an amplitude of <m>A = -2</m>.</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="elementarysignals119exercise">
+				<statement>
+					<p>Sketch the function <m>f(t) = 3u(t+5) + \frac{t}{2}u(t)</m>.</p>
+				</statement>
+
+				<answer>
+					<figure>
+  						<caption>Waveform corresponding to <xref ref="elementarysignals119exercise" />.</caption>
+  						<image width="100%">
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-5,0) (-5,3) (0,3) (6,6).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=0, ymax=6, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\addplot[black, thick] plot coordinates {(-6,0) (-5,0) (-5,3) (0,3) (6,6)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>The signal has a value of zero until <m>t = -5~\textrm{s}</m> when a step function with amplitude <m>A = 3</m> will start. The function will have a constant amplitude of 3 until <m>t = 0</m>, at which time a ramp function with a slope of 0.5 is added.</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="elementarysignals120exercise">
+				<statement>
+					<p>If the charge in a circuit is measured as <m>q(t) = 2~\textrm{tri}\left(\frac{t+6}{2}\right) + 0.5tu(t) - 1.5(t-4)u(t-4) +1.5(t-8)u(t-8) - 0.5(t-12)u(t-12)~\textrm{C}</m>, sketch the current <m>i(t)</m>.</p>
+				</statement>
+
+				<answer>
+					<figure>
+  						<caption>Waveform corresponding to <xref ref="elementarysignals120exercise" />.</caption>
+  						<image width="100%">
+    						<shortdescription>A graph with time (s) on the x-axis and i(t) (A) on the y-axis. The function is linear and piecewise moves through the following points: (-15,0) (-8,0) (-8,1) (-6,1) (-6,-1) (-4,-1) (-4,0) (0,0) (0,0.5) (4,0.5) (4,-1) (8,-1) (8,0.5) (12,0.5) (12,0) (15,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$i(t)$~(A), xmin=-10, xmax=14, ymin=-1.05, ymax=1.05, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\addplot[black, thick] plot coordinates {(-15,0) (-8,0) (-8,1) (-6,1) (-6,-1) (-4,-1) (-4,0) (0,0) (0,0.5) (4,0.5) (4,-1) (8,-1) (8,0.5) (12,0.5) (12,0) (15,0)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>Current is equal to the derivative of charge. Charge is plotted below to make it easier to visualize.</p>
+
+					<figure>
+						<caption>The waveform corresponding to the charge equation given in <xref ref="elementarysignals120exercise" />.</caption>
+  						<image width="100%">
+    						<shortdescription>A graph with time (s) on the x-axis and q(t) (C) on the y-axis. The function is linear and piecewise moves through the following points: (-15,0) (-8,0) (-6,2) (-4,0) (0,0) (4,2) (8,-2) (12,0) (14,0).</shortdescription>
+							<latex-image >
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{axis}[xlabel=$t$~(s), ylabel=$q(t)$~(C), xmin=-10, xmax=14, ymin=-2.05, ymax=2.05, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
+									\addplot[black, thick] plot coordinates {(-15,0) (-8,0) (-6,2) (-4,0) (0,0) (4,2) (8,-2) (12,0) (14,0)};
+	    							\end{axis}
+	    						\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the slope at each interval of time. This is equal to the derivative of the charge, which is the current.</p>
+
+					<p>
+						<md>
+							i(t) = \begin{cases} \frac{2~\textrm{C}-0~\textrm{C}}{-6~\textrm{s}- (-8~\textrm{s})} = 1~\textrm{A},	\amp \text{if } -8 \leq t \lt -6\\
+							\frac{0~\textrm{C}-2~\textrm{C}}{-4~\textrm{s} - (-6~\textrm{s})} = -1~\textrm{A},	\amp \text{if } -6 \leq t \lt -4\\
+							\frac{2~\textrm{C}-0~\textrm{C}}{4~\textrm{s} - 0~\textrm{s}} = 0.5~\textrm{A},	\amp \text{if } 0 \leq t \lt 4\\
+							\frac{-2~\textrm{C}-2~\textrm{C}}{8~\textrm{s} - 4~\textrm{s}} = -1~\textrm{A},	\amp \text{if } 4 \leq t \lt 8\\
+							\frac{0~\textrm{C}-(-2~\textrm{C})}{12~\textrm{s} - 8~\textrm{s}} = 0.5~\textrm{A},	\amp \text{if } 8 \leq t \lt 12\\
+							0,	\amp \text{otherwise} \end{cases}
+						</md>
+					</p>
+					
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+	</exercises>
+</chapter>

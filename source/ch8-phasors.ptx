@@ -1,0 +1,2516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch8-phasors">
+	<title>Phasors and Impedances</title>
+
+	<introduction>
+
+		<p>A phasor is a mathematical construct that uses complex numbers (and Euler's equation) to analyze the AC steady-state behavior of circuits. (The word phasor is a portmanteau of the words phase and vector.) Phasors and vectors will be represented as bold variables (e.g. <m>\vec{Z}</m>) in this textbook. (While it might initially seem scary to use complex numbers to analyze circuits, it removes all of the calculus from the analysis and replaces it with addition, subtraction, multiplication, and division.)</p>
+		
+		<p>The real part of Euler's equation, <xref ref="ch8-eulers-equation" />, provides a relationship between the argument of a cosine wave and exponent of <m>\textrm{e}</m>, the base of the natural logarithm. The variables in Euler's equation correspond to the amplitude, phase, and angular frequency of the cosine wave (<m>A</m>, <m>\phi</m>, and <m>\omega</m>, respectively) and the square root of negative one (<m>j</m>). The review of sinusoidal waves in <xref ref="ch1-acsources" /> should be consulted if there is any question about what is meant by the amplitude or phase of a wave.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch8-eulers-equation">A\cos(\omega t+ \phi) = A\textrm{e}^{j(\omega t+\phi)}</md>
+		</p>
+
+		<remark>
+			<p>Why is the square root of negative one represented as <m>j</m>? In electrical engineering, the variable <m>i</m> is used to represent current. Therefore, it is extremely common in electrical engineering for <m>j</m> to be used to represent complex numbers.</p>
+		</remark>
+
+		<p>When a circuit contains a sinusoidal source, all of the voltages and currents of the circuit will have a sinusoidal behavior. None of the circuit elements discussed in this book are capable of changing the frequency of the response. Therefore, the only truly important properties of each sinusoid are the amplitude and phase. (The frequency is important, but does not need to be included in calculations because it is constant throughout a circuit, and because the amplitude and phase of sinusoidal quantities will not be affected by the frequency in any calculations.)</p>
+		
+		<p>Euler's equation reduces to <m>\textrm{e}^{j\phi}</m> when angular frequency is omitted. This phasor quantity can be expressed in either Cartesian form (expressed with real and imaginary components) or polar form (expressed with magnitude and phase). These two phasor forms (and how to convert between the two) are discussed in <xref ref="ch8-cartesianpolar" /> and <xref ref="ch8-polarcartesian" />.</p>
+		
+		<p>All of the phasors that are constructed in circuit analysis take the form of a cosine wave with positive amplitude. Any waveforms that are described in terms of a sine wave or that contain a negative amplitude will require conversion before analysis can take place. The angular argument of the phasor is usually expressed in degrees between <minus />180&#176; and +180&#176;.</p>
+
+		<p>Waveforms with a negative amplitude can be converted to a waveform with a positive amplitude by phase-shifting the wave by either positive or negative 180&#176;. A sine wave can be converted into a positive-amplitude cosine wave by subtracting 90&#176; from the phase. Conversions from non-standard to standard form are defined in <xref ref="ch8-eq-negative-cosine" />, <xref ref="ch8-eq-positive-sine" />, and <xref ref="ch8-negative-sine" />.</p>
+		
+		<p>
+			<md number="yes">
+				<mrow xml:id="ch8-eq-negative-cosine">-\cos(\omega t+\phi) \amp= \cos(\omega t + \phi \pm 180\pi/180)</mrow>
+				<mrow xml:id="ch8-eq-positive-sine">\sin(\omega t+\phi) \amp= \cos(\omega t + \phi - 90\pi/180)</mrow>
+				<mrow xml:id="ch8-negative-sine">-\sin(\omega t+\phi) \amp= \cos(\omega t + \phi + 90\pi/180)</mrow>
+			</md>
+		</p>
+
+		<example>
+			<title>Converting negative amplitude cosine to standard form</title>
+			
+			<statement>
+				<p>Convert the following expression to standard phasor form.</p>
+				
+				<p>
+					<md>v(t) = -110~\textrm{V}~\cos(2\pi60t + 210\pi/180)</md>
+				</p>
+
+				<p>Use <xref ref="ch8-eq-negative-cosine" /> to convert to standard phasor form. It is desirable to keep the value of the angular component between &#177;180&#176;, so it is best to subtract 180&#176; rather than add 180&#176;.</p>
+
+				<p>
+					<md>
+						<mrow>v(t) \amp= 110~\textrm{V}~\cos(2\pi60t + (210-180)\pi/180)</mrow>
+						<mrow>\amp= 110~\textrm{V}~\cos(2\pi60t + 30\pi/180)</mrow>
+					</md>
+				</p>
+			</statement>
+			
+		</example>
+
+		<example>
+			<title>Converting negative amplitude sine to standard form</title>
+			
+			<statement>
+				<p>Convert the following expression to standard phasor form.</p>
+				
+				<p>
+					<md>i(t) = -20~\textrm{A}~\sin(2\pi60t + 120\pi/180)</md>
+				</p>
+
+				<p>Use <xref ref="ch8-negative-sine" /> to convert to standard phasor form. Then, subtract 360&#176; to keep the angle within &#177;180&#176;.</p>
+				
+				<p>
+					<md>
+						<mrow>i(t) \amp= 20~\textrm{A}~\cos(2\pi60t + (120+90)\pi/180)</mrow>
+						<mrow>\amp= 20~\textrm{A}~\cos(2\pi60t + 210\pi/180)</mrow>
+						<mrow>\amp= 20~\textrm{A}~\cos(2\pi60t - 150\pi/180)</mrow>
+					</md>
+				</p>
+			</statement>
+			
+		</example>
+	
+  	</introduction>
+
+	<section xml:id="ch8-phasorarithmetic">
+		<title>Phasor Arithmetic</title>
+
+		<introduction>
+
+			<p>It is my strong opinion that a calculator should be used to solve phasor arithmetic and complex algebra, as there are many steps that can go wrong when calculating by hand. However, it is my even stronger opinion that a calculator or other tool should never be used if the user doesn't understand how to perform those operations themselves. Having a solid understanding of carrying out these complex arithmetic operations by hand is essential in performing <q>smell tests</q> on the calculator's results, among other things.</p>
+
+			<p>Before discussing how to perform complex arithmetic, a review of Cartesian and polar forms will be conducted. </p>
+			
+			<p><term>Cartesian coordinates</term> are used to define the location of a point on the imaginary axes using two quantities: the real part and the imaginary part. This is similar to <m>(x,y)</m> coordinates; the <m>x</m>-coordinate corresponds to the real part of a complex number and the <m>y</m>-coordinate corresponds to the imaginary part of the complex number.</p>
+			
+			<p><term>Polar coordinates</term> are used to define the location of a point using the magnitude of the vector (distance from the origin) and the angle from the positive real axis. Cartesian and polar representations of the point <m>(x,y)</m> are depicted in <xref ref="cartesian-vs-polar-coordinate-graphs" />.</p>
+			
+			<figure xml:id="cartesian-vs-polar-coordinate-graphs">
+  				<caption>A complex number can be described in two ways: Cartesian form (left) and polar form (right).</caption>
+				<image width="100%" xml:id="ch8-cartesian-vs-polar-coordinate-graphs">
+					<shortdescription>Left: depiction of x+jy in the Cartesian coordinate system. Right: depiction of the same vector represented as r angle theta in the polar coordinate system.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[step=0.5, help lines, color=gray!50] (-3,-3) grid (3,3);
+							\draw[thick] (-3,0)--(3,0) node[right] {real};
+							\draw[thick] (0,-3)--(0,3) node[above] {imaginary};
+							\draw[thick, -Stealth] (0,0) -- (2,1.5) node[above right] {$x + jy$};
+							\draw[dashed] (2,1.5) --++ (down:1.5) node[below] {$x$};
+							\draw[dashed] (2,1.5) --++ (left:2) node[left] {$y$};
+							\begin{scope}[shift={(7.5,0)}]
+							\draw[step=0.5, help lines, color=gray!50] (-3,-3) grid (3,3);
+							\draw[thick] (-3,0)--(3,0) node[right] {real};
+							\draw[thick] (0,-3)--(0,3) node[above] {imaginary};
+							\draw[thick, -Stealth] (0,0) -- (2,1.5) node[midway] {$r$~~~~~} node[above right] {$r \angle \phi$};
+							\draw[] (1,0) arc (0:37:1) node[midway] {~~~$\phi$};
+							\end{scope}
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>To precisely calculate the angle of a phasor, the <term>two-argument arctan function (atan2)</term> should be used, as arctan alone is unable to determine in which quadrant a point is located. The atan2 function is defined in <xref ref="ch8-atan2" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-atan2">
+				\atantwo(y,x) = 
+					\begin{cases} 
+						\atan(\frac{y}{x}) \amp \textrm{if}~x \gt 0, \\
+						\atan(\frac{y}{x}) + \pi \amp \textrm{if}~x \lt 0~\textrm{and}~y \geq 0,\\
+						\atan(\frac{y}{x}) - \pi \amp \textrm{if}~x \lt 0~\textrm{and}~y \lt 0,\\
+						+\frac{\pi}{2} \amp \textrm{if}~x = 0~\textrm{and}~y \gt 0,\\
+						-\frac{\pi}{2} \amp \textrm{if}~x = 0~\textrm{and}~y \lt 0,\\
+						\textrm{undefined} \amp \textrm{if}~x=0~\textrm{and}~y=0
+					\end{cases}
+				</md>
+			</p>
+
+		</introduction>
+
+		<subsection xml:id="ch8-cartesianpolar">
+			<title>Cartesian to Polar Conversion</title>
+	
+			<p>If the Cartesian form (<m>x +jy</m>) of a phasor is known, it is possible to use trigonometry to represent the phasor in polar form as <m>r \angle \phi</m>. The magnitude <m>r</m> is calculated using the Pythagorean theorem, shown in <xref ref="ch8-pythagorean-theorem" />.</p> 
+			
+			<p>
+				<md number="yes" xml:id="ch8-pythagorean-theorem">r = \sqrt{x^2 + y^2}</md>
+			</p>
+
+			<p>The angle <m>\phi</m> is calculated using the atan2 function, described in <xref ref="ch8-calculating-phi" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-calculating-phi">\phi = \atantwo(y,x)</md>
+			</p>
+
+  		</subsection>
+
+		<subsection xml:id="ch8-polarcartesian">
+			<title>Polar to Cartesian Conversion</title>
+	
+			<p>If the polar form (<m>r\angle \phi</m>) of a phasor is known, it is possible to use trigonometry to express it in Cartesian form as <m>x+jy</m>. The real part of the phasor, expressed as <m>x</m>, is calculated using the cosine of the angle, shown in <xref ref="ch8-cartesian-real-part" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-cartesian-real-part">x = r\cos{\phi}</md>
+			</p>
+
+			<p>The imaginary part of the phasor, expressed as <m>y</m>, is calculated using the sine of the angle, shown in <xref ref="ch8-cartesian-imaginary-part" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-cartesian-imaginary-part">y = r\sin{\phi}</md>
+			</p>
+
+  		</subsection>
+
+		<subsection xml:id="ch8-phasoraddsub">
+			<title>Phasor Addition and Subtraction</title>
+	
+			<p>Phasor addition and subtraction is simplest to complete when the phasors are in Cartesian form. To add two phasors together, simply add the real parts together to find the real part of the sum and add the imaginary parts together to find the imaginary part of the sum. The solution to <m>\vec{Z_1} + \vec{Z_2}</m> is shown in <xref ref="ch8-phasor-addition-example" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-phasor-addition-example">\vec{Z_1} + \vec{Z_2} = (x_1+x_2) + j(y_1+y_2)</md>
+			</p>
+
+			<example>
+				<title>Addition of two sinusoids</title>
+				
+				<statement>
+					<p>Add together <m>v_1(t)</m> and <m>v_2(t)</m>, defined below, and express the answer in cosine form.</p>
+					
+					<p>
+						<md>
+							<mrow>v_1(t) \amp= 10~\textrm{V}~\cos(2\pi100t+30\pi/180)</mrow>
+							<mrow>v_2(t) \amp= -5~\textrm{V}~\sin(2\pi100t-45\pi/180)</mrow>
+						</md>
+					</p>
+
+					<p>First, use <xref ref="ch8-negative-sine" /> to convert <m>v_2(t)</m> to standard form.</p>
+					
+					<p>
+						<md>v_2(t) = 5~\textrm{V}~\cos(2\pi100t+45\pi/180)</md>
+					</p>
+
+					<p>Both of the quantities can be expressed as phasors in Cartesian form.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_1} \amp= 10~\textrm{V} \angle 30^\circ \amp= 8.66 +j5~\textrm{V}</mrow>
+							<mrow>\vec{V_2} \amp= 5~\textrm{V} \angle 45^\circ \amp= 3.54 +j3.54~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>Add both of the phasors together.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_1} + \vec{V_2} \amp= (8.66 + 3.54) + j(5 + 3.54)~\textrm{V}</mrow>
+							<mrow>\amp= 12.2 + j8.54~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch8-pythagorean-theorem" /> and <xref ref="ch8-calculating-phi" /> to convert the result to polar form.</p>
+					
+					<p>
+						<md>\vec{V_1} + \vec{V_2} = 14.9~\textrm{V} \angle 35.0^\circ</md>
+					</p>
+
+					<p>Express the result as a cosine.</p>
+					
+					<p>
+						<md>v_t(t) + v_2(t) = 14.9~\textrm{V}~\cos(2\pi100t + 35.0\pi/180)</md>
+					</p>
+						
+				</statement>
+			</example>
+
+			<p>Subtraction is very similar to addition. <alert>However, it is important to note that subtraction, unlike addition, is not commutative.</alert> The solution to <m>\vec{Z_1} - \vec{Z_2}</m> is shown in <xref ref="ch8-phasor-subtraction-example" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-phasor-subtraction-example">\vec{Z_1} - \vec{Z_2} = (x_1-x_2) + j(y_1-y_2)</md>
+			</p>
+
+			<example>
+				<title>Subtraction of two sinusoids</title>
+				
+				<statement>
+					<p>Subtract <m>i_2(t)</m> from <m>i_1(t)</m>, defined below, and express the answer in cosine form.</p>
+					
+					<p>
+						<md>
+							<mrow>i_1(t) \amp= 120~\textrm{mA}~\cos(2\pi60t+60\pi/180)</mrow>
+							<mrow>i_2(t) \amp= 110~\textrm{mA}~\cos(2\pi60t-135\pi/180)</mrow>
+						</md>
+					</p>
+
+					<p>Both of the quantities can be expressed as phasors in Cartesian form.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{I_1} \amp= 120~\textrm{mA} \angle 60^\circ \amp= 60 + j103.92~\textrm{mA}</mrow>
+							<mrow>\vec{I_2} \amp= 110~\textrm{mA} \angle -135^\circ \amp= -77.78 - j77.78~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p>Subtract the phasors.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_1} - \vec{I_2} \amp= (60 - (-77.78)) + j(103.92 - (-77.78))~\textrm{mA}</mrow>
+							<mrow>\amp= 137.78 + j181.70~\textrm{mA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch8-pythagorean-theorem" /> and <xref ref="ch8-calculating-phi" /> to convert the result to polar form.</p>
+
+					<p>
+						<md>\vec{I_1} - \vec{I_2} = 228~\textrm{mA} \angle 52.8^\circ</md>
+					</p>
+
+					<p>Express the result as a cosine.</p>
+					
+					<p>
+						<md>i_1(t) - i_2(t) = 228~\textrm{mA}~\cos(2\pi60t + 52.8\pi/180)</md>
+					</p>
+				</statement>
+			</example>
+
+  		</subsection>
+
+		<subsection xml:id="ch8-phasormultdiv">
+			<title>Phasor Multiplication and Division</title>
+	
+			<p>Phasor multiplication and division is simplest to compute when phasors are in polar form. Recall that polar form (<m>r\angle \phi</m>) is shorthand for <m>r\textrm{e}^{j\phi}</m>. Multiplication and division in exponentials turns into addition and subtraction.</p>
+			
+			<p>Two phasors <m>\vec{Z_1}</m> and <m>\vec{Z_2}</m> are multiplied together in <xref ref="ch8-phasor-multiplication-example" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-phasor-multiplication-example">\vec{Z_1}\vec{Z_2} = r_1r_2\angle(\phi_1+\phi_2)</md>
+			</p>
+
+			<example>
+				<title>Multiplication of two sinusoids</title>
+				
+				<statement>
+					<p>Multiply <m>i(t)</m> and <m>z(t)</m>, defined below, and express the answer in cosine form.</p>
+					
+					<p>
+						<md>
+							<mrow>i(t) \amp= 4~\textrm{mA}~\cos(2\pi50t+120\pi/180)</mrow>
+							<mrow>z(t) \amp= 20~\textrm{k}\Omega~\cos(2\pi50t-90\pi/180)</mrow>
+						</md>
+					</p>
+
+					<p>Both of the quantities can be expressed as phasors in polar form.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I} \amp= 4~\textrm{mA} \angle 120^\circ</mrow>
+							<mrow>\vec{Z} \amp= 20~\textrm{k}\Omega \angle -90^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Multiply the phasors.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I}\vec{Z} \amp= (4~\textrm{mA})(20~\textrm{k}\Omega)~\textrm{e}^{(120^\circ + (-90^\circ))}</mrow>
+							<mrow>\amp= 80~\textrm{V} \angle 30^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Express the result as a cosine. Note that the result represents a voltage and will be expressed as <m>v(t)</m>.</p>
+					
+					<p>
+						<md>v(t) = 80~\textrm{V}~\cos(2\pi50t + 30\pi/180)</md>
+					</p>
+				</statement>
+			</example>
+
+			<p>Two phasors in polar form are divided in <xref ref="ch8-phasor-division-example" />. <alert>It is important to note that division, unlike multiplication, is not commutative.</alert></p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-phasor-division-example">\frac{\vec{Z_1}}{\vec{Z_2}} = \frac{r_1}{r_2}\angle(\phi_1-\phi_2)</md>
+			</p>
+
+			<example>
+				<title>Division of two sinusoids</title>
+				
+				<statement>
+					<p>Divide <m>v(t)</m> by <m>i(t)</m>, defined below, and express the answer in cosine form.</p>
+					
+					<p>
+						<md>
+							<mrow>v(t) \amp= 110~\textrm{V}~\cos(2\pi60t+60\pi/180)</mrow>
+							<mrow>i(t) \amp= 5~\textrm{mA}~\cos(2\pi60t+30\pi/180)</mrow>
+						</md>
+					</p>
+
+					<p>Both of the quantities can be expressed as phasors in polar form.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{V} \amp= 110~\textrm{V} \angle 60^\circ</mrow>
+							<mrow>\vec{I} \amp= 5~\textrm{mA} \angle 30^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Divide the phasors.</p>
+					
+					<p>
+						<md>
+							<mrow>\frac{\vec{V}}{\vec{I}} \amp= \frac{110~\textrm{V}}{5~\textrm{mA}}~\textrm{e}^{(60^\circ - 30^\circ)}</mrow>
+							<mrow>\amp= 22~\textrm{k}\Omega \angle 30^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Express the result as a cosine. Note that the result represents a quantity known as impedance (which will be introduced in <xref ref="ch8-impedance" />) and will be expressed as <m>z(t)</m>.</p>
+					
+					<p>
+						<md>z(t) = 22~\textrm{k}\Omega~\cos(2\pi60t + 30\pi/180)</md>
+					</p>
+
+				</statement>
+				
+			</example>
+
+  		</subsection>
+
+		<subsection xml:id="ch8-phasorcalculus">
+			<title>Phasor Time-Differentiation and Time-Integration</title>
+	
+			<p>Time differentiation of a phasor <m>\vec{Z}</m> is defined in <xref ref="ch8-phasor-time-differentiation" /> and derived in <xref ref="ch8-time-differentiation-proof" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-phasor-time-differentiation">\frac{d}{dt}\vec{Z} = j \omega \vec{Z}</md>
+			</p>
+
+			<proof xml:id="ch8-time-differentiation-proof">
+				<p>
+					<md>
+						<mrow>z(t) \amp= Z_m \cos{(\omega t + \phi)}</mrow>
+						<mrow>\vec{Z} \amp= Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
+						<mrow>\frac{d}{dt}\vec{Z} \amp= j\omega Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
+						<mrow>\amp= j\omega \vec{Z}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>Time integration of a phasor <m>\vec{Z}</m> is defined in <xref ref="ch8-phasor-time-integration" /> and derived in <xref ref="ch8-time-integration-proof" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-phasor-time-integration">\frac{d}{dt}\vec{Z} = \frac{1}{j \omega} \vec{Z}</md>
+			</p>
+
+			<proof xml:id="ch8-time-integration-proof">
+				<p>
+					<md>
+						<mrow>z(t) \amp= Z_m \cos{(\omega t + \phi)}</mrow>
+						<mrow>\vec{Z} \amp= Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
+						<mrow>\int \vec{Z} \,dt \amp= \frac{1}{j\omega} Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
+						<mrow>\amp= \frac{1}{j\omega} \vec{Z}</mrow>
+					</md>
+				</p>
+			</proof>
+
+  		</subsection>
+	</section>
+
+	<section xml:id="ch8-impedance">
+		<title>Impedance</title>
+
+		<introduction>
+
+		
+			<p><term>Impedance</term> is the phasor equivalent of resistance and is used in AC circuits. It relates to the measure of opposition to current based on a given voltage rise or drop. The unit of impedance is the same as that of resistance, &#8486; (ohm).</p>
+
+			<remark>
+				<title>Summary of impedance</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>\vec{Z}</m></p></li>
+						<li><p>Unit: &#8486; (ohm)</p></li>
+					</ul>
+				</p>
+			</remark>
+
+			<p>Using time-varying signals, <m>z(t) = v(t)/i(t)</m>. Using phasors, the relationship between voltage, current, and impedance is defined by complex Ohm's law, defined in <xref ref="ch8-complex-ohms-law" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-complex-ohms-law">\vec{Z} = \frac{\vec{V}}{\vec{I}}</md>
+			</p>
+
+			<p>Because impedance is a complex quantity, it can be represented in cartesian form, shown in <xref ref="ch8-complex-impedance" />.  The quantity <m>R</m> is the resistance of the circuit element (this is the same resistance that we've been discussing in this textbook since <xref ref="ch2-resistor" />), and <m>X</m> is the <term>reactance</term> of the circuit element.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-complex-impedance">\vec{Z} = R + jX</md>
+			</p>
+
+			<remark>
+				<title>Summary of reactance</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>X</m></p></li>
+						<li><p>Unit: &#8486; (ohm)</p></li>
+					</ul>
+				</p>
+			</remark>
+
+		</introduction>
+
+		<subsection xml:id="ch8-resistors">
+			<title>Impedance in Resistors</title>
+
+			<p>In a resistor, voltage and current are related via Ohm's law (introduced in <xref ref="ch2-ohmslaw" />). The impedance of a resistor is defined in <xref ref="ch8-eq-impedance-resistor" />, where <m>R</m> is the resistance of the resistor. (There is no difference in the way we express resistance in AC circuits as compared to DC circuits.)</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-eq-impedance-resistor">\vec{Z} = R</md>
+			</p>
+
+			<p>If the voltage drop over a resistor is defined as <m>V_m\cos(\omega t + \phi)</m>, then Ohm's law states that the current through the resistor will be equal to <m>(V_m/R)\cos(\omega t +\phi)</m>. The calculation of the impedance of a resistor is derived in <xref ref="ch8-impedance-resistor-proof" />.</p>
+			
+			<proof xml:id="ch8-impedance-resistor-proof">
+				<p>
+					<md>
+						<mrow>\vec{V} \amp=V_m \angle \phi</mrow>
+						<mrow>\vec{I} \amp= \frac{V_m}{R} \angle \phi</mrow>
+						<mrow>\vec{Z} \amp= \frac{\vec{V}}{\vec{I}}</mrow>
+						<mrow>\amp= \frac{V_m \angle \phi}{(V_m/R)\angle \phi}</mrow>
+						<mrow>\amp= R</mrow>
+					</md>
+				</p>
+			</proof>
+
+		</subsection>
+
+		<subsection xml:id="ch8-capacitors">
+			<title>Impedance in Capacitors</title>
+
+			<p>The impedance of a capacitor is defined in <xref ref="ch8-eq-impedance-capacitor" />, where <m>C</m> is the capacitance of the capacitor.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-eq-impedance-capacitor">\vec{Z} = \frac{1}{j \omega C}</md>
+			</p>
+
+			<p>Because <m>j</m> is in the denominator of the impedance equation, <alert>the reactance of a capacitor will always be negative</alert>.</p>
+
+			<p>The impedance of a capacitor is purely imaginary (mathematically) and is frequency dependent. As the frequency of a circuit approaches zero, the impedance of a capacitor approaches infinity. This explains why we were able to analyze capacitors in steady-state DC conditions as open circuits. As the frequency of a circuit approaches infinity, the impedance of a capacitor becomes zero, making it act as a short circuit.</p>
+
+			<p>In a capacitor, the relationship between voltage and current is defined by <xref ref="ch5-ivcapequation" />. The calculation of the impedance of a capacitor is derived in <xref ref="ch8-impedance-capacitor-proof" />.</p>
+			
+			<proof xml:id="ch8-impedance-capacitor-proof">
+				<p>
+					<md>
+						<mrow>i(t) \amp= C\frac{dv(t)}{dt}</mrow>
+						<mrow>\vec{I} \amp= C \frac{d}{dt}\vec{V}</mrow>
+						<mrow>\amp= j\omega C \vec{V}</mrow>
+						<mrow>\vec{Z} \amp= \frac{\vec{V}}{\vec{I}}</mrow>
+						<mrow>\amp= \frac{\vec{V}}{j\omega C \vec{V}}</mrow>
+						<mrow>\amp= \frac{1}{j \omega C}</mrow>
+					</md>
+				</p>
+			</proof>
+
+		</subsection>
+
+		<subsection xml:id="ch8-inductors">
+			<title>Impedance in Inductors</title>
+
+			<p>The impedance of an inductor is defined in <xref ref="ch8-eq-impedance-inductor" />, where <m>L</m> is the inductance of the inductor.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-eq-impedance-inductor">\vec{Z} = j\omega L</md>
+			</p>
+
+			<p>Because <m>j</m> is in the numerator of the impedance equation, <alert>the reactance of an inductor will always be positive</alert>.</p>
+
+			<p>The impedance of an inductor is purely imaginary (mathematically) and is frequency dependent. As the frequency of a circuit approaches zero, the impedance of an inductor also approaches zero. This explains why we were able to analyze inductors in steady-state DC conditions as short circuits. As the frequency of a circuit approaches infinity, the impedance of an inductor also approaches infinity, making it act as an open circuit.</p>
+
+			<p>In an inductor, the relationship between voltage and current is defined by <xref ref="ch6-voltageinductor" />. The calculation of the impedance of an inductor is derived in <xref ref="ch8-impedance-inductor-proof" />.</p>
+			
+			<proof xml:id="ch8-impedance-inductor-proof">
+				<p>
+					<md>
+						<mrow>v(t) \amp= L\frac{di(t)}{dt}</mrow>
+						<mrow>\vec{V} \amp= L \frac{d}{dt}\vec{I}</mrow>
+						<mrow>\amp= j\omega L \vec{I}</mrow>
+						<mrow>\vec{Z} \amp= \frac{\vec{V}}{\vec{I}}</mrow>
+						<mrow>\amp= \frac{j\omega L \vec{I}}{\vec{I}}</mrow>
+						<mrow>\amp= j \omega L</mrow>
+					</md>
+				</p>
+			</proof>
+
+		</subsection>
+
+		<subsection xml:id="ch8-equivalentimpedance">
+			<title>Equivalent Impedance</title>
+
+			<p>Impedance takes a lot of confusion out of simplifying circuits. Impedances in series always add together, as shown in <xref ref="ch8-impedance-series-equation" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-impedance-series-equation">\vec{Z_{EQ}} = \vec{Z_1} + \vec{Z_2} + \vec{Z_3} + ... + \vec{Z_n}</md>
+			</p>
+
+			<p>The reciprocal sum is used to calculate parallel impedances, as shown in <xref ref="ch8-impedance-parallel-equation" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch8-impedance-parallel-equation">\frac{1}{\vec{Z_{EQ}}} = \frac{1}{\vec{Z_1}} + \frac{1}{\vec{Z_2}} + \frac{1}{\vec{Z_3}} + ... + \frac{1}{\vec{Z_n}}</md>
+			</p>
+
+			<p>Deriving equivalent impedance enables us to simplify circuits containing resistors, capacitors, and inductors, which we were unable to do in previous chapters.</p>
+
+			<example>
+				<title>Equivalent impedance</title>
+				
+				<statement>
+					<p>Calculate the equivalent impedance of the circuit shown below, and express the simplified circuit with individual components. The frequency of the circuit is 100<nbsp />Hz.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="80%" xml:id="ch8-equiv-impedance-example-fig1">
+							<shortdescription>Circuit with one mesh and five nodes consisting of two resistors (20ohm and 50ohm), two capacitors (70uF and 65uF), and one 65mH inductor. The 20ohm resistor floats at node a. The 20ohm and 70uF connect at node b. The 70uF, 65mH, and 50ohm connect at node c. The 50ohm and 65uF connect at node d. he 65mH and 65uF connect at node e. The equivalent impedance is measured between nodes a and e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [R, l^=20~$\Omega$, o-]				(2.5,5);
+									\draw[]	(2.5,5) to [C, l^=70~$\mu$F]					(5,5) --++ (right:2.5);
+									\draw[]	(5,5) to [L, l_=65~mH, *-*]						(5,0);
+									\draw[]	(7.5,5) to [R, l_=50~$\Omega$]					(7.5,2.5);
+									\draw[]	(7.5,2.5) to [C, l_=65~$\mu$F]					(7.5,0);
+									\draw[]	(0,0) to [short, o-]							(7.5,0);
+									\node[align=right, anchor=east] at (0,2.5) {$\vec{Z_{EQ}}\rightarrow$};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the impedance of the 70<nbsp />&#181;F capacitor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{70\mu F}} \amp= \frac{1}{j 2\pi100 (70\times10^{-6})}</mrow>
+							<mrow>\amp= -j22.74~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Calculate the impedance of the 65<nbsp />&#181;F capacitor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{65\mu F}} \amp= \frac{1}{j 2\pi100 (65\times10^{-6})}</mrow>
+							<mrow>\amp= -j24.49~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Calculate the impedance of the inductor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{65mH}} \amp= j2\pi100(0.065)</mrow>
+							<mrow>\amp= j40.94~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Re-draw the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="80%" xml:id="ch8-equiv-impedance-example-fig2">
+							<shortdescription>Circuit with one mesh and five nodes consisting of five impedances (20ohm, 50ohm, -j22.7ohm, -j24.5ohm, and j40.9ohm). The 20ohm resistor floats at node a. The 20ohm and -j22.7ohm connect at node b. The -j22.7ohm, j40.9ohm, and 50ohm connect at node c. The 50ohm and -j24.5ohm connect at node d. he j40.9ohm and -j24.5ohm connect at node e. The equivalent impedance is measured between nodes a and e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [R, l^=20~$\Omega$, o-]				(2.5,5);
+									\draw[]	(2.5,5) to [C, l^=$-$j22.7~$\Omega$]			(5,5) --++ (right:2.5);
+									\draw[]	(5,5) to [L, l_=j40.94~$\Omega$, *-*]			(5,0);
+									\draw[]	(7.5,5) to [R, l_=50~$\Omega$]					(7.5,2.5);
+									\draw[]	(7.5,2.5) to [C, l_=$-$j24.5~$\Omega$]			(7.5,0);
+									\draw[]	(0,0) to [short, o-]							(7.5,0);
+									\node[align=right, anchor=east] at (0,2.5) {$\vec{Z_{EQ}}\rightarrow$};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+					
+					<p>Combine all series impedances. The 20<nbsp />&#8486; resistor is in series with the <minus />j22.74<nbsp />&#8486; capacitor. The 50<nbsp />&#8486; resistor is in series with the <minus />j24.49<nbsp />&#8486; capacitor.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch8-equiv-impedance-example-fig3">
+							<shortdescription>Circuit with one mesh and three nodes consisting of 3 impedances (20-j22.7ohm, j40.8ohm, and 50-j24.5ohm). The 20-j22.74ohm floats at node a. The 20-j22.7ohm, j40.8ohm, and 50-j24.5ohm connect at node b. The j40.8ohm and 50-j24.5ohm connect at node c. The equivalent impedance is measured between nodes a and c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [generic, l^=20$-$j22.7~$\Omega$, o-]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [inductor, l_=j40.8~$\Omega$, *-*]		(2.5,0);
+									\draw[]	(5.25,2.5) to [generic, l_=50$-$j24.5~$\Omega$]		(5.25,0);
+									\draw[]	(0,0) to [short, o-]									(5.25,0);
+									\draw[]	(2.5,2.5) to [short]									(5.25,2.5);
+									\node[align=right, anchor=east] at (0,1.25) {$\vec{Z_{EQ}}\rightarrow$};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Two of the impedances (j40.84<nbsp />&#8486; and 50<minus />j24.49<nbsp />&#8486;) are connected in parallel and can be reduced to an equivalent impedance of 30.13+j30.98<nbsp />&#8486;.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="40%" xml:id="ch8-equiv-impedance-example-fig4">
+							<shortdescription>Circuit with three nodes consisting of 2 impedances (20-j22.7ohm, and 30.1+j31ohm). The 20-j22.7ohm floats at node a. The 20-j22.7ohm and 30.1+j31ohm connect at node b. The 30.1+j31ohm floats at node c. The equivalent impedance is measured between nodes a and c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [generic, l^=20$-$j22.7~$\Omega$, o-] (3,2.5);
+									\draw[]	(3,2.5) to [generic, l_=3.13+j31~$\Omega$] (3,0);
+									\draw[]	(0,0) to [short, o-] (3,0);
+									\node[align=right, anchor=east] at (0,1.25) {$\vec{Z_{EQ}}\rightarrow$};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The last two impedances can be combined in series to an equivalent impedance of 50.13+j8.25<nbsp />&#8486;. This impedance consists of a resistor (50.1<nbsp />&#8486;) and an inductor. (We know it must be an inductor because the reactance is positive.) The value of that inductor can be calculated using <xref ref="ch8-eq-impedance-inductor" />.</p>
+					
+					<p>
+						<md>
+							<mrow>L \amp= \frac{8.25}{2\pi100}</mrow>
+							<mrow>\amp= 13.1~\textrm{mH}</mrow>
+						</md>
+					</p>
+
+					<p>The equivalent circuit is depicted below.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="40%" xml:id="ch8-equiv-impedance-example-fig5">
+							<shortdescription>Circuit consisting of a 50.1ohm resistor in series with a 13.1mH inductor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [short, o-]	++(right:2.5)to [R, l_=50.1~$\Omega$]	++(down:2.5);
+									\draw[]	(2.5,2.5) to [L, l_=13.1~mH] ++ (down:2.5) to [short, -o]	++(left:2.5);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+			</example>
+
+		</subsection>
+
+	</section>
+
+	<section xml:id="ch8-deltawye">
+		<title>Delta-Wye and Wye-Delta Transforms</title>
+
+		<p>The concept of delta-wye and wye-delta transforms was discussed in <xref ref="ch2-deltawye-wyedelta" />. Just as we could do delta-wye and wye-delta transforms for resistive circuits, so we can do them with circuits containing resistors, capacitors, and inductors. These transforms can be used to find the equivalent impedance of circuit elements that are neither in parallel nor in series with each other.</p>
+		
+		<p>A delta circuit arrangement of impedances is shown in <xref ref="delta-wye-impedances-delta" />.</p>
+
+		<figure xml:id="delta-wye-impedances-delta">
+  			<caption>A delta arrangement of impedances.</caption>
+			<image width="40%" xml:id="ch8-delta-wye-impedances-delta">
+				<shortdescription>Three impedances (Z1, Z2, and Z3) arranged in series in a triangle. The node between Z1 and Z3 is a. The node between Z1 and Z2 is b. The node between Z2 and Z3 is c.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\draw (0,0) node[below left] {b} to [generic, l^=$\vec{Z_1}$, *-*] (1.5,1.5);
+						\draw (0,0) to  [generic, l_=$\vec{Z_2}$, *-*] (3,0);
+						\draw (1.5,1.5) node[above] {a} to [generic, l^=$\vec{Z_3}$, *-*] (3,0) node[below right] {c};
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+		
+		<p>The impedance between any two nodes in a delta circuit are parallel and series combinations of those impedances, shown in <xref ref="ch8-delta-zab" />, <xref ref="ch8-delta-zbc" />, and <xref ref="ch8-delta-zac" />.</p>
+		
+		<p>
+			<md number="yes">
+				<mrow xml:id="ch8-delta-zab">\vec{Z_{ab}} \amp= \vec{Z_1}//(\vec{Z_2} + \vec{Z_3})</mrow>
+				<mrow xml:id="ch8-delta-zbc">\vec{Z_{bc}} \amp= \vec{Z_2}//(\vec{Z_1} + \vec{Z_3})</mrow>
+				<mrow xml:id="ch8-delta-zac">\vec{Z_{ac}} \amp= \vec{Z_3}//(\vec{Z_1} + \vec{Z_2})</mrow>
+			</md>
+		</p>
+
+		<p>A wye circuit arrangement of impedances is shown in <xref ref="delta-wye-impedances-wye" />.</p>
+
+		<figure xml:id="delta-wye-impedances-wye">
+  			<caption>A wye arrangement of impedances.</caption>
+			<image width="40%" xml:id="ch8-delta-wye-impedances-wye">
+				<shortdescription>Three impedances (Za, Zb, and Zc) arranged in a Y shape. All three impedances connect at a common node (not labeled). The dangling end of Za is labeled "a," the dangling end of Zb is labeled "b," and the dangling end of Zc is labeled "c."</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\draw (0,0) to [generic=$\vec{Z_a}$, *-*] (0,1.75) node[above] {a};
+						\draw (0,0) to [generic, l_=$\vec{Z_b}$, *-*] (-1.25,-1.25) node[below left] {b};
+						\draw (0,0) to [generic=$\vec{Z_c}$, *-*] (1.25,-1.25) node[below right] {c};
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>The impedance between any two nodes in a wye circuit are series combinations of those impedances, shown in <xref ref="ch8-wye-zab" />, <xref ref="ch8-wye-zbc" />, and <xref ref="ch8-wye-zac" />.</p>
+		
+		<p>
+			<md number="yes">
+				<mrow xml:id="ch8-wye-zab">\vec{Z_{ab}} \amp= \vec{Z_a} + \vec{Z_b}</mrow>
+				<mrow xml:id="ch8-wye-zbc">\vec{Z_{bc}} \amp= \vec{Z_b} + \vec{Z_c}</mrow>
+				<mrow xml:id="ch8-wye-zac">\vec{Z_{ac}} \amp= \vec{Z_a} + \vec{Z_c}</mrow>
+			</md>
+		</p>
+
+		<p>A delta-wye transform modifies a delta arrangement of impedances (<xref ref="delta-wye-impedances-delta" />) and converts it into an equivalent wye arrangement (<xref ref="delta-wye-impedances-wye" />). The equivalent impedance between any two nodes of the wye circuit must be identical to the corresponding equivalent impedance of the delta circuit in order to make this transformation valid. <xref ref="ch8-delta-zab" /> is set equal to <xref ref="ch8-wye-zab" />; <xref ref="ch8-delta-zbc" /> is set equal to <xref ref="ch8-wye-zbc" />; and <xref ref="ch8-delta-zac" /> is set equal to <xref ref="ch8-wye-zac" />. The quantities <m>\vec{Z_a}</m>, <m>\vec{Z_b}</m>, and <m>\vec{Z_c}</m> are solved for. (The algebraic details of these derivations will not be shown in this book.)</p>
+		
+		<p>The impedances in a wye circuit derived after a delta-wye transform are given in <xref ref="ch8-delta-wye-za" />, <xref ref="ch8-delta-wye-zb" />, and <xref ref="ch8-delta-wye-zc" />.</p>
+		
+		<p>
+			<md number="yes">
+				<mrow xml:id="ch8-delta-wye-za">\vec{Z_a} \amp= \frac{\vec{Z_1}\vec{Z_3}}{\vec{Z_1}+\vec{Z_2}+\vec{Z_3}}</mrow>
+				<mrow xml:id="ch8-delta-wye-zb">\vec{Z_b} \amp= \frac{\vec{Z_1}\vec{Z_2}}{\vec{Z_1}+\vec{Z_2}+\vec{Z_3}}</mrow>
+				<mrow xml:id="ch8-delta-wye-zc">\vec{Z_c} \amp= \frac{\vec{Z_2}\vec{Z_3}}{\vec{Z_1}+\vec{Z_2}+\vec{Z_3}}</mrow>
+			</md>
+		</p>
+
+		<example>
+			<title>Using a delta-wye transformation to calculate equivalent impedance</title>
+			
+			<statement>
+				<p>Calculate the equivalent impedance of the circuit as shown, and express as individual components. The frequency of the circuit is 1<nbsp />kHz.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="60%" xml:id="ch8-delta-wye-impedance-example-figure1">
+						<shortdescription>Circuit with two meshes and four nodes consisting of three resistors (400ohm, 500ohm, and 1000ohm), one 500nF capacitor, and one 20mH inductor. The 400ohm and 500nF connect at node a. The 400ohm, 20mH, and 500ohm connect at node b. The 500nF, 20mH, and 1000ohm connect at node c. The 500ohm and 1000ohm connect at node d. The equivalent impedance is measured between nodes a and d.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(-2.5,5) to [short, o-]					(2.5,5);
+								\draw[]	(0,5) to [R, l_=400~$\Omega$, *-]		(0,2.5);
+								\draw[]	(0,2.5) to [R, l_=500~$\Omega$, -*]		(0,0);
+								\draw[]	(0,2.5) to [L, l^=20~mH, *-*]			(2.5,2.5);
+								\draw[]	(-2.5,0) to [short, o-]					(2.5,0);
+								\draw[]	(2.5,5) to [C, l_=500~nF]				(2.5,2.5);
+								\draw[]	(2.5,2.5) to [R, l_=1000~$\Omega$]		(2.5,0);
+								\node[align=right, anchor=east] at (-2.5,2.5) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Calculate the impedance of the capacitor.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_C} \amp= \frac{1}{j 2\pi1000(500\times10^{-9})}</mrow>
+						<mrow>\amp= -j318.31~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Calculate the impedance of the inductor.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_L} \amp= j2\pi1000 (0.02)</mrow>
+						<mrow>\amp= j125.66~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>None of the circuit elements shares a branch, therefore none are in series. None of the circuit elements share two nodes, therefore none are in parallel. A delta-wye transform is required. (Note that a wye-delta transform could be accomplished as well.)</p>
+				
+				<p>The circuit has been re-drawn. The impedances in the delta configuration are highlighted in red, with each of the three nodes labeled.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="60%" xml:id="ch8-delta-wye-impedance-example-figure2">
+						<shortdescription>Circuit with two meshes and four nodes consisting of five impedances (400ohm, 500ohm, 1000ohm, j126ohm, and -j318ohm). The 400ohm and -j318ohm connect at node a. The 400ohm, j125.66ohm, and 500ohm connect at node b. The -j318ohm, j126ohm, and 1000ohm connect at node c. The 500ohm and 1000ohm connect at node d. The equivalent impedance is measured between nodes a and d. The delta circuit consists of the 500ohm resistor, 1000ohm resistor, and j126ohm impedance.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]		(-2.5,5) to [short, o-]							(2.5,5);
+								\draw[]		(-2.5,0) to [short, o-]							(0,0);
+								\draw[]		(0,5) to [R, l_=400~$\Omega$, *-]				(0,2.5);
+								\draw[]		(2.5,5) to [C, l_=$-$j318~$\Omega$]				(2.5,2.5);
+								\draw[red]	(0,2.5) node[left] {A} to [R, l_=500~$\Omega$, -*, color=red]	(0,0) node[below] {C} ;
+								\draw[red]	(0,2.5) to [L, l^=j126~$\Omega$, *-*, color=red]			(2.5,2.5) node[right] {B};
+								\draw[red]	(2.5,2.5) to [R, l^=~~1000~$\Omega$, color=red]			(0,0);
+								\node[align=right, anchor=east] at (-2.5,2.5) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Use <xref ref="ch8-delta-wye-za" />, <xref ref="ch8-delta-wye-zb" />, and <xref ref="ch8-delta-wye-zc" /> to calculate for <m>\vec{Z_A}</m>, <m>\vec{Z_B}</m>, and <m>\vec{Z_C}</m>.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_A} \amp= \frac{(j125.66~\Omega)(1000~\Omega)}{(j125.66~\Omega)+(1000~\Omega)+(500~\Omega)}</mrow>
+						<mrow>\amp= 3.48+j41.60~\Omega</mrow>
+						<mrow>\vec{Z_B} \amp= \frac{(j125.66~\Omega)(500~\Omega)}{(j125.66~\Omega)+(1000~\Omega)+(500~\Omega)}</mrow>
+						<mrow>\amp= 6.97+j83.19~\Omega</mrow>
+						<mrow>\vec{Z_C} \amp= \frac{(1000~\Omega)(500~\Omega)}{(j125.66~\Omega)+(1000~\Omega)+(500~\Omega)}</mrow>
+						<mrow>\amp= 331.01-j27.73~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Re-draw the circuit with the wye impedances.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="60%" xml:id="ch8-delta-wye-impedance-example-figure3">
+						<shortdescription>Circuit with one mesh and five nodes consisting of five impedances (400ohm, -j318ohm, 3.48+j41.6ohm, 6.97+j83.2ohm, and 331-j27.7ohm). The 400ohm and -j318ohm connect at node a. The 400ohm and 3.48+j41.6ohm connect at node b. The -j318ohm and 6.97+j83.2ohm connect at node c. The 3.48+j41.6ohm, 6.97+j83.2ohm, and 331-j27.7ohm connect at node d. The 331-j27.7ohm floats at node e. The equivalent impedance is measured between nodes a and e.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(-2.5,5) to [short, o-]												(2.5,5);
+								\draw[]	(0,5) to [R, l_=400~$\Omega$, *-]									(0,2.5);
+								\draw[]	(0,2.5) node[left] {A} to [generic, l_=3.48+j41.6~$\Omega$~~~~~~~~~~~~~~, -*]	(1.25,1.25);
+								\draw[]	(1.25,1.25) to [generic, l_=~~~~~~~~~~~6.97+j83.2~$\Omega$, *-*]		(2.5,2.5) node[right] {B};
+								\draw[]	(-2.5,0) to [short, o-]												(0,0);
+								\draw[]	(2.5,5) to [C, l_=$-$j318~$\Omega$]									(2.5,2.5);
+								\draw[]	(1.25,1.25) to [generic, l^=~~~~~~~~~~331$-$j27.7~$\Omega$]			(0,0) node[below] {C};
+								\node[align=right, anchor=east] at (-2.5,2.5) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Combine all series impedances.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="70%" xml:id="ch8-delta-wye-impedance-example-figure4">
+						<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (403+j41.6ohm, 6.97-j235ohm, and 331-j27.7ohm). The 403+j41.6ohm and 6.97-j235ohm connect at node a. All three impedances connect at node b. The 331-j27.7ohm floats at node c. The equivalent impedance is measured between nodes a and c.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(-3,5) to [short, o-]								(2.5,5);
+								\draw[]	(0,5) to [generic, l_=403+j41.6~$\Omega$, *-]		(0,2.5);
+								\draw[]	(1.25,2.5) to [generic, l_=331$-$j27.7~$\Omega$, *-]	(1.25,0);
+								\draw[]	(0,2.5) to [short]								(2.5,2.5);
+								\draw[]	(-3,0) to [short, o-]								(1.25,0);
+								\draw[]	(2.5,5) to [generic, l^=6.97$-$j235~$\Omega$]		(2.5,2.5);
+								\node[align=right, anchor=east] at (-3,2.5) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Calculate the equivalent impedances of the two upper circuit elements that are in parallel with each other.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z} \amp= \frac{(403.48+j41.60~\Omega)(331.01-j27.73~\Omega)}{(403.48+j41.60~\Omega)+(331.01-j27.73~\Omega)}</mrow>
+						<mrow>\amp= 113.98-j176.68~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>The overall equivalent impedance is equal to the above impedance added to 331.01<minus />j27.73<nbsp />&#8486;.</p>
+				
+				<p>
+					<md>\vec{Z_{EQ}} = 444.99-j204.41~\Omega</md>
+				</p>
+
+				<p>This impedance is consistent of a resistor in series with a capacitor. (We know it must be a capacitor because the reactance is negative.) Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the value of the capacitor.</p>
+				
+				<p>
+					<md>
+						<mrow>C \amp= \frac{1}{2\pi1000(204.41)}</mrow>
+						<mrow>\amp= 778.6~\textrm{nF}</mrow>
+					</md>
+				</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="40%" xml:id="ch8-delta-wye-impedance-example-figure5">
+						<shortdescription>Circuit consisting of a 445ohm resistor in series with a 779nF capacitor.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(-2.5,5) to [short, o-]	++(right:2.5) to [R, l_=445~$\Omega$]	++(down:2.5);
+								\draw[]	(-2.5,0) to [short, o-] ++(right:2.5) to [C, l^=779~nF]	++(up:2.5);
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+			</statement>
+		</example>
+
+		<p>A wye-delta transform modifies a wye arrangement of impedances (<xref ref="delta-wye-impedances-wye" />) and turns it into an equivalent delta arrangement (<xref ref="delta-wye-impedances-delta" />). Just as with the delta-wye transforms, the circuits must be equivalent to each other.  <xref ref="ch8-delta-zab" /> is set equal to <xref ref="ch8-wye-zab" />; <xref ref="ch8-delta-zbc" /> is set equal to <xref ref="ch8-wye-zbc" />; and <xref ref="ch8-delta-zac" /> is set equal to <xref ref="ch8-wye-zac" />. The quantities <m>\vec{Z_1}</m>, <m>\vec{Z_2}</m>, and <m>\vec{Z_3}</m> are solved for. (The algebraic details of these derivations will not be shown in this book.)</p>
+		
+		<p>The impedances in a delta circuit derived after a wye-delta transform are given in <xref ref="ch8-delta-wye-z1" />, <xref ref="ch8-delta-wye-z2" />, and <xref ref="ch8-delta-wye-z3" />.</p>
+		
+		<p>
+			<md number="yes">
+				<mrow xml:id="ch8-delta-wye-z1">\vec{Z_1} \amp= \frac{\vec{Z_a}\vec{Z_b}+\vec{Z_b}\vec{Z_c}+\vec{Z_a}\vec{Z_c}}{\vec{Z_c}}</mrow>
+				<mrow xml:id="ch8-delta-wye-z2">\vec{Z_2} \amp= \frac{\vec{Z_a}\vec{Z_b}+\vec{Z_b}\vec{Z_c}+\vec{Z_a}\vec{Z_c}}{\vec{Z_a}}</mrow>
+				<mrow xml:id="ch8-delta-wye-z3">\vec{Z_3} \amp= \frac{\vec{Z_a}\vec{Z_b}+\vec{Z_b}\vec{Z_c}+\vec{Z_a}\vec{Z_c}}{\vec{Z_b}}</mrow>
+			</md>
+			
+		</p>
+
+		<example>
+			<title>Using a wye-delta transformation to calculate equivalent impedance</title>
+			
+			<statement>
+				<p>Calculate the equivalent impedance of the circuit as shown, and express as individual components. The frequency of the circuit is 200<nbsp />Hz.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="70%" xml:id="ch8-wye-delta-impedance-figure1">
+						<shortdescription>Circuit with two meshes and four nodes consisting of three resistors (400ohm, 600ohm, and 800ohm), one 200mH inductor, and one 2uF capacitor. The 400ohm and 600ohm connect at node a. The 400ohm, 200mH, and 2uF connect at node b. The 600ohm, 200mH, and 800ohm connect at node c. The 2uF and 800ohm connect at node d. The equivalent impedance is measured between nodes a and d.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(0,2.5) to [short, -o] ++(left:0.5);
+								\draw[]	(0,2.5) to [R, l^=400~$\Omega$, *-*] (2.5,2.5);
+								\draw[]	(2.5,2.5) to [L, l^=200~mH, -*] (5,2.5);
+								\draw[]	(2.5,2.5) to [C, l_=2~$\mu$F, -*] (2.5,0);
+								\draw[]	(-0.5,0) to [short, o-] (5,0);
+								\draw[]	(0,2.5) to [short] ++(up:1.5);
+								\draw[]	(0,4) to [R, l^=600~$\Omega$] (5,4);
+								\draw[]	(5,2.5) to [short] ++(up:1.5);
+								\draw[]	(5,2.5) to [R, l_=800~$\Omega$] (5,0);
+								\node[align=right, anchor=east] at (-0.5,1.25) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Calculate the impedance of the capacitor.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_C} \amp= \frac{1}{j2\pi200(2\times10^{-6})}</mrow>
+						<mrow>\amp= -j397.89~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Calculate the impedance of the inductor.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_L} \amp= j2\pi200 (0.2)</mrow>
+						<mrow>\amp=j251.33~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>None of these elements shares a branch, therefore none are in series. None of these elements shares two nodes, therefore none are in parallel. A wye-delta transform is required. (Note that a delta-wye transform could be accomplished as well.)</p>
+				
+				<p>The circuit has been re-drawn. The impedances in the wye-arrangement are highlighted in red, with each of the three nodes labeled.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="70%" xml:id="ch8-wye-delta-impedance-figure2">
+						<shortdescription>Circuit with two meshes and four nodes consisting of five impedances (400ohm, 600ohm, 800ohm, j251ohm, and -j398ohm). The 400ohm and 600ohm connect at node a. The 400ohm, j251ohm, and -j398ohm connect at node b. The 600ohm, j251ohm, and 800ohm connect at node c. The -j398ohm and 800ohm connect at node d. The equivalent impedance is measured between nodes a and d.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]		(0,2.5) to [short, -o]								++(left:0.5);
+								\draw[]		(-0.5,0) to [short, o-]								(5,0);
+								\draw[]		(0,2.5) to [short]								++(up:1.5);
+								\draw[]		(0,4) to [R, l^=600~$\Omega$]						(5,4);
+								\draw[]		(5,2.5) to [short]								++(up:1.5);
+								\draw[]		(5,2.5) to [R, l_=800~$\Omega$]					(5,0);
+								\draw[red]	(0,2.5) node[above left] {A} to [R, l^=400~$\Omega$, *-*, color=red]	(2.5,2.5);
+								\draw[red]	(2.5,2.5) to [L, l^=j251~$\Omega$, -*, color=red]				(5,2.5) node[right] {B};
+								\draw[red]	(2.5,2.5) to [C, l_=$-$j398~$\Omega$, -*, color=red]		(2.5,0) node[below] {C};
+								\node[align=right, anchor=east] at (-0.5,1.25) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Use <xref ref="ch8-delta-wye-z1" />, <xref ref="ch8-delta-wye-z2" />, and <xref ref="ch8-delta-wye-z3" /> to solve for <m>\vec{Z_1}</m>, <m>\vec{Z_2}</m>, and <m>\vec{Z_3}</m>.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_1} \amp= \frac{100000-j58623.98~\Omega^2}{-j397.89~\Omega}</mrow>
+						<mrow>\amp= 147.34+j251.33~\Omega</mrow>
+						<mrow>\vec{Z_2} \amp= \frac{100000-j58623.98~\Omega^2}{400~\Omega}</mrow>
+						<mrow>\amp	= 250-j146.56~\Omega</mrow>
+						<mrow>\vec{Z_3} \amp= \frac{100000-j58623.98~\Omega^2}{j251.33~\Omega}</mrow>
+						<mrow>\amp= -233.26-j397.89~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Re-draw the circuit.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="80%" xml:id="ch8-wye-delta-impedance-figure3">
+						<shortdescription>Circuit with three meshes and three nodes consisting of five impedances (600ohm, 800ohm, 147+j251ohm, 250-j147ohm, and -233-j398ohm). The 600ohm, 147+j251ohm, and -233-j398ohm connect at node a. The 600ohm, 147+j251ohm, 250-j147ohm, and 800ohm connect at node b. The -233-j398ohm, 250-j147ohm, and 800ohm connect at node c. The equivalent impedance is measured between nodes a and c.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(0,2.5) node[above left] {A} to [short, -o]			++(left:2);
+								\draw[]	(0,2.5) to [generic, l^=147+j251~$\Omega$, *-*]		(5,2.5) node[right] {B};
+								\draw[]	(2.5,0) to [generic, l^=250-j147~$\Omega$~~~~~~~~, -*]			(5,2.5);
+								\draw[]	(0,2.5) to [generic, l_=-233$-$j398~$\Omega$~~~~~~~~~~~, -*]	(2.5,0) node[below] {C};
+								\draw[]	(-2,0) to [short, o-]								(5,0);
+								\draw[]	(0,2.5) to [short]									++(up:1.5);
+								\draw[]	(0,4) to [R, l^=600~$\Omega$]						(5,4);
+								\draw[]	(5,2.5) to [short]									++(up:1.5);
+								\draw[]	(5,2.5) to [R, l^=800~$\Omega$]						(5,0);
+								\node[align=right, anchor=east] at (-2,1.25) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Calculate the equivalent impedance of the 600<nbsp />&#8486; resistor in parallel with the 147.34+j251.33<nbsp />&#8486; impedance.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z} \amp= \frac{(600~\Omega)(147.34+j251.33~\Omega)}{(600~\Omega)+(147.34+j251.33~\Omega)}</mrow>
+						<mrow>\amp= 167.23 + j145.54~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Calculate the equivalent impedance of the 800<nbsp />&#8486; resistor in parallel with the 250<minus />j146.56<nbsp />&#8486; impedance.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z} \amp= \frac{(800~\Omega)(250-j146.56~\Omega)}{(800~\Omega)+(250-j146.56~\Omega)}</mrow>
+						<mrow>\amp= 202.12 -j83.45~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Re-draw the circuit.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="80%" xml:id="ch8-wye-delta-impedance-figure4">
+						<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (167+j146ohm, -233-j398ohm, and 202-j83.5ohm). The -233-j398ohm and 167+j146ohm connect at node a. The 167+j146ohm and 202-j83.5ohm connect at node b. The -233-j398ohm and 202-j83.5ohm connect at node c. The equivalent impedance is measured between nodes a and c.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(0.5,2.5) to [short, -o] ++(left:2);
+								\draw[]	(0,2.5) to [generic, l^=167+j146~$\Omega$] (3,2.5);
+								\draw[]	(0,2.5) to [generic, l^=-233$-$j398~$\Omega$, *-*] (0,0);
+								\draw[]	(-1.5,0) to [short, o-] (3,0);
+								\draw[]	(3,2.5) to [generic, l^=202$-$j835~$\Omega$] (3,0);
+								\node[align=right, anchor=east] at (-1.5,1.25) {$\vec{Z_{EQ}} \rightarrow$};
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>The equivalent impedance is calculated below.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_{EQ}} \amp= \frac{(167.23+j145.54~\Omega+202.12-j83.45~\Omega)(-233.26-j397.89~\Omega)}{(167.23+j145.54~\Omega)+(202.12-j83.45~\Omega)+(-233.26-j397.89~\Omega)}</mrow>
+						<mrow>\amp= 349.23-j324.55~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>This impedance is equivalent to a resistor in series with a capacitor. (We know it must be a capacitor because the reactance is negative.) Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the value of the capacitor.</p>
+				
+				<p>
+					<md>
+						<mrow>C \amp= \frac{1}{2\pi200(324.55)}</mrow>
+						<mrow>\amp= 2.45~\mu\textrm{F}</mrow>
+					</md>
+					
+				</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="40%" xml:id="ch8-wye-delta-impedance-figure5">
+						<shortdescription>Circuit with a 349ohm resistor in series with a 2.45uF capacitor.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(-2.5,5) to [short, o-]	++(right:2.5) to [R, l_=349~$\Omega$]	++(down:2.5);
+								\draw[]	(-2.5,0) to [short, o-] ++ (right:2.5) to [C, l^=2.45~$\mu$F]	++(up:2.5);
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+			</statement>
+		</example>
+
+	</section>
+
+	<exercises>
+    	<title>Practice Problems</title>
+
+    	<subexercises>
+			<title>Phasor Arithmetic</title>
+		
+			<exercise>
+				<statement>
+					<p>Convert <m>-200-j100</m> to polar form.</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>224 \angle -153^\circ</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-pythagorean-theorem" /> to calculate the magnitude.</p>
+					
+					<p>
+						<md>
+							<mrow>r \amp= \sqrt{200^2+100^2}</mrow>
+							<mrow>\amp= 224</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch8-calculating-phi" /> to calculate the angle.</p>
+					
+					<p>
+						<md>
+							<mrow>\theta \amp= \atantwo(-100,-200)</mrow>
+							<mrow>\amp= -153^\circ</mrow>
+						</md>
+					</p>
+
+
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Convert <m>5\angle -120^\circ</m> to Cartesian form.</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>-2.5 - j4.33</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use sine and cosine to calculate the real and imaginary parts.</p>
+
+					<p>
+						<md>5\cos(-120^\circ) + j5\sin(-120^\circ) = -2.5 - j4.33</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate <m>\vec{Z} = (\vec{Z_1})(\vec{Z_2}) + \vec{Z_3}</m> given the phasor values below. Express the result in both Cartesian and polar forms.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= 10+j20</mrow>
+							<mrow>\vec{Z_2} \amp= -30+j50</mrow>
+							<mrow>\vec{Z_3} \amp= -15-j40</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= -1315 - j140</mrow>
+							<mrow>\amp= 1320 \angle -174^\circ</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>First, multiply <m>\vec{Z_1}</m> and <m>\vec{Z_2}</m>. If performing the multiplication by hand, convert to polar form first.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= 22.36 \angle 63.43^\circ</mrow>
+							<mrow>\vec{Z_2} \amp= 58.31 \angle 120.96^\circ</mrow>
+							<mrow>\vec{Z_1}\vec{Z_2} \amp= (22.36)(58.31)~\textrm{e}^{j(63.43^\circ+120.96^\circ)}</mrow>
+							<mrow>\amp= 1303.84~\textrm{e}^{j184.3987}</mrow>
+							<mrow>\amp= 1303.84 \angle 184.3987</mrow>
+							<mrow>\amp= -1300 -j100</mrow>
+						</md>
+					</p>
+
+					<p>Second, add the result of the multiplication with <m>\vec{Z_3}</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= (-1300 -j100) + (-15-j40)</mrow>
+							<mrow>\amp= (-1300 + (-15)) + j(-100 + (-40))</mrow>
+							<mrow>\amp= -1315 - j140</mrow>
+						</md>
+					</p>
+
+					<p>Convert the result to polar form.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= \sqrt{1315^2 + 140^2} \angle \atantwo(-140,-1315)</mrow>
+							<mrow>\amp= 1320 \angle -174^\circ</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate <m>\vec{Z} = (\vec{Z_1} - \vec{Z_2})(\vec{Z_3})</m> given the phasor values below. Express the result in both Cartesian and polar forms.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= 10\angle60^\circ</mrow>
+							<mrow>\vec{Z_2} \amp= 4\angle-140^\circ</mrow>
+							<mrow>\vec{Z_3} \amp= 20\angle20^\circ</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= 277 \angle 74.3^\circ</mrow>
+							<mrow>\amp= 74.7 + j266</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>First, subtract <m>\vec{Z_2}</m> from <m>\vec{Z_1}</m>. If performing the subtraction by hand, convert to Cartesian form first.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= 5+j8.66</mrow>
+							<mrow>\vec{Z_2} \amp= -3.06-j2.57</mrow>
+							<mrow>\vec{Z_1} - \vec{Z_2} \amp= (5 - (-3.06)) + j(8.66 - (-2.57))</mrow>
+							<mrow>\amp= 8.06+j11.23</mrow>
+							<mrow>\amp= 13.8266 \angle 54.3216^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Second, multiply the result of the subtraction with <m>\vec{Z_3}</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= (13.8266 \angle 54.3216^\circ)(20\angle20^\circ)</mrow>
+							<mrow>\amp= (13.8266)(20)~\textrm{e}^{j(54.3216^\circ + 20^\circ)}</mrow>
+							<mrow>\amp= 277~\textrm{e}^{j74.3216^\circ}</mrow>
+							<mrow>\amp= 277 \angle 74.3^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Convert the result to Cartesian form.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= 276.53\cos{74.32^\circ} +j276.53\sin{74.32^\circ}</mrow>
+							<mrow>\amp= 74.7 + j266</mrow>
+						</md>
+						
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate <m>\vec{Z} = (\vec{Z_1})(\vec{Z_2}) + \frac{\vec{Z_3}}{\vec{Z_4}}</m> given the phasor values below. Express the result in both Cartesian and polar forms.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= 10+j14</mrow>
+							<mrow>\vec{Z_2} \amp= 60\angle-140^\circ</mrow>
+							<mrow>\vec{Z_3} \amp= 38\angle20^\circ</mrow>
+							<mrow>\vec{Z_4} \amp= -5-j18</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp=  79.1 - j1030</mrow>
+							<mrow>\amp= 1030 \angle -85.6^\circ</mrow>
+						</md>
+						
+					</p>
+				</answer>
+
+				<solution>
+					<p>Convert <m>\vec{Z_1}</m> to polar form, then multiply <m>\vec{Z_1}</m> and <m>\vec{Z_2}</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= 17.2047 \angle 54.4623^\circ</mrow>
+							<mrow>\vec{Z_1}\vec{Z_2} \amp= (17.2047 \angle 54.4623^\circ)(60\angle-140^\circ)</mrow>
+							<mrow>\amp= (17.2047)(60)~\textrm{e}^{j(54.4623^\circ + (-140^\circ))}</mrow>
+							<mrow>\amp= 1032.3~\textrm{e}^{-j85.5377^\circ}</mrow>
+							<mrow>\amp= 1032.3 \angle -85.5377^\circ</mrow>
+							<mrow>\amp= 80.315 - j1029.1</mrow>
+						</md>
+					</p>
+
+					<p>Convert <m>\vec{Z_4}</m> to polar form, then divide <m>\vec{Z_3}</m> by <m>\vec{Z_4}</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z_4} \amp= 18.6815 \angle -105.5241^\circ</mrow>
+							<mrow>\frac{\vec{Z_3}}{\vec{Z_4}} \amp= \frac{38\angle20^\circ}{18.6815 \angle -105.5241^\circ}</mrow>
+							<mrow>\amp= \frac{38}{18.6815}~\textrm{e}^{j(20^\circ - (-105.5241^\circ))}</mrow>
+							<mrow>\amp= 2.0341~\textrm{e}^{j125.5241^\circ}</mrow>
+							<mrow>\amp= 2.0341 \angle 125.5241^\circ</mrow>
+							<mrow>\amp= -1.1819 + j1.6555</mrow>
+						</md>
+					</p>
+
+					<p>Add the results of the last two operations.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= (80.315 - j1029.1) + (-1.1819 + j1.6555)</mrow>
+							<mrow>\amp= (80.315 + (-1.1819)) + j(-1029.1 + 1.6555)</mrow>
+							<mrow>\amp= 79.133 - j1027.5</mrow>
+						</md>
+					</p>
+
+					<p>Convert the result to polar form.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z} \amp= \sqrt{79.133^2 + 1027.5^2} \angle \atantwo(-1027.5,79.133)</mrow>
+							<mrow>\amp= 1030.5 \angle -85.5960^\circ</mrow>
+						</md>
+					</p>
+				
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Impedance and Equivalent Impedance</title>
+		
+			<exercise>
+				<statement>
+					<p>Calculate the impedance of a 25<nbsp />mH inductor at a frequency of 60<nbsp />Hz.</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>j9.42~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-eq-impedance-inductor" />.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z_L} \amp= j(2\pi 60)(0.025)</mrow>
+							<mrow>\amp= j9.42~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate the impedance of a 470<nbsp />nF capacitor at a frequency of 2<nbsp />kHz.</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>-j169.34~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" />.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi 2000)(470\times10^{-9})}</mrow>
+							<mrow>\amp= -j169.34~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch8-equivalent-impedance-ex3">
+				<statement>
+					<p>Calculate the equivalent impedance between nodes a and b of the circuit shown in <xref ref="equivalent-impedance-exercise3-diagram" />. The frequency of operation is 200<nbsp />Hz.</p>
+					
+					<figure xml:id="equivalent-impedance-exercise3-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-equivalent-impedance-ex3" />.</caption>
+  						<image width="50%" xml:id="ch8-equivalent-impedance-exercise3-diagram">
+    						<shortdescription>Circuit with one mesh and three nodes consisting of two resistors (65ohm and 45ohm) and one 85mH inductor. The 65ohm floats at node a. The 65ohm, 45ohm, and 85mH connect at node c. The 85mH and 45ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [R, l^=65~$\Omega$, o-]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [L, l_=85~mH, *-*]							(2.5,0);
+									\draw[]	(2.5,2.5) to [short]									(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=45~$\Omega$]							(5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]						(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>103 + j 16.1~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the impedance of the inductor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_L} \amp= j(2\pi 200)(0.085)</mrow>
+							<mrow>\amp= j106.81~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch8-equivimpedance-ex3-figure1">
+							<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (65ohm, 45ohm, and j107ohm). The 65ohm floats at node a. The 65ohm, 45ohm, and j107ohm connect at node c. The j107ohm and 45ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [R, l^=65~$\Omega$, o-]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [L, l_=j107~$\Omega$, *-*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [short]									(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=45~$\Omega$]							(5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]						(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The inductor and 45<nbsp />&#8486; resistor are connected in parallel.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{LR}} \amp= \frac{(45~\Omega)(j106.81~\Omega)}{45~\Omega + j106.81~\Omega}</mrow>
+							<mrow>\amp= 38.2170 + j16.1005~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="30%" xml:id="ch8-equivimpedance-ex3-figure2">
+							<shortdescription>Circuit with three nodes consisting of two impedances (65ohm and 38.2+j16.1ohm). The two impedances are connected in series between nodes a and b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [R, l^=65~$\Omega$, o-]	(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, l_=38.2+j16.1~$\Omega$]		(2.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(2.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the equivalent impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{EQ}} \amp= 38.22+j16.1~\Omega + 65~\Omega</mrow>
+							<mrow>\amp= 103 + j 16.1~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch8-equivalent-impedance-ex4">
+				<statement>
+					<p>Calculate the equivalent impedance between nodes a and b of the circuit shown in <xref ref="equivalent-impedance-exercise4-diagram" />. The frequency of operation is 450<nbsp />Hz.</p>
+
+					<figure xml:id="equivalent-impedance-exercise4-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-equivalent-impedance-ex4" />.</caption>
+  						<image width="70%" xml:id="ch8-equivalent-impedance-exercise4-diagram">
+    						<shortdescription>Circuit with two meshes and four nodes consisting of two resistors (24ohm and 86ohm), two inductors (100mH and 460mH), and one 330nF capacitor. The 100mH floats at node a. The 100mH, 300nF, 24ohm, and 460mH connect at node c. The 460mH and 86ohm connect at node d. The 330nF, 24ohm, and 86ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [L, l^=100~mH, o-]	(2.5,2.5) --++ (right:2.5);
+									\draw[]	(2.5,2.5) to [C, l_=330~nF, *-*]				(2.5,0);
+									\draw[]	(5,2.5) to [R, l_=24~$\Omega$, *-*]				(5,0);
+									\draw[]	(5,2.5) to [L, l^=460~mH]						(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=86~$\Omega$]				(7.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]				(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>24.0+j283~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the impedance of the capacitor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi450)(330\times10^{-9})}</mrow>
+							<mrow>\amp= -j1071.75~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the impedance of each inductor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{L100}} \amp= j(2\pi 450)(0.1)</mrow>
+							<mrow>\amp= j282.74~\Omega</mrow>
+							<mrow>\vec{Z_{L460}} \amp= j(2\pi 450)(0.46)</mrow>
+							<mrow>\amp= j1300.62~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="70%" xml:id="ch8-equivimpedance-ex4-figure1">
+							<shortdescription>Circuit with two meshes and four nodes consisting of five impedances (24ohm, 86ohm, j283ohm, j1300ohm, and -j1070ohm). The j283ohm floats at node a. The j283ohm, -j1070ohm, 24ohm, and j1300ohm connect at node c. The j1300ohm and 86ohm connect at node d. The -j1070ohm, 24ohm, and 86ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [L, l^=j283~$\Omega$, o-]	(2.5,2.5) --++ (right:2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j1070~$\Omega$, *-*]				(2.5,0);
+									\draw[]	(5,2.5) to [R, l_=24~$\Omega$, *-*]				(5,0);
+									\draw[]	(5,2.5) to [L, l^=j1300~$\Omega$]						(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=86~$\Omega$]				(7.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]				(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The capacitor (<minus />j1071.75<nbsp />&#8486; impedance) and 24<nbsp />&#8486; resistor are connected in parallel.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z_{RC}} \amp= \frac{(24~\Omega)(-j1071.75~\Omega)}{24~\Omega + (-j1071.75~\Omega)}</mrow>
+							<mrow>\amp= 23.9880 - j0.5372</mrow>
+						</md>
+					</p>
+
+					<p>The 460<nbsp />mH inductor (j1300.62<nbsp />&#8486; impedance) and 86<nbsp />&#8486; resistor are connected in series.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{LR}} \amp= 86~\Omega + j1300.62~\Omega</mrow>
+							<mrow>\amp= 86 + j1300.62~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-equivimpedance-ex4-figure2">
+							<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (j283ohm, 24-j0.537ohm, and 86+j1300ohm). The j283ohm floats at node a. All three impedances connect at node c. The 24-j0.573ohm and 86+j1300ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [L, l^=j283~$\Omega$, o-]		(3,2.5) --++ (right:3);
+									\draw[]	(3,2.5) to [generic, l_=24$-$j0.537~$\Omega$, *-*]		(3,0);
+									\draw[]	(6,2.5) to [generic, l_=86+j1300$\Omega$]				(6,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]						(6,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 23.988<minus />j0.5372<nbsp />&#8486; impedance is in parallel with the 86+j1300.62<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'} \amp= \frac{(23.9880 - j0.5372)(86 + j1300.62~\Omega)}{(23.9880 - j0.5372)+(86 + j1300.62~\Omega)}</mrow>
+							<mrow>\amp= 23.9705 - j0.0963</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="30%" xml:id="ch8-equivimpedance-ex4-figure3">
+							<shortdescription>Circuit with two impedances (j283ohm and 24-j0.0963ohm) connected in series between nodes a and b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [L, l^=j283~$\Omega$, o-]	(3,2.5);
+									\draw[]	(3,2.5) to [generic, l_=24$-$j0.0963~$\Omega$]				(3,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]				(3,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The j282.74<nbsp />&#8486; and 23.9705<minus />j0.0963<nbsp />&#8486; impedances are connected in series.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{EQ}} \amp= (23.97-j0.0963~\Omega) + (j282.74~\Omega)</mrow>
+							<mrow>\amp= 24.0+j283~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch8-equivalent-impedance-ex5">
+				<statement>
+					<p>Calculate the equivalent impedance between nodes a and b of the circuit shown in <xref ref="equivalent-impedance-exercise5-diagram" />. The frequency of operation is 6<nbsp />kHz.</p>
+
+					<figure xml:id="equivalent-impedance-exercise5-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-equivalent-impedance-ex5" />.</caption>
+  						<image width="70%" xml:id="ch8-equivalent-impedance-exercise5-diagram">
+    						<shortdescription>Circuit with two meshes and five nodes consisting of three resistors (2ohm, 6ohm, and 5ohm), two capacitors (50uF and 68uF), and one 33uH inductor. The 50uF and 2ohm connect at node a. The 2ohm, 6ohm, and 5ohm connect at node c. The 6ohm and 68uF connect at node d. The 5ohm and 33uH connect at node e. The 50uF, 68uF, and 33uH connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]			(2.5,5);
+									\draw[]	(2.5,5) to [C, l_=50~$\mu$F, *-*]			(2.5,0);
+									\draw[]	(2.5,5) to [R, l^=2~$\Omega$]				(5,5);
+									\draw[]	(5,5) to [R, l_=6~$\Omega$, *-]				(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=68~$\mu$F, -*]			(5,0);
+									\draw[]	(5,5) to [R, l^=5~$\Omega$]					(7.5,5);
+									\draw[]	(7.5,5) to [L, l_=33~$\mu$H]				(7.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]			(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>0.0586 - j0.528~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the impedance of the inductor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_L} \amp= j(2\pi6000)(33\times10^{-6})</mrow>
+							<mrow>\amp= j1.24~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the impedance of each capacitor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{C50}} \amp= \frac{1}{j(2\pi 6000)(50\times10^{-6})}</mrow>
+							<mrow>\amp= -j0.53~\Omega</mrow>
+							<mrow>\vec{Z_{C68}} \amp= \frac{1}{j(2\pi 6000)(68\times10^{-6})}</mrow>
+							<mrow>\amp= -j0.39~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="70%" xml:id="ch8-equivimpedance-ex5-figure1">
+							<shortdescription>Circuit with two meshes and five nodes consisting of six impedances (2ohm, 6ohm, 5ohm, -j0.53ohm, -j0.39ohm, and j1.24ohm). The -j0.53ohm and 2ohm connect at node a. The 2ohm, 6ohm, and 5ohm connect at node c. The 6ohm and -j0.39ohm connect at node d. The 5ohm and j1.24ohm connect at node e. The -j0.53ohm, -j0.39ohm, and j1.24ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]			(2.5,5);
+									\draw[]	(2.5,5) to [C, l_=$-$j0.53~$\Omega$, *-*]	(2.5,0);
+									\draw[]	(2.5,5) to [R, l^=2~$\Omega$]				(5,5);
+									\draw[]	(5,5) to [R, l_=6~$\Omega$, *-]				(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=$-$j0.39~$\Omega$, -*]	(5,0);
+									\draw[]	(5,5) to [R, l^=5~$\Omega$]					(7.5,5);
+									\draw[]	(7.5,5) to [L, l_=j1.24~$\Omega$]			(7.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]			(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 5<nbsp />&#8486; resistor is connected in series with the j1.24<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>Z_{LR} \amp= (5~\Omega) + (j1.24~\Omega)</mrow>
+							<mrow>\amp= 5 + j1.24~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>The 6<nbsp />&#8486; resistor is connected in series with the <minus />j0.39<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>Z_{RC} \amp= (6~\Omega) + (-j0.39~\Omega)</mrow>
+							<mrow>\amp= 6 - j0.39~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="70%" xml:id="ch8-equivimpedance-ex5-figure2">
+							<shortdescription>Circuit with two meshes and three nodes consisting of four impedances (-j0.53ohm, 2ohm, 6-j0.39ohm, and 5+j1.24ohm). The -j0.53ohm and 2ohm connect at node a. The 2ohm, 6-j0.39ohm, and 5+j1.24ohm connect at node c. The -j0.53ohm, 6-j0.39ohm, and 5+j1.24ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j0.53~$\Omega$, *-*]			(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l^=2~$\Omega$]						(5,2.5) --++ (right:2.5);
+									\draw[]	(5,2.5) to [generic, l_=6$-$j0.39~$\Omega$, *-*]	(5,0);
+									\draw[]	(7.5,2.5) to [generic, l_=5+j1.24~$\Omega$]			(7.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(7.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 5+j1.24<nbsp />&#8486; impedance is connected in parallel with the 6<minus />j0.39<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'} \amp= \frac{(5 + j1.24~\Omega)(6 - j0.39~\Omega)}{(5 + j1.24~\Omega)+(6 - j0.39~\Omega)}</mrow>
+							<mrow>\amp= 2.7935 + j0.2844</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch8-equivimpedance-ex5-figure3">
+							<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (-j0.53ohm, 2ohm, and 2.8+j0.28ohm). The -j0.53ohm and 2ohm connect at node a. The 2ohm and 2.8+j0.28ohm connect at node c. The -j0.53ohm and 2.8+j0.28ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]			(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j0.53~$\Omega$, *-*]		(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l^=2~$\Omega$]					(5.5,2.5);
+									\draw[]	(5.5,2.5) to [generic, l_=2.8+j0.28~$\Omega$]	(5.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]				(5.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 2<nbsp />&#8486; resistor is connected in series with the 2.8+j0.28<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z''} \amp= 2~\Omega + (2.7935 + j0.2844)</mrow>
+							<mrow>\amp= 4.7935 + j0.2844</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch8-equivimpedance-ex5-figure4">
+							<shortdescription>Circuit with two impedances of -j0.53ohm and 4.8+j0.28ohm connected in parallel between nodes a and b. The equivalent impedance is measured in parallel between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]			(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j0.53~$\Omega$, *-*]		(2.5,0);
+									\draw[]	(2.5,2.5) to [short]							(5.5,2.5);
+									\draw[]	(5.5,2.5) to [generic, l_=4.8+j0.28~$\Omega$]	(5.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]				(5.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The <minus />j0.53<nbsp />&#8486; impedance is connected in parallel with the 4.8+j0.28<nbsp />&#8486; impedance.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z_{EQ}} \amp= \frac{(-j0.53~\Omega)(4.7935 + j0.2844)}{(-j0.53~\Omega)+(4.7935 + j0.2844)}</mrow>
+							<mrow>\amp=  0.0586 - j0.528~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Delta-Wye and Wye-Delta Transforms</title>
+		
+			<exercise xml:id="ch8-deltawye-exercise1">
+				<statement>
+					<p>Convert the circuit shown in <xref ref="equivalent-deltawye-exercise1-diagram" /> to a delta circuit.</p>
+					
+					<figure xml:id="equivalent-deltawye-exercise1-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-deltawye-exercise1" />.</caption>
+  						<image width="30%" xml:id="ch8-equivalent-deltawye-exercise1-diagram">
+    						<shortdescription>Wye arrangement of impedances. Za=j8ohm. Zb=-j10ohm. Zc=30ohm.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2) node[above] {a} to [L, l_=j8~$\Omega$, o-*]	(0,0);
+									\draw[]	(0,0) to [C, l_=$-$j10~$\Omega$, -o]			(-1.414,-1.414) node[below left] {b};
+									\draw[]	(0,0) to [R, l^=30~$\Omega$, -o]				(1.414, -1.414) node[below right] {c};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<figure>
+  						<caption></caption>
+  						<image width="40%" xml:id="ch8-equivalent-deltawye-exercise1-answer">
+    						<shortdescription>Delta arrangement of impedances. Z1=2.67-j2ohm. Z2=-7.5-j10ohm. Z3=6+j8ohm.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.828) node[above] {a} to [generic, l_=2.67$-$j2~$\Omega$~~~~~~, *-*]	(-2,0);
+									\draw[]	(-2,0) node[left] {b} to [generic, l^=$-$7.5$-$j10~$\Omega$]	(2,0) node[right] {c};
+									\draw[]	(0,2.828) to [generic, l^=~~~6+j8~$\Omega$, -*]				(2,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-delta-wye-z1" />, <xref ref="ch8-delta-wye-z2" />, and <xref ref="ch8-delta-wye-z3" /> to calculate the delta impedances.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= \frac{(j8~\Omega)(-j10~\Omega)+(-j10~\Omega)(30~\Omega)+(j8~\Omega)(30~\Omega)}{30~\Omega}</mrow>
+							<mrow>\amp= \frac{80-j60~\Omega^2}{30~\Omega}</mrow>
+							<mrow>\amp= 2.67-j2~\Omega</mrow>
+							<mrow>\vec{Z_2} \amp= \frac{80-j60~\Omega^2}{j8~\Omega}</mrow>
+							<mrow>\amp= -7.5-j10~\Omega</mrow>
+							<mrow>\vec{Z_3}	\amp= \frac{80-j60~\Omega^2}{-j10~\Omega}</mrow>
+							<mrow>\amp= 6+j8~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch8-deltawye-exercise2">
+				<statement>
+					<p>Convert the circuit shown in <xref ref="equivalent-deltawye-exercise2-diagram" /> to a wye circuit.</p>
+
+					<figure xml:id="equivalent-deltawye-exercise2-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-deltawye-exercise2" />.</caption>
+  						<image width="40%" xml:id="ch8-equivalent-deltawye-exercise2-diagram">
+    						<shortdescription>Delta arrangement of impedances. Z1=-j6.2ohm. Z2=20-j3.8ohm. Z3=j13.4ohm.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.828) node[above] {a} to [C, l_=$-$j6.2~$\Omega$, *-*]	(-2,0);
+									\draw[]	(-2,0) node[left] {b} to [R, l_=20~$\Omega$]				(0,0);
+									\draw[]	(0,0) to [C, l_=$-$j3.9~$\Omega$, -*]						(2,0) node[right] {c};
+									\draw[]	(0,2.828) to [L, l^=~~~j13.4~$\Omega$, -*]					(2,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<figure>
+  						<caption></caption>
+  						<image width="50%" xml:id="ch8-equivalent-deltawye-exercise2-answer">
+    						<shortdescription>Wye arrangement of impedances. Za=4.04-j0.67ohm. Zb=-2.17-j5.84ohm. Zc=4.70+j12.6ohm.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2) node[above] {a} to [generic, l_=4.04$-$j0.67~$\Omega$, o-*]	(0,0);
+									\draw[]	(0,0) to [generic, l_=$-$2.17$-$j5.84~$\Omega$~~~~~~~~~~~~, -o]	(-1.414,-1.414) node[below left] {b};
+									\draw[]	(0,0) to [generic, l^=~~~~~~~~~~~~4.70+j12.6~$\Omega$, -o]	(1.414, -1.414) node[below right] {c};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-delta-wye-za" />, <xref ref="ch8-delta-wye-zb" />, and <xref ref="ch8-delta-wye-zc" /> to calculate the wye impedances.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_a} \amp= \frac{(-j6.2~\Omega)(j13.4~\Omega)}{(-j6.2~\Omega)+(20-j3.9~\Omega)+(j13.4~\Omega)}</mrow>
+							<mrow>\amp= \frac{83.08~\Omega^2}{20+j3.3~\Omega}</mrow>
+							<mrow>\amp= 4.04-j0.67~\Omega</mrow>
+							<mrow>\vec{Z_b} \amp= \frac{(-j6.2~\Omega)(20-j3.9~\Omega)}{20+j3.3~\Omega}</mrow>
+							<mrow>\amp= -2.17-j5.84~\Omega</mrow>
+							<mrow>\vec{Z_c} \amp= \frac{(20-j3.9~\Omega)(j13.4~\Omega)}{20+j3.3~\Omega}</mrow>
+							<mrow>\amp= 4.70+j12.6~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch8-deltawye-exercise3">
+				<statement>
+					<p>Calculate the equivalent impedance between nodes a and b of the circuit shown in <xref ref="ch8-deltawye-exercise3" />.</p>
+					
+					<figure xml:id="equivalent-deltawye-exercise3-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-deltawye-exercise3" />.</caption>
+  						<image width="60%" xml:id="ch8-equivalent-deltawye-exercise3-diagram">
+    						<shortdescription>Circuit with two meshes and four nodes consisting of five impedances (6ohm, 4ohm, j5ohm, 9ohm, and -j3ohm). The 4ohm and 6ohm connect at node a. The 4ohm, j5ohm, and -j3ohm connect at node c. The 6ohm, j5ohm, and 9ohm connect at node d. The -j3ohm and 9ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]	++(right:1) to [R, l^=4~$\Omega$]	++(right:2.5);
+									\draw[]	(3.5,2.5) to [C, l_=$-$j3~$\Omega$, *-*]	++(down:2.5);
+									\draw[]	(3.5,2.5) to [L, l^=j5~$\Omega$]			++(right:2.5);
+									\draw[]	(6,2.5) to [R, l_=9~$\Omega$]				++(down:2.5);
+									\draw[]	(1,2.5) to [short, *-]	++(up:1.5) to [R, l^=6~$\Omega$]	++(right:5) to [short, -*]	++(down:1.5);
+									\draw[]	(0,0) node[left] {b} to [short, o-]			(6,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>2.86 - j2.17~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>A wye to delta transform will be done to solve this circuit. (A delta to wye transform can also be used. Feel free to try it out for extra practice.) The wye impedances are highlighted in red below, with the wye nodes labeled.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch8-deltawye-ex3-figure1">
+							<shortdescription>Circuit with two meshes and four nodes consisting of five impedances (6ohm, 4ohm, j5ohm, 9ohm, and -j3ohm). The 4ohm and 6ohm connect at node a. The 4ohm, j5ohm, and -j3ohm connect at node c. The 6ohm, j5ohm, and 9ohm connect at node d. The -j3ohm and 9ohm connect at node b. The equivalent impedance is measured between nodes a and b. The 4ohm, j5ohm, and -j3ohm impedances are highlighted in red.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]	++(right:1);
+									\draw[red]	(1,2.5) node[below] {A} to [R, l^=4~$\Omega$, color=red]	++(right:2.5);
+									\draw[red]	(3.5,2.5) to [C, l_=$-$j3~$\Omega$, *-*, color=red]	++(down:2.5) node[below] {B};
+									\draw[red]	(3.5,2.5) to [L, l^=j5~$\Omega$, color=red]		++(right:2.5) node[right] {C};
+									\draw[]	(6,2.5) to [R, l_=9~$\Omega$]			++(down:2.5);
+									\draw[]	(1,2.5) to [short, *-]	++(up:1.5) to [R, l^=6~$\Omega$]		++(right:5) to [short, -*]	++(down:1.5);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(6,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use <xref ref="ch8-delta-wye-z1" />, <xref ref="ch8-delta-wye-z2" />, and <xref ref="ch8-delta-wye-z3" /> to calculate the delta impedances.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= \frac{(4~\Omega)(-j3~\Omega)+(-j3~\Omega)(j5~\Omega)+(4~\Omega)(j5~\Omega)}{j5~\Omega}</mrow>
+							<mrow>\amp= \frac{15 + j8~\Omega}{j5~\Omega}</mrow>
+							<mrow>\amp= 1.6 - j3~\Omega</mrow>
+							<mrow>\vec{Z_2} \amp= \frac{15 + j8~\Omega}{4~\Omega}</mrow>
+							<mrow>\amp= 3.75 + j2~\Omega</mrow>
+							<mrow>\vec{Z_3} \amp= \frac{15 + j8~\Omega}{-j3~\Omega}</mrow>
+							<mrow>\amp= -2.6667 + j5~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch8-deltawye-ex3-figure2">
+							<shortdescription>Circuit with three meshes and three nodes consisting of five impedances (6ohm, -2.67+j5ohm, 3.75+j2ohm, 9ohm, and 1.6-j3ohm). The 1.6-j3ohm, -2.67+j5ohm, and 6ohm connect at node a. The 6ohm, -2.67+j5ohm, 3.75+j2ohm, and 9ohm connect at node c. The 1.6-j3ohm, 3.75+j2ohm, and 9ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]	++(right:1);
+									\draw[]	(1,2.5) node[below] {A} to [generic, l^=$-$2.67+j5~$\Omega$]	++(right:5) node[right] {C};
+									\draw[]	(1,2.5) to [generic, l_=1.6-j3~$\Omega$~~~~, *-*]	++(2.5,-2.5) node[below] {B};
+									\draw[]	(3.5,0) to [generic, l^=3.75+j2~$\Omega$~~~~~~]		++(2.5,2.5);
+									\draw[]	(6,2.5) to [R, l^=9~$\Omega$]			++(down:2.5);
+									\draw[]	(1,2.5) to [short, *-]	++(up:1.5) to [R, l^=6~$\Omega$]		++(right:5) to [short, -*]	++(down:1.5);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(6,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 9<nbsp />&#8486; resistor is connected in parallel with the 3.75+j2<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'} \amp= \frac{(9~\Omega)(3.75 + j2~\Omega)}{(9~\Omega)+(3.75 + j2~\Omega)}</mrow>
+							<mrow>\amp= 2.7996 + j0.9726~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>The 6<nbsp />&#8486; resistor is connected in parallel with the <minus />2.67+j5<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z''} \amp= \frac{(6~\Omega)(-2.6667 + j5~\Omega)}{(6~\Omega)+(-2.6667 + j5~\Omega)}</mrow>
+							<mrow>\amp= 2.6769 + j4.9846~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="40%" xml:id="ch8-deltawye-ex3-figure3">
+							<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (1.6-j3ohm, 2.86+j4.98ohm, and 2.8+j0.973ohm). The 1.6-j3ohm and 2.68+j4.98ohm connect at node a. The 2.68+j4.98ohm and 2.8+j0.973ohm connect at node c. The 1.6-j3ohm and 2.8+j0.973ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]				++(right:1.5);
+									\draw[]	(1.5,2.5) to [generic, l^=2.68+j4.98~$\Omega$]	++(right:3);
+									\draw[]	(1.5,2.5) to [generic, l_=1.6$-$j3~$\Omega$, *-*]		++(0,-2.5);
+									\draw[]	(4.5,2.5) to [generic, l_=2.8+j0.973~$\Omega$]	++(0,-2.5);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(4.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 2.68+j4.98<nbsp />&#8486; impedance is connected in series with the 2.8+j0.973<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'''} \amp= (2.7996 + j0.9726~\Omega) + (2.6769 + j4.9846~\Omega)</mrow>
+							<mrow>\amp= 5.4765 + j5.9572~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="40%" xml:id="ch8-deltawye-ex3-figure4">
+							<shortdescription>Circuit with two impedances (1.6-j3ohm and 5.48+j5.96ohm) connected in parallel between nodes a and b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]				++(right:1.5);
+									\draw[]	(1.5,2.5) to [short]								++(right:3);
+									\draw[]	(1.5,2.5) to [generic, l_=1.6$-$j3~$\Omega$, *-*]	++(0,-2.5);
+									\draw[]	(4.5,2.5) to [generic, l_=5.48+j5.96~$\Omega$]		++(0,-2.5);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(4.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 1.6<minus />j3<nbsp />&#8486; impedance is connected in parallel with the 5.48+j5.96<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{EQ}} \amp= \frac{(5.4765 + j5.9572~\Omega)(1.6 - j3~\Omega)}{(5.4765 + j5.9572~\Omega)+(1.6 - j3~\Omega)}</mrow>
+							<mrow>\amp= 2.86 - j2.17~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch8-deltawye-exercise4">
+				<statement>
+					<p>Calculate the equivalent impedance between nodes a and b of the circuit shown in <xref ref="equivalent-deltawye-exercise4-diagram" />. The frequency of operation is 10<nbsp />kHz.</p>
+					
+					<figure xml:id="equivalent-deltawye-exercise4-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-deltawye-exercise4" />.</caption>
+  						<image width="40%" xml:id="ch8-equivalent-deltawye-exercise4-diagram">
+    						<shortdescription>Circuit with two meshes and four nodes consisting of three resistors (220ohm, 470ohm, and 150ohm), one 100nF capacitor, and one 5mH inductor. The 220ohm and 100nF connect at node a. The 220ohm, 470ohm, and 5mH connect at node c. The 5mH, 100nF, and 150ohm connect at node d. The 470ohm and 150ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]			(4,5);
+									\draw[]	(1.5,5) to [R, l_=220~$\Omega$, *-]			(1.5,2.5);
+									\draw[]	(1.5,2.5) to [R, l_=470~$\Omega$, -*]		(1.5,0);
+									\draw[]	(1.5,2.5) to [L, l^=5~mH, *-*]				(4,2.5);
+									\draw[]	(4,5) to [C, l_=100~nF]						(4,2.5);
+									\draw[]	(4,2.5) to [R, l_=150~$\Omega$]				(4,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]			(4,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>149 - j134~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the impedance of the capacitor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi 10000)(100 \times 10^{-9})}</mrow>
+							<mrow>\amp= -j159.15~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the impedance of the inductor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_L} \amp= j(2\pi 1000)(0.005)</mrow>
+							<mrow>\amp= j314.16~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="40%" xml:id="ch8-deltawye-ex4-figure1">
+							<shortdescription>Circuit with two meshes and four nodes consisting of five impedances (220ohm, 470ohm, 150ohm, -j159ohm, and j314ohm). The 220ohm and -j159ohm connect at node a. The 220ohm, 470ohm, and j314ohm connect at node c. The j314ohm, -j159ohm, and 150ohm connect at node d. The 470ohm and 150ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]			(4,5);
+									\draw[]	(1.5,5) to [R, l_=220~$\Omega$, *-]			(1.5,2.5);
+									\draw[]	(1.5,2.5) to [R, l_=470~$\Omega$, -*]		(1.5,0);
+									\draw[]	(1.5,2.5) to [L, l^=j314~$\Omega$, *-*]		(4,2.5);
+									\draw[]	(4,5) to [C, l_=$-$j159~$\Omega$]			(4,2.5);
+									\draw[]	(4,2.5) to [R, l_=150~$\Omega$]				(4,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]			(4,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>A wye to delta transform will be done to solve this circuit. (A delta to wye transform can also be used. Feel free to try it out for extra practice.) The wye impedances are highlighted in red below, with the wye nodes labeled.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="40%" xml:id="ch8-deltawye-ex4-figure2">
+							<shortdescription>Circuit with two meshes and four nodes consisting of five impedances (220ohm, 470ohm, 150ohm, -j159ohm, and j314ohm). The 220ohm and -j159ohm connect at node a. The 220ohm, 470ohm, and j314ohm connect at node c. The j314ohm, -j159ohm, and 150ohm connect at node d. The 470ohm and 150ohm connect at node b. The equivalent impedance is measured between nodes a and b. The -j159ohm, j314ohm, and 150ohm impedances are highlighted in red.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]			(4,5);
+									\draw[]	(1.5,5) to [R, l_=220~$\Omega$, *-]			(1.5,2.5);
+									\draw[]	(1.5,2.5) to [R, l_=470~$\Omega$, -*]		(1.5,0);
+									\draw[red]	(1.5,2.5) node[left] {C} to [L, l^=j314~$\Omega$, *-*, color=red]	(4,2.5);
+									\draw[red]	(4,5) node[above] {A} to [C, l_=$-$j159~$\Omega$, color=red]	(4,2.5);
+									\draw[red]	(4,2.5) to [R, l_=150~$\Omega$, color=red]		(4,0) node[below] {B};
+									\draw[]	(0,0) node[left] {b} to [short, o-]			(4,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use <xref ref="ch8-delta-wye-z1" />, <xref ref="ch8-delta-wye-z2" />, and <xref ref="ch8-delta-wye-z3" /> to calculate the delta impedances.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= \frac{(150~\Omega)(-j159~\Omega)+(150~\Omega)(j314~\Omega)+(-j159~\Omega)(j314~\Omega)}{j314~\Omega}</mrow>
+							<mrow>\amp= \frac{50000 + j23251~\Omega}{j314~\Omega}</mrow>
+							<mrow>\amp= 74.009 - j159.15~\Omega</mrow>
+							<mrow>\vec{Z_2} \amp= \frac{50000 + j23251~\Omega}{-j159~\Omega}</mrow>
+							<mrow>\amp= -146.09 + j314.16~\Omega</mrow>
+							<mrow>\vec{Z_3} \amp= \frac{50000 + j23251~\Omega}{}</mrow>
+							<mrow>\amp= 333.33 + j155~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex4-figure3">
+							<shortdescription>Circuit with three meshes and three nodes consisting of five impedances (220ohm, 47ohm, 333+j155ohm, -146+j314ohm, and 74-j159ohm). The 220ohm, 333+j155ohm, and 74-j159ohm connect at node a. The 470ohm and -146+j314ohm connect at node c. The 470ohm, -146+j314ohm, and 74-j159ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\ctikzset{label/align = rotate}
+									\draw[]	(0,5.5) node[left] {a} to [short, o-]					(5,5.5);
+									\draw[]	(1.5,5.5) to [R, l_=220~$\Omega$, *-]					(1.5,2.75);
+									\draw[]	(1.5,2.75) to [R, l_=470~$\Omega$, -*]					(1.5,0);
+									\draw[]	(1.5,2.75) to [generic, l_=333+j155~$\Omega$, *-*]		++(3.5,2.75);
+									\draw[]	(5,5.5) to [generic, l^=74$-$j159~$\Omega$, *-*]		(5,0);
+									\draw[]	(1.5,2.75) to [generic, l^=$-$146+j314~$\Omega$]		++(3.5,-2.75);
+									\draw[]	(0,0) node[left] {b} to [short, o-]						(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 220<nbsp />&#8486; resistor is connected in parallel with the 333.33+j155<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'} \amp= \frac{(220~\Omega)(333.33 + j155~\Omega)}{(220~\Omega)+(333.33 + j155~\Omega)}</mrow>
+							<mrow>\amp= 138.89 + j22.720~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>The 470<nbsp />&#8486; resistor is connected in parallel with the <minus />146.09+j314.16<nbsp />&#8486; impedance.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z''} \amp= \frac{(470~\Omega)(-146.09 + j314.16~\Omega)}{(470~\Omega)+(-146.09 + j314.16~\Omega)}</mrow>
+							<mrow>\amp= 118.59 + j340.83~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex4-figure4">
+							<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (139+j22.7ohm, 119+j341ohm, and 74-j159ohm). The 139+j22.7ohm and 74-j159ohm connect at node a. The 139+j22.7ohm and 119+j341ohm connect at node c. The 119+j341ohm and 74-j159ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]					(5.5,5);
+									\draw[]	(2.5,5) to [generic, l_=139+j22.7~$\Omega$, *-]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, l_=119+j341~$\Omega$, -*]	(2.5,0);
+									\draw[]	(5.5,5) to [generic, l_=74$-$j159~$\Omega$]			(5.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(5.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 139+j22.7<nbsp />&#8486; impedance is connected in series with the 119+j341<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'''} \amp= (138.89 + j22.720~\Omega) + (118.59 + j340.83~\Omega)</mrow>
+							<mrow>\amp= 257.49 + j363.55~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex4-figure5">
+							<shortdescription>Circuit with to impedances (257+j364ohm and 74-j159ohm) connected in parallel between nodes a and b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]					(5.75,2.5);
+									\draw[]	(2.5,2.5) to [generic, l_=257+j364~$\Omega$, *-*]		(2.5,0);
+									\draw[]	(5.75,2.5) to [generic, l_=74$-$j159~$\Omega$]			(5.75,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]						(5.75,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 257+j364<nbsp />&#8486; impedance is connected in parallel with the 74<minus />j159<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{EQ}} \amp= \frac{(257.49 + j363.55~\Omega)(74.009 - j159.15~\Omega)}{(257.49 + j363.55~\Omega)+(74.009 - j159.15~\Omega)}</mrow>
+							<mrow>\amp= 149 - j134~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch8-deltawye-exercise5">
+				<statement>
+					<p>Calculate the equivalent impedance between nodes a and b of the circuit shown in <xref ref="equivalent-deltawye-exercise5-diagram" />. The frequency of operation is 50<nbsp />Hz.</p>
+					
+					<figure xml:id="equivalent-deltawye-exercise5-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch8-deltawye-exercise5" />.</caption>
+  						<image width="50%" xml:id="ch8-equivalent-deltawye-exercise5-diagram">
+    						<shortdescription>Circuit with two meshes and six nodes consisting of three resistors (10ohm, 20ohm, and 40ohm), two capacitors (50uF and 60uF), and two inductors (60mH and 80mH). The 10ohm and 50uF connect at node a. The 10ohm and 60uF connect at node c. The 60uF, 20ohm, and 60mH connect at node d. The 50uF, 60mH, and 80mH connect at node e. The 20ohm, 40ohm, and 80mH connect at node f. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,6.5) node[left] {a} to [short, o-]				(5,6.5);
+									\draw[]	(2.5,6.5) to [R, l_=10~$\Omega$, *-]				(2.5,4.5);
+									\draw[]	(2.5,4.5) to [C, l_=60~$\mu$F]						(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=20~$\Omega$, -*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [L, l^=60~mH, *-*]						(5,2.5);
+									\draw[]	(5,6.5) to [C, l_=50~$\mu$F]						(5,2.5);
+									\draw[]	(5,2.5) to [L, l_=80~mH]							(5,0);
+									\draw[]	(0,0) node[left] {b} to [R, l^=40~$\Omega$, o-]		(2.5,0);
+									\draw[]	(2.5,0) to [short]									(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>53.1 -j22.9~\Omega</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the impedance of each capacitor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{C60}} \amp= \frac{1}{j(2\pi 50)(60 \times 10^{-6})}</mrow>
+							<mrow>\amp= -j53.0516~\Omega</mrow>
+							<mrow>\vec{Z_{C50}} \amp= \frac{1}{j(2\pi 50)(50 \times 10^{-6})}</mrow>
+							<mrow>\amp= -j63.6620~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the impedance of each inductor.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{L60}} \amp= j(2\pi 50)(0.06)</mrow>
+							<mrow>\amp= j18.8496~\Omega</mrow>
+							<mrow>\vec{Z_{L80}} \amp= j(2\pi 50)(0.08)</mrow>
+							<mrow>\amp= j25.1327~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex5-figure1">
+							<shortdescription>Circuit with two meshes and six nodes consisting of seven impedances (10ohm, 20ohm, 40ohm, -j53ohm, -j63.7ohm, j18.8ohm, and j25.1ohm). The 10ohm and -j63.7ohm connect at node a. The 10ohm and -j53ohm connect at node c. The -j53ohm, 20ohm, and j18.8ohm connect at node d. The -j63.7ohm, j18.8ohm, and j25.1ohm connect at node e. The 20ohm, 40ohm, and j25.1ohm connect at node f. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,6.5) node[left] {a} to [short, o-]				(5,6.5);
+									\draw[]	(2.5,6.5) to [R, l_=10~$\Omega$, *-]				(2.5,4.5);
+									\draw[]	(2.5,4.5) to [C, l_=$-$j53~$\Omega$]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=20~$\Omega$, -*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [L, l^=j18.8~$\Omega$, *-*]			(5,2.5);
+									\draw[]	(5,6.5) to [C, l_=$-$j63.7~$\Omega$]				(5,2.5);
+									\draw[]	(5,2.5) to [L, l_=j25.1~$\Omega$]					(5,0);
+									\draw[]	(0,0) node[left] {b} to [R, l^=40~$\Omega$, o-]		(2.5,0);
+									\draw[]	(2.5,0) to [short]									(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 10<nbsp />&#8486; resistor is connected in series with the <minus />j53<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{RC}} \amp= (10~\Omega) + (-j53.0516~\Omega)</mrow>
+							<mrow>\amp= 10 -j53.0516~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex5-figure2">
+							<shortdescription>Circuit with two meshes and five nodes consisting of six impedances (10-j53ohm, -j63.7ohm, j18.8ohm, j25.1ohm, 20ohm, and 40ohm). The 10-j53ohm and -j63.7ohm connect at node a. The 10-j53ohm, j18.8ohm, and 20ohm connect at node c. The -j63.7ohm, j18.8ohm, and j25.1ohm connect at node d. The 20ohm, 40ohm, and j25.1ohm connect at node e. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]					(5,5);
+									\draw[]	(2.5,5) to [generic, l_=10$-$j53~$\Omega$, *-]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=20~$\Omega$, -*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [L, l^=j18.8~$\Omega$, *-*]			(5,2.5);
+									\draw[]	(5,5) to [C, l_=$-$j63.7~$\Omega$]					(5,2.5);
+									\draw[]	(5,2.5) to [L, l_=j25.1~$\Omega$]					(5,0);
+									\draw[]	(0,0) node[left] {b} to [R, l^=40~$\Omega$, o-]		(2.5,0);
+									\draw[]	(2.5,0) to [short]									(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>A wye to delta transform will be done to solve this circuit. (A delta to wye transform can also be used. Feel free to try it out for extra practice.) The wye impedances are highlighted in red below, with the wye nodes labeled.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex5-figure3">
+							<shortdescription>Circuit with two meshes and five nodes consisting of six impedances (10-j53ohm, -j63.7ohm, j18.8ohm, j25.1ohm, 20ohm, and 40ohm). The 10-j53ohm and -j63.7ohm connect at node a. The 10-j53ohm, j18.8ohm, and 20ohm connect at node c. The -j63.7ohm, j18.8ohm, and j25.1ohm connect at node d. The 20ohm, 40ohm, and j25.1ohm connect at node e. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b. The -j63.7ohm, j18.8ohm, and j25.1ohm impedances are highlighted in red.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]					(5,5);
+									\draw[]	(2.5,5) to [generic, l_=10$-$j53~$\Omega$, *-]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=20~$\Omega$, -*]				(2.5,0);
+									\draw[red]	(2.5,2.5) node[left] {C} to [L, l^=j18.8~$\Omega$, *-*, color=red]	(5,2.5);
+									\draw[red]	(5,5) node[above] {A} to [C, l_=$-$j63.7~$\Omega$, color=red]		(5,2.5);
+									\draw[red]	(5,2.5) to [L, l_=j25.1~$\Omega$, color=red]	(5,0) node[below] {B};
+									\draw[]	(0,0) node[left] {b} to [R, l^=40~$\Omega$, o-]		(2.5,0);
+									\draw[]	(2.5,0) to [short]									(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use <xref ref="ch8-delta-wye-z1" />, <xref ref="ch8-delta-wye-z2" />, and <xref ref="ch8-delta-wye-z3" /> to calculate the delta impedances.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_1} \amp= \frac{(j18.8496~\Omega)(j25.1327~\Omega)+(j18.8496~\Omega)(-j63.6620~\Omega)+(j25.1327~\Omega)(-j63.6620~\Omega)}{j18.8496~\Omega}</mrow>
+							<mrow>\amp= \frac{2326.3~\Omega}{j18.8496~\Omega}</mrow>
+							<mrow>\amp= -j123.41~\Omega</mrow>
+							<mrow>\vec{Z_2} \amp= \frac{2326.3~\Omega}{-j63.6620~\Omega}</mrow>
+							<mrow>\amp= j36.5408~\Omega</mrow>
+							<mrow>\vec{Z_3} \amp= \frac{2326.3~\Omega}{j25.1327~\Omega}</mrow>
+							<mrow>\amp= -j92.5589~\Omega</mrow>
+						</md>
+					</p>
+
+
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch8-deltawye-ex5-figure4">
+							<shortdescription>Circuit with three meshes and four nodes consisting of six impedances (10-j53ohm, -j92.6ohm, -j123ohm, j36.5ohm, 20ohm, and 40ohm). The 10-j53ohm, -j92.6ohm, and -j123ohm connect at node a. The 10-j53ohm, -j92.6ohm, 20ohm, and j36.5ohm connect at node c. The -j123ohm, j36.5ohm, 20ohm, and 40ohm connect at node d. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,6.5) node[left] {a} to [short, o-]					(5.5,6.5);
+									\draw[]	(2.5,6.5) to [generic, l_=10$-$j53~$\Omega$, *-]		(2.5,4);
+									\draw[]	(2.5,4) to [R, l_=20~$\Omega$, -*]						(2.5,1.5);
+									\draw[]	(2.5,4) to [generic, l^=$-$j92.6~$\Omega$~~~~~, *-*]	(5.5,6.5);
+									\draw[]	(5.5,6.5) to [generic, l_=$-$j123~$\Omega$, *-*]		(5.5,1.5);
+									\draw[]	(5.5,1.5) to [generic, l^=j36.5~$\Omega$~~~~~]			(2.5,4);
+									\draw[]	(0,1.5) node[left] {b} to [R, l^=40~$\Omega$, o-]		(2.5,1.5);
+									\draw[]	(2.5,1.5) to [short]									(5.5,1.5);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 10<minus />j53.05<nbsp />&#8486; impedance is connected in parallel with the <minus />j92.56<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'} \amp= \frac{(10 -j53.0516~\Omega)(-j92.5589~\Omega)}{(10 -j53.0516~\Omega)+(-j92.5589~\Omega)}</mrow>
+							<mrow>\amp= 4.0217 -j33.9990~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>The 20<nbsp />&#8486; resistor is connected in parallel with the j36.54<nbsp />&#8486; impedance.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z''} \amp= \frac{(20~\Omega)(j36.5408~\Omega)}{(20~\Omega)+(j36.5408~\Omega)}</mrow>
+							<mrow>\amp= 15.3897 + j8.4233~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex5-figure5">
+							<shortdescription>Circuit with one mesh and four nodes consisting of four impedances (4-j34ohm, -j123ohm, 15.4+j8.42ohm, and 40ohm). The 4-j34ohm and -j123ohm connect at node a. The 4-j34ohm and 15.4+j8.42ohm connect at node c. The -j123ohm, 15.4+j8.42ohm, and 40ohm connect at node d. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[left] {a} to [short, o-]					(5,5);
+									\draw[]	(2.5,5) to [generic, l_=4$-$j34~$\Omega$, *-]		(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, l_=15.4+j8.42~$\Omega$, -*]	(2.5,0);
+									\draw[]	(5,5) to [generic, l_=$-$j123~$\Omega$]				(5,0);
+									\draw[]	(0,0) node[left] {b} to [R, l^=40~$\Omega$, o-]		(2.5,0);
+									\draw[]	(2.5,0) to [short]									(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 4<minus />j34<nbsp />&#8486; impedance is connected in series with the 15.4+j8.42<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'''} \amp= (4.0217 -j33.9990~\Omega) + (15.3897 + j8.4233~\Omega)</mrow>
+							<mrow>\amp= 19.4113 - j25.5758~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch8-deltawye-ex5-figure6">
+							<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (19.4-j25.6ohm, -j123ohm, and 40ohm). The 19.4-j25.6ohm and -j123ohm connect at node a. All three impedances connect at node c. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]						(5,2.5);
+									\draw[]	(2.5,2.5) to [generic, l_=19.4$-$j25.6~$\Omega$, *-*]		(2.5,0);
+									\draw[]	(5,2.5) to [generic, l_=$-$j123~$\Omega$]					(5,0);
+									\draw[]	(0,0) node[left] {b} to [R, l^=40~$\Omega$, o-]				(2.5,0);
+									\draw[]	(2.5,0) to [short]											(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 19.4<minus />j25.6<nbsp />&#8486; impedance is connected in parallel with the <minus />j123.41<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z''''} \amp= \frac{(19.4113 - j25.5758~\Omega)(-j123.41~\Omega)}{(19.4113 - j25.5758~\Omega)+(-j123.41~\Omega)}</mrow>
+							<mrow>\amp= 13.0966 - j22.8917~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="30%" xml:id="ch8-deltawye-ex5-figure7">
+							<shortdescription>Circuit with two impedances (13.1-j22.9ohm and 40ohm) connected in series between nodes a and b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[left] {a} to [short, o-]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [generic, l_=13.1$-$j22.9~$\Omega$]	(2.5,0);
+									\draw[]	(0,0) node[left] {b} to [R, l^=40~$\Omega$, o-]		(2.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>The 40<nbsp />&#8486; resistor is connected in series with the 13.1<minus />j22.89<nbsp />&#8486; impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{EQ}} \amp= (40~\Omega) + (13.0966 - j22.8917~\Omega)</mrow>
+							<mrow>\amp= 53.1 -j22.9~\Omega</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+	</exercises>
+</chapter>

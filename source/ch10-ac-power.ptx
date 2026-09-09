@@ -1,0 +1,2937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch10-acpower">
+	<title>AC Power</title>
+	
+	<introduction>
+
+		<p>The discussion of AC circuits continues with a focus on power. Reactive circuit elements (inductors and capacitors) require the introduction of new aspects of power that are not present in DC circuits.</p>
+		
+		<p>This chapter will require phasor analysis of circuits. Because we have already previously discussed this topic, examples will not be worked out in as much detail in this chapter. Refer back to <xref ref="ch8-phasors" /> and <xref ref="ch9-phasoranalysis" /> for more practice.</p>
+	
+  	</introduction>
+
+	<section xml:id="ch10-phase-rms">
+		<title>Phase and Root Mean Square (RMS)</title>
+
+		<p>Discussions about power require an understanding of the voltage and current characteristics of a circuit. In DC circuits, this analysis is relatively straightforward because voltages and currents do not vary with respect to time. Even in transient analysis, changes occur quickly and eventually return to a steady-state. This analysis becomes more difficult in AC circuits because elements do not settle down to one value; the sinusoidal nature of voltages and currents imply that values are continuously changing.</p>
+
+		<p>AC circuits may also have a <term>phase difference</term> between voltage and current signals. In other words: maximum current may arrive at the load slightly before maximum voltage, or maximum current may arrive at the load slightly after maximum voltage. This phase difference leads to <term>complex power</term>, which will be introduced in <xref ref="ch10-complexapparent" />. The phase difference is described in <xref ref="ch10-eq-power-phase" />, where <m>\phi_v</m> is the phase of the voltage and <m>\phi_i</m> is the phase of the current.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch10-eq-power-phase">\theta = \phi_v - \phi_i</md>
+		</p>
+
+		<p>Because time-varying signals are frequently plotted with respect to time, and not phase, the phase difference (in degrees) can be determined by calculating the time difference between subsequent peaks divided by the period of the wave (<m>T</m>), as defined in <xref ref="ch10-eq-power-phase-time" />. To calculate the phase difference in radians, multiply by <m>2\pi</m> instead of <m>360^\circ</m>.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch10-eq-power-phase-time">\theta = 360^\circ \left(\frac{t_{peak,voltage} - t_{peak,current}}{T}\right)</md>
+		</p>
+
+		<p><xref ref="leading-lagging-current-voltage-graph" /> shows graphs of two different voltage/current relationships measured in the load of a hypothetical circuit containing resistors, capacitors, and inductors.</p>
+		
+		<figure xml:id="leading-lagging-current-voltage-graph">
+  			<caption>Current-voltage signals for a lagging circuit (top) and a leading circuit (bottom).</caption>
+			<image width="100%" xml:id="ch10-leading-lagging-current-voltage-graph">
+				<shortdescription>Top: voltage and current are sinusoids, the peaks of voltage occur earlier in time than current every cycle. Bottom: voltage and current are sinusoids, the peaks of voltage occur later in time than current every cycle.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\begin{groupplot}[group style={group name=my plots, group size=1 by 2, vertical sep=0pt, xlabels at=edge bottom, xticklabels at=edge bottom,}, width=\linewidth, height=5cm, xlabel=$t$~(ms), xmin=0, xmax=50, ymin=-6, ymax=6]
+							\nextgroupplot[]
+								\addplot[thick, domain=0:50, samples=100] {5*cos(deg(2*pi*50*x/1000+30*pi/180))};
+								\addlegendentry{$v(t)$}
+								\addplot[thick, gray, domain=0:100, samples=100] {2*cos(deg(2*pi*50*x/1000-60*pi/180))};
+								\addplot[thick, dashed] coordinates {(18.33333,10) (18.3333,-10)};
+								\addplot[thick, dashed] coordinates {(23.33333,10) (23.3333,-10)};
+								\addlegendentry{$i(t)$}
+							\nextgroupplot[]
+								\addplot[thick, domain=0:50, samples=100] {5*cos(deg(2*pi*50*x/1000+30*pi/180))};
+								\addlegendentry{$v(t)$}
+								\addplot[thick, gray, domain=0:50, samples=100] {2*cos(deg(2*pi*50*x/1000+90*pi/180))};
+								\addlegendentry{$i(t)$}
+								\addplot[thick, dashed] coordinates {(18.33333,10) (18.3333,-10)};
+								\addplot[thick, dashed] coordinates {(15,10) (15,-10)};
+							\end{groupplot}
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>In the top graph, the voltage arrives at the load before current. In other words: the current <term>lags</term> the voltage. This is called a lagging circuit, and is caused by an inductive load. In the bottom graph, the voltage arrives at the load after current. In other words: the current <term>leads</term> the voltage. This is called a leading circuit, and is caused by a capacitive load.</p>
+
+		<p>So far, the amplitude of a wave (<m>V_m</m> for voltage and <m>I_m</m> for current) has been used to quantify sinusoidal signals. The amplitude defines the maximum displacement from equilibrium. The average value also provides useful information. However, a sinusoidal wave with no DC offset has an average of zero. This means that a normal average does not provide any useful information about a sine or cosine wave. The concept of <term>root mean square</term> (RMS) value is used in AC circuits instead.</p>
+
+		<p>The root mean square definition for a periodic waveform (<m>f(t)</m>) is defined in <xref ref="ch10-eq-rms-periodic" />, where <m>T</m> is equal to the period of the waveform.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch10-eq-rms-periodic">f_{RMS} = \sqrt{\frac{1}{T}\int_0^T f^2(t)\,dt}</md>
+		</p>
+
+		<p>The RMS value for a sinusoidal wave is equal to the amplitude divided by the square root of two, shown in <xref ref="ch10-eq-rms-of-sinusoid" />. (This equation will not be derived in this textbook.) All of the voltage terms can be replaced with current terms to find the RMS value of a sinusoidal current.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch10-eq-rms-of-sinusoid">V_{RMS} = \frac{V_m}{\sqrt{2}}</md>
+		</p>
+
+		<p>Triangular and ramp waves have RMS values defined in <xref ref="ch10-eq-rms-of-triangle" />. (This value will not be derived in this textbook.)</p>
+		
+		<p>
+			<md number="yes" xml:id="ch10-eq-rms-of-triangle">V_{RMS} = \frac{V_m}{\sqrt{3}}</md>
+		</p>
+
+		<p>As will be seen in the remainder of this chapter, RMS values will be used in calculations of complex power in AC circuits. These values will be noted with a subscript on the variable names, and with the term RMS used in conjunction with the unit. In other words, <m>V_{RMS} = 10~\textrm{VRMS}</m> will be used to define an RMS voltage of 10<nbsp />V.</p>
+
+	</section>
+
+	<section xml:id="ch10-ac-power">
+		<title>AC Power</title>
+
+		<introduction>
+
+			<p>Power, which was initially described in <xref ref="ch1-power" />, is consumed in resistors. Capacitors and inductors do not consume power but store and release it. This leads to many aspects of power in reactive AC circuits that are not experienced in DC circuits. Therefore, there are many new quantities that must be defined to understand these phenomena.</p>
+
+		</introduction>
+
+		<subsection xml:id="ch10-instantaneous">
+			<title>Instantaneous Power</title>
+	
+			<p>Instantaneous power is defined in <xref ref="ohmspower1" />. Instantaneous power in a circuit can be calculated using the time-varying forms of voltage and current and multiplying them together. The instantaneous power equation, rewritten in terms of cosine form for voltage and current, is shown in <xref ref="ch10-eq-instantaneous-power-ac" /> and derived in <xref ref="ch10-instantaneous-power-derivation" />. (Note, the derivation uses a product-to-sum trigonometric identity to derive the result.)</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-instantaneous-power-ac">p(t) = V_{RMS}I_{RMS} \left[ \cos{\theta} + \cos{(2\omega t + \phi_v + \phi_i)} \right]</md>
+			</p>
+
+			<proof xml:id="ch10-instantaneous-power-derivation">
+				<p>
+					<md>
+						<mrow>v(t) \amp= V_m\cos{(\omega t + \phi_v)}</mrow>
+						<mrow>i(t) \amp= I_m\cos{(\omega t + \phi_i)}</mrow>
+						<mrow>p(t) \amp= [V_m\cos{(\omega t + \phi_v)}][I_m\cos{(\omega t + \phi_i)}]</mrow>
+						<mrow>\amp= \frac{V_mI_m}{2} \left[ \cos{\theta} + \cos{(2\omega t + \phi_v + \phi_i)} \right]</mrow>
+						<mrow>\amp= V_{RMS}I_{RMS} \left[ \cos{\theta} + \cos{(2\omega t + \phi_v + \phi_i)} \right]</mrow>
+					</md>
+				</p>
+			</proof>
+
+  		</subsection>
+
+		<subsection xml:id="ch10-complexapparent">
+			<title>Complex and Apparent Power</title>
+	
+			<p><term>Complex power</term> represents the complex form of power consumed by any particular element (or collection of elements) in a circuit. The unit used for complex power is VA (volt-amp), which is equivalent to a W (watt). The different unit name is meant to distinguish complex power from average power.</p>
+			
+			<p>In Cartesian form, complex power is defined in <xref ref="ch10-eq-complex-power-cartesian" />, where <m>P</m> is the average power (introduced in <xref ref="ch10-average" />) and <m>Q</m> is the reactive power (introduced in <xref ref="ch10-reactive" />).</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-complex-power-cartesian">\vec{S} = P + jQ</md>
+			</p>
+
+			<remark>
+				<title>Summary of complex power</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>\vec{S}</m></p></li>
+						<li><p>Unit: VA (volt-amp)</p></li>
+					</ul>
+				</p>
+			</remark>
+				
+			<p>Complex power is defined in <xref ref="ch10-complex-power-vi" /> and derived in <xref ref="ch10-complex-power-vi-derivation" />, where the <m>^*</m> symbol denotes the complex conjugate.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-complex-power-vi">\vec{S} = \vec{V_{RMS}}\vec{I_{RMS}^*}</md>
+			</p>
+
+			<proof xml:id="ch10-complex-power-vi-derivation">
+				<p>
+					<md>
+						<mrow>\vec{S} \amp= V_{RMS}I_{RMS}\textrm{e}^{j\theta}</mrow>
+						<mrow>\amp= V_{RMS}I_{RMS}\textrm{e}^{j(\phi_v-\phi_i)}</mrow>
+						<mrow>\amp= V_{RMS}\textrm{e}^{j\phi_v}I_{RMS}\textrm{e}^{-j\phi_i}</mrow>
+						<mrow>\amp= \vec{V_{RMS}}\vec{I_{RMS}^*}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p><xref ref="ch10-complex-power-vi" /> can be unwieldy to use if only current is known and not voltage; or if only voltage is known and not current. If the voltage is known (but not the current), the equation can be rewritten in terms of only voltage and impedance. This method uses the complex version of Ohm's law and is shown in <xref ref="ch10-complex-power-voltage" /> and derived in <xref ref="ch10-complex-power-voltage-derivation" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-complex-power-voltage">\vec{S} = \frac{|\vec{V_{RMS}}|^2\vec{Z}}{|\vec{Z}|^2}</md>
+			</p>
+
+			<proof xml:id="ch10-complex-power-voltage-derivation">
+				<p>
+					<md>
+						<mrow>\vec{I_{RMS}^*} \amp= \left(\frac{\vec{V_{RMS}}}{\vec{Z}}\right)^*</mrow>
+						<mrow>\vec{S} \amp= \frac{\vec{V_{RMS}}\vec{V_{RMS}^*}}{\vec{Z^*}}</mrow>
+						<mrow>\amp= \frac{|\vec{V_{RMS}}|^2}{\vec{Z^*}}</mrow>
+						<mrow>\amp= \frac{|\vec{V_{RMS}}|^2\vec{Z}}{\vec{Z}\vec{Z^*}}</mrow>
+						<mrow>\amp= \frac{|\vec{V_{RMS}}|^2\vec{Z}}{|\vec{Z}|^2}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>If the current is known (but not the voltage), the equation can be rewritten as shown in <xref ref="ch10-complex-power-current" /> (and derived in <xref ref="ch10-complex-power-current-derivation" />) in terms of only current and impedance.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-complex-power-current">\vec{S} = |\vec{I_{RMS}}|^2\vec{Z}</md>
+			</p>
+
+			<proof xml:id="ch10-complex-power-current-derivation">
+				<p>
+					<md>
+						<mrow>\vec{V_{RMS}} \amp= \vec{I_{RMS}}\vec{Z}</mrow>
+						<mrow>\vec{S} \amp= \vec{I_{RMS}}\vec{I_{RMS}^*}\vec{Z}</mrow>
+						<mrow>\amp= |\vec{I_{RMS}}|^2\vec{Z}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>The magnitude of the complex power is known as <term>apparent power</term>. It is also measured with a unit of VA. It is defined in <xref ref="ch10-eq-apparent-power" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-apparent-power">|\vec{S}| = V_{RMS}I_{RMS} = \sqrt{P^2 + Q^2}</md>
+			</p>
+
+			<remark>
+				<title>Summary of apparent power</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>|\vec{S}|</m></p></li>
+						<li><p>Unit: VA (volt-amp)</p></li>
+					</ul>
+				</p>
+			</remark>
+
+  		</subsection>
+
+		<subsection xml:id="ch10-average">
+			<title>Average Power</title>
+	
+			<p><term>Average power</term> is the average of the instantaneous power (defined in <xref ref="ch10-eq-instantaneous-power-ac" />) over one period. Average power has a unit of W (watt). Average power is equal to the real part of the complex power. The equation for average power is provided in <xref ref="ch10-eq-average-power" />, where <m>\theta</m> is defined in <xref ref="ch10-eq-power-phase" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-average-power">P = V_{RMS}I_{RMS}\cos{\theta}</md>
+			</p>
+
+			<remark>
+				<title>Summary of average power</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>P</m></p></li>
+						<li><p>Unit: W (watt)</p></li>
+					</ul>
+				</p>
+			</remark>
+
+			<p>Average power is the component of complex power that does useful work in a circuit. It is generally advantageous to maximize average power and reduce reactive power as much as possible.</p>
+
+  		</subsection>
+
+		<subsection xml:id="ch10-reactive">
+			<title>Reactive Power</title>
+	
+			<p><term>Reactive power</term> can be conceptually understood as energy that oscillates between the load and any reactive (inductive or capacitive) components without doing any useful work in a circuit. As previously stated, capacitors and inductors do not consume or generate power; they store and release power. This means that capacitors and inductors are incapable of doing useful work. They will, however, move power around in a circuit. Because reactive power does not contribute any useful work to a circuit (but is included in electricity utility bills), it is generally advantageous to minimize it as much as possible.</p>
+				
+			<p>Reactive power is measured with a unit of VAR (volt-amp reactive). This unit is equivalent to the watt, but is used to differentiate reactive, complex, and average power.</p>
+			
+			<remark>
+				<title>Summary of reactive power</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>Q</m></p></li>
+						<li><p>Unit: VAR (volt-amp reactive)</p></li>
+					</ul>
+				</p>
+			</remark>
+				
+			<p>Reactive power is equal to the imaginary part of the complex power. Reactive power is defined in <xref ref="ch10-eq-reactive-power" />, where <m>\theta</m> is defined in <xref ref="ch10-eq-power-phase" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-reactive-power">Q = V_{RMS}I_{RMS}\sin{\theta}</md>
+			</p>
+
+  		</subsection>
+
+		<subsection xml:id="ch10-powertriangle">
+			<title>Power Triangle and Power Factor</title>
+	
+			<p>The power triangle is used to quantify the complex nature of power consumption. The real part of the power triangle, <m>P</m>, is the average power (measured in W). The imaginary part of the power triangle, <m>Q</m>, is the reactive power (measured in VAR). The sum of these two components is the complex power, <m>\vec{S}</m> (measured in VA). This power triangle is depicted in <xref ref="power-triangle-image" />.</p>
+
+			<figure xml:id="power-triangle-image">
+  				<caption>A power triangle is used to quantify the complex nature of AC power. The real part (<m>P</m>) is equal to the average power while the imaginary part (<m>Q</m>) is equal to the reactive power.</caption>
+				<image width="60%" xml:id="ch10-power-triangle-image">
+					<shortdescription>Cartesian coordinate system. Vector S is defined as P (real) + jQ (imaginary). This vector forms angle theta with the real (x) axis.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[step=0.5, help lines, color=gray!50] (-3,-3) grid (3,3);
+							\draw[thick] (-3,0)--(3,0) node[right] {real};
+							\draw[thick] (0,-3)--(0,3) node[above] {imaginary};
+							\draw[thick, -Stealth] (0,0) -- (1.5,2.5) node[above] {$\vec{S} = P + jQ$};
+							\draw[dashed] (1.5,2.5) --++ (down:2.5) node[below] {$P$};
+							\draw[dashed] (1.5,2.5) --++ (left:1.5) node[left] {$Q$};
+							\node[above right] at (0.25,0) {$\theta$};
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>As previously mentioned, the unit for each of the quantities is different (W for <m>P</m>, VAR for <m>Q</m>, VA for <m>\vec{S}</m> and <m>|\vec{S}|</m>). The unit for power (regardless of the type of power) is the watt. However, to clearly differentiate reactive power from average power from complex and apparent power, a different unit is used. VA (the unit for complex and apparent power) stands for volt-amp. VAR (the unit for reactive power) stands for volt-amp reactive. This means that you can look at a number and know exactly what type of power it corresponds to. 28<nbsp />VAR would be a measure of complex power, whereas 28<nbsp />W would be a measure of average power.</p>
+			
+			<p>The angle of the complex power (measured in relation to the positive real axis, as described in <xref ref="ch8-phasorarithmetic" />) can be used to quantify how much of the power is real vs. reactive. The quantity used to describe this is called the <term>power factor</term> and is defined in <xref ref="ch10-eq-power-factor" />. Note that <m>\theta</m> is the same angle that was calculated in <xref ref="ch10-eq-power-phase" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-power-factor">pf = \cos{\theta} = \frac{P}{|\vec{S}|}</md>
+			</p>
+			
+			<remark>
+				<title>Summary of power factor</title>
+
+				<p>
+					<ul>
+						<li><p>Symbol: <m>pf</m></p></li>
+						<li><p>Unit: none</p></li>
+					</ul>
+				</p>
+			</remark>
+
+			<p>Because <m>|\vec{S}|</m> (the hypotenuse of the power triangle), can be calculated using the Pythagorean theorem, another equation for power factor in terms of only variables <m>P</m> and <m>Q</m> is given in <xref ref="ch10-power-factor-p-q-only" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-power-factor-p-q-only">pf = \frac{P}{\sqrt{P^2+Q^2}}</md>
+			</p>
+
+			<p>Due to the relationship between the power triangle and impedance triangle (introduced below), power factor can also be expressed in terms of resistance (<m>R</m>) and reactance (<m>X</m>) of a circuit, as shown in <xref ref="ch10-power-factor-r-x-only" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-power-factor-r-x-only">pf = \frac{R}{\sqrt{R^2+X^2}}</md>
+			</p>
+
+			<p>Power factor and reactive power are related as shown in <xref ref="ch10-eq-power-factor-reactive-power" /> and derived in <xref ref="ch10-power-factor-reactive-power-derivation" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-power-factor-reactive-power">Q = \sqrt{|\vec{S}|^2\left(1 - pf^2\right)}</md>
+			</p>
+
+			<proof xml:id="ch10-power-factor-reactive-power-derivation">
+				<p>
+					<md>
+						<mrow>\cos^2 \theta + \sin^2 \theta \amp= 1</mrow>
+						<mrow>pf^2 + \left(\frac{Q}{|\vec{S}|}\right)^2 \amp= 1</mrow>
+						<mrow>\frac{Q^2}{|\vec{S}|^2} \amp= 1 - pf^2</mrow>
+						<mrow>Q^2 \amp= |\vec{S}|^2\left(1 - pf^2\right)</mrow>
+						<mrow>Q \amp= \sqrt{|\vec{S}|^2\left(1 - pf^2\right)}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>Power factor relates to how efficiently a circuit delivers useable power to a load. The closer the power factor is to one, the more the power is real. The closer the power factor is to zero, the more the power is reactive. Reactive power does no useful work in a circuit, but still uses energy (and thus costs money when connected to the power grid).</p>
+
+			<p>Because complex power is a scalar multiple of impedance (which can be deduced from inspecting either <xref ref="ch10-complex-power-voltage" /> or <xref ref="ch10-complex-power-current" />), an <term>impedance triangle</term> can also be drawn. The impedance triangle will be a similar triangle to the power triangle. Therefore, knowing resistance, reactance, and/or impedance of a circuit can also be used to calculate power factor. An impedance triangle is shown in <xref ref="impedance-triangle-image" />.</p>
+			
+			<figure xml:id="impedance-triangle-image">
+  				<caption>An impedance triangle can be used to quantify resistance and reactance. The real part (<m>R</m>) is equal to the resistance while the imaginary part (<m>X</m>) is equal to the reactance.</caption>
+				<image width="60%" xml:id="ch10-impedance-triangle-image">
+					<shortdescription>Cartesian coordinate system. Vector Z is defined as R (real) + jX (imaginary). This vector forms angle theta with the real (x) axis.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[step=0.5, help lines, color=gray!50] (-3,-3) grid (3,3);
+							\draw[thick] (-3,0)--(3,0) node[right] {real};
+							\draw[thick] (0,-3)--(0,3) node[above] {imaginary};
+							\draw[thick, -Stealth] (0,0) -- (2,2) node[above] {$\vec{Z} = R + jX$};
+							\draw[dashed] (2,2) --++ (down:2) node[below] {$R$};
+							\draw[dashed] (2,2) --++ (left:2) node[left] {$X$};
+							\node[above right] at (0.25,0) {$\theta$};
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<example>
+				<title>Calculating complex power from time-varying voltage and current</title>
+				
+				<statement>
+					<p>Calculate the complex power consumed by a load characterized by the following voltage and current waveforms.</p>
+					
+					<p>
+						<md>
+							<mrow>v(t) \amp= 100~\textrm{V}~\cos{(2\pi60t + 120\pi/180)}</mrow>
+							<mrow>i(t) \amp= 8~\textrm{A}~\cos{(2\pi60t + 60\pi/180)}</mrow>
+						</md>
+					</p>
+
+					<p>Calculate the phase offset between the voltage and current using <xref ref="ch10-eq-power-phase" />.</p>
+					
+					<p>
+						<md>
+							<mrow>\theta \amp= 120^\circ - 60^\circ</mrow>
+							<mrow>\amp= 60^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Calculate the RMS value of both the voltage and the current.</p>
+					
+					<p>
+						<md>
+							<mrow>|\vec{V}| \amp= \frac{100}{\sqrt{2}}~\textrm{VRMS}</mrow>
+							<mrow>\amp= 70.71~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I}| \amp= \frac{8}{\sqrt{2}}~\textrm{ARMS}</mrow>
+							<mrow>\amp= 5.66~\textrm{ARMS}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-average-power" /> to calculate the real power.</p>
+					
+					<p>
+						<md>
+							<mrow>P \amp= (70.71~\textrm{VRMS})(5.66~\textrm{ARMS})\cos{60^\circ}</mrow>
+							<mrow>\amp= 200~\textrm{W}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-reactive-power" /> to calculate the reactive power.</p>
+					
+					<p>
+						<md>
+							<mrow>Q \amp= (70.71~\textrm{VRMS})(5.66~\textrm{ARMS})\sin{60^\circ}</mrow>
+							<mrow>\amp= 346.41~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-complex-power-cartesian" /> to determine the complex power.</p>
+					
+					<p>
+						<md>\vec{S} = 200 + j346~\textrm{VA}</md>
+					</p>
+				</statement>
+			</example>
+
+			<example>
+				<title>Calculating complex power from average power and power factor</title>
+				
+				<statement>
+					<p>Calculate the complex power consumed by a load characterized by an average power consumption of 1630<nbsp />W and a lagging power factor of 0.862.</p>
+					
+					<p>Use <xref ref="ch10-eq-power-factor" /> to calculate the apparent power.</p>
+					
+					<p>
+						<md>
+							<mrow>|\vec{S}| \amp= \frac{1630~\textrm{W}}{0.862}</mrow>
+							<mrow>\amp= 1890.95~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-power-factor-reactive-power" /> to calculate the reactive power. It must be positive because the power factor is lagging.</p>
+					
+					<p>
+						<md>
+							<mrow>Q \amp= |\vec{S}|\sqrt{1-pf^2}</mrow>
+							<mrow>\amp= (1890.95~\textrm{VA})\sqrt{1-0.862^2}</mrow>
+							<mrow>\amp= 958.54~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>The complex power can now be written out in terms of the average and reactive power.</p>
+					
+					<p>
+						<md>\vec{S} = 1890 + j959~\textrm{VA}</md>
+					</p>
+				</statement>
+			</example>
+
+			<example>
+				<title>Calculating complex power from a circuit diagram</title>
+				
+				<statement>
+					<p>Calculate the complex power consumed by the following circuit. The source voltage is equal to <m>20~\textrm{VRMS}~\cos(2\pi 500t - 30\pi / 180)</m>.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="60%" xml:id="ch10-complex-power-circuit-diagram-example-figure1">
+							<shortdescription>Circuit with two meshes and three nodes consisting of voltage source Vac, 2uF capacitor, 120ohm resistor, and 20mH inductor. The high-potential end of Vac, 2uF, and 120ohm connect at node a. The 120ohm and 20mH connect at node b. The low-potential end of Vac connects to the 2uF and 20mH at node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[below left] {+} to [sV, l_=$v_{AC}(t)$]		(0,0);
+									\draw[]	(0,5) to [short]										(5,5);
+									\draw[]	(3,5) to [C, l_=2~$\mu$F, *-*]							(3,0);
+									\draw[]	(0,0) to [short]										(5,0);
+									\draw[]	(5,5) to [R, l_=120~$\Omega$]							(5,2.5);
+									\draw[]	(5,2.5) to [L, l_=20~mH]								(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>First, phasor transform the circuit. The load impedance is equal to the impedance of the capacitor in parallel with the series combination of the resistor and inductor.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="60%" xml:id="ch10-complex-power-circuit-diagram-example-figure2">
+							<shortdescription>Circuit consisting of (17.32-j10 VRMS) voltage source connected in series with (128.37-j56.11 ohm) impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=17.32-j10~VRMS]		(0,0);
+									\draw[]	(0,2.5) to [short]											(3.25,2.5);
+									\draw[]	(3.25,2.5) to [generic, l_=128.37$-$j56.11~$\Omega$]		(3.25,0);
+									\draw[]	(0,0) to [short]											(3.25,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use Ohm's law to calculate the current through the circuit.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I}\amp= \frac{17.32-j10~\textrm{VRMS}}{128.37-j56.11~\Omega}</mrow>
+							<mrow>\amp= 141.87-j15.89~\textrm{mARMS}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-vi" /> to calculate the complex power. </p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S} \amp= (17.32-j10~\textrm{VRMS})(141.87+j15.89~\textrm{mARMS})</mrow>
+							<mrow>\amp= 2620 - j1140~\textrm{mVA}</mrow>
+						</md>
+					</p>
+				</statement>
+			</example>
+
+  		</subsection>
+
+	</section>
+
+	<section xml:id="ch10-maxpower">
+		<title>Maximum Power Transfer</title>
+
+		<p>The theorem of maximum power transfer states that the maximum amount of power will be delivered to the load when the impedance of the load is equal to the complex conjugate of the Th&#233;venin equivalent impedance of the circuit. The circuit shown in <xref ref="maximum-power-diagram-ac" /> will be used to demonstrate this theorem.</p>
+		
+		<figure xml:id="maximum-power-diagram-ac">
+  			<caption>Circuit diagram used to demonstrate the theorem of maximum power transfer for AC circuits.</caption>
+			<image width="50%" xml:id="ch10-maximum-power-diagram-ac">
+				<shortdescription>Circuit consisting of Thevenin equivalent circuit with voltage Vth and impedance Zth connected in series with a load impedance Zload. Current I flows through the circuit.</shortdescription>
+				<latex-image>
+					\begin{tikzpicture}[font=\sffamily]
+						\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$\vec{V_{TH}}$]	(0,0);
+						\draw[]	(0,2.5) to [generic, l^=$\vec{Z_{TH}}$, i^=$\vec{I}$]	(2.5,2.5) to [short, -o] ++(right:0.5) to [short, o-] ++(right:0.5);
+						\draw[]	(3.5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]				(3.5,0);
+						\draw[]	(0,0) to [short, -o]									(3,0) to [short, o-] ++(right:0.5);
+					\end{tikzpicture}
+				</latex-image>
+  			</image>
+		</figure>
+
+		<p>To determine the impedance of the load (<m>\vec{Z_{LOAD}}</m>) that will lead to maximum power transfer, the power consumed by the load can be calculated using <xref ref="ch10-complex-power-vi" />. This is shown in <xref ref="ch10-eq-maximum-power-transfer" /> and derived in <xref ref="ch10-maximum-power-transfer-derivation" />.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch10-eq-maximum-power-transfer">\vec{S_{LOAD}} = \frac{|\vec{V_{TH,RMS}}|^2\vec{Z_{LOAD}}}{|\vec{Z_{TH}}+\vec{Z_{LOAD}}|^2}</md>
+		</p>
+
+		<proof xml:id="ch10-maximum-power-transfer-derivation">
+			<p>
+				<md>
+					<mrow>\vec{I_{LOAD,RMS}} \amp= \frac{\vec{V_{TH,RMS}}}{\vec{Z_{TH}}+\vec{Z_{LOAD}}}</mrow>
+					<mrow>\vec{V_{LOAD,RMS}} \amp= \vec{V_{TH,RMS}} \left( \frac{\vec{Z_{LOAD}}}{\vec{Z_{TH}}+\vec{Z_{LOAD}}} \right)</mrow>
+					<mrow>\vec{S_{LOAD}} \amp= \vec{V_{LOAD,RMS}}\vec{I^*_{LOAD,RMS}}</mrow>
+					<mrow>\amp= \vec{V_{TH,RMS}} \left( \frac{\vec{Z_{LOAD}}}{\vec{Z_{TH}}+\vec{Z_{LOAD}}} \right)\left( \frac{\vec{V^*_{TH,RMS}}}{(\vec{Z_{TH}}+\vec{Z_{LOAD}})^*}\right)</mrow>
+					<mrow>\amp= \frac{|\vec{V_{TH,RMS}}|^2\vec{Z_{LOAD}}}{|\vec{Z_{TH}}+\vec{Z_{LOAD}}|^2}</mrow>
+				</md>
+			</p>
+		</proof>
+
+		<p>The partial derivatives of <xref ref="ch10-eq-maximum-power-transfer" /> can be taken with respect to <m>R_{LOAD}</m> and <m>X_{LOAD}</m> and set equal to zero to calculate the maximum. (These derivations will not be shown in this book.) The maximum occurs when <m>R_{LOAD}</m> is equal to <m>R_{TH}</m> and <m>X_{LOAD}</m> is equal to <m>-X_{TH}</m>. In other words, <m>\vec{Z_{LOAD}}</m> is equal to <m>\vec{Z^*_{TH}}</m>.</p>
+		
+		<p>The maximum power that can be consumed by the load can then be calculated by solving <xref ref="ch10-eq-maximum-power-transfer" /> for <m>\vec{Z_{LOAD}} = R_{TH} - jX_{TH}</m>. This is shown in <xref ref="ch10-eq-max-power-ac" /> and derived in <xref ref="ch10-max-power-derivation" />.</p>
+		
+		<p>
+			<md number="yes" xml:id="ch10-eq-max-power-ac">P_{LOAD,MAX} = \frac{|\vec{V_{TH,RMS}}|^2}{4R_{TH}}</md>
+		</p>
+
+		<proof xml:id="ch10-max-power-derivation">
+			<p>
+				<md>
+					<mrow>\vec{S_{LOAD,MAX}} \amp= \frac{|\vec{V_{TH,RMS}}|^2(R_{TH}-jX_{TH})}{(2R_{TH})^2}</mrow>
+					<mrow>\amp= \frac{|\vec{V_{TH,RMS}}|^2R_{TH}}{(2R_{TH})^2} - j\frac{|\vec{V_{TH,RMS}}|^2X_{TH}}{(2R_{TH})^2}</mrow>
+					<mrow>\amp= \frac{|\vec{V_{TH,RMS}}|^2}{4R_{TH}} - j\frac{|\vec{V_{TH,RMS}}|^2X_{TH}}{4R_{TH}^2}</mrow>
+					<mrow>P_{LOAD,MAX} \amp= \frac{|\vec{V_{TH,RMS}}|^2}{4R_{TH}}</mrow>
+				</md>
+			</p>
+		</proof>
+
+		<p>Because a Norton equivalent circuit and a Th&#233;venin equivalent circuit are simply source-transformed versions of each other, the maximum power transferred to the load in a Norton equivalent circuit would occur when the load impedance is equal to the complex conjugate of the Norton impedance.</p>
+		
+		<example>
+			<title>Deriving a load for maximum power transfer</title>
+			
+			<statement>
+				<p>Calculate the value of <m>\vec{Z_LOAD}</m> (including individual component values) that will lead to maximum power transfer in the circuit shown below. Then, calculate the power transferred to that load. The voltage source has a value of <m>v_{AC}(t) = 200~\textrm{VRMS}~\cos(2\pi100t + 60\pi/180)</m>.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="100%" xml:id="ch10-maximum-power-transfer-example1-figure1">
+						<shortdescription>Circuit with three meshes and five nodes consisting of voltage source Vac, 10ohm resistor, 20mH inductor, 200uF capacitor, 20ohm resistor, 10mH inductor, and impedance Zload. The high-potential end of Vac connects to the 10ohm at node a. The 10ohm and 20mH connect at node b. The 20mH, 200uF, 20ohm, and Zload connect at node c. The 20ohm and 10mH connect at node d. The low-potential end of Vac, 200uF, 10mH, and Zload connect at node e.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(0,5) node[below left] {+} to [sV, l_=$v_{AC}(t)$]		(0,0);
+								\draw[]	(0,5) to [R, l^=10~$\Omega$]							(2.5,5);
+								\draw[]	(2.5,5) to [L, l^=20~mH]								(5,5) --++ (right:5);
+								\draw[]	(5,5) to [C, l_=200~$\mu$F, *-*]						(5,0);
+								\draw[]	(7.5,5) to [R, l_=20~$\Omega$, *-]						(7.5,2.5);
+								\draw[]	(7.5,2.5) to [L, l_=10~mH, -*]							(7.5,0);
+								\draw[]	(10,5) to [generic, l_=$\vec{Z_{LOAD}}$]				(10,0);
+								\draw[]	(0,0) to [short]										(10,0);
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Phasor transform the circuit.</p>
+
+				<figure>
+  					<caption></caption>
+					<image width="60%" xml:id="ch10-maximum-power-transfer-example1-figure2">
+						<shortdescription>Circuit with two meshes and three nodes consisting of voltage source Vac, 10+j12.57ohm impedance, 3.14-j7.69ohm impedance, and impedance Zload. The high-potential end of Vac connects to the 10+j12.57ohm at node a. The three impedances connect at node b. The low-potential end of Vac, 3.14-j7.69ohm, and Zload connect at node c.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$\vec{V_{AC}}$]		(0,0);
+								\draw[]	(0,2.5) to [generic, l^=10+j12.57~$\Omega$]					(3,2.5);
+								\draw[]	(3,2.5) to [short]											(5,2.5);
+								\draw[]	(0,0) to [short]											(5,0);
+								\draw[]	(3,2.5) to [generic, l_=3.14$-$j7.69~$\Omega$, *-*]			(3,0);
+								\draw[]	(5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]					(5,0);
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>Deactivate the source to calculate the Th&#233;venin equivalent impedance (as seen by the load). This will be equal to both impedances in parallel.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{Z_{TH}} \amp= \frac{(10+j12.57~\Omega)(3.14-j7.69~\Omega)}{(10+j12.57~\Omega)+(3.14-j7.69~\Omega)}</mrow>
+						<mrow>\amp= 7.64 - j5.68~\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Use the voltage divider rule to calculate the Th&#233;venin equivalent voltage.</p>
+				
+				<p>
+					<md>
+						<mrow>\vec{V_{TH,RMS}} \amp= (200~\textrm{VRMS} \angle 60^\circ)\left(\frac{3.1442 - j7.6945~\Omega}{(3.1442 - j7.6945~\Omega)+(10 + j12.5664~\Omega)}\right)</mrow>
+						<mrow>\amp= 104.60 - j55.877~\textrm{VRMS}</mrow>
+					</md>
+				</p>
+
+				<p>The resistance of the optimal load is equal to 7.64<nbsp />&#8486;, which is the real part of <m>\vec{Z_{TH}}</m>. The reactance of the optimal load is equal to +5.68<nbsp />&#8486;, which is the negative value of the imaginary part of <m>\vec{Z_{TH}}</m>. This means the optimal load will consist of a resistor and an inductor. The value of the inductor can be calculated using <xref ref="ch8-eq-impedance-inductor" />.</p>
+				
+				<p>
+					<md>
+						<mrow>L \amp= \frac{5.68~\Omega}{2\pi100~\textrm{Hz}}</mrow>
+						<mrow>\amp= 9~\textrm{mH}</mrow>
+					</md>
+				</p>
+
+				<p>The load that will lead to maximum power transfer is therefore a resistance of 7.64<nbsp />&#8486; in series with a 9<nbsp />mH inductor.</p>
+				
+				<p>Use <xref ref="ch10-eq-max-power-ac" /> to calculate the maximum power transferred to the load.</p>
+				
+				<p>
+					<md>
+						<mrow>P_{LOAD,MAX} \amp= \frac{|104.60 - j55.877~\textrm{VRMS}|^2}{4(7.6428~\Omega)}</mrow>
+						<mrow>\amp= 460~\textrm{W}</mrow>
+					</md>
+				</p>
+			</statement>
+		</example>
+
+	</section>
+
+	<section xml:id="ch10-pfcorrection">
+		<title>Power Factor Correction</title>
+
+		<introduction>
+
+			<p>It is possible to minimize the reactive power present in the load of a circuit. This is accomplished by putting a compensation circuit in parallel with the load, as depicted in <xref ref="power-compensation-circuit" />.</p>
+			
+			<figure xml:id="power-compensation-circuit">
+  				<caption>A compensation circuit can be used to increase the power factor by reducing complex power consumed by the load.</caption>
+				<image width="80%" xml:id="ch10-power-compensation-circuit">
+					<shortdescription>A source connects to a linear circuit. The output of the linear circuit is represented by an impedance of Zload. In parallel with Zload is a compensation circuit.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(0,2.5) node[below left] {+} to [sV] (0,0);
+							\draw[]	(0,2.5) to [short] ++(right:7);
+							\draw[]	(0,0) to [short] ++(right:7);
+							\node[fill=white, draw, align=center, minimum width=3cm, minimum height=3cm] at (2.5,1.25) {linear\\circuit};
+							\node[fill=white, draw, align=center, minimum width=3cm, minimum height=3cm] at (8.25,1.25) {compensation\\circuit};
+							\draw[]	(5,2.5) to [generic, l^=$\vec{Z_{LOAD}}$, *-*] (5,0);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
+
+			<p>Reducing the power factor is important to reduce electric utility bills. Reactive power does no useful work, however, it is still included in the price of power generation.</p>
+
+		</introduction>
+
+		<subsection xml:id="ch10-correctinductive">
+			<title>Correcting an Inductive Load</title>
+	
+			<p>To increase the power factor of an inductive load, a capacitor can be placed in parallel with that load. Inductive loads are very common in any machinery, appliance, or device that uses a motor. The value of capacitance required to increase the power factor depends on the final power factor value that is desired (<m>pf_f</m>). The final reactive power (<m>Q_f</m>) that is necessary to achieve this final power factor can then be calculated by solving <xref ref="ch10-eq-power-factor" /> and <xref ref="ch10-eq-apparent-power" /> for <m>Q</m>. This equation is given in <xref ref="ch10-eq-qfinal-inductive" /> and is derived in <xref ref="ch10-qfinal-inductive-derivation" />. (Note that the sign of <m>Q_f</m> is positive because the load will still be inductive after correction, although only slightly. If <m>pf_f</m> is one, then the load will be purely resistive and <m>Q_f</m> will be equal to zero.)</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-qfinal-inductive">Q_f = P \sqrt{\frac{1}{pf_f^2}-1}</md>
+			</p>
+
+			<proof xml:id="ch10-qfinal-inductive-derivation">
+				<p>
+					<md>
+						<mrow>1 \amp= \sin^2{\theta} + \cos^2{\theta}</mrow>
+						<mrow>\amp= \left(\frac{Q_f}{|\vec{S_f}|}\right)^2 + pf_f^2</mrow>
+						<mrow>\amp= \frac{Q_f^2}{|\vec{S_f}|^2} + pf_f^2</mrow>
+						<mrow>\amp= \frac{Q_f^2}{Q_f^2+P^2} + pf_f^2</mrow>
+						<mrow>1-pf_f^2 \amp= \frac{Q_f^2}{Q_f^2+P^2}</mrow>
+						<mrow>(1-pf_f^2)(Q_f^2+P^2) \amp= Q_f^2</mrow>
+						<mrow>Q_f^2 - Q_f^2pf_f^2 + P^2 - P^2pf_f^2 \amp= Q_f^2</mrow>
+						<mrow>- Q_f^2pf_f^2 + P^2 - P^2pf_f^2 \amp= 0</mrow>
+						<mrow>- Q_f^2pf_f^2 \amp= - P^2 + P^2pf_f^2</mrow>
+						<mrow>Q_f^2pf_f^2 \amp= P^2 - P^2pf_f^2</mrow>
+						<mrow>\amp= P^2\left(1-pf_f^2\right)</mrow>
+						<mrow>Q_f^2 \amp= \frac{P^2\left(1-pf_f^2\right)}{pf_f^2}</mrow>
+						<mrow>\amp= P^2\left(\frac{1}{pf_f^2}-1\right)</mrow>
+						<mrow>Q_f \amp= \sqrt{P^2\left(\frac{1}{pf_f^2}-1\right)}</mrow>
+						<mrow>\amp= P\sqrt{\frac{1}{pf_f^2}-1}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>A compensation circuit to increase the power factor of an inductive load requires a reactive power that is capable of changing the reactive power from the initial value to the final value given in <xref ref="ch10-eq-qfinal-inductive" />. That is, <m>Q_C = \Delta Q = Q_f - Q_i</m>. To calculate the value of capacitor that can generate <m>Q_C</m>, solve <xref ref="ch10-complex-power-voltage" /> for <m>X_C = -\frac{1}{\omega C}</m> and solve for <m>C</m>. This result is shown in <xref ref="ch10-eq-compensating-capacitor" /> and derived in <xref ref="ch10-compensating-capacitor-derivation" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-compensating-capacitor">C = \frac{-Q_C}{|\vec{V_{LOAD,RMS}}|^2\omega}</md>
+			</p>
+
+			<proof xml:id="ch10-compensating-capacitor-derivation">
+				<p>
+					<md>
+						<mrow>\vec{S} \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{\vec{Z_{LOAD}}}{|\vec{Z_{LOAD}}|^2}</mrow>
+						<mrow>P - jQ \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{R + jX}{|R+jX|^2}</mrow>
+						<mrow>-jQ \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{jX}{|jX|^2}</mrow>
+						<mrow>-Q \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{X}{X^2}</mrow>
+						<mrow>\amp= \frac{|\vec{V_{LOAD,RMS}}|^2}{X}</mrow>
+						<mrow>\amp= |\vec{V_{LOAD,RMS}}|^2(\omega C)</mrow>
+						<mrow>C \amp= -\frac{Q}{|\vec{V_{LOAD,RMS}}|^2 \omega}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<example>
+				<title>Correcting an inductive load</title>
+				
+				<statement>
+					<p>Calculate the power factor of the circuit below assuming that capacitor <m>C_X</m> is not connected. Then, calculate the value of capacitance <m>C_X</m> to place in parallel with the load to increase the power factor to 0.98. The source voltage has a value of <m>v_{AC}(t) = 330~\textrm{VRMS}~\cos(2\pi60t)</m>.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="70%" xml:id="ch10-correcting-inductive-load-example1-figure1">
+							<shortdescription>Circuit with two meshes and four nodes consisting of voltage source Vac, 50ohm resistor, 160ohm resistor, 250mH inductor, and capacitor Cx. The high-potential end of Vac connects to the 50ohm at node a. The 50ohm, 160ohm, and Cx connect at node b. The 160ohm and 250mH connect at node c. The low-potential end of Vac, 250mH, and Cx connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,4) node[below left] {+} to [sV, l_=$v_{AC}(t)$]	(0,0);
+									\draw[]	(0,4) to [R, l^=50~$\Omega$]						(2.5,4);
+									\draw[]	(2.5,4) to [R, l_=160~$\Omega$, *-]					(2.5,2);
+									\draw[]	(2.5,2) to [L, l_=250~mH, -*]						(2.5,0);
+									\draw[]	(0,0) to [short]									(5,0);
+									\draw[]	(2.5,4) to [short]	++(right:2.5) to [C, l_=$C_X$]	++(down:4);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="70%" xml:id="ch10-correcting-inductive-load-example1-figure2">
+							<shortdescription>Circuit with two meshes and three nodes consisting of voltage source Vac, 50ohm resistor, 160+j94.25ohm impedance, and capacitor Cx. The high-potential end of Vac connects to the 50ohm at node a. The 50ohm, 160+j94.25ohm, and Cx connect at node b. The low-potential end of Vac, 150+j94.25ohm, and Cx connect at node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$\vec{V_{AC}}$]	(0,0);
+									\draw[]	(0,2.5) to [R, l^=50~$\Omega$]							(3,2.5);
+									\draw[]	(3,2.5) to [generic, l_=160+j94.3~$\Omega$, *-*]		(3,0);
+									\draw[]	(0,0) to [short]										(5.5,0);
+									\draw[]	(3,2.5) to [short]	++(right:2.5) to [C, l_=$C_X$]		++(down:2.5);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>An impedance triangle can be used to calculate the initial power factor of the circuit. The impedance triangle for this circuit is shown below.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="70%" xml:id="ch10-correcting-inductive-load-example1-figure3">
+							<shortdescription>Right triangle with horizontal side of 160ohm, vertical side of j95.25ohm, creating an angle of theta between the horizontal side and hypotenuse.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\def\scale{0.4}
+									\draw[]	(0,0) --++ (right:\scale*16) node[midway, below] {160~$\Omega$} --++ (up:\scale*9.425) node[midway, right] {j95.25~$\Omega$};
+									\draw[]	(0,0) --++ (\scale*16, \scale*9.425);
+									\node[above right] at (0.5,0) {$\theta$};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use <xref ref="ch10-power-factor-r-x-only" /> to calculate the initial power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{160~\Omega}{\sqrt{(160~\Omega)^2+(j94.25~\Omega)^2}}</mrow>
+							<mrow>\amp= 0.862</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate the load voltage.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{LOAD,RMS}} \amp= 330~\textrm{VRMS} \left(\frac{160+j94.25~\Omega}{210+j94.25~\Omega}\right)</mrow>
+							<mrow>\amp= 264.60 + j29.35~\textrm{VRMS}</mrow>
+							<mrow>|\vec{V_{LOAD,RMS}}|^2 \amp= 70875.28~\textrm{VRMS}^2</mrow>	
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-voltage" /> to calculate the complex power consumed by the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= \frac{(70875.28~\textrm{VRMS}^2)(160+j94.25~\Omega)}{|(160+j94.25~\Omega)|^2}</mrow>
+							<mrow>\amp= \frac{(70875.28~\textrm{VRMS}^2)(160+j94.25~\Omega)}{34482.64~\Omega^2}</mrow>
+							<mrow>\amp= 328.86 + j 193.72~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>The initial reactive power is 193.72<nbsp />VAR. Use <xref ref="ch10-eq-qfinal-inductive" /> to calculate the final reactive power.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_f \amp= (328.86~\textrm{W})\sqrt{\frac{1}{0.98^2}-1}</mrow>
+							<mrow>\amp= 66.78~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>The change in reactive power due to the compensating capacitor must be</p>
+					
+					<p>
+						<md>66.78~\textrm{VAR} - 193.72~\textrm{VAR} = -126.94~\textrm{VAR}</md>.
+					</p>
+
+					<p>Use <xref ref="ch10-eq-compensating-capacitor" /> to calculate the value of the compensating capacitor.</p>
+
+					<p>
+						<md>
+							<mrow>C \amp= \frac{126.94~\textrm{VAR}}{(70875.28~\textrm{VRMS}^2)(2\pi60~\textrm{Hz})}</mrow>
+							<mrow>\amp= 4.75\times10^{-6}~\textrm{F}</mrow>
+							<mrow>\amp= 4.75~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+						
+				</statement>
+			</example>
+
+  		</subsection>
+
+		<subsection xml:id="ch10-correctcapacitive">
+			<title>Correcting a Capacitive Load</title>
+	
+			<p>To increase the power factor of a capacitive load, an inductor can be placed in parallel with that load. The inductance value required to increase the power factor depends on the final power factor value that is desired (<m>pf_f</m>). The final reactive power (<m>Q_f</m>) that is necessary to achieve this final power factor can then be calculated by solving <xref ref="ch10-eq-power-factor" /> and <xref ref="ch10-eq-apparent-power" /> for <m>Q</m>. This equation is given in <xref ref="ch10-eq-qfinal-capacative" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-qfinal-capacative">Q_f = -P \sqrt{\frac{1}{pf_f^2}-1}</md>
+			</p>
+
+			<p>The final reactive power while correcting a capacitive load is equal to the negative value of <xref ref="ch10-eq-qfinal-inductive" />. The sign is negative because, after correction, the load will either be purely resistive or be slightly capacitive. The derivation is therefore the same as what was shown in <xref ref="ch10-qfinal-inductive-derivation" />.</p>
+
+			<p>The compensation circuit to increase the power factor of a capacitive load requires a reactive power that is capable of changing the reactive power from the initial value to the final value given in <xref ref="ch10-eq-qfinal-capacative" />. That is, <m>Q_L = \Delta Q = Q_f - Q_i</m>. To calculate the value of inductor that can generate <m>Q_L</m>, solve <xref ref="ch10-complex-power-voltage" /> for <m>X = \omega L</m> and solve for <m>L</m>. This result is shown in <xref ref="ch10-eq-compensating-inductor" /> and derived in <xref ref="ch10-compensating-inductor-derivation" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch10-eq-compensating-inductor">L = \frac{|\vec{V_{LOAD,RMS}}|^2}{\omega Q_L}</md>
+			</p>
+
+			<proof xml:id="ch10-compensating-inductor-derivation">
+				<p>
+					<md>
+						<mrow>\vec{S} \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{\vec{Z_{LOAD}}}{|\vec{Z_{LOAD}}|^2}</mrow>
+						<mrow>P + jQ \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{R + jX}{|R+jX|^2}</mrow>
+						<mrow>jQ \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{jX}{|jX|^2}</mrow>
+						<mrow>Q \amp= |\vec{V_{LOAD,RMS}}|^2 \frac{X}{X^2}</mrow>
+						<mrow>\amp= \frac{|\vec{V_{LOAD,RMS}}|^2}{X}</mrow>
+						<mrow>\amp= \frac{|\vec{V_{LOAD,RMS}}|^2}{\omega L}</mrow>
+						<mrow>L \amp= \frac{|\vec{V_{LOAD,RMS}}|^2}{\omega Q}</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<example>
+				<title>Correcting a capacitive load</title>
+				
+				<statement>
+					<p>Calculate the power factor of the circuit below assuming that capacitor <m>L_X</m> is not connected. Then, calculate the value of inductance <m>L_X</m> to place in parallel with the load to increase the power factor to 0.99. The source voltage has a value of <m>v_{AC}(t) = 220~\textrm{VRMS}~\cos(2\pi60t)</m>.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="60%" xml:id="ch10-correct-capacitive-load-figure1">
+							<shortdescription>Circuit with two meshes and four nodes consisting of voltage source Vac, 30ohm resistor, 95ohm resistor, 25uF capacitor, and unknown inductor Lx. The high-potential end of Vac connects to the 30ohm at node a. The 30ohm, 95ohm, and Lx connect at node b. The 95ohm and 25uF connect at node c. The low-potential end of Vac, 25uF, and Lx connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,4) node[below left] {+} to [sV, l_=$v_{AC}(t)$]		(0,0);
+									\draw[]	(0,4) to [R, l^=30~$\Omega$]							(2.5,4);
+									\draw[]	(2.5,4) to [R, l_=95~$\Omega$, *-]						(2.5,2);
+									\draw[]	(2.5,2) to [C, l_=25~$\mu$F, -*]						(2.5,0);
+									\draw[]	(0,0) to [short]										(5,0);
+									\draw[]	(2.5,4) to [short]	++(right:2.5) to [L, l_=$L_X$]		++(down:4);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="70%" xml:id="ch10-correct-capacitive-load-figure2">
+							<shortdescription>Circuit with two meshes and three nodes consisting of voltage source Vac, 30ohm resistance, 95-j106ohm impedance, and unknown inductor Lx. The high-potential end of Vac connects to the 30ohm at node a. The 30ohm, 95-j106ohm, and Lx connect at node b. The low-potential end of Vac, 95-j106ohm, and Lx connect at node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$\vec{V_{AC}}$]		(0,0);
+									\draw[]	(0,2.5) to [R, l^=30~$\Omega$]								(3,2.5);
+									\draw[]	(3,2.5) to [generic, l_=95$-$j106~$\Omega$, *-*]				(3,0);
+									\draw[]	(0,0) to [short]											(5.5,0);
+									\draw[]	(3,2.5) to [short]	++(right:2.5) to [L, l_=$L_X$]			++(down:2.5);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>An impedance triangle can be used to calculate the initial power factor of the circuit. The impedance triangle for this circuit is shown below.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="50%" xml:id="ch10-correct-capacitive-load-figure3">
+							<shortdescription>Right triangle with horizontal side of 95ohm, vertical side of -j106ohm, creating an angle of theta between the horizontal side and hypotenuse.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\def\scale{0.4}
+									\draw[]	(0,0) --++ (right:\scale*9.5) node[midway, below] {95~$\Omega$} --++ (down:\scale*10.6) node[midway, right] {$-$j106~$\Omega$};
+									\draw[]	(0,0) --++ (\scale*9.5, -\scale*10.6);
+									\node[below right] at (0.5,0) {$\theta$};
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use <xref ref="ch10-power-factor-r-x-only" /> to calculate the initial power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{95~\Omega}{\sqrt{(95~\Omega)^2+(-j106~\Omega)^2}}</mrow>
+							<mrow>\amp= 0.667</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider tool to calculate the voltage drop over the load. It is also useful to calculate the magnitude of the load voltage at this time.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{LOAD,RMS}} \amp= 220~\textrm{VRMS} \left(\frac{95-j106.10~\Omega}{125-j106.10~\Omega}\right)</mrow>
+							<mrow>\amp= 189.31 - j26.05~\textrm{VRMS}</mrow>
+							<mrow>|\vec{V_{LOAD,RMS}}|^2 \amp= 36517.36~\textrm{VRMS}^2</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-voltage" /> to calculate the power consumed by the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= \frac{(36517.36~\textrm{VRMS}^2)(95-j106.10~\Omega)}{|(95-j106.10~\Omega)|^2}</mrow>
+							<mrow>\amp= \frac{(36517.36~\textrm{VRMS}^2)(95-j106.10~\Omega)}{20282.91~\Omega^2}</mrow>
+							<mrow>\amp= 171.04 - j 191.03~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>The initial reactive power is <minus />191<nbsp />VAR. Use <xref ref="ch10-eq-qfinal-capacative" /> to calculate the final reactive power.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_f \amp= -(171.04~\textrm{W})\sqrt{\frac{1}{0.99^2}-1}</mrow>
+							<mrow>\amp= -24.37~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>The change in reactive power due to the compensating inductor must be</p>
+					
+					<p>
+						<md>-24.37~\textrm{VAR} + 191.03~\textrm{VAR} = 166.66~\textrm{VAR}</md>.
+					</p>
+
+					<p>Use <xref ref="ch10-eq-compensating-inductor" /> to calculate the value of the compensating inductor.</p>
+					
+					<p>
+						<md>
+							<mrow>L \amp= \frac{(36517.36~\textrm{VRMS}^2)}{(166.66~\textrm{VAR})(2\pi60~\textrm{Hz})}</mrow>
+							<mrow>\amp= 0.581~\textrm{H}</mrow>
+							<mrow>\amp= 581~\textrm{mH}</mrow>
+						</md>
+					</p>
+				</statement>
+			</example>
+
+  		</subsection>
+
+	</section>
+
+	<exercises>
+    	<title>Practice Problems</title>
+
+    	<subexercises>
+			<title>Phase and Root Mean Square</title>
+
+			<exercise>
+				<statement>
+					<p>Calculate the RMS value of the magnitude of the voltage and current signals, as well as the phase difference between the two signals.</p>
+					
+					<p>
+						<md>
+							<mrow>v(t) \amp= 120\cos(2\pi60t+120\pi/180)~\textrm{V}</mrow>
+							<mrow>i(t) \amp= 5\cos(2\pi60t+60\pi/180)~\textrm{A}</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= 84.9~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= 3.54~\textrm{ARMS}</mrow>
+							<mrow>\theta \amp= 60^\circ</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch10-eq-rms-of-sinusoid" /> to calculate the RMS value of the voltage and current.</p>
+
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= \frac{120~\textrm{V}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 84.9~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= \frac{5~\textrm{A}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 3.54~\textrm{ARMS}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-power-phase" /> to calculate the phase difference.</p>
+					
+					<p>
+						<md>
+							<mrow>\theta \amp= 120^\circ - 60^\circ</mrow>
+							<mrow>\amp= 60^\circ</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate the RMS value of the magnitude of the voltage and current signals, as well as the phase difference between the two signals.</p>
+					
+					<p>
+						<md>
+							<mrow>v(t) \amp= 150\cos(2\pi60t+60\pi/180)~\textrm{V}</mrow>
+							<mrow>i(t) \amp= 3\cos(2\pi60t+35\pi/180)~\textrm{A}</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= 106~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= 2.12~\textrm{ARMS}</mrow>
+							<mrow>\theta \amp= 25^\circ</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch10-eq-rms-of-sinusoid" /> to calculate the RMS value of the voltage and current.</p>
+					
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= \frac{150~\textrm{V}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 106~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= \frac{3~\textrm{A}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 2.12~\textrm{ARMS}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-power-phase" /> to calculate the phase difference.</p>
+					
+					<p>
+						<md>
+							<mrow>\theta \amp= 60^\circ - 35^\circ</mrow>
+							<mrow>\amp= 25^\circ</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise>
+				<statement>
+					<p>Calculate the RMS value of the magnitude of the voltage and current signals, as well as the phase difference between the two signals.</p>
+
+					<p>
+						<md>
+							<mrow>v(t) \amp= 220\cos(2\pi50t+120\pi/180)~\textrm{V}</mrow>
+							<mrow>i(t) \amp= 6\cos(2\pi50t-40\pi/180)~\textrm{A}</mrow>
+						</md>
+					</p>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= 156~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= 4.24~\textrm{ARMS}</mrow>
+							<mrow>\theta \amp= 160^\circ</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch10-eq-rms-of-sinusoid" /> to calculate the RMS value of the voltage and current.</p>
+
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= \frac{220~\textrm{V}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 156~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= \frac{6~\textrm{A}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 4.24~\textrm{ARMS}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-power-phase" /> to calculate the phase difference.</p>
+					
+					<p>
+						<md>
+							<mrow>\theta \amp= 120^\circ + 40^\circ</mrow>
+							<mrow>\amp= 160^\circ</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-phase-rms-exercise4">
+				<statement>
+					<p>Calculate the RMS values of the magnitude of the source voltage and <m>i(t)</m>, as well as the phase difference between the two signals, given the circuit shown in <xref ref="phase-rms-exercise4-diagram" />.</p>
+
+					<figure xml:id="phase-rms-exercise4-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-phase-rms-exercise4" />.</caption>
+  						<image width="50%" xml:id="ch10-phase-rms-exercise4-diagram">
+    						<shortdescription>Circuit with one mesh and three nodes consisting of a (60V angle 20deg) voltage source, 8ohm resistor, and -j5ohm capacitor. The high-potential end of the voltage source connects to the 8ohm at node a. The 8ohm and -j5ohm connect at node b. The low-potential end of the voltage source connects to the -j5ohm at node c. Branch current i(t) flows through the capacitor from node b to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=60~V~$\angle$~20$^\circ$]	(0,0);
+									\draw[]	(0,2.5) to [R, l^=8~$\Omega$]										(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j5~$\Omega$, i^=$i(t)$]						(2.5,0);
+									\draw[]	(0,0) to [short]													(2.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= 42.4~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= 4.50~\textrm{ARMS}</mrow>
+							<mrow>\theta \amp= -32^\circ</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch10-eq-rms-of-sinusoid" /> to calculate the RMS value of the voltage.</p>
+
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= \frac{60~\textrm{V}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 42.4~\textrm{VRMS}</mrow>
+						</md>
+					</p>
+
+					<p>Use Ohm's law to calculate <m>\vec{I}</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I} \amp= \frac{39.87+14.51~\textrm{VRMS}}{8-j5~\Omega}</mrow>
+							<mrow>\amp= 2.77+j3.54~\textrm{ARMS}</mrow>
+							<mrow>\amp= 4.50~\textrm{ARMS} \angle 52^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-power-phase" /> to calculate the phase difference.</p>
+					
+					<p>
+						<md>
+							<mrow>\theta \amp= 20^\circ - 52^\circ</mrow>
+							<mrow>\amp= -32^\circ</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-phase-rms-exercise5">
+				<statement>
+					<p>Calculate the RMS values of the magnitude of the source voltage and <m>i(t)</m>, as well as the phase difference between the two signals, given the circuit shown in <xref ref="phase-rms-exercise5-diagram" />.</p>
+
+					<figure xml:id="phase-rms-exercise5-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-phase-rms-exercise5" />.</caption>
+  						<image width="50%" xml:id="ch10-phase-rms-exercise5-diagram">
+    						<shortdescription>Circuit with one mesh and three nodes consisting of a (100V angle 0deg) voltage source, 6ohm resistor, and j8ohm inductor. The high-potential end of the voltage source connects to the 6ohm at node a. The 6ohm and j8ohm connect at node b. The low-potential end of the voltage source connects to the j8ohm at node c. Branch current i(t) flows through the inductor from node b to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=100~V~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,2.5) to [R, l^=6~$\Omega$]										(2.5,2.5);
+									\draw[]	(2.5,2.5) to [L, l_=j8~$\Omega$, i^=$i(t)$]							(2.5,0);
+									\draw[]	(0,0) to [short]													(2.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= 70.7~\textrm{VRMS}</mrow>
+							<mrow>|\vec{I_{RMS}}| \amp= 7.07~\textrm{ARMS}</mrow>
+							<mrow>\theta \amp= 53.1^\circ</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use <xref ref="ch10-eq-rms-of-sinusoid" /> to calculate the RMS value of the voltage.</p>
+
+					<p>
+						<md>
+							<mrow>|\vec{V_{RMS}}| \amp= \frac{100~\textrm{V}}{\sqrt{2}}</mrow>
+							<mrow>\amp= 70.7~\textrm{VRMS}</mrow>
+						</md>
+					</p>
+
+					<p>Use Ohm's law to calculate <m>\vec{I}</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I} \amp= \frac{70.71~\textrm{VRMS}}{6+j8~\Omega}</mrow>
+							<mrow>\amp= 4.24-j5.66~\textrm{ARMS}</mrow>
+							<mrow>\amp= 7.07~\textrm{ARMS} \angle -53.1^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-power-phase" /> to calculate the phase difference.</p>
+					
+					<p>
+						<md>
+							<mrow>\theta \amp= 0^\circ - (-53.1^\circ)</mrow>
+							<mrow>\amp= 53.1^\circ</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Complex Power</title>
+		
+			<exercise xml:id="ch10-complex-power-exercise1">
+				<statement>
+					<p>Calculate the power consumed by the load (indicated with dashed lines), as well as the power factor, for the circuit given in <xref ref="complex-power-exercise1-diagram" />. The source frequency is 50<nbsp />Hz.</p>
+					
+					<figure xml:id="complex-power-exercise1-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-complex-power-exercise1" />.</caption>
+  						<image width="70%" xml:id="ch10-complex-power-exercise1-diagram">
+    						<shortdescription>Circuit with two meshes and five nodes consisting of a (7 ARMS angle 0deg) current source, 10ohm resistor, 8uF capacitor, 90ohm resistor, 155mH inductor, and 35uF capacitor. The high-potential end of the current source, 10ohm, and 90ohm connect at node a. The 10ohm and 8uF connect at node b. The 90ohm and 155mH connect at node c. The 155mH and 35uF connect at node d. The low-potential end of the current source, 8uF, and 35uF connect at node e. The dashed line encompasses all passive circuit elements.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[below left] {+} to [sV, l_=7~ARMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,5) to [short]							(5,5);
+									\draw[]	(2.5,5) to [R, l_=10~$\Omega$, *-]			(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=8~$\mu$F, -*]			(2.5,0);
+									\draw[]	(5,5) to [R, l_=90~$\Omega$]				(5,3);
+									\draw[]	(5,3) to [L, l_=155~mH]						(5,1.5);
+									\draw[]	(5,1.5) to [C, l_=35~$\mu$F]				(5,0);
+									\draw[]	(0,0) to [short]							(5,0);
+									\draw[dashed]	(1,5.5) rectangle (6,-0.5);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= 3450 - j2560~\textrm{VA}</mrow>
+							<mrow>pf \amp= 0.804</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="70%" xml:id="ch10-complex-power-exercise1-figure1">
+							<shortdescription>Circuit with two meshes and five nodes consisting of a (7 ARMS angle 0deg) current source, 10ohm resistor, -j398ohm impedance, 90ohm resistor, j48.7ohm impedance, and -j91.0ohm impedance. The high-potential end of the current source, 10ohm, and 90ohm connect at node a. The 10ohm and -j398ohm connect at node b. The 90ohm and j48.7ohm connect at node c. The j48.7ohm and -j91.0ohm connect at node d. The low-potential end of the current source, -j398ohm, and -j91.0ohm connect at node e. The dashed line encompasses all passive circuit elements.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) node[below left] {+} to [sV, l_=7~ARMS]		(0,0);
+									\draw[]	(0,5) to [short]									(5,5);
+									\draw[]	(2.5,5) to [R, l_=10~$\Omega$, *-]					(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j398~$\Omega$, -*]			(2.5,0);
+									\draw[]	(5,5) to [R, l_=90~$\Omega$]						(5,3);
+									\draw[]	(5,3) to [L, l_=j48.7~$\Omega$]					(5,1.5);
+									\draw[]	(5,1.5) to [C, l_=$-$j91.0~$\Omega$]				(5,0);
+									\draw[]	(0,0) to [short]									(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the equivalent impedance of the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{LOAD}} \amp= ((10~\Omega) + (-j397.89~\Omega))//((90~\Omega) + (j48.69~\Omega) + (-j90.95~\Omega))</mrow>
+							<mrow>\amp= 70.47-j52.16~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (7~\textrm{ARMS})^2(70.47-j52.16~\Omega)</mrow>
+							<mrow>\amp= 3450 - j2560~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{3453}{\sqrt{3453^2 + 2559^2}}</mrow>
+							<mrow>\amp= 0.804</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-complex-power-exercise2">
+				<statement>
+					<p>Calculate the power consumed by the load (indicated with dashed lines), as well as the power factor, for the circuit given in <xref ref="complex-power-exercise2-diagram" />. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="complex-power-exercise2-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-complex-power-exercise2" />.</caption>
+  						<image width="80%" xml:id="ch10-complex-power-exercise2-diagram">
+    						<shortdescription>Circuit with two meshes and four nodes consisting of a (250 VRMS angle 0deg) voltage source, 40ohm resistor, -j200ohm impedance, 50ohm resistor, and j40ohm impedance. The high-potential end of the voltage source connects to the 40ohm at node a. The 40ohm, -j200ohm, and 50ohm connect at node b. The 50ohm and j40ohm connect at node c. The low-potential end of the voltage source, -j200ohm, and j40ohm connect at node d. The dashed line includes the -j200ohm, 50ohm, and j40ohm impedances.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=250~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=40~$\Omega$]					(2.5,3.5);
+									\draw[]	(2.5,3.5) to [C, l_=$-$j200~$\Omega$, *-*]		(2.5,0);
+									\draw[]	(2.5,3.5) to [short]							(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=50~$\Omega$]					(5,1.5);
+									\draw[]	(5,1.5) to [L, l_=j40~$\Omega$]					(5,0);
+									\draw[]	(0,0) to [short]								(5,0);
+									\draw[dashed]	(0.75,3.25) rectangle (5.5,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= 339 + j132~\textrm{VA}</mrow>
+							<mrow>pf \amp= 0.932</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Calculate the equivalent impedance of the load.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z_{LOAD}} \amp= ((50~\Omega)+(j40~\Omega))//(-j200~\Omega)</mrow>
+							<mrow>\amp= 71.17+j27.76~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{250~\textrm{VRMS}}{111.17+j27.76~\Omega}</mrow>
+							<mrow>\amp= 2.12-j0.53~\textrm{ARMS}</mrow>
+							<mrow>\amp= 2.18~\textrm{ARMS}\angle -14.02^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (2.18~\textrm{ARMS})^2(71.17+j27.76~\Omega)</mrow>
+							<mrow>\amp= 339 + j132~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{338.79}{\sqrt{338.79^2 + 132.13^2}}</mrow>
+							<mrow>\amp= 0.932</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-complex-power-exercise3">
+				<statement>
+					<p>Calculate the power consumed by the load (indicated with dashed lines), as well as the power factor, for the circuit given in <xref ref="complex-power-exercise3-diagram" />. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="complex-power-exercise3-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-complex-power-exercise3" />.</caption>
+  						<image width="80%" xml:id="ch10-complex-power-exercise3-diagram">
+    						<shortdescription>Circuit with one mesh and five nodes consisting of a (60VRMS angle 0deg) voltage source, 20ohm resistor, j60ohm impedance, 60ohm resistor, and j80ohm impedance. The high-potential end of the voltage source connects to the 20ohm at node a. The 20ohm and j60ohm connect at node b. The j60ohm and 60ohm connect at node c. The 60ohm and j80ohm connect at node d. The low-potential end of the voltage source and j80ohm connect at node e. The dashed line encompasses the 60ohm and j80ohm impedances.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=60~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=20~$\Omega$]					(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=j60~$\Omega$]				(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=60~$\Omega$]					(5,1.5);
+									\draw[]	(5,1.5) to [L, l_=j80~$\Omega$]					(5,0);
+									\draw[]	(0,0) to [short]								(5,0);
+									\draw[dashed]	(3.75,3.25) rectangle (5.5,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= 8.31 + j11.1~\textrm{VA}</mrow>
+							<mrow>pf \amp= 0.600</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{60~\textrm{VRMS}}{80+j140~\Omega}</mrow>
+							<mrow>\amp= 0.18-j0.32~\textrm{ARMS}</mrow>
+							<mrow>\amp= 0.37~\textrm{ARMS}\angle -60.26^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (0.37~\textrm{ARMS})^2(60+j80~\Omega)</mrow>
+							<mrow>\amp= 8.31 + j11.1~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{8.31}{\sqrt{8.31^2 + 11.08^2}}</mrow>
+							<mrow>\amp= 0.600</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-complex-power-exercise4">
+				<statement>
+					<p>Calculate the power consumed by the load (indicated with dashed lines), as well as the power factor, for the circuit given in <xref ref="complex-power-exercise4-diagram" />. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="complex-power-exercise4-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-complex-power-exercise4" />.</caption>
+  						<image width="100%" xml:id="ch10-complex-power-exercise4-diagram">
+    						<shortdescription>Circuit with three meshes and five nodes consisting of a (120VRMS angle 60deg) voltage source, 5ohm resistor, 20mH inductor, 10mH inductor, 10ohm resistor, 2ohm resistor, and 100uF capacitor. The high-potential end of the voltage source connects to the 5ohm at node a. The 5ohm, 20mH, and 10mH connect at node b. The 10mH, 10ohm, and 2ohm connect at node c. The 2ohm and 100uF connect at node d. The low-potential end of the voltage source, 20mH, 10ohm, and 100uF connect at node e. The dashed line encompasses the 10ohm resistor, 2ohm resistor, and 100uF capacitor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=120~VRMS~$\angle$~60$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=5~$\Omega$]					(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l_=20~mH, *-*]					(2.5,0);
+									\draw[]	(2.5,3.5) to [L, l^=10~mH]						(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=10~$\Omega$, *-*]				(5,0);
+									\draw[]	(5,3.5) to [short]								(7.5,3.5);
+									\draw[]	(7.5,3.5) to [R, l_=2~$\Omega$]					(7.5,1.5);
+									\draw[]	(7.5,1.5) to [C, l_=100~$\mu$F]					(7.5,0);
+									\draw[]	(0,0) to [short]								(7.5,0);
+									\draw[dashed]	(3.75,3.25) rectangle (8,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= 557 - j203~\textrm{VA}</mrow>
+							<mrow>pf \amp= 0.940</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch10-complex-power-exercise4-figure1">
+							<shortdescription>Circuit with three meshes and five nodes consisting of a (120VRMS angle 60deg) voltage source, 5ohm resistor, j7.54ohm impedance, j3.77ohm impedance, 10ohm resistor, 2ohm resistor, and -j26.5ohm impedance. The high-potential end of the voltage source connects to the 5ohm at node a. The 5ohm, j7.54ohm, and j3.77ohm connect at node b. The j3.77ohm, 10ohm, and 2ohm connect at node c. The 2ohm and -j26.5ohm connect at node d. The low-potential end of the voltage source, j7.54ohm, 10ohm, and -j26.5ohm connect at node e. The dashed line encompasses the 10ohm resistor, 2ohm resistor, and -j26.5ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=60+j103.92~VRMS]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=5~$\Omega$]								(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l_=j7.54~$\Omega$, *-*]					(2.5,0);
+									\draw[]	(2.5,3.5) to [L, l^=j3.77~$\Omega$]							(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=10~$\Omega$, *-*]							(5,0);
+									\draw[]	(5,3.5) to [short]											(7.5,3.5);
+									\draw[]	(7.5,3.5) to [R, l_=2~$\Omega$]								(7.5,1.5);
+									\draw[]	(7.5,1.5) to [C, l_=$-$j26.5~$\Omega$]						(7.5,0);
+									\draw[]	(0,0) to [short]											(7.5,0);
+									\draw[dashed]	(3.75,3.25) rectangle (8,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the impedance of the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{LOAD}} \amp= (10~\Omega)//((2~\Omega)+(-j26.53~\Omega))</mrow>
+							<mrow>\amp= 8.58+j3.13~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Transform the voltage source to a current source.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_S} \amp= \frac{60+j103.92~\textrm{VRMS}}{5~\Omega}</mrow>
+							<mrow>\amp= 12+j20.78~\textrm{ARMS}</mrow>
+						</md>
+					</p>
+
+					<p>Combine the 5<nbsp />&#8486; and j7.54<nbsp />&#8486; impedances in parallel.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z'} \amp= (5~\Omega)//(j7.54~\Omega)</mrow>
+							<mrow>\amp= 3.47+j2.30~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="90%" xml:id="ch10-complex-power-exercise4-figure2">
+							<shortdescription>Circuit with two meshes and three nodes consisting of a (12+j20.78 ARMS) current source, 3.47+j2.30ohm impedance, j3.77ohm impedance, and 8.58+j3.13ohm impedance. The high-potential end of the current source, 3.47+j2.30ohm, and j3.77ohm connect at node a. The j3.77ohm and 8.58+j3.13ohm connect at node b. The low-potential end of the current source, 3.47+j2.30ohm, and 8.58+j3.13ohm connect at node c. The dashed line encompasses the 8.58+j3.13ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=12+j20.78~ARMS]		(0,0);
+									\draw[]	(0,2.5) to [short]											(3,2.5);
+									\draw[]	(3,2.5) to [generic, l_=3.47+j2.30~$\Omega$, *-*]			(3,0);
+									\draw[]	(3,2.5) to [L, l^=j3.77~$\Omega$]							(6,2.5);
+									\draw[]	(6,2.5) to [generic, l_=8.58+j3.13~$\Omega$]				(6,0);
+									\draw[]	(0,0) to [short]											(6,0);
+									\draw[dashed]	(3.5,2.25) rectangle (6.5,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use the current divider rule to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= (12+j20.78~\textrm{ARMS})\left(\frac{(3.47+j2.30~\Omega)//(8.58+j6.90~\Omega)}{8.58+j6.90~\Omega}\right)</mrow>
+							<mrow>\amp= 1.42+j7.93~\textrm{ARMS}</mrow>
+							<mrow>\amp= 8.06~\textrm{ARMS}\angle 79.83^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (8.06~\textrm{ARMS})^2(8.58+j3.13~\Omega)</mrow>
+							<mrow>\amp= 557.38 - j203.20~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{557.38}{\sqrt{557.38^2 + (-203.20)^2}}</mrow>
+							<mrow>\amp= 0.940</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-complex-power-exercise5">
+				<statement>
+					<p>Calculate the power consumed by the load (indicated with dashed lines), as well as the power factor, for the circuit given in <xref ref="complex-power-exercise5-diagram" />. The source frequency is 50<nbsp />Hz.</p>
+
+					<figure xml:id="complex-power-exercise5-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-complex-power-exercise5" />.</caption>
+  						<image width="100%" xml:id="ch10-complex-power-exercise5-diagram">
+    						<shortdescription>Circuit with two meshes and five nodes consisting of a (660VRMS angle 30deg) voltage source, 25ohm resistor, 190mH inductor, 140mH inductor, 65ohm resistor, and 40uF capacitor. The high-potential end of the voltage source connects to the 25ohm at node a. The 25ohm and 190mH connect at node b. The 190mH, 140mH, and 65ohm connect at node c. The 65ohm and 40uF connect at node d. The low-potential end of the voltage source, 140mH, and 40uF connect at node e. The dashed line encompasses the 140mH inductor, 65ohm resistor, and 40uF capacitor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=660~VRMS~$\angle$~30$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=25~$\Omega$]					(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=190~mH]					(5,3.5);
+									\draw[]	(5,3.5) to [L, l_=140~mH, *-*]					(5,0);
+									\draw[]	(5,3.5) to [short]							(7.5,3.5);
+									\draw[]	(7.5,3.5) to [R, l_=65~$\Omega$]				(7.5,1.5);
+									\draw[]	(7.5,1.5) to [C, l_=40~$\mu$F]					(7.5,0);
+									\draw[]	(0,0) to [short]								(7.5,0);
+									\draw[dashed]	(3.5,3.25) rectangle (8,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= 631 + j1560~\textrm{VA}</mrow>
+							<mrow>pf \amp= 0.375</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch10-complex-power-exercise5-figure1">
+							<shortdescription>Circuit with two meshes and five nodes consisting of a (660VRMS angle 30deg) voltage source, 25ohm resistor, j59.7ohm impedance, j44.0ohm impedance, 65ohm resistor, and -j79.6ohm impedance. The high-potential end of the voltage source connects to the 25ohm at node a. The 25ohm and j59.7ohm connect at node b. The j59.7ohm, j44.0ohm, and 65ohm connect at node c. The 65ohm and -j79.6ohm connect at node d. The low-potential end of the voltage source, j44.0ohm, and -j79.6ohm connect at node e. The dashed line encompasses the j44.0ohm impedance, 65ohm resistor, and -j79.6ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=572+j330~VRMS]		(0,0);
+									\draw[]	(0,3.5) to [R, l^=25~$\Omega$]								(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=j59.7~$\Omega$]							(5,3.5);
+									\draw[]	(5,3.5) to [L, l_=j44.0~$\Omega$, *-*]						(5,0);
+									\draw[]	(5,3.5) to [short]											(7.5,3.5);
+									\draw[]	(7.5,3.5) to [R, l_=65~$\Omega$]							(7.5,1.5);
+									\draw[]	(7.5,1.5) to [C, l_=$-$j79.6~$\Omega$]						(7.5,0);
+									\draw[]	(0,0) to [short]											(7.5,0);
+									\draw[dashed]	(3.25,3.25) rectangle (8,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the impedance of the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{LOAD}} \amp= (j43.98~\Omega)//((65~\Omega)+(-j79.58~\Omega))</mrow>
+							<mrow>\amp= 22.89+j56.52~\Omega</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="60%" xml:id="ch10-complex-power-exercise5-figure2">
+							<shortdescription>Circuit with one mesh and three nodes consisting of a (572+j330 VRMS) voltage source, 25+j59.7ohm impedance, and 22.9+j56.5ohm impedance. All three circuit elements are connected in series. The dashed line encompasses the 22.9+j56.5ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=572+j330~VRMS]		(0,0);
+									\draw[]	(0,2.5) to [generic, l^=25+j59.7~$\Omega$]					(3.5,2.5);
+									\draw[]	(3.5,2.5) to [generic, l_=22.9+j56.5~$\Omega$]				(3.5,0);
+									\draw[]	(0,0) to [short]											(3.5,0);
+									\draw[dashed]	(0.6,2.1) rectangle (4,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{571.58+j330~\textrm{VRMS}}{(22.89+j56.52~\Omega)+(25+j59.69~\Omega)}</mrow>
+							<mrow>\amp= 4.16-j3.20~\textrm{ARMS}</mrow>
+							<mrow>\amp= 5.25~\textrm{ARMS}\angle -37.60^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (5.25~\textrm{ARMS})^2(22.89+j56.52~\Omega)</mrow>
+							<mrow>\amp= 631.25 + j1558.36~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{631.25}{\sqrt{631.25^2 + 1558.36^2}}</mrow>
+							<mrow>\amp= 0.375</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Maximum Power Transfer</title>
+		
+			<exercise xml:id="ch10-max-power-transfer-exercise1">
+				<statement>
+					<p>Determine the circuit elements that must be placed on the load (shown as <m>\vec{Z_{LOAD}}</m> in the circuit diagram) for maximum power transfer given the circuit in <xref ref="max-power-exercise1-diagram" />. Then, calculate the power consumed by that load. The source frequency is 60<nbsp />Hz.</p>
+					
+					<figure xml:id="max-power-exercise1-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-max-power-transfer-exercise1" />.</caption>
+  						<image width="100%" xml:id="ch10-max-power-exercise1-diagram">
+    						<shortdescription>Circuit with two meshes and five nodes consisting of a (250VRMS angle 0deg) voltage source, 190ohm resistor, 100ohm resistor, 25uF capacitor, 120mH inductor, and unknown Zload. The high-potential end of the voltage source connects to the 190ohm at node a. The 190ohm, 100ohm, and 120mH connect at node b. The 100ohm and 25uF connect at node c. The 120mH, 25uF, and Zload connect at node d. The low-potential end of the voltage source and Zload connect at node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=250~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,2.5) to [R, l^=190~$\Omega$]											(2.5,2.5);
+									\draw[]	(2.5,2.5) to [short, *-]												(2.5,4);
+									\draw[]	(2.5,4) to [L, l^=120~mH]												(7.5,4);
+									\draw[]	(2.5,2.5) to [R, l^=100~$\Omega$]										(5,2.5);
+									\draw[]	(5,2.5) to [C, l^=25~$\mu$F]											(7.5,2.5);
+									\draw[]	(7.5,2.5) to [short, *-]												(7.5,4);
+									\draw[]	(7.5,2.5) to [short, -o]												(8,2.5);
+									\draw[]	(8,2.5) to [short, o-]													(9,2.5);
+									\draw[]	(9,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]								(9,0);
+									\draw[]	(0,0) to [short, -o]													(8,0);
+									\draw[]	(8,0) to [short, o-]													(9,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>The load circuit elements include a 205<nbsp />&#8486; resistor connected in series with a 48.8<nbsp />&#181;F capacitor.</p>
+					
+					<p>
+						<md>P = 76.2~\textrm{W}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch10-max-power-transfer-exercise1-figure1">
+							<shortdescription>Circuit with two meshes and five nodes consisting of a (250VRMS angle 0deg) voltage source, 190ohm resistor, 100ohm resistor, -j106ohm impedance, j45.2ohm impedance, and unknown Zload. The high-potential end of the voltage source connects to the 190ohm at node a. The 190ohm, 100ohm, and j45.2ohm connect at node b. The 100ohm and -j106ohm connect at node c. The j45.2ohm, -j106ohm, and Zload connect at node d. The low-potential end of the voltage source and Zload connect at node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=250~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,2.5) to [R, l^=190~$\Omega$]											(2.5,2.5);
+									\draw[]	(2.5,2.5) to [short, *-]												(2.5,4);
+									\draw[]	(2.5,4) to [L, l^=j45.2~$\Omega$]										(7.5,4);
+									\draw[]	(2.5,2.5) to [R, l^=100~$\Omega$]										(5,2.5);
+									\draw[]	(5,2.5) to [C, l^=$-$j106~$\Omega$]										(7.5,2.5);
+									\draw[]	(7.5,2.5) to [short, *-]												(7.5,4);
+									\draw[]	(7.5,2.5) to [short, -o]												(8,2.5);
+									\draw[]	(8,2.5) to [short, o-]													(9,2.5);
+									\draw[]	(9,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]								(9,0);
+									\draw[]	(0,0) to [short, -o]													(8,0);
+									\draw[]	(8,0) to [short, o-]													(9,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Deactivate the source and calculate the Th&#233;venin equivalent impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{TH}} \amp= 190~\Omega + (100-j106.10~\Omega)//(j45.24~\Omega)</mrow>
+							<mrow>\amp= 204.93 + j54.33~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>For maximum power transfer, the load must be equal to <m>\vec{Z_{TH}}^*</m>.</p>
+					
+					<p>
+						<md>\vec{Z_{LOAD}} = 204.93 - j54.33~\Omega</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the capacitance value.</p>
+					
+					<p>
+						<md>
+							<mrow>C \amp= -\frac{1}{2\pi (60)(-54.33)}</mrow>
+							<mrow>\amp= 48.83~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-max-power-ac" /> to calculate the power transferred to the load.</p>
+					
+					<p>
+						<md>
+							<mrow>P_{LOAD,MAX} \amp= \frac{|250~\textrm{VRMS}|^2}{4(204.93~\Omega)}</mrow>
+							<mrow>\amp= 76.24~\textrm{W}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-max-power-transfer-exercise2">
+				<statement>
+					<p>Determine the circuit elements that must be placed on the load (shown as <m>\vec{Z_{LOAD}}</m> in the circuit diagram) for maximum power transfer given the circuit in <xref ref="max-power-exercise2-diagram" />. Then, calculate the power consumed by that load. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="max-power-exercise2-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-max-power-transfer-exercise2" />.</caption>
+  						<image width="80%" xml:id="ch10-max-power-exercise2-diagram">
+    						<shortdescription>Circuit with two meshes and four nodes consisting of a (50VRMS angle 60deg) voltage source, 10ohm resistor, -j12ohm impedance, j15ohm impedance, and unknown Zload. The high-potential end of the voltage source connects to the 10ohm at node a. The 10ohm, -j12ohm, and j15ohm connect at node b. The j15ohm and Zload connect at node c. The low-potential end of the voltage source, -j12ohm, and Zload connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=50~VRMS~$\angle$~60$^\circ$]	(0,0);
+									\draw[]	(0,2.5) to [R, l^=10~$\Omega$]											(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j12~$\Omega$, *-*]								(2.5,0);
+									\draw[]	(2.5,2.5) to [L, l^=j15~$\Omega$, -o]									(5,2.5);
+									\draw[]	(5,2.5) to [short, o-]													(6,2.5);
+									\draw[]	(6,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]								(6,0);
+									\draw[]	(0,0) to [short, -o]													(5,0);
+									\draw[]	(5,0) to [short, o-]													(6,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>The load circuit elements include a 5.90<nbsp />&#8486; resistor connected in series with a 263<nbsp />&#181;F capacitor.</p>
+					
+					<p>
+						<md>P = 62.5~\textrm{W}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Deactivate the source and calculate the Th&#233;venin equivalent impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{TH}} \amp= j15~\Omega + (-j12~\Omega)//(10~\Omega)</mrow>
+							<mrow>\amp= 5.90+j10.08~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate <m>\vec{V_{TH}}</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{TH}} \amp= (25+j43.30~\textrm{VRMS})\left(\frac{-j12~\Omega}{10-j12~\Omega}\right)</mrow>
+							<mrow>\amp= 36.05+j13.26~\textrm{VRMS}</mrow>
+							<mrow>\amp= 38.41~\textrm{VRMS}\angle 20.19^\circ</mrow>
+						</md>
+					</p>
+
+					<p>For maximum power transfer, the load must be equal to <m>\vec{Z_{TH}}^*</m>.</p>
+					
+					<p>
+						<md>\vec{Z_{LOAD}} = 5.90-j10.08~\Omega</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the capacitance value.</p>
+					
+					<p>
+						<md>
+							<mrow>C \amp= -\frac{1}{2\pi (60)(-10.08)}</mrow>
+							<mrow>\amp= 263.10~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-max-power-ac" /> to calculate the power transferred to the load.</p>
+					
+					<p>
+						<md>
+							<mrow>P_{LOAD,MAX} \amp= \frac{|38.41~\textrm{VRMS}|^2}{4(5.90~\Omega)}</mrow>
+							<mrow>\amp= 62.50~\textrm{W}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-max-power-transfer-exercise3">
+				<statement>
+					<p>Determine the circuit elements that must be placed on the load (shown as <m>\vec{Z_{LOAD}}</m> in the circuit diagram) for maximum power transfer given the circuit in <xref ref="max-power-exercise3-diagram" />. Then, calculate the power consumed by that load. The source frequency is 50<nbsp />Hz.</p>
+
+					<figure xml:id="max-power-exercise3-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-max-power-transfer-exercise3" />.</caption>
+  						<image width="90%" xml:id="ch10-max-power-exercise3-diagram">
+    						<shortdescription>Circuit with two meshes and four nodes consisting of a (40VRMS angle 50deg) voltage source, 50mH inductor, 2uF capacitor, 80ohm resistor, and unknown Zload. The high-potential end of the voltage source connects to the 50mH at node a. The 50mH and 2uF connect at node b. The 2uF, 80ohm, and Zload connect at node c. The low-potential end of the voltage source, 80ohm, and Zload connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=40~VRMS~$\angle$~50$^\circ$]	(0,0);
+									\draw[]	(0,2.5) to [L, l^=50~mH]												(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l^=2~$\mu$F]											(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=80~$\Omega$, *-*]										(5,0);
+									\draw[]	(5,2.5) to [short, -o]													(5.5,2.5);
+									\draw[]	(5.5,2.5) to [short, o-]												(7,2.5);
+									\draw[]	(7,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]								(7,0);
+									\draw[]	(0,0) to [short, -o]													(5.5,0);
+									\draw[]	(5.5,0) to [short, o-]													(7,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>The load circuit elements include a 79.8<nbsp />&#8486; resistor connected in series with a 12.9<nbsp />mH inductor.</p>
+						
+					<p>
+						<md>P = 12.9~\textrm{mW}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="90%" xml:id="ch10-max-power-transfer-exercise3-figure1">
+							<shortdescription>Circuit with two meshes and four nodes consisting of a (40VRMS angle 50deg) voltage source, j15.7ohm impedance, -j1590ohm impedance, 80ohm resistor, and unknown Zload. The high-potential end of the voltage source connects to the j15.7ohm at node a. The j15.7ohm and -j1590ohm connect at node b. The -j1590ohm, 80ohm, and Zload connect at node c. The low-potential end of the voltage source, 80ohm, and Zload connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=25.7+j30.6~VRMS]		(0,0);
+									\draw[]	(0,2.5) to [L, l^=j15.7~$\Omega$]								(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l^=$-$j1590~$\Omega$]							(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=80~$\Omega$, *-*]								(5,0);
+									\draw[]	(5,2.5) to [short, -o]											(5.5,2.5);
+									\draw[]	(5.5,2.5) to [short, o-]										(7,2.5);
+									\draw[]	(7,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]						(7,0);
+									\draw[]	(0,0) to [short, -o]											(5.5,0);
+									\draw[]	(5.5,0) to [short, o-]											(7,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Deactivate the source and calculate the Th&#233;venin equivalent impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{TH}} \amp= (-j1575.84~\Omega)//(80~\Omega)</mrow>
+							<mrow>\amp= 79.79-j4.05~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate <m>\vec{V_{TH}}</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{V_{TH}} \amp= (25.71+j30.64~\textrm{VRMS})\left(\frac{80~\Omega}{80-j1575.84~\Omega}\right)</mrow>
+							<mrow>\amp= -1.49+j1.38~\textrm{VRMS}</mrow>
+							<mrow>\amp= 20.3~\textrm{VRMS}\angle 137.09^\circ</mrow>
+						</md>
+					</p>
+
+					<p>For maximum power transfer, the load must be equal to <m>\vec{Z_{TH}}^*</m>.</p>
+
+					<p>
+						<md>\vec{Z_{LOAD}} = 79.79+j4.05~\Omega</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the inductance value.</p>
+
+					<p>
+						<md>
+							<mrow>L \amp= \frac{4.05}{2\pi 50}</mrow>
+							<mrow>\amp= 12.89~\textrm{mH}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-max-power-ac" /> to calculate the power transferred to the load.</p>
+
+					<p>
+						<md>
+							<mrow>P_{LOAD,MAX} \amp= \frac{|20.3~\textrm{VRMS}|^2}{4(79.79~\Omega)}</mrow>
+							<mrow>\amp= 12.89~\textrm{mW}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-max-power-transfer-exercise4">
+				<statement>
+					<p>Determine the circuit elements that must be placed on the load (shown as <m>\vec{Z_{LOAD}}</m> in the circuit diagram) for maximum power transfer given the circuit in <xref ref="max-power-exercise4-diagram" />. Then, calculate the power consumed by that load. The source frequency is 50<nbsp />Hz.</p>
+
+					<figure xml:id="max-power-exercise4-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-max-power-transfer-exercise4" />.</caption>
+  						<image width="100%" xml:id="ch10-max-power-exercise4-diagram">
+    						<shortdescription>Circuit with three meshes and four nodes consisting of a (20ARMS angle 45deg) current source, 5ohm resistor, 40mH inductor, 0.5mF capacitor, 8ohm resistor, and unknown Zload. The high-potential end of the current source connects to the 5ohm and 40mH at node a. The 40mH, 0.5mF, and 8ohm connect at node b. The 8ohm and Zload connect at node c. The low-potential end of the current source, 5ohm, 0.5mF, and Zload connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=20~ARMS~$\angle$~45$^\circ$]	(0,0);
+									\draw[]	(0,2.5) to [short]														(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=5~$\Omega$, *-*]									(2.5,0);
+									\draw[]	(2.5,2.5) to [L, l^=40~mH]												(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=0.5~mF, *-*]											(5,0);
+									\draw[]	(5,2.5) to [R, l^=8~$\Omega$, -o]										(7.5,2.5);
+									\draw[]	(7.5,2.5) to [short, o-]												(8.5,2.5);
+									\draw[]	(8.5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]								(8.5,0);
+									\draw[]	(0,0) to [short, -o]													(7.5,0);
+									\draw[]	(7.5,0) to [short, o-]													(8.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>The load circuit elements include a 11.2<nbsp />&#8486; resistor connected in series with a 32.9<nbsp />mH inductor.</p>
+					
+					<p>
+						<md>P = 143~\textrm{W}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch10-max-power-transfer-exercise4-figure1">
+							<shortdescription>Circuit with three meshes and four nodes consisting of a (14.1+j14.1 ARMS) current source, 5ohm resistor, j12.6ohm impedance, -j6.37ohm impedance, 8ohm resistor, and unknown Zload. The high-potential end of the current source connects to the 5ohm and j12.6ohm at node a. The j12.6ohm, -j6.37ohm, and 8ohm connect at node b. The 8ohm and Zload connect at node c. The low-potential end of the current source, 5ohm, -j6.37ohm, and Zload connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=14.1+j14.1~ARMS]		(0,0);
+									\draw[]	(0,2.5) to [short]												(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=5~$\Omega$, *-*]							(2.5,0);
+									\draw[]	(2.5,2.5) to [L, l^=j12.6~$\Omega$]								(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=$-$j6.37~$\Omega$, *-*]						(5,0);
+									\draw[]	(5,2.5) to [R, l^=8~$\Omega$, -o]								(7.5,2.5);
+									\draw[]	(7.5,2.5) to [short, o-]										(8.5,2.5);
+									\draw[]	(8.5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]						(8.5,0);
+									\draw[]	(0,0) to [short, -o]											(7.5,0);
+									\draw[]	(7.5,0) to [short, o-]											(8.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Deactivate the source and calculate the Th&#233;venin equivalent impedance.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z_{TH}} \amp= 8~\Omega+(-j6.37~\Omega)//(5+j12.57~\Omega)</mrow>
+							<mrow>\amp= 11.19-j10.33~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Convert the current source to a voltage source.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{V_S} \amp= (14.14+j14.14~\textrm{ARMS})(5~\Omega)</mrow>
+							<mrow>\amp= 70.71+j70.71~\textrm{VRMS}</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch10-max-power-transfer-exercise4-figure2">
+							<shortdescription>Circuit with two meshes and five nodes consisting of a (70.7+j70.7 VRMS) voltage source, 5ohm resistor, j12.6ohm impedance, -j6.37ohm impedance, 8ohm resistor, and unknown Zload. The high-potential end of the voltage source connects to the 5ohm at node a. The 5ohm and j12.6ohm connect at node b. The j12.6ohm, -j6.37ohm, and 8ohm connect at node c. The 8ohm and Zload connect at node d. The low-potential end of the current source, 5ohm, -j6.37ohm, and Zload connect at node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=70.7+j70.7~VRMS]		(0,0);
+									\draw[]	(0,2.5) to [R, l^=5~$\Omega$]									(2.5,2.5);
+									\draw[]	(2.5,2.5) to [L, l^=j12.6~$\Omega$]								(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=$-$j6.37~$\Omega$, *-*]						(5,0);
+									\draw[]	(5,2.5) to [R, l^=8~$\Omega$, -o]								(7.5,2.5);
+									\draw[]	(7.5,2.5) to [short, o-]										(8.5,2.5);
+									\draw[]	(8.5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]						(8.5,0);
+									\draw[]	(0,0) to [short, -o]											(7.5,0);
+									\draw[]	(7.5,0) to [short, o-]											(8.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use the voltage divider rule to calculate <m>\vec{V_{TH}}</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{V_{TH}} \amp= (70.71+j70.71~\textrm{VRMS})\left(\frac{-j6.37~\Omega}{5+j12.57-j6.37~\Omega}\right)</mrow>
+							<mrow>\amp= -8.52-j79.47~\textrm{VRMS}</mrow>
+							<mrow>\amp= 79.93~\textrm{VRMS}\angle -96.12^\circ</mrow>
+						</md>
+					</p>
+
+					<p>For maximum power transfer, the load must be equal to <m>\vec{Z_{TH}}^*</m>.</p>
+
+					<p>
+						<md>\vec{Z_{LOAD}} = 11.19+j10.33~\Omega</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the inductance value.</p>
+
+					<p>
+						<md>
+							<mrow>L \amp= \frac{10.33}{2\pi 50}</mrow>
+							<mrow>\amp= 32.87~\textrm{mH}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-max-power-ac" /> to calculate the power transferred to the load.</p>
+
+					<p>
+						<md>
+							<mrow>P_{LOAD,MAX} \amp= \frac{|79.93~\textrm{VRMS}|^2}{4(11.19~\Omega)}</mrow>
+							<mrow>\amp= 142.67~\textrm{W}</mrow>
+						</md>
+					</p>
+
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-max-power-transfer-exercise5">
+				<statement>
+					<p>Determine the circuit elements that must be placed on the load (shown as <m>\vec{Z_{LOAD}}</m> in the circuit diagram) for maximum power transfer given the circuit in <xref ref="max-power-exercise5-diagram" />. Then, calculate the power consumed by that load. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="max-power-exercise5-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-max-power-transfer-exercise5" />.</caption>
+  						<image width="100%" xml:id="ch10-max-power-exercise5-diagram">
+    						<shortdescription>Circuit with three meshes and four nodes consisting of a (28ARMS angle 0deg) current source, 0.4mF capacitor, 10ohm resistor, 16mH inductor, 18ohm resistor, and unknown Zload. The high-potential end of the current source connects to the 0.4mF and 10ohm at node a. The 10ohm and 16mH connect at node b. The 16mH, 18ohm, and Zload connect at node c. The low-potential end of the current source, 0.4mF, 18ohm, and Zload connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=28~ARMS~$\angle$~0$^\circ$]		(0,0);
+									\draw[]	(0,2.5) to [short]														(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=0.4~mF, *-*]										(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l^=10~$\Omega$]										(5,2.5);
+									\draw[]	(5,2.5) to [L, l^=16~mH]												(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=18~$\Omega$, *-*]									(7.5,0);
+									\draw[]	(7.5,2.5) to [short, -o]												(8,2.5);
+									\draw[]	(8,2.5) to [short, o-]													(9.5,2.5);
+									\draw[]	(9.5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]								(9.5,0);
+									\draw[]	(0,0) to [short, -o]													(8,0);
+									\draw[]	(8,0) to [short, o-]													(9.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>The load circuit elements include a 6.43<nbsp />&#8486; resistor connected in series with a 657<nbsp />&#181;H inductor.</p>
+					
+					<p>
+						<md>P = 553~\textrm{mW}</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch10-maximum-power-transfer-exercise5-figure1">
+							<shortdescription>Circuit with three meshes and four nodes consisting of a 28ARMS current source, -j6.63ohm impedance, 10ohm resistor, j6.03ohm impedance, 18ohm resistor, and unknown Zload. The high-potential end of the current source connects to the -j6.63ohm and 10ohm at node a. The 10ohm and j6.03ohm connect at node b. The j6.03ohm, 18ohm, and Zload connect at node c. The low-potential end of the current source, -j6.63ohm, 18ohm, and Zload connect at node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=28~ARMS]		(0,0);
+									\draw[]	(0,2.5) to [short]										(2.5,2.5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j6.63~$\Omega$, *-*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l^=10~$\Omega$]						(5,2.5);
+									\draw[]	(5,2.5) to [L, l^=j6.03~$\Omega$]						(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=18~$\Omega$, *-*]					(7.5,0);
+									\draw[]	(7.5,2.5) to [short, -o]								(8,2.5);
+									\draw[]	(8,2.5) to [short, o-]									(9.5,2.5);
+									\draw[]	(9.5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]				(9.5,0);
+									\draw[]	(0,0) to [short, -o]									(8,0);
+									\draw[]	(8,0) to [short, o-]									(9.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Deactivate the source and calculate the Th&#233;venin equivalent impedance.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{Z_{TH}} \amp= (18~\Omega)//(10+j6.03-j6.63~\Omega)</mrow>
+							<mrow>\amp= 6.43-j0.25~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Convert the current source to a voltage source.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{V_S} \amp= (28~\textrm{ARMS})(-j6.63~\Omega)</mrow>
+							<mrow>\amp= -j185.68~\textrm{VRMS}</mrow>
+						</md>
+					</p>
+
+					<figure>
+						<caption></caption>
+						<image width="100%" xml:id="ch10-maximum-power-transfer-exercise5-figure2">
+							<shortdescription>Circuit with two meshes and five nodes consisting of a -j186VRMS voltage source, -j6.63ohm impedance, 10ohm resistor, j6.03ohm impedance, 18ohm resistor, and unknown Zload. The high-potential end of the voltage source connects to the -j6.63ohm at node a. The -j6.63ohm connects to the 10ohm at node b. The 10ohm and j6.03ohm connect at node c. The j6.03ohm, 18ohm, and Zload connect at node d. The low-potential end of the current source, -j6.63ohm, 18ohm, and Zload connect at node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$-$j186~VRMS]		(0,0);
+									\draw[]	(0,2.5) to [C, l^=$-$j6.63~$\Omega$]						(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l^=10~$\Omega$]							(5,2.5);
+									\draw[]	(5,2.5) to [L, l^=j6.03~$\Omega$]							(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=18~$\Omega$, *-*]						(7.5,0);
+									\draw[]	(7.5,2.5) to [short, -o]									(8,2.5);
+									\draw[]	(8,2.5) to [short, o-]										(9.5,2.5);
+									\draw[]	(9.5,2.5) to [generic, l_=$\vec{Z_{LOAD}}$]					(9.5,0);
+									\draw[]	(0,0) to [short, -o]										(8,0);
+									\draw[]	(8,0) to [short, o-]										(9.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use the voltage divider rule to calculate <m>\vec{V_{TH}}</m>.</p>
+
+					<p>
+						<md>
+							<mrow>\vec{V_{TH}} \amp= (-j185.68~\textrm{VRMS})\left(\frac{18~\Omega}{28+j6.03-j6.63~\Omega}\right)</mrow>
+							<mrow>\amp= 2.55-j119.31~\textrm{VRMS}</mrow>
+							<mrow>\amp= 119.34~\textrm{VRMS}\angle -88.77^\circ</mrow>
+						</md>
+					</p>
+
+					<p>For maximum power transfer, the load must be equal to <m>\vec{Z_{TH}}^*</m>.</p>
+
+					<p>
+						<md>\vec{Z_{LOAD}} = 6.43+j0.25~\Omega</md>
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the inductance value.</p>
+
+					<p>
+						<md>
+							<mrow>L \amp= \frac{0.25}{2\pi 50}</mrow>
+							<mrow>\amp= 656.99~\mu\textrm{H}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-max-power-ac" /> to calculate the power transferred to the load.</p>
+
+					<p>
+						<md>
+							<mrow>P_{LOAD,MAX} \amp= \frac{|119.34~\textrm{VRMS}|^2}{4(6.43~\Omega)}</mrow>
+							<mrow>\amp= 553.39~\textrm{W}</mrow>
+						</md>
+					</p>
+
+				</solution>
+			</exercise>
+			
+		</subexercises>
+
+		<subexercises>
+			<title>Power Factor Correction</title>
+
+			<exercise xml:id="ch10-power-factor-correction-exercise1">
+				<statement>
+					<p>Calculate the initial power factor consumed by the load (indicated with dashed lines) in the circuit shown in <xref ref="power-factor-correction-exercise1-diagram" />. Then, determine the circuit element that must be placed in parallel with the load to increase the power factor to 0.800. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="power-factor-correction-exercise1-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-power-factor-correction-exercise1" />.</caption>
+  						<image width="50%" xml:id="ch10-power-factor-correction-exercise1-diagram">
+    						<shortdescription>Circuit with one mesh and four nodes consisting of (80VRMS angle 0deg) voltage source, 33ohm resistor, 47ohm resistor, and 130mH inductor. All four circuit elements are connected in series. The dashed line encompasses the 47ohm resistor and 130mH inductor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=80~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=33~$\Omega$]										(2.5,3.5);
+									\draw[]	(2.5,3.5) to [R, l_=47~$\Omega$]									(2.5,1.5);
+									\draw[]	(2.5,1.5) to [L, l_=130~mH]											(2.5,0);
+									\draw[]	(0,0) to [short]													(2.5,0);
+									\draw[dashed]	(1,3.25) rectangle (3,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>pf_i \amp= 0.692</mrow>
+							<mrow>C \amp= 7.92~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch10-power-factor-correction-exercise1-figure1">
+							<shortdescription>Circuit with one mesh and four nodes consisting of 80VRMS voltage source, 33ohm resistor, 47ohm resistor, and j49.0ohm impedance. All four circuit elements are connected in series. The dashed line encompasses the 47ohm resistor and j49.0ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=80~VRMS]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=33~$\Omega$]						(2.5,3.5);
+									\draw[]	(2.5,3.5) to [R, l_=47~$\Omega$]					(2.5,1.5);
+									\draw[]	(2.5,1.5) to [L, l_=j49.0~$\Omega$]					(2.5,0);
+									\draw[]	(0,0) to [short]									(2.5,0);
+									\draw[dashed]	(0.8,3.25) rectangle (3,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the load impedance.</p>
+					
+					<p>
+						<md>\vec{Z_{LOAD}} = 47 + j49.01~\Omega</md>
+					</p>
+
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{80~\textrm{VRMS}}{80+j49.01~\Omega}</mrow>
+							<mrow>\amp= 0.73-j0.45~\textrm{ARMS}</mrow>
+							<mrow>\amp= 0.85~\textrm{ARMS} \angle -31.49^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate the voltage dropped over the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{LOAD}} \amp= (0.73-j0.45~\textrm{ARMS})(47+j49.01~\Omega)</mrow>
+							<mrow>\amp= 56.01+j14.70~\textrm{VRMS}</mrow>
+							<mrow>\amp= 57.90~\textrm{VRMS} \angle 14.71^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load. (You could also use <xref ref="ch10-complex-power-vi" /> or <xref ref="ch10-complex-power-voltage" /> to calculate this value. Feel free to try the other two equations for extra practice.)</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (0.85~\textrm{ARMS})^2(47 + j49.01~\Omega)</mrow>
+							<mrow>\amp= 34.17 + j35.64~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the initial power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{34.17}{\sqrt{34.17^2 + 35.64^2}}</mrow>
+							<mrow>\amp= 0.692</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-qfinal-inductive" /> to calculate the final reactive power required to increase the power factor to the desired level.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_f \amp= 34.17 \sqrt{\frac{1}{0.800^2}-1}</mrow>
+							<mrow>\amp= 25.63~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Calculate <m>Q_C</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_C \amp= Q_f - Q</mrow>
+							<mrow>\amp= 25.63~\textrm{VAR} - 35.64~\textrm{VAR}</mrow>
+							<mrow>\amp= -10.00~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-compensating-capacitor" /> to calculate the compensating capacitance.</p>
+					
+					<p>
+						<md>
+							<mrow>C \amp= \frac{10.00}{|57.90|^2(2\pi60)}</mrow>
+							<mrow>\amp= 7.92~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-power-factor-correction-exercise2">
+				<statement>
+					<p>Calculate the initial power factor consumed by the load (indicated with dashed lines) in the circuit shown in <xref ref="power-factor-correction-exercise2-diagram" />. Then, determine the circuit element that must be placed in parallel with the load to increase the power factor to 0.860. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="power-factor-correction-exercise2-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-power-factor-correction-exercise2" />.</caption>
+  						<image width="50%" xml:id="ch10-power-factor-correction-exercise2-diagram">
+    						<shortdescription>Circuit with one mesh and four nodes consisting of (160 VRMS angle 0deg) voltage source, 4ohm resistor, 6ohm resistor, and 100uF capacitor. All four circuit elements are connected in series. The dashed line encompasses the 6ohm resistor and 100uF capacitor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=160~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=4~$\Omega$]											(2.5,3.5);
+									\draw[]	(2.5,3.5) to [R, l_=6~$\Omega$]											(2.5,1.5);
+									\draw[]	(2.5,1.5) to [C, l_=100~$\mu$F]											(2.5,0);
+									\draw[]	(0,0) to [short]														(2.5,0);
+									\draw[dashed]	(0.75,3.25) rectangle (3,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>pf_i \amp= 0.221</mrow>
+							<mrow>L \amp= 85.4~\textrm{mH}</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="50%" xml:id="ch10-power-factor-correction-exercise2-figure1">
+							<shortdescription>Circuit with one mesh and four nodes consisting of 160 VRMS voltage source, 4ohm resistor, 6ohm resistor, and -j26.5ohm impedance. All four circuit elements are connected in series. The dashed line encompasses the 6ohm resistor and -j26.5ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=160~VRMS]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=4~$\Omega$]						(2.75,3.5);
+									\draw[]	(2.75,3.5) to [R, l_=6~$\Omega$]					(2.75,1.5);
+									\draw[]	(2.75,1.5) to [C, l_=$-$j26.5~$\Omega$]				(2.75,0);
+									\draw[]	(0,0) to [short]									(2.75,0);
+									\draw[dashed]	(0.7,3.25) rectangle (3.25,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the load impedance.</p>
+					
+					<p>
+						<md>\vec{Z_{LOAD}} = 6 - j26.53~\Omega</md>
+					</p>
+
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{160~\textrm{VRMS}}{10-j26.53~\Omega}</mrow>
+							<mrow>\amp= 1.99+j5.28~\textrm{ARMS}</mrow>
+							<mrow>\amp= 5.64~\textrm{ARMS} \angle 69.34^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate the voltage dropped over the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{LOAD}} \amp= (1.99+j5.28~\textrm{ARMS})(6-j26.53~\Omega)</mrow>
+							<mrow>\amp= 152.04-j21.13~\textrm{VRMS}</mrow>
+							<mrow>\amp= 153.50~\textrm{VRMS} \angle -7.91^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load. (You could also use <xref ref="ch10-complex-power-vi" /> or <xref ref="ch10-complex-power-voltage" /> to calculate this value. Feel free to try the other two equations for extra practice.)</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (5.64~\textrm{ARMS})^2(6 - j26.53~\Omega)</mrow>
+							<mrow>\amp= 191.14-j845.00~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the initial power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{191.14}{\sqrt{191.14^2 + (-845.00)^2}}</mrow>
+							<mrow>\amp= 0.221</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-qfinal-capacative" /> to calculate the final reactive power required to increase the power factor to the desired level.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_f \amp= -191.14 \sqrt{\frac{1}{0.860^2}-1}</mrow>
+							<mrow>\amp= -113.41~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Calculate <m>Q_L</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_L \amp= Q_f - Q</mrow>
+							<mrow>\amp= -113.41~\textrm{VAR} + 845.00~\textrm{VAR}</mrow>
+							<mrow>\amp= 731.59~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-compensating-inductor" /> to calculate the compensating inductance.</p>
+					
+					<p>
+						<md>
+							<mrow>L \amp= \frac{|153.50|^2}{2\pi(60)(731.59)}</mrow>
+							<mrow>\amp= 85.43~\textrm{mH}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-power-factor-correction-exercise3">
+				<statement>
+					<p>Calculate the initial power factor consumed by the load (indicated with dashed lines) in the circuit shown in <xref ref="power-factor-correction-exercise3-diagram" />. Then, determine the circuit element that must be placed in parallel with the load to increase the power factor to 0.990. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="power-factor-correction-exercise3-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-power-factor-correction-exercise3" />.</caption>
+  						<image width="80%" xml:id="ch10-power-factor-correction-exercise3-diagram">
+    						<shortdescription>Circuit with one mesh and five nodes consisting of (170 VRMS angle 0deg) voltage source, 35ohm resistor, 75ohm resistor, 45mH inductor, and 65mH inductor. All five circuit elements are connected in series. The dashed line encompasses the 75ohm resistor and 65mH inductor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=170~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=35~$\Omega$]											(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=45~mH]												(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=75~$\Omega$]											(5,1.5);
+									\draw[]	(5,1.5) to [L, l_=65~mH]												(5,0);
+									\draw[]	(0,0) to [short]														(5,0);
+									\draw[dashed]	(3.5,3.25) rectangle (5.5,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>pf_i \amp= 0.951</mrow>
+							<mrow>C \amp= 5.89~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+					
+					<figure>
+						<caption></caption>
+						<image width="80%" xml:id="ch10-power-factor-correction-exercise3-figure1">
+							<shortdescription>Circuit with one mesh and five nodes consisting of 170 VRMS voltage source, 35ohm resistor, 75ohm resistor, j17.0ohm impedance, and j24.5ohm impedance. All five circuit elements are connected in series. The dashed line encompasses the 75ohm resistor and j24.5ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=170~VRMS]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=35~$\Omega$]						(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=j17.0~$\Omega$]					(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=75~$\Omega$]						(5,1.5);
+									\draw[]	(5,1.5) to [L, l_=j24.5~$\Omega$]					(5,0);
+									\draw[]	(0,0) to [short]									(5,0);
+									\draw[dashed]	(3.25,3.25) rectangle (5.5,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the load impedance.</p>
+					
+					<p>
+						<md>\vec{Z_{LOAD}} = 75+j24.50~\Omega</md>
+					</p>
+
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{170~\textrm{VRMS}}{110+j16.96+j24.50~\Omega}</mrow>
+							<mrow>\amp= 1.35-j0.51~\textrm{ARMS}</mrow>
+							<mrow>\amp= 1.45~\textrm{ARMS} \angle -20.66^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate the voltage dropped over the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{LOAD}} \amp= (1.35-j0.51~\textrm{ARMS})(75+j24.50~\Omega)</mrow>
+							<mrow>\amp= 113.99-j5.10~\textrm{VRMS}</mrow>
+							<mrow>\amp= 114.10~\textrm{VRMS} \angle -2.56^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load. (You could also use <xref ref="ch10-complex-power-vi" /> or <xref ref="ch10-complex-power-voltage" /> to calculate this value. Feel free to try the other two equations for extra practice.)</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (1.45~\textrm{ARMS})^2(75+j24.50~\Omega)</mrow>
+							<mrow>\amp= 156.84+j51.24~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the initial power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{156.84}{\sqrt{156.84^2 + 51.24^2}}</mrow>
+							<mrow>\amp= 0.951</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-qfinal-inductive" /> to calculate the final reactive power required to increase the power factor to the desired level.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_f \amp= 156.84 \sqrt{\frac{1}{0.990^2}-1}</mrow>
+							<mrow>\amp= 22.35~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Calculate <m>Q_C</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_C \amp= Q_f - Q</mrow>
+							<mrow>\amp= 22.35~\textrm{VAR} - 51.24~\textrm{VAR}</mrow>
+							<mrow>\amp= -28.90~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-compensating-capacitor" /> to calculate the compensating capacitance.</p>
+					
+					<p>
+						<md>
+							<mrow>C \amp= \frac{-Q_C}{|\vec{V_{LOAD,RMS}}|^2\omega}</mrow>
+							<mrow>\amp= \frac{28.90}{|114.10|^2(2\pi60)}</mrow>
+							<mrow>\amp= 5.89~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-power-factor-correction-exercise4">
+				<statement>
+					<p>Calculate the initial power factor consumed by the load (indicated with dashed lines) in the circuit shown in <xref ref="power-factor-correction-exercise4-diagram" />. Then, determine the circuit element that must be placed in parallel with the load to increase the power factor to 0.980. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="power-factor-correction-exercise4-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-power-factor-correction-exercise4" />.</caption>
+  						<image width="80%" xml:id="ch10-power-factor-correction-exercise4-diagram">
+    						<shortdescription>Circuit with one mesh and five nodes consisting of (160 VRMS angle 0deg) voltage source, 30ohm resistor, 90ohm resistor, 33mH inductor, and 70uF capacitor. All five circuit elements are connected in series. The dashed line encompasses the 90ohm resistor and 70uF capacitor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=160~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=30~$\Omega$]											(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=33~mH]												(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=90~$\Omega$]											(5,1.5);
+									\draw[]	(5,1.5) to [C, l_=70~$\mu$F]											(5,0);
+									\draw[]	(0,0) to [short]														(5,0);
+									\draw[dashed]	(3.5,3.25) rectangle (5.5,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>pf_i \amp= 0.922</mrow>
+							<mrow>L \amp= 1.29~\textrm{H}</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="80%" xml:id="ch10-power-factor-correction-exercise4-figure1">
+							<shortdescription>Circuit with one mesh and five nodes consisting of (160 VRMS angle 0deg) voltage source, 30ohm resistor, 90ohm resistor, j12.4ohm impedance, and -j37.9ohm impedance. All five circuit elements are connected in series. The dashed line encompasses the 90ohm resistor and -j37.9ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=160~VRMS]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=30~$\Omega$]						(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=j12.4~$\Omega$]					(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=90~$\Omega$]						(5,1.5);
+									\draw[]	(5,1.5) to [C, l_=$-$j37.9~$\Omega$]				(5,0);
+									\draw[]	(0,0) to [short]									(5,0);
+									\draw[dashed]	(2.9,3.25) rectangle (5.5,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the load impedance.</p>
+					
+					<p>
+						<md>\vec{Z_{LOAD}} = 90-j37.89~\Omega</md>
+					</p>
+
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{160~\textrm{VRMS}}{120+j12.44-j37.89~\Omega}</mrow>
+							<mrow>\amp= 1.28+j0.27~\textrm{ARMS}</mrow>
+							<mrow>\amp= 1.30~\textrm{ARMS} \angle 11.98^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate the voltage dropped over the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{LOAD}} \amp= (1.28+j0.27~\textrm{ARMS})(90-j37.89~\Omega)</mrow>
+							<mrow>\amp= 125.09-j23.99~\textrm{VRMS}</mrow>
+							<mrow>\amp= 127.37~\textrm{VRMS} \angle -10.86^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load. (You could also use <xref ref="ch10-complex-power-vi" /> or <xref ref="ch10-complex-power-voltage" /> to calculate this value. Feel free to try the other two equations for extra practice.)</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (1.30~\textrm{ARMS})^2(90-j37.89~\Omega)</mrow>
+							<mrow>\amp= 153.11-j64.47~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the initial power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{153.11}{\sqrt{153.11^2 + (-64.47)^2}}</mrow>
+							<mrow>\amp= 0.922</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-qfinal-capacative" /> to calculate the final reactive power required to increase the power factor to the desired level.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_f \amp= -153.11 \sqrt{\frac{1}{0.980^2}-1}</mrow>
+							<mrow>\amp= -31.09~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Calculate <m>Q_L</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_L \amp= Q_f - Q</mrow>
+							<mrow>\amp= -31.09~\textrm{VAR} + 64.47~\textrm{VAR}</mrow>
+							<mrow>\amp= 33.38~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-compensating-inductor" /> to calculate the compensating inductance.</p>
+					
+					<p>
+						<md>
+							<mrow>L \amp= \frac{|127.37|^2}{2\pi(60)(33.38)}</mrow>
+							<mrow>\amp= 1.29~\textrm{H}</mrow>
+						</md>
+					</p>
+
+				</solution>
+			</exercise>
+
+			<exercise xml:id="ch10-power-factor-correction-exercise5">
+				<statement>
+					<p>Calculate the initial power factor consumed by the load (indicated with dashed lines) in the circuit shown in <xref ref="power-factor-correction-exercise5-diagram" />. Then, determine the circuit element that must be placed in parallel with the load to increase the power factor to 0.960. The source frequency is 60<nbsp />Hz.</p>
+
+					<figure xml:id="power-factor-correction-exercise5-diagram">
+  						<caption>Circuit diagram corresponding to <xref ref="ch10-power-factor-correction-exercise5" />.</caption>
+  						<image width="100%" xml:id="ch10-power-factor-correction-exercise5-diagram">
+    						<shortdescription>Circuit with two meshes and six nodes consisting of a (190VRMS angle 0deg) voltage source, 23ohm resistor, 29mH inductor, 65ohm resistor, 72mH inductor, 73ohm resistor, and 83mH inductor. The high-potential end of the voltage source connects to the 23ohm at node a. The 23ohm connects to the 29mH at node b. The 29mH, 65ohm, and 73ohm connect at node c. The 65ohm and 72mH connect at node d. The 73ohm and 83mH connect at node e. The low-potential end of the voltage source connects to the 72mH and 83mH at node f. The dashed line encompasses the 65ohm resistor, 72mH inductor, 73ohm resistor, and 83mH inductor.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=190~VRMS~$\angle$~0$^\circ$]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=23~$\Omega$]											(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=29~mH]												(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=65~$\Omega$, *-]										(5,1.5);
+									\draw[]	(5,1.5) to [L, l_=72~mH, -*]											(5,0);
+									\draw[]	(5,3.5) to [short]														(7.5,3.5);
+									\draw[]	(7.5,3.5) to [R, l_=73~$\Omega$]										(7.5,1.5);
+									\draw[]	(7.5,1.5) to [L, l_=83~mH]												(7.5,0);
+									\draw[]	(0,0) to [short]														(7.5,0);
+									\draw[dashed]	(3.5,3.25) rectangle (8,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+				</statement>
+
+				<answer>
+					<p>
+						<md>
+							<mrow>pf_i \amp= 0.921</mrow>
+							<mrow>C \amp= 8.58~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+				</answer>
+
+				<solution>
+					<p>Phasor transform the circuit.</p>
+
+					<figure>
+						<caption></caption>
+						<image width="90%" xml:id="ch10-power-factor-correction-exercise5-figure1">
+							<shortdescription>Circuit with two meshes and six nodes consisting of a 190VRMS voltage source, 23ohm resistor, j10.9ohm impedance, 65ohm resistor, j27.1ohm impedance, 73ohm resistor, and j31.3ohm impedance. The high-potential end of the voltage source connects to the 23ohm at node a. The 23ohm connects to the j10.9ohm at node b. The j10.9ohm, 65ohm, and 73ohm connect at node c. The 65ohm and j27.1ohm connect at node d. The 73ohm and j31.3ohm connect at node e. The low-potential end of the voltage source connects to the j27.1ohm and j31.3ohm at node f. The dashed line encompasses the 65ohm resistor, j27.1ohm impedance, 73ohm resistor, and j31.3ohm impedance.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,3.5) node[below left] {+} to [sV, l_=190~VRMS]	(0,0);
+									\draw[]	(0,3.5) to [R, l^=23~$\Omega$]						(2.5,3.5);
+									\draw[]	(2.5,3.5) to [L, l^=j10.9~$\Omega$]					(5,3.5);
+									\draw[]	(5,3.5) to [R, l_=65~$\Omega$, *-]					(5,1.5);
+									\draw[]	(5,1.5) to [L, l_=j27.1~$\Omega$, -*]				(5,0);
+									\draw[]	(5,3.5) to [short]									(7.5,3.5);
+									\draw[]	(7.5,3.5) to [R, l_=73~$\Omega$]					(7.5,1.5);
+									\draw[]	(7.5,1.5) to [L, l_=j31.3~$\Omega$]					(7.5,0);
+									\draw[]	(0,0) to [short]									(7.5,0);
+									\draw[dashed]	(3.25,3.25) rectangle (8,0.25);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Calculate the load impedance.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{Z_{LOAD}} \amp= (65+j27.14~\Omega)//(73+j31.29~\Omega)</mrow>
+							<mrow>\amp= 34.38+j14.54~\Omega</mrow>
+						</md>
+					</p>
+
+					<p>Use Ohm's law to calculate the current through the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{I_{LOAD}} \amp= \frac{190~\textrm{VRMS}}{23+j10.93+34.38+j14.54~\Omega}</mrow>
+							<mrow>\amp= 2.77-j1.23~\textrm{ARMS}</mrow>
+							<mrow>\amp= 3.03~\textrm{ARMS} \angle -23.93^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use the voltage divider rule to calculate the voltage dropped over the load.</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{V_{LOAD}} \amp= (2.77-j1.23~\textrm{ARMS})(34.38+j14.54~\Omega)</mrow>
+							<mrow>\amp= 112.96-j2.00~\textrm{VRMS}</mrow>
+							<mrow>\amp= 112.98~\textrm{VRMS} \angle -1.02^\circ</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-complex-power-current" /> to calculate the power consumed by the load. (You could also use <xref ref="ch10-complex-power-vi" /> or <xref ref="ch10-complex-power-voltage" /> to calculate this value. Feel free to try the other two equations for extra practice.)</p>
+					
+					<p>
+						<md>
+							<mrow>\vec{S_{LOAD}} \amp= (3.03~\textrm{ARMS})^2(34.38+j14.54~\Omega)</mrow>
+							<mrow>\amp= 314.91+j133.13~\textrm{VA}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-power-factor-p-q-only" /> to calculate the initial power factor.</p>
+					
+					<p>
+						<md>
+							<mrow>pf \amp= \frac{314.91}{\sqrt{314.91^2 + 133.13^2}}</mrow>
+							<mrow>\amp= 0.921</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-qfinal-inductive" /> to calculate the final reactive power required to increase the power factor to the desired level.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_f \amp= 314.91 \sqrt{\frac{1}{0.960^2}-1}</mrow>
+							<mrow>\amp= 91.85~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Calculate <m>Q_C</m>.</p>
+					
+					<p>
+						<md>
+							<mrow>Q_C \amp= Q_f - Q</mrow>
+							<mrow>\amp= 91.85~\textrm{VAR} - 133.13~\textrm{VAR}</mrow>
+							<mrow>\amp= -41.29~\textrm{VAR}</mrow>
+						</md>
+					</p>
+
+					<p>Use <xref ref="ch10-eq-compensating-capacitor" /> to calculate the compensating capacitance.</p>
+					
+					<p>
+						<md>
+							<mrow>C \amp= \frac{41.29}{|112.98|^2(2\pi60)}</mrow>
+							<mrow>\amp= 8.58~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+				</solution>
+			</exercise>
+			
+		</subexercises>
+	</exercises>
+
+</chapter>

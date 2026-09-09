@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="my-great-book">
+    <title>Circuit Analysis</title>
+
+    <!-- Include frontmatter -->
+    <xi:include href="./frontmatter.ptx" />
+
+    <!-- Include chapters -->
+    <xi:include href="./ch1-properties.ptx" />
+    <xi:include href="./ch2-circuit-laws.ptx" />
+    <xi:include href="./ch3-circuit-theorems.ptx" />
+    <xi:include href="./ch4-opamps.ptx" />
+    <xi:include href="./ch5-caps-rc.ptx" />
+    <xi:include href="./ch6-inductors-rl.ptx" />
+    <xi:include href="./ch7-second-order.ptx" />
+    <xi:include href="./ch8-phasors.ptx" />
+    <xi:include href="./ch9-phasor-analysis.ptx" />
+    <xi:include href="./ch10-ac-power.ptx" />
+    <xi:include href="./ch11-laplace.ptx" />
+    <xi:include href="./ch12-555timer.ptx" />
+
+    <!-- Include backmatter -->
+    <xi:include href="./end_appendixA_units.ptx" />
+    <xi:include href="./backmatter.ptx" />
+
+  </book>
+</pretext>

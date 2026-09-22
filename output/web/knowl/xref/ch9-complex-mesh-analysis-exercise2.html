@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate <span class="process-math">\(i(t)\)</span> given the circuit diagram shown in <a href="ch9-phasoranalysis-8.html#complex-mesh-analysis-exercise2-diagram" class="xref" data-knowl="./knowl/xref/complex-mesh-analysis-exercise2-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.27">Figure 9.6.27</a>. The source value is <span class="process-math">\(v_{AC}(t) = 30~\textrm{V}~\cos(2\pi 100t + 45\pi/180)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-mesh-analysis-exercise2-diagram.svg" role="img" class="contained" alt="Circuit with three meshes and five nodes consisting of voltage source Vac, 30ohm resistor, 15ohm resistor, 20ohm resistor, 250uF capacitor, 160uF capacitor, and 8mH inductor. The high-potential end of Vac connects to the 15ohm and 30ohm at node a. The 30ohm and 250uF connect at node b. The 15ohm and 8mH connect at node c. The 250uF, 8mH, and 20ohm connect at node d. The low-potential end of Vac, 160uF, and 20ohm connect at node e. Branch current i(t) flows through the 160uF from node c to node e."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-complex-mesh-analysis-exercise2" class="xref" data-knowl="./knowl/xref/ch9-complex-mesh-analysis-exercise2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.12">Exercise 9.6.12</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.27"><a tabindex="-1" href="#complex-mesh-analysis-exercise2-diagram" title="Copy heading and permalink for Figure 9.6.27" aria-label="Copy heading and permalink for Figure 9.6.27">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 1.83~\textrm{A}~\cos(2\pi100t + 103 \pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.12.1"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-2" title="Copy heading and permalink for Answer 9.6.12.1" aria-label="Copy heading and permalink for Answer 9.6.12.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of both capacitors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{C160}} \amp= \frac{1}{j(2\pi 100)(160 \times 10^{-6})}\\
+\amp= -j9.9472~\Omega\\
+\vec{Z_{C250}} \amp= \frac{1}{j(2\pi 100)(250 \times 10^{-6})}\\
+\amp= -j6.3662~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_L} \amp= j(2\pi 100)(0.008)\\
+\amp= j5.0265~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Transform the source into a phasor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{AC}} \amp= 30~\cos{45^\circ} + j30~\sin{45^\circ}~\textrm{V}\\
+\amp= 21.2132 + j21.2132~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-mesh-analysis-exercise2-figure1.svg" role="img" class="contained" alt="Circuit with three meshes and five nodes consisting of voltage source Vac, 30ohm resistor, 15ohm resistor, 20ohm resistor, -j6.37ohm impedance, -j9.95ohm impedance, and j5.03ohm impedance. The high-potential end of Vac connects to the 15ohm and 30ohm at node a. The 30ohm and -j6.37ohm connect at node b. The 15ohm and j5.03ohm connect at node c. The -j6.37ohm, j5.03ohm, and 20ohm connect at node d. The low-potential end of Vac, -j9.95ohm, and 20ohm connect at node e. Branch current I flows through the -j9.95ohm from node c to node e."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.28"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-7" title="Copy heading and permalink for Figure 9.6.28" aria-label="Copy heading and permalink for Figure 9.6.28">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 30 Ω resistor and −j6.37 Ω impedance are connected in series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-mesh-analysis-exercise2-figure2.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of voltage source Vac, 15ohm resistor, 20ohm resistor, 30-j6.37ohm impedance, -j9.95ohm impedance, and j5.03ohm impedance. The high-potential end of Vac connects to the 15ohm and 30-j6.37ohm at node a. The 15ohm and j5.03ohm connect at node b. The 30-j6.37ohm, j5.03ohm, and 20ohm connect at node c. The low-potential end of Vac, -j9.95ohm, and 20ohm connect at node d. Branch current I flows through the -j9.95ohm from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.29"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-9" title="Copy heading and permalink for Figure 9.6.29" aria-label="Copy heading and permalink for Figure 9.6.29">🔗</a></div></figcaption>
+</figure>
+<div class="para">Mesh current <span class="process-math">\(\vec{I_A}\)</span> will flow clockwise around the upper mesh. Mesh current <span class="process-math">\(\vec{I_B}\)</span> will flow clockwise around the lower-left mesh. Mesh current <span class="process-math">\(\vec{I_C}\)</span> will flow clockwise around the lower-right mesh. Derive the mesh equations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp= (30-j6.37)\vec{I_A} + j5.03(\vec{I_A}-\vec{I_C}) + 15(\vec{I_A}-\vec{I_B})\\
+21.21+j21.21 \amp= 15(\vec{I_B}-\vec{I_A}) -j9.95(\vec{I_B}-\vec{I_C})\\
+0 \amp= -j9.95(\vec{I_C}-\vec{I_B}) + j5.03(\vec{I_C}-\vec{I_A}) + 20\vec{I_C}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The three equations can be expressed in a matrix. The left column contains coefficients of <span class="process-math">\(\vec{I_A}\text{,}\)</span> the middle-left column contains coefficients of <span class="process-math">\(\vec{I_B}\text{,}\)</span> the middle-right column contains coefficients of <span class="process-math">\(\vec{I_C}\text{,}\)</span> and the right column contains constants.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+45-j1.34	\amp -15		\amp -j5.03		\amp 	0\\
+4-15		\amp 15-j9.95	\amp j9.95		\amp 	21.21+j21.21\\
+4-j5.03	\amp j9.95			\amp 20-j4.92	\amp 	0
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Solve the matrix for <span class="process-math">\(\vec{I_B}\)</span> and <span class="process-math">\(\vec{I_C}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_B} \amp= 0.31+j1.83~\textrm{A}\\
+\vec{I_C} \amp= 0.73+j0.05~\textrm{A}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate the branch current <span class="process-math">\(\vec{I}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I} \amp= (\vec{I_B}-\vec{I_C})\\
+\amp= (0.31+j1.83~\textrm{A})-(0.73+j0.05~\textrm{A})\\
+\amp= -0.42+j1.79~\textrm{A}\\
+\amp= 1.83~\textrm{A} \angle 103.18^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert to time-varying form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 1.83~\textrm{A}~\cos(2\pi100t + 103 \pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.12.1"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2-3" title="Copy heading and permalink for Solution 9.6.12.1" aria-label="Copy heading and permalink for Solution 9.6.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.12"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise2" title="Copy heading and permalink for Exercise 9.6.12" aria-label="Copy heading and permalink for Exercise 9.6.12">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-complex-mesh-analysis-exercise2">In Context</a></span>
+</body>
+</html>

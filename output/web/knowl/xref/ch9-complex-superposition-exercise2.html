@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate <span class="process-math">\(v(t)\)</span> given the circuit diagram shown in <a href="ch9-phasoranalysis-8.html#complex-superposition-exercise2-diagram" class="xref" data-knowl="./knowl/xref/complex-superposition-exercise2-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.36">Figure 9.6.36</a>. The frequency of operation is 40 Hz.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch9-complex-superposition-exercise2-diagram.svg" role="img" class="contained" alt="Circuit with four meshes and three nodes consisting of (10A angle 0deg) current source, 5ohm resistor, -j20/9ohm impedance, j5ohm impedance, 20ohm resistor, and (100V angle -90deg) voltage source. The high-potential end of the current source, 5ohm, -j20/9ohm, j5ohm, and 20ohm connect at node a. The 20ohm and high-potential end of the voltage source connect at node b. The low-potential end of both sources, 5ohm, -j20/9ohm, j5ohm connect at node c. Voltage V drops from node a to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.36<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-complex-superposition-exercise2" class="xref" data-knowl="./knowl/xref/ch9-complex-superposition-exercise2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.16">Exercise 9.6.16</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.36"><a tabindex="-1" href="#complex-superposition-exercise2-diagram" title="Copy heading and permalink for Figure 9.6.36" aria-label="Copy heading and permalink for Figure 9.6.36">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 31.6~\textrm{V}~\cos(2\pi 40t - 71.6\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.16.1"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-2" title="Copy heading and permalink for Answer 9.6.16.1" aria-label="Copy heading and permalink for Answer 9.6.16.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The circuit can be simplified before starting the superposition process. The 5 Ω resistor is connected in parallel with the j5 Ω impedance as well as with the −20/9 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z'} \amp= \frac{1}{\frac{1}{5~\Omega}+\frac{1}{-j20/9~\Omega}+\frac{1}{j5~\Omega}}\\
+\amp= 1.9512 - j2.4390~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-complex-superposition-exercise2-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of (10A angle 0deg) current source, 1.95-j2.44ohm impedance, 20ohm resistor, and (100V angle -90deg) voltage source. The high-potential end of the current source and both impedances connect at node a. The 20ohm resistor and high-potential end of the voltage source connect at node b. The low-potential end of both sources and 1.95-j2.44ohm impedance connect at node c. Voltage V drops from node a to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.37<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.37"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-3" title="Copy heading and permalink for Figure 9.6.37" aria-label="Copy heading and permalink for Figure 9.6.37">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate <span class="process-math">\(\vec{V_1}\text{,}\)</span> the voltage contributed by the 10 A source. Deactivate the 100 V source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch9-ch9-complex-superposition-exercise2-figure2.svg" role="img" class="contained" alt="Circuit consisting of (10A angle 0deg) current source, 1.95-j2.44ohm impedance, and 20ohm resistor. All circuit elements connect in parallel between nodes a and b. The high-potential end of the source connects to node a. Voltage V1 drops from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.38<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.38"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-5" title="Copy heading and permalink for Figure 9.6.38" aria-label="Copy heading and permalink for Figure 9.6.38">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent impedance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+Z_{EQ1} \amp= \frac{(1.9512 - j2.4390~\Omega)(20~\Omega)}{(1.9512 - j2.4390~\Omega)+(20~\Omega)}\\
+\amp= 2-j2~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(\vec{V_1}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_1} \amp= (10~\textrm{A})(2-j2~\Omega)\\
+\amp= 20-j20~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate <span class="process-math">\(\vec{V_2}\text{,}\)</span> the voltage contributed by the 100 V source. Deactivate the 10 A source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-ch9-complex-superposition-exercise2-figure3.svg" role="img" class="contained" alt="Circuit consisting of 1.95-j2.44ohm impedance, 20ohm resistor, and (100V angle -90deg) voltage source. All three circuit elements connect in series. Voltage V2 drops over the 1.95-j2.44ohm impedance."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.39<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.39"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-11" title="Copy heading and permalink for Figure 9.6.39" aria-label="Copy heading and permalink for Figure 9.6.39">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use the voltage divider rule to calculate <span class="process-math">\(\vec{V_2}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_2} \amp= (-j100~\textrm{V})\left(\frac{1.9512 - j2.4390~\Omega}{21.95-j2.44~\Omega}\right)\\
+\amp= -10-j10~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate <span class="process-math">\(\vec{V}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V} \amp= \vec{V_1}+\vec{V_2}\\
+\amp= (20-j20~\textrm{V}) + (-10-j10~\textrm{V})\\
+\amp= 10-j30~\textrm{V}\\
+\amp= 31.6228~\textrm{V} \angle -71.5651^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert to time-varying form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 31.6~\textrm{V}~\cos(2\pi 40t - 71.6\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.16.1"><a tabindex="-1" href="#ch9-complex-superposition-exercise2-3" title="Copy heading and permalink for Solution 9.6.16.1" aria-label="Copy heading and permalink for Solution 9.6.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.16"><a tabindex="-1" href="#ch9-complex-superposition-exercise2" title="Copy heading and permalink for Exercise 9.6.16" aria-label="Copy heading and permalink for Exercise 9.6.16">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-complex-superposition-exercise2">In Context</a></span>
+</body>
+</html>

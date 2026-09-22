@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Constant-Input Non-Homogeneous Second-Order Circuits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Circuit Analysis">
+<meta property="og:title" content="Circuit Analysis">
+<meta property="book:title" content="Circuit Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Circuit Analysis</span></a></div>
+<p class="byline">Alyssa J. Pasquale, Ph.D.</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch7-secondorderresponses.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch7-secondorder.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch7-variableinput.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\Laplace}{\mathscr{L}} \DeclareMathOperator{\atantwo}{atan2} \DeclareMathOperator{\atan}{atan} \renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-properties.html" class="internal"><span class="codenumber">1</span> <span class="title">Properties of Electric Circuits</span></a></div>
+<ul id="ptx-toc-group-ch1-properties" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch1-properties-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch1-charge.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Charge</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-voltage.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Voltage</span></a></div>
+<ul id="ptx-toc-group-ch1-voltage" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-voltage.html#ch1-voltagedifference" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Voltage as a Difference</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-voltage.html#ch1-measuringvoltage" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Measuring Voltage</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-current.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Current</span></a></div>
+<ul id="ptx-toc-group-ch1-current" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-current.html#ch1-currentflow" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Current as a Flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-current.html#ch1-measuringcurrent" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Measuring Current</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-power.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Power</span></a></div>
+<ul id="ptx-toc-group-ch1-power" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-power.html#ch1-conservationofpower" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Conservation of Power</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-powersources.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Power Sources</span></a></div>
+<ul id="ptx-toc-group-ch1-powersources" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-dcsources" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Direct Current (DC) Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-acsources" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Alternating Current (AC) Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-dependentsources" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Dependent Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-equivalentsources" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Equivalent Sources</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-elementarysignals.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Elementary Signals</span></a></div>
+<ul id="ptx-toc-group-ch1-elementarysignals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-deltafunction" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Dirac Delta Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-stepfunction" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Step Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-rampfunction" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Ramp Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-rectpulse" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Rectangular Pulse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-trianglepulse" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Triangular Pulse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-expdecay" class="internal"><span class="codenumber">1.6.6</span> <span class="title">Exponential Decay</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-dampedsinusoid" class="internal"><span class="codenumber">1.6.7</span> <span class="title">Damped Sinusoid</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-properties-9.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-circuit-laws.html" class="internal"><span class="codenumber">2</span> <span class="title">Circuit Laws</span></a></div>
+<ul id="ptx-toc-group-ch2-circuit-laws" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch2-circuit-laws-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-definitions.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-resistor.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Resistors</span></a></div>
+<ul id="ptx-toc-group-ch2-resistor" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorcolorcodes" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Resistor Color Codes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-varresistors" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Variable Resistors and Potentiometers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-measuringresistance" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Measuring Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorsseries" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Resistors in Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorsparallel" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Resistors in Parallel</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-equivalentresistance" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Equivalent Resistance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Delta-Wye and Wye-Delta Transforms</span></a></div>
+<ul id="ptx-toc-group-ch2-deltawye-wyedelta" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html#ch2-deltawye" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Delta-Wye Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html#ch2-wyedelta" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Wye-Delta Transforms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-ohmslaw.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Ohm’s Law</span></a></div>
+<ul id="ptx-toc-group-ch2-ohmslaw" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calcvoltage" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Calculating Voltage from Current and Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calccurrent" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Calculating Current from Voltage and Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calcresistance" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Calculating Resistance from Voltage and Current</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-ohmpower" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Ohm’s Law and the Power Equation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-voltagedivider.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Voltage Divider</span></a></div>
+<ul id="ptx-toc-group-ch2-voltagedivider" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-voltagedivider.html#ch2-wheatstone" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Wheatstone Bridge</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-currentdivider.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Current Divider</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-kirchhoffs.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Kirchhoff’s Laws</span></a></div>
+<ul id="ptx-toc-group-ch2-kirchhoffs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-kcl" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Kirchhoff’s Current Law (KCL)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-kvl" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Kirchhoff’s Voltage Law (KVL)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-matrixequations" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Deriving Matrix Equations from KCL and KVL</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-meshanalysis.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Mesh Analysis</span></a></div>
+<ul id="ptx-toc-group-ch2-meshanalysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-meshanalysis.html#ch2-branchvmesh" class="internal"><span class="codenumber">2.8.1</span> <span class="title">Branch vs. Mesh Currents</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-meshanalysis.html#ch2-meshanalysismethod" class="internal"><span class="codenumber">2.8.2</span> <span class="title">The Mesh Analysis Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-measuring-current.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Measuring Current</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-circuit-laws-12.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-circuittheorems.html" class="internal"><span class="codenumber">3</span> <span class="title">Circuit Theorems</span></a></div>
+<ul id="ptx-toc-group-ch3-circuittheorems" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch3-circuittheorems-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-superposition.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Superposition</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-sourcetransformation.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Source Transformation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-choosing-a-tool.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Choosing an Analysis Tool</span></a></div>
+<ul id="ptx-toc-group-ch3-choosing-a-tool" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-choosing-a-tool.html#ch3-simplifying-tools" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Solving via Simplification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-choosing-a-tool.html#ch3-calculating-tools" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Solving without Simplification</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-vocisc.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open-Circuit Voltages and Short-Circuit Currents</span></a></div>
+<ul id="ptx-toc-group-ch3-vocisc" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-vocisc.html#ch3-voc" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Open-Circuit Voltage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-vocisc.html#ch3-isc" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Short-Circuit Current</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-thevenin.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Thévenin’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-norton.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Norton’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-maxpower.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Maximum Power Transfer</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-circuittheorems-10.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-op-amps.html" class="internal"><span class="codenumber">4</span> <span class="title">Operational Amplifiers (Op-Amps)</span></a></div>
+<ul id="ptx-toc-group-ch4-op-amps" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch5-capacitors.html" class="internal"><span class="codenumber">5</span> <span class="title">Capacitors and RC Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-capacitors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch5-capacitors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-typesofcaps.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Types of Capacitors</span></a></div>
+<ul id="ptx-toc-group-ch5-typesofcaps" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-nonpolarcaps" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Non-Polarized Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-varcaps" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Variable Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-polarcaps" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Polarized Capacitors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-measuringcap.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Measuring Capacitance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-vicap.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Voltage-Current Relationship in a Capacitor</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-equivalentcap.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalent Capacitance</span></a></div>
+<ul id="ptx-toc-group-ch5-equivalentcap" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-equivalentcap.html#ch5-seriescaps" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Series Combinations of Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-equivalentcap.html#ch5-parallelcaps" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Parallel Combinations of Capacitors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-differentiatorintegrator.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Differentiator and Integrator Circuits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-review.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Review of Important Mathematical Concepts for First-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-review" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-review.html#ch5-discontinuous" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Discontinuous Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-review.html#ch5-first-order-linear-ODEs" class="internal"><span class="codenumber">5.6.2</span> <span class="title">First-Order, Linear, Ordinary Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-rccircuits.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Resistor-Capacitor (RC) Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-rccircuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-discharging" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Discharging to Zero (Homogeneous) Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-charging" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Charging from Zero Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-generaltransient" class="internal"><span class="codenumber">5.7.3</span> <span class="title">General Transient Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-capacitors-10.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch6-inductors.html" class="internal"><span class="codenumber">6</span> <span class="title">Inductors and RL Circuits</span></a></div>
+<ul id="ptx-toc-group-ch6-inductors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch6-inductors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-parasitic.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Parasitic Effects</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-measuringinductance.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Measuring Inductance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-viinductance.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Voltage-Current Relationship in an Inductor</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-equivalentinductance.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Equivalent Inductance</span></a></div>
+<ul id="ptx-toc-group-ch6-equivalentinductance" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-equivalentinductance.html#ch6-seriesinductance" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Series Combinations of Inductors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-equivalentinductance.html#ch6-parallelinductance" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Parallel Combinations of Inductors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Resistor-Inductor (RL) Circuits</span></a></div>
+<ul id="ptx-toc-group-ch6-resistor-inductor-circuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-discharging" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Discharging to Zero (Homogeneous) Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-charging" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Charging from Zero Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-generaltransient" class="internal"><span class="codenumber">6.5.3</span> <span class="title">General Transient Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-inductors-8.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch7-secondorder.html" class="internal"><span class="codenumber">7</span> <span class="title">Second-Order Circuits</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch7-secondorder">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch7-secondorder-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch7-second-order-review.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Review of Important Mathematical Concepts for Second-Order Circuits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-damping-types.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Circuit Damping</span></a></div>
+<ul id="ptx-toc-group-ch7-damping-types" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-overdamped-type" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Overdamped</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-underdamped-type" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Underdamped</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-critically-damped-type" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Critically Damped</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Series RLC Circuit</span></a></div>
+<ul id="ptx-toc-group-ch7-the-series-rlc-circuit" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Homogeneous Series RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html#ch7-non-homoseriesrlc" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Non-Homogeneous Series RLC Circuits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html" class="internal"><span class="codenumber">7.4</span> <span class="title">The Parallel RLC Circuit</span></a></div>
+<ul id="ptx-toc-group-ch7-the-parallel-rlc-circuit" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-homoparallelrlc" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Homogeneous Parallel RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-non-homoparallelrlc" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Non-Homogeneous Parallel RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Analysis with Parasitic Resistance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-secondorderresponses.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-secondorderresponses" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions" class="internal"><span class="codenumber">7.5.1</span> <span class="title">The Overdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions" class="internal"><span class="codenumber">7.5.2</span> <span class="title">The Underdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions" class="internal"><span class="codenumber">7.5.3</span> <span class="title">The Critically Damped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-examples" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="ch7-nonhomocircuits.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Constant-Input Non-Homogeneous Second-Order Circuits</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-ch7-nonhomocircuits">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution" class="internal"><span class="codenumber">7.6.1</span> <span class="title">The Overdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution" class="internal"><span class="codenumber">7.6.2</span> <span class="title">The Underdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution" class="internal"><span class="codenumber">7.6.3</span> <span class="title">The Critically Damped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-examples" class="internal"><span class="codenumber">7.6.4</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-variableinput.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Non-Constant Input Non-Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-variableinput" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-variableinput.html#ch7-varinput-examples" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Examples</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-secondorder-10.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch8-phasors.html" class="internal"><span class="codenumber">8</span> <span class="title">Phasors and Impedances</span></a></div>
+<ul id="ptx-toc-group-ch8-phasors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch8-phasors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-phasorarithmetic.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Phasor Arithmetic</span></a></div>
+<ul id="ptx-toc-group-ch8-phasorarithmetic" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-cartesianpolar" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Cartesian to Polar Conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-polarcartesian" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Polar to Cartesian Conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasoraddsub" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Phasor Addition and Subtraction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasormultdiv" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Phasor Multiplication and Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasorcalculus" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Phasor Time-Differentiation and Time-Integration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-impedance.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Impedance</span></a></div>
+<ul id="ptx-toc-group-ch8-impedance" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-resistors" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Impedance in Resistors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-capacitors" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Impedance in Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-inductors" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Impedance in Inductors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-equivalentimpedance" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Equivalent Impedance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch8-deltawye.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Delta-Wye and Wye-Delta Transforms</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-phasors-6.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch9-phasoranalysis.html" class="internal"><span class="codenumber">9</span> <span class="title">Analysis of Phasor-Transformed Circuits</span></a></div>
+<ul id="ptx-toc-group-ch9-phasoranalysis" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch9-phasoranalysis-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-complexanalysis.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Complex Circuit Analysis Techniques</span></a></div>
+<ul id="ptx-toc-group-ch9-complexanalysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-voltagedivider" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Complex Voltage Divider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-currentdivider" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Complex Current Divider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-kclkvl" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Complex KCL and KVL Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-meshanalysis" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Complex Mesh Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-superposition" class="internal"><span class="codenumber">9.1.5</span> <span class="title">Complex Superposition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-sourcetransform" class="internal"><span class="codenumber">9.1.6</span> <span class="title">Complex Source Transformation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-theveninnorton" class="internal"><span class="codenumber">9.1.7</span> <span class="title">Complex Thévenin’s and Norton’s Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-transferfuncs.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Transfer Functions</span></a></div>
+<ul id="ptx-toc-group-ch9-transferfuncs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-transferfuncs.html#ch9-transferdiffeq" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Relating Transfer Functions and Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-transferfuncs.html#ch9-funcpolezero" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Understanding Transfer Function Poles and Zeros</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-passivefilters.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Passive Filters</span></a></div>
+<ul id="ptx-toc-group-ch9-passivefilters" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-lpfs" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Low-Pass Filters (LPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-hpfs" class="internal"><span class="codenumber">9.3.2</span> <span class="title">High-Pass Filters (HPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bpf-and-bsf" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Band-Pass and Band-Stop Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bpfs" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Band-Pass Filters (BPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bsfs" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Band-Stop Filters (BSF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-determinefilter" class="internal"><span class="codenumber">9.3.6</span> <span class="title">Determining Filter Type</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-activefilters.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Active Filters</span></a></div>
+<ul id="ptx-toc-group-ch9-activefilters" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-firstorder" class="internal"><span class="codenumber">9.4.1</span> <span class="title">First-Order Active Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-cascadedfilters" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Cascaded Active Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-otheractive" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Other Active Filter Topologies</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="phasor-references.html" class="internal"><span class="codenumber">9.5</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-phasoranalysis-8.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch10-acpower.html" class="internal"><span class="codenumber">10</span> <span class="title">AC Power</span></a></div>
+<ul id="ptx-toc-group-ch10-acpower" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch10-acpower-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch10-phase-rms.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Phase and Root Mean Square (RMS)</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-ac-power.html" class="internal"><span class="codenumber">10.2</span> <span class="title">AC Power</span></a></div>
+<ul id="ptx-toc-group-ch10-ac-power" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-instantaneous" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Instantaneous Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-complexapparent" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Complex and Apparent Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-average" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Average Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-reactive" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Reactive Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-powertriangle" class="internal"><span class="codenumber">10.2.5</span> <span class="title">Power Triangle and Power Factor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch10-maxpower.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Maximum Power Transfer</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-pfcorrection.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Power Factor Correction</span></a></div>
+<ul id="ptx-toc-group-ch10-pfcorrection" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-pfcorrection.html#ch10-correctinductive" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Correcting an Inductive Load</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-pfcorrection.html#ch10-correctcapacitive" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Correcting a Capacitive Load</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-acpower-7.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch11-laplace.html" class="internal"><span class="codenumber">11</span> <span class="title">Laplace Transforms and s-Domain Analysis</span></a></div>
+<ul id="ptx-toc-group-ch11-laplace" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch11-laplace-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch11-laplacetransform.html" class="internal"><span class="codenumber">11.1</span> <span class="title">The Laplace Transform</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-inverselaplace.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Inverse Laplace Transform</span></a></div>
+<ul id="ptx-toc-group-ch11-inverselaplace" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-inverselaplace.html#ch11-partialfraction" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Partial Fraction Expansion</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sdomain.html" class="internal"><span class="codenumber">11.3</span> <span class="title"><span class="process-math">\(s\)</span>-Domain Analysis</span></a></div>
+<ul id="ptx-toc-group-ch11-sdomain" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-resistor" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Resistor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-capacitor" class="internal"><span class="codenumber">11.3.2</span> <span class="title">Capacitor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-inductor" class="internal"><span class="codenumber">11.3.3</span> <span class="title">Inductor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-sources" class="internal"><span class="codenumber">11.3.4</span> <span class="title">Switched Sources</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-laplace-6.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch12-555timer.html" class="internal"><span class="codenumber">12</span> <span class="title">Practical Application: The 555 Timer</span></a></div>
+<ul id="ptx-toc-group-ch12-555timer" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch12-555timer-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-astablemode.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Astable Mode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="ch7-nonhomocircuits">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constant-Input Non-Homogeneous Second-Order Circuits</span>
+</h1>
+<section class="introduction" id="ch7-nonhomocircuits-2">
+<div class="para" id="ch7-nonhomocircuits-2-1">A non-homogeneous second-order circuit means that <span class="process-math">\(y(t)\)</span> in the second-order differential equation (described by <a href="ch7-second-order-review.html#ch7-secondorderlinearode-standard" class="xref" data-knowl="./knowl/xref/ch7-secondorderlinearode-standard.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1.2">(7.1.2)</a>) will not be equal to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-nonhomocircuits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-nonhomocircuits-2-2">To solve a non-homogeneous second-order equation, first find the general solution, which is the process used when solving the characteristic equation to calculate the solution to a homogeneous second-order equation. Then, find the <dfn class="terminology">particular solution</dfn> (<span class="process-math">\(f_P(t)\)</span>). These two solutions are summed together to derive the overall circuit response. Deriving the particular solution is the only new aspect to solving a constant-input non-homogeneous second-order circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-nonhomocircuits-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-nonhomocircuits-2-3">The solutions presented below are universally true for all homogeneous and constant-input non-homogeneous second-order circuits. Homogeneous circuits are simply a special case where <span class="process-math">\(v_P(t) = 0\)</span> or <span class="process-math">\(i_P(t) = 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-nonhomocircuits-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-nonhomocircuits-2-4">The value of the particular solution for constant-input non-homogeneous circuits are given in <a href="ch7-nonhomocircuits.html#ch7-nonhomocircuits-2-5-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-particular-vpt.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.1">(7.6.1)</a> and <a href="ch7-nonhomocircuits.html#ch7-nonhomocircuits-2-5-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-particular-ipt.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.2">(7.6.2)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-nonhomocircuits-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-nonhomocircuits-2-5">
+<div class="displaymath process-math" id="ch7-nonhomocircuits-2-5-1">
+\begin{align}
+v_P(t) \amp= v(\infty)\tag{7.6.1}\\
+i_P(t) \amp= i(\infty)\tag{7.6.2}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-nonhomocircuits-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="ch7-non-homogeneous-overdamped-solution">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Overdamped Solution</span>
+</h2>
+<div class="para" id="ch7-non-homogeneous-overdamped-solution-2">The solution to a constant-input non-homogeneous overdamped circuit is described in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a>, with the equation coefficients <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> defined in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.4">(7.6.4)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.5">(7.6.5)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-solution-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-overdamped-solution-3">
+<div class="displaymath process-math" id="ch7-non-homogeneous-overdamped-solution-3-1">
+\begin{align}
+v(t) \amp= \left(v_P(t) + A_1\textrm{e}^{s_1t} + A_2\textrm{e}^{s_2t}\right) u(t) + v(0^-)~u(-t)\tag{7.6.3}\\
+A_1 \amp= \frac{s_2(v(0^+)-v(\infty))-v'(0^+)}{s_2-s_1}\tag{7.6.4}\\
+A_2 \amp= \frac{v'(0^+)-s_1(v(0^+)-v(\infty))}{s_2-s_1}\tag{7.6.5}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-solution-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-overdamped-solution-4">Coefficients <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> will have a unit corresponding to the quantity being described by the equation. (Volts for voltage, amps or milliamps for current.) These two coefficients are derived by solving <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a> at <span class="process-math">\(t=0^+\)</span> and by solving the first derivative of <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a> at <span class="process-math">\(t=0^+\text{.}\)</span> This derivation is shown in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-coefficient-derivation" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-overdamped-coefficient-derivation.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 7.6.1.1">Derivation 7.6.1.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-solution-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ch7-non-homogeneous-overdamped-coefficient-derivation" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="ch7-non-homogeneous-overdamped-coefficient-derivation-1">Start by solving <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a> when <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-coefficient-derivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-overdamped-coefficient-derivation-2">
+<div class="displaymath process-math" id="ch7-non-homogeneous-overdamped-coefficient-derivation-2-1">
+\begin{align*}
+v(0^+) \amp= v_P(0^+) + A_1\textrm{e}^{s_1*0} + A_2\textrm{e}^{s_2*0}\\
+v(0^+) \amp= v(\infty) + A_1 + A_2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-coefficient-derivation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-overdamped-coefficient-derivation-3">Calculate the first derivative of <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a> and solve when <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-coefficient-derivation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-overdamped-coefficient-derivation-4">
+<div class="displaymath process-math" id="ch7-non-homogeneous-overdamped-coefficient-derivation-4-1">
+\begin{align*}
+\frac{d}{dt}v(t) \amp= \frac{d}{dt}\left(v_P(0^+) + A_1\textrm{e}^{s_1t} + A_2\textrm{e}^{s_2t}\right)\\
+v'(t) \amp= s_1A_1\textrm{e}^{s_1t} + s_2A_2\textrm{e}^{s_2t}\\
+v'(0^+) \amp= s_1A_1\textrm{e}^{s_1*0} + s_2A_2\textrm{e}^{s_2*0}\\
+v'(0^+) \amp= s_1A_1 + s_2A_2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-coefficient-derivation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-overdamped-coefficient-derivation-5">Use the equations for <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to solve for <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-coefficient-derivation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-overdamped-coefficient-derivation-6">
+<div class="displaymath process-math" id="ch7-non-homogeneous-overdamped-coefficient-derivation-6-1">
+\begin{align*}
+A_1 \amp= v(0) - v(\infty) - A_2\\
+v'(0^+) \amp= (v(0) - v(\infty) - A_2)s_1 + A_2s_2\\
+\amp= v(0^+)s_1 - v(\infty)s_1 - A_2s_1 + A_2s_2\\
+v'(0^+) - v(0^+)s_1 + v(\infty)s_2 \amp= A_2 (s_2-s_1)\\
+A_2 \amp= \frac{v'(0^+) - v(0^+)s_1 + v(\infty)s_2}{s_2-s_1}\\
+A_1 \amp= v(0) - v(\infty) - \frac{v'(0^+) - v(0^+)s_1 + v(\infty)s_2}{s_2-s_1}\\
+A_1(s_2-s_1) \amp= v(0^+)(s_2-s_1) - v(\infty)(s_2-s_1) - v'(0^+) + s_1v(0^+) - s_1v(\infty)\\
+\amp= v(0^+)s_2 - v(0^+)s_1 + v(0^+)s_1 - v(\infty)s_2 + v(\infty)s_1 - v(\infty)s_1 - v'(0^+)\\
+\amp= v(0^+)s_2 - v(\infty)s_2 - v'(0^+)\\
+A_1 \amp= \frac{v(0^+)s_2 - v(\infty)s_2 - v'(0^+)}{s_2-s_1}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-coefficient-derivation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.6.1.1"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-coefficient-derivation" title="Copy heading and permalink for Derivation 7.6.1.1" aria-label="Copy heading and permalink for Derivation 7.6.1.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.6.1: The Overdamped Solution"><a tabindex="-1" href="#ch7-non-homogeneous-overdamped-solution" title="Copy heading and permalink for Subsection 7.6.1: The Overdamped Solution" aria-label="Copy heading and permalink for Subsection 7.6.1: The Overdamped Solution">🔗</a></div>
+</section>
+<section class="subsection" id="ch7-non-homogeneous-underdamped-solution">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Underdamped Solution</span>
+</h2>
+<div class="para" id="ch7-non-homogeneous-underdamped-solution-2">The solution to a constant-input non-homogeneous underdamped circuit is described in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.6">(7.6.6)</a>, with the equation coefficients <span class="process-math">\(B_1\)</span> and <span class="process-math">\(B_2\)</span> defined in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under-B1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.7">(7.6.7)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under-B2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.8">(7.6.8)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-solution-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-underdamped-solution-3">
+<div class="displaymath process-math" id="ch7-non-homogeneous-underdamped-solution-3-1">
+\begin{align}
+v(t) \amp= \left(v_P(t) + \textrm{e}^{-\alpha t} \left[B_1\cos{\beta t} + B_2\sin{\beta t}\right]\right)u(t) + v(0^-)~u(-t)\tag{7.6.6}\\
+B_1 \amp= v(0^+)-v(\infty)\tag{7.6.7}\\
+B_2 \amp= \frac{v'(0^+)+\alpha(v(0^+)-v(\infty))}{\beta}\tag{7.6.8}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-solution-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-underdamped-solution-4">Coefficients <span class="process-math">\(B_1\)</span> and <span class="process-math">\(B_2\)</span> will have a unit corresponding to the quantity being described by the equation. (Volts for voltage, amps or milliamps for current.) These two coefficients are derived by solving <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.6">(7.6.6)</a> at <span class="process-math">\(t=0^+\)</span> and by solving the first derivative of <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.6">(7.6.6)</a> at <span class="process-math">\(t=0^+\text{.}\)</span> This derivation is shown in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-coefficient-derivation" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-underdamped-coefficient-derivation.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 7.6.2.1">Derivation 7.6.2.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-solution-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ch7-non-homogeneous-underdamped-coefficient-derivation" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="ch7-non-homogeneous-underdamped-coefficient-derivation-1">Start by solving <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.6">(7.6.6)</a> when <span class="process-math">\(t=0^+\text{.}\)</span> This conveniently derives coefficient <span class="process-math">\(B_1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-underdamped-coefficient-derivation-2">
+<div class="displaymath process-math" id="ch7-non-homogeneous-underdamped-coefficient-derivation-2-1">
+\begin{align*}
+v(0^+) \amp= v_P(0^+) + \textrm{e}^{-\alpha*0} \left[ B_1\cos{(\beta *0)} + B_2\sin{(\beta *0)} \right]\\
+v(0^+) \amp= v(\infty) + B_1\\
+B_1 \amp= v(0^+) - v(\infty)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-underdamped-coefficient-derivation-3">Calculate the first derivative of <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.4">(7.5.4)</a> and solve when <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-underdamped-coefficient-derivation-4">
+<div class="displaymath process-math" id="ch7-non-homogeneous-underdamped-coefficient-derivation-4-1">
+\begin{align*}
+\frac{d}{dt}v(t) \amp= \frac{d}{dt}\left(v_P(t) + \textrm{e}^{-\alpha t} \left[ B_1\cos{\beta t} + B_2\sin{\beta t} \right]\right)\\
+v'(t) \amp= \textrm{e}^{-\alpha t}\left[(\cos{\beta t})(B_2\beta - \alpha B_1) - (\sin{\beta t})(\alpha B_2 + \beta B_1)\right]\\
+v'(0^+) \amp= \textrm{e}^{-\alpha *0}\left[(\cos{(\beta *0)})(B_2\beta - \alpha B_1) - (\sin{(\beta *0)})(\alpha B_2 + \beta B_1)\right]\\
+v'(0^+) \amp= B_2\beta - \alpha B_1
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-underdamped-coefficient-derivation-5">Use the equations for <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to solve for <span class="process-math">\(B_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-underdamped-coefficient-derivation-6">
+<div class="displaymath process-math" id="ch7-non-homogeneous-underdamped-coefficient-derivation-6-1">
+\begin{align*}
+v'(0^+) \amp= B_2\beta - \alpha B_1\\
+v'(0^+) - \alpha B_1 \amp= B_2\beta\\
+B_2 \amp= \frac{v'(0^+) + \alpha B_1}{\beta}\\
+\amp= \frac{v'(0^+) + \alpha (v(0^+) - v(\infty))}{\beta}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.6.2.1"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation" title="Copy heading and permalink for Derivation 7.6.2.1" aria-label="Copy heading and permalink for Derivation 7.6.2.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.6.2: The Underdamped Solution"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-solution" title="Copy heading and permalink for Subsection 7.6.2: The Underdamped Solution" aria-label="Copy heading and permalink for Subsection 7.6.2: The Underdamped Solution">🔗</a></div>
+</section>
+<section class="subsection" id="ch7-non-homogeneous-critically-damped-solution">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Critically Damped Solution</span>
+</h2>
+<div class="para" id="ch7-non-homogeneous-critically-damped-solution-2">The solution to a constant-input non-homogeneous critically damped circuit is described in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-critical.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.9">(7.6.9)</a>, with the equation coefficients <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> defined in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-critical-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.10">(7.6.10)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-critical-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.11">(7.6.11)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critically-damped-solution-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-critically-damped-solution-3">
+<div class="displaymath process-math" id="ch7-non-homogeneous-critically-damped-solution-3-1">
+\begin{align}
+v(t) \amp= \left( v_P(t) + A_1\textrm{e}^{-\alpha t} + A_2t\textrm{e}^{-\alpha t}\right) u(t) + v(0^-)~u(-t)\tag{7.6.9}\\
+A_1 \amp= v(0^+)-v(\infty)\tag{7.6.10}\\
+A_2 \amp= v'(0^+) + \alpha(v(0^+)-v(\infty))\tag{7.6.11}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critically-damped-solution-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-critically-damped-solution-4">Coefficient <span class="process-math">\(A_1\)</span> has a unit corresponding to the quantity being described by the equation. (Volts for voltage, amps or milliamps for current.) Coefficient <span class="process-math">\(A_2\)</span> has a unit corresponding to the first derivative of the quantity being described by the equation (volts per second for voltage, or amps per second or milliamps per second for current). These two coefficients are derived by solving <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-critical.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.9">(7.6.9)</a> at <span class="process-math">\(t=0^+\)</span> and by solving the first derivative of <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-critical.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.9">(7.6.9)</a> at <span class="process-math">\(t=0^+\text{.}\)</span> This derivation is shown in <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critical-coefficient-derivation" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-critical-coefficient-derivation.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 7.6.3.1">Derivation 7.6.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critically-damped-solution-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ch7-non-homogeneous-critical-coefficient-derivation" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="ch7-non-homogeneous-critical-coefficient-derivation-1">Start by solving <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-critical.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.9">(7.6.9)</a> when <span class="process-math">\(t=0^+\text{.}\)</span> This conveniently derives coefficient <span class="process-math">\(A_1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critical-coefficient-derivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-critical-coefficient-derivation-2">
+<div class="displaymath process-math" id="ch7-non-homogeneous-critical-coefficient-derivation-2-1">
+\begin{align*}
+v(0^+) \amp= v_P(0^+) + A_1\textrm{e}^{-\alpha *0} + A_2t\textrm{e}^{-\alpha *0}\\
+v(0^+) \amp= v(\infty) + A_1\\
+A_1 \amp= v(0^+) - v(\infty)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critical-coefficient-derivation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-critical-coefficient-derivation-3">Calculate the first derivative of <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-critical.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.9">(7.6.9)</a> and solve when <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critical-coefficient-derivation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-critical-coefficient-derivation-4">
+<div class="displaymath process-math" id="ch7-non-homogeneous-critical-coefficient-derivation-4-1">
+\begin{align*}
+\frac{d}{dt}v(t) \amp= \frac{d}{dt}\left(v_P(t) + A_1\textrm{e}^{-\alpha t} + A_2t\textrm{e}^{-\alpha t}\right)\\
+v'(t) \amp= -\alpha A_1\textrm{e}^{-\alpha t} + \textrm{e}^{-\alpha t}(A_2 - A_2\alpha t)\\
+v'(0^+) \amp= -\alpha A_1\textrm{e}^{-\alpha *0} + \textrm{e}^{-\alpha *0}(A_2 - A_2\alpha *0)\\
+v'(0^+) \amp= -\alpha A_1 + A_2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critical-coefficient-derivation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch7-non-homogeneous-critical-coefficient-derivation-5">Use the equations for <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to solve for <span class="process-math">\(A_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critical-coefficient-derivation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-non-homogeneous-critical-coefficient-derivation-6">
+<div class="displaymath process-math" id="ch7-non-homogeneous-critical-coefficient-derivation-6-1">
+\begin{align*}
+v'(0^+) \amp= -\alpha A_1 + A_2\\
+v'(0^+) + \alpha A_1 \amp= A_2\\
+A_2 \amp= v'(0^+) + \alpha (v(0^+) - v(\infty))
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-critical-coefficient-derivation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.6.3.1"><a tabindex="-1" href="#ch7-non-homogeneous-critical-coefficient-derivation" title="Copy heading and permalink for Derivation 7.6.3.1" aria-label="Copy heading and permalink for Derivation 7.6.3.1">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.6.3: The Critically Damped Solution"><a tabindex="-1" href="#ch7-non-homogeneous-critically-damped-solution" title="Copy heading and permalink for Subsection 7.6.3: The Critically Damped Solution" aria-label="Copy heading and permalink for Subsection 7.6.3: The Critically Damped Solution">🔗</a></div>
+</section>
+<section class="subsection" id="ch7-non-homogeneous-examples">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples</span>
+</h2>
+<article class="example example-like" id="ch7-non-homogeneous-examples-2"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Constant-input non-homogeneous general second-order circuit.</span>
+</h3>
+<div class="para" id="ch7-non-homogeneous-examples-2-2-1">Calculate <span class="process-math">\(v(t)\)</span> for the circuit below. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are <span class="process-math">\(V_S = 20~\textrm{V}\text{,}\)</span> <span class="process-math">\(R_S = 10~\Omega\text{,}\)</span> <span class="process-math">\(R_1 = 1~\textrm{k}\Omega\text{,}\)</span> <span class="process-math">\(R_2 = 10~\Omega\text{,}\)</span> <span class="process-math">\(L = 20~\textrm{mH}\text{,}\)</span> and <span class="process-math">\(C = 100~\textrm{nF}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch7-non-homogeneous-examples-2-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-const-non-homogeneous-example1-figure1.svg" role="img" class="contained" alt="Circuit with six nodes consisting of voltage source Vs, resistors (Rs, R1, and R2), inductor L, capacitor C, and SPST switch. The high-potential end of Vs connects to Rs at node a. Rs connects to the SPST switch at node b. The SPST switch and L connect at node c. L, R1, and R2 connect at node d. R2 and C connect at node e. The low-potential end of Vs, R1, and C connect at node f. branch current i(t) flows through L from node c to node d. Voltage vX(t) drops over R1 from node d to node f. Voltage v(t) drops over C from node e to node f. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.6.2"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-2" title="Copy heading and permalink for Figure 7.6.2" aria-label="Copy heading and permalink for Figure 7.6.2">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-3">The initial parameter values are all equal to zero, as no source is connected to the circuit in the initial conditions. However, it’s possible that <span class="process-math">\(v_X(t)\)</span> may not be continuous with time. Analyze the circuit at <span class="process-math">\(t=0^+\text{.}\)</span> The inductor can be replaced by a 0 A current source and the capacitor can be replaced by a 0 V voltage source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch7-non-homogeneous-examples-2-2-4"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-const-non-homogeneous-example1-figure2.svg" role="img" class="contained" alt="Circuit with two meshes and five nodes consisting of voltage source Vs, resistors (Rs, R1, and R2), a 0V source, and a 0A source. The high-potential end of Vs connects to Rs at node a. Rs and the 0A source connect at node b. The 0A source flows out of node b. The 0A source, R1, and R2 connect at node c. The 0A source flows into node c. R2 and the high-potential end of the 0V source connect at node d. The low-potential end of both voltage sources and R1 connect at node e. vX(0+) drops over R1 from node c to node e."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.6.3"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-4" title="Copy heading and permalink for Figure 7.6.3" aria-label="Copy heading and permalink for Figure 7.6.3">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-5">The 0 A source acts as an open, and the 0 V source acts as a short. Re-draw the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch7-non-homogeneous-examples-2-2-6"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch7-const-non-homogeneous-example1-figure3.svg" role="img" class="contained" alt="Circuit with two resistors R1 and R2 connected in series. vX(0+) drops over resistor R1."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.6.4"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-6" title="Copy heading and permalink for Figure 7.6.4" aria-label="Copy heading and permalink for Figure 7.6.4">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-7">The value of <span class="process-math">\(v_X(0^+)\)</span> is equal to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-8">Analyze the circuit in the final steady-state condition to calculate the particular solution, <span class="process-math">\(v(\infty)\text{.}\)</span> The inductor can be replaced by a short and the capacitor can be replaced by an open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch7-non-homogeneous-examples-2-2-9"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-const-non-homogeneous-example1-figure4.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of a voltage source Vs and three resistors (Rs, R1, and R2). The high-potential end of Vs and Rs connect at node a. Rs, R1, and R2 connect at node b. R2 floats at node c. The low-potential end of Vs and R1 connect at node d. v(infinity) drops from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.6.5"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-9" title="Copy heading and permalink for Figure 7.6.5" aria-label="Copy heading and permalink for Figure 7.6.5">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-10">Use the voltage divider rule to calculate <span class="process-math">\(v(\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-11">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-11-1">
+\begin{align*}
+v(\infty) \amp= 20~\textrm{V}\left(\frac{1000~\Omega}{1010~\Omega}\right)\\
+\amp= 19.802~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-12">Analyze the circuit at <span class="process-math">\(t=0^+\)</span> to derive a differential equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch7-non-homogeneous-examples-2-2-13"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-const-non-homogeneous-example1-figure5.svg" role="img" class="contained" alt="Circuit with two meshes and five nodes consisting of voltage source Vs, resistors (Rs, R1, and R2), inductor L, and capacitor C. The high-potential end of Vs connects to Rs at node a. Rs and L connect at node b. L, R1, and R2 connect at node c. R2 and C connect at node d. Vs, R1, and C connect at node e. Branch current i(t) flows through L from node b to node c. vX(t) drops over R1 from node c to node e. Voltage v(t) drops over C from node d to node e."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.6.6"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-13" title="Copy heading and permalink for Figure 7.6.6" aria-label="Copy heading and permalink for Figure 7.6.6">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-14">Perform KCL at the node connecting <span class="process-math">\(L\text{,}\)</span> <span class="process-math">\(R_1\text{,}\)</span> and <span class="process-math">\(R_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-15">
+<div class="displaymath process-math" id="ch7-const-non-homogeneous-example1-kcl">
+\begin{equation}
+i(t) = \frac{v_X(t)}{R_1} + C\frac{dv(t)}{dt}\tag{7.6.12}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-16">Perform KVL around the left-hand loop of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-17">
+<div class="displaymath process-math" id="ch7-const-non-homogeneous-example1-kvl-lhs">
+\begin{equation}
+V_S = R_si(t) + L\frac{di(t)}{dt} + v_X(t)\tag{7.6.13}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-18">Plug <a href="ch7-nonhomocircuits.html#ch7-const-non-homogeneous-example1-kcl" class="xref" data-knowl="./knowl/xref/ch7-const-non-homogeneous-example1-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.12">(7.6.12)</a> into <a href="ch7-nonhomocircuits.html#ch7-const-non-homogeneous-example1-kvl-lhs" class="xref" data-knowl="./knowl/xref/ch7-const-non-homogeneous-example1-kvl-lhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.13">(7.6.13)</a> to remove <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-19">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-19-1">
+\begin{align}
+V_S \amp= R_s\left(\frac{v_X(t)}{R_1} + C\frac{dv(t)}{dt}\right) + L\frac{d}{dt}\left(\frac{v_X(t)}{R_1} + C\frac{dv(t)}{dt}\right) + v_X(t)\tag{7.6.14}\\
+\amp= \frac{R_S}{R_1}v_X(t) + R_SC\frac{dv(t)}{dt} + \frac{L}{R_1}\frac{dv_X(t)}{dt} + LC\frac{d^2v(t)}{dt^2} + v_X(t)\tag{7.6.15}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-20">Perform KVL around the right-hand loop of the circuit. The current through <span class="process-math">\(R_2\)</span> and the capacitor is defined by <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-21">
+<div class="displaymath process-math" id="ch7-const-non-homogeneous-example1-kvl-rhs">
+\begin{equation}
+v_X(t) = R_2C\frac{dv(t)}{dt} + v(t)\tag{7.6.16}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-22">Plug <a href="ch7-nonhomocircuits.html#ch7-const-non-homogeneous-example1-kvl-rhs" class="xref" data-knowl="./knowl/xref/ch7-const-non-homogeneous-example1-kvl-rhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.16">(7.6.16)</a> into <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-examples-2-2-19-1" class="xref" data-knowl="./knowl/xref/ch7-const-non-homogeneous-example1-almost.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.15">(7.6.15)</a> to remove <span class="process-math">\(v_X(t)\)</span> terms. Then, reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-23">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-23-1">
+\begin{align*}
+V_S \amp= \frac{R_S}{R_1}\left(R_2C\frac{dv(t)}{dt} + v(t)\right) + R_SC\frac{dv(t)}{dt} + \frac{L}{R_1}\frac{d}{dt}\left(R_2C\frac{dv(t)}{dt} + v(t)\right) + LC\frac{d^2v(t)}{dt^2} + R_2C\frac{dv(t)}{dt} + v(t)\\
+\amp= \frac{R_SR_2C}{R_1}\frac{dv(t)}{dt} + \frac{R_S}{R_1}v(t) + R_SC\frac{dv(t)}{dt} + \frac{LR_2C}{R_1}\frac{d^2v(t)}{dt^2} + \frac{L}{R_1}\frac{dv(t)}{dt} + LC\frac{d^2v(t)}{dt^2} + R_2C\frac{dv(t)}{dt} + v(t)\\
+\amp= \left(\frac{LC(R_1+R_2)}{R_1}\right)\frac{d^2v(t)}{dt^2} + \left(\frac{R_SR_2C}{R_1}+R_SC + \frac{L}{R_1} + R_2C\right)\frac{dv(t)}{dt} + \left(1 + \frac{R_S}{R_1}\right)v(t)\\
+\frac{V_SR_1}{LC(R_1+R_2)} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{R_SR_2+R_SR_1+R_1R_2}{L(R_1+R_2)} + \frac{1}{C(R_1+R)2}\right)\frac{dv(t)}{dt} + \left(\frac{R_1+R_S}{LC(R_1+R_2)}\right)v(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-24">Plug component values into the differential equation, using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-25">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-25-1">
+\begin{equation*}
+9.9\times10^9 = \frac{d^2v(t)}{dt^2} + 10896.04\frac{dv(t)}{dt} + \left(5\times10^8\right)v(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-26">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> to calculate the damping parameter and use <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-27">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-27-1">
+\begin{align*}
+\alpha \amp= \frac{10896.04}{2}\\
+\amp= 5448.02~\textrm{Np/s}\\
+\omega_0 \amp= \sqrt{5\times10^8}\\
+\amp= 22360.68~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-28">This circuit is underdamped.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-29">Use <a href="ch7-nonhomocircuits.html#ch7-const-non-homogeneous-example1-kvl-rhs" class="xref" data-knowl="./knowl/xref/ch7-const-non-homogeneous-example1-kvl-rhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.16">(7.6.16)</a> to calculate <span class="process-math">\(v'(0^+)\text{.}\)</span> Because both <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v_X(0^+)\)</span> are zero, <span class="process-math">\(v'(0^+)\)</span> will also be zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-30">Use <a href="ch7-damping-types.html#ch7-eq-oscillation-freq" class="xref" data-knowl="./knowl/xref/ch7-eq-oscillation-freq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.5">(7.2.5)</a> to calculate the oscillation frequency of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-31">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-31-1">
+\begin{align*}
+\beta \amp= \sqrt{22360.68^2 - 5448.02^2}\\
+\amp= 21686.84~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-32">Use <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under-B1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.7">(7.6.7)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under-B2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.8">(7.6.8)</a> to calculate the coefficients of the equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-33">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-33-1">
+\begin{align*}
+B_1 \amp= -19.802~\textrm{V}\\
+B_2 \amp= \frac{-(5448.02)(19.80)}{21686.84}\\
+\amp= -4.97~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-34">Plug all of these quantities into <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.6">(7.6.6)</a> to obtain the equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch7-non-homogeneous-examples-2-2-35">
+<div class="displaymath process-math" id="ch7-non-homogeneous-examples-2-2-35-1">
+\begin{equation*}
+v(t) = \left(19.8~\textrm{V} + \textrm{e}^{-5450 t} \left[ -19.8~\textrm{V}~\cos(21700 t) -4.97~\textrm{V}~\sin(21700 t) \right]\right)~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch7-non-homogeneous-examples-2-2-36">The voltage is plotted below as a function of time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch7-non-homogeneous-examples-2-2-37"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-const-non-homogeneous-example1-figure6.svg" role="img" class="contained" alt="Graph of the equation defined above."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.6.7"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2-2-37" title="Copy heading and permalink for Figure 7.6.7" aria-label="Copy heading and permalink for Figure 7.6.7">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Example 7.6.1: Constant-input non-homogeneous general second-order circuit"><a tabindex="-1" href="#ch7-non-homogeneous-examples-2" title="Copy heading and permalink for Example 7.6.1: Constant-input non-homogeneous general second-order circuit" aria-label="Copy heading and permalink for Example 7.6.1: Constant-input non-homogeneous general second-order circuit">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.6.4: Examples"><a tabindex="-1" href="#ch7-non-homogeneous-examples" title="Copy heading and permalink for Subsection 7.6.4: Examples" aria-label="Copy heading and permalink for Subsection 7.6.4: Examples">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 7.6: Constant-Input Non-Homogeneous Second-Order Circuits"><a tabindex="-1" href="#ch7-nonhomocircuits" title="Copy heading and permalink for Section 7.6: Constant-Input Non-Homogeneous Second-Order Circuits" aria-label="Copy heading and permalink for Section 7.6: Constant-Input Non-Homogeneous Second-Order Circuits">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch7-secondorderresponses.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch7-variableinput.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

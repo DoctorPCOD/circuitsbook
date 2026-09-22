@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h2 class="heading"><span class="type">Derivation</span></h2>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+F(s) \amp= \frac{X+jY}{s+\alpha+j\beta} + \frac{X-jY}{s+\alpha-j\beta}\\
+f(t) \amp= \left[(X+jY)~\textrm{e}^{(-\alpha-j\beta)t} + (X-jY)~\textrm{e}^{(-\alpha+j\beta)t} \right]~u(t)\\
+\amp= \textrm{e}^{-\alpha t}\left[(X+jY)~\textrm{e}^{-j\beta t} + (X-jY)~\textrm{e}^{j\beta t}\right]~u(t)\\
+\amp= \textrm{e}^{-\alpha t}\left[X~\textrm{e}^{-j\beta t} + X~\textrm{e}^{j\beta t} + jY~\textrm{e}^{-j\beta t} -jY~\textrm{e}^{j\beta t}\right]~u(t)\\
+\amp= \textrm{e}^{-\alpha t}\left[2X\frac{\textrm{e}^{-j\beta t} + \textrm{e}^{j\beta t}}{2} + 2Y\frac{-\textrm{e}^{-j\beta t} +~\textrm{e}^{j\beta t}}{j2}\right]~u(t)\\
+\amp= \textrm{e}^{-\alpha t}\left[2X~\cos(\beta t) + 2Y~\sin(\beta t)\right]~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partial-fraction-complex-proof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 11.2.1.1"><a tabindex="-1" href="#ch11-partial-fraction-complex-proof" title="Copy heading and permalink for Derivation 11.2.1.1" aria-label="Copy heading and permalink for Derivation 11.2.1.1">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch11-inverselaplace.html#ch11-partial-fraction-complex-proof">In Context</a></span>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h2 class="heading"><span class="type">Derivation</span></h2>
+<div class="para">Start by solving <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a> when <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-coefficient-derivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(0^+) \amp= A_1\textrm{e}^{s_1*0} + A_2\textrm{e}^{s_2*0}\\
+v(0^+) \amp= A_1 + A_2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-coefficient-derivation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate the first derivative of <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a> and solve when <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-coefficient-derivation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{d}{dt}v(t) \amp= \frac{d}{dt}\left(A_1\textrm{e}^{s_1t} + A_2\textrm{e}^{s_2t}\right)\\
+v'(t) \amp= s_1A_1\textrm{e}^{s_1t} + s_2A_2\textrm{e}^{s_2t}\\
+v'(0^+) \amp= s_1A_1\textrm{e}^{s_1*0} + s_2A_2\textrm{e}^{s_2*0}\\
+v'(0^+) \amp= s_1A_1 + s_2A_2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-coefficient-derivation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the equations for <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to solve for <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-coefficient-derivation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+A_1 \amp= v(0^+) - A_2\\
+v'(0^+) \amp= s_1(v(0^+)-A_2) + s_2A_2\\
+\amp= s_1v(0^+) - A_2s_1 + A_2s_2\\
+v'(0^+) - s_1v(0^+) \amp= A_2 (s_2 - s_1)\\
+A_2 \amp= \frac{v'(0^+) - s_1v(0^+)}{s_2-s_1}\\
+A_1 \amp= v(0^+) - \left(\frac{v'(0^+) - s_1v(0^+)}{s_2-s_1}\right)\\
+A_1(s_2-s_1) \amp= v(0^+)(s_2-s_1) - v'(0^+) + s_1v(0^+)\\
+\amp= v(0^+)s_2 - v(0^+)s_1 - v'(0^+) + s_1v(0^+)\\
+\amp= v(0^+)s_2 - v'(0^+)\\
+A_1 \amp= \frac{v(0^+)s_2 - v'(0^+)}{s_2-s_1}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-coefficient-derivation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.5.1.1"><a tabindex="-1" href="#ch7-homogeneous-overdamped-coefficient-derivation" title="Copy heading and permalink for Derivation 7.5.1.1" aria-label="Copy heading and permalink for Derivation 7.5.1.1">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-coefficient-derivation">In Context</a></span>
+</body>
+</html>

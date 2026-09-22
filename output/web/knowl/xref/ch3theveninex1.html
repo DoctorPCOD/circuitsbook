@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive the Thévenin equivalent circuit between nodes a and b in the circuit shown in <a href="ch3-circuittheorems-10.html#circuit311fig" class="xref" data-knowl="./knowl/xref/circuit311fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.54">Figure 3.8.54</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch3-circuit311fig.svg" role="img" class="contained" alt="Circuit with 1 mesh and 4 nodes containing a 10V source, 60ohm resistor, 10ohm resistor, and 30ohm resistor. All circuit elements are connected in series. The low-potential end of the 10V source and 30ohm resistor connect at node A. The 30ohm and 10ohm resistors connect at node B. The high-potential end of the 10V source and 60ohm resistor connect at node C. The 10ohm and 60ohm resistors connect at node D."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.54<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch3-circuittheorems-10.html#ch3theveninex1" class="xref" data-knowl="./knowl/xref/ch3theveninex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.8.11">Exercise 3.8.11</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.54"><a tabindex="-1" href="#circuit311fig" title="Copy heading and permalink for Figure 3.8.54" aria-label="Copy heading and permalink for Figure 3.8.54">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch3-circuit311figans.svg" role="img" class="contained" alt="Circuit with 0 meshes and 3 nodes consisting of a 3V source and 21ohm resistor. All circuit elements are connected in series. One end of the 21ohm resistor connects to node A. The other end of the 21ohm resistor connects to the low-potential end of the 3V source at node C. The high-potential end of the 3V source connects at node B."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.55<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Answer to <a href="ch3-circuittheorems-10.html#ch3theveninex1" class="xref" data-knowl="./knowl/xref/ch3theveninex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.8.11">Exercise 3.8.11</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.55"><a tabindex="-1" href="#circuit311figans" title="Copy heading and permalink for Figure 3.8.55" aria-label="Copy heading and permalink for Figure 3.8.55">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Answer 3.8.11.1"><a tabindex="-1" href="#ch3theveninex1-2" title="Copy heading and permalink for Answer 3.8.11.1" aria-label="Copy heading and permalink for Answer 3.8.11.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">First, calculate the Thévenin equivalent voltage (which is the voltage dropped between nodes a and b). Note that the three resistors are in series with a voltage source, which means that the voltage divider rule can be used to calculate this voltage. Note also that polarity of the Thévenin equivalent voltage opposes the polarity of the voltage source, so the sign of the Thévenin equivalent voltage will be negative. (This is why the voltage source in <a href="ch3-circuittheorems-10.html#circuit311figans" class="xref" data-knowl="./knowl/xref/circuit311figans.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.55">Figure 3.8.55</a> appears “upside-down.”)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+V_{TH}	\amp=	-10~\textrm{V}\left(\frac{30~\Omega}{60~\Omega + 10~\Omega + 30~\Omega}\right)\\
+\amp=	-10~\textrm{V}\left(\frac{30~\Omega}{100~\Omega}\right)\\
+\amp=	-3~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Second, calculate the Thévenin equivalent resistance. Deactivate the voltage source and calculate the equivalent resistance as seen between nodes a and b. The circuit diagram with the voltage source deactivated is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch3-circuit311figans1.svg" role="img" class="contained" alt="Circuit with 1 mesh and 3 nodes consisting of a 60ohm resistor, 10ohm resistor, and 30ohm resistor. All circuit elements are connected in series. The 30ohm and 60ohm resistors connect at node A. The 30ohm and 10ohm resistors connect at node B. The 60ohm and 10ohm resistors connect at node C."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.56<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the voltage source deactivated.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.56"><a tabindex="-1" href="#circuit311figans1" title="Copy heading and permalink for Figure 3.8.56" aria-label="Copy heading and permalink for Figure 3.8.56">🔗</a></div></figcaption>
+</figure>
+<div class="para">Combine the 60 Ω resistor in series with the 10 Ω resistor and re-draw the circuit diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch3-circuit311figans2.svg" role="img" class="contained" alt="Circuit with 1 mesh and 2 nodes consisting of a 30ohm resistor and 70ohm resistor. The 70ohm resistor and 30ohm resistor connect at node A. The 70ohm resistor and 30ohm resistor connect at node B."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.57<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the voltage source deactivated and the 10 Ω and 60 Ω resistors combined in series.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.57"><a tabindex="-1" href="#circuit311figans2" title="Copy heading and permalink for Figure 3.8.57" aria-label="Copy heading and permalink for Figure 3.8.57">🔗</a></div></figcaption>
+</figure>
+<div class="para">The Thévenin equivalent resistance is equal to the parallel combination of the 30 Ω and 70 Ω resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{TH}	\amp=	30~\Omega//70~\Omega\\
+\amp=	21~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.8.11.1"><a tabindex="-1" href="#ch3theveninex1-3" title="Copy heading and permalink for Solution 3.8.11.1" aria-label="Copy heading and permalink for Solution 3.8.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.8.11"><a tabindex="-1" href="#ch3theveninex1" title="Copy heading and permalink for Exercise 3.8.11" aria-label="Copy heading and permalink for Exercise 3.8.11">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch3-circuittheorems-10.html#ch3theveninex1">In Context</a></span>
+</body>
+</html>

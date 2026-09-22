@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate <span class="process-math">\(i(t)\)</span> given the circuit diagram shown in <a href="ch9-phasoranalysis-8.html#complex-superposition-exercise4-diagram" class="xref" data-knowl="./knowl/xref/complex-superposition-exercise4-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.50">Figure 9.6.50</a>. The current source has a value of <span class="process-math">\(i_{AC}(t) = 5~\textrm{A}~\cos(2\pi2000t)\)</span> and the voltage source has a value of <span class="process-math">\(v_{AC}(t) = 20~\textrm{V}~\cos(2\pi2000t + 90\pi/180)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-diagram.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of current source Iac, voltage source Vac, 20uF capacitor, 10uF capacitor, 310uH inductor, and 12ohm resistor. The high-potential end of Iac, 10uF, and 20uF connect at node a. The 10uF, 310uH, and 12ohm connect at node b. The 20uF, 12ohm, and high-potential end of Vac connect at node c. The low-potential end of both sources and 310uH connect at node d. Branch current i(t) flows through the 310uH from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.50<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-complex-superposition-exercise4" class="xref" data-knowl="./knowl/xref/ch9-complex-superposition-exercise4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.19">Exercise 9.6.19</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.50"><a tabindex="-1" href="#complex-superposition-exercise4-diagram" title="Copy heading and permalink for Figure 9.6.50" aria-label="Copy heading and permalink for Figure 9.6.50">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 2.23~\textrm{A}~\cos(2\pi 2000t + 64.6\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.19.1"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-2" title="Copy heading and permalink for Answer 9.6.19.1" aria-label="Copy heading and permalink for Answer 9.6.19.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of both capacitors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{C20}} \amp= \frac{1}{j(2\pi 2000)(20 \times 10^{-6})}\\
+\amp= -j3.9789~\Omega\\
+\vec{Z_{C10}} \amp= \frac{1}{j(2\pi 2000)(10 \times 10^{-6})}\\
+\amp= -j7.9577~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_L} \amp= j(2\pi2000)(330 \times 10^{-6})\\
+\amp= j3.8956~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert both sources to phasors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{AC}} \amp= 20~\cos{90^\circ} + j20~\sin{90^\circ}~\textrm{V}\\
+\amp= j20~\textrm{V}\\
+\vec{I_{AC}} \amp= 5~\cos{0^\circ} + j5~\sin{0^\circ}~\textrm{A}\\
+\amp= 5~\textrm{A}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure1.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of current source Iac, voltage source Vac, -j3.98ohm impedance, -j7.96ohm impedance, j3.9ohm impedance, and 12ohm resistor. The high-potential end of Iac, -j7.96ohm, and -j3.98ohm connect at node a. The -j7.96ohm, j3.9ohm, and 12ohm connect at node b. The -j3.98ohm, 12ohm, and high-potential end of Vac connect at node c. The low-potential end of both sources and j3.9ohm connect at node d. Branch current I flows through the j3.9ohm from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.51<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.51"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-7" title="Copy heading and permalink for Figure 9.6.51" aria-label="Copy heading and permalink for Figure 9.6.51">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate <span class="process-math">\(\vec{I_1}\text{,}\)</span> the current contributed by the voltage source. Deactivate the current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure2.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of voltage source Vac, -j3.98ohm impedance, -j7.96ohm impedance, j3.9ohm impedance, and 12ohm resistor. The -j7.96ohm and -j3.98ohm connect at node a. The -j7.96ohm, j3.9ohm, and 12ohm connect at node b. The -j3.98ohm, 12ohm, and high-potential end of Vac connect at node c. The low-potential end of Vac and j3.9ohm connect at node d. Branch current I1 flows through the j3.9ohm from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.52<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.52"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-9" title="Copy heading and permalink for Figure 9.6.52" aria-label="Copy heading and permalink for Figure 9.6.52">🔗</a></div></figcaption>
+</figure>
+<div class="para">The −j7.96 Ω and −j3.98 Ω impedances are connected in series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure3.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of voltage source Vac, -j11.9ohm impedance, 12ohm resistor, and j3.9ohm impedance. The j3.9ohm, -j11.9ohm, and 12ohm connect at node a. The -j11.9ohm, 12ohm, and high-potential end of Vac connect at node b. The low-potential end of Vac and j3.9ohm connect at node c. Branch current I1 flows through the j3.9ohm from node a to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.53<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.53"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-11" title="Copy heading and permalink for Figure 9.6.53" aria-label="Copy heading and permalink for Figure 9.6.53">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 12 Ω resistor and −j11.9 Ω impedance are connected in parallel.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z'} \amp= \frac{(12~\Omega)(-j11.9366~\Omega)}{(12~\Omega)+(-j11.9366~\Omega)}\\
+\amp= 5.9682 - j6~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure4.svg" role="img" class="contained" alt="Circuit with voltage source Vac, 5.97-j6ohm impedance, and j3.9ohm impedance, all connected in series. Branch current I1 flows through the circuit in the direction of high source potential to low source potential."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.54<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.54"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-14" title="Copy heading and permalink for Figure 9.6.54" aria-label="Copy heading and permalink for Figure 9.6.54">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(\vec{I_1}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_1} \amp= \frac{j20~\textrm{V}}{(5.9682 - j6~\Omega)+(j3.8956~\Omega)}\\
+\amp= -1.0509 + j2.9805~\textrm{A}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate <span class="process-math">\(\vec{I_2}\text{,}\)</span> the current contributed by the current source. Deactivate the voltage source. A new branch current called <span class="process-math">\(\vec{I_X}\)</span> is introduced to assist in the analysis of this circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure5.svg" role="img" class="contained" alt="Circuit with three meshes and three nodes consisting of current source Iac, -j3.98ohm impedance, -j7.96ohm impedance, j3.9ohm impedance, and 12ohm resistor. The high-potential end of Iac, -j7.96ohm, and -j3.98ohm connect at node a. The -j7.96ohm, j3.9ohm, and 12ohm connect at node b. The -j3.98ohm, 12ohm, low-potential end of Iac, and j3.9ohm connect at node c. Branch current I2 flows through the j3.9ohm from node b to node c. Branch current Ix flows through the -j7.96ohm impedance from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.55<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.55"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-18" title="Copy heading and permalink for Figure 9.6.55" aria-label="Copy heading and permalink for Figure 9.6.55">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 12 Ω resistor is connected in parallel with the j3.8 Ω impedance. This will remove <span class="process-math">\(\vec{I_2}\)</span> from the circuit. Once we calculate <span class="process-math">\(\vec{I_X}\text{,}\)</span> we will come back to solve for <span class="process-math">\(\vec{I_2}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z''} \amp= \frac{(12~\Omega)(j3.8956~\Omega)}{(12~\Omega)+(j3.8956~\Omega)}\\
+\amp= 1.1441 + j3.5242~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure6.svg" role="img" class="contained" alt="Circuit with current source Iac connected in parallel with a -j3.98ohm impedance connected in parallel with the series combination of -j7.96ohm impedance and 1.14+j3.52ohm impedance. Branch current Ix flows through the branch with the two impedances."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.56<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.56"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-21" title="Copy heading and permalink for Figure 9.6.56" aria-label="Copy heading and permalink for Figure 9.6.56">🔗</a></div></figcaption>
+</figure>
+<div class="para">The −j7.96 Ω and 1.14+j3.52 Ω impedances are connected in series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure7.svg" role="img" class="contained" alt="Circuit with current source Iac, 1.14-j4.43ohm impedance, and -j3.98ohm impedance, all connected in parallel. Branch current Ix flows through the branch with the 1.14-j4.43ohm impedance."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.57<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.57"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-23" title="Copy heading and permalink for Figure 9.6.57" aria-label="Copy heading and permalink for Figure 9.6.57">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent impedance of the circuit as seen by the current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{EQ}} \amp= \frac{(1.1441 - j4.4336~\Omega)(-j3.9789~\Omega)}{(1.1441 - j4.4336~\Omega)+(-j3.9789~\Omega)}\\
+\amp= 0.2513 - j2.1311~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the current divider rule to calculate <span class="process-math">\(\vec{I_X}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_X} \amp= (5~\textrm{A})\left(\frac{0.2513 - j2.1311~\Omega}{1.1441 - j4.4336~\Omega}\right)\\
+\amp= 2.3219 - 0.3158~\textrm{A}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The equivalent circuit consisting of the 12 Ω resistor and j3.9 Ω impedance is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-superposition-exercise4-figure8.svg" role="img" class="contained" alt="Circuit consisting of current source Ix, j3.9ohm impedance, and 12ohm resistor, all connected in parallel. Branch current I2 flows through the branch with the j3.9ohm impedance."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.58<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.58"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-29" title="Copy heading and permalink for Figure 9.6.58" aria-label="Copy heading and permalink for Figure 9.6.58">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent impedance of the circuit as seen by the current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{EQ2}} \amp= \frac{(j3.8956~\Omega)(12~\Omega)}{(j3.8956~\Omega)+(12~\Omega)}\\
+\amp= 1.1441 + j3.5242~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the current divider rule to calculate <span class="process-math">\(\vec{I_2}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_2} \amp= (2.3219 - 0.3158~\textrm{A})\left(\frac{1.1441 + j3.5242~\Omega}{j3.8956~\Omega}\right)\\
+\amp= 2.0078 - j0.9676~\textrm{A}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate <span class="process-math">\(\vec{I}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I} \amp= \vec{I_1}+\vec{I_2}\\
+\amp= (-1.05+j2.98~\textrm{A}) + (2.01-j0.97~\textrm{A})\\
+\amp= 0.9569 + j2.0130~\textrm{A}\\
+\amp= 2.2288~\textrm{A} \angle 64.5747^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert to time-varying form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 2.23~\textrm{A}~\cos(2\pi 2000t + 64.6\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.19.1"><a tabindex="-1" href="#ch9-complex-superposition-exercise4-3" title="Copy heading and permalink for Solution 9.6.19.1" aria-label="Copy heading and permalink for Solution 9.6.19.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.19"><a tabindex="-1" href="#ch9-complex-superposition-exercise4" title="Copy heading and permalink for Exercise 9.6.19" aria-label="Copy heading and permalink for Exercise 9.6.19">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-complex-superposition-exercise4">In Context</a></span>
+</body>
+</html>

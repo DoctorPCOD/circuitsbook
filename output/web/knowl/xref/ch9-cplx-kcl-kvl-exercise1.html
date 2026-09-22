@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate <span class="process-math">\(v(t)\)</span> and <span class="process-math">\(i(t)\)</span> given the circuit diagram shown in <a href="ch9-phasoranalysis-8.html#complex-kcl-kvl-exercise1-diagram" class="xref" data-knowl="./knowl/xref/complex-kcl-kvl-exercise1-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.12">Figure 9.6.12</a>. The source has a value of <span class="process-math">\(v_{AC}(t) = 24~\textrm{V}~\cos(2\pi 60t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch9-complex-kcl-kvl-exercise1-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of voltage source Vac, 40ohm resistor, 80ohm resistor, 330uF capacitor, and 10mH inductor. The high-potential end of Vac connects to the 40ohm resistor at node a. The 40ohm resistor, capacitor, and inductor connect at node b. The inductor and 80ohm resistor connect at node c. The low-potential end of Vac, capacitor, and 80ohm resistor connect at node d. Voltage v(t) drops from node b to node d. Branch current i(t) flows through the 80ohm resistor from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-cplx-kcl-kvl-exercise1" class="xref" data-knowl="./knowl/xref/ch9-cplx-kcl-kvl-exercise1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.6">Exercise 9.6.6</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.12"><a tabindex="-1" href="#complex-kcl-kvl-exercise1-diagram" title="Copy heading and permalink for Figure 9.6.12" aria-label="Copy heading and permalink for Figure 9.6.12">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= 4.64~\textrm{V}~\cos(2\pi60t - 73.2\pi/180)\\
+i(t) \amp= 58~\textrm{mA}~\cos(2\pi60t -73.2\pi/180)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.6.1"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-2" title="Copy heading and permalink for Answer 9.6.6.1" aria-label="Copy heading and permalink for Answer 9.6.6.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_C} \amp= \frac{1}{j(2\pi60)(330\times 10^{-6})}\\
+\amp= -j8.0381~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_L}\amp= j(2\pi60)(0.01)\\
+\amp= j3.7699~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Transform the source into a phasor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{AC}} \amp= 24~\cos{0^\circ} + j24~\sin{0^\circ}~\textrm{V}\\
+\amp= 24~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch9-complex-kcl-kvl-exercise1-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of voltage source Vac, 40ohm resistor, 80ohm resistor, -j8.04ohm impedance, and j3.77ohm impedance. The high-potential end of Vac connects to the 40ohm resistor at node a. The 40ohm resistor, -j8.04ohm impedance, and j3.77ohm impedance connect at node b. The j3.77ohm impedance and 80ohm resistor connect at node c. The low-potential end of Vac, -j8.04ohm impedance, and 80ohm resistor connect at node d. Voltage V drops from node b to node d. Branch current I flows through the 80ohm resistor from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.13"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-7" title="Copy heading and permalink for Figure 9.6.13" aria-label="Copy heading and permalink for Figure 9.6.13">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform KCL at the node connecting the 40 Ω resistor, −j8.04 Ω impedance, and j3.77 Ω impedance. Then, solve for <span class="process-math">\(\vec{V}\text{.}\)</span> The units used below are V, A, and Ω.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{\vec{V_{AC}}-\vec{V}}{40} \amp= \frac{\vec{V}}{-j8.04} + \frac{\vec{V}}{80+j3.77}\\
+\frac{24}{40} \amp= \frac{\vec{V}}{40} + \frac{\vec{V}}{-j8.04} + \frac{\vec{V}}{80+j3.77}\\
+\amp= \vec{V}\left(\frac{1}{40} + \frac{1}{-j8.04} + \frac{1}{80+j3.77}\right)\\
+\vec{V} \amp= \frac{24}{40}\left(\frac{1}{\frac{1}{40} + \frac{1}{-j8.04} + \frac{1}{80+j3.77}}\right)\\
+\amp= 1.3435 - j4.4392~\textrm{V}\\
+\amp= 4.6380~\textrm{V} \angle -73.1622^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(\vec{I}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I} \amp= \frac{1.3435 - j4.4392~\textrm{V}}{80~\Omega}\\
+\amp= 0.0168 - j0.0555~\textrm{A}\\
+\amp= 16.7933 - j55.4899~\textrm{mA}\\
+\amp= 57.9753~\textrm{mA} \angle -73.1622^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert both quantities to time-varying form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= 4.64~\textrm{V}~\cos(2\pi60t - 73.2\pi/180)\\
+i(t) \amp= 58~\textrm{mA}~\cos(2\pi60t -73.2\pi/180)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.6.1"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1-3" title="Copy heading and permalink for Solution 9.6.6.1" aria-label="Copy heading and permalink for Solution 9.6.6.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.6"><a tabindex="-1" href="#ch9-cplx-kcl-kvl-exercise1" title="Copy heading and permalink for Exercise 9.6.6" aria-label="Copy heading and permalink for Exercise 9.6.6">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-cplx-kcl-kvl-exercise1">In Context</a></span>
+</body>
+</html>

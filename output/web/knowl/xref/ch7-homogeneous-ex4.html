@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive an equation for <span class="process-math">\(i(t)\)</span> given the circuit shown in <a href="ch7-secondorder-10.html#homogeneous-second-example4-diagram" class="xref" data-knowl="./knowl/xref/homogeneous-second-example4-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.29">Figure 7.8.29</a>. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are <span class="process-math">\(R_D = 20~\Omega\text{,}\)</span> <span class="process-math">\(R = 10~\Omega\text{,}\)</span> <span class="process-math">\(C = 400~\mu\textrm{F}\text{,}\)</span> and <span class="process-math">\(L = 100~\textrm{mH}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch7-homogeneous-second-example4-diagram.svg" role="img" class="contained" alt="Circuit with six nodes consisting of a 4V source, 50ohm resistor, resistors Rd and R, inductor L, capacitor C, and an SPDT switch. The high-potential end of the 4V source connects to the 50ohm resistor at node c. The 50ohm resistor connects to position a of the SPDT switch at node a. Rd connects to position b of the SPDT switch at node b. The input of the SPDT switch, C, and L connect at node d. L and R connect at node e. The low-potential end of the 4V source, Rd, C, and R connect at node f. Branch current i(t) flows through R from node e to node f. Voltage vC(t) drops over C from node d to node f. The SPDT switch is depicted as switching from position a to position b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch7-secondorder-10.html#ch7-homogeneous-ex4" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.8.9">Exercise 7.8.9</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.29"><a tabindex="-1" href="#homogeneous-second-example4-diagram" title="Copy heading and permalink for Figure 7.8.29" aria-label="Copy heading and permalink for Figure 7.8.29">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = \textrm{e}^{-112.5 t} \left[ 66.7~\textrm{mA}~\cos{158 t} + 47.6~\textrm{mA}~\sin{158 t} \right]u(t) + 66.7~\textrm{mA}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.8.9.1"><a tabindex="-1" href="#ch7-homogeneous-ex4-2" title="Copy heading and permalink for Answer 7.8.9.1" aria-label="Copy heading and permalink for Answer 7.8.9.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Analyze the circuit in its initial steady-state condition. The capacitor can be replaced by an open and the inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch7-homogeneous-example4-figure1.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes consisting of a 4V source, 50ohm resistor, and resistor R. The high-potential end of the 4V source connects to the 50ohm resistor at node a. The 50ohm resistor and R connect at node b. R and the low-potential end of the 4V source connect at node c. Branch current i(0) flows through R from node b to node c. Voltage vC(0) drops over R from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.30<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.30"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-2" title="Copy heading and permalink for Figure 7.8.30" aria-label="Copy heading and permalink for Figure 7.8.30">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(i(0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(0) \amp= \frac{4~\textrm{V}}{50~\Omega + 10~\Omega}\\
+\amp= \frac{4~\textrm{V}}{60~\Omega}\\
+\amp= 0.0667~\textrm{A}\\
+\amp= 66.6667~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the voltage divider rule to calculate <span class="process-math">\(v_C(0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v_C(0) \amp= 4~\textrm{V}\left(\frac{10~\Omega}{10~\Omega+50~\Omega}\right)\\
+\amp= 0.6667~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-homogeneous-example4-figure2.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of resistors Rd and R, inductor L, and capacitor C. Rd, C, and L connect at node a. L and R connect at node b. Rd, C, and R connect at node c. Branch current i(t) flows through R from node b to node c. Voltage vC(t) drops over C from node a to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.31"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-8" title="Copy heading and permalink for Figure 7.8.31" aria-label="Copy heading and permalink for Figure 7.8.31">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use KCL at the node connecting <span class="process-math">\(R_D\text{,}\)</span> <span class="process-math">\(C\text{,}\)</span> and <span class="process-math">\(L\text{.}\)</span> Use Ohm’s law to derive the current through resistor <span class="process-math">\(R_D\text{,}\)</span> and <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> to derive the current through the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+\frac{v_C(t)}{R_D} + C\frac{dv_C(t)}{dt} + i(t) = 0\tag{7.8.10}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use KVL around the right-hand loop of the circuit. Use <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a> to derive the voltage dropped over the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+v_C(t) = L\frac{di(t)}{dt} + Ri(t)\tag{7.8.11}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug <a href="ch7-secondorder-10.html#ch7-homogeneous-ex4-kvl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex4-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.11">(7.8.11)</a> into <a href="ch7-secondorder-10.html#ch7-homogeneous-ex4-kcl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex4-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.10">(7.8.10)</a> to obtain a differential equation in terms of <span class="process-math">\(i(t)\text{.}\)</span> Then, reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp= \frac{1}{R_D}\left(L\frac{di(t)}{dt} + Ri(t)\right) + C\frac{d}{dt}\left(L\frac{di(t)}{dt} + Ri(t)\right) + i(t)\\
+\amp= \frac{L}{R_D}\frac{di(t)}{dt} + \frac{R}{R_D}i(t) + LC\frac{d^2i(t)}{dt^2} + RC\frac{di(t)}{dt} + i(t)\\
+\amp= LC\frac{d^2i(t)}{dt^2} + \left(\frac{L}{R_D} + RC\right)\frac{di(t)}{dt} + \left(\frac{R}{R_D}+1\right)i(t)\\
+\amp= \frac{d^2i(t)}{dt^2} + \left(\frac{1}{R_DC}+\frac{R}{L}\right)\frac{di(t)}{dt} + \left(\frac{R}{LCR_D}+\frac{1}{LC}\right)i(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug in parameter values using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \frac{d^2i(t)}{dt^2} + 225\frac{di(t)}{dt} + 37500
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate the values of the damping parameter and resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\alpha \amp= 112.5~\textrm{Np/s}\\
+\omega_0 \amp= 193.6492~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The circuit is underdamped. Use <a href="ch7-damping-types.html#ch7-eq-oscillation-freq" class="xref" data-knowl="./knowl/xref/ch7-eq-oscillation-freq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.5">(7.2.5)</a> to calculate the oscillation frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\beta \amp= \sqrt{(193.6492~\textrm{rad/s})^2 - (112.5~\textrm{Np/s})^2}\\
+\amp= 157.6190~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-secondorder-10.html#ch7-homogeneous-ex4-kvl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex4-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.11">(7.8.11)</a> to calculate the initial condition of the first derivative of the current.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v_C(0^+) \amp= Li'(0^+) + Ri(0^+)\\
+Li'(0^+) \amp= Ri(0^+) - v_C(0^+)\\
+i(0^+) \amp= \frac{Ri(0^+) - v_C(0^+)}{L}\\
+\amp= \frac{(10~\Omega)(0.0667~\textrm{A}) - 0.6667~\textrm{V}}{0.1~\textrm{H}}\\
+\amp= \frac{0.6667~\textrm{V} - 0.6667~\textrm{V}}{0.1~\textrm{H}}\\
+\amp= 0~\textrm{A/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under-B1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.5">(7.5.5)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under-B2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.6">(7.5.6)</a> to calculate the coefficients.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+B_1 \amp= 0.0667~\textrm{A}\\
+\amp= 66.6667~\textrm{mA}\\
+B_2 \amp= \frac{0~\textrm{A/s} + (112.5~\textrm{Np/s})(0.0667~\textrm{A})}{157.6190~\textrm{rad/s}}\\
+\amp= 0.0476~\textrm{A}\\
+\amp= 47.5831~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug the values into <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.4">(7.5.4)</a> to obtain an equation for <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = \textrm{e}^{-112.5 t} \left[ 66.7~\textrm{mA}~\cos{158 t} + 47.6~\textrm{mA}~\sin{158 t} \right]u(t) + 66.7~\textrm{mA}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex4-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.9.1"><a tabindex="-1" href="#ch7-homogeneous-ex4-3" title="Copy heading and permalink for Solution 7.8.9.1" aria-label="Copy heading and permalink for Solution 7.8.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 7.8.9"><a tabindex="-1" href="#ch7-homogeneous-ex4" title="Copy heading and permalink for Exercise 7.8.9" aria-label="Copy heading and permalink for Exercise 7.8.9">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-secondorder-10.html#ch7-homogeneous-ex4">In Context</a></span>
+</body>
+</html>

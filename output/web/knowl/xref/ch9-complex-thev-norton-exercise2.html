@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive the Thévenin equivalent circuit between nodes a and b in the circuit shown in <a href="ch9-phasoranalysis-8.html#complex-thevenin-exercise2-diagram" class="xref" data-knowl="./knowl/xref/complex-thevenin-exercise2-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.94">Figure 9.6.94</a>. The current source has a value of <span class="process-math">\(i_{AC}(t) = 60~\textrm{mA}~\cos(2\pi 1500t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch9-complex-thevenin-exercise2-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of current source Iac, 50ohm resistor, 10mH inductor, 2uF capacitor, and 100ohm resistor. The high-potential end of Iac, 50ohm, and 2uF connect at node c. The 50ohm and 10mH connect at node d. The 2uF and 100ohm connect at node a. The low-potential end of Iac, 10mH, and 100ohm connect at node b. The Thevenin equivalent circuit is defined between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.94<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-complex-thev-norton-exercise2" class="xref" data-knowl="./knowl/xref/ch9-complex-thev-norton-exercise2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.27">Exercise 9.6.27</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.94"><a tabindex="-1" href="#complex-thevenin-exercise2-diagram" title="Copy heading and permalink for Figure 9.6.94" aria-label="Copy heading and permalink for Figure 9.6.94">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch9-complex-thevenin-exercise2-answer.svg" role="img" class="contained" alt="Thevenin equivalent circuit consisting of (4.12V angle 46.7deg) source connected in series with a 38ohm resistor and 1.81mH inductor."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.95<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.95"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-2-1" title="Copy heading and permalink for Figure 9.6.95" aria-label="Copy heading and permalink for Figure 9.6.95">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.27.1"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-2" title="Copy heading and permalink for Answer 9.6.27.1" aria-label="Copy heading and permalink for Answer 9.6.27.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_C} \amp= \frac{1}{j(2\pi1500)(2 \times 10^{-6})}\\
+\amp= -j53.0516~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_L} \amp= j(2\pi1500)(0.01)\\
+\amp= j94.2478~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Transform the source into a phasor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_{AC}} \amp= 60~\cos{0^\circ} + j60~\sin{0^\circ}~\textrm{mA}\\
+\amp= 60~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch9-complex-thevenin-exercise2-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of current source Iac, 50ohm resistor, j94.2ohm impedance, -j53ohm impedance, and 100ohm resistor. The high-potential end of Iac, 50ohm, and -j53ohm connect at node c. The 50ohm and j94.2ohm connect at node d. The -j53ohm and 100ohm connect at node a. The low-potential end of Iac, j94.2ohm, and 100ohm connect at node b. The Thevenin equivalent circuit is defined between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.96<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.96"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-7" title="Copy heading and permalink for Figure 9.6.96" aria-label="Copy heading and permalink for Figure 9.6.96">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent impedance as seen by the current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{EQ}} \amp= \frac{(50+j94.2~\Omega)(100-j53~\Omega)}{(50+j94.2~\Omega)+(100-j53~\Omega)}\\
+\amp= 73.5207 + j24.9562~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the current divider rule to calculate the current flow through the branch including the 100 Ω resistor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_X} \amp= 60~\textrm{mA}\left(\frac{73.5207 + j24.9562~\Omega}{100-j53.05}\right)\\
+\amp= 28.2248 + j29.9474~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate the Thévenin equivalent voltage.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{TH}} \amp= (28.2248 + j29.9474~\textrm{mA})(0.1~\textrm{k}\Omega)\\
+\amp= 2.8225 + j2.9947~\textrm{V}\\
+\amp= 4.1152~\textrm{V} \angle 46.6962^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Deactivate the source and calculate the Thévenin equivalent impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{TH}} \amp= (100~\Omega)//(50~\Omega+j94.25~\Omega-j53.05~\Omega)\\
+\amp= 38.0092 + j17.0252~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the value of the inductance based on the Thévenin equivalent reactance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+L \amp= \frac{17.03}{2 \pi 50}\\
+\amp= 1.8064~\textrm{mH}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.27.1"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2-3" title="Copy heading and permalink for Solution 9.6.27.1" aria-label="Copy heading and permalink for Solution 9.6.27.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.27"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise2" title="Copy heading and permalink for Exercise 9.6.27" aria-label="Copy heading and permalink for Exercise 9.6.27">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-complex-thev-norton-exercise2">In Context</a></span>
+</body>
+</html>

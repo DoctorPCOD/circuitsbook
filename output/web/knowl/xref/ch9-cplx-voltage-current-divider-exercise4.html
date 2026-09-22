@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate <span class="process-math">\(v(t)\)</span> given the circuit diagram shown in <a href="ch9-phasoranalysis-8.html#cplx-current-voltage-divider-example4-diagram" class="xref" data-knowl="./knowl/xref/cplx-current-voltage-divider-example4-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.7">Figure 9.6.7</a>. The source voltage is <span class="process-math">\(v_{AC}(t) = 7~\textrm{V}~\cos(2\pi 100t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/ch9-cplx-current-voltage-divider-example4-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of voltage source Vac, 28ohm resistor, 30ohm resistor, 52mH inductor, and 48uF capacitor. The high-potential end of Vac connects to the 28ohm resistor at node a. The 28ohm resistor and 52mH inductor connect at node b. The inductor, capacitor, and 30ohm resistor connect at node c. The low-potential end of Vac, capacitor, and 30ohm resistor connect at node d. Voltage v(t) drops from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-cplx-voltage-current-divider-exercise4" class="xref" data-knowl="./knowl/xref/ch9-cplx-voltage-current-divider-exercise4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.4">Exercise 9.6.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.7"><a tabindex="-1" href="#cplx-current-voltage-divider-example4-diagram" title="Copy heading and permalink for Figure 9.6.7" aria-label="Copy heading and permalink for Figure 9.6.7">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 3.23~\textrm{V}~\cos(2\pi100t-63.9\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.4.1"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-2" title="Copy heading and permalink for Answer 9.6.4.1" aria-label="Copy heading and permalink for Answer 9.6.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_C} \amp= \frac{1}{j(2\pi100)(48\times10^{-6})}\\
+\amp= -j33.1573~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_L} \amp= j(2\pi100)(0.052)\\
+\amp= j32.6726~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert the source to phasor form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{AC}} \amp= 7\cos(0^\circ)+j7\sin(0^\circ)~\textrm{V}\\
+\amp= 7~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/ch9-voltage-current-div-exercise4-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of voltage source Vac, 28ohm resistor, 30ohm resistor, j32.7ohm impedance, and -j33.2ohm impedance. The high-potential end of Vac connects to the 28ohm resistor at node a. The 28ohm resistor and j32.7ohm impedance connect at node b. The j32.7ohm impedance, -j33.2ohm impedance, and 30ohm resistor connect at node c. The low-potential end of Vac, -j33.2ohm impedance, and 30ohm resistor connect at node d. Voltage v(t) drops from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.8"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-7" title="Copy heading and permalink for Figure 9.6.8" aria-label="Copy heading and permalink for Figure 9.6.8">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 28 Ω resistor is connected in series with the j32.7 Ω impedance. The 30 Ω resistor is connected in parallel with the −j33.2 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z'} \amp= \frac{(30~\Omega)(-j33.1573~\Omega)}{(30~\Omega)+(-j33.1573~\Omega)}\\
+\amp= 16.4960 - j14.9252~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-voltage-current-div-exercise4-figure2.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes consisting of voltage source Vac, 28+j32.7ohm impedance, and 16.5-j14.9ohm impedance. The high-potential end of Vac connects to the 28+j32.7ohm impedance at node a. The two impedances connect at node b. The low-potential end of Vac connects to the 16.5-j14.9ohm impedance at node c. Voltage V drops from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.9"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-10" title="Copy heading and permalink for Figure 9.6.9" aria-label="Copy heading and permalink for Figure 9.6.9">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use the voltage divider rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V} \amp= 7~\textrm{V}\left(\frac{16.50-j14.93~\Omega}{16.50-j14.93~\Omega+28+j32.67~\Omega}\right)\\
+\amp= 1.43 - j2.92~\textrm{V}\\
+\amp= 3.2506~\textrm{V} \angle -63.8828^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert to time-varying form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 3.23~\textrm{V}~\cos(2\pi100t-63.9\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.4.1"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4-3" title="Copy heading and permalink for Solution 9.6.4.1" aria-label="Copy heading and permalink for Solution 9.6.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.4"><a tabindex="-1" href="#ch9-cplx-voltage-current-divider-exercise4" title="Copy heading and permalink for Exercise 9.6.4" aria-label="Copy heading and permalink for Exercise 9.6.4">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-cplx-voltage-current-divider-exercise4">In Context</a></span>
+</body>
+</html>

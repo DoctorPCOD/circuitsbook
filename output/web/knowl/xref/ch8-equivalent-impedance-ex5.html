@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate the equivalent impedance between nodes a and b of the circuit shown in <a href="ch8-phasors-6.html#equivalent-impedance-exercise5-diagram" class="xref" data-knowl="./knowl/xref/equivalent-impedance-exercise5-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.4.8">Figure 8.4.8</a>. The frequency of operation is 6 kHz.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch8-equivalent-impedance-exercise5-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and five nodes consisting of three resistors (2ohm, 6ohm, and 5ohm), two capacitors (50uF and 68uF), and one 33uH inductor. The 50uF and 2ohm connect at node a. The 2ohm, 6ohm, and 5ohm connect at node c. The 6ohm and 68uF connect at node d. The 5ohm and 33uH connect at node e. The 50uF, 68uF, and 33uH connect at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch8-phasors-6.html#ch8-equivalent-impedance-ex5" class="xref" data-knowl="./knowl/xref/ch8-equivalent-impedance-ex5.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 8.4.10">Exercise 8.4.10</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.8"><a tabindex="-1" href="#equivalent-impedance-exercise5-diagram" title="Copy heading and permalink for Figure 8.4.8" aria-label="Copy heading and permalink for Figure 8.4.8">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+0.0586 - j0.528~\Omega
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.10.1"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-2" title="Copy heading and permalink for Answer 8.4.10.1" aria-label="Copy heading and permalink for Answer 8.4.10.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_L} \amp= j(2\pi6000)(33\times10^{-6})\\
+\amp= j1.24~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of each capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{C50}} \amp= \frac{1}{j(2\pi 6000)(50\times10^{-6})}\\
+\amp= -j0.53~\Omega\\
+\vec{Z_{C68}} \amp= \frac{1}{j(2\pi 6000)(68\times10^{-6})}\\
+\amp= -j0.39~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch8-equivimpedance-ex5-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and five nodes consisting of six impedances (2ohm, 6ohm, 5ohm, -j0.53ohm, -j0.39ohm, and j1.24ohm). The -j0.53ohm and 2ohm connect at node a. The 2ohm, 6ohm, and 5ohm connect at node c. The 6ohm and -j0.39ohm connect at node d. The 5ohm and j1.24ohm connect at node e. The -j0.53ohm, -j0.39ohm, and j1.24ohm connect at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.9"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-5" title="Copy heading and permalink for Figure 8.4.9" aria-label="Copy heading and permalink for Figure 8.4.9">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 5 Ω resistor is connected in series with the j1.24 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+Z_{LR} \amp= (5~\Omega) + (j1.24~\Omega)\\
+\amp= 5 + j1.24~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The 6 Ω resistor is connected in series with the −j0.39 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+Z_{RC} \amp= (6~\Omega) + (-j0.39~\Omega)\\
+\amp= 6 - j0.39~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch8-equivimpedance-ex5-figure2.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of four impedances (-j0.53ohm, 2ohm, 6-j0.39ohm, and 5+j1.24ohm). The -j0.53ohm and 2ohm connect at node a. The 2ohm, 6-j0.39ohm, and 5+j1.24ohm connect at node c. The -j0.53ohm, 6-j0.39ohm, and 5+j1.24ohm connect at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.10"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-10" title="Copy heading and permalink for Figure 8.4.10" aria-label="Copy heading and permalink for Figure 8.4.10">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 5+j1.24 Ω impedance is connected in parallel with the 6−j0.39 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z'} \amp= \frac{(5 + j1.24~\Omega)(6 - j0.39~\Omega)}{(5 + j1.24~\Omega)+(6 - j0.39~\Omega)}\\
+\amp= 2.7935 + j0.2844
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch8-equivimpedance-ex5-figure3.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes consisting of three impedances (-j0.53ohm, 2ohm, and 2.8+j0.28ohm). The -j0.53ohm and 2ohm connect at node a. The 2ohm and 2.8+j0.28ohm connect at node c. The -j0.53ohm and 2.8+j0.28ohm connect at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.11"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-13" title="Copy heading and permalink for Figure 8.4.11" aria-label="Copy heading and permalink for Figure 8.4.11">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 2 Ω resistor is connected in series with the 2.8+j0.28 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z''} \amp= 2~\Omega + (2.7935 + j0.2844)\\
+\amp= 4.7935 + j0.2844
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch8-equivimpedance-ex5-figure4.svg" role="img" class="contained" alt="Circuit with two impedances of -j0.53ohm and 4.8+j0.28ohm connected in parallel between nodes a and b. The equivalent impedance is measured in parallel between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.12"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-16" title="Copy heading and permalink for Figure 8.4.12" aria-label="Copy heading and permalink for Figure 8.4.12">🔗</a></div></figcaption>
+</figure>
+<div class="para">The −j0.53 Ω impedance is connected in parallel with the 4.8+j0.28 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{EQ}} \amp= \frac{(-j0.53~\Omega)(4.7935 + j0.2844)}{(-j0.53~\Omega)+(4.7935 + j0.2844)}\\
+\amp=  0.0586 - j0.528~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.4.10.1"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5-3" title="Copy heading and permalink for Solution 8.4.10.1" aria-label="Copy heading and permalink for Solution 8.4.10.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.10"><a tabindex="-1" href="#ch8-equivalent-impedance-ex5" title="Copy heading and permalink for Exercise 8.4.10" aria-label="Copy heading and permalink for Exercise 8.4.10">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch8-phasors-6.html#ch8-equivalent-impedance-ex5">In Context</a></span>
+</body>
+</html>

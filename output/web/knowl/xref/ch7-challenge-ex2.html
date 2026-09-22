@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive an equation for <span class="process-math">\(v(t)\)</span> given the circuit shown in <a href="ch7-secondorder-10.html#challenge-exercise2-diagram" class="xref" data-knowl="./knowl/xref/challenge-exercise2-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.63">Figure 7.8.63</a>. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are <span class="process-math">\(V_{AC}(t) = 10~\textrm{V}~\sin(2\pi40t)\text{,}\)</span> <span class="process-math">\(R_S = 10~\Omega\text{,}\)</span> <span class="process-math">\(R = 10~\Omega\text{,}\)</span> <span class="process-math">\(L = 0.5~\textrm{H}\text{,}\)</span> and <span class="process-math">\(C = 2~\textrm{mF}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-challenge-exercise2-diagram.svg" role="img" class="contained" alt="Circuit with five nodes consisting of voltage source vAC(t), resistors Rs and R, SPST switch, inductor L, and capacitor C. The high-potential end of vAC(t) connects to Rs at node a. Rs and the SPST switch connect at node b. The SPST switch, R, and L connect at node c. L and C connect at node d. The low-potential end of vAC(t), R, and C connect at node e. Voltage vX(t) drops over R from node c to node e. Voltage v(t) drops over C from node d to node e. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.63<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch7-secondorder-10.html#ch7-challenge-ex2" class="xref" data-knowl="./knowl/xref/ch7-challenge-ex2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.8.18">Exercise 7.8.18</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.63"><a tabindex="-1" href="#challenge-exercise2-diagram" title="Copy heading and permalink for Figure 7.8.63" aria-label="Copy heading and permalink for Figure 7.8.63">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[-0.080~\textrm{V}~\sin(2\pi40t) + \textrm{e}^{-5t}\left(0.644~\textrm{V}~\sin{31.2t}\right)\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.8.18.1"><a tabindex="-1" href="#ch7-challenge-ex2-2" title="Copy heading and permalink for Answer 7.8.18.1" aria-label="Copy heading and permalink for Answer 7.8.18.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The initial value of <span class="process-math">\(v(t)\)</span> will be zero due to the lack of any source in the initial steady-state condition. The initial current through the inductor will also be zero. Both of these values are continuous with time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The voltage over the resistor <span class="process-math">\(v_X(t)\)</span> may not be continuous with time. At <span class="process-math">\(t=0^+\text{,}\)</span> the value of the source, <span class="process-math">\(V_{AC}(0)\text{,}\)</span> will be equal to zero. (This is because <span class="process-math">\(\sin{0} = 0\text{.}\)</span>) Therefore, <span class="process-math">\(v_X(0^+)\)</span> will also be equal to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t=0^+\)</span> to derive the differential equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-challenge-example2-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of voltage source vAC(t), resistors Rs and R, inductor L, and capacitor C. The high-potential end of vAC(t) connects to Rs at node a. Rs, R, and L connect at node b. L and C connect at node c. The low-potential end of vAC(t), R, and C connect at node d. Voltage vX(t) drops over R from node b to node d. Voltage v(t) drops over C from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.64<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.64"><a tabindex="-1" href="#ch7-challenge-ex2-3-4" title="Copy heading and permalink for Figure 7.8.64" aria-label="Copy heading and permalink for Figure 7.8.64">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform KCL at the node connecting <span class="process-math">\(R_S\text{,}\)</span> <span class="process-math">\(R\text{,}\)</span> and <span class="process-math">\(L\text{.}\)</span> Combine like terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align}
+\frac{V_{AC}(t) - v_X(t)}{R_S} \amp= \frac{v_X(t)}{R} + C\frac{dv(t)}{dt}\tag{7.8.38}\\
+\frac{V_{AC}(t)}{R_S} \amp= \frac{v_X(t)}{R_S} + \frac{v_X(t)}{R} + C\frac{dv(t)}{dt}\tag{7.8.39}\\
+\amp= \left(\frac{1}{R_S} + \frac{1}{R}\right)v_X(t) + C\frac{dv(t)}{dt}\tag{7.8.40}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Perform KVL around the right-hand loop of the circuit. Note that the current through the inductor is equal to <span class="process-math">\(C\frac{dv(t)}{dt}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+v_X(t) = LC\frac{d^2v(t)}{dt^2} + v(t)\tag{7.8.41}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug <a href="ch7-secondorder-10.html#ch7-eq-challenge2-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-challenge2-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.41">(7.8.41)</a> into <a href="ch7-secondorder-10.html#ch7-challenge-ex2-3-6-1" class="xref" data-knowl="./knowl/xref/ch7-eq-challenge2-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.40">(7.8.40)</a> and simplify to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{V_{AC}(t)}{R_S} \amp= \left(\frac{1}{R_S} + \frac{1}{R}\right)\left(LC\frac{d^2v(t)}{dt^2} + v(t)\right)+ C\frac{dv(t)}{dt}\\
+\amp= \frac{R+R_s}{RR_S}\left(LC\frac{d^2v(t)}{dt^2} + v(t)\right)+ C\frac{dv(t)}{dt}\\
+\amp= \frac{(R+R_S)LC}{RR_S}\frac{d^2v(t)}{dt^2} + C\frac{dv(t)}{dt} + \frac{R+R_S}{RR_S}v(t)\\
+\frac{V_{AC} R}{LC(R+R_S)} \amp= \frac{d^2v(t)}{dt^2} + \frac{RR_S}{L(R+R_S)}\frac{dv(t)}{dt} + \frac{1}{LC}v(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug in parameter values, using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+5000 \sin{(2\pi 40 t)} = \frac{d^2v(t)}{dt^2} + 10\frac{dv(t)}{dt} + 1000
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> to calculate the damping parameter, and use <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\alpha \amp= 5~\textrm{Np/s}\\
+\omega_0 \amp= 31.6228~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">This circuit is underdamped. Use <a href="ch7-damping-types.html#ch7-eq-oscillation-freq" class="xref" data-knowl="./knowl/xref/ch7-eq-oscillation-freq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.5">(7.2.5)</a> to calculate the oscillation frequency of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\beta \amp= \sqrt{31.6228^2 - 5^2}\\
+\amp= 31.225~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-secondorder-10.html#ch7-challenge-ex2-3-6-1" class="xref" data-knowl="./knowl/xref/ch7-eq-challenge2-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.40">(7.8.40)</a> to calculate <span class="process-math">\(v'(0^+)\text{.}\)</span> Because <span class="process-math">\(v(0^+)\text{,}\)</span> <span class="process-math">\(V_{AC}(0^+)\text{,}\)</span> and <span class="process-math">\(v_X(0^+)\)</span> are all equal to zero, <span class="process-math">\(v'(0^+)\)</span> will also be equal to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Refer to <a href="ch7-variableinput.html#ch7-particularsolutions-table" class="xref" data-knowl="./knowl/xref/ch7-particularsolutions-table.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 7.7.1: Particular solutions for commonly used variable sources.">Table 7.7.1</a> to determine the form of the particular solution.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v_P(t) = K_1\sin(2\pi40t) + K_2\cos(2\pi40t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug the particular solution into the differential equation and combine like terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+5000\sin(2\pi40t) \amp= \frac{d^2}{dt^2}\left[K_1\sin(2\pi40t) + K_2\cos(2\pi40t)\right]\\
+\amp+ 10 \frac{d}{dt}\left[K_1\sin(2\pi40t) + K_2\cos(2\pi40t)\right]\\
+\amp+ 1000\left[K_1\sin(2\pi40t) + K_2\cos(2\pi40t)\right]\\
+\amp= -6400\pi^2\left[K_1\sin(2\pi40t) + K_2\cos(2\pi40t)\right]\\
+\amp+ 800\pi\left[K_1\cos(2\pi40t) - K_2\sin(2\pi40t)\right]\\
+\amp+ 1000\left[K_1\sin(2\pi40t) + K_2\cos(2\pi40t)\right]\\
+\amp= \sin(2\pi40t)\left[-6400\pi^2K_1 - 800\pi K_2 + 1000K_1\right]\\
+\amp+ \cos(2\pi40t)\left[-6400\pi^2K_2 + 800\pi K_1 + 1000K_2\right]
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">All of the sine terms can be used to generate one equation relating <span class="process-math">\(K_1\)</span> and <span class="process-math">\(K_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+5000\sin(2\pi40t) \amp= \sin(2\pi40t)\left[-6400\pi^2K_1 - 800\pi K_2 + 1000K_1\right]\\
+5000 \amp= -6400\pi^2K_1 - 800\pi K_2 + 1000K_1\\
+\amp= (-6400\pi^2 + 1000)K_1 + (-800\pi)K_2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">All of the cosine terms can be used to generate a second equation relating <span class="process-math">\(K_1\)</span> and <span class="process-math">\(K_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp= \cos(2\pi40t)\left[-6400\pi^2K_2 + 800\pi K_1 + 1000K_2\right]\\
+\amp= -6400\pi^2K_2 + 800\pi K_1 + 1000K_2\\
+\amp= (800\pi)K_1 + (-6400\pi^2+1000)K_2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The two equations can be expressed in a matrix. The left column contains coefficients of <span class="process-math">\(K_1\text{,}\)</span> the middle column contains coefficients of <span class="process-math">\(K_2\text{,}\)</span> and the right column contains constants.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+-6400\pi^2+1000 	\amp -800\pi 			\amp 5000\\
+800\pi				\amp -6400\pi^2+1000	\amp 0
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The matrix is shown in reduced row echelon form below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+1 	\amp 0 		\amp -0.0803\\
+0 	\amp 1 		\amp -0.0032\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The coefficient <span class="process-math">\(K_2\)</span> can be rounded to zero. The particular form of the solution is now known.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v_P(t) = -0.080~\textrm{V}~\sin(2\pi40t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The equation for <span class="process-math">\(v(t)\)</span> has the following form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[-0.080~\textrm{V}~\sin(2\pi40t) + \textrm{e}^{-5t}\left(B_1 \cos{31.225t} + B_2\sin{31.225t}\right)\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to calculate <span class="process-math">\(B_1\)</span> and <span class="process-math">\(B_2\text{.}\)</span> Start with <span class="process-math">\(v(0^+)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp= \left[-0.080~\textrm{V}~\sin(0) + \textrm{e}^{0}\left(B_1 \cos{0} + B_2\sin{0}\right)\right]\\
+B_1 \amp= 0~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The equation for <span class="process-math">\(v(t)\)</span> now has the following form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[-0.080~\textrm{V}~\sin(2\pi40t) + \textrm{e}^{-5t}\left(B_2\sin{31.225t}\right)\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Take the first derivative of the above expression, and set equal to <span class="process-math">\(v(0^+)\)</span> at a time of <span class="process-math">\(t=0^+\)</span> to calculate <span class="process-math">\(B_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{dv(t)}{dt} \amp= -5B_2\sin{31.225t} + 31.225B_2~\textrm{e}^{-5t}\cos{31.225t} - 20.1062\cos{(2\pi 40t)}\\
+v'(0^+) = 0 \amp= -5B_2\sin{0} + 31.225B_2~\textrm{e}^{0}\cos{0} - 20.1062\cos{0}\\
+0 \amp= 31.225B_2 - 20.1062\\
+31.225B_2 \amp= 20.1062\\
+B_2 \amp= 0.6439~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The equation for <span class="process-math">\(v(t)\)</span> is now known.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[-0.080~\textrm{V}~\sin(2\pi40t) + \textrm{e}^{-5t}\left(0.644~\textrm{V}~\sin{31.2t}\right)\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-41" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">A graph of <span class="process-math">\(v(t)\)</span> is shown below. The high-frequency oscillations correspond to the AC voltage source (particular solution). The low-frequency oscillations correspond to the transient response (general solution).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex2-3-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-challenge-example2-figure2.svg" role="img" class="contained" alt="Graph of the equation defined above."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.65<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.65"><a tabindex="-1" href="#ch7-challenge-ex2-3-43" title="Copy heading and permalink for Figure 7.8.65" aria-label="Copy heading and permalink for Figure 7.8.65">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.18.1"><a tabindex="-1" href="#ch7-challenge-ex2-3" title="Copy heading and permalink for Solution 7.8.18.1" aria-label="Copy heading and permalink for Solution 7.8.18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 7.8.18"><a tabindex="-1" href="#ch7-challenge-ex2" title="Copy heading and permalink for Exercise 7.8.18" aria-label="Copy heading and permalink for Exercise 7.8.18">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-secondorder-10.html#ch7-challenge-ex2">In Context</a></span>
+</body>
+</html>

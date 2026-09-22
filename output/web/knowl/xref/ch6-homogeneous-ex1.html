@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive equations for <span class="process-math">\(i(t)\)</span> and <span class="process-math">\(v(t)\)</span> given the circuit shown in <a href="ch6-inductors-8.html#homogeneousrlcircuit-example1-diagram" class="xref" data-knowl="./knowl/xref/homogeneousrlcircuit-example1-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.31">Figure 6.6.31</a>. The switch is in position a for a very long time before moving to position b at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-homogeneousrlcircuit-example1-diagram.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of a 6V source, three resistors, one inductor, and an SPDT switch. The 300ohm resistor connects to output a of the SPDT switch at node a. Output b of the SPDT switch connects to the 700ohm resistor at node b. The input of the SPDT switch connects to the 900ohm resistor at node c. The 900ohm resistor connects to the 320mH inductor at node d. The 300ohm resistor connects to the high-potential end of the 6V source at node e. The low-potential end of the 6V source connects to the 700ohm resistor and 320mH inductor at node f. Voltage v(t) drops over the inductor from node d to node f. Branch current i(t) flows through the inductor from node d to node f."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch6-inductors-8.html#ch6-homogeneous-ex1" class="xref" data-knowl="./knowl/xref/ch6-homogeneous-ex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.6.11">Exercise 6.6.11</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.31"><a tabindex="-1" href="#homogeneousrlcircuit-example1-diagram" title="Copy heading and permalink for Figure 6.6.31" aria-label="Copy heading and permalink for Figure 6.6.31">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(t) \amp= 5~\textrm{mA}~\textrm{e}^{-5000t}~u(t) + 5~\textrm{mA}~u(-t)\\
+v(t) \amp= -8~\textrm{V}~\textrm{e}^{-5000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.6.11.1"><a tabindex="-1" href="#ch6-homogeneous-ex1-2" title="Copy heading and permalink for Answer 6.6.11.1" aria-label="Copy heading and permalink for Answer 6.6.11.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Analyze the circuit in the initial steady-state condition. The inductor can be replaced by a short. The 700 Ω resistor is not connected to the circuit in this condition.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-homogeneousrlcircuit-example1-solution1.svg" role="img" class="contained" alt="Circuit with 3 nodes and 1 mesh consisting of a 6V source, 300ohm resistor, and 900ohm resistor. All three circuit elements are wired in series. Branch current i(0) is defined as flowing through the resistors from the high-potential end of the source to the low-potential end of the source."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.32<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.32"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-2" title="Copy heading and permalink for Figure 6.6.32" aria-label="Copy heading and permalink for Figure 6.6.32">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(i(0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(0) \amp= \frac{6~\textrm{V}}{300~\Omega+900~\Omega}\\
+\amp= 0.005~\textrm{A}\\
+\amp= 5~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Draw the circuit at <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch6-homogeneousrlcircuit-example1-solution2.svg" role="img" class="contained" alt="Circuit with 3 nodes and 1 mesh consisting of a 700ohm resistor, 900ohm resistor, and 320mH inductor. All three circuit elements are wired in series. Voltage v(t) drops over the inductor. Branch current i(t) flows through the inductor with the same polarity as the voltage."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.33<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.33"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-6" title="Copy heading and permalink for Figure 6.6.33" aria-label="Copy heading and permalink for Figure 6.6.33">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= 700~\Omega+900~\Omega\\
+\amp= 1600~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to calculate <span class="process-math">\(\tau\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\tau \amp= \frac{L}{R}\\
+\amp= \frac{0.32~\textrm{H}}{1600~\Omega}\\
+\amp= 2\times10^{-4}~\textrm{s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-homogeneousrlcurrent" class="xref" data-knowl="./knowl/xref/ch6-homogeneousrlcurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.2">(6.5.2)</a> to derive an equation for <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 5~\textrm{mA}~\textrm{e}^{-5000t}~u(t) + 5~\textrm{mA}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-homogeneousrlvoltage" class="xref" data-knowl="./knowl/xref/ch6-homogeneousrlvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.3">(6.5.3)</a> to derive an equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= -(1600~\Omega)(0.005~\textrm{A}~\textrm{e}^{-5000t}~u(t))\\
+\amp= -8~\textrm{V}~\textrm{e}^{-5000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.11.1"><a tabindex="-1" href="#ch6-homogeneous-ex1-3" title="Copy heading and permalink for Solution 6.6.11.1" aria-label="Copy heading and permalink for Solution 6.6.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.6.11"><a tabindex="-1" href="#ch6-homogeneous-ex1" title="Copy heading and permalink for Exercise 6.6.11" aria-label="Copy heading and permalink for Exercise 6.6.11">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch6-inductors-8.html#ch6-homogeneous-ex1">In Context</a></span>
+</body>
+</html>

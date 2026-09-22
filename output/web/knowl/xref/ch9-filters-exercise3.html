@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">38<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Given the circuit shown in <a href="ch9-phasoranalysis-8.html#filters-exercise3-diagram" class="xref" data-knowl="./knowl/xref/filters-exercise3-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.131">Figure 9.6.131</a>, determine the filter type. Then, calculate the center frequency, bandwidth, cutoff frequencies, and quality factor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-filters-exercise3-diagram.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of voltage source Vin, 1kohm resistor, 10mH inductor, and 0.01uF capacitor. The high-potential end of Vin connects to the resistor at node a. The resistor and inductor connect at node b. The inductor and capacitor connect at node c. The low-potential end of Vin connects to the capacitor at node d. Vout drops from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.131<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-filters-exercise3" class="xref" data-knowl="./knowl/xref/ch9-filters-exercise3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.38">Exercise 9.6.38</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.131"><a tabindex="-1" href="#filters-exercise3-diagram" title="Copy heading and permalink for Figure 9.6.131" aria-label="Copy heading and permalink for Figure 9.6.131">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The circuit is a passive, second-order, band-stop filter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\omega_c \amp= 100000~\textrm{rad/s}\\
+\beta \amp= 100000~\textrm{rad/s}\\
+\omega_{c1} \amp= 50000~\textrm{rad/s}\\
+\omega_{c2} \amp= 150000~\textrm{rad/s}\\
+Q \amp= 1
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.38.1"><a tabindex="-1" href="#ch9-filters-exercise3-2" title="Copy heading and permalink for Answer 9.6.38.1" aria-label="Copy heading and permalink for Answer 9.6.38.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Analyze the circuit at <span class="process-math">\(\omega=0\text{.}\)</span> <span class="process-math">\(v_{out}(0)\)</span> is not zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-filters-exercise3-figure1.svg" role="img" class="contained" alt="Circuit with four nodes consisting of voltage source Vin, 1kohm resistor, short, and open. The high-potential end of Vin connects to the resistor at node a. The resistor and short connect at node b. The short and open connect at node c. The low-potential end of Vin connects to the open at node d. Vout(0) drops from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.132<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.132"><a tabindex="-1" href="#ch9-filters-exercise3-3-2" title="Copy heading and permalink for Figure 9.6.132" aria-label="Copy heading and permalink for Figure 9.6.132">🔗</a></div></figcaption>
+</figure>
+<div class="para">Analyze the circuit at <span class="process-math">\(\omega \rightarrow \infty\text{.}\)</span> <span class="process-math">\(v_{out}(\infty)\)</span> is not zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-filters-exercise3-figure2.svg" role="img" class="contained" alt="Circuit with four nodes consisting of voltage source Vin, 1kohm resistor, open, and short. The high-potential end of Vin connects to the resistor at node a. The resistor and open connect at node b. The open and short connect at node c. The low-potential end of Vin connects to the short at node d. Vout(infinity) drops from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.133<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.133"><a tabindex="-1" href="#ch9-filters-exercise3-3-4" title="Copy heading and permalink for Figure 9.6.133" aria-label="Copy heading and permalink for Figure 9.6.133">🔗</a></div></figcaption>
+</figure>
+<div class="para">This circuit is a band-stop filter. (Refer to <a href="ch9-passivefilters.html#ch9-filtertype-table" class="xref" data-knowl="./knowl/xref/ch9-filtertype-table.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 9.3.31: Determination of filter type based on very-low and very-high frequency analysis of the output voltage.">Table 9.3.31</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The transfer function of this circuit is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+H(j\omega) = \frac{-\omega^2 + \frac{1}{LC}}{\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug in parameter values using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+H(j\omega) = \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \times 10^{10}}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch9-passivefilters.html#ch9-cutoff-frequency-second-order" class="xref" data-knowl="./knowl/xref/ch9-cutoff-frequency-second-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.1">(9.3.1)</a> to calculate the center frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\omega_c \amp= \sqrt{1\times10^{10}}\\
+\amp= 100000~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch9-passivefilters.html#ch9-bandwidth-a1" class="xref" data-knowl="./knowl/xref/ch9-bandwidth-a1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.4">(9.3.4)</a> to calculate the bandwidth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\beta = 100000~\textrm{rad/s}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The two cutoff frequencies can be calculated directly from the center frequency and bandwidth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\omega_{c1}, \omega_{c2} \amp= \omega_0 \pm \frac{\beta}{2}\\
+\omega_{c1} \amp= \omega_0 - \frac{\beta}{2}\\
+\amp= 100000~\textrm{rad/s} - 50000~\textrm{rad/s}\\
+\amp= 50000~\textrm{rad/s}\\
+\omega_{c2} \amp= \omega_0 + \frac{\beta}{2}\\
+\amp= 100000~\textrm{rad/s} + 5000~\textrm{rad/s}\\
+\amp= 150000~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch9-passivefilters.html#ch9-quality-factor" class="xref" data-knowl="./knowl/xref/ch9-quality-factor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.2">(9.3.2)</a> to calculate the quality factor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+Q \amp= \frac{100000}{100000}\\
+\amp= 1
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.38.1"><a tabindex="-1" href="#ch9-filters-exercise3-3" title="Copy heading and permalink for Solution 9.6.38.1" aria-label="Copy heading and permalink for Solution 9.6.38.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.38"><a tabindex="-1" href="#ch9-filters-exercise3" title="Copy heading and permalink for Exercise 9.6.38" aria-label="Copy heading and permalink for Exercise 9.6.38">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-filters-exercise3">In Context</a></span>
+</body>
+</html>

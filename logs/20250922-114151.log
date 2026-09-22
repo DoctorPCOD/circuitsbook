@@ -1,0 +1,69 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/ENGIN-2223_yellow_book/output/web.
+INFO    : discovering source file's directory name: /Users/ajp/ENGIN-2223_yellow_book/source
+INFO    : verifying and expanding input directory: /Users/ajp/ENGIN-2223_yellow_book/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/ENGIN-2223_yellow_book/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/ENGIN-2223_yellow_book/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/ENGIN-2223_yellow_book/assets
+INFO    : discovering source file's directory name: /Users/ajp/ENGIN-2223_yellow_book/source
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 7.9.10
+INFO    : Downloading Runestone Services, version 7.9.10
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-denver
+INFO    : converting /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx to HTML in /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-xrk2d6sj
+INFO    : XSL conversion of /Users/ajp/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.28.2/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /Users/ajp/.ptx/2.28.2/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-xrk2d6sj
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-pv82yt14
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h2 class="heading"><span class="type">Derivation</span></h2>
+<div class="para">Start by solving <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.6">(7.6.6)</a> when <span class="process-math">\(t=0^+\text{.}\)</span> This conveniently derives coefficient <span class="process-math">\(B_1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(0^+) \amp= v_P(0^+) + \textrm{e}^{-\alpha*0} \left[ B_1\cos{(\beta *0)} + B_2\sin{(\beta *0)} \right]\\
+v(0^+) \amp= v(\infty) + B_1\\
+B_1 \amp= v(0^+) - v(\infty)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Calculate the first derivative of <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.4">(7.5.4)</a> and solve when <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{d}{dt}v(t) \amp= \frac{d}{dt}\left(v_P(t) + \textrm{e}^{-\alpha t} \left[ B_1\cos{\beta t} + B_2\sin{\beta t} \right]\right)\\
+v'(t) \amp= \textrm{e}^{-\alpha t}\left[(\cos{\beta t})(B_2\beta - \alpha B_1) - (\sin{\beta t})(\alpha B_2 + \beta B_1)\right]\\
+v'(0^+) \amp= \textrm{e}^{-\alpha *0}\left[(\cos{(\beta *0)})(B_2\beta - \alpha B_1) - (\sin{(\beta *0)})(\alpha B_2 + \beta B_1)\right]\\
+v'(0^+) \amp= B_2\beta - \alpha B_1
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the equations for <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to solve for <span class="process-math">\(B_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v'(0^+) \amp= B_2\beta - \alpha B_1\\
+v'(0^+) - \alpha B_1 \amp= B_2\beta\\
+B_2 \amp= \frac{v'(0^+) + \alpha B_1}{\beta}\\
+\amp= \frac{v'(0^+) + \alpha (v(0^+) - v(\infty))}{\beta}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.6.2.1"><a tabindex="-1" href="#ch7-non-homogeneous-underdamped-coefficient-derivation" title="Copy heading and permalink for Derivation 7.6.2.1" aria-label="Copy heading and permalink for Derivation 7.6.2.1">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-coefficient-derivation">In Context</a></span>
+</body>
+</html>

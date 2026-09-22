@@ -1,0 +1,12 @@
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Finished generating assets successfully.
+
+INFO    : 

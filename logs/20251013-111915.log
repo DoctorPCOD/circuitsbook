@@ -1,0 +1,26 @@
+INFO    : Building target web
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:251:11:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:251:40:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:253:26:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:253:37:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:255:19:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:255:41:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:257:19:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:257:42:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:259:33:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:259:48:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:261:24:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:261:39:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:268:12:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: figure line 226 and section
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx:286:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: section line 219 and chapter
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx:18:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-intro.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

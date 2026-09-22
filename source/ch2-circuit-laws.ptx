@@ -2696,6 +2696,113 @@
 
 	</section>
 
+	<section xml:id="ch2-measuring-current">
+		<title>Measuring Current</title>
+		
+		<p>Measuring current in a circuit is more complicated than measuring voltage. This is because the internal resistance of an ammeter is very low (if it were too high, then it would affect the measurements it makes). Measuring current in parallel with a component will therefore short out that component, effectively removing it from the circuit. Current must be measured in series. In other words, it must be measured within the branch in which current needs to be measured. (This was first introduced in <xref ref="ch1-measuringcurrent" />.)</p>
+
+		<p>Frequently, students struggle with the placement of an ammeter in a built circuit. The example below will demonstrate how to correctly measure current in a circuit with three branches using both circuit diagrams and breadboard simulations.</p>
+		
+		<example>
+			<title>Measuring current in a breadboarded circuit</title>
+			
+			<statement>
+				<p>Build the circuit shown below. Then, measure branch currents <m>I_1</m>, <m>I_2</m>, and <m>I_3</m>. Mathematically confirm that the measurements are correct.</p>
+				
+				<figure>
+  					<caption></caption>
+  					<image width="80%" xml:id="ch2-measuring-current-example-figure1">
+    					<shortdescription>Circuit with two meshes and three nodes consisting of a 10V voltage source, 1.6k resistor, 4k resistor, and 6k resistor. The high-potential end of the 10V source connects to the 1.6kohm resistor at node a. The 1.6kohm, 4kohm, and 6kohm resistors connect at node b. The low-potential end of the 10V source, 4kohm, and 6kohm connect at node c. Branch current I1 flows through the 1.6kohm from node a to node b. Branch current I2 flows through the 4kohm from node b to node c. Branch current I3 flows through the 6kohm from node b to node c.</shortdescription>
+						<latex-image>
+							\begin{tikzpicture}[font=\sffamily]
+								\draw[]	(0,2.5) to [V, l_=10~V]								(0,0);
+								\draw[]	(0,2.5) to [R, l^=1.6~k$\Omega$, i^=$I_1$]			(2.5,2.5) --++ (right:2.5);
+								\draw[]	(2.5,2.5) to [R, l_=4~k$\Omega$, i^=$I_2$, *-*]		(2.5,0);
+								\draw[]	(5,2.5) to [R, l_=6~k$\Omega$, i^=$I_3$]			(5,0);
+								\draw[]	(0,0) to [short]									(5,0);
+							\end{tikzpicture}
+						</latex-image>
+  					</image>
+				</figure>
+
+				<p>The circuit is shown built on a breadboard below. The power supply is a 10<nbsp />V constant voltage source. The current readout displays the total current supplied to the circuit. These readouts are not always terribly precise, nor should they be relied on as accurate current measurements.</p>
+				
+				<figure>
+  					<caption>Tinkercad screen shot reprinted courtesy of Autodesk, Inc.</caption>
+					<image width="100%" xml:id="ch2-measuring-current-example-figure2" source="circuit.png">
+						<shortdescription>Circuit above built on a breadboard.</shortdescription>
+  					</image>
+				</figure>
+
+				<p>To measure branch current <m>I_1</m>, the ammeter can be placed either between the power supply and the 1.6<nbsp />k&#8486; resistor, or between the 1.6<nbsp />k&#8486; resistor and the parallel combination of the 4<nbsp />k&#8486; and 6<nbsp />k&#8486; resistors. The circuit below demonstrates placing the ammeter between the 1.6<nbsp />k&#8486; resistor and the other two resistors. Either way, at least one circuit element must be disconnected and moved to place the ammeter in the same branch as the 1.6<nbsp />k&#8486; resistor.</p>
+				
+				<figure>
+  					<caption>Tinkercad screen shot reprinted courtesy of Autodesk, Inc.</caption>
+					<image width="100%" xml:id="ch2-measuring-current-example-figure3" source="measuringI1.png">
+						<shortdescription>Circuit above built on a breadboard with ammeter placed between the 1.6kohm resistor and the 4kohm and 6kohm resistors.</shortdescription>
+  					</image>
+				</figure>
+
+				<p>To measure branch current <m>I_2</m>, the ammeter can be placed between the 1.6<nbsp />k&#8486; resistor and the 4<nbsp />k&#8486; resistor, or between the 4<nbsp />k&#8486; resistor and ground. The circuit below demonstrates placing the ammeter between the 4<nbsp />k&#8486; resistor and ground. Again, at least one circuit element had to be disconnected and moved in order to place the ammeter in the same branch as the 4<nbsp />k&#8486; resistor without affecting other circuit elements.</p>
+				
+				<figure>
+  					<caption>Tinkercad screen shot reprinted courtesy of Autodesk, Inc.</caption>
+					<image width="100%" xml:id="ch2-measuring-current-example-figure4" source="measuringI2.png">
+						<shortdescription>Circuit above built on a breadboard with the ammeter placed between the 4kohm resistor and ground.</shortdescription>
+  					</image>
+				</figure>
+
+				<p>To measure branch current <m>I_3</m>, the ammeter can be placed between the 1.6<nbsp />k&#8486; resistor and the 6<nbsp />k&#8486; resistor, or between the 6<nbsp />k&#8486; resistor and ground. The circuit below demonstrates placing the ammeter between the 6<nbsp />k&#8486; resistor and ground. Once again, circuit components need to be moved around to correctly place the ammeter in that branch.</p>
+				
+				<figure>
+  					<caption>Tinkercad screen shot reprinted courtesy of Autodesk, Inc.</caption>
+					<image width="100%" xml:id="ch2-measuring-current-example-figure5" source="measuringI3.png">
+						<shortdescription>Circuit above built on a breadboard with the ammeter placed between the 6kohm resistor and ground.</shortdescription>
+  					</image>
+				</figure>
+
+				<p>To mathematically verify these values, first calculate the equivalent resistance of the circuit as seen by the power supply.</p>
+				
+				<p>
+					<md>
+						<mrow>R_{EQ} \amp= 1.6~\textrm{k}\Omega + (4~\textrm{k}\Omega // 6~\textrm{k}\Omega)</mrow>
+						<mrow>\amp= 1.6~\textrm{k}\Omega + 2.4~\textrm{k}\Omega</mrow>
+						<mrow>\amp= 4~\textrm{k}\Omega</mrow>
+					</md>
+				</p>
+
+				<p>Branch current <m>I_1</m> will be equal to the voltage supplied by the source divided by the equivalent resistance of the circuit.</p>
+				
+				<p>
+					<md>
+						<mrow>I_1 \amp= \frac{10~\textrm{V}}{4~\textrm{k}\Omega}</mrow>
+						<mrow>\amp= 2.5~\textrm{mA}</mrow>
+					</md>
+				</p>
+
+				<p>Because of KCL, 2.5<nbsp />mA of current collectively flows through both the 4<nbsp />k&#8486; and 6<nbsp />k&#8486; resistors. This means that the current divider rule can be used to calculate <m>I_2</m> and <m>I_3</m>.</p>
+				
+				<p>
+					<md>
+						<mrow>I_2 \amp= 2.5~\textrm{mA}\left(\frac{2.4~\textrm{k}\Omega}{4~\textrm{k}\Omega}\right)</mrow>
+						<mrow>\amp= 1.5~\textrm{mA}</mrow>
+						<mrow>I_3 \amp= 2.5~\textrm{mA}\left(\frac{2.4~\textrm{k}\Omega}{6~\textrm{k}\Omega}\right)</mrow>
+						<mrow>\amp= 1~\textrm{mA}</mrow>
+					</md>
+				</p>
+				
+				<p>An incorrect placement of the ammeter is shown below. Note that the ammeter is wired in parallel with the 4<nbsp />k&#8486; and 6<nbsp />k&#8486; resistors. This effectively removes those two resistors from the circuit. The only resistor still present in the circuit is the 1.6<nbsp />k&#8486; resistor. <alert>Measuring current in parallel with circuit elements can cause overheating if an insufficient amount of resistance is left in the circuit!</alert></p>
+				
+				<figure>
+  					<caption>Tinkercad screen shot reprinted courtesy of Autodesk, Inc.</caption>
+					<image width="100%" xml:id="ch2-measuring-current-example-figure6" source="wrong.png">
+						<shortdescription>Circuit above built on a breadboard with the ammeter placed in parallel with the 4kohm and 6kohm resistors.</shortdescription>
+  					</image>
+				</figure>
+			</statement>
+		</example>
+	</section>
+
 	<exercises>
     	<title>Practice Problems</title>
 

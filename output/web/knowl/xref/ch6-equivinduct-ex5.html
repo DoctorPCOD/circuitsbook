@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">For the circuit shown in <a href="ch6-inductors-8.html#equivalentinductance-example5-diagram" class="xref" data-knowl="./knowl/xref/equivalentinductance-example5-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.20">Figure 6.6.20</a>, calculate the equivalent inductance of the RL circuit. Then, calculate the equivalent resistance as seen by the inductor when the switch opens (<span class="process-math">\(R_{EQ,open}\)</span>), and for when the switch closes (<span class="process-math">\(R_{EQ,close}\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-diagram.svg" role="img" class="contained" alt="Circuit with 5 nodes consisting of a 20V source, 40mA source, three resistors, an SPST switch, and three inductors. The 1.5kohm, 330uH, 680uH, 3.3kohm, and one end of the SPST switch connect at node a. The 680uH and 120uH inductors connect at node b. The 3.3kohm connects to the high-potential end of the 20V source at node c. The other end of the SPST switch connects to the 2.2kohm and 40mA source at node d. The 40mA source flows into node d. The 1.5kohm, 330uH, 120uH, low-potential end of the 20V source, 2.2kohm, and 40mA source connect at node e. The 40mA source flows out of node e. The SPST switch is depicted as being open."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch6-inductors-8.html#ch6-equivinduct-ex5" class="xref" data-knowl="./knowl/xref/ch6-equivinduct-ex5.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.6.5">Exercise 6.6.5</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.20"><a tabindex="-1" href="#equivalentinductance-example5-diagram" title="Copy heading and permalink for Figure 6.6.20" aria-label="Copy heading and permalink for Figure 6.6.20">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+L_{EQ} \amp= 234~\mu\textrm{H}\\
+R_{EQ,open} \amp= 1.03~\textrm{k}\Omega\\
+R_{EQ,close} \amp= 0.702~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.6.5.1"><a tabindex="-1" href="#ch6-equivinduct-ex5-2" title="Copy heading and permalink for Answer 6.6.5.1" aria-label="Copy heading and permalink for Answer 6.6.5.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Start by combining the two series inductors. The equivalent inductance of the two series inductors is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+680~\mu\textrm{H} + 120~\mu\textrm{H} = 800~\mu\textrm{H}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution1.svg" role="img" class="contained" alt="Circuit with 4 nodes consisting of a 20V source, 40mA source, three resistors, an SPST switch, and two inductors. The 1.5kohm, 330uH, 800uH, 3.3kohm, and one end of the SPST switch connect at node a. The 3.3kohm connects to the high-potential end of the 20V source at node c. The other end of the SPST switch connects to the 2.2kohm and 40mA source at node b. The 40mA source flows into node b. The 1.5kohm, 330uH, 800uH, low-potential end of the 20V source, 2.2kohm, and 40mA source connect at node d. The 40mA source flows out of node d. The SPST switch is depicted as being open."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.21"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-3" title="Copy heading and permalink for Figure 6.6.21" aria-label="Copy heading and permalink for Figure 6.6.21">🔗</a></div></figcaption>
+</figure>
+<div class="para">Combine the two parallel inductors. The equivalent inductance is equal to<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{(330~\mu\textrm{H})(800~\mu\textrm{H})}{330~\mu\textrm{H}+800~\mu\textrm{H}} = 234~\mu\textrm{H}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution2.svg" role="img" class="contained" alt="Circuit with 4 nodes consisting of a 20V source, 40mA source, three resistors, an SPST switch, and one inductor. The 1.5kohm, 234uH, 3.3kohm, and one end of the SPST switch connect at node a. The 3.3kohm connects to the high-potential end of the 20V source at node c. The other end of the SPST switch connects to the 2.2kohm and 40mA source at node b. The 40mA source flows into node b. The 1.5kohm, 234uH, low-potential end of the 20V source, 2.2kohm, and 40mA source connect at node d. The 40mA source flows out of node d. The SPST switch is depicted as being open."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.22"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-6" title="Copy heading and permalink for Figure 6.6.22" aria-label="Copy heading and permalink for Figure 6.6.22">🔗</a></div></figcaption>
+</figure>
+<div class="para">The equivalent resistance as seen by the inductor when the switch opens can be analyzed with the switch opened. All circuit elements disconnected from the circuit have been removed from the diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution3.svg" role="img" class="contained" alt="Circuit with 3 nodes and 2 meshes consisting of a 20V source, two resistors, and one inductor. The 1.5kohm, 234uH, and 3.3kohm connect at node a. The 3.3kohm connects to the high-potential end of the 20V source at node b. The 1.5kohm, 234uH, and low-potential end of the 20V source connect at node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.23"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-8" title="Copy heading and permalink for Figure 6.6.23" aria-label="Copy heading and permalink for Figure 6.6.23">🔗</a></div></figcaption>
+</figure>
+<div class="para">The voltage source should be deactivated by replacing it with a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution4.svg" role="img" class="contained" alt="Circuit with 2 nodes and 2 meshes consisting of a 1.5kohm resistor, 234uH inductor, and 3.3kohm resistor. All three circuit elements are connected in parallel."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.24"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-10" title="Copy heading and permalink for Figure 6.6.24" aria-label="Copy heading and permalink for Figure 6.6.24">🔗</a></div></figcaption>
+</figure>
+<div class="para">Combine the parallel resistors. This represents the equivalent resistance as seen by the inductor when the switch opens.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution5.svg" role="img" class="contained" alt="Circuit with 2 nodes and 1 mesh consisting of a 1.03kohm resistor and 234uH inductor wired in the same mesh."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.25"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-12" title="Copy heading and permalink for Figure 6.6.25" aria-label="Copy heading and permalink for Figure 6.6.25">🔗</a></div></figcaption>
+</figure>
+<div class="para">The equivalent resistance as seen by the inductor when the switch closes can be analyzed with the switch closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution6.svg" role="img" class="contained" alt="Circuit with 4 nodes and 4 meshes consisting of a 20V source, 40mA source, three resistors, one inductor, and an SPST switch. The 1.5kohm, 234uH, 3.3kohm, and one end of the SPST switch connect at node a. The other end of the SPST switch connects to the 2.2kohm and 40mA source at node b. The 40mA source flows into node b. The 3.3kohm connects to the high-potential end of the 20V source at node c. The 1.5kohm, 234uH, low-potential end of the 20V source, 2.2kohm, and 40mA source connect at node d. The 40mA source flows out of node d. The SPST switch is depicted as being closed."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.26"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-14" title="Copy heading and permalink for Figure 6.6.26" aria-label="Copy heading and permalink for Figure 6.6.26">🔗</a></div></figcaption>
+</figure>
+<div class="para">Both sources should be deactivated. The switch will be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution7.svg" role="img" class="contained" alt="Circuit with 2 nodes and 3 meshes consisting of a 234uH inductor, and 1.5k, 3.3k, and 2.2k resistors. All four circuit elements are connected in parallel."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.27"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-16" title="Copy heading and permalink for Figure 6.6.27" aria-label="Copy heading and permalink for Figure 6.6.27">🔗</a></div></figcaption>
+</figure>
+<div class="para">Combine the parallel resistors. This represents the equivalent resistance as seen by the inductor when the switch closes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch6-equivalentinductance-example5-solution8.svg" role="img" class="contained" alt="Circuit with 2 nodes and 1 mesh consisting of a 0.702kohm resistor and 234uH inductor connected in the same mesh."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.28"><a tabindex="-1" href="#ch6-equivinduct-ex5-3-18" title="Copy heading and permalink for Figure 6.6.28" aria-label="Copy heading and permalink for Figure 6.6.28">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.5.1"><a tabindex="-1" href="#ch6-equivinduct-ex5-3" title="Copy heading and permalink for Solution 6.6.5.1" aria-label="Copy heading and permalink for Solution 6.6.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.6.5"><a tabindex="-1" href="#ch6-equivinduct-ex5" title="Copy heading and permalink for Exercise 6.6.5" aria-label="Copy heading and permalink for Exercise 6.6.5">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch6-inductors-8.html#ch6-equivinduct-ex5">In Context</a></span>
+</body>
+</html>

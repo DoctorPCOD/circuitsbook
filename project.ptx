@@ -6,8 +6,9 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" />
-    <target name="print" format="pdf" />
+    <target name="print" format="pdf" latex-engine="lualatex"/>
     <target name="ebook" format="epub" />
+    <target name="latex" format="latex" />
   </targets>
 </project>
 
@@ -53,18 +54,14 @@
             platform="runestone"
           />
           <target
-            name="print"
-            format="pdf"
+            name="latex"
+            format="latex"
             source="main.ptx"
             publication="publication.ptx"
-            output-dir="print"
+            output-dir="latex"
             output-filename="mybook.pdf"
             latex-engine="pdflatex"
             deploy-dir="pdf"
-          />
-          <target
-            name="latex"
-            format="latex"
           />
           <target
             name="braille"

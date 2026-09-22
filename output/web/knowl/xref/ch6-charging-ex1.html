@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive equations for <span class="process-math">\(i(t)\)</span> and <span class="process-math">\(v(t)\)</span> given the circuit shown in <a href="ch6-inductors-8.html#rl-charging-example1-diagram" class="xref" data-knowl="./knowl/xref/rl-charging-example1-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.56">Figure 6.6.56</a>. The switch is open for a very long time before closing at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-rl-charging-example1-diagram.svg" role="img" class="contained" alt="Circuit with 5 nodes consisting of an 8V source, four resistors, one inductor, and an SPST switch. The high-potential end of the 8V source connects to the 4k resistor at node a. The 4k resistor connects to one end of the SPST switch at node b. The other end of the SPST switch connects to the 5k, 6k, and 20k resistors at node c. The 6k resistor connects to the 100mH inductor at node d. The low-potential end of the 8V source connects to the 5k and 20k resistors and 100mH inductor at node e. Voltage v(t) drops over the inductor from node d to node e. Branch current i(t) flows through the inductor from node d to node e. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.56<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch6-inductors-8.html#ch6-charging-ex1" class="xref" data-knowl="./knowl/xref/ch6-charging-ex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.6.16">Exercise 6.6.16</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.56"><a tabindex="-1" href="#rl-charging-example1-diagram" title="Copy heading and permalink for Figure 6.6.56" aria-label="Copy heading and permalink for Figure 6.6.56">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(t) \amp= 0.5~\textrm{mA}~\left[1 - \textrm{e}^{-80000t}\right]~u(t)\\
+v(t) \amp= 4~\textrm{V}~\textrm{e}^{-80000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.6.16.1"><a tabindex="-1" href="#ch6-charging-ex1-2" title="Copy heading and permalink for Answer 6.6.16.1" aria-label="Copy heading and permalink for Answer 6.6.16.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Analyze the circuit in the final steady-state condition. The inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-chargingrl-example1-solution1.svg" role="img" class="contained" alt="Circuit with 3 nodes and 3 meshes consisting of an 8V source and four resistors. The high-potential end of the 8V source connects to the 4k resistor at node a. The 4k, 5k, 6k, and 20k resistors connect at node b. The low-potential end of the 8V source connects to the 5k, 6k, and 20k resistors at node c. Branch current i(infinity) flows through the 6k resistor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.57<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.57"><a tabindex="-1" href="#ch6-charging-ex1-3-2" title="Copy heading and permalink for Figure 6.6.57" aria-label="Copy heading and permalink for Figure 6.6.57">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use source transformation to convert the voltage source to a current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{8~\textrm{V}}{4~\textrm{k}\Omega} = 2~\textrm{mA}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-chargingrl-example1-solution2.svg" role="img" class="contained" alt="Circuit with 2 nodes and 4 meshes consisting of a 2mA source, 4k resistor, 5k resistor, 6k resistor, and 20k resistor. All five circuit elements are connected in parallel between nodes a and b. The 2mA source flows out of node b into node a. Branch current i(infinity) flows through the 6k resistor from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.58<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.58"><a tabindex="-1" href="#ch6-charging-ex1-3-5" title="Copy heading and permalink for Figure 6.6.58" aria-label="Copy heading and permalink for Figure 6.6.58">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= \frac{1}{\frac{1}{4~\textrm{k}\Omega} + \frac{1}{5~\textrm{k}\Omega} + \frac{1}{6~\textrm{k}\Omega} + \frac{1}{20~\textrm{k}\Omega}}\\
+\amp= 1.5~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the current divider rule to calculate <span class="process-math">\(i(\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(\infty) \amp= 2~\textrm{mA}\left(\frac{1.5~\textrm{k}\Omega}{6~\textrm{k}\Omega}\right)\\
+=\amp= 0.5~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Draw the circuit at <span class="process-math">\(t=0^+\)</span> and deactivate the source to calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-chargingrl-example1-solution3.svg" role="img" class="contained" alt="Circuit with 3 nodes and 3 meshes consisting of four resistors and an inductor. The 4k, 5k, 6k, and 20k resistors connect at node a. The 6k resistor connects to the 100mH inductor at node b. The 4k, 5k, 20k resistors and 100mH inductor are connected at node c. Voltage v(t) drops over the inductor from node b to node c. Branch current i(t) flows through the inductor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.59<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.59"><a tabindex="-1" href="#ch6-charging-ex1-3-11" title="Copy heading and permalink for Figure 6.6.59" aria-label="Copy heading and permalink for Figure 6.6.59">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= 4~\textrm{k}\Omega//5~\textrm{k}\Omega//20~\textrm{k}\Omega+6~\textrm{k}\Omega\\
+\amp= 2~\textrm{k}\Omega+6~\textrm{k}\Omega\\
+\amp= 8~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to calculate <span class="process-math">\(\tau\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\tau \amp= \frac{L}{R}\\
+\amp= \frac{0.1~\textrm{H}}{8000~\Omega}\\
+\amp= 1.25\times10^{-5}~\textrm{s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-chargingrlcurrent" class="xref" data-knowl="./knowl/xref/ch6-chargingrlcurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.6">(6.5.6)</a> to calculate <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 0.5~\textrm{mA}~\left[1 - \textrm{e}^{-80000t}\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-chargingrlvoltage" class="xref" data-knowl="./knowl/xref/ch6-chargingrlvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.7">(6.5.7)</a> to calculate <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= (8~\textrm{k}\Omega)(0.5~\textrm{mA}~\textrm{e}^{-80000t}~u(t))\\
+\amp= 4~\textrm{V}~\textrm{e}^{-80000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex1-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.16.1"><a tabindex="-1" href="#ch6-charging-ex1-3" title="Copy heading and permalink for Solution 6.6.16.1" aria-label="Copy heading and permalink for Solution 6.6.16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.6.16"><a tabindex="-1" href="#ch6-charging-ex1" title="Copy heading and permalink for Exercise 6.6.16" aria-label="Copy heading and permalink for Exercise 6.6.16">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch6-inductors-8.html#ch6-charging-ex1">In Context</a></span>
+</body>
+</html>

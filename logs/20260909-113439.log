@@ -1,0 +1,56 @@
+INFO    : Building target ebook
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+WARNING : (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo". The publisher file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/ebook.
+INFO    : Attempting to install/update required node packages.
+INFO    : converting /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx into EPUB in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/ebook with math as svg
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : converting LaTeX from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx into svg format
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/support/extract-math.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/support/extract-math.xsl
+INFO    : XSL conversion of /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-68gkqb1e/mj-output-svg.html by /Users/ajp/.ptx/2.52.3/core/xsl/support/package-math.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/support/package-math.xsl
+INFO    : XML file of math representations deposited as /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-vwtr03to/math-representations-svg.xml
+INFO    : converting LaTeX from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx into speech format
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/support/extract-math.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/support/extract-math.xsl
+INFO    : XSL conversion of /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-e1ovlicj/mj-output-speech.html by /Users/ajp/.ptx/2.52.3/core/xsl/support/package-math.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/support/package-math.xsl
+INFO    : XML file of math representations deposited as /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-vwtr03to/math-representations-speech.xml
+INFO    : converting source (/Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx) and clean representations (/var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-vwtr03to/math-representations-svg.xml) into EPUB files
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/pretext-epub.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/pretext-epub.xsl
+INFO    : attempting to construct cover image using LaTeX and ImageMagick
+WARNING : failed to construct cover image using LaTeX and ImageMagick
+perhaps because the "convert" executable is not on your path.
+INFO    : attempting to construct cover image using "Arial.ttf" and "Arial Bold.ttf"
+WARNING : failed to construct cover image using "Arial.ttf" and "Arial Bold.ttf"
+INFO    : attempting to construct crude bitmap font cover image
+INFO    : packaging an EPUB temporarily as Circuit_Analysis-svg.epub
+INFO    : EPUB file deposited as /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/ebook/main.epub
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-vwtr03to
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-68gkqb1e
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-e1ovlicj
+INFO    : 
+Finished build for target ebook. The output is in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/ebook.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

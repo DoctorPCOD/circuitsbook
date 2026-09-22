@@ -2675,10 +2675,10 @@
 							<shortdescription>Circuit with 2 nodes and 1 mesh consisting of a 0.702kohm resistor and 234uH inductor connected in the same mesh.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-										\draw[]	(0,2.5)	to [R, l_=0.702~k$\Omega$]			(0,0) --++ (right:2.5);
-										\draw[]	(0,2.5) to [short]							++ (right:2.5);
-										\draw[]	(2.5,2.5) to [L, l_=234~$\mu$H]				++(down:2.5);
-									\end{tikzpicture}
+									\draw[]	(0,2.5)	to [R, l_=0.702~k$\Omega$]			(0,0) --++ (right:2.5);
+									\draw[]	(0,2.5) to [short]							++ (right:2.5);
+									\draw[]	(2.5,2.5) to [L, l_=234~$\mu$H]				++(down:2.5);
+								\end{tikzpicture}
 							</latex-image>
   						</image>
 					</figure>

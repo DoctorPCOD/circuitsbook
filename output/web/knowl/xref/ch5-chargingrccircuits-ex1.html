@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate an expression for <span class="process-math">\(v(t)\)</span> and <span class="process-math">\(i(t)\)</span> given the circuit shown in <a href="ch5-capacitors-10.html#chargingfromzeroendofchapter1" class="xref" data-knowl="./knowl/xref/chargingfromzeroendofchapter1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.8.45">Figure 5.8.45</a>. The switch is open for a very long time before closing at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch5-chargingfromzeroendofchapter1.svg" role="img" class="contained" alt="Circuit with 5 nodes consisting of a 20V source, SPST switch, 2k (A), 2k (B), 4k (A), 4k (B) resistors, and a 5uF capacitor. The high-potential end of the 20V source connects to 2k (A) at node a. The 2k (A), 2k (B), and SPST switch connect at node b. The other end of the SPST switch connects to 4k (A) at node c. 4k (A), 4k (B), and the 5uF cap connect at node d. The low-potential end of the 20V source, 2k (B), 5uF, and 4k (B) connect at node e. Voltage v(t) drops over the capacitor from node d to node e. Branch current i(t) flows through the capacitor from node d to node e. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.45<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch5-capacitors-10.html#ch5-chargingrccircuits-ex1" class="xref" data-knowl="./knowl/xref/ch5-chargingrccircuits-ex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.8.17">Exercise 5.8.17</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.45"><a tabindex="-1" href="#chargingfromzeroendofchapter1" title="Copy heading and permalink for Figure 5.8.45" aria-label="Copy heading and permalink for Figure 5.8.45">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= 4.44~\textrm{V}\left(1 - \textrm{e}^{-90t}\right)~u(t)\\
+i(t) \amp= 2~\textrm{mA}~\textrm{e}^{-90t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.8.17.1"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-2" title="Copy heading and permalink for Answer 5.8.17.1" aria-label="Copy heading and permalink for Answer 5.8.17.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">In the initial steady-state, the capacitor will be fully discharged and have an initial voltage of zero. Draw the circuit in the final steady-state. The capacitor can be replaced as an open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch5-chargingrcexample1solution1.svg" role="img" class="contained" alt="Circuit with 2 meshes and 4 nodes consisting of a 20V source, and 2k (A), 2k (B), 4k (A), 4k (B) resistors. The high-potential end of the 20V source connects to 2k (A) at node a. The 2k (A), 2k (B), and 4k (A) connect at node b. 4k (A) and 4k (B) connect at node c. The low-potential end of the 20V source, 2k (B), and 4k (B) connect at node d. Voltage v(infinity) drops from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.46<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.46"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-2" title="Copy heading and permalink for Figure 5.8.46" aria-label="Copy heading and permalink for Figure 5.8.46">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use the voltage divider rule to calculate <span class="process-math">\(v(\infty)\text{.}\)</span> (Refer to <a href="ch2-voltagedivider.html#ch2-voltagedivider-twomesh-example" class="xref" data-knowl="./knowl/xref/ch2-voltagedivider-twomesh-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.5.5: Voltage divider with a two-mesh circuit">Example 2.5.5</a> for using the voltage divider rule in a two-mesh circuit.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(\infty) \amp= 20~\textrm{V}\left(\frac{2~\textrm{k}\Omega//(4~\textrm{k}\Omega+4~\textrm{k}\Omega)}{2~\textrm{k}\Omega+2~\textrm{k}\Omega//(4~\textrm{k}\Omega+4~\textrm{k}\Omega)}\right)\left(\frac{4~\textrm{k}\Omega}{8~\textrm{k}\Omega}\right)\\
+\amp= 20~\textrm{V}\left(\frac{2~\textrm{k}\Omega//8~\textrm{k}\Omega}{2~\textrm{k}\Omega+2~\textrm{k}\Omega//8~\textrm{k}\Omega}\right)\left(\frac{1}{2}\right)\\
+\amp= 20~\textrm{V}\left(\frac{1.6~\textrm{k}\Omega}{3.6~\textrm{k}\Omega}\right)\left(\frac{1}{2}\right)\\
+\amp= 4.44~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Draw the circuit at <span class="process-math">\(t=0^+\)</span> and deactivate the source to calculate the equivalent resistance as seen by the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch5-chargingrcexample1solution2.svg" role="img" class="contained" alt="Circuit with 3 meshes and 3 nodes consisting of a 5uF capacitor and 2k (A), 2k (B), 4k (A), and 4k (B) resistors. 2k (A), 2k (B), and 4k (A) connect at node a. 4k (A), 5 uF, and 4k (B) connect at node b. 2k (A), 2k (B), 5 uF, and 4k (B) connect at node c. Voltage v(t) drops over the capacitor from node b to node c. Branch current i(t) flows through the capacitor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.47<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.47"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-6" title="Copy heading and permalink for Figure 5.8.47" aria-label="Copy heading and permalink for Figure 5.8.47">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance as seen by the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= (2~\textrm{k}\Omega//2~\textrm{k}\Omega+4~\textrm{k}\Omega)//4~\textrm{k}\Omega\\
+\amp= (1~\textrm{k}\Omega+4~\textrm{k}\Omega)//4~\textrm{k}\Omega\\
+\amp= 5~\textrm{k}\Omega//4~\textrm{k}\Omega\\
+\amp= 2.22~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch5-rccircuits.html#ch5-taurcequation" class="xref" data-knowl="./knowl/xref/ch5-taurcequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7.6">(5.7.6)</a> to calculate the RC time constant.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\tau \amp= RC\\
+\amp= (2222~\Omega)\left(5\times10^{-6}~\textrm{F}\right)\\
+\amp= 0.011~\textrm{s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug these values into <a href="ch5-rccircuits.html#ch5-eqrcchargingvoltage" class="xref" data-knowl="./knowl/xref/ch5-eqrcchargingvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7.12">(5.7.12)</a> to derive an equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 4.44~\textrm{V}\left(1 - \textrm{e}^{-90t}\right)~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch5-rccircuits.html#ch5-rctransientchargingcurrentequation" class="xref" data-knowl="./knowl/xref/ch5-rctransientchargingcurrentequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7.13">(5.7.13)</a> to calculate <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 2~\textrm{mA}~\textrm{e}^{-90t}~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.8.17.1"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1-3" title="Copy heading and permalink for Solution 5.8.17.1" aria-label="Copy heading and permalink for Solution 5.8.17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.8.17"><a tabindex="-1" href="#ch5-chargingrccircuits-ex1" title="Copy heading and permalink for Exercise 5.8.17" aria-label="Copy heading and permalink for Exercise 5.8.17">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch5-capacitors-10.html#ch5-chargingrccircuits-ex1">In Context</a></span>
+</body>
+</html>

@@ -1,0 +1,582 @@
+WARNING : Using CLI version 2.32.0 but project's `requirements.txt`
+WARNING : is configured to use 2.30.2. Consider either installing
+WARNING : CLI version 2.30.2 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.32.0.
+INFO    : Building target web
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : converting latex-image pictures from /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx to svg graphics for placement in /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'cli.version': '2.32', 'publisher': '/Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets
+INFO    : verifying and expanding input directory: /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : XSL conversion of /Users/lemontwist/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/lemontwist/.ptx/2.32.0/core/xsl/extract-latex-image.xsl
+INFO    : successful application of /Users/lemontwist/.ptx/2.32.0/core/xsl/extract-latex-image.xsl
+INFO    : converting ch2-circuit225figans1.tex to ch2-circuit225figans1.pdf
+ERROR   : LaTeX compilation of ch2-circuit225figans1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit225figans1.tex failed
+INFO    : converting ch2-circuit214fig4.tex to ch2-circuit214fig4.pdf
+ERROR   : LaTeX compilation of ch2-circuit214fig4.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit214fig4.tex failed
+INFO    : converting ch2-circuitMeshes.tex to ch2-circuitMeshes.pdf
+ERROR   : LaTeX compilation of ch2-circuitMeshes.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuitMeshes.tex failed
+INFO    : converting ch2-circuit23figansdelta1.tex to ch2-circuit23figansdelta1.pdf
+ERROR   : LaTeX compilation of ch2-circuit23figansdelta1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit23figansdelta1.tex failed
+INFO    : converting sources14exercise-2-1-2.tex to sources14exercise-2-1-2.pdf
+ERROR   : LaTeX compilation of sources14exercise-2-1-2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of sources14exercise-2-1-2.tex failed
+INFO    : converting ch1-circuit115exercise.tex to ch1-circuit115exercise.pdf
+ERROR   : LaTeX compilation of ch1-circuit115exercise.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-circuit115exercise.tex failed
+INFO    : converting ch2-kclexample1.tex to ch2-kclexample1.pdf
+ERROR   : LaTeX compilation of ch2-kclexample1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-kclexample1.tex failed
+INFO    : converting ch2-circuit25figans1.tex to ch2-circuit25figans1.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figans1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figans1.tex failed
+INFO    : converting ch1-rampfunctiongraph.tex to ch1-rampfunctiongraph.pdf
+ERROR   : LaTeX compilation of ch1-rampfunctiongraph.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-rampfunctiongraph.tex failed
+INFO    : converting ch2-circuit26fig.tex to ch2-circuit26fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit26fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit26fig.tex failed
+INFO    : converting ch1-exponentialdecaygraph.tex to ch1-exponentialdecaygraph.pdf
+ERROR   : LaTeX compilation of ch1-exponentialdecaygraph.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-exponentialdecaygraph.tex failed
+INFO    : converting ch2-circuit25figans3.tex to ch2-circuit25figans3.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figans3.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figans3.tex failed
+INFO    : converting ch3-passiveShort.tex to ch3-passiveShort.pdf
+ERROR   : LaTeX compilation of ch3-passiveShort.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-passiveShort.tex failed
+INFO    : converting ch2-potasvr.tex to ch2-potasvr.pdf
+ERROR   : LaTeX compilation of ch2-potasvr.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-potasvr.tex failed
+INFO    : converting ch2-circuit221fig.tex to ch2-circuit221fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit221fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit221fig.tex failed
+INFO    : converting ch1-exampletwoseriescurrentsafter.tex to ch1-exampletwoseriescurrentsafter.pdf
+ERROR   : LaTeX compilation of ch1-exampletwoseriescurrentsafter.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-exampletwoseriescurrentsafter.tex failed
+INFO    : converting ch2-circuit23figansdelta2.tex to ch2-circuit23figansdelta2.pdf
+ERROR   : LaTeX compilation of ch2-circuit23figansdelta2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit23figansdelta2.tex failed
+INFO    : converting ch2-eqresistancecktab.tex to ch2-eqresistancecktab.pdf
+ERROR   : LaTeX compilation of ch2-eqresistancecktab.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-eqresistancecktab.tex failed
+INFO    : converting ch2-circuit217fig.tex to ch2-circuit217fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit217fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit217fig.tex failed
+INFO    : converting ch1-gravitationalpotential.tex to ch1-gravitationalpotential.pdf
+ERROR   : LaTeX compilation of ch1-gravitationalpotential.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-gravitationalpotential.tex failed
+INFO    : converting ch2-figresistorseries.tex to ch2-figresistorseries.pdf
+ERROR   : LaTeX compilation of ch2-figresistorseries.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-figresistorseries.tex failed
+INFO    : converting ch2-circuit25figans2.tex to ch2-circuit25figans2.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figans2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figans2.tex failed
+INFO    : converting ch2-circuit223fig.tex to ch2-circuit223fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit223fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit223fig.tex failed
+INFO    : converting ch1-measuringvoltagefig.tex to ch1-measuringvoltagefig.pdf
+ERROR   : LaTeX compilation of ch1-measuringvoltagefig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-measuringvoltagefig.tex failed
+INFO    : converting ch2-circuit25figans6.tex to ch2-circuit25figans6.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figans6.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figans6.tex failed
+INFO    : converting ch1-diracdeltafunctionexample.tex to ch1-diracdeltafunctionexample.pdf
+ERROR   : LaTeX compilation of ch1-diracdeltafunctionexample.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-diracdeltafunctionexample.tex failed
+INFO    : converting ch2-circuit214fig2.tex to ch2-circuit214fig2.pdf
+ERROR   : LaTeX compilation of ch2-circuit214fig2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit214fig2.tex failed
+INFO    : converting sources15exercise-2-1-2.tex to sources15exercise-2-1-2.pdf
+ERROR   : LaTeX compilation of sources15exercise-2-1-2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of sources15exercise-2-1-2.tex failed
+INFO    : converting ch3-openCircuitVoltageCircuit.tex to ch3-openCircuitVoltageCircuit.pdf
+ERROR   : LaTeX compilation of ch3-openCircuitVoltageCircuit.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-openCircuitVoltageCircuit.tex failed
+INFO    : converting ch1-circuit13exercise.tex to ch1-circuit13exercise.pdf
+ERROR   : LaTeX compilation of ch1-circuit13exercise.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-circuit13exercise.tex failed
+INFO    : converting ch2-highlowcurrent.tex to ch2-highlowcurrent.pdf
+ERROR   : LaTeX compilation of ch2-highlowcurrent.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-highlowcurrent.tex failed
+INFO    : converting ch2-circuit219fig.tex to ch2-circuit219fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit219fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit219fig.tex failed
+INFO    : converting elementarysignals117exercise-4-9-2.tex to elementarysignals117exercise-4-9-2.pdf
+ERROR   : LaTeX compilation of elementarysignals117exercise-4-9-2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of elementarysignals117exercise-4-9-2.tex failed
+INFO    : converting ch2-resistorparallel.tex to ch2-resistorparallel.pdf
+ERROR   : LaTeX compilation of ch2-resistorparallel.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-resistorparallel.tex failed
+INFO    : converting elementarysignals120exercise-2-1-2.tex to elementarysignals120exercise-2-1-2.pdf
+ERROR   : LaTeX compilation of elementarysignals120exercise-2-1-2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of elementarysignals120exercise-2-1-2.tex failed
+INFO    : converting ch2-circuit220figans1.tex to ch2-circuit220figans1.pdf
+ERROR   : LaTeX compilation of ch2-circuit220figans1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit220figans1.tex failed
+INFO    : converting ch2-resistancefromviex1.tex to ch2-resistancefromviex1.pdf
+ERROR   : LaTeX compilation of ch2-resistancefromviex1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-resistancefromviex1.tex failed
+INFO    : converting ch2-circuit25figans5.tex to ch2-circuit25figans5.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figans5.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figans5.tex failed
+INFO    : converting ch2-circuit214fig1.tex to ch2-circuit214fig1.pdf
+ERROR   : LaTeX compilation of ch2-circuit214fig1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit214fig1.tex failed
+INFO    : converting ch2-voltagecalcex1.tex to ch2-voltagecalcex1.pdf
+ERROR   : LaTeX compilation of ch2-voltagecalcex1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-voltagecalcex1.tex failed
+INFO    : converting ch2-eqresistancecktae.tex to ch2-eqresistancecktae.pdf
+ERROR   : LaTeX compilation of ch2-eqresistancecktae.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-eqresistancecktae.tex failed
+INFO    : converting ch2-meshvsbranchfig.tex to ch2-meshvsbranchfig.pdf
+ERROR   : LaTeX compilation of ch2-meshvsbranchfig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-meshvsbranchfig.tex failed
+INFO    : converting ch1-voltmeter.tex to ch1-voltmeter.pdf
+ERROR   : LaTeX compilation of ch1-voltmeter.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-voltmeter.tex failed
+INFO    : converting ch2-powercalcex1.tex to ch2-powercalcex1.pdf
+ERROR   : LaTeX compilation of ch2-powercalcex1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-powercalcex1.tex failed
+INFO    : converting ch2-circuit25figans4.tex to ch2-circuit25figans4.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figans4.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figans4.tex failed
+INFO    : converting ch1-rampfunctionexamplegraph.tex to ch1-rampfunctionexamplegraph.pdf
+ERROR   : LaTeX compilation of ch1-rampfunctionexamplegraph.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-rampfunctionexamplegraph.tex failed
+INFO    : converting ch3-shortCircuitCurrentFigure.tex to ch3-shortCircuitCurrentFigure.pdf
+ERROR   : LaTeX compilation of ch3-shortCircuitCurrentFigure.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-shortCircuitCurrentFigure.tex failed
+INFO    : converting ch2-circuit28fig.tex to ch2-circuit28fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit28fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit28fig.tex failed
+INFO    : converting ch1-circuit113exercise.tex to ch1-circuit113exercise.pdf
+ERROR   : LaTeX compilation of ch1-circuit113exercise.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-circuit113exercise.tex failed
+INFO    : converting ch2-circuit211fig.tex to ch2-circuit211fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit211fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit211fig.tex failed
+INFO    : converting ch2-resistorserieslength.tex to ch2-resistorserieslength.pdf
+ERROR   : LaTeX compilation of ch2-resistorserieslength.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-resistorserieslength.tex failed
+INFO    : converting ch1-exampletwoseriesvoltages.tex to ch1-exampletwoseriesvoltages.pdf
+ERROR   : LaTeX compilation of ch1-exampletwoseriesvoltages.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-exampletwoseriesvoltages.tex failed
+INFO    : converting ch3-superpositionNumericSubcircuitFigure5.tex to ch3-superpositionNumericSubcircuitFigure5.pdf
+ERROR   : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure5.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure5.tex failed
+INFO    : converting ch2-deltacircuitdiagram.tex to ch2-deltacircuitdiagram.pdf
+ERROR   : LaTeX compilation of ch2-deltacircuitdiagram.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-deltacircuitdiagram.tex failed
+INFO    : converting ch2-referenceresistor.tex to ch2-referenceresistor.pdf
+ERROR   : LaTeX compilation of ch2-referenceresistor.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-referenceresistor.tex failed
+INFO    : converting elementarysignals120exercise-3-2-2.tex to elementarysignals120exercise-3-2-2.pdf
+ERROR   : LaTeX compilation of elementarysignals120exercise-3-2-2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of elementarysignals120exercise-3-2-2.tex failed
+INFO    : converting ch3-superpositionNumericSubcircuitFigure4.tex to ch3-superpositionNumericSubcircuitFigure4.pdf
+ERROR   : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure4.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure4.tex failed
+INFO    : converting ch2-circuit25figansdelta2.tex to ch2-circuit25figansdelta2.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figansdelta2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figansdelta2.tex failed
+INFO    : converting elementarysignals117exercise-4-12-2.tex to elementarysignals117exercise-4-12-2.pdf
+ERROR   : LaTeX compilation of elementarysignals117exercise-4-12-2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of elementarysignals117exercise-4-12-2.tex failed
+INFO    : converting ch3-superpositionNumericSubcircuitFigure6.tex to ch3-superpositionNumericSubcircuitFigure6.pdf
+ERROR   : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure6.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure6.tex failed
+INFO    : converting ch2-cktloopmesh.tex to ch2-cktloopmesh.pdf
+ERROR   : LaTeX compilation of ch2-cktloopmesh.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-cktloopmesh.tex failed
+INFO    : converting ch2-circuit25figansdelta1.tex to ch2-circuit25figansdelta1.pdf
+ERROR   : LaTeX compilation of ch2-circuit25figansdelta1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit25figansdelta1.tex failed
+INFO    : converting ch2-threenodes.tex to ch2-threenodes.pdf
+ERROR   : LaTeX compilation of ch2-threenodes.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-threenodes.tex failed
+INFO    : converting ch1-powerdeliverorabsorb.tex to ch1-powerdeliverorabsorb.pdf
+ERROR   : LaTeX compilation of ch1-powerdeliverorabsorb.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-powerdeliverorabsorb.tex failed
+INFO    : converting ch2-kvlexample1.tex to ch2-kvlexample1.pdf
+ERROR   : LaTeX compilation of ch2-kvlexample1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-kvlexample1.tex failed
+INFO    : converting ch3-superpositionNumericSubcircuitFigure3.tex to ch3-superpositionNumericSubcircuitFigure3.pdf
+ERROR   : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure3.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure3.tex failed
+INFO    : converting ch1-exampletwoseriesvoltagesother.tex to ch1-exampletwoseriesvoltagesother.pdf
+ERROR   : LaTeX compilation of ch1-exampletwoseriesvoltagesother.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-exampletwoseriesvoltagesother.tex failed
+INFO    : converting ch2-circuit22fig.tex to ch2-circuit22fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit22fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit22fig.tex failed
+INFO    : converting ch1-sinewave.tex to ch1-sinewave.pdf
+ERROR   : LaTeX compilation of ch1-sinewave.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-sinewave.tex failed
+INFO    : converting ch3-superpositionNumericSubcircuitFigure2.tex to ch3-superpositionNumericSubcircuitFigure2.pdf
+ERROR   : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure2.tex failed
+INFO    : converting ch2-circuit218figans1.tex to ch2-circuit218figans1.pdf
+ERROR   : LaTeX compilation of ch2-circuit218figans1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit218figans1.tex failed
+INFO    : converting ch2-kvlexample2.tex to ch2-kvlexample2.pdf
+ERROR   : LaTeX compilation of ch2-kvlexample2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-kvlexample2.tex failed
+INFO    : converting ch2-cktnodes.tex to ch2-cktnodes.pdf
+ERROR   : LaTeX compilation of ch2-cktnodes.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-cktnodes.tex failed
+INFO    : converting ch1-rectpulsefig.tex to ch1-rectpulsefig.pdf
+ERROR   : LaTeX compilation of ch1-rectpulsefig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-rectpulsefig.tex failed
+INFO    : converting ch1-diracdeltafigure.tex to ch1-diracdeltafigure.pdf
+ERROR   : LaTeX compilation of ch1-diracdeltafigure.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-diracdeltafigure.tex failed
+INFO    : converting ch1-triangularpulsegraph.tex to ch1-triangularpulsegraph.pdf
+ERROR   : LaTeX compilation of ch1-triangularpulsegraph.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-triangularpulsegraph.tex failed
+INFO    : converting ch1-circuit116exercise.tex to ch1-circuit116exercise.pdf
+ERROR   : LaTeX compilation of ch1-circuit116exercise.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-circuit116exercise.tex failed
+INFO    : converting ch2-circuit213fig.tex to ch2-circuit213fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit213fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit213fig.tex failed
+INFO    : converting ch3-shortedVoltageSource.tex to ch3-shortedVoltageSource.pdf
+ERROR   : LaTeX compilation of ch3-shortedVoltageSource.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-shortedVoltageSource.tex failed
+INFO    : converting ch2-resistorsymbol.tex to ch2-resistorsymbol.pdf
+ERROR   : LaTeX compilation of ch2-resistorsymbol.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-resistorsymbol.tex failed
+INFO    : converting ch1-exampletwoseriesvoltagesotherafter.tex to ch1-exampletwoseriesvoltagesotherafter.pdf
+ERROR   : LaTeX compilation of ch1-exampletwoseriesvoltagesotherafter.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-exampletwoseriesvoltagesotherafter.tex failed
+INFO    : converting ch2-circuit225fig.tex to ch2-circuit225fig.pdf
+ERROR   : LaTeX compilation of ch2-circuit225fig.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit225fig.tex failed
+INFO    : converting ch3-superpositionNumericSubcircuitFigure1.tex to ch3-superpositionNumericSubcircuitFigure1.pdf
+ERROR   : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-superpositionNumericSubcircuitFigure1.tex failed
+INFO    : converting ch2-circuit218figans2.tex to ch2-circuit218figans2.pdf
+ERROR   : LaTeX compilation of ch2-circuit218figans2.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-circuit218figans2.tex failed
+INFO    : converting ch2-voltagedividerexfig3.tex to ch2-voltagedividerexfig3.pdf
+ERROR   : LaTeX compilation of ch2-voltagedividerexfig3.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-voltagedividerexfig3.tex failed
+INFO    : converting ch2-currentfromvrex1.tex to ch2-currentfromvrex1.pdf
+ERROR   : LaTeX compilation of ch2-currentfromvrex1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch2-currentfromvrex1.tex failed
+INFO    : converting ch1-circuit111exercise.tex to ch1-circuit111exercise.pdf
+ERROR   : LaTeX compilation of ch1-circuit111exercise.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch1-circuit111exercise.tex failed
+INFO    : converting ch3-superpositionSubcircuitFigure1.tex to ch3-superpositionSubcircuitFigure1.pdf
+ERROR   : LaTeX compilation of ch3-superpositionSubcircuitFigure1.tex failed.
+Re-run, requesting "source" as the format, to analyze the image.
+Likely creating the entire document as PDF will fail similarly.
+The transcript of the LaTeX run follows.
+WARNING : LaTeX compilation of ch3-superpositionSubcircuitFigure1.tex failed
+INFO    : converting ch2-circuit215ans1.tex to ch2-circuit215ans1.pdf

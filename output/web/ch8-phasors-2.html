@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Circuit Analysis">
+<meta property="og:title" content="Circuit Analysis">
+<meta property="book:title" content="Circuit Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Circuit Analysis</span></a></div>
+<p class="byline">Alyssa J. Pasquale, Ph.D.</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch8-phasors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch8-phasors.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch8-phasorarithmetic.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\Laplace}{\mathscr{L}} \DeclareMathOperator{\atantwo}{atan2} \DeclareMathOperator{\atan}{atan} \renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-properties.html" class="internal"><span class="codenumber">1</span> <span class="title">Properties of Electric Circuits</span></a></div>
+<ul id="ptx-toc-group-ch1-properties" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch1-properties-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch1-charge.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Charge</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-voltage.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Voltage</span></a></div>
+<ul id="ptx-toc-group-ch1-voltage" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-voltage.html#ch1-voltagedifference" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Voltage as a Difference</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-voltage.html#ch1-measuringvoltage" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Measuring Voltage</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-current.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Current</span></a></div>
+<ul id="ptx-toc-group-ch1-current" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-current.html#ch1-currentflow" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Current as a Flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-current.html#ch1-measuringcurrent" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Measuring Current</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-power.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Power</span></a></div>
+<ul id="ptx-toc-group-ch1-power" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-power.html#ch1-conservationofpower" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Conservation of Power</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-powersources.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Power Sources</span></a></div>
+<ul id="ptx-toc-group-ch1-powersources" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-dcsources" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Direct Current (DC) Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-acsources" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Alternating Current (AC) Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-dependentsources" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Dependent Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-equivalentsources" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Equivalent Sources</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-elementarysignals.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Elementary Signals</span></a></div>
+<ul id="ptx-toc-group-ch1-elementarysignals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-deltafunction" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Dirac Delta Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-stepfunction" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Step Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-rampfunction" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Ramp Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-rectpulse" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Rectangular Pulse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-trianglepulse" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Triangular Pulse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-expdecay" class="internal"><span class="codenumber">1.6.6</span> <span class="title">Exponential Decay</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-dampedsinusoid" class="internal"><span class="codenumber">1.6.7</span> <span class="title">Damped Sinusoid</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-properties-9.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch2-circuit-laws.html" class="internal"><span class="codenumber">2</span> <span class="title">Circuit Laws</span></a></div>
+<ul id="ptx-toc-group-ch2-circuit-laws" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch2-circuit-laws-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-definitions.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-resistor.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Resistors</span></a></div>
+<ul id="ptx-toc-group-ch2-resistor" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorcolorcodes" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Resistor Color Codes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-varresistors" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Variable Resistors and Potentiometers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-measuringresistance" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Measuring Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorsseries" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Resistors in Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorsparallel" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Resistors in Parallel</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-equivalentresistance" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Equivalent Resistance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Delta-Wye and Wye-Delta Transforms</span></a></div>
+<ul id="ptx-toc-group-ch2-deltawye-wyedelta" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html#ch2-deltawye" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Delta-Wye Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html#ch2-wyedelta" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Wye-Delta Transforms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-ohmslaw.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Ohm’s Law</span></a></div>
+<ul id="ptx-toc-group-ch2-ohmslaw" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calcvoltage" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Calculating Voltage from Current and Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calccurrent" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Calculating Current from Voltage and Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calcresistance" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Calculating Resistance from Voltage and Current</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-ohmpower" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Ohm’s Law and the Power Equation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-voltagedivider.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Voltage Divider</span></a></div>
+<ul id="ptx-toc-group-ch2-voltagedivider" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-voltagedivider.html#ch2-wheatstone" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Wheatstone Bridge</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-currentdivider.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Current Divider</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-kirchhoffs.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Kirchhoff’s Laws</span></a></div>
+<ul id="ptx-toc-group-ch2-kirchhoffs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-kcl" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Kirchhoff’s Current Law (KCL)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-kvl" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Kirchhoff’s Voltage Law (KVL)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-matrixequations" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Deriving Matrix Equations from KCL and KVL</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-meshanalysis.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Mesh Analysis</span></a></div>
+<ul id="ptx-toc-group-ch2-meshanalysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-meshanalysis.html#ch2-branchvmesh" class="internal"><span class="codenumber">2.8.1</span> <span class="title">Branch vs. Mesh Currents</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-meshanalysis.html#ch2-meshanalysismethod" class="internal"><span class="codenumber">2.8.2</span> <span class="title">The Mesh Analysis Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-measuring-current.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Measuring Current</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-circuit-laws-12.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-circuittheorems.html" class="internal"><span class="codenumber">3</span> <span class="title">Circuit Theorems</span></a></div>
+<ul id="ptx-toc-group-ch3-circuittheorems" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch3-circuittheorems-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-superposition.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Superposition</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-sourcetransformation.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Source Transformation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-choosing-a-tool.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Choosing an Analysis Tool</span></a></div>
+<ul id="ptx-toc-group-ch3-choosing-a-tool" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-choosing-a-tool.html#ch3-simplifying-tools" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Solving via Simplification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-choosing-a-tool.html#ch3-calculating-tools" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Solving without Simplification</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-vocisc.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open-Circuit Voltages and Short-Circuit Currents</span></a></div>
+<ul id="ptx-toc-group-ch3-vocisc" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-vocisc.html#ch3-voc" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Open-Circuit Voltage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-vocisc.html#ch3-isc" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Short-Circuit Current</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-thevenin.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Thévenin’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-norton.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Norton’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-maxpower.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Maximum Power Transfer</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-circuittheorems-10.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-op-amps.html" class="internal"><span class="codenumber">4</span> <span class="title">Operational Amplifiers (Op-Amps)</span></a></div>
+<ul id="ptx-toc-group-ch4-op-amps" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch5-capacitors.html" class="internal"><span class="codenumber">5</span> <span class="title">Capacitors and RC Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-capacitors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch5-capacitors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-typesofcaps.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Types of Capacitors</span></a></div>
+<ul id="ptx-toc-group-ch5-typesofcaps" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-nonpolarcaps" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Non-Polarized Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-varcaps" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Variable Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-polarcaps" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Polarized Capacitors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-measuringcap.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Measuring Capacitance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-vicap.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Voltage-Current Relationship in a Capacitor</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-equivalentcap.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalent Capacitance</span></a></div>
+<ul id="ptx-toc-group-ch5-equivalentcap" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-equivalentcap.html#ch5-seriescaps" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Series Combinations of Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-equivalentcap.html#ch5-parallelcaps" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Parallel Combinations of Capacitors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-differentiatorintegrator.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Differentiator and Integrator Circuits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-review.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Review of Important Mathematical Concepts for First-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-review" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-review.html#ch5-discontinuous" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Discontinuous Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-review.html#ch5-first-order-linear-ODEs" class="internal"><span class="codenumber">5.6.2</span> <span class="title">First-Order, Linear, Ordinary Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-rccircuits.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Resistor-Capacitor (RC) Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-rccircuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-discharging" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Discharging to Zero (Homogeneous) Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-charging" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Charging from Zero Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-generaltransient" class="internal"><span class="codenumber">5.7.3</span> <span class="title">General Transient Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-capacitors-10.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch6-inductors.html" class="internal"><span class="codenumber">6</span> <span class="title">Inductors and RL Circuits</span></a></div>
+<ul id="ptx-toc-group-ch6-inductors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch6-inductors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-parasitic.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Parasitic Effects</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-measuringinductance.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Measuring Inductance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-viinductance.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Voltage-Current Relationship in an Inductor</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-equivalentinductance.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Equivalent Inductance</span></a></div>
+<ul id="ptx-toc-group-ch6-equivalentinductance" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-equivalentinductance.html#ch6-seriesinductance" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Series Combinations of Inductors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-equivalentinductance.html#ch6-parallelinductance" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Parallel Combinations of Inductors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Resistor-Inductor (RL) Circuits</span></a></div>
+<ul id="ptx-toc-group-ch6-resistor-inductor-circuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-discharging" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Discharging to Zero (Homogeneous) Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-charging" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Charging from Zero Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-generaltransient" class="internal"><span class="codenumber">6.5.3</span> <span class="title">General Transient Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-inductors-8.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch7-secondorder.html" class="internal"><span class="codenumber">7</span> <span class="title">Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-secondorder" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch7-secondorder-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch7-second-order-review.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Review of Important Mathematical Concepts for Second-Order Circuits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-damping-types.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Circuit Damping</span></a></div>
+<ul id="ptx-toc-group-ch7-damping-types" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-overdamped-type" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Overdamped</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-underdamped-type" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Underdamped</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-critically-damped-type" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Critically Damped</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Series RLC Circuit</span></a></div>
+<ul id="ptx-toc-group-ch7-the-series-rlc-circuit" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Homogeneous Series RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html#ch7-non-homoseriesrlc" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Non-Homogeneous Series RLC Circuits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html" class="internal"><span class="codenumber">7.4</span> <span class="title">The Parallel RLC Circuit</span></a></div>
+<ul id="ptx-toc-group-ch7-the-parallel-rlc-circuit" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-homoparallelrlc" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Homogeneous Parallel RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-non-homoparallelrlc" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Non-Homogeneous Parallel RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Analysis with Parasitic Resistance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-secondorderresponses.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-secondorderresponses" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions" class="internal"><span class="codenumber">7.5.1</span> <span class="title">The Overdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions" class="internal"><span class="codenumber">7.5.2</span> <span class="title">The Underdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions" class="internal"><span class="codenumber">7.5.3</span> <span class="title">The Critically Damped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-examples" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-nonhomocircuits.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Constant-Input Non-Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-nonhomocircuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution" class="internal"><span class="codenumber">7.6.1</span> <span class="title">The Overdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution" class="internal"><span class="codenumber">7.6.2</span> <span class="title">The Underdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution" class="internal"><span class="codenumber">7.6.3</span> <span class="title">The Critically Damped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-examples" class="internal"><span class="codenumber">7.6.4</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-variableinput.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Non-Constant Input Non-Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-variableinput" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-variableinput.html#ch7-varinput-examples" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Examples</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-secondorder-10.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch8-phasors.html" class="internal"><span class="codenumber">8</span> <span class="title">Phasors and Impedances</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch8-phasors">
+<li class="toc-item toc-introduction active"><div class="toc-title-box"><a href="ch8-phasors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-phasorarithmetic.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Phasor Arithmetic</span></a></div>
+<ul id="ptx-toc-group-ch8-phasorarithmetic" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-cartesianpolar" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Cartesian to Polar Conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-polarcartesian" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Polar to Cartesian Conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasoraddsub" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Phasor Addition and Subtraction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasormultdiv" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Phasor Multiplication and Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasorcalculus" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Phasor Time-Differentiation and Time-Integration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-impedance.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Impedance</span></a></div>
+<ul id="ptx-toc-group-ch8-impedance" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-resistors" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Impedance in Resistors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-capacitors" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Impedance in Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-inductors" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Impedance in Inductors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-equivalentimpedance" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Equivalent Impedance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch8-deltawye.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Delta-Wye and Wye-Delta Transforms</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-phasors-6.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch9-phasoranalysis.html" class="internal"><span class="codenumber">9</span> <span class="title">Analysis of Phasor-Transformed Circuits</span></a></div>
+<ul id="ptx-toc-group-ch9-phasoranalysis" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch9-phasoranalysis-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-complexanalysis.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Complex Circuit Analysis Techniques</span></a></div>
+<ul id="ptx-toc-group-ch9-complexanalysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-voltagedivider" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Complex Voltage Divider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-currentdivider" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Complex Current Divider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-kclkvl" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Complex KCL and KVL Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-meshanalysis" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Complex Mesh Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-superposition" class="internal"><span class="codenumber">9.1.5</span> <span class="title">Complex Superposition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-sourcetransform" class="internal"><span class="codenumber">9.1.6</span> <span class="title">Complex Source Transformation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-theveninnorton" class="internal"><span class="codenumber">9.1.7</span> <span class="title">Complex Thévenin’s and Norton’s Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-transferfuncs.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Transfer Functions</span></a></div>
+<ul id="ptx-toc-group-ch9-transferfuncs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-transferfuncs.html#ch9-transferdiffeq" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Relating Transfer Functions and Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-transferfuncs.html#ch9-funcpolezero" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Understanding Transfer Function Poles and Zeros</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-passivefilters.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Passive Filters</span></a></div>
+<ul id="ptx-toc-group-ch9-passivefilters" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-lpfs" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Low-Pass Filters (LPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-hpfs" class="internal"><span class="codenumber">9.3.2</span> <span class="title">High-Pass Filters (HPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bpf-and-bsf" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Band-Pass and Band-Stop Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bpfs" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Band-Pass Filters (BPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bsfs" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Band-Stop Filters (BSF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-determinefilter" class="internal"><span class="codenumber">9.3.6</span> <span class="title">Determining Filter Type</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-activefilters.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Active Filters</span></a></div>
+<ul id="ptx-toc-group-ch9-activefilters" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-firstorder" class="internal"><span class="codenumber">9.4.1</span> <span class="title">First-Order Active Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-cascadedfilters" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Cascaded Active Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-otheractive" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Other Active Filter Topologies</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="phasor-references.html" class="internal"><span class="codenumber">9.5</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-phasoranalysis-8.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch10-acpower.html" class="internal"><span class="codenumber">10</span> <span class="title">AC Power</span></a></div>
+<ul id="ptx-toc-group-ch10-acpower" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch10-acpower-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch10-phase-rms.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Phase and Root Mean Square (RMS)</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-ac-power.html" class="internal"><span class="codenumber">10.2</span> <span class="title">AC Power</span></a></div>
+<ul id="ptx-toc-group-ch10-ac-power" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-instantaneous" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Instantaneous Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-complexapparent" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Complex and Apparent Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-average" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Average Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-reactive" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Reactive Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-powertriangle" class="internal"><span class="codenumber">10.2.5</span> <span class="title">Power Triangle and Power Factor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch10-maxpower.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Maximum Power Transfer</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-pfcorrection.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Power Factor Correction</span></a></div>
+<ul id="ptx-toc-group-ch10-pfcorrection" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-pfcorrection.html#ch10-correctinductive" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Correcting an Inductive Load</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-pfcorrection.html#ch10-correctcapacitive" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Correcting a Capacitive Load</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-acpower-7.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch11-laplace.html" class="internal"><span class="codenumber">11</span> <span class="title">Laplace Transforms and s-Domain Analysis</span></a></div>
+<ul id="ptx-toc-group-ch11-laplace" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch11-laplace-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch11-laplacetransform.html" class="internal"><span class="codenumber">11.1</span> <span class="title">The Laplace Transform</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-inverselaplace.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Inverse Laplace Transform</span></a></div>
+<ul id="ptx-toc-group-ch11-inverselaplace" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-inverselaplace.html#ch11-partialfraction" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Partial Fraction Expansion</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sdomain.html" class="internal"><span class="codenumber">11.3</span> <span class="title"><span class="process-math">\(s\)</span>-Domain Analysis</span></a></div>
+<ul id="ptx-toc-group-ch11-sdomain" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-resistor" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Resistor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-capacitor" class="internal"><span class="codenumber">11.3.2</span> <span class="title">Capacitor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-inductor" class="internal"><span class="codenumber">11.3.3</span> <span class="title">Inductor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-sources" class="internal"><span class="codenumber">11.3.4</span> <span class="title">Switched Sources</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-laplace-6.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch12-555timer.html" class="internal"><span class="codenumber">12</span> <span class="title">Practical Application: The 555 Timer</span></a></div>
+<ul id="ptx-toc-group-ch12-555timer" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch12-555timer-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-astablemode.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Astable Mode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="introduction" id="ch8-phasors-2"><h1 class="heading">Introduction</h1>
+<div class="para" id="ch8-phasors-2-1">A phasor is a mathematical construct that uses complex numbers (and Euler’s equation) to analyze the AC steady-state behavior of circuits. (The word phasor is a portmanteau of the words phase and vector.) Phasors and vectors will be represented as bold variables (e.g. <span class="process-math">\(\vec{Z}\)</span>) in this textbook. (While it might initially seem scary to use complex numbers to analyze circuits, it removes all of the calculus from the analysis and replaces it with addition, subtraction, multiplication, and division.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch8-phasors-2-2">The real part of Euler’s equation, <a href="ch8-phasors-2.html#ch8-eulers-equation" class="xref" data-knowl="./knowl/xref/ch8-eulers-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.0.1">(8.0.1)</a>, provides a relationship between the argument of a cosine wave and exponent of <span class="process-math">\(\textrm{e}\text{,}\)</span> the base of the natural logarithm. The variables in Euler’s equation correspond to the amplitude, phase, and angular frequency of the cosine wave (<span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(\phi\text{,}\)</span> and <span class="process-math">\(\omega\text{,}\)</span> respectively) and the square root of negative one (<span class="process-math">\(j\)</span>). The review of sinusoidal waves in <a href="ch1-powersources.html#ch1-acsources" class="internal" title="Subsection 1.5.2: Alternating Current (AC) Sources">Subsection 1.5.2</a> should be consulted if there is any question about what is meant by the amplitude or phase of a wave.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch8-phasors-2-3">
+<div class="displaymath process-math" id="ch8-eulers-equation">
+\begin{equation}
+A\cos(\omega t+ \phi) = A\textrm{e}^{j(\omega t+\phi)}\tag{8.0.1}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="ch8-phasors-2-4"><h2 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.0.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="ch8-phasors-2-4-1">Why is the square root of negative one represented as <span class="process-math">\(j\text{?}\)</span> In electrical engineering, the variable <span class="process-math">\(i\)</span> is used to represent current. Therefore, it is extremely common in electrical engineering for <span class="process-math">\(j\)</span> to be used to represent complex numbers.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 8.0.1"><a tabindex="-1" href="#ch8-phasors-2-4" title="Copy heading and permalink for Remark 8.0.1" aria-label="Copy heading and permalink for Remark 8.0.1">🔗</a></div>
+</article>
+<div class="para" id="ch8-phasors-2-5">When a circuit contains a sinusoidal source, all of the voltages and currents of the circuit will have a sinusoidal behavior. None of the circuit elements discussed in this book are capable of changing the frequency of the response. Therefore, the only truly important properties of each sinusoid are the amplitude and phase. (The frequency is important, but does not need to be included in calculations because it is constant throughout a circuit, and because the amplitude and phase of sinusoidal quantities will not be affected by the frequency in any calculations.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch8-phasors-2-6">Euler’s equation reduces to <span class="process-math">\(\textrm{e}^{j\phi}\)</span> when angular frequency is omitted. This phasor quantity can be expressed in either Cartesian form (expressed with real and imaginary components) or polar form (expressed with magnitude and phase). These two phasor forms (and how to convert between the two) are discussed in <a href="ch8-phasorarithmetic.html#ch8-cartesianpolar" class="internal" title="Subsection 8.1.1: Cartesian to Polar Conversion">Subsection 8.1.1</a> and <a href="ch8-phasorarithmetic.html#ch8-polarcartesian" class="internal" title="Subsection 8.1.2: Polar to Cartesian Conversion">Subsection 8.1.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch8-phasors-2-7">All of the phasors that are constructed in circuit analysis take the form of a cosine wave with positive amplitude. Any waveforms that are described in terms of a sine wave or that contain a negative amplitude will require conversion before analysis can take place. The angular argument of the phasor is usually expressed in degrees between −180° and +180°.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch8-phasors-2-8">Waveforms with a negative amplitude can be converted to a waveform with a positive amplitude by phase-shifting the wave by either positive or negative 180°. A sine wave can be converted into a positive-amplitude cosine wave by subtracting 90° from the phase. Conversions from non-standard to standard form are defined in <a href="ch8-phasors-2.html#ch8-phasors-2-9-1" class="xref" data-knowl="./knowl/xref/ch8-eq-negative-cosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.0.2">(8.0.2)</a>, <a href="ch8-phasors-2.html#ch8-phasors-2-9-1" class="xref" data-knowl="./knowl/xref/ch8-eq-positive-sine.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.0.3">(8.0.3)</a>, and <a href="ch8-phasors-2.html#ch8-phasors-2-9-1" class="xref" data-knowl="./knowl/xref/ch8-negative-sine.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.0.4">(8.0.4)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch8-phasors-2-9">
+<div class="displaymath process-math" id="ch8-phasors-2-9-1">
+\begin{align}
+-\cos(\omega t+\phi) \amp= \cos(\omega t + \phi \pm 180\pi/180)\tag{8.0.2}\\
+\sin(\omega t+\phi) \amp= \cos(\omega t + \phi - 90\pi/180)\tag{8.0.3}\\
+-\sin(\omega t+\phi) \amp= \cos(\omega t + \phi + 90\pi/180)\tag{8.0.4}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ch8-phasors-2-10"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.0.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Converting negative amplitude cosine to standard form.</span>
+</h2>
+<div class="para" id="ch8-phasors-2-10-2-1">Convert the following expression to standard phasor form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch8-phasors-2-10-2-2">
+<div class="displaymath process-math" id="ch8-phasors-2-10-2-2-1">
+\begin{equation*}
+v(t) = -110~\textrm{V}~\cos(2\pi60t + 210\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-10-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch8-phasors-2-10-2-3">Use <a href="ch8-phasors-2.html#ch8-phasors-2-9-1" class="xref" data-knowl="./knowl/xref/ch8-eq-negative-cosine.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.0.2">(8.0.2)</a> to convert to standard phasor form. It is desirable to keep the value of the angular component between ±180°, so it is best to subtract 180° rather than add 180°.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-10-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch8-phasors-2-10-2-4">
+<div class="displaymath process-math" id="ch8-phasors-2-10-2-4-1">
+\begin{align*}
+v(t) \amp= 110~\textrm{V}~\cos(2\pi60t + (210-180)\pi/180)\\
+\amp= 110~\textrm{V}~\cos(2\pi60t + 30\pi/180)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-10-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.0.2: Converting negative amplitude cosine to standard form"><a tabindex="-1" href="#ch8-phasors-2-10" title="Copy heading and permalink for Example 8.0.2: Converting negative amplitude cosine to standard form" aria-label="Copy heading and permalink for Example 8.0.2: Converting negative amplitude cosine to standard form">🔗</a></div>
+</article>
+<article class="example example-like" id="ch8-phasors-2-11"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.0.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Converting negative amplitude sine to standard form.</span>
+</h2>
+<div class="para" id="ch8-phasors-2-11-2-1">Convert the following expression to standard phasor form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch8-phasors-2-11-2-2">
+<div class="displaymath process-math" id="ch8-phasors-2-11-2-2-1">
+\begin{equation*}
+i(t) = -20~\textrm{A}~\sin(2\pi60t + 120\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-11-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch8-phasors-2-11-2-3">Use <a href="ch8-phasors-2.html#ch8-phasors-2-9-1" class="xref" data-knowl="./knowl/xref/ch8-negative-sine.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.0.4">(8.0.4)</a> to convert to standard phasor form. Then, subtract 360° to keep the angle within ±180°.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-11-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch8-phasors-2-11-2-4">
+<div class="displaymath process-math" id="ch8-phasors-2-11-2-4-1">
+\begin{align*}
+i(t) \amp= 20~\textrm{A}~\cos(2\pi60t + (120+90)\pi/180)\\
+\amp= 20~\textrm{A}~\cos(2\pi60t + 210\pi/180)\\
+\amp= 20~\textrm{A}~\cos(2\pi60t - 150\pi/180)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasors-2-11-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 8.0.3: Converting negative amplitude sine to standard form"><a tabindex="-1" href="#ch8-phasors-2-11" title="Copy heading and permalink for Example 8.0.3: Converting negative amplitude sine to standard form" aria-label="Copy heading and permalink for Example 8.0.3: Converting negative amplitude sine to standard form">🔗</a></div>
+</article></section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch8-phasors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch8-phasorarithmetic.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

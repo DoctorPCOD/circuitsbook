@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">A 50 mH inductor has current as shown in <a href="ch6-inductors-8.html#inductor-ivrelationship-example3-diagram" class="xref" data-knowl="./knowl/xref/inductor-ivrelationship-example3-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.29">Figure 6.6.29</a>. Derive the piecewise functions for <span class="process-math">\(i(t)\text{,}\)</span> <span class="process-math">\(v(t)\text{,}\)</span> and <span class="process-math">\(p(t)\text{.}\)</span> Assume that current is zero for all time before 0 ms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-inductor-ivrelationship-example3-diagram.svg" role="img" class="contained" alt="Graph of i(t) in mA plotted with respect to time in ms. The graph is linear from (0,0) to (5,10) then linear to (7.5,0) and then remains zero."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graph corresponding to <a href="ch6-inductors-8.html#ch6-ivinduct-ex3" class="xref" data-knowl="./knowl/xref/ch6-ivinduct-ex3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.6.9">Exercise 6.6.9</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.29"><a tabindex="-1" href="#inductor-ivrelationship-example3-diagram" title="Copy heading and permalink for Figure 6.6.29" aria-label="Copy heading and permalink for Figure 6.6.29">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(t) \amp=
+\begin{cases}
+2000~\textrm{mA/s}~t \amp \text{if } 0~\textrm{ms} \leq t \lt 5~\textrm{ms}\\
+-4000~\textrm{mA/s}~t + 30~\textrm{mA} \amp \text{if } 5~\textrm{ms} \leq t \lt 7.5~\textrm{ms}\\
+0 \amp \text{else}
+\end{cases}\\
+v(t) \amp=
+\begin{cases}
+0.1~\textrm{V} \amp \text{if } 0~\textrm{ms} \leq t \lt 5~\textrm{ms}\\
+-0.2~\textrm{V} \amp \text{if } 5~\textrm{ms} \leq t \lt 7.5~\textrm{ms}\\
+0 \amp \text{else}
+\end{cases}\\
+p(t) \amp=
+\begin{cases}
+200~\textrm{mW/s}~t \amp \text{if } 0~\textrm{ms} \leq t \lt 5~\textrm{ms}\\
+800~\textrm{mW/s}~t - 6~\textrm{mW} \amp \text{if } 5~\textrm{ms} \leq t \lt 7.5~\textrm{ms}\\
+0 \amp \text{else}
+\end{cases}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.6.9.1"><a tabindex="-1" href="#ch6-ivinduct-ex3-2" title="Copy heading and permalink for Answer 6.6.9.1" aria-label="Copy heading and permalink for Answer 6.6.9.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Between 0 ms and 5 ms, the current increases from 0 mA to 10 mA. This represents a slope of<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{10~\textrm{mA}-0~\textrm{mA}}{0.005~\textrm{s}-0~\textrm{s}} = 2000~\textrm{mA/s}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The function <span class="process-math">\(i(t)\)</span> is therefore equal to <span class="process-math">\(2000~\textrm{mA/s}~t\)</span> during this interval of time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a> to calculate the voltage during this time interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+0.05~\textrm{H}\frac{d}{dt}(2~\textrm{A/s}~t) = 0.05~\textrm{H}(2~\textrm{A/s}) = 0.1~\textrm{V}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch2-ohmslaw.html#ch2-ohmpower-3-1" class="xref" data-knowl="./knowl/xref/ohmspower1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.4">(2.4.4)</a> to calculate the power consumed by the inductor during this time period.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+(0.1~\textrm{V})(2000~\textrm{mA/s}~t) = 200~\textrm{mW/s}~t
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Between 5 ms and 7.5 ms, the current decreases from 10 mA to 0 mA. This represents a slope of<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{0~\textrm{mA}-10~\textrm{mA}}{0.075~\textrm{s}-0.005~\textrm{s}} = -4000~\textrm{mA/s}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">If this function originated at zero, the y-intercept would be 10 mA, representing a function of <span class="process-math">\(-4000~\textrm{mA/s}~t + 10~\textrm{mA}\text{.}\)</span> However, the function is shifted by 5 ms (or 0.005 s). The function <span class="process-math">\(i(t)\)</span> is therefore equal to <span class="process-math">\(-4000~\textrm{mA/s}~(t-0.005)+10~\textrm{mA} = -4000~\textrm{mA/s}~t + 30~\textrm{mA}\)</span> during this interval of time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a> to calculate the voltage during this time interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+0.05~\textrm{H}\frac{d}{dt}(-4~\textrm{A/s}~t + 0.03~\textrm{A}) = 0.05~\textrm{H}(-4~\textrm{A/s}) = -0.2~\textrm{V}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch2-ohmslaw.html#ch2-ohmpower-3-1" class="xref" data-knowl="./knowl/xref/ohmspower1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.4">(2.4.4)</a> to calculate the power consumed by the inductor during this time period.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+(-0.2~\textrm{V})(-4000~\textrm{mA/s}~t + 30~\textrm{mA}) = 800~\textrm{mW/s}~t - 6~\textrm{mW}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-ivinduct-ex3-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.9.1"><a tabindex="-1" href="#ch6-ivinduct-ex3-3" title="Copy heading and permalink for Solution 6.6.9.1" aria-label="Copy heading and permalink for Solution 6.6.9.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.6.9"><a tabindex="-1" href="#ch6-ivinduct-ex3" title="Copy heading and permalink for Exercise 6.6.9" aria-label="Copy heading and permalink for Exercise 6.6.9">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch6-inductors-8.html#ch6-ivinduct-ex3">In Context</a></span>
+</body>
+</html>

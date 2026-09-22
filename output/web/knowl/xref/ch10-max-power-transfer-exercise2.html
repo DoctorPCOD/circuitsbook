@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Determine the circuit elements that must be placed on the load (shown as <span class="process-math">\(\vec{Z_{LOAD}}\)</span> in the circuit diagram) for maximum power transfer given the circuit in <a href="ch10-acpower-7.html#max-power-exercise2-diagram" class="xref" data-knowl="./knowl/xref/max-power-exercise2-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 10.5.15">Figure 10.5.15</a>. Then, calculate the power consumed by that load. The source frequency is 60 Hz.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch10-max-power-exercise2-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of a (50VRMS angle 60deg) voltage source, 10ohm resistor, -j12ohm impedance, j15ohm impedance, and unknown Zload. The high-potential end of the voltage source connects to the 10ohm at node a. The 10ohm, -j12ohm, and j15ohm connect at node b. The j15ohm and Zload connect at node c. The low-potential end of the voltage source, -j12ohm, and Zload connect at node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.5.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch10-acpower-7.html#ch10-max-power-transfer-exercise2" class="xref" data-knowl="./knowl/xref/ch10-max-power-transfer-exercise2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 10.5.12">Exercise 10.5.12</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 10.5.15"><a tabindex="-1" href="#max-power-exercise2-diagram" title="Copy heading and permalink for Figure 10.5.15" aria-label="Copy heading and permalink for Figure 10.5.15">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">The load circuit elements include a 5.90 Ω resistor connected in series with a 263 µF capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+P = 62.5~\textrm{W}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 10.5.12.1"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-2" title="Copy heading and permalink for Answer 10.5.12.1" aria-label="Copy heading and permalink for Answer 10.5.12.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Deactivate the source and calculate the Thévenin equivalent impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{TH}} \amp= j15~\Omega + (-j12~\Omega)//(10~\Omega)\\
+\amp= 5.90+j10.08~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the voltage divider rule to calculate <span class="process-math">\(\vec{V_{TH}}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{TH}} \amp= (25+j43.30~\textrm{VRMS})\left(\frac{-j12~\Omega}{10-j12~\Omega}\right)\\
+\amp= 36.05+j13.26~\textrm{VRMS}\\
+\amp= 38.41~\textrm{VRMS}\angle 20.19^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">For maximum power transfer, the load must be equal to <span class="process-math">\(\vec{Z_{TH}}^*\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\vec{Z_{LOAD}} = 5.90-j10.08~\Omega
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the capacitance value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+C \amp= -\frac{1}{2\pi (60)(-10.08)}\\
+\amp= 263.10~\mu\textrm{F}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch10-maxpower.html#ch10-eq-max-power-ac" class="xref" data-knowl="./knowl/xref/ch10-eq-max-power-ac.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 10.3.2">(10.3.2)</a> to calculate the power transferred to the load.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+P_{LOAD,MAX} \amp= \frac{|38.41~\textrm{VRMS}|^2}{4(5.90~\Omega)}\\
+\amp= 62.50~\textrm{W}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 10.5.12.1"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2-3" title="Copy heading and permalink for Solution 10.5.12.1" aria-label="Copy heading and permalink for Solution 10.5.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 10.5.12"><a tabindex="-1" href="#ch10-max-power-transfer-exercise2" title="Copy heading and permalink for Exercise 10.5.12" aria-label="Copy heading and permalink for Exercise 10.5.12">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch10-acpower-7.html#ch10-max-power-transfer-exercise2">In Context</a></span>
+</body>
+</html>

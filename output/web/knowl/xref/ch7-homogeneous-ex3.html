@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive a second-order differential equation in standard form in terms of <span class="process-math">\(i(t)\)</span> given the circuit shown in <a href="ch7-secondorder-10.html#homogeneous-second-example3-diagram" class="xref" data-knowl="./knowl/xref/homogeneous-second-example3-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.27">Figure 7.8.27</a>. The switch is closed for a very long time before opening at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-homogeneous-second-example3-diagram.svg" role="img" class="contained" alt="Circuit with five nodes consisting of current source Is, resistors (Rs, R1, R2, and R3), SPST switch, and inductors L1 and L2. Is, Rs, and the SPST switch connect at node a. Is flows into node a. The SPST switch, R1, and L1 connect at node b. L1, R2, and L2 connect at node c. L2 and R3 connect at node d. Is, Rs, R1, R2, and R3 connect at node e. Is flows out of node e. Branch current iX(t) flows through R1 from node b to node e. Branch current i(t) flows through R3 from node d to node e. Voltage vX(t) drops over R2 from node c to node e. The SPST switch is depicted as opening."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch7-secondorder-10.html#ch7-homogeneous-ex3" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.8.8">Exercise 7.8.8</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.27"><a tabindex="-1" href="#homogeneous-second-example3-diagram" title="Copy heading and permalink for Figure 7.8.27" aria-label="Copy heading and permalink for Figure 7.8.27">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+0 = \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt} + \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.8.8.1"><a tabindex="-1" href="#ch7-homogeneous-ex3-2" title="Copy heading and permalink for Answer 7.8.8.1" aria-label="Copy heading and permalink for Answer 7.8.8.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Analyze the circuit at <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-homogeneous-example3-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of resistors R1, R2, and R3 and inductors L1 and L2. R1 and L1 connect at node a. L1, R2, and L2 connect at node b. L2 and R3 connect at node c. R1, R2, and R3 connect at node d. Branch current iX(t) flows through R1 from node a to node d. Branch current i(t) flows through R3 from node c to node d. Voltage vX(t) drops over R2 from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.28"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-2" title="Copy heading and permalink for Figure 7.8.28" aria-label="Copy heading and permalink for Figure 7.8.28">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform KCL at the node connecting <span class="process-math">\(L_1\text{,}\)</span> <span class="process-math">\(R_2\text{,}\)</span> and <span class="process-math">\(L_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i_X(t) + \frac{v_X(t)}{R_2} + i(t) = 0
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Solve for <span class="process-math">\(i_X(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+i_X(t) = -\frac{v_X(t)}{R_2} - i(t)\tag{7.8.5}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Perform KVL around the left loop of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+v_X(t) = L_1 \frac{di_X(t)}{dt} + R_1i_X(t)\tag{7.8.6}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug <a href="ch7-secondorder-10.html#ch7-homogeneous-ex3-kcl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex3-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.5">(7.8.5)</a> into <a href="ch7-secondorder-10.html#ch7-homogeneous-ex3-leftkvl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex3-leftkvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.6">(7.8.6)</a> to remove all <span class="process-math">\(i_X(t)\)</span> terms from <a href="ch7-secondorder-10.html#ch7-homogeneous-ex3-leftkvl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex3-leftkvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.6">(7.8.6)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align}
+v_X(t) \amp= L_1\frac{d}{dt}\left[-\frac{v_X(t)}{R_2} - i(t)\right] + R_1\left[-\frac{v_X(t)}{R_2} - i(t)\right]\tag{7.8.7}\\
+0 \amp= v_X(t) + L_1\frac{di(t)}{dt} + \frac{L_1}{R_2}\frac{dv_X(t)}{dt} + R_1i(t) + \frac{R_1}{R_2}v_X(t)\tag{7.8.8}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Perform KVL around the right loop of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+v_X(t) = L_2 \frac{di(t)}{dt} + R_3i(t)\tag{7.8.9}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug <a href="ch7-secondorder-10.html#ch7-homogeneous-ex3-rightkvl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex3-rightkvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.9">(7.8.9)</a> into <a href="ch7-secondorder-10.html#ch7-homogeneous-ex3-3-10-1" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex3-newkcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.8">(7.8.8)</a> to remove all <span class="process-math">\(v_X(t)\)</span> terms from <a href="ch7-secondorder-10.html#ch7-homogeneous-ex3-3-10-1" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex3-newkcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.8">(7.8.8)</a>. Then, reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+0 \amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1}{R_2}\frac{d}{dt}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right] + R_1i(t) + \frac{R_1}{R_2}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right]\\
+\amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \frac{R_3L_1}{R_2}\frac{di(t)}{dt} + R_1i(t) + \frac{R_1L_2}{R_2}\frac{di(t)}{dt} + \frac{R_3R_1}{R_2}i(t)\\
+\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left[L_1 + L_2 + \frac{L_1R_3}{R_2} + \frac{R_1L_2}{R_2}\right]\frac{di(t)}{dt} + \left[R_1 + \frac{R_1R_3}{R_2} + R_3\right]i(t)\\
+\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt} + \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.8.1"><a tabindex="-1" href="#ch7-homogeneous-ex3-3" title="Copy heading and permalink for Solution 7.8.8.1" aria-label="Copy heading and permalink for Solution 7.8.8.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 7.8.8"><a tabindex="-1" href="#ch7-homogeneous-ex3" title="Copy heading and permalink for Exercise 7.8.8" aria-label="Copy heading and permalink for Exercise 7.8.8">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-secondorder-10.html#ch7-homogeneous-ex3">In Context</a></span>
+</body>
+</html>

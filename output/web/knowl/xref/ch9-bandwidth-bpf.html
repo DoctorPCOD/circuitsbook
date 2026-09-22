@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h2 class="heading"><span class="type">Derivation</span></h2>
+<div class="para">The transfer function of an RLC band-pass filter will take the form shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+H(j\omega) = \frac{a_1 j\omega}{-\omega^2 + a_1 j\omega + a_0}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The magnitude of this transfer function is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+|H(j\omega)| = \frac{(a_1 \omega)}{\sqrt{(a_0-\omega^2)^2 + (a_1 \omega)^2}}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Set the magnitude of the transfer function equal to <span class="process-math">\(1/\sqrt{2}\)</span> and solve for the two values of <span class="process-math">\(\omega\)</span> that are positive. These will describe the two cutoff frequencies <span class="process-math">\(\omega_{c1}\)</span> and <span class="process-math">\(\omega_{c2}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{1}{\sqrt{2}} \amp= \frac{a_1 \omega}{\sqrt{(a_0-\omega^2)^2 + (a_1 \omega)^2}}\\
+\frac{1}{2} \amp= \frac{(a_1 \omega)^2}{(a_0-\omega^2)^2 + (a_1 \omega)^2}\\
+2(a_1 \omega )^2 \amp= (a_0-\omega^2)^2 + (a_1 \omega)^2\\
+(a_0 - \omega^2)^2 \amp= (a_1 \omega)^2\\
+0 \amp= a_0^2 - 2a_0\omega^2 + \omega^4 - a_1^2 \omega^2 \\
+\amp= \omega^4 - (2a_0 + a_1^2) \omega^2 + a_0^2
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The two positive real roots are shown below. These will not be derived in this book.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\omega_{c1} \amp= \frac{1}{2}\left(\sqrt{a_1^2+4a_0} - a_1\right)\\
+\omega_{c2} \amp= \frac{1}{2}\left(\sqrt{a_1^2+4a_0} + a_1\right)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Subtract <span class="process-math">\(\omega_{c1}\)</span> from <span class="process-math">\(\omega_{c2}\)</span> to calculate the bandwidth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\beta \amp= \frac{1}{2}\left(\sqrt{a_1^2+4a_0} + a_1\right) - \frac{1}{2}\left(\sqrt{a_1^2+4a_0} - a_1\right)\\
+\amp= \frac{1}{2}a_1 + \frac{1}{2}a_1\\
+\amp= a_1
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-bandwidth-bpf-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 9.3.3.1"><a tabindex="-1" href="#ch9-bandwidth-bpf" title="Copy heading and permalink for Derivation 9.3.3.1" aria-label="Copy heading and permalink for Derivation 9.3.3.1">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-passivefilters.html#ch9-bandwidth-bpf">In Context</a></span>
+</body>
+</html>

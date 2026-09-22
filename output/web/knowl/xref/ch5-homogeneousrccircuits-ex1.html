@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate an expression for <span class="process-math">\(v(t)\)</span> and <span class="process-math">\(i(t)\)</span> for the circuit shown in <a href="ch5-capacitors-10.html#rchomogeneousexample1" class="xref" data-knowl="./knowl/xref/rchomogeneousexample1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.8.25">Figure 5.8.25</a>. The switch is in position a for a very long time before moving to position b at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch5-rchomogeneousexample1.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of a 10mA source, SPDT switch, 20k, 10k (A), 20k (B), 50k, and 75k resistors and 400nF capacitor. The 10mA source, 20k, and 10k (A) are connected at node c. The 10mA source flows into node c. Output a of the SPDT switch and 10k (A) connect at node a. Output b of the SPDT switch and 10k (B) connect at node b. The input of the SPDT switch and 400nF cap connect at node d. The 10k (B), 50k, and 75k connect at node e. The 10mA source, 20k, 400nF, 50k, and 75k connect at node f. The 10mA source flows out of node f. Voltage v(t) drops over the capacitor from node d to node f. Branch current i(t) flows through the capacitor from node d to node f. The SPDT switch is depicted as moving from position a to position b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch5-capacitors-10.html#ch5-homogeneousrccircuits-ex1" class="xref" data-knowl="./knowl/xref/ch5-homogeneousrccircuits-ex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 5.8.11">Exercise 5.8.11</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.25"><a tabindex="-1" href="#rchomogeneousexample1" title="Copy heading and permalink for Figure 5.8.25" aria-label="Copy heading and permalink for Figure 5.8.25">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= 200~\textrm{V}~\textrm{e}^{-62.5t}~u(t) + 200~\textrm{V}~u(-t)\\
+i(t) \amp= -5~\textrm{mA}~\textrm{e}^{-62.5t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 5.8.11.1"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-2" title="Copy heading and permalink for Answer 5.8.11.1" aria-label="Copy heading and permalink for Answer 5.8.11.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Draw the circuit in the initial steady-state condition. The capacitor can be represented as an open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch5-homogeneousrcexample1solution1.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of a 10mA source, SPDT switch, 20k, 10k (A), 20k (B), 50k, and 75k resistors. The 10mA source, 20k, and 10k (A) are connected at node c. The 10mA source flows into node c. Output a of the SPDT switch and 10k (A) connect at node a. Output b of the SPDT switch and 10k (B) connect at node b. The input of the SPDT switch connects at node d. The 10k (B), 50k, and 75k connect at node e. The 10mA source, 20k, 50k, and 75k connect at node f. The 10mA source flows out of node f. Voltage v(0) drops from node d to node f. The SPDT switch is in position a."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.26"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-2" title="Copy heading and permalink for Figure 5.8.26" aria-label="Copy heading and permalink for Figure 5.8.26">🔗</a></div></figcaption>
+</figure>
+<div class="para">The circuit is redrawn below to eliminate the circuit elements that are disconnected from the capacitor in the initial steady-state conditions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch5-homogeneousrcexample1solution2.svg" role="img" class="contained" alt="Circuit with 1 mesh and 3 nodes consisting of a 10mA source, 20k, and 10k resistors. The 10mA source connects to the 20k and 10k at node a. The 10mA source flows into node a. The 10k connects at node b. The 10mA and 20k connect at node c. The 10mA source flows out of node c. Voltage v(0) drops from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.27"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-4" title="Copy heading and permalink for Figure 5.8.27" aria-label="Copy heading and permalink for Figure 5.8.27">🔗</a></div></figcaption>
+</figure>
+<div class="para">No current flows through the 10 kΩ resistor, so it does not contribute to <span class="process-math">\(v(0)\text{.}\)</span> The quantity <span class="process-math">\(v(0)\)</span> is therefore equal to the voltage dropped over the 20 kΩ resistor, which can be calculated using Ohm’s law.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(0) \amp= (10~\textrm{mA})(20~\textrm{k}\Omega)\\
+\amp= 200~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t=0^+\)</span> to calculate the equivalent resistance seen by the capacitor. The circuit is shown in this condition below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch5-homogeneousrcexample1solution3.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of a 10mA source, SPDT switch, 20k, 10k (A), 20k (B), 50k, and 75k resistors and 400nF capacitor. The 10mA source, 20k, and 10k (A) are connected at node c. The 10mA source flows into node c. Output a of the SPDT switch and 10k (A) connect at node a. Output b of the SPDT switch and 10k (B) connect at node b. The input of the SPDT switch and 400nF cap connect at node d. The 10k (B), 50k, and 75k connect at node e. The 10mA source, 20k, 400nF, 50k, and 75k connect at node f. The 10mA source flows out of node f. Voltage v(t) drops over the capacitor from node d to node f. Branch current i(t) flows through the capacitor from node d to node f. The SPDT switch is in position b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.28"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-8" title="Copy heading and permalink for Figure 5.8.28" aria-label="Copy heading and permalink for Figure 5.8.28">🔗</a></div></figcaption>
+</figure>
+<div class="para">The circuit is redrawn below to eliminate the circuit elements that are disconnected from the capacitor after the switch moves to position b.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch5-homogeneousrcexample1solution4.svg" role="img" class="contained" alt="Circuit with 2 meshes and 3 nodes consisting of a 400nF capacitor, 10k, 50k, and 75k resistors. The 400nF and 10k connect at node a. The 10k, 50k, and 75k connect at node b. The 400nF, 50k, and 75k connect at node c. Voltage v(t) drops over the capacitor from node a to node c. Branch current i(t) flows through the capacitor from node a to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.8.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.8.29"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-10" title="Copy heading and permalink for Figure 5.8.29" aria-label="Copy heading and permalink for Figure 5.8.29">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance as seen by the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= 75~\textrm{k}\Omega//50~\textrm{k}\Omega+10~\textrm{k}\Omega\\
+\amp= 30~\textrm{k}\Omega+10~\textrm{k}\Omega\\
+\amp= 40~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch5-rccircuits.html#ch5-taurcequation" class="xref" data-knowl="./knowl/xref/ch5-taurcequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7.6">(5.7.6)</a> to calculate the RC time constant.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\tau \amp= RC\\
+\amp= (40000~\Omega)(400\times10^{-9}~\textrm{F})\\
+\amp= 0.016~\textrm{s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug these values into <a href="ch5-rccircuits.html#ch5-homogeneousrctransient" class="xref" data-knowl="./knowl/xref/ch5-homogeneousrctransient.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7.5">(5.7.5)</a> to derive an expression for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 200~\textrm{V}~\textrm{e}^{-62.5t}~u(t) + 200~\textrm{V}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch5-rccircuits.html#ch5-homogeneousrccurrent" class="xref" data-knowl="./knowl/xref/ch5-homogeneousrccurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.7.7">(5.7.7)</a> to calculate the current.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = -5~\textrm{mA}~\textrm{e}^{-62.5t}~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 5.8.11.1"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1-3" title="Copy heading and permalink for Solution 5.8.11.1" aria-label="Copy heading and permalink for Solution 5.8.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.8.11"><a tabindex="-1" href="#ch5-homogeneousrccircuits-ex1" title="Copy heading and permalink for Exercise 5.8.11" aria-label="Copy heading and permalink for Exercise 5.8.11">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch5-capacitors-10.html#ch5-homogeneousrccircuits-ex1">In Context</a></span>
+</body>
+</html>

@@ -1,0 +1,67 @@
+INFO    : Building target print
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Checking for update for required playwright chromium browser.
+INFO    : using playwright package to create previews for interactives from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx for placement in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/preview
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/extract-interactive.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/extract-interactive.xsl
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : automatic screenshot of interactive with identifier "flashtypeadcontinkercad-2" on page http://localhost:8888/flashtypeadcontinkercad-2.html to file flashtypeadcontinkercad-2-preview.png
+INFO    : automatic screenshot of interactive with identifier "pwmcircuittinkercad-2" on page http://localhost:8888/pwmcircuittinkercad-2.html to file pwmcircuittinkercad-2-preview.png
+INFO    : automatic screenshot of interactive with identifier "circuitjslinearequationsolver-2" on page http://localhost:8888/circuitjslinearequationsolver-2.html to file circuitjslinearequationsolver-2-preview.png
+INFO    : automatic screenshot of interactive with identifier "chargingcircuitgraph-2" on page http://localhost:8888/chargingcircuitgraph-2.html to file chargingcircuitgraph-2-preview.png
+INFO    : Closing http.server thread
+WARNING : You are trying to generate qrcodes, but the publication file does not have a base URL. This will result in qrcodes that do not point to anything meaningful.
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : manufacturing QR codes from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx for placement in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/qrcode
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/extract-qrcode.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/extract-qrcode.xsl
+INFO    : creating URL with content "flashtypeadcontinkercad-2.html" as /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/qrcode/flashtypeadcontinkercad-2.png...
+INFO    : creating URL with content "pwmcircuittinkercad-2.html" as /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/qrcode/pwmcircuittinkercad-2.png...
+INFO    : creating URL with content "circuitjslinearequationsolver-2.html" as /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/qrcode/circuitjslinearequationsolver-2.png...
+INFO    : creating URL with content "chargingcircuitgraph-2.html" as /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/qrcode/chargingcircuitgraph-2.png...
+INFO    : QR code creation complete
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-o8hohag3
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-6kg3xjx3
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-3yuypm37
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/print.
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx to LaTeX as /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ighlp_03/main.tex
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+WARNING : * PTX:WARNING:    An <xref> wants to build text using a number to identify the target, but the target (which has @xml:id "front-colophon") does not have a number. You could try 'text="title"' or 'text="custom"' on the "xref".
+INFO    : *              located within: "Note to faculty" (title)
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/pretext-latex.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ighlp_03
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-mbain178
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-2ih5d2hy
+INFO    : 
+Finished build for target print. The output is in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/print.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

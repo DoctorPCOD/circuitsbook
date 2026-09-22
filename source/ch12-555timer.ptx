@@ -5,9 +5,9 @@
 
 	<introduction>
 
-		<p>Now that comparators and capacitors are well-understood, the 555 timer can be analyzed. The 555 timer is an integrated circuit chip that is capable of performing many functions. Two of those functions are as an astable oscillator (clock) and a monostable pulse generator. The pinout diagram of a 555 timer integrated circuit chip is shown in <xref ref="555pinout" />. A pinout diagram is used to determine which pins on a chip correspond to each of the input and output signals of a functioning device. Each of these control signals will be explained as the functionality of the 555 timer is outlined below.</p>
+		<p>Now that comparators and capacitors are well-understood, the 555 timer can be analyzed. The 555 timer is an integrated circuit chip that is capable of performing many functions. Two of those functions are as an astable oscillator (clock) and a monostable pulse generator. The pinout diagram of a 555 timer integrated circuit chip is shown in <xref ref="fig555pinout" />. A pinout diagram is used to determine which pins on a chip correspond to each of the input and output signals of a functioning device. Each of these control signals will be explained as the functionality of the 555 timer is outlined below.</p>
 
-		<figure xml:id="555pinout">
+		<figure xml:id="fig555pinout">
   			<caption>Pinout diagram of a 555 timer integrated circuit chip.</caption>
 			<image width="30%" xml:id="ch12-555pinout">
 				<shortdescription>Pinout diagram of the 555 timer chip, depicted as a DIP chip. Pin 1: GND. Pin 2: TRIG. Pin 3: OUT. Pin 4: RST. Pin 5: CTRL. Pin 6: THR. Pin 7: DIS. Pin 8: VCC.</shortdescription>
@@ -27,9 +27,9 @@
   			</image>
 		</figure>
 
-		<p>A 555 timer is composed of transistors, resistors, and other components. However the nature of each discrete component will be ignored and the device will be analyzed functionally. Functionally, the 555 timer consists of a voltage divider, two comparators, a digital device called an SR latch, a transistor, and an output driver. A schematic representation of this functional diagram is shown in <xref ref="555timerschematic" />. Each of the labeled connections corresponds to a pin on the integrated circuit chip (missing from the labeled connections is GROUND). Note the use of the term VCC which corresponds to the logical HIGH voltage value (usually 5<nbsp />V). Each of the comparator power connections are not shown, but are VCC for the positive supply and ground for the negative supply.</p>
+		<p>A 555 timer is composed of transistors, resistors, and other components. However the nature of each discrete component will be ignored and the device will be analyzed functionally. Functionally, the 555 timer consists of a voltage divider, two comparators, a digital device called an SR latch, a transistor, and an output driver. A schematic representation of this functional diagram is shown in <xref ref="fig555timerschematic" />. Each of the labeled connections corresponds to a pin on the integrated circuit chip (missing from the labeled connections is GROUND). Note the use of the term VCC which corresponds to the logical HIGH voltage value (usually 5<nbsp />V). Each of the comparator power connections are not shown, but are VCC for the positive supply and ground for the negative supply.</p>
 
-		<figure xml:id="555timerschematic">
+		<figure xml:id="fig555timerschematic">
   			<caption>Functional schematic of a 555 timer.</caption>
 			<image width="100%" xml:id="ch12-555timerschematic">
 				<shortdescription>Internal circuitry of a 555 timer chip.</shortdescription>
@@ -80,7 +80,7 @@
 		<figure xml:id="clocksignalfigure">
   			<caption>Graphical depiction of a digital clock signal.</caption>
 			<image width="100%" xml:id="ch12-clocksignalfigure">
-				<shortdescription>Graph of a clock signal. The signal is LOW from 0 to some arbitrary time, and then goes HIGH until <m>T</m>. This pattern repeats periodically for a few cycles.</shortdescription>
+				<shortdescription>Graph of a clock signal. The signal is LOW from 0 to some arbitrary time, and then goes HIGH until T. This pattern repeats periodically for a few cycles.</shortdescription>
 				<latex-image>
 					\begin{tikzpicture}[font=\sffamily]
 						\begin{axis}[xlabel=$t$~(arbitrary), xmin=0, xmax=3, xtick={0, 1, 2}, xticklabels={0, $T$, $2T$}, ymin=0, ymax=1.05, ytick={0, 1}, yticklabels={LOW,HIGH}, width=\linewidth, height=3.5cm, axis x line=bottom, axis y line = left]
@@ -91,9 +91,9 @@
   			</image>
 		</figure>
 
-		<p>The idea is to connect the TRIGGER and THRESHOLD pins and connect them to an RC circuit such that the voltage drop over the capacitor continuously changes. As it changes from 1/3<nbsp />VCC to 2/3<nbsp />VCC, the output will oscillate between HIGH and LOW. The 555 timer in astable mode is connected as shown in <xref ref="555timerastable" />. (The CONTROL pin is connected to a noise-reducing capacitor and the RESET pin is connected to VCC.)</p>
+		<p>The idea is to connect the TRIGGER and THRESHOLD pins and connect them to an RC circuit such that the voltage drop over the capacitor continuously changes. As it changes from 1/3<nbsp />VCC to 2/3<nbsp />VCC, the output will oscillate between HIGH and LOW. The 555 timer in astable mode is connected as shown in <xref ref="fig555timerastable" />. (The CONTROL pin is connected to a noise-reducing capacitor and the RESET pin is connected to VCC.)</p>
 
-		<figure xml:id="555timerastable">
+		<figure xml:id="fig555timerastable">
   			<caption>Functional schematic of a 555 timer connected in astable mode.</caption>
 			<image width="100%" xml:id="ch12-555timerastable">
 				<shortdescription>Internal circuitry of a 555 timer chip. Resistor R1 is connected between pins VCC and DISCHARGE. Resistor R2 is connected between DISCHARGE and THRESHOLD. Capacitor C is connected between THRESHOLD and GND. THRESHOLD and TRIGGER are shorted together.</shortdescription>
@@ -133,9 +133,9 @@
   			</image>
 		</figure>
 
-		<p>In the beginning, the capacitor will have no voltage drop. Because TRIGGER will be less than 1/3<nbsp />VCC, the output will be HIGH, and the transistor will be deactivated. A pathway between VCC and ground exists through the capacitor, and it will begin to charge up. This is depicted in <xref ref="555timerastablecharging" />.</p>
+		<p>In the beginning, the capacitor will have no voltage drop. Because TRIGGER will be less than 1/3<nbsp />VCC, the output will be HIGH, and the transistor will be deactivated. A pathway between VCC and ground exists through the capacitor, and it will begin to charge up. This is depicted in <xref ref="fig555timerastablecharging" />.</p>
 
-		<figure xml:id="555timerastablecharging">
+		<figure xml:id="fig555timerastablecharging">
   			<caption>Functional schematic of a 555 timer connected in astable mode. When the output is HIGH (TRIGGER is less than 1/3<nbsp />VCC), the transistor is deactivated and current will flow as shown to charge the capacitor.</caption>
 			<image width="100%" xml:id="ch12-555timerastablecharging">
 				<shortdescription>Internal circuitry of a 555 timer chip connected in astable mode. The path from VCC through R1, R2, and C to GND is highlighted in red.</shortdescription>
@@ -176,9 +176,9 @@
   			</image>
 		</figure>
 
-		<p>As soon as <m>v_C(t)</m> reaches 1/3<nbsp />VCC, the trigger comparator will saturate LOW, disabling the set pin on the latch. Once <m>v_C(t)</m> exceeds 2/3<nbsp />VCC, the threshold comparator will saturate HIGH, causing the latch to reset. This will activate the transistor and cause the capacitor to discharge through <m>R_2</m>, as shown in <xref ref="555timerastabledischarging" />.</p>
+		<p>As soon as <m>v_C(t)</m> reaches 1/3<nbsp />VCC, the trigger comparator will saturate LOW, disabling the set pin on the latch. Once <m>v_C(t)</m> exceeds 2/3<nbsp />VCC, the threshold comparator will saturate HIGH, causing the latch to reset. This will activate the transistor and cause the capacitor to discharge through <m>R_2</m>, as shown in <xref ref="fig555timerastabledischarging" />.</p>
 
-		<figure xml:id="555timerastabledischarging">
+		<figure xml:id="fig555timerastabledischarging">
   			<caption>Functional schematic of a 555 timer connected in astable mode. When the output is LOW (THRESHOLD is greater than 2/3<nbsp />VCC), the transistor is activated and current will flow as shown to discharge the capacitor.</caption>
 			<image width="100%" xml:id="ch12-555timerastabledischarging">
 				<shortdescription>Internal circuitry of a 555 timer chip connected in astable mode. The path from the capacitor through R2 to GND is highlighted in blue.</shortdescription>
@@ -221,9 +221,9 @@
 
 		<p>Once the voltage drop over the capacitor decreases below 1/3<nbsp />VCC, the trigger comparator will then saturate HIGH. This cycle will repeat itself where the capacitor charges from 1/3<nbsp />VCC to 2/3<nbsp />VCC and then discharges back to 1/3<nbsp />VCC. Meanwhile, the digital nature of the comparators and the output driver creates a square wave output signal.</p>
 
-		<p>Because the capacitor charges through <m>R_1</m> and <m>R_2</m> and discharges only through <m>R_2</m>, the capacitor will spend more time charging than discharging. The output therefore does not have an equal amount of time spent HIGH and LOW. (In other words, the duty cycle will be greater than 50%.) An example waveform that shows <m>v_C(t)</m> as well as the output signal is shown in <xref ref="555astableoutput" />. In this example, <m>R_1=R_2=1~\textrm{k}\Omega</m> and <m>C=10~\mu\textrm{F}</m>. (Note also that the first waveform has an even higher duty cycle due to the fact that the capacitor must charge from 0 rather than from 1/3<nbsp />VCC.)</p>
+		<p>Because the capacitor charges through <m>R_1</m> and <m>R_2</m> and discharges only through <m>R_2</m>, the capacitor will spend more time charging than discharging. The output therefore does not have an equal amount of time spent HIGH and LOW. (In other words, the duty cycle will be greater than 50%.) An example waveform that shows <m>v_C(t)</m> as well as the output signal is shown in <xref ref="fig555astableoutput" />. In this example, <m>R_1=R_2=1~\textrm{k}\Omega</m> and <m>C=10~\mu\textrm{F}</m>. (Note also that the first waveform has an even higher duty cycle due to the fact that the capacitor must charge from 0 rather than from 1/3<nbsp />VCC.)</p>
 
-		<figure xml:id="555astableoutput">
+		<figure xml:id="fig555astableoutput">
   			<caption>Voltage drop over the capacitor (top graph) and output voltage (bottom graph) in astable mode. <m>R_1=R_2=1~\textrm{k}\Omega</m> and <m>C=10~\mu\textrm{F}</m>.</caption>
 			<image width="100%" xml:id="ch12-555astableoutput">
 				<shortdescription>Graph of the charging and discharging of capacitor C in astable mode, as well as the contemporaneous value on the OUT pin.</shortdescription>
@@ -247,12 +247,12 @@
   			</image>
 		</figure>
 
-		<p><xref ref="ch5-homogeneousrctransient" /> and <xref ref="ch5-eqrcchargingvoltage" /> can be used to determine the amount of time the output signal is HIGH (<m>T_{HIGH}</m>) as well as the amount of time the output signal is LOW (<m>T_{LOW}</m>). These values are expressed in <xref ref="555astabletimes1" /> and <xref ref="555astabletimes2" />.</p>
+		<p><xref ref="ch5-homogeneousrctransient" /> and <xref ref="ch5-eqrcchargingvoltage" /> can be used to determine the amount of time the output signal is HIGH (<m>T_{HIGH}</m>) as well as the amount of time the output signal is LOW (<m>T_{LOW}</m>). These values are expressed in <xref ref="eq555astabletimes1" /> and <xref ref="eq555astabletimes2" />.</p>
 
 		<p>
 			<md number="yes">
-				<mrow xml:id="555astabletimes1">T_{HIGH} \amp= C(R_1+R_2)\ln{2}</mrow>
-				<mrow xml:id="555astabletimes2">T_{LOW} \amp= CR_2\ln{2}</mrow>
+				<mrow xml:id="eq555astabletimes1">T_{HIGH} \amp= C(R_1+R_2)\ln{2}</mrow>
+				<mrow xml:id="eq555astabletimes2">T_{LOW} \amp= CR_2\ln{2}</mrow>
 			</md>
 		</p>
 
@@ -261,9 +261,9 @@
 	<section xml:id="ch12-monostablemode">
 		<title>Monostable Mode</title>
 
-		<p>In monostable mode, the 555 timer is capable of creating a single pulse upon a trigger event. The pulse-width will be related to the value of the resistor and capacitor used in the external circuitry. In this case, the TRIGGER pin will be connected to an external trigger (perhaps a pushbutton or another electronic signal). When the value on the TRIGGER pin is less than 1/3<nbsp />VCC, it will cause the capacitor to charge up a single time, creating one pulse. The 555 timer connected in monostable mode is shown in <xref ref="555timermonostable" />.</p>
+		<p>In monostable mode, the 555 timer is capable of creating a single pulse upon a trigger event. The pulse-width will be related to the value of the resistor and capacitor used in the external circuitry. In this case, the TRIGGER pin will be connected to an external trigger (perhaps a pushbutton or another electronic signal). When the value on the TRIGGER pin is less than 1/3<nbsp />VCC, it will cause the capacitor to charge up a single time, creating one pulse. The 555 timer connected in monostable mode is shown in <xref ref="fig555timermonostable" />.</p>
 
-		<figure xml:id="555timermonostable">
+		<figure xml:id="fig555timermonostable">
   			<caption>Functional schematic of a 555 timer connected in monostable mode.</caption>
 			<image width="100%" xml:id="ch12-555timermonostable">
 				<shortdescription>Internal circuitry of a 555 timer chip. Resistor R is connected between pins VCC and DISCHARGE. DISCHARGE and THRESHOLD are shorted. Capacitor C is connected between THRESHOLD and GND.</shortdescription>
@@ -303,9 +303,9 @@
   			</image>
 		</figure>
 
-		<p>In the beginning, <m>v_C</m> will be zero. The THRESHOLD value will be less than 2/3<nbsp />VCC, and as long as TRIGGER is held at a voltage higher than 1/3<nbsp />VCC, the OUTPUT will be LOW and the capacitor will be connected to ground via the transistor. This will continue to be the case as long as the TRIGGER input does not change. As soon as a voltage less than 1/3<nbsp />VCC is presented on the TRIGGER pin, the OUTPUT signal will become HIGH. This will cause current to flow and the capacitor to charge, as shown in <xref ref="555timermonostablecharging" />.</p>
+		<p>In the beginning, <m>v_C</m> will be zero. The THRESHOLD value will be less than 2/3<nbsp />VCC, and as long as TRIGGER is held at a voltage higher than 1/3<nbsp />VCC, the OUTPUT will be LOW and the capacitor will be connected to ground via the transistor. This will continue to be the case as long as the TRIGGER input does not change. As soon as a voltage less than 1/3<nbsp />VCC is presented on the TRIGGER pin, the OUTPUT signal will become HIGH. This will cause current to flow and the capacitor to charge, as shown in <xref ref="fig555timermonostablecharging" />.</p>
 
-		<figure xml:id="555timermonostablecharging">
+		<figure xml:id="fig555timermonostablecharging">
   			<caption>Functional schematic of a 555 timer connected in monostable mode. When a voltage of less than 1/3<nbsp />VCC is present on TRIGGER, the capacitor will charge, as shown.</caption>
 			<image width="100%" xml:id="ch12-555timermonostablecharging">
 				<shortdescription>Internal circuitry of a 555 timer chip connected in monostable mode. The path from VCC through R and C to GND is highlighted in red.</shortdescription>
@@ -348,9 +348,9 @@
 
 		<p>Because the TRIGGER pulse was short-lived, the trigger comparator will saturate LOW as soon as the TRIGGER signal returns HIGH. This will cause the SR latch output to remain unchanged. As soon as the voltage drop over the capacitor reaches 2/3<nbsp />VCC, the threshold comparator will saturate HIGH, causing the SR latch to reset (OUTPUT will be LOW gain). The capacitor will discharge directly to ground through the transistor without going through any resistance, causing an abrupt discharge to zero. The output will remain in equilibrium unless the TRIGGER pin is sent LOW again.</p>
 
-		<p>A graph of the TRIGGER pulse and the resulting values of <m>v_C(t)</m> and the OUTPUT signal are shown in <xref ref="555monostableoutput" />.</p>
+		<p>A graph of the TRIGGER pulse and the resulting values of <m>v_C(t)</m> and the OUTPUT signal are shown in <xref ref="fig555monostableoutput" />.</p>
 
-		<figure xml:id="555monostableoutput">
+		<figure xml:id="fig555monostableoutput">
   			<caption>Trigger input (top graph), voltage drop over the capacitor (center graph), and output voltage (bottom graph) in monostable mode. <m>R = 1~\textrm{k}\Omega</m> and <m>C = 1~\mu\textrm{F}</m>.</caption>
 			<image width="100%" xml:id="ch12-555monostableoutput">
 				<shortdescription>Graph of the charging of capacitor C in monostable mode, as well as the contemporaneous value on the OUT pin.</shortdescription>
@@ -372,13 +372,13 @@
 			</image>
 		</figure>
 
-		<p><xref ref="ch5-eqrcchargingvoltage" /> can be used to calculate the amount of time the output signal is HIGH (<m>T_{HIGH}</m>). This value is expressed in <xref ref="555monostabletimesequation" />.</p>
+		<p><xref ref="ch5-eqrcchargingvoltage" /> can be used to calculate the amount of time the output signal is HIGH (<m>T_{HIGH}</m>). This value is expressed in <xref ref="eq555monostabletimesequation" />.</p>
 
 		<p>
-			<md number="yes" xml:id="555monostabletimesequation">T_{HIGH} = CR\ln{3}</md>
+			<md number="yes" xml:id="eq555monostabletimesequation">T_{HIGH} = CR\ln{3}</md>
 		</p>
 
-		<p>Because the TRIGGER pin is connected externally, there are two important consequences. First, the output will remain HIGH for the entire time that the TRIGGER pin voltage is lower than 1/3<nbsp />VCC, which may be longer than the amount of time described in <xref ref="555monostabletimesequation" />. Therefore it is important to ensure that the TRIGGER pulse-width is shorter than the amount of time given in <xref ref="555monostabletimesequation" />.</p>
+		<p>Because the TRIGGER pin is connected externally, there are two important consequences. First, the output will remain HIGH for the entire time that the TRIGGER pin voltage is lower than 1/3<nbsp />VCC, which may be longer than the amount of time described in <xref ref="eq555monostabletimesequation" />. Therefore it is important to ensure that the TRIGGER pulse-width is shorter than the amount of time given in <xref ref="eq555monostabletimesequation" />.</p>
 
 		<p>Second, any subsequent TRIGGER event needs to occur after the capacitor has charged to 2/3<nbsp />VCC and then discharged back to zero again. Otherwise, the second event will not generate an output pulse.</p>
 

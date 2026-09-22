@@ -23,7 +23,7 @@
 
   <!-- If you put any latex-image elements you can include preambles -->
   <!-- for those in the next element. -->
-  <latex-image-preamble> \usepackage{tikz, pgfplots, ifthen, mathabx} \usetikzlibrary{positioning,matrix,arrows,calc, pgfplots.groupplots} \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} \usetikzlibrary{decorations.markings} \usepackage[emptypmoscircle, american, cuteinductors, straightlabels, siunitx] {circuitikz} \ctikzset{logic ports=ieee} \pgfplotsset{compat=1.18} </latex-image-preamble>
+  <latex-image-preamble> \usepackage{tikz, pgfplots, ifthen, mathabx, mathrsfs} \usetikzlibrary{positioning,matrix,arrows,calc, pgfplots.groupplots} \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} \usetikzlibrary{decorations.markings} \usepackage[emptypmoscircle, american, cuteinductors, straightlabels, siunitx] {circuitikz} \ctikzset{logic ports=ieee} \pgfplotsset{compat=1.18}</latex-image-preamble>
 
   <!-- It is possible to rename elements: -->
   <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
@@ -32,7 +32,7 @@
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
 
-
+  <directories external="../assets" />
 
 
 </docinfo>

@@ -1,0 +1,42 @@
+INFO    : Building target latex
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+WARNING : (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo". The publisher file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/latex.
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+WARNING : (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo". The publisher file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx to LaTeX as /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-tpz9y3rm/main.tex
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/pretext-latex.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-tpz9y3rm
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-1udxwvqg
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-3wlxh1us
+INFO    : 
+Finished build for target latex. The output is in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/latex.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

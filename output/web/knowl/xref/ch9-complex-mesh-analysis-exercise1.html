@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Use mesh analysis to calculate <span class="process-math">\(v(t)\)</span> given the circuit diagram shown in <a href="ch9-phasoranalysis-8.html#complex-mesh-analysis-exercise1-diagram" class="xref" data-knowl="./knowl/xref/complex-mesh-analysis-exercise1-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.26">Figure 9.6.26</a>. The source frequency is 50 Hz.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch9-complex-mesh-analysis-exercise1-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of (105V angle 0deg) voltage source, 12ohm resistor, 24ohm resistor, 9ohm resistor, and j12ohm impedance. The high-potential end of the source connects to the 12ohm at node a. The three resistors connect at node b. The 9ohm and j12ohm connect at node c. The low-potential end of the source, 24ohm, and j12ohm connect at node d. Voltage V drops from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-complex-mesh-analysis-exercise1" class="xref" data-knowl="./knowl/xref/ch9-complex-mesh-analysis-exercise1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.11">Exercise 9.6.11</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.26"><a tabindex="-1" href="#complex-mesh-analysis-exercise1-diagram" title="Copy heading and permalink for Figure 9.6.26" aria-label="Copy heading and permalink for Figure 9.6.26">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 50.5~\textrm{V}~\cos(2\pi50t + 17.9 \pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.11.1"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-2" title="Copy heading and permalink for Answer 9.6.11.1" aria-label="Copy heading and permalink for Answer 9.6.11.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Mesh current <span class="process-math">\(\vec{I_A}\)</span> will flow clockwise around the left mesh. Mesh current <span class="process-math">\(\vec{I_B}\)</span> will flow clockwise around the right mesh. Derive the mesh equations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+105 \amp= 12\vec{I_A} + 24(\vec{I_A}-\vec{I_B})\\
+0 \amp= 24(\vec{I_B}-\vec{I_A}) + (9+j12)\vec{I_B}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The two equations can be expressed in a matrix. The left column contains coefficients of <span class="process-math">\(\vec{I_A}\text{,}\)</span> the middle column contains coefficients of <span class="process-math">\(\vec{I_B}\text{,}\)</span> and the right column contains constants.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+36	\amp -24	\amp 105	\\
+-24	\amp 33+j12	\amp 0
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The matrix is shown in reduced row echelon form below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+1 	\amp 0 		\amp 4.75-j1.29\\
+0 	\amp 1 		\amp 2.75-j1.94\\
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(\vec{V}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V} \amp= (24~\Omega)(\vec{I_A}-\vec{I_B})\\
+\amp= (24~\Omega)((4.75-j1.29~\textrm{A})-(2.75-j1.94~\textrm{A}))\\
+\amp= 48.01+j15.52~\textrm{V}\\
+\amp= 50.46~\textrm{V} \angle 17.91^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert to time-varying form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 50.5~\textrm{V}~\cos(2\pi50t + 17.9 \pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.11.1"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1-3" title="Copy heading and permalink for Solution 9.6.11.1" aria-label="Copy heading and permalink for Solution 9.6.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.11"><a tabindex="-1" href="#ch9-complex-mesh-analysis-exercise1" title="Copy heading and permalink for Exercise 9.6.11" aria-label="Copy heading and permalink for Exercise 9.6.11">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-complex-mesh-analysis-exercise1">In Context</a></span>
+</body>
+</html>

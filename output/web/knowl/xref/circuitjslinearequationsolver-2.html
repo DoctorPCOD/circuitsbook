@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Circuit Analysis">
+<meta property="og:title" content="Circuit Analysis">
+<meta property="book:title" content="Circuit Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math standalone-page">
+<a class="assistive" href="#ptx-content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\Laplace}{\mathscr{L}} \DeclareMathOperator{\atantwo}{atan2} \DeclareMathOperator{\atan}{atan} \renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Circuit Analysis</span></a></div>
+<p class="byline">Alyssa J. Pasquale, Ph.D.</p>
+</div></div></header><div class="ptx-page"><main class="ptx-main"><div id="ptx-content"><div class="interactive-iframe-container"><iframe src="https://www.falstad.com/circuit/circuitjs.html?ctz=DwYwlgTgBAZgvAIgIwKgFwM6IAwDpsEECsqYIiSeATAVQOx0DM2AHFQGwCcndqIARoiLZUAB0EIALI1QA3CENQBbTEICmAWiQoAfACgoUYAEMoADwqTJUJJypR6921VTwELZcYrDlYRFp8oAHMvZEICBAB6fUMTc0trRiJ7Rygkl1hEDyglUKRApT8EAJFgvPCRaIMjUwsEdIdWKElOdkbst2zc71LC-3zSkIoKqJia+PrktPYWZtbpjqzPHt9+wKGw8NHq4Gg6hsYaObbD0rdShU2tqti9xAakK2ObK1ccVEvKEZujO4RU5xpKbON4IC7Db5jXYTVIHKbpUHgq6Eba3CaPaxIOgnJzYxEfCHXKF-DE2KizQ5kxZggnIiI-aF1UksbBpews-FQT4VSrE9FPRiMHFpIWc7mQnYkgXYRL2ZiSMWElEMqXWWEpOgZc60r5EnaiNATLRIJxtY3ss4UZZXMQAexwuEkdGwzB5FRIUAwABtEAAlNQYMAYNDGAB2IDUqKMBqN2lxZrjDkkluQ1t1dod7CQLGy3r9AaDIfDkYZMbq5pFCZNzQimVTOXKtdE9rBjuEwjd4V4np9CH9geDYYjUeAZf61fmFaQ7BTKAbhIzrboWJZnYIc7zfYLg+LI7HxUTVCIVblNFBc+6NqgzYdRG4a8IG97-cLQ5LUP3Fck06gX45dYvRtShvVtkh4B9sCffMByLYcVX5TFyQcTUqUVOleUlBC0hlZC5RlNDdWVKEAHcYRQk1ZgBOx8QZUimSeFkXkQ6kMNiOiEipJibDxOtWKMdjkCeAFpQVXiRwE0l5S4wV2BokiyLwtUUIRMSGSCLChVmSSWFE7U1ImA4dKBexkxTPjgHU+i1SaUkqCoXT3n0-YpjsxIXOTOSdlkWNsRsastF86dOWI7UGzMWRhhHbzyyxNoaFmAK2jjYLQtycLIqc-oZz8+wtGyijPLYnykv86dWWS1T5JiwKTxsWTKp2ATErq39ASChqipiuwWq0brv3qvSqv6Pqfy-drBsa2Nq0YrQGLM8TYzm1qhNYQr+MW6yEti9o1uAJrbKaWbrEkf8Js6-onhO1k-3m2iDItNlmhYhb9hMhL5hO3b9onNoWjaVovoM4EBWBaiOvWuo-q4qH4sByH5g++YMTh-wkaQykCvBvaptNa6fzKlGDyS7K8qTW6hqJsncLJwnUns1kqK1RyKYrI8EyQtnCa0Dnj1apCAax-b+dqgWzoh8dTzxnFycmmLpdauKPMFo0PpOx6rGeu7XuaNXKRkrn5k0lrNMJn8jbN-DlaZE4cL1y2xex7XUg0dglKZmktf8V3qZdtUcy573yXeuL-at+541-NXYq5qPfI0NXYbD4oE8O+ZE4dgSDiOOF3fMgSodOZ4Tax0QJmSSimnLhxQ7cGQcjUd5PXIGkuQbj2PzL9GZigKuNdBOulDb0oMGbi4h5exAC+7qvi4ziYYcrjnVqxyyhA5nMe-R0UV872YNc3vfTuZ2WJe4s1vejpPfbP38L4G4-zuKO+e+68aH-FhA71NF+5RmQmv4WAfBYXNEwyUjhSbec9yy6yFOAhw9kY6UXsrfNUCCr6B2QdfS+UDT701-IxemXMCHJnwayUyIDqymVITWGWj8NCMSoakchScmEEGpipB2ZhYxTCINYbmbQiDdjcKJQMiA0FoDbvwcyXDoGcBsMIX8VBGDyLrsI1Aoj-iiQkYgYw0ijSSDitgIgiiGbLzUZ6Io4i27GBQAyGRF01ScD4doSiPBQQiMsVo6xLg7HcNZIwZcfNEh0AclIdRnjUDaIQMYGQviYoGOaOwXKJoyHsA9OYjRVjED8FsXyKyj11QER5BPQSsouJH3biff4ykTKG1ziUgutT-r30qWifJdMUKOCKRKR+HSmm4UJjDFCjSZbAEiOACA+ggA" id="circuitjslinearequationsolver-2" style="width:540px; height:360px; display: block; "></iframe></div></div></main></div>
+</body>
+</html>

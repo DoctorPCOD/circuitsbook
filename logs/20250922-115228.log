@@ -1,0 +1,13 @@
+INFO    : Building target web
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/ajp/ENGIN-2223_yellow_book/source/ch11-adc.ptx:71:50:FATAL:PARSER:ERR_UNDECLARED_ENTITY: Entity 'nbsp' not defined
+/Users/ajp/ENGIN-2223_yellow_book/source/main.ptx:17:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/ajp/ENGIN-2223_yellow_book/source/ch11-adc.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

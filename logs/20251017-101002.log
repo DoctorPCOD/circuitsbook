@@ -1,0 +1,72 @@
+INFO    : Building target web
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:8:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:30:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:52:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:74:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:87:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:92:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:96:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:100:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:104:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:151:108:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:5:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:9:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:13:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:21:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:26:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:30:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:34:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:38:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:152:42:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:5:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:9:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:13:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:21:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:26:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:30:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:34:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:38:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:153:42:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:5:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:9:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:13:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:21:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:26:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:30:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:34:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:38:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:155:42:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:5:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:9:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:13:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:21:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:26:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:30:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:34:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:38:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:156:42:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:5:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:9:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:13:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:17:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:21:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:26:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:30:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:34:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:38:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx:158:42:FATAL:PARSER:ERR_NAME_REQUIRED: xmlParseEntityRef: no name
+/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx:18:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/ch4-atmega328p.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

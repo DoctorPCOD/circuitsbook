@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Resistors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-0 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Circuit Analysis">
+<meta property="og:title" content="Circuit Analysis">
+<meta property="book:title" content="Circuit Analysis">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Circuit Analysis</span></a></div>
+<p class="byline">Alyssa J. Pasquale, Ph.D.</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="ch2-definitions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch2-circuit-laws.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch2-deltawye-wyedelta.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\Laplace}{\mathscr{L}} \DeclareMathOperator{\atantwo}{atan2} \DeclareMathOperator{\atan}{atan} \renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch1-properties.html" class="internal"><span class="codenumber">1</span> <span class="title">Properties of Electric Circuits</span></a></div>
+<ul id="ptx-toc-group-ch1-properties" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch1-properties-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch1-charge.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Charge</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-voltage.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Voltage</span></a></div>
+<ul id="ptx-toc-group-ch1-voltage" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-voltage.html#ch1-voltagedifference" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Voltage as a Difference</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-voltage.html#ch1-measuringvoltage" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Measuring Voltage</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-current.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Current</span></a></div>
+<ul id="ptx-toc-group-ch1-current" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-current.html#ch1-currentflow" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Current as a Flow</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-current.html#ch1-measuringcurrent" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Measuring Current</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-power.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Power</span></a></div>
+<ul id="ptx-toc-group-ch1-power" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-power.html#ch1-conservationofpower" class="internal"><span class="codenumber">1.4.1</span> <span class="title">Conservation of Power</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-powersources.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Power Sources</span></a></div>
+<ul id="ptx-toc-group-ch1-powersources" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-dcsources" class="internal"><span class="codenumber">1.5.1</span> <span class="title">Direct Current (DC) Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-acsources" class="internal"><span class="codenumber">1.5.2</span> <span class="title">Alternating Current (AC) Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-dependentsources" class="internal"><span class="codenumber">1.5.3</span> <span class="title">Dependent Sources</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-powersources.html#ch1-equivalentsources" class="internal"><span class="codenumber">1.5.4</span> <span class="title">Equivalent Sources</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch1-elementarysignals.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Elementary Signals</span></a></div>
+<ul id="ptx-toc-group-ch1-elementarysignals" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-deltafunction" class="internal"><span class="codenumber">1.6.1</span> <span class="title">Dirac Delta Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-stepfunction" class="internal"><span class="codenumber">1.6.2</span> <span class="title">Step Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-rampfunction" class="internal"><span class="codenumber">1.6.3</span> <span class="title">Ramp Function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-rectpulse" class="internal"><span class="codenumber">1.6.4</span> <span class="title">Rectangular Pulse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-trianglepulse" class="internal"><span class="codenumber">1.6.5</span> <span class="title">Triangular Pulse</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-expdecay" class="internal"><span class="codenumber">1.6.6</span> <span class="title">Exponential Decay</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch1-elementarysignals.html#ch1-dampedsinusoid" class="internal"><span class="codenumber">1.6.7</span> <span class="title">Damped Sinusoid</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch1-properties-9.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch2-circuit-laws.html" class="internal"><span class="codenumber">2</span> <span class="title">Circuit Laws</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch2-circuit-laws">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch2-circuit-laws-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-definitions.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="ch2-resistor.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Resistors</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-ch2-resistor">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorcolorcodes" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Resistor Color Codes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-varresistors" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Variable Resistors and Potentiometers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-measuringresistance" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Measuring Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorsseries" class="internal"><span class="codenumber">2.2.4</span> <span class="title">Resistors in Series</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-resistorsparallel" class="internal"><span class="codenumber">2.2.5</span> <span class="title">Resistors in Parallel</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-resistor.html#ch2-equivalentresistance" class="internal"><span class="codenumber">2.2.6</span> <span class="title">Equivalent Resistance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Delta-Wye and Wye-Delta Transforms</span></a></div>
+<ul id="ptx-toc-group-ch2-deltawye-wyedelta" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html#ch2-deltawye" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Delta-Wye Transforms</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-deltawye-wyedelta.html#ch2-wyedelta" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Wye-Delta Transforms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-ohmslaw.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Ohm’s Law</span></a></div>
+<ul id="ptx-toc-group-ch2-ohmslaw" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calcvoltage" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Calculating Voltage from Current and Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calccurrent" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Calculating Current from Voltage and Resistance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-calcresistance" class="internal"><span class="codenumber">2.4.3</span> <span class="title">Calculating Resistance from Voltage and Current</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-ohmslaw.html#ch2-ohmpower" class="internal"><span class="codenumber">2.4.4</span> <span class="title">Ohm’s Law and the Power Equation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-voltagedivider.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Voltage Divider</span></a></div>
+<ul id="ptx-toc-group-ch2-voltagedivider" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-voltagedivider.html#ch2-wheatstone" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Wheatstone Bridge</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-currentdivider.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Current Divider</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-kirchhoffs.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Kirchhoff’s Laws</span></a></div>
+<ul id="ptx-toc-group-ch2-kirchhoffs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-kcl" class="internal"><span class="codenumber">2.7.1</span> <span class="title">Kirchhoff’s Current Law (KCL)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-kvl" class="internal"><span class="codenumber">2.7.2</span> <span class="title">Kirchhoff’s Voltage Law (KVL)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-kirchhoffs.html#ch2-matrixequations" class="internal"><span class="codenumber">2.7.3</span> <span class="title">Deriving Matrix Equations from KCL and KVL</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch2-meshanalysis.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Mesh Analysis</span></a></div>
+<ul id="ptx-toc-group-ch2-meshanalysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-meshanalysis.html#ch2-branchvmesh" class="internal"><span class="codenumber">2.8.1</span> <span class="title">Branch vs. Mesh Currents</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch2-meshanalysis.html#ch2-meshanalysismethod" class="internal"><span class="codenumber">2.8.2</span> <span class="title">The Mesh Analysis Method</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch2-measuring-current.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Measuring Current</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch2-circuit-laws-12.html" class="internal"><span class="codenumber">2.10</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch3-circuittheorems.html" class="internal"><span class="codenumber">3</span> <span class="title">Circuit Theorems</span></a></div>
+<ul id="ptx-toc-group-ch3-circuittheorems" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch3-circuittheorems-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-superposition.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Superposition</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-sourcetransformation.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Source Transformation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-choosing-a-tool.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Choosing an Analysis Tool</span></a></div>
+<ul id="ptx-toc-group-ch3-choosing-a-tool" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-choosing-a-tool.html#ch3-simplifying-tools" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Solving via Simplification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-choosing-a-tool.html#ch3-calculating-tools" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Solving without Simplification</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch3-vocisc.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Open-Circuit Voltages and Short-Circuit Currents</span></a></div>
+<ul id="ptx-toc-group-ch3-vocisc" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-vocisc.html#ch3-voc" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Open-Circuit Voltage</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch3-vocisc.html#ch3-isc" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Short-Circuit Current</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-thevenin.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Thévenin’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-norton.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Norton’s Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch3-maxpower.html" class="internal"><span class="codenumber">3.7</span> <span class="title">Maximum Power Transfer</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch3-circuittheorems-10.html" class="internal"><span class="codenumber">3.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch4-op-amps.html" class="internal"><span class="codenumber">4</span> <span class="title">Operational Amplifiers (Op-Amps)</span></a></div>
+<ul id="ptx-toc-group-ch4-op-amps" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch5-capacitors.html" class="internal"><span class="codenumber">5</span> <span class="title">Capacitors and RC Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-capacitors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch5-capacitors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-typesofcaps.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Types of Capacitors</span></a></div>
+<ul id="ptx-toc-group-ch5-typesofcaps" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-nonpolarcaps" class="internal"><span class="codenumber">5.1.1</span> <span class="title">Non-Polarized Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-varcaps" class="internal"><span class="codenumber">5.1.2</span> <span class="title">Variable Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-typesofcaps.html#ch5-polarcaps" class="internal"><span class="codenumber">5.1.3</span> <span class="title">Polarized Capacitors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-measuringcap.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Measuring Capacitance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-vicap.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Voltage-Current Relationship in a Capacitor</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-equivalentcap.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalent Capacitance</span></a></div>
+<ul id="ptx-toc-group-ch5-equivalentcap" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-equivalentcap.html#ch5-seriescaps" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Series Combinations of Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-equivalentcap.html#ch5-parallelcaps" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Parallel Combinations of Capacitors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch5-differentiatorintegrator.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Differentiator and Integrator Circuits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-review.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Review of Important Mathematical Concepts for First-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-review" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-review.html#ch5-discontinuous" class="internal"><span class="codenumber">5.6.1</span> <span class="title">Discontinuous Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-review.html#ch5-first-order-linear-ODEs" class="internal"><span class="codenumber">5.6.2</span> <span class="title">First-Order, Linear, Ordinary Differential Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch5-rccircuits.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Resistor-Capacitor (RC) Circuits</span></a></div>
+<ul id="ptx-toc-group-ch5-rccircuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-discharging" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Discharging to Zero (Homogeneous) Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-charging" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Charging from Zero Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch5-rccircuits.html#ch5-generaltransient" class="internal"><span class="codenumber">5.7.3</span> <span class="title">General Transient Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch5-capacitors-10.html" class="internal"><span class="codenumber">5.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch6-inductors.html" class="internal"><span class="codenumber">6</span> <span class="title">Inductors and RL Circuits</span></a></div>
+<ul id="ptx-toc-group-ch6-inductors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch6-inductors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-parasitic.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Parasitic Effects</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-measuringinductance.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Measuring Inductance</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch6-viinductance.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Voltage-Current Relationship in an Inductor</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-equivalentinductance.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Equivalent Inductance</span></a></div>
+<ul id="ptx-toc-group-ch6-equivalentinductance" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-equivalentinductance.html#ch6-seriesinductance" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Series Combinations of Inductors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-equivalentinductance.html#ch6-parallelinductance" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Parallel Combinations of Inductors</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Resistor-Inductor (RL) Circuits</span></a></div>
+<ul id="ptx-toc-group-ch6-resistor-inductor-circuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-discharging" class="internal"><span class="codenumber">6.5.1</span> <span class="title">Discharging to Zero (Homogeneous) Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-charging" class="internal"><span class="codenumber">6.5.2</span> <span class="title">Charging from Zero Transient Response</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch6-resistor-inductor-circuits.html#ch6-generaltransient" class="internal"><span class="codenumber">6.5.3</span> <span class="title">General Transient Response</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch6-inductors-8.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch7-secondorder.html" class="internal"><span class="codenumber">7</span> <span class="title">Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-secondorder" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch7-secondorder-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch7-second-order-review.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Review of Important Mathematical Concepts for Second-Order Circuits</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-damping-types.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Circuit Damping</span></a></div>
+<ul id="ptx-toc-group-ch7-damping-types" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-overdamped-type" class="internal"><span class="codenumber">7.2.1</span> <span class="title">Overdamped</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-underdamped-type" class="internal"><span class="codenumber">7.2.2</span> <span class="title">Underdamped</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-damping-types.html#ch7-critically-damped-type" class="internal"><span class="codenumber">7.2.3</span> <span class="title">Critically Damped</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html" class="internal"><span class="codenumber">7.3</span> <span class="title">The Series RLC Circuit</span></a></div>
+<ul id="ptx-toc-group-ch7-the-series-rlc-circuit" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc" class="internal"><span class="codenumber">7.3.1</span> <span class="title">Homogeneous Series RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-series-rlc-circuit.html#ch7-non-homoseriesrlc" class="internal"><span class="codenumber">7.3.2</span> <span class="title">Non-Homogeneous Series RLC Circuits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html" class="internal"><span class="codenumber">7.4</span> <span class="title">The Parallel RLC Circuit</span></a></div>
+<ul id="ptx-toc-group-ch7-the-parallel-rlc-circuit" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-homoparallelrlc" class="internal"><span class="codenumber">7.4.1</span> <span class="title">Homogeneous Parallel RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-non-homoparallelrlc" class="internal"><span class="codenumber">7.4.2</span> <span class="title">Non-Homogeneous Parallel RLC Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance" class="internal"><span class="codenumber">7.4.3</span> <span class="title">Analysis with Parasitic Resistance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-secondorderresponses.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-secondorderresponses" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions" class="internal"><span class="codenumber">7.5.1</span> <span class="title">The Overdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions" class="internal"><span class="codenumber">7.5.2</span> <span class="title">The Underdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions" class="internal"><span class="codenumber">7.5.3</span> <span class="title">The Critically Damped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-secondorderresponses.html#ch7-homogeneous-examples" class="internal"><span class="codenumber">7.5.4</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-nonhomocircuits.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Constant-Input Non-Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-nonhomocircuits" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution" class="internal"><span class="codenumber">7.6.1</span> <span class="title">The Overdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution" class="internal"><span class="codenumber">7.6.2</span> <span class="title">The Underdamped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-critically-damped-solution" class="internal"><span class="codenumber">7.6.3</span> <span class="title">The Critically Damped Solution</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-examples" class="internal"><span class="codenumber">7.6.4</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch7-variableinput.html" class="internal"><span class="codenumber">7.7</span> <span class="title">Non-Constant Input Non-Homogeneous Second-Order Circuits</span></a></div>
+<ul id="ptx-toc-group-ch7-variableinput" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch7-variableinput.html#ch7-varinput-examples" class="internal"><span class="codenumber">7.7.1</span> <span class="title">Examples</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch7-secondorder-10.html" class="internal"><span class="codenumber">7.8</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch8-phasors.html" class="internal"><span class="codenumber">8</span> <span class="title">Phasors and Impedances</span></a></div>
+<ul id="ptx-toc-group-ch8-phasors" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch8-phasors-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-phasorarithmetic.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Phasor Arithmetic</span></a></div>
+<ul id="ptx-toc-group-ch8-phasorarithmetic" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-cartesianpolar" class="internal"><span class="codenumber">8.1.1</span> <span class="title">Cartesian to Polar Conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-polarcartesian" class="internal"><span class="codenumber">8.1.2</span> <span class="title">Polar to Cartesian Conversion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasoraddsub" class="internal"><span class="codenumber">8.1.3</span> <span class="title">Phasor Addition and Subtraction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasormultdiv" class="internal"><span class="codenumber">8.1.4</span> <span class="title">Phasor Multiplication and Division</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-phasorarithmetic.html#ch8-phasorcalculus" class="internal"><span class="codenumber">8.1.5</span> <span class="title">Phasor Time-Differentiation and Time-Integration</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch8-impedance.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Impedance</span></a></div>
+<ul id="ptx-toc-group-ch8-impedance" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-resistors" class="internal"><span class="codenumber">8.2.1</span> <span class="title">Impedance in Resistors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-capacitors" class="internal"><span class="codenumber">8.2.2</span> <span class="title">Impedance in Capacitors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-inductors" class="internal"><span class="codenumber">8.2.3</span> <span class="title">Impedance in Inductors</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch8-impedance.html#ch8-equivalentimpedance" class="internal"><span class="codenumber">8.2.4</span> <span class="title">Equivalent Impedance</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch8-deltawye.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Delta-Wye and Wye-Delta Transforms</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch8-phasors-6.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch9-phasoranalysis.html" class="internal"><span class="codenumber">9</span> <span class="title">Analysis of Phasor-Transformed Circuits</span></a></div>
+<ul id="ptx-toc-group-ch9-phasoranalysis" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch9-phasoranalysis-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-complexanalysis.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Complex Circuit Analysis Techniques</span></a></div>
+<ul id="ptx-toc-group-ch9-complexanalysis" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-voltagedivider" class="internal"><span class="codenumber">9.1.1</span> <span class="title">Complex Voltage Divider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-currentdivider" class="internal"><span class="codenumber">9.1.2</span> <span class="title">Complex Current Divider</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-kclkvl" class="internal"><span class="codenumber">9.1.3</span> <span class="title">Complex KCL and KVL Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-meshanalysis" class="internal"><span class="codenumber">9.1.4</span> <span class="title">Complex Mesh Analysis</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-superposition" class="internal"><span class="codenumber">9.1.5</span> <span class="title">Complex Superposition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-sourcetransform" class="internal"><span class="codenumber">9.1.6</span> <span class="title">Complex Source Transformation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-complexanalysis.html#ch9-theveninnorton" class="internal"><span class="codenumber">9.1.7</span> <span class="title">Complex Thévenin’s and Norton’s Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-transferfuncs.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Transfer Functions</span></a></div>
+<ul id="ptx-toc-group-ch9-transferfuncs" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-transferfuncs.html#ch9-transferdiffeq" class="internal"><span class="codenumber">9.2.1</span> <span class="title">Relating Transfer Functions and Differential Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-transferfuncs.html#ch9-funcpolezero" class="internal"><span class="codenumber">9.2.2</span> <span class="title">Understanding Transfer Function Poles and Zeros</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-passivefilters.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Passive Filters</span></a></div>
+<ul id="ptx-toc-group-ch9-passivefilters" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-lpfs" class="internal"><span class="codenumber">9.3.1</span> <span class="title">Low-Pass Filters (LPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-hpfs" class="internal"><span class="codenumber">9.3.2</span> <span class="title">High-Pass Filters (HPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bpf-and-bsf" class="internal"><span class="codenumber">9.3.3</span> <span class="title">Band-Pass and Band-Stop Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bpfs" class="internal"><span class="codenumber">9.3.4</span> <span class="title">Band-Pass Filters (BPF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-bsfs" class="internal"><span class="codenumber">9.3.5</span> <span class="title">Band-Stop Filters (BSF)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-passivefilters.html#ch9-determinefilter" class="internal"><span class="codenumber">9.3.6</span> <span class="title">Determining Filter Type</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch9-activefilters.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Active Filters</span></a></div>
+<ul id="ptx-toc-group-ch9-activefilters" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-firstorder" class="internal"><span class="codenumber">9.4.1</span> <span class="title">First-Order Active Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-cascadedfilters" class="internal"><span class="codenumber">9.4.2</span> <span class="title">Cascaded Active Filters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch9-activefilters.html#ch9-otheractive" class="internal"><span class="codenumber">9.4.3</span> <span class="title">Other Active Filter Topologies</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="phasor-references.html" class="internal"><span class="codenumber">9.5</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch9-phasoranalysis-8.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch10-acpower.html" class="internal"><span class="codenumber">10</span> <span class="title">AC Power</span></a></div>
+<ul id="ptx-toc-group-ch10-acpower" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch10-acpower-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch10-phase-rms.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Phase and Root Mean Square (RMS)</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-ac-power.html" class="internal"><span class="codenumber">10.2</span> <span class="title">AC Power</span></a></div>
+<ul id="ptx-toc-group-ch10-ac-power" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-instantaneous" class="internal"><span class="codenumber">10.2.1</span> <span class="title">Instantaneous Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-complexapparent" class="internal"><span class="codenumber">10.2.2</span> <span class="title">Complex and Apparent Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-average" class="internal"><span class="codenumber">10.2.3</span> <span class="title">Average Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-reactive" class="internal"><span class="codenumber">10.2.4</span> <span class="title">Reactive Power</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-ac-power.html#ch10-powertriangle" class="internal"><span class="codenumber">10.2.5</span> <span class="title">Power Triangle and Power Factor</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch10-maxpower.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Maximum Power Transfer</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch10-pfcorrection.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Power Factor Correction</span></a></div>
+<ul id="ptx-toc-group-ch10-pfcorrection" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-pfcorrection.html#ch10-correctinductive" class="internal"><span class="codenumber">10.4.1</span> <span class="title">Correcting an Inductive Load</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch10-pfcorrection.html#ch10-correctcapacitive" class="internal"><span class="codenumber">10.4.2</span> <span class="title">Correcting a Capacitive Load</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch10-acpower-7.html" class="internal"><span class="codenumber">10.5</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch11-laplace.html" class="internal"><span class="codenumber">11</span> <span class="title">Laplace Transforms and s-Domain Analysis</span></a></div>
+<ul id="ptx-toc-group-ch11-laplace" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch11-laplace-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch11-laplacetransform.html" class="internal"><span class="codenumber">11.1</span> <span class="title">The Laplace Transform</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-inverselaplace.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Inverse Laplace Transform</span></a></div>
+<ul id="ptx-toc-group-ch11-inverselaplace" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-inverselaplace.html#ch11-partialfraction" class="internal"><span class="codenumber">11.2.1</span> <span class="title">Partial Fraction Expansion</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="ch11-sdomain.html" class="internal"><span class="codenumber">11.3</span> <span class="title"><span class="process-math">\(s\)</span>-Domain Analysis</span></a></div>
+<ul id="ptx-toc-group-ch11-sdomain" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-resistor" class="internal"><span class="codenumber">11.3.1</span> <span class="title">Resistor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-capacitor" class="internal"><span class="codenumber">11.3.2</span> <span class="title">Capacitor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-inductor" class="internal"><span class="codenumber">11.3.3</span> <span class="title">Inductor</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch11-sdomain.html#ch11-sources" class="internal"><span class="codenumber">11.3.4</span> <span class="title">Switched Sources</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch11-laplace-6.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Practice Problems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch12-555timer.html" class="internal"><span class="codenumber">12</span> <span class="title">Practical Application: The 555 Timer</span></a></div>
+<ul id="ptx-toc-group-ch12-555timer" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch12-555timer-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-astablemode.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Astable Mode</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="ch2-resistor">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Resistors</span>
+</h1>
+<section class="introduction" id="ch2-resistor-2">
+<div class="para" id="ch2-resistor-2-1">A <dfn class="terminology">resistor</dfn> is a circuit element that regulates the flow of current. This is the first passive element that will be studied in detail in this textbook. <dfn class="terminology">Resistance</dfn>, which is a property of resistors, defines how much the resistor opposes the flow of current. Resistance has a symbol of <span class="process-math">\(R\)</span> and a unit of Ω (ohm).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="ch2-resistor-2-2"><h2 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summary of resistance.</span>
+</h2>
+<div class="para logical" id="ch2-resistor-2-2-2">
+<ul class="disc" id="ch2-resistor-2-2-2-1">
+<li id="ch2-resistor-2-2-2-1-1">
+<div class="para" id="ch2-resistor-2-2-2-1-1-1">Symbol: <span class="process-math">\(R\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#ch2-resistor-2-2-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch2-resistor-2-2-2-1-2">
+<div class="para" id="ch2-resistor-2-2-2-1-2-1">Unit: Ω (ohm)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#ch2-resistor-2-2-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 2.2.1: Summary of resistance"><a tabindex="-1" href="#ch2-resistor-2-2" title="Copy heading and permalink for Remark 2.2.1: Summary of resistance" aria-label="Copy heading and permalink for Remark 2.2.1: Summary of resistance">🔗</a></div>
+</article>
+<div class="para" id="ch2-resistor-2-3">For an object with a uniform cross section, resistance is defined by <a href="ch2-resistor.html#ch2-resistoreq" class="xref" data-knowl="./knowl/xref/ch2-resistoreq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.1">(2.2.1)</a>, where <span class="process-math">\(\rho\)</span> is the <dfn class="terminology">resistivity</dfn> of the object (this is property inherent to a material), <span class="process-math">\(l\)</span> is the length of the object, and <span class="process-math">\(A\)</span> is the cross sectional area of the object.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch2-resistor-2-4">
+<div class="displaymath process-math" id="ch2-resistoreq">
+\begin{equation}
+R = \frac{\rho l}{A}\tag{2.2.1}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="ch2-resistor-2-5"><h2 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Summary of resistivity.</span>
+</h2>
+<div class="para logical" id="ch2-resistor-2-5-2">
+<ul class="disc" id="ch2-resistor-2-5-2-1">
+<li id="ch2-resistor-2-5-2-1-1">
+<div class="para" id="ch2-resistor-2-5-2-1-1-1">Symbol: <span class="process-math">\(\rho\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-5-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#ch2-resistor-2-5-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ch2-resistor-2-5-2-1-2">
+<div class="para" id="ch2-resistor-2-5-2-1-2-1">Unit: Ωm (ohm-meter)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-5-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#ch2-resistor-2-5-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Remark 2.2.2: Summary of resistivity"><a tabindex="-1" href="#ch2-resistor-2-5" title="Copy heading and permalink for Remark 2.2.2: Summary of resistivity" aria-label="Copy heading and permalink for Remark 2.2.2: Summary of resistivity">🔗</a></div>
+</article>
+<div class="para" id="ch2-resistor-2-6">The symbol used for a resistor in circuit diagrams is shown in <a href="ch2-resistor.html#resistorsymbol" class="xref" data-knowl="./knowl/xref/resistorsymbol.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.3">Figure 2.2.3</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="resistorsymbol"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch2-resistorsymbol.svg" role="img" class="contained" alt="A zig-zag shape."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The circuit symbol for a resistor.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.3"><a tabindex="-1" href="#resistorsymbol" title="Copy heading and permalink for Figure 2.2.3" aria-label="Copy heading and permalink for Figure 2.2.3">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-resistor-2-8">Resistors have very many important applications in circuits (tuning resonant frequencies, creating particular amplifier gains, or to create particular voltage or current values, among other things), and are therefore an important circuit element to understand.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch2-resistor-2-9">Physically, resistors come in many shapes, sizes, and forms. There are fixed resistors (resistors whose resistance value is not meant to change) and variable resistors (which will be discussed in more detail in <a href="ch2-resistor.html#ch2-varresistors" class="internal" title="Subsection 2.2.2: Variable Resistors and Potentiometers">Subsection 2.2.2</a>). Most typical hobbyist resistors are made from carbon film deposited on a piece of ceramic, with the ends of the carbon film connected to metal wires (known as leads). A helix shape is carved into the carbon film; it is the pitch of the helix and thickness of the carbon film that determines the resistance of the device. Carbon film resistors typically have tolerances between 2%—5%.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistor-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="ch2-resistorcolorcodes">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Resistor Color Codes</span>
+</h2>
+<div class="para" id="ch2-resistorcolorcodes-2">Carbon film resistors are coated and painted with colored stripes to distinguish each resistor’s value in ohms. Most of these resistors contain four stripes (although five- and six-stripe versions do exist, they will not be discussed in this book). The first and second bands dictate the value of the resistance. The third band acts as a multiplier, and the tolerance band denotes how accurate the value of the resistor is. These stripes are depicted in <a href="ch2-resistor.html#resistorcolorbands" class="xref" data-knowl="./knowl/xref/resistorcolorbands.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.4">Figure 2.2.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorcolorcodes-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="resistorcolorbands"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-resistorcolorbands.svg" role="img" class="contained" alt='Drawing of a resistor, which appears as a rectangle with silver lines protruding from both short ends. The rectangle is white with four stripes. The left stripe is brown and labeled "first band (brown)." The next stripe is black and labeled "second band (black)." The next stripe is red and labeled "multiplier (red)." The right stripe is gold and labeled "tolerance (gold)."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Depiction of each of the colored bands on a four-band carbon film resistor. This particular resistor has brown-black-red-gold stripes, and therefore has a value of <span class="process-math">\(R = 1000~\Omega \pm 5\%\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.4"><a tabindex="-1" href="#resistorcolorbands" title="Copy heading and permalink for Figure 2.2.4" aria-label="Copy heading and permalink for Figure 2.2.4">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-resistorcolorcodes-4">Each of the stripe colors depicts a particular value, outlined in <a href="ch2-resistor.html#tabresistorcolorvalues" class="xref" data-knowl="./knowl/xref/tabresistorcolorvalues.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.2.5: Descriptions of each of the colors used to denote values on a resistor">Table 2.2.5</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorcolorcodes-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="tabresistorcolorvalues"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Descriptions of each of the colors used to denote values on a resistor<div class="autopermalink" aria-hidden="true" data-description="Table 2.2.5: Descriptions of each of the colors used to denote values on a resistor"><a tabindex="-1" href="#tabresistorcolorvalues" title="Copy heading and permalink for Table 2.2.5: Descriptions of each of the colors used to denote values on a resistor" aria-label="Copy heading and permalink for Table 2.2.5: Descriptions of each of the colors used to denote values on a resistor">🔗</a></div></figcaption><div class="tabular-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-5-1-1">Color<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</th>
+<th scope="col" class="l m b2 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-5-2-1">Value (1st and 2nd Bands)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</th>
+<th scope="col" class="l m b2 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-5-3-1">Multiplier (3rd Band)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</th>
+<th scope="col" class="l m b2 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-5-4-1">Tolerance (4th Band)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</th>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-6-1-1">Black<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">0</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{0}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-7-1-1">Brown<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">1</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{1}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm1\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-8-1-1">Red<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">2</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{2}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm21\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-9-1-1">Orange<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">3</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{3}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm0.05\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-10-1-1">Yellow<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">4</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{4}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm0.02\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-11-1-1">Green<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">5</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{5}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm0.5\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-12-1-1">Blue<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">6</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{6}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm0.25\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-13-1-1">Violet<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-13-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">7</td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{7}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm0.1\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-14-1-1">Gray<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-14-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">8</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm0.01\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-15-1-1">White<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-15-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines">9</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-16-1-1">Gold<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{-1}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm5\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-17-1-1">Silver<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(10^{-2}~\Omega\)</span></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm10\%\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r0 l0 t0" style="max-width:150px;">
+<div class="para" id="tabresistorcolorvalues-2-18-1-1">no band<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#tabresistorcolorvalues-2-18-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"><span class="process-math">\(\pm20\%\)</span></td>
+</tr>
+</table></div>
+</figure>
+<div class="para" id="ch2-resistorcolorcodes-6">To determine the value of a resistor, it is important to first establish which band corresponds to the first, and which corresponds to the tolerance band. Usually, the first band is painted closer to the lead than the tolerance band is. Otherwise, it can be helpful to note that the large majority of inexpensive hobbyist carbon-film resistors have a gold tolerance band, which also can help orient the resistor (but this trick will not be valid with any other tolerance value!). The first and second bands give the value of the resistor. Then, the multiplier is used to determine the weight of the value. The tolerance band depicts the range of percentages over which the actual value of the fabricated resistor is valid.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorcolorcodes-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ch2-resistorcolorcodes-7"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calculating the resistance value using the color code.</span>
+</h3>
+<div class="para" id="ch2-resistorcolorcodes-7-2-1">Calculate the resistance value of a resistor with stripes colored yellow, violet, yellow, and gold.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorcolorcodes-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-resistorcolorcodes-7-2-2">The first two stripes denote the value of the resistor: 47.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorcolorcodes-7-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-resistorcolorcodes-7-2-3">The third stripe denotes the multiplier: <span class="process-math">\(10^4\text{.}\)</span> This means the resistor has a value of 470,000 Ω or 470 kΩ.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorcolorcodes-7-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-resistorcolorcodes-7-2-4">The fourth band denotes the tolerance: <span class="process-math">\(\pm5\%\text{.}\)</span> This means the actual value of the resistor may be anywhere between 446.5 kΩ and 493.5 kΩ.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorcolorcodes-7-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.2.6: Calculating the resistance value using the color code"><a tabindex="-1" href="#ch2-resistorcolorcodes-7" title="Copy heading and permalink for Example 2.2.6: Calculating the resistance value using the color code" aria-label="Copy heading and permalink for Example 2.2.6: Calculating the resistance value using the color code">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.2.1: Resistor Color Codes"><a tabindex="-1" href="#ch2-resistorcolorcodes" title="Copy heading and permalink for Subsection 2.2.1: Resistor Color Codes" aria-label="Copy heading and permalink for Subsection 2.2.1: Resistor Color Codes">🔗</a></div>
+</section>
+<section class="subsection" id="ch2-varresistors">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variable Resistors and Potentiometers</span>
+</h2>
+<div class="para" id="ch2-varresistors-2">A <dfn class="terminology">variable resistor</dfn> is a resistor whose value is not fixed but that can be altered by the user. Variable resistors used to be called <dfn class="terminology">rheostats</dfn>, but that term is falling out of favor. The circuit symbol used for variable resistors is shown in <a href="ch2-resistor.html#varresistor" class="xref" data-knowl="./knowl/xref/varresistor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.7">Figure 2.2.7</a>. Note that a variable resistor is a two-terminal device.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-varresistors-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="varresistor"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch2-varresistor.svg" role="img" class="contained" alt="A zig-zag shape with an arrow pointed diagonally through the zig-zag."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The circuit symbol for a variable resistor.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.7"><a tabindex="-1" href="#varresistor" title="Copy heading and permalink for Figure 2.2.7" aria-label="Copy heading and permalink for Figure 2.2.7">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-varresistors-4">A <dfn class="terminology">potentiometer</dfn> is a three-terminal device that can be used as either a voltage divider or a variable resistor. The circuit symbol for a potentiometer is shown in <a href="ch2-resistor.html#potentiometer" class="xref" data-knowl="./knowl/xref/potentiometer.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.8">Figure 2.2.8</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-varresistors-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="potentiometer"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch2-potentiometer.svg" role="img" class="contained" alt="A zig-zag shape with an arrow pointed to the center of the zig-zag."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The circuit symbol for a potentiometer.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.8"><a tabindex="-1" href="#potentiometer" title="Copy heading and permalink for Figure 2.2.8" aria-label="Copy heading and permalink for Figure 2.2.8">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-varresistors-6">Two fixed leads are connected to a resistive element (commonly made out of either carbon or wound wire) in a semi-circular configuration. A moveable lead called the <dfn class="terminology">wiper</dfn> can then be positioned at any point along the resistive element. This is depicted in <a href="ch2-resistor.html#potcartoon" class="xref" data-knowl="./knowl/xref/potcartoon.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.9">Figure 2.2.9</a>. While the total resistance between the fixed leads is constant, the resistance between the wiper and either of the two fixed leads changes as the wiper’s position changes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-varresistors-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="potcartoon"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch2-potcartoon.svg" role="img" class="contained" alt='A potentiometer is depicted as a gray semicircular line. Each end of the semicircle is labeled "fixed end." An arrow points to a random point in the gray semicircle and is labeled "moveable wiper."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A diagram of a potentiometer. The gray semicircular area corresponds to the resistive element. Two leads (one at each end of the resistive element) are fixed. The third lead is a moveable wiper.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.9"><a tabindex="-1" href="#potcartoon" title="Copy heading and permalink for Figure 2.2.9" aria-label="Copy heading and permalink for Figure 2.2.9">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-varresistors-8">A potentiometer can be used as a voltage divider. Voltage dividers (which will be explained in greater detail in <a href="ch2-voltagedivider.html" class="internal" title="Section 2.5: Voltage Divider">Section 2.5</a>) take a fixed voltage and proportionally divide it up into two or more values. If a fixed voltage is applied to the two fixed leads of a potentiometer, then the voltage drop between either lead and the wiper will be modified depending on the position of the wiper. This is depicted schematically in <a href="ch2-resistor.html#potvoltagedivider" class="xref" data-knowl="./knowl/xref/potvoltagedivider.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.10">Figure 2.2.10</a>. Note that while <span class="process-math">\(V_1\)</span> and <span class="process-math">\(V_2\)</span> can change depending on the position of the wiper, <span class="process-math">\(V_1 + V_2 = V_S\)</span> will always be satisfied.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-varresistors-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="potvoltagedivider"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-potvoltagedivider.svg" role="img" class="contained" alt="A circuit containing a DC voltage source and a potentiometer. The voltage V1 is measured between the high potential of the voltage source and the wiper. The voltage V2 is measured between the wiper and the low potential of the voltage source. Left: The wiper of the potentiometer is depicted as being in the center of the potentiometer. Middle: The wiper of the potentiometer is depicted as being above center. Right: The wiper of the potentiometer is depicted as being below center."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A potentiometer can be used as a voltage divider. The relationship <span class="process-math">\(V_1 + V_2 = V_S\)</span> is always preserved, regardless of the individual values of <span class="process-math">\(V_1\)</span> and <span class="process-math">\(V_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.10"><a tabindex="-1" href="#potvoltagedivider" title="Copy heading and permalink for Figure 2.2.10" aria-label="Copy heading and permalink for Figure 2.2.10">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-varresistors-10">A potentiometer can also be used as a variable resistor. In this case, one of the fixed leads will be ignored, and the resistance between the other fixed lead and the wiper will be used. Because the wiper itself has a small amount of resistance, it should be shorted to the unused fixed lead. This is depicted schematically in <a href="ch2-resistor.html#potasvr" class="xref" data-knowl="./knowl/xref/potasvr.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.11">Figure 2.2.11</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-varresistors-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="potasvr"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-potasvr.svg" role="img" class="contained" alt="Left: a circuit contains a DC voltage source wired in series with a variable resistor. Right: a circuit contains a DC voltage source wired in series with the two fixed leads of a potentiometer. The wiper is connected with a wire to the low potential end of the DC voltage source."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A potentiometer can be used as a variable resistor by configuring it as shown in the right-hand diagram. Both of these schematics are functionally equivalent.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.11"><a tabindex="-1" href="#potasvr" title="Copy heading and permalink for Figure 2.2.11" aria-label="Copy heading and permalink for Figure 2.2.11">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.2.2: Variable Resistors and Potentiometers"><a tabindex="-1" href="#ch2-varresistors" title="Copy heading and permalink for Subsection 2.2.2: Variable Resistors and Potentiometers" aria-label="Copy heading and permalink for Subsection 2.2.2: Variable Resistors and Potentiometers">🔗</a></div>
+</section>
+<section class="subsection" id="ch2-measuringresistance">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Measuring Resistance</span>
+</h2>
+<div class="para" id="ch2-measuringresistance-2">Resistance can be measured in a circuit using a device called an <dfn class="terminology">ohmmeter</dfn>. The circuit symbol for an ohmmeter is shown in <a href="ch2-resistor.html#ohmmeter" class="xref" data-knowl="./knowl/xref/ohmmeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.12">Figure 2.2.12</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-measuringresistance-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="ohmmeter"><div class="image-box" style="width: 15%; margin-left: 42.5%; margin-right: 42.5%;"><img src="generated/latex-image/ch2-ohmmeter.svg" role="img" class="contained" alt="Circle with the capital Greek letter omega inside the circle."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit symbol used for a ohmmeter.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.12"><a tabindex="-1" href="#ohmmeter" title="Copy heading and permalink for Figure 2.2.12" aria-label="Copy heading and permalink for Figure 2.2.12">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-measuringresistance-4">An ohmmeter contains two leads. When the leads are placed on either end of the elements of a circuit, a constant current is passed through the circuit elements and the resulting voltage is measured with an analog to digital converter. Using Ohm’s law, the resistance of the circuit elements can be calculated and displayed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-measuringresistance-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch2-measuringresistance-5">Because resistors don’t have any polarity or direction to them, the ordering of the leads is unimportant (the common lead can be placed on either end of the circuit elements without impacting the result). However, because an ohmmeter operates by sending a current through the circuit element(s) and measuring the resulting voltage, it is important to know that <em class="alert">resistance cannot be measured in a circuit unless all other power sources have been disconnected</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-measuringresistance-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch2-measuringresistance-6">Additionally, when measuring resistance in a circuit, it’s important to disconnect any circuit elements that should not be included in the resistance calculation. This includes all other circuit elements, including sources (even if they are turned off). For example, in <a href="ch2-resistor.html#resistors-connected-for-ohmmeter" class="xref" data-knowl="./knowl/xref/resistors-connected-for-ohmmeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.13">Figure 2.2.13</a> (left), the ohmmeter is measuring the resistance contributed by all four resistors. If, say, only the contribution from resistors <span class="process-math">\(R_3\)</span> and <span class="process-math">\(R_4\)</span> is desired, then the circuit should be wired as shown in <a href="ch2-resistor.html#resistors-connected-for-ohmmeter" class="xref" data-knowl="./knowl/xref/resistors-connected-for-ohmmeter.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.13">Figure 2.2.13</a> (right), where <span class="process-math">\(R_1\)</span> and <span class="process-math">\(R_2\)</span> are removed from the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-measuringresistance-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="resistors-connected-for-ohmmeter"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch1-resistors-connected-for-ohmmeter.svg" role="img" class="contained" alt="Left: Circuit with three meshes and 3 nodes consisting of 4 resistors and an ohmmeter. R1 and R2 are connected at node a. R2, R3, R4, and the ohmmeter are connected at node b. R1, R3, R4, and the ohmmeter are connected at node c. Right: circuit with two meshes and 2 nodes consisting of resistor R3, resistor R4, and an ohmmeter. The three circuit elements are connected in parallel."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The ohmmeter on the left will calculate the resistance contribution from all four resistors. The ohmmeter on the right will calculate the resistance contribution from only resistors <span class="process-math">\(R_3\)</span> and <span class="process-math">\(R_4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.13"><a tabindex="-1" href="#resistors-connected-for-ohmmeter" title="Copy heading and permalink for Figure 2.2.13" aria-label="Copy heading and permalink for Figure 2.2.13">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-measuringresistance-8">Because an ohmmeter sends a constant current through a circuit and measures the resulting voltage, an ohmmeter must be connected in parallel across the components to be measured, as shown in <a href="ch1-voltage.html#measuringvoltage" class="xref" data-knowl="./knowl/xref/measuringvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.2.6">Figure 1.2.6</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-measuringresistance-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 2.2.3: Measuring Resistance"><a tabindex="-1" href="#ch2-measuringresistance" title="Copy heading and permalink for Subsection 2.2.3: Measuring Resistance" aria-label="Copy heading and permalink for Subsection 2.2.3: Measuring Resistance">🔗</a></div>
+</section>
+<section class="subsection" id="ch2-resistorsseries">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Resistors in Series</span>
+</h2>
+<div class="para" id="ch2-resistorsseries-2">The first tool to analyze and simplify resistors is to understand how to combine resistors in series. That is: all of the resistors are in the same path in a circuit and share the same current. A circuit diagram containing five resistors in series is shown in <a href="ch2-resistor.html#figresistorseries" class="xref" data-knowl="./knowl/xref/figresistorseries.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.14">Figure 2.2.14</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsseries-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="figresistorseries"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-figresistorseries.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Five resistors in series in a circuit.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.14"><a tabindex="-1" href="#figresistorseries" title="Copy heading and permalink for Figure 2.2.14" aria-label="Copy heading and permalink for Figure 2.2.14">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-resistorsseries-4">Without having formalized the concepts of Kirchhoff’s laws yet (which will occur in <a href="ch2-kirchhoffs.html" class="internal" title="Section 2.7: Kirchhoff’s Laws">Section 2.7</a>), we can use <a href="ch2-resistor.html#ch2-resistoreq" class="xref" data-knowl="./knowl/xref/ch2-resistoreq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.1">(2.2.1)</a> to form a conceptual understanding of what happens when resistors are connected together in series. Of the parameters given in <a href="ch2-resistor.html#ch2-resistoreq" class="xref" data-knowl="./knowl/xref/ch2-resistoreq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.1">(2.2.1)</a>, the only one that effectively changes when resistors are connected in series is the length (<span class="process-math">\(l\)</span>). The resistivity, being a property inherent to the material used to create the resistor, does not change. The cross-sectional area also remains unchanged throughout. This is depicted in <a href="ch2-resistor.html#resistorserieslength" class="xref" data-knowl="./knowl/xref/resistorserieslength.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.15">Figure 2.2.15</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsseries-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="resistorserieslength"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-resistorserieslength.svg" role="img" class="contained" alt='Five resistors in series appear to be contained in a long cylinder, with the resistors running along the length of the cylinder. The length of the cylinder is labeled "l1 + l2 + l3 + l4 + l5." The cross-sectional area of the cylinder is labeled "A."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>When resistors are connected in series, the parameter of <a href="ch2-resistor.html#ch2-resistoreq" class="xref" data-knowl="./knowl/xref/ch2-resistoreq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.1">(2.2.1)</a> that changes is the length.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.15"><a tabindex="-1" href="#resistorserieslength" title="Copy heading and permalink for Figure 2.2.15" aria-label="Copy heading and permalink for Figure 2.2.15">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-resistorsseries-6">Because the total length of the circuit is equal to the sum of the individual lengths of each resistor, we can express the total resistance (known as the <dfn class="terminology">equivalent resistance</dfn>) of the circuit likewise, shown in <a href="ch2-resistor.html#ch2-resistorseriesequation" class="xref" data-knowl="./knowl/xref/ch2-resistorseriesequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.2">(2.2.2)</a> and derived in <a href="ch2-resistor.html#seriesresistanceproof" class="xref" data-knowl="./knowl/xref/seriesresistanceproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 2.2.4.1">Derivation 2.2.4.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsseries-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch2-resistorsseries-7">
+<div class="displaymath process-math" id="ch2-resistorseriesequation">
+\begin{equation}
+R_{EQ} = R_1 + R_2 + R_3 + ... + R_n\tag{2.2.2}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsseries-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="seriesresistanceproof" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="seriesresistanceproof-1">
+<div class="displaymath process-math" id="seriesresistanceproof-1-1">
+\begin{align*}
+R_{EQ}	\amp = \frac{\rho(l_1+l_2+l_3+...+l_n)}{A}\\
+\amp = \frac{\rho l_1}{A} + \frac{\rho l_2}{A} + \frac{\rho l_3}{A} + ... + \frac{\rho l_n}{A}\\
+\amp = R_1 + R_2 + R_3 + ... + R_n
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#seriesresistanceproof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 2.2.4.1"><a tabindex="-1" href="#seriesresistanceproof" title="Copy heading and permalink for Derivation 2.2.4.1" aria-label="Copy heading and permalink for Derivation 2.2.4.1">🔗</a></div>
+</article></details>
+<div class="para" id="ch2-resistorsseries-9">Qualitatively, the resistance in a series circuit increases. It is therefore impossible for the equivalent resistance of a series circuit to be less than the value of any individual resistor. (This last property acts as a useful “smell test” when working out complicated circuits problems.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsseries-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Subsection 2.2.4: Resistors in Series"><a tabindex="-1" href="#ch2-resistorsseries" title="Copy heading and permalink for Subsection 2.2.4: Resistors in Series" aria-label="Copy heading and permalink for Subsection 2.2.4: Resistors in Series">🔗</a></div>
+</section>
+<section class="subsection" id="ch2-resistorsparallel">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Resistors in Parallel</span>
+</h2>
+<div class="para" id="ch2-resistorsparallel-2">The second tool that can be used to simplify complicated resistive circuits is equivalent resistance for resistors in parallel. In this case, each resistor shares a common node on either end of the circuit element, but each contains its own unique branch through which current can flow. A circuit diagram containing five resistors in parallel is shown in <a href="ch2-resistor.html#resistorparallel" class="xref" data-knowl="./knowl/xref/resistorparallel.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.16">Figure 2.2.16</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsparallel-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="resistorparallel"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch2-resistorparallel.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Five resistors in parallel in a circuit.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.16"><a tabindex="-1" href="#resistorparallel" title="Copy heading and permalink for Figure 2.2.16" aria-label="Copy heading and permalink for Figure 2.2.16">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-resistorsparallel-4">In this case, the effective parameter that changes in <a href="ch2-resistor.html#ch2-resistoreq" class="xref" data-knowl="./knowl/xref/ch2-resistoreq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.1">(2.2.1)</a> is the cross-sectional area (<span class="process-math">\(A\)</span>), shown in <a href="ch2-resistor.html#resistorparallelarea" class="xref" data-knowl="./knowl/xref/resistorparallelarea.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.17">Figure 2.2.17</a>. The length and resistivity remain unchanged.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsparallel-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="resistorparallelarea"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch2-resistorparallelarea.svg" role="img" class="contained" alt='Five resistors in parallel appear to be contained in their own cylinders, with each resistor running along the length of the cylinder. The length of each cylinder is labeled "l." The cross-sectional areas of the cylinders are labeled "A1 + A2 + A3 + A4 + A5."'></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>When resistors are connected in parallel, the parameter of <a href="ch2-resistor.html#ch2-resistoreq" class="xref" data-knowl="./knowl/xref/ch2-resistoreq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.1">(2.2.1)</a> that changes is the area.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.17"><a tabindex="-1" href="#resistorparallelarea" title="Copy heading and permalink for Figure 2.2.17" aria-label="Copy heading and permalink for Figure 2.2.17">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ch2-resistorsparallel-6">It is now possible to express the equivalent resistance of a circuit with parallel resistors using the equation shown in <a href="ch2-resistor.html#ch2-resistorparallelequation" class="xref" data-knowl="./knowl/xref/ch2-resistorparallelequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.3">(2.2.3)</a> and derived in <a href="ch2-resistor.html#parallelresistanceproof" class="xref" data-knowl="./knowl/xref/parallelresistanceproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 2.2.5.1">Derivation 2.2.5.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsparallel-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch2-resistorsparallel-7">
+<div class="displaymath process-math" id="ch2-resistorparallelequation">
+\begin{equation}
+\frac{1}{R_{EQ}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + ... + \frac{1}{R_n}\tag{2.2.3}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsparallel-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="parallelresistanceproof" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="parallelresistanceproof-1">
+<div class="displaymath process-math" id="parallelresistanceproof-1-1">
+\begin{align*}
+R_{EQ}			\amp = \frac{\rho l}{A_1+A_2+A_3+...+A_n}\\
+\amp = \frac{1}{\frac{A_1}{\rho l}+\frac{A_2}{\rho l}+\frac{A_3}{\rho l}+...+\frac{A_n}{\rho l}}\\
+\frac{1}{R_{EQ}}	\amp = \frac{A_1}{\rho l} + \frac{A_2}{\rho l} + \frac{A_3}{\rho l} + ... + \frac{A_n}{\rho l}\\
+\amp = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + ... + \frac{1}{R_n}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#parallelresistanceproof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 2.2.5.1"><a tabindex="-1" href="#parallelresistanceproof" title="Copy heading and permalink for Derivation 2.2.5.1" aria-label="Copy heading and permalink for Derivation 2.2.5.1">🔗</a></div>
+</article></details>
+<div class="para" id="ch2-resistorsparallel-9">Qualitatively, the resistance in a parallel circuit decreases. The equivalent resistance cannot be greater than the value of any of the individual resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsparallel-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch2-resistorsparallel-10">Frequently, it is necessary to combine two resistors in parallel. In that case, we can solve <a href="ch2-resistor.html#ch2-resistorparallelequation" class="xref" data-knowl="./knowl/xref/ch2-resistorparallelequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.3">(2.2.3)</a> to find a handy equation to use without having to calculate the reciprocal of the sum of reciprocals. (Note: this equation will <em class="alert">only</em> work for two resistors in parallel.) This solution is shown in <a href="ch2-resistor.html#ch2-eqtworesistorsparallel" class="xref" data-knowl="./knowl/xref/ch2-eqtworesistorsparallel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.4">(2.2.4)</a> and is derived in <a href="ch2-resistor.html#twoparallelresistorsproof" class="xref" data-knowl="./knowl/xref/twoparallelresistorsproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 2.2.5.2">Derivation 2.2.5.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsparallel-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch2-resistorsparallel-11">
+<div class="displaymath process-math" id="ch2-eqtworesistorsparallel">
+\begin{equation}
+R_{EQ} = \frac{R_1R_2}{R_1+R_2}\tag{2.2.4}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-resistorsparallel-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="twoparallelresistorsproof" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="twoparallelresistorsproof-1">
+<div class="displaymath process-math" id="twoparallelresistorsproof-1-1">
+\begin{align*}
+\frac{1}{R_{EQ}}	\amp = \frac{1}{R_1} + \frac{1}{R_2}\\
+\amp = \frac{R_2}{R_1R_2} + \frac{R_1}{R_1R_2}\\
+\amp = \frac{R_1+R_2}{R_1R_2}\\
+R_{EQ}			\amp = \frac{R_1R_2}{R_1+R_2}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#twoparallelresistorsproof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 2.2.5.2"><a tabindex="-1" href="#twoparallelresistorsproof" title="Copy heading and permalink for Derivation 2.2.5.2" aria-label="Copy heading and permalink for Derivation 2.2.5.2">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.2.5: Resistors in Parallel"><a tabindex="-1" href="#ch2-resistorsparallel" title="Copy heading and permalink for Subsection 2.2.5: Resistors in Parallel" aria-label="Copy heading and permalink for Subsection 2.2.5: Resistors in Parallel">🔗</a></div>
+</section>
+<section class="subsection" id="ch2-equivalentresistance">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Equivalent Resistance</span>
+</h2>
+<div class="para" id="ch2-equivalentresistance-2">It is important to point out that most circuits are not connected with all resistors connected 100% series or 100% parallel. Many circuits have segments that contain elements in parallel and segments that contain elements in series. In our discussion of delta-wye transforms in <a href="ch2-deltawye-wyedelta.html" class="internal" title="Section 2.3: Delta-Wye and Wye-Delta Transforms">Section 2.3</a>, we will see that there are some resistor combinations that are neither parallel nor series, but require a transformation before they can be made into parallel or series combinations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch2-equivalentresistance-3">The equivalent resistance in a circuit refers to the amount of resistance “seen” between two particular nodes. (While we know that there are no eyeballs looking between nodes — at least, there are none depicted on the circuit diagram — this phrase is commonly used to describe the calculation of equivalent resistance between two nodes.)  The equivalent resistance “seen” between two nodes indicates the resistance that would be measured between the two nodes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch2-equivalentresistance-4">Equivalent resistance can be calculated by combining resistors using the parallel and series combinations explained previously. Usually this is an iterative process. Start by combining any resistors that are <em class="alert">purely</em> in parallel with each other, or that are <em class="alert">purely</em> in series with each other. Then, reassess the circuit and see if any more opportunities for combinations arise. Continue until the circuit contains as few elements as possible.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ch2-equivalentresistance-5">The symbology that will be used in equivalent resistance equations in this textbook is a <span class="process-math">\(+\)</span> sign for series combination (as the resistances are indeed just being added together) and a <span class="process-math">\(//\)</span> symbol for parallel combinations. The order of operations is to deal with everything inside of parenthesis first; after that calculate parallel combinations; finally, calculate series combinations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ch2-equivalentresistance-6"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calculating equivalent resistance in a circuit.</span>
+</h3>
+<div class="para" id="ch2-equivalentresistance-6-2-1">Consider the circuit shown in <a href="ch2-resistor.html#eqresistanceckt" class="xref" data-knowl="./knowl/xref/eqresistanceckt.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.19">Figure 2.2.19</a>. Note that the resistors are not connected purely in series nor are they connected purely in parallel. In addition, we cannot start combining together circuit elements until we know which nodes to use to calculate the equivalent resistance. It is possible to calculate the equivalent resistance between any two nodes in the circuit. Not all of the circuit nodes are shown; just a few have been selected to demonstrate different equivalent resistance calculations.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistanceckt"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-eqresistanceckt.svg" role="img" class="contained" alt="A circuit composed of three meshes and nine resistors. The left mesh contains resistors R1, R2, R3, R4, and R5. The center mesh contains resistors R4, R5, R6, and R7. The right mesh contains resistors R7, R8, and R9. Six nodes are labeled. Node a is between R1 and R3. Nodes b and f are equivalent and are at the junction of R2, R5, R7, and R9. Node c is between R4 and R5. Node d is between R6 and R7. Node e is between R8 and R9."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circuit composed of nine resistors that are not connected totally in series or totally in parallel.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.19"><a tabindex="-1" href="#eqresistanceckt" title="Copy heading and permalink for Figure 2.2.19" aria-label="Copy heading and permalink for Figure 2.2.19">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-3">While it might be tempting to immediately combine resistors <span class="process-math">\(R_4\)</span> and <span class="process-math">\(R_5\)</span> in series, resistors <span class="process-math">\(R_6\)</span> and <span class="process-math">\(R_7\)</span> in series, and then those two combinations in parallel with each other, it is possible to calculate an equivalent resistance between nodes c and d; in that case, those resistors cannot be combined! Therefore, it is important to pay attention to the nodes to be used to calculate the equivalent resistance before combining resistors together. We will use this circuit to calculate equivalent resistance between three different pairs of nodes to demonstrate the process. In all cases, it is wise to start combining resistors as far away from the reference nodes as possible.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-equivalentresistance-6-2-4">
+<em class="alert">Calculating the equivalent resistance between nodes a and b</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-equivalentresistance-6-2-5">Schematically, it’s possible to depict equivalent resistance measured between two nodes by clearly indicating them on a circuit diagram. This is shown for the calculation of equivalent resistance between nodes a and b in <a href="ch2-resistor.html#eqresistancecktab" class="xref" data-knowl="./knowl/xref/eqresistancecktab.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.20">Figure 2.2.20</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktab"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-eqresistancecktab.svg" role="img" class="contained" alt="The same circuit as above, with wires protruding out from nodes a and b to highlight where equivalent resistance should be calculated from."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Schematic depiction of the equivalent resistance between nodes a and b in the circuit given in <a href="ch2-resistor.html#eqresistanceckt" class="xref" data-knowl="./knowl/xref/eqresistanceckt.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.19">Figure 2.2.19</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.20"><a tabindex="-1" href="#eqresistancecktab" title="Copy heading and permalink for Figure 2.2.20" aria-label="Copy heading and permalink for Figure 2.2.20">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-7">In this case, the resistors on the right-hand side of the schematic are as far from the reference nodes as possible. First, combine resistors <span class="process-math">\(R_8\)</span> and <span class="process-math">\(R_9\)</span> in series, as they share a common path in the circuit. The circuit is re-drawn below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktab2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-eqresistancecktab2.svg" role="img" class="contained" alt="The same circuit as above, with R8 and R9 combined in series."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.21"><a tabindex="-1" href="#eqresistancecktab2" title="Copy heading and permalink for Figure 2.2.21" aria-label="Copy heading and permalink for Figure 2.2.21">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-9">Resistors <span class="process-math">\(R_4\)</span> and <span class="process-math">\(R_5\)</span> can be combined in series, as can resistors <span class="process-math">\(R_6\)</span> and <span class="process-math">\(R_7\text{.}\)</span> This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktab3"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-eqresistancecktab3.svg" role="img" class="contained" alt="The same circuit as above, with R4 and R5 combined in series and R6 and R7 combined in series."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.22"><a tabindex="-1" href="#eqresistancecktab3" title="Copy heading and permalink for Figure 2.2.22" aria-label="Copy heading and permalink for Figure 2.2.22">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-11">Those equivalent resistances of <span class="process-math">\(R_4+R_5\text{,}\)</span> <span class="process-math">\(R_6+R_7\text{,}\)</span> and <span class="process-math">\(R_8+R_9\)</span> can now be combined in parallel. This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktab4"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktab4.svg" role="img" class="contained" alt="The same circuit as above, with (R4+R5) in parallel with (R6+R7) and (R8+R9)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.23"><a tabindex="-1" href="#eqresistancecktab4" title="Copy heading and permalink for Figure 2.2.23" aria-label="Copy heading and permalink for Figure 2.2.23">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-13">That parallel resistor combination can now be added in series with <span class="process-math">\(R_3\text{.}\)</span> This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktab5"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktab5.svg" role="img" class="contained" alt="The same circuit as above, with the parallel combination combined in series with R3."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.24"><a tabindex="-1" href="#eqresistancecktab5" title="Copy heading and permalink for Figure 2.2.24" aria-label="Copy heading and permalink for Figure 2.2.24">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-15">Resistors <span class="process-math">\(R_1\)</span> and <span class="process-math">\(R_2\)</span> are connected in series and can be combined. This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktab6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktab6.svg" role="img" class="contained" alt="The same circuit as above, with R1 and R2 combined in series."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.25"><a tabindex="-1" href="#eqresistancecktab6" title="Copy heading and permalink for Figure 2.2.25" aria-label="Copy heading and permalink for Figure 2.2.25">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-17">Finally, both sets of equivalent resistances can be combined in parallel This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktab7"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktab7.svg" role="img" class="contained" alt="The same circuit as above, with R1 and R2 combined in series."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.26"><a tabindex="-1" href="#eqresistancecktab7" title="Copy heading and permalink for Figure 2.2.26" aria-label="Copy heading and permalink for Figure 2.2.26">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-19">The equivalent resistance as seen between nodes a and b is depicted mathematically in <a href="ch2-resistor.html#eqresistancecktabcalc" class="xref" data-knowl="./knowl/xref/eqresistancecktabcalc.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.5">(2.2.5)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch2-equivalentresistance-6-2-20">
+<div class="displaymath process-math" id="eqresistancecktabcalc">
+\begin{equation}
+R_{EQ,ab} = ((R_8+R_9)//(R_6+R_7)//(R_4+R_5)+R_3)//(R_1+R_2)\tag{2.2.5}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-equivalentresistance-6-2-21">
+<em class="alert">Calculating the equivalent resistance between nodes e and f</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-equivalentresistance-6-2-22">Next, let’s consider the case of calculating the equivalent resistance between nodes e and f. This is depicted schematically in <a href="ch2-resistor.html#eqresistancecktef" class="xref" data-knowl="./knowl/xref/eqresistancecktef.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.27">Figure 2.2.27</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktef"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-eqresistancecktef.svg" role="img" class="contained" alt="The same circuit as above, with wires protruding out from nodes e and f to highlight where equivalent resistance should be calculated from."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Schematic depiction of the equivalent resistance between nodes e and f in the circuit given in <a href="ch2-resistor.html#eqresistanceckt" class="xref" data-knowl="./knowl/xref/eqresistanceckt.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.19">Figure 2.2.19</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.27"><a tabindex="-1" href="#eqresistancecktef" title="Copy heading and permalink for Figure 2.2.27" aria-label="Copy heading and permalink for Figure 2.2.27">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-24">In this case, the resistors on the left-hand side of the schematic are as far from the reference nodes as possible. Resistors <span class="process-math">\(R_1\text{,}\)</span> <span class="process-math">\(R_2\text{,}\)</span> and <span class="process-math">\(R_3\)</span> can be combined in series. This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktef2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktef2.svg" role="img" class="contained" alt="The same circuit as above, with R1, R3, and R3 connected in series."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.28"><a tabindex="-1" href="#eqresistancecktef2" title="Copy heading and permalink for Figure 2.2.28" aria-label="Copy heading and permalink for Figure 2.2.28">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-26">Resistors <span class="process-math">\(R_4\)</span> and <span class="process-math">\(R_5\)</span> are connected in series and can be combined. In addition, resistors <span class="process-math">\(R_6\)</span> and <span class="process-math">\(R_7\)</span> are in series and can be combined. This is shown below. Note that resistors <span class="process-math">\(R_8\)</span> and <span class="process-math">\(R_9\)</span> are <em class="alert">not</em> in series, as they do not share the same branch!<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktef3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktef3.svg" role="img" class="contained" alt="The same circuit as above, R4+R5 connected in series and R6+R7 connected in series."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.29"><a tabindex="-1" href="#eqresistancecktef3" title="Copy heading and permalink for Figure 2.2.29" aria-label="Copy heading and permalink for Figure 2.2.29">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-28">The equivalent resistances of <span class="process-math">\(R_1+R_2+R_3\text{,}\)</span> <span class="process-math">\(R_4+R_5\text{,}\)</span> and <span class="process-math">\(R_6+R_7\)</span> are connected in parallel and can be combined. This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktef4"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktef4.svg" role="img" class="contained" alt="The same circuit as above, with (R1+R2+R3) connected in parallel with (R4+R5) and (R6+R7)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.30<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.30"><a tabindex="-1" href="#eqresistancecktef4" title="Copy heading and permalink for Figure 2.2.30" aria-label="Copy heading and permalink for Figure 2.2.30">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-30">That equivalent resistance is in series with <span class="process-math">\(R_8\text{.}\)</span> The updated circuit is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktef5"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktef5.svg" role="img" class="contained" alt="The same circuit as above, with the parallel resistors in series with R8."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.31"><a tabindex="-1" href="#eqresistancecktef5" title="Copy heading and permalink for Figure 2.2.31" aria-label="Copy heading and permalink for Figure 2.2.31">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-32">That equivalent resistance can then be combined in parallel <span class="process-math">\(R_9\text{.}\)</span> This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktef6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch2-eqresistancecktef6.svg" role="img" class="contained" alt="The same circuit as above, with the parallel resistors in parallel with R9."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.32<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.32"><a tabindex="-1" href="#eqresistancecktef6" title="Copy heading and permalink for Figure 2.2.32" aria-label="Copy heading and permalink for Figure 2.2.32">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-34">The equivalent resistance between nodes e and f is depicted mathematically in <a href="ch2-resistor.html#eqresistancecktefcalc" class="xref" data-knowl="./knowl/xref/eqresistancecktefcalc.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.6">(2.2.6)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch2-equivalentresistance-6-2-35">
+<div class="displaymath process-math" id="eqresistancecktefcalc">
+\begin{equation}
+R_{EQ,ef} = ((R_1+R_2+R_3)//(R_4+R_5)//(R_6+R_7)+R_8)//R_9\tag{2.2.6}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-equivalentresistance-6-2-36">
+<em class="alert">Calculating the equivalent resistance between nodes a and e</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch2-equivalentresistance-6-2-37">Finally, we will consider the case of equivalent resistance between nodes a and e. This is depicted schematically in <a href="ch2-resistor.html#eqresistancecktae" class="xref" data-knowl="./knowl/xref/eqresistancecktae.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.33">Figure 2.2.33</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktae"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-eqresistancecktae.svg" role="img" class="contained" alt="The same circuit as above, with wires protruding out from nodes a and e to highlight where equivalent resistance should be calculated from."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.33<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Schematic depiction of the equivalent resistance between nodes a and e in the circuit given in <a href="ch2-resistor.html#eqresistanceckt" class="xref" data-knowl="./knowl/xref/eqresistanceckt.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.2.19">Figure 2.2.19</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.33"><a tabindex="-1" href="#eqresistancecktae" title="Copy heading and permalink for Figure 2.2.33" aria-label="Copy heading and permalink for Figure 2.2.33">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-39">In this case, resistors <span class="process-math">\(R_1\)</span> and <span class="process-math">\(R_2\)</span> are in series with each other. This is also true for resistors <span class="process-math">\(R_4\)</span> and <span class="process-math">\(R_5\text{,}\)</span> and for resistors <span class="process-math">\(R_6\)</span> and <span class="process-math">\(R_7\text{.}\)</span> This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktae2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-eqresistancecktae2.svg" role="img" class="contained" alt="The same circuit as above, with R1 and R2 in series; R4 and R5 in series; and R6 and R7 in series."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.34<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.34"><a tabindex="-1" href="#eqresistancecktae2" title="Copy heading and permalink for Figure 2.2.34" aria-label="Copy heading and permalink for Figure 2.2.34">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-41">The equivalent resistances of <span class="process-math">\(R_4+R_5\)</span> and <span class="process-math">\(R_6+R_7\)</span> are in parallel with each other and can be combined. This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-41" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="eqresistancecktae3"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-eqresistancecktae3.svg" role="img" class="contained" alt="The same circuit as above, with (R4+R5) in parallel with (R6+R7)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.35<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.2.35"><a tabindex="-1" href="#eqresistancecktae3" title="Copy heading and permalink for Figure 2.2.35" aria-label="Copy heading and permalink for Figure 2.2.35">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch2-equivalentresistance-6-2-43">At this point, none of the remaining resistors can be combined in either series or in parallel! For now, we are unable to move forward with the resistance calculation between nodes a and e. Eventually, we will solve this problem with delta-wye and wye-delta transforms (explained in <a href="ch2-deltawye-wyedelta.html" class="internal" title="Section 2.3: Delta-Wye and Wye-Delta Transforms">Section 2.3</a>). It is crucial to understand that <em class="alert">not all resistors are necessarily going to be connected in parallel or series combinations.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-equivalentresistance-6-2-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.2.18: Calculating equivalent resistance in a circuit"><a tabindex="-1" href="#ch2-equivalentresistance-6" title="Copy heading and permalink for Example 2.2.18: Calculating equivalent resistance in a circuit" aria-label="Copy heading and permalink for Example 2.2.18: Calculating equivalent resistance in a circuit">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection 2.2.6: Equivalent Resistance"><a tabindex="-1" href="#ch2-equivalentresistance" title="Copy heading and permalink for Subsection 2.2.6: Equivalent Resistance" aria-label="Copy heading and permalink for Subsection 2.2.6: Equivalent Resistance">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 2.2: Resistors"><a tabindex="-1" href="#ch2-resistor" title="Copy heading and permalink for Section 2.2: Resistors" aria-label="Copy heading and permalink for Section 2.2: Resistors">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ch2-definitions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch2-deltawye-wyedelta.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

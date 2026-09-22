@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate the circuit gain of the circuit shown in <a href="ch4-op-amps-10.html#examplecircuit44" class="xref" data-knowl="./knowl/xref/examplecircuit44.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.8.4">Figure 4.8.4</a> as a function of <span class="process-math">\(x\text{.}\)</span> The potentiometer has a total resistance of 500 Ω. Calculate the minimum and maximum possible values of the circuit gain. Use the variable <span class="process-math">\(x\)</span> to describe the potentiometer resistance between the wiper and 100 Ω resistor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch4-examplecircuit44.svg" role="img" class="contained" alt="Op-amp circuit with voltage source Vin, 100ohm resistor, and 500ohm potentiometer. The high-potential end of Vin connects to the non-inverting input of the op-amp at node A. The 100ohm resistor and 500ohm pot connect at node B. The wiper of the 500ohm pot connects to the inverting input of the op-amp at node C. The 500ohm pot connects to the op-amp output at node D, labeled Vout. The low-potential end of Vin and the 100ohm resistor connect to GND at node E."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.8.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch4-op-amps-10.html#ch4dividedfeedbackex4" class="xref" data-knowl="./knowl/xref/ch4dividedfeedbackex4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.8.4">Exercise 4.8.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 4.8.4"><a tabindex="-1" href="#examplecircuit44" title="Copy heading and permalink for Figure 4.8.4" aria-label="Copy heading and permalink for Figure 4.8.4">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+G \amp= 1 + \frac{500~\Omega - x}{100~\Omega + x}\\
+G_{min} \amp= 1\\
+G_{max} \amp= 6
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 4.8.4.1"><a tabindex="-1" href="#ch4dividedfeedbackex4-2" title="Copy heading and permalink for Answer 4.8.4.1" aria-label="Copy heading and permalink for Answer 4.8.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The resistance of the potentiometer is 500 Ω. This means that the sum of the input resistance (resistance between the wiper and the 100 Ω resistor, which the question states to express as the variable <span class="process-math">\(x\)</span>) and feedback resistance (resistance between the wiper and output of the op-amp) is equal to 500 Ω.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The circuit is a non-inverting op-amp circuit. Apply <a href="ch4-dividedfeedback.html#ch4-noninvertingopampgaineq" class="xref" data-knowl="./knowl/xref/ch4-noninvertingopampgaineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.5.3">(4.5.3)</a> to calculate the gain. The <span class="process-math">\(R_1\)</span> value in <a href="ch4-dividedfeedback.html#ch4-noninvertingopampgaineq" class="xref" data-knowl="./knowl/xref/ch4-noninvertingopampgaineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.5.3">(4.5.3)</a> refers to the resistance between the inverting node and ground, which is equal to <span class="process-math">\(x + 100~\Omega\text{.}\)</span> The <span class="process-math">\(R_2\)</span> value in <a href="ch4-dividedfeedback.html#ch4-noninvertingopampgaineq" class="xref" data-knowl="./knowl/xref/ch4-noninvertingopampgaineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.5.3">(4.5.3)</a> refers to the feedback resistance (the resistance between the inverting node and the output), which is equal to <span class="process-math">\(500~\Omega - x\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The gain of the circuit can now be calculated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+G = 1 + \frac{500~\Omega - x}{100~\Omega + x}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The smallest possible circuit gain occurs when the feedback resistance is 0 Ω and the input resistance is 500 Ω. In other words, when <span class="process-math">\(x = 500~\Omega\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+G_{min} \amp = 1 + \frac{500~\Omega - 500~\Omega}{100~\Omega + 500~\Omega}\\
+\amp= 1
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The largest possible circuit gain occurs when the feedback resistance is 500 Ω and the input resistance is 0 Ω. In other words, when <span class="process-math">\(x = 0~\Omega\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+G_{min} \amp = 1 + \frac{500~\Omega - 0~\Omega}{100~\Omega + 0~\Omega}\\
+\amp= 1 + 5\\
+\amp= 6
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4dividedfeedbackex4-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 4.8.4.1"><a tabindex="-1" href="#ch4dividedfeedbackex4-3" title="Copy heading and permalink for Solution 4.8.4.1" aria-label="Copy heading and permalink for Solution 4.8.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 4.8.4"><a tabindex="-1" href="#ch4dividedfeedbackex4" title="Copy heading and permalink for Exercise 4.8.4" aria-label="Copy heading and permalink for Exercise 4.8.4">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch4-op-amps-10.html#ch4dividedfeedbackex4">In Context</a></span>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive equations for <span class="process-math">\(i(t)\)</span> and <span class="process-math">\(v(t)\)</span> given the circuit shown in <a href="ch6-inductors-8.html#general-rl-example2-diagram" class="xref" data-knowl="./knowl/xref/general-rl-example2-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.90">Figure 6.6.90</a>. Switch S1 is closed for a very long time before opening at a time of zero seconds. Switch S2 is open for a very long time before closing at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-general-rl-example2-diagram.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of an 8V source, 20V source, four resistors, one inductor and two SPST switches (S1 and S2). The high-potential end of the 8V source connects to the 4kohm (A) resistor at node a. The 4kohm (A) resistor connects to S1 at node b. S1, the 5kohm and 20kohm resistors, 100mH inductor, and S2 connect at node c. S2 and 4kohm (B) resistor connect at node e. The 4kohm (B) resistor connects to the high-potential end of the 20V source at node e. The low-potential ends of both sources, 5kohm and 20kohm resistors, and 100mH inductor connect at node f. Voltage v(t) drops over the inductor from node c to node f. Branch current i(t) flows through the inductor from node c to node f. Switch S1 is depicted as opening. Switch S2 is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.90<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch6-inductors-8.html#ch6-general-ex2" class="xref" data-knowl="./knowl/xref/ch6-general-ex2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.6.22">Exercise 6.6.22</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.90"><a tabindex="-1" href="#general-rl-example2-diagram" title="Copy heading and permalink for Figure 6.6.90" aria-label="Copy heading and permalink for Figure 6.6.90">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(t) \amp= \left[ 5~\textrm{mA} - 3~\textrm{mA}~\textrm{e}^{-20000t}\right]~u(t) + 2~\textrm{mA}~u(-t)\\
+v(t) \amp= 6~\textrm{V}~\textrm{e}^{-20000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.6.22.1"><a tabindex="-1" href="#ch6-general-ex2-2" title="Copy heading and permalink for Answer 6.6.22.1" aria-label="Copy heading and permalink for Answer 6.6.22.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Draw the circuit in the initial steady-state condition. The inductor can be replaced by a short. Switch S1 is closed and switch S2 is open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-generalrl-example2-solution1.svg" role="img" class="contained" alt="Circuit with 3 nodes and 3 meshes consisting of an 8V source, 4k resistor, 5k resistor, 20k resistor, and a short. The high-potential end of the 8V source connects to the 4k resistor at node a. The 4k, 5k, and 20k resistors connect to the short at node b. The low-potential end of the 8V source, 5k and 20k resistors, and short connect at node c. Branch current i(0) flows through the short from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.91<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.91"><a tabindex="-1" href="#ch6-general-ex2-3-2" title="Copy heading and permalink for Figure 6.6.91" aria-label="Copy heading and permalink for Figure 6.6.91">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 5 kΩ and 20 kΩ resistors are shorted by the inductor and can be removed from the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch6-generalrl-example2-solution2.svg" role="img" class="contained" alt="Circuit with 2 nodes and 1 mesh consisting of an 8V source and 4kohm resistor wired in series. Branch current i(0) flows through the circuit from the high-potential end of the source to the low-potential end of the source."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.92<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.92"><a tabindex="-1" href="#ch6-general-ex2-3-4" title="Copy heading and permalink for Figure 6.6.92" aria-label="Copy heading and permalink for Figure 6.6.92">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(i(0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(0) \amp= \frac{8~\textrm{V}}{4~\textrm{k}\Omega}\\
+\amp= 2~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Draw the circuit in the final steady-state condition. The inductor can be replaced by a short. Switch S1 is open and switch S2 is closed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-generalrl-example2-solution3.svg" role="img" class="contained" alt="Circuit with 3 nodes and 3 meshes consisting of a 20V source, short, and three resistors. The 5kohm, 20kohm, and 4kohm resistors connect to the short at node a. The 4kohm resistor connects to the high-potential end of the 20V source at node b. The 5kohm and 20kohm resistors, short, and low-potential end of the 20V source connect at node c. Branch current i(infinity) flows through the short from node a to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.93<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.93"><a tabindex="-1" href="#ch6-general-ex2-3-8" title="Copy heading and permalink for Figure 6.6.93" aria-label="Copy heading and permalink for Figure 6.6.93">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 5 kΩ and 20 kΩ resistors are shorted by the inductor and can be removed from the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch6-generalrl-example2-solution4.svg" role="img" class="contained" alt="Circuit with 2 nodes and 1 mesh consisting of a 20V source and 4kohm resistor both wired in series. Branch current i(infinity) flows through the circuit from the high-potential end of the source to the low-potential end."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.94<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.94"><a tabindex="-1" href="#ch6-general-ex2-3-10" title="Copy heading and permalink for Figure 6.6.94" aria-label="Copy heading and permalink for Figure 6.6.94">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(i(\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(\infty) \amp= \frac{20~\textrm{V}}{4~\textrm{k}\Omega}\\
+\amp= 5~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t=0^+\)</span> and deactivate the source to calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-generalrl-example2-solution5.svg" role="img" class="contained" alt="Circuit with 2 nodes and 3 meshes consisting of a 5kohm resistor, 20kohm resistor, 4kohm resistor, and 100mH inductor. All four circuit elements are connected in parallel."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.95<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.95"><a tabindex="-1" href="#ch6-general-ex2-3-14" title="Copy heading and permalink for Figure 6.6.95" aria-label="Copy heading and permalink for Figure 6.6.95">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= 5~\textrm{k}\Omega//20~\textrm{k}\Omega//4~\textrm{k}\Omega\\
+\amp=	2~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to calculate <span class="process-math">\(\tau\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\tau \amp= \frac{L}{R}\\
+\amp= \frac{.1~\textrm{H}}{2000~\Omega}\\
+\amp= 5\times10^{-5}~\textrm{s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-generalrlcurrent" class="xref" data-knowl="./knowl/xref/ch6-generalrlcurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.13">(6.5.13)</a> to calculate <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = \left[ 5~\textrm{mA} - 3~\textrm{mA}~\textrm{e}^{-20000t}\right]~u(t) + 2~\textrm{mA}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-generalrlvoltage" class="xref" data-knowl="./knowl/xref/ch6-generalrlvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.14">(6.5.14)</a> to calculate <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= (2~\textrm{k}\Omega)(5~\textrm{mA}-2~\textrm{mA})~\textrm{e}^{-20000t}~u(t)\\
+\amp= (2~\textrm{k}\Omega)(3~\textrm{mA})~\textrm{e}^{-20000t}~u(t)\\
+\amp= 6~\textrm{V}~\textrm{e}^{-20000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex2-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.22.1"><a tabindex="-1" href="#ch6-general-ex2-3" title="Copy heading and permalink for Solution 6.6.22.1" aria-label="Copy heading and permalink for Solution 6.6.22.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.6.22"><a tabindex="-1" href="#ch6-general-ex2" title="Copy heading and permalink for Exercise 6.6.22" aria-label="Copy heading and permalink for Exercise 6.6.22">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch6-inductors-8.html#ch6-general-ex2">In Context</a></span>
+</body>
+</html>

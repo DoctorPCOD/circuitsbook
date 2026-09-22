@@ -1,0 +1,43 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : converting latex-image pictures from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx to svg graphics for placement in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'cli.version': '2.36', 'publisher': '/Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/extract-latex-image.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/extract-latex-image.xsl
+INFO    : converting ch9-transfer-functions-exercise2-figure1.tex to ch9-transfer-functions-exercise2-figure1.pdf
+INFO    : cropping ch9-transfer-functions-exercise2-figure1.pdf to cropped-ch9-transfer-functions-exercise2-figure1.pdf
+INFO    : renaming cropped-ch9-transfer-functions-exercise2-figure1.pdf to ch9-transfer-functions-exercise2-figure1.pdf
+INFO    : converting ch9-transfer-functions-exercise2-figure1.pdf to ch9-transfer-functions-exercise2-figure1.svg
+INFO    : converting ch9-transfer-functions-exercise2-figure2.tex to ch9-transfer-functions-exercise2-figure2.pdf
+INFO    : cropping ch9-transfer-functions-exercise2-figure2.pdf to cropped-ch9-transfer-functions-exercise2-figure2.pdf
+INFO    : renaming cropped-ch9-transfer-functions-exercise2-figure2.pdf to ch9-transfer-functions-exercise2-figure2.pdf
+INFO    : converting ch9-transfer-functions-exercise2-figure2.pdf to ch9-transfer-functions-exercise2-figure2.svg
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-s891znoa
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/web.
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+ERROR   : Error loading /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/ch9-phasor-analysis.ptx: Opening and ending tag mismatch: md line 8754 and p, line 8755, column 10 (ch9-phasor-analysis.ptx, line 8755)
+CRITICAL: Opening and ending tag mismatch: md line 8754 and p, line 8755, column 10 (ch9-phasor-analysis.ptx, line 8755)
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

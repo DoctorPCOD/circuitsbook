@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Use source transformation to calculate <span class="process-math">\(v(t)\)</span> for the circuit shown in <a href="ch9-phasoranalysis-8.html#complex-source-transformation-exercise5-diagram" class="xref" data-knowl="./knowl/xref/complex-source-transformation-exercise5-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.85">Figure 9.6.85</a>. The source voltage is <span class="process-math">\(v_{AC}(t) = 3~\textrm{V}~\cos(2\pi100t)\text{.}\)</span> The proportionality constant of the VCCS has a unit of A/V.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-complex-source-transformation-exercise5-diagram.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of voltage source Vac, 2ohm resistor, 1.6mF capacitor, 0.3mF capacitor, 2*v(t) VCCS, and 5ohm resistor. The high-potential end of Vac connects to 2ohm at node a. The 2ohm, 1.6mF, and 0.3mF connect at node b. The 0.3mF, VCCS, and 5ohm resistor connect at node c. The VCCS flows out of node c. The low-potential end of Vac, 1.6mF, VCCS, and 5ohm connect at node d. The VCCS flows into node d. Voltage v(t) drops from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.85<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-complex-source-transformation-exercise5" class="xref" data-knowl="./knowl/xref/ch9-complex-source-transformation-exercise5.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.25">Exercise 9.6.25</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.85"><a tabindex="-1" href="#complex-source-transformation-exercise5-diagram" title="Copy heading and permalink for Figure 9.6.85" aria-label="Copy heading and permalink for Figure 9.6.85">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 576~\textrm{mV}~\cos(2\pi100t - 53.9\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.25.1"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-2" title="Copy heading and permalink for Answer 9.6.25.1" aria-label="Copy heading and permalink for Answer 9.6.25.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of both capacitors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{C1.6}} \amp= \frac{1}{j(2\pi100)(0.0016)}\\
+\amp= -j0.9947~\Omega\\
+\vec{Z_{C0.3}} \amp= \frac{1}{j(2\pi100)(0.0003)}\\
+\amp= -j5.3052~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert the independent source to a phasor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{AC}} \amp= 3~\cos{0^\circ} +j3~\sin{0^\circ}~\textrm{V}\\
+\amp= 3~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-complex-source-transformation-exercise5-figure1.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of voltage source Vac, 2ohm resistor, -j0.995ohm impedance, -j5.31ohm impedance, 2*V VCCS, and 5ohm resistor. The high-potential end of Vac connects to 2ohm at node a. The 2ohm, -j0.995ohm, and -j5.31ohm connect at node b. The -j5.31ohm, VCCS, and 5ohm resistor connect at node c. The VCCS flows out of node c. The low-potential end of Vac, -j0.995ohm, VCCS, and 5ohm connect at node d. The VCCS flows into node d. Voltage V drops from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.86<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.86"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-5" title="Copy heading and permalink for Figure 9.6.86" aria-label="Copy heading and permalink for Figure 9.6.86">🔗</a></div></figcaption>
+</figure>
+<div class="para">Convert the voltage source into a current source. Convert the VCCS into a VCVS.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_S} \amp= \frac{3~\textrm{V}}{2~\Omega}\\
+\amp= 1.5~\textrm{A}\\
+\vec{V_S} \amp= (-2\vec{V})(5)\\
+\amp= -10\vec{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch9-complex-source-transformation-exercise5-figure2.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of 1.5A source, 2ohm resistor, -j0.995ohm impedance, -j5.31ohm impedance, 5ohm resistor, and 10*V VCVS. The high-potential end of the current source, 2ohm, -j0.995ohm, and -j5.31ohm connect at node a. The -j5.31ohm and 5ohm connect at node b. The 5ohm and low-potential end of the VCVS connect at node c. The low-potential end of the current source, 2ohm, -j0.995ohm, and high-potential end of the VCVS connect at node d. Voltage V drops from node a to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.87<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.87"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-8" title="Copy heading and permalink for Figure 9.6.87" aria-label="Copy heading and permalink for Figure 9.6.87">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 2 Ω resistor is connected in parallel with the −j0.995 Ω impedance. The 5 Ω resistor is connected in series with the −5.31 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z'} \amp= \frac{(2~\Omega)(-j0.995~\Omega)}{(2~\Omega)+(-j0.995~\Omega)}\\
+\amp= 0.3966 - j0.7975~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-source-transformation-exercise5-figure3.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of a 1.5A source, 0.4-j0.8ohm impedance, 5-j5.31ohm impedance, and 10*V VCVS. The high-potential end of the current source and both impedances connect at node a. The 5-j5.31ohm connects to the low-potential end of the VCVS at node b. The low-potential end of the current source, 0.4-j0.8ohm impedance, and high-potential end of the VCVS connect at node c. Voltage V drops from node a to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.88<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.88"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-11" title="Copy heading and permalink for Figure 9.6.88" aria-label="Copy heading and permalink for Figure 9.6.88">🔗</a></div></figcaption>
+</figure>
+<div class="para">Convert the dependent source to a VCCS. The unit of the proportionality constant is A/V.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{I_S} \amp= \frac{10\vec{V}}{5-j5.31}\\
+\amp= (0.94+j1.00)\vec{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-complex-source-transformation-exercise5-figure4.svg" role="img" class="contained" alt="Circuit with three meshes and two nodes consisting of a 1.5A source, 0.4-j0.8ohm impedance, 5-j5.31ohm impedance, and (0.94-j1)*V VCCS. All circuit elements connect in parallel between nodes a and b. The high-potential end of the 1.5A source connects to node a. The VCCS flows out of node a and into node b. Voltage V drops from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.89<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.89"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-14" title="Copy heading and permalink for Figure 9.6.89" aria-label="Copy heading and permalink for Figure 9.6.89">🔗</a></div></figcaption>
+</figure>
+<div class="para">The two impedances are connected in parallel.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{EQ}} \amp= \frac{(0.3966 - j0.7975~\Omega)(5 - j5.3052~\Omega)}{(0.3966 - j0.7975~\Omega)+(5 - j5.3052~\Omega)}\\
+\amp= 0.3774 - j0.7020~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Combine the two sources. (Note that the source is a current source, which may appear slightly unclear from the circuit diagram.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-source-transformation-exercise5-figure5.svg" role="img" class="contained" alt="Circuit with one mesh and two nodes consisting of a (1.5-(0.94+j1)*V) source and 0.377-j0.70-2ohm impedance. All circuit elements connect in parallel between nodes a and b. The high-potential end of the source connects to node a. Voltage V drops from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.90<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.90"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-18" title="Copy heading and permalink for Figure 9.6.90" aria-label="Copy heading and permalink for Figure 9.6.90">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(\vec{V}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V} \amp= (0.38-j0.70)(1.5 - (0.94 + j1) \vec{V})\\
+\amp= (0.57-j1.05) - (1.06-j0.28)\vec{V}\\
+(2.06-j0.28)\vec{V} \amp= (0.57-j1.05)\\
+\vec{V} \amp= \frac{(0.57-j1.05)}{(2.06-j0.28)}\\
+\amp= 0.34-j0.47~\textrm{V}\\
+\amp= 339.57-j465.34~\textrm{mV}\\
+\amp= 576.06~\textrm{mV} \angle -53.88^\circ
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Convert to time-varying from.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = 576~\textrm{mV}~\cos(2\pi100t - 53.9\pi/180)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.25.1"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5-3" title="Copy heading and permalink for Solution 9.6.25.1" aria-label="Copy heading and permalink for Solution 9.6.25.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.25"><a tabindex="-1" href="#ch9-complex-source-transformation-exercise5" title="Copy heading and permalink for Exercise 9.6.25" aria-label="Copy heading and permalink for Exercise 9.6.25">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-complex-source-transformation-exercise5">In Context</a></span>
+</body>
+</html>

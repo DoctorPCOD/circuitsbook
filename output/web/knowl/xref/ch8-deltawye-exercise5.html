@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Calculate the equivalent impedance between nodes a and b of the circuit shown in <a href="ch8-phasors-6.html#equivalent-deltawye-exercise5-diagram" class="xref" data-knowl="./knowl/xref/equivalent-deltawye-exercise5-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.4.28">Figure 8.4.28</a>. The frequency of operation is 50 Hz.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch8-equivalent-deltawye-exercise5-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and six nodes consisting of three resistors (10ohm, 20ohm, and 40ohm), two capacitors (50uF and 60uF), and two inductors (60mH and 80mH). The 10ohm and 50uF connect at node a. The 10ohm and 60uF connect at node c. The 60uF, 20ohm, and 60mH connect at node d. The 50uF, 60mH, and 80mH connect at node e. The 20ohm, 40ohm, and 80mH connect at node f. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch8-phasors-6.html#ch8-deltawye-exercise5" class="xref" data-knowl="./knowl/xref/ch8-deltawye-exercise5.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 8.4.15">Exercise 8.4.15</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.28"><a tabindex="-1" href="#equivalent-deltawye-exercise5-diagram" title="Copy heading and permalink for Figure 8.4.28" aria-label="Copy heading and permalink for Figure 8.4.28">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+53.1 -j22.9~\Omega
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 8.4.15.1"><a tabindex="-1" href="#ch8-deltawye-exercise5-2" title="Copy heading and permalink for Answer 8.4.15.1" aria-label="Copy heading and permalink for Answer 8.4.15.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of each capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{C60}} \amp= \frac{1}{j(2\pi 50)(60 \times 10^{-6})}\\
+\amp= -j53.0516~\Omega\\
+\vec{Z_{C50}} \amp= \frac{1}{j(2\pi 50)(50 \times 10^{-6})}\\
+\amp= -j63.6620~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of each inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{L60}} \amp= j(2\pi 50)(0.06)\\
+\amp= j18.8496~\Omega\\
+\vec{Z_{L80}} \amp= j(2\pi 50)(0.08)\\
+\amp= j25.1327~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch8-deltawye-ex5-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and six nodes consisting of seven impedances (10ohm, 20ohm, 40ohm, -j53ohm, -j63.7ohm, j18.8ohm, and j25.1ohm). The 10ohm and -j63.7ohm connect at node a. The 10ohm and -j53ohm connect at node c. The -j53ohm, 20ohm, and j18.8ohm connect at node d. The -j63.7ohm, j18.8ohm, and j25.1ohm connect at node e. The 20ohm, 40ohm, and j25.1ohm connect at node f. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.29"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-5" title="Copy heading and permalink for Figure 8.4.29" aria-label="Copy heading and permalink for Figure 8.4.29">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 10 Ω resistor is connected in series with the −j53 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{RC}} \amp= (10~\Omega) + (-j53.0516~\Omega)\\
+\amp= 10 -j53.0516~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch8-deltawye-ex5-figure2.svg" role="img" class="contained" alt="Circuit with two meshes and five nodes consisting of six impedances (10-j53ohm, -j63.7ohm, j18.8ohm, j25.1ohm, 20ohm, and 40ohm). The 10-j53ohm and -j63.7ohm connect at node a. The 10-j53ohm, j18.8ohm, and 20ohm connect at node c. The -j63.7ohm, j18.8ohm, and j25.1ohm connect at node d. The 20ohm, 40ohm, and j25.1ohm connect at node e. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.30<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.30"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-8" title="Copy heading and permalink for Figure 8.4.30" aria-label="Copy heading and permalink for Figure 8.4.30">🔗</a></div></figcaption>
+</figure>
+<div class="para">A wye to delta transform will be done to solve this circuit. (A delta to wye transform can also be used. Feel free to try it out for extra practice.) The wye impedances are highlighted in red below, with the wye nodes labeled.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch8-deltawye-ex5-figure3.svg" role="img" class="contained" alt="Circuit with two meshes and five nodes consisting of six impedances (10-j53ohm, -j63.7ohm, j18.8ohm, j25.1ohm, 20ohm, and 40ohm). The 10-j53ohm and -j63.7ohm connect at node a. The 10-j53ohm, j18.8ohm, and 20ohm connect at node c. The -j63.7ohm, j18.8ohm, and j25.1ohm connect at node d. The 20ohm, 40ohm, and j25.1ohm connect at node e. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b. The -j63.7ohm, j18.8ohm, and j25.1ohm impedances are highlighted in red."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.31<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.31"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-10" title="Copy heading and permalink for Figure 8.4.31" aria-label="Copy heading and permalink for Figure 8.4.31">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use <a href="ch8-deltawye.html#ch8-deltawye-17-1" class="xref" data-knowl="./knowl/xref/ch8-delta-wye-z1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.3.10">(8.3.10)</a>, <a href="ch8-deltawye.html#ch8-deltawye-17-1" class="xref" data-knowl="./knowl/xref/ch8-delta-wye-z2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.3.11">(8.3.11)</a>, and <a href="ch8-deltawye.html#ch8-deltawye-17-1" class="xref" data-knowl="./knowl/xref/ch8-delta-wye-z3.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.3.12">(8.3.12)</a> to calculate the delta impedances.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_1} \amp= \frac{(j18.8496~\Omega)(j25.1327~\Omega)+(j18.8496~\Omega)(-j63.6620~\Omega)+(j25.1327~\Omega)(-j63.6620~\Omega)}{j18.8496~\Omega}\\
+\amp= \frac{2326.3~\Omega}{j18.8496~\Omega}\\
+\amp= -j123.41~\Omega\\
+\vec{Z_2} \amp= \frac{2326.3~\Omega}{-j63.6620~\Omega}\\
+\amp= j36.5408~\Omega\\
+\vec{Z_3} \amp= \frac{2326.3~\Omega}{j25.1327~\Omega}\\
+\amp= -j92.5589~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch8-deltawye-ex5-figure4.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of six impedances (10-j53ohm, -j92.6ohm, -j123ohm, j36.5ohm, 20ohm, and 40ohm). The 10-j53ohm, -j92.6ohm, and -j123ohm connect at node a. The 10-j53ohm, -j92.6ohm, 20ohm, and j36.5ohm connect at node c. The -j123ohm, j36.5ohm, 20ohm, and 40ohm connect at node d. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.32<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.32"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-13" title="Copy heading and permalink for Figure 8.4.32" aria-label="Copy heading and permalink for Figure 8.4.32">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 10−j53.05 Ω impedance is connected in parallel with the −j92.56 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z'} \amp= \frac{(10 -j53.0516~\Omega)(-j92.5589~\Omega)}{(10 -j53.0516~\Omega)+(-j92.5589~\Omega)}\\
+\amp= 4.0217 -j33.9990~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The 20 Ω resistor is connected in parallel with the j36.54 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z''} \amp= \frac{(20~\Omega)(j36.5408~\Omega)}{(20~\Omega)+(j36.5408~\Omega)}\\
+\amp= 15.3897 + j8.4233~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch8-deltawye-ex5-figure5.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of four impedances (4-j34ohm, -j123ohm, 15.4+j8.42ohm, and 40ohm). The 4-j34ohm and -j123ohm connect at node a. The 4-j34ohm and 15.4+j8.42ohm connect at node c. The -j123ohm, 15.4+j8.42ohm, and 40ohm connect at node d. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.33<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.33"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-18" title="Copy heading and permalink for Figure 8.4.33" aria-label="Copy heading and permalink for Figure 8.4.33">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 4−j34 Ω impedance is connected in series with the 15.4+j8.42 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z'''} \amp= (4.0217 -j33.9990~\Omega) + (15.3897 + j8.4233~\Omega)\\
+\amp= 19.4113 - j25.5758~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch8-deltawye-ex5-figure6.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes consisting of three impedances (19.4-j25.6ohm, -j123ohm, and 40ohm). The 19.4-j25.6ohm and -j123ohm connect at node a. All three impedances connect at node c. The 40ohm floats at node b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.34<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.34"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-21" title="Copy heading and permalink for Figure 8.4.34" aria-label="Copy heading and permalink for Figure 8.4.34">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 19.4−j25.6 Ω impedance is connected in parallel with the −j123.41 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z''''} \amp= \frac{(19.4113 - j25.5758~\Omega)(-j123.41~\Omega)}{(19.4113 - j25.5758~\Omega)+(-j123.41~\Omega)}\\
+\amp= 13.0966 - j22.8917~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/ch8-deltawye-ex5-figure7.svg" role="img" class="contained" alt="Circuit with two impedances (13.1-j22.9ohm and 40ohm) connected in series between nodes a and b. The equivalent impedance is measured between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.4.35<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.4.35"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-24" title="Copy heading and permalink for Figure 8.4.35" aria-label="Copy heading and permalink for Figure 8.4.35">🔗</a></div></figcaption>
+</figure>
+<div class="para">The 40 Ω resistor is connected in series with the 13.1−j22.89 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{EQ}} \amp= (40~\Omega) + (13.0966 - j22.8917~\Omega)\\
+\amp= 53.1 -j22.9~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-exercise5-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 8.4.15.1"><a tabindex="-1" href="#ch8-deltawye-exercise5-3" title="Copy heading and permalink for Solution 8.4.15.1" aria-label="Copy heading and permalink for Solution 8.4.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 8.4.15"><a tabindex="-1" href="#ch8-deltawye-exercise5" title="Copy heading and permalink for Exercise 8.4.15" aria-label="Copy heading and permalink for Exercise 8.4.15">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch8-phasors-6.html#ch8-deltawye-exercise5">In Context</a></span>
+</body>
+</html>

@@ -1,0 +1,12 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : You are trying to use 'xi:include' in a file that does not contain 'xmlns:xi="http://www.w3.org/2001/XInclude"' in its root element.
+CRITICAL: Namespace prefix xi on include is not defined, line 294, column 64 (ch8-interrupts.ptx, line 294)
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

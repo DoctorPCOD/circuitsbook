@@ -267,7 +267,7 @@
 
 			<p>Modern digital ammeters use a resistor with a very small value (called a shunt resistor) over which the voltage can be measured using an analog to digital converter. Using Ohm's law, the current can be calculated using a microcontroller and displayed on a screen.</p>
 
-			<p>Due to Kirchhoff's current law (explained in <xref ref="ch2-kcl" />), currents must be measured in series. In other words, the path of the circuit must be broken open, and the ammeter must be inserted into that path in order to measure the current through that path. This is shown graphically in <xref ref="measuringcurrentseries" />.</p>
+			<p>Due to Kirchhoff's current law (explained in <xref ref="ch2-kcl" />), currents must be measured in series. In other words, the path of the circuit must be broken open, and the ammeter must be inserted into that path in order to measure the current through that path. (This will be explained in more detail in <xref ref="ch2-measuring-current" />.) This is shown graphically in <xref ref="measuringcurrentseries" />.</p>
 
 			<figure xml:id="measuringcurrentseries">
   				<caption>A diagram of how current is measured in series (in the same path as a component).</caption>

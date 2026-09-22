@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Use <span class="process-math">\(s\)</span>-domain analysis to calculate <span class="process-math">\(I(s)\)</span> and <span class="process-math">\(i(t)\)</span> of the circuit shown in <a href="ch11-laplace-6.html#sdomain-analysis-exercise5-diagram" class="xref" data-knowl="./knowl/xref/sdomain-analysis-exercise5-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.4.11">Figure 11.4.11</a>. The switch closes at a time of zero seconds. The component values are: <span class="process-math">\(I_m = 500~\textrm{mA}\text{,}\)</span> <span class="process-math">\(\omega = 60~\textrm{rad/s}\text{,}\)</span> <span class="process-math">\(R_1 = 200~\Omega\text{,}\)</span> <span class="process-math">\(R_2 = 2~\Omega\text{,}\)</span> <span class="process-math">\(R_3 = 1~\Omega\text{,}\)</span> <span class="process-math">\(C = 20~\mu\textrm{F}\text{,}\)</span> and <span class="process-math">\(L = 50~\textrm{mH}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch11-sdomain-analysis-exercise5-diagram.svg" role="img" class="contained" alt="Circuit with five nodes consisting of cosine current source, SPST switch, resistors R1, R2, and R3, inductor L, and capacitor C. The high-potential end of the current source connects to the SPST switch at node a. The SPST switch, R1, L, and C connect at node b. L and R2 connect at node c. C and R3 connect at node d. The low-potential end of the source, R1, R2, and R3 connect at node e. Branch current i(t) flows through R2 from node c to node e. Voltage v(t) drops from node b to node e. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch11-laplace-6.html#ch11-sdomain-analysis-exercise5" class="xref" data-knowl="./knowl/xref/ch11-sdomain-analysis-exercise5.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 11.4.15">Exercise 11.4.15</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.4.11"><a tabindex="-1" href="#sdomain-analysis-exercise5-diagram" title="Copy heading and permalink for Figure 11.4.11" aria-label="Copy heading and permalink for Figure 11.4.11">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I(s) \amp= \frac{9.95s^2 + 497512.44s}{(s^2+3600)\left(s^2 + 308.66s + 1004975.12\right)}\\
+i(t) \amp= [500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t) + \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)]~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 11.4.15.1"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-2" title="Copy heading and permalink for Answer 11.4.15.1" aria-label="Copy heading and permalink for Answer 11.4.15.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch11-sdomain-analysis-exercise5-figure1.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of Laplace transformed cosine current source, resistors R1, R2, and R3, capacitor (1/(sC)), and inductor sL. The high-potential end of the source, R1, sL, and the capacitor connect at node a. sL and R2 connect at node b. The capacitor and R3 connect at node c. The low-potential end of the source, R1, R2, and R3 connect at node d. Branch current I(s) flows through R2 from node b to node d. Voltage V(s) drops from node a to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 11.4.12"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-2" title="Copy heading and permalink for Figure 11.4.12" aria-label="Copy heading and permalink for Figure 11.4.12">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform KCL and KVL to obtain an equation in terms of <span class="process-math">\(I(s)\text{.}\)</span> Then, solve for <span class="process-math">\(I(s)\)</span> and normalize.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{I_ms}{s^2+\omega^2} \amp= \frac{V(s)}{R_1} + I(s) + \frac{V(s)}{R_3+\frac{1}{sC}}\\
+V(s) \amp= sLI(s) + R_2I(s)\\
+\frac{I_ms}{s^2+\omega^2} \amp= \frac{sLI(s)}{R_1} + \frac{R_2I(s)}{R_1} + I(s) + \frac{sLI(s) + R_2I(s)}{R_3 + \frac{1}{sC}}\\
+\left(\frac{I_ms}{s^2+\omega^2}\right)\left(R_3 + \frac{1}{sC}\right) \amp= \frac{sLI(s)}{R_1}\left(R_3 + \frac{1}{sC}\right) + \frac{R_2I(s)}{R_1}\left(R_3 + \frac{1}{sC}\right) + I(s)\left(R_3 + \frac{1}{sC}\right) + sLI(s) + R_2I(s)\\
+\frac{I_mR_3s}{s^2+\omega^2} + \frac{I_m}{C(s^2+\omega^2)} \amp= \frac{sLR_3I(s)}{R_1} + \frac{L}{R_1C}I(s) + \frac{R_2R_3I(s)}{R_1} + \frac{R_2}{sCR_1}I(s) + R_3I(s) + \frac{1}{sC}I(s) + sLI(s) + R_2I(s)\\
+\frac{CI_mR_3s^2 + I_ms}{C(s^2+\omega^2)} \amp= \left[\frac{LR_3}{R_1} + L\right]s^2I(s) + \left[\frac{L}{R_1C} + \frac{R_2R_3}{R_1} + R_3 + R_2\right]sI(s) + \left[\frac{R_2}{CR_1} + \frac{1}{C}\right]I(s)\\
+\frac{CI_mR_1R_3s^2 + R_1I_ms}{LC(R_1+R_3)(s^2+\omega^2)} \amp= s^2I(s) + \left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3+R_1R_3+R_1R_2}{L(R_1+R_3)}\right]sI(s) + \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]I(s)\\
+I(s) \amp= \frac{\left[\frac{CR_1R_3I_m}{LC(R_1+R_3)}\right]s^2 + \left[\frac{R_1I_m}{LC(R_1+R_3)}\right]s}{(s^2+\omega^2)\left(s^2+\left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3 + R_1R_3 + R_1R_2}{L(R_1+R_3)}\right]s + \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]\right)}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug in component values using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+I(s) = \frac{9.95s^2 + 497512.44s}{(s^2+3600)\left(s^2 + 308.66s + 1004975.12\right)}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Factor the denominator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+I(s) = \frac{9.95s^2 + 497512.44s}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The partial fraction expansion will take the form shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+I(s) = \frac{K_1}{(s+j60)} + \frac{K_2}{(s-j60)} + \frac{K_3}{(s+154+j991)} + \frac{K_4}{(s+154-j991)}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">To calculate <span class="process-math">\(K_1\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+j60)\)</span> and solve at <span class="process-math">\(s=-j60\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{(9.95s^2 + 497512.44s)(s+j60)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60} \amp= \frac{K_1(s+j60)}{(s+j60)}\Big|_{s=-j60} + \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60} + \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60} + \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}\\
+\frac{9.95s^2 + 497512.44s}{(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60} \amp= K_1\Big|_{s=-j60} + \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60} + \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60} + \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}\\
+\frac{9.95(-j60)^2 + 497512.44(-j60)}{((-j60)-j60)((-j60)+154+j991)((-j60)+154-j991)} \amp= K_1 + \frac{K_2((-j60)+j60)}{((-j60)-j60)} + \frac{K_3((-j60)+j60)}{((-j60)+154+j991)} + \frac{K_4((-j60)+j60)}{((-j60)+154-j991)}\\
+\frac{-3.5821\textrm{E}4 - j2.9851\textrm{E}7}{-2.2223\textrm{E}6 - j1.2017\textrm{E}8} \amp= K_1 + \frac{K_2(0)}{-j120} + \frac{K_3(0)}{154+j931} + \frac{K_4(0)}{154-j1051}\\
+K_1 \amp= 0.2483 + j0.0043~\textrm{A}\\
+\amp= 248.34 + j4.2946~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<span class="process-math">\(K_2\)</span> is the complex conjugate of <span class="process-math">\(K_1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+K_2 = 248.34 - j4.2946~\textrm{mA}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">To calculate <span class="process-math">\(K_3\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+154+j991)\)</span> and solve at <span class="process-math">\(s=-154-j991\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{(9.95s^2 + 497512.44s)(s+154+j991)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-154-j991} \amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991} + \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991} + \frac{K_3(s+154+j991)}{(s+154+j991)}\Big|_{s=-154-j991} + \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}\\
+\frac{9.95s^2 + 497512.44s}{(s+j60)(s-j60)(s+154-j991)}\Big|_{s=-154-j991} \amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991} + \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991} + K_3\Big|_{s=-154-j991} + \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}\\
+\frac{9.95(-154-j991)^2 + 497512.44(-154-j991)}{((-154-j991)+j60)((-154-j991)-j60)((-154-j991)+154-j991)} \amp= \frac{K_1((-154-j991)+154+j991)}{((-154-j991)+j60)} + \frac{K_2((-154-j991)+154+j991)}{((-154-j991)-j60)} + K_3 + \frac{K_4((-154-j991)+154+j991)}{((-154-j991)+154-j991)}\\
+\frac{-8.6306\textrm{E}7 - j4.8976\textrm{E}8}{6.0568\textrm{E}8 + j1.8894\textrm{E}9} \amp= \frac{K_1(0)}{((-154-j991)+j60)} + \frac{K_2(0)}{((-154-j991)-j60)} + K_3 + \frac{K_4(0)}{((-154-j991)+154-j991)}\\
+K_3 \amp= -0.2483 - j0.0339~\textrm{A}\\
+\amp= -248.34 - j33.929~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<span class="process-math">\(K_4\)</span> is the complex conjugate of <span class="process-math">\(K_3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+K_4 = -248.34 + j33.929~\textrm{mA}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The expanded form of <span class="process-math">\(I(s)\)</span> is given below. (The unit of each numerator is mA.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+I(s) = \frac{248.34 + j4.2946}{(s+j60)} + \frac{248.34 - j4.2946}{(s-j60)} + \frac{-248.34 - j33.929}{(s+154+j991)} + \frac{-248.34 + j33.929}{(s+154-j991)}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Consult <a href="ch11-laplacetransform.html#ch11-table-of-laplace-transforms" class="xref" data-knowl="./knowl/xref/ch11-table-of-laplace-transforms.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 11.1.1: Laplace transforms of commonly-used time-varying functions.">Table 11.1.1</a> to derive the time-domain function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = [500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t) + \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 11.4.15.1"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5-3" title="Copy heading and permalink for Solution 11.4.15.1" aria-label="Copy heading and permalink for Solution 11.4.15.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 11.4.15"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise5" title="Copy heading and permalink for Exercise 11.4.15" aria-label="Copy heading and permalink for Exercise 11.4.15">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch11-laplace-6.html#ch11-sdomain-analysis-exercise5">In Context</a></span>
+</body>
+</html>

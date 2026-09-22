@@ -1,0 +1,32 @@
+INFO    : Building target print
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/print.
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx to LaTeX as /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-t_2qdnoz/main.tex
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/pretext-latex.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.36.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-t_2qdnoz
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-oeu59ulo
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-7b25rmvh
+INFO    : 
+Finished build for target print. The output is in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/print.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

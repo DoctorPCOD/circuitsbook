@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">29<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive the Norton equivalent circuit between nodes a and b in the circuit shown in <a href="ch9-phasoranalysis-8.html#complex-norton-exercise4-diagram" class="xref" data-knowl="./knowl/xref/complex-norton-exercise4-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.102">Figure 9.6.102</a>. The proportionality constant of the VCCS has a unit of A/V. The source voltage is equal to <span class="process-math">\(v_{AC}(t) = 3~\textrm{V}~\cos(2\pi60t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/ch9-complex-norton-exercise4-diagram.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of voltage source Vac, 5ohm resistor, 500uF capacitor, 200uF capacitor, 0.3*v(t) VCCS, and 8ohm resistor. The high-potential end of Vac and 5ohm connect at node c. The 5ohm, 500uF, and 200uF connect at node d. The 200uF, VCCS, and 8ohm connect at node a. The VCCS flows out of node a. The low-potential end of Vac, 500uF, VCCS, and 8ohm connect at node b. The VCCS flows into node b. Voltage v(t) drops form node d to node b. The Norton equivalent circuit is defined between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.102<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-complex-thev-norton-exercise4" class="xref" data-knowl="./knowl/xref/ch9-complex-thev-norton-exercise4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.29">Exercise 9.6.29</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.102"><a tabindex="-1" href="#complex-norton-exercise4-diagram" title="Copy heading and permalink for Figure 9.6.102" aria-label="Copy heading and permalink for Figure 9.6.102">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-complex-norton-exercise4-answer.svg" role="img" class="contained" alt="Norton equivalent circuit consisting of (561mA angle 113deg) source connected in parallel with the series combination of a 4.07ohm resistor and 1.2mF capacitor."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.103<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.103"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-2-1" title="Copy heading and permalink for Figure 9.6.103" aria-label="Copy heading and permalink for Figure 9.6.103">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.29.1"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-2" title="Copy heading and permalink for Answer 9.6.29.1" aria-label="Copy heading and permalink for Answer 9.6.29.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of the capacitors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{Z_{C200}} \amp= \frac{1}{j(2\pi 60)(200 \times 10^{-6})}\\
+\amp= -j13.2629~\Omega\\
+\vec{Z_{C500}} \amp= \frac{1}{j(2\pi 60)(500 \times 10^{-6})}\\
+\amp= -j5.3052~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Transform the source into a phasor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\vec{V_{AC}} \amp= 3~\cos{0^\circ} + j3~\sin{0^\circ}~\textrm{V}\\
+\amp= 3~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/ch9-complex-norton-exercise4-figure1.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of voltage source Vac, 5ohm resistor, -j5.31ohm impedance, -j13.3ohm impedance, 0.3*V VCCS, and 8ohm resistor. The high-potential end of Vac and 5ohm connect at node c. The 5ohm, -j5.31ohm, and -j13.3ohm connect at node d. The -j13.3ohm, VCCS, and 8ohm connect at node a. The VCCS flows out of node a. The low-potential end of Vac, -j5.31ohm, VCCS, and 8ohm connect at node b. The VCCS flows into node b. Voltage V drops form node d to node b. The Norton equivalent circuit is defined between nodes a and b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.104<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.104"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-5" title="Copy heading and permalink for Figure 9.6.104" aria-label="Copy heading and permalink for Figure 9.6.104">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform KCL at the node connecting the 5 Ω resistor to the two capacitors. All subsequent units are V, A, and Ω.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\vec{V_{AC}} - \vec{V}}{5} = \frac{\vec{V}}{-j5.3052} + \frac{\vec{V}-\vec{V_{OC}}}{-j13.2629}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Perform KCL at the node connecting the 8 Ω resistor to the VCCS and capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\vec{V}-\vec{V_{OC}}}{-j13.2629} = 0.3\vec{V} + \frac{\vec{V_{OC}}}{8}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The two equations can be expressed in a matrix. The left column contains coefficients of <span class="process-math">\(\vec{V}\text{,}\)</span> the middle column contains coefficients of <span class="process-math">\(\vec{V_{OC}}\text{,}\)</span> and the right column contains constants.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+0.2 + j0.2639	\amp -j0.0754 			\amp 0.6\\
+0.3 - j0.0754 	\amp 0.1250 + j0.0754 	\amp 0
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The matrix is shown in reduced row echelon form below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+1 	\amp 0 		\amp 0.7837 - j0.9414\\
+0 	\amp 1 		\amp 0.2456 + j2.5840
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The open-circuit voltage is equal to 0.2456+j2.5840 V.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Short terminals a and b to calculate the Norton equivalent current.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-complex-norton-exercise4-figure2.svg" role="img" class="contained" alt="ircuit with three meshes and four nodes consisting of voltage source Vac, 5ohm resistor, -j5.31ohm impedance, -j13.3ohm impedance, 0.3*V VCCS, and a short. The high-potential end of Vac and 5ohm connect at node c. The 5ohm, -j5.31ohm, and -j13.3ohm connect at node d. The -j13.3ohm, VCCS, and short connect at node a. The VCCS flows out of node a. The low-potential end of Vac, -j5.31ohm, VCCS, and short connect at node b. The VCCS flows into node b. Branch current In flows through the short from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.105<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.105"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-16" title="Copy heading and permalink for Figure 9.6.105" aria-label="Copy heading and permalink for Figure 9.6.105">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform KCL at the node connecting the 5 Ω resistor to the two capacitors. All subsequent units are V, A, and Ω.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\vec{V_{AC}} - \vec{V}}{5} = \frac{\vec{V}}{-j5.3052} + \frac{\vec{V}}{-j13.2629}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Perform KCL at the node connecting the VCCS and capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{\vec{V}}{-j13.2629} = 0.3\vec{V} + \vec{I_N}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The two equations can be expressed in a matrix. The left column contains coefficients of <span class="process-math">\(\vec{V}\text{,}\)</span> the middle column contains coefficients of <span class="process-math">\(\vec{I_N}\text{,}\)</span> and the right column contains constants.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+0.2 + j0.2639	\amp 0 	\amp 0.6\\
+0.3 - j0.0754 	\amp 1 	\amp 0
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The matrix is shown in reduced row echelon form below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix} 
+1 	\amp 0 		\amp 1.0945 - j1.4441\\
+0 	\amp 1 		\amp -0.2195 + j0.5158
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The Norton equivalent current is equal to −0.2195+j0.5158 A.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate the Norton equivalent resistance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+Z_N \amp= \frac{0.2456 + j2.5840~\textrm{V}}{-0.2195 + j0.5158~\textrm{A}}\\
+\amp= 4.0703 - j2.2082
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the value of the capacitance based on the Thévenin equivalent reactance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+C \amp= -\frac{1}{2\pi 60 (2.2082)}\\
+\amp= 1.2~\textrm{mF}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.29.1"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4-3" title="Copy heading and permalink for Solution 9.6.29.1" aria-label="Copy heading and permalink for Solution 9.6.29.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.29"><a tabindex="-1" href="#ch9-complex-thev-norton-exercise4" title="Copy heading and permalink for Exercise 9.6.29" aria-label="Copy heading and permalink for Exercise 9.6.29">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-complex-thev-norton-exercise4">In Context</a></span>
+</body>
+</html>

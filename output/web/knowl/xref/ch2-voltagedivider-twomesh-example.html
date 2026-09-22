@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Voltage divider with a two-mesh circuit.</span>
+</h2>
+<div class="para">Calculate <span class="process-math">\(V_{OUT}\)</span> in the circuit shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-voltagedividerexmeshesfig1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes containing one voltage source Vs and four resistors (R1, R2, R3, and R4). The high-potential end of Vs is connected to R1 at node a. R1, R2, and R3 are connected at node b. R3 and R4 are connected at node c. The low-potential end of Vs, R2, and R4 are connected at node d. Voltage Vx is measured over R2 from node b to node d. Voltage Vout is measured over R4 from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circuit used to demonstrate the voltage divider rule in a two-mesh circuit.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.6"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-2" title="Copy heading and permalink for Figure 2.5.6" aria-label="Copy heading and permalink for Figure 2.5.6">🔗</a></div></figcaption>
+</figure> 
+<div class="para">The voltage divider rule cannot immediately be applied to calculate <span class="process-math">\(V_{OUT}\text{.}\)</span> This is because the resistors are not all in series with the voltage source <span class="process-math">\(V_S\text{.}\)</span> However, the voltage divider rule can be applied directly to calculate <span class="process-math">\(V_X\text{,}\)</span> provided that the equivalent resistance seen by <span class="process-math">\(R_2\)</span> is calculated. This creates a circuit with two resistances in series with the voltage source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">The equivalent resistance seen by <span class="process-math">\(R_2\)</span> is equal to<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+R_2 // (R_3 + R_4).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">Now, the voltage divider rule can be used to calculate <span class="process-math">\(V_X\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+V_X = V_S\left(\frac{R_2 // (R_3 + R_4)}{R_1 + (R_2 // (R_3 + R_4))}\right)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">Now that <span class="process-math">\(V_X\)</span> is known, the circuit can be re-drawn to represent <span class="process-math">\(V_X\)</span> as a source in series with resistors <span class="process-math">\(R_3\)</span> and <span class="process-math">\(R_4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch2-voltagedividerexmeshesfig2.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes containing a voltage source Vx and two resistors (R3 and R4). The high-potential end of Vx connects to R3 at node a. R3 and R4 connect at node b. The low-potential end of Vx connects to R4 at node c. Voltage Vout is measured over R4 from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The circuit with <span class="process-math">\(V_X\)</span> represented as a source.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.7"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-9" title="Copy heading and permalink for Figure 2.5.7" aria-label="Copy heading and permalink for Figure 2.5.7">🔗</a></div></figcaption>
+</figure> 
+<div class="para">Use the voltage divider rule to calculate the output voltage.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+V_{OUT} \amp= V_X\left(\frac{R_4}{R_3 + R_4}\right)\\
+\amp= V_S\left(\frac{R_2 // (R_3 + R_4)}{R_1 + (R_2 // (R_3 + R_4))}\right)\left(\frac{R_4}{R_3 + R_4}\right)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">This process can be repeatedly iterated if there are three or more meshes in a circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.5.5: Voltage divider with a two-mesh circuit"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example" title="Copy heading and permalink for Example 2.5.5: Voltage divider with a two-mesh circuit" aria-label="Copy heading and permalink for Example 2.5.5: Voltage divider with a two-mesh circuit">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch2-voltagedivider.html#ch2-voltagedivider-twomesh-example">In Context</a></span>
+</body>
+</html>

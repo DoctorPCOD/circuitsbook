@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive the differential equation in terms of <span class="process-math">\(v(t)\)</span> for the circuit shown in <a href="ch7-secondorder-10.html#challenge-second-example4-diagram" class="xref" data-knowl="./knowl/xref/challenge-second-example4-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.70">Figure 7.8.70</a>. Assume that the op-amp is sufficiently sourced such that the output will never saturate.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-challenge-second-example4-diagram.svg" role="img" class="contained" alt="Circuit with five nodes consisting of an op-amp, three resistors (R1, R2, and Rf), and two capacitors (C1 and C2). R1 connects to voltage signal vin(t) at node a. R1, R2, C1, and C2 connect at node b. C1, Rf, and the inverting input to the op-amp connect at node c. C2, Rf, and the output of the op-amp connect at node d. R2 and the non-inverting input of the op-amp connect to ground at node e. Voltage vX(t) drops from node b to ground. Voltage v(t) drops from the output of the op-amp to ground."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.70<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch7-secondorder-10.html#ch7-challenge-ex4" class="xref" data-knowl="./knowl/xref/ch7-challenge-ex4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.8.20">Exercise 7.8.20</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.70"><a tabindex="-1" href="#challenge-second-example4-diagram" title="Copy heading and permalink for Figure 7.8.70" aria-label="Copy heading and permalink for Figure 7.8.70">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} = \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt} + \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.8.20.1"><a tabindex="-1" href="#ch7-challenge-ex4-2" title="Copy heading and permalink for Answer 7.8.20.1" aria-label="Copy heading and permalink for Answer 7.8.20.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Perform KCL at the node connecting <span class="process-math">\(R_1\text{,}\)</span> <span class="process-math">\(R_2\text{,}\)</span> <span class="process-math">\(C_1\text{,}\)</span> and <span class="process-math">\(C_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+\frac{v_{in}(t) - v_X(t)}{R_1} = \frac{v_X(t)}{R_2} + C_2 \frac{d}{dt}\left(v_X(t) - v(t)\right) + C_1\frac{dv_X(t)}{dt}\tag{7.8.45}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Perform KCL at the inverting input of the op-amp. Then, solve for <span class="process-math">\(v_X(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align}
+C_1\frac{dv_X(t)}{dt} \amp= \frac{-v(t)}{R_F}\tag{7.8.46}\\
+\frac{dv_X(t)}{dt} \amp= \frac{-v(t)}{C_1R_F}\tag{7.8.47}\\
+v_X(t) \amp= -\frac{1}{C_1R_F}\int v(t) \,dt\tag{7.8.48}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug <a href="ch7-secondorder-10.html#ch7-challenge-ex4-3-4-1" class="xref" data-knowl="./knowl/xref/ch7-challenge4-opamp-kcl2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.48">(7.8.48)</a> into <a href="ch7-secondorder-10.html#ch7-challenge4-opamp-kcl1" class="xref" data-knowl="./knowl/xref/ch7-challenge4-opamp-kcl1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.45">(7.8.45)</a> and reduce until the differential equation is in standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+-\frac{v_{in}(t)}{R_1} \amp= \frac{1}{R_1C_1R_F}\int v(t) \,dt + \frac{1}{R_2C_1R_F}\int v(t) \,dt + \frac{C_2}{C_1R_F}v(t) + C_2 \frac{dv(t)}{dt} + \frac{C_1}{C_1R_F}v(t)\\
+-\frac{1}{R_1}\frac{dv_{in}}{dt} \amp= \frac{1}{C_1R_1R_F}v(t) + \frac{1}{C_1R_2R_F}v(t) + \frac{C_2}{C_1R_F}\frac{dv(t)}{dt} + C_2\frac{d^2v(t)}{dt^2} + \frac{1}{R_F}\frac{dv(t)}{dt}\\
+-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt} + \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.20.1"><a tabindex="-1" href="#ch7-challenge-ex4-3" title="Copy heading and permalink for Solution 7.8.20.1" aria-label="Copy heading and permalink for Solution 7.8.20.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 7.8.20"><a tabindex="-1" href="#ch7-challenge-ex4" title="Copy heading and permalink for Exercise 7.8.20" aria-label="Copy heading and permalink for Exercise 7.8.20">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-secondorder-10.html#ch7-challenge-ex4">In Context</a></span>
+</body>
+</html>

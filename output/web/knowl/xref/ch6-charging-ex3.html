@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive equations for <span class="process-math">\(i(t)\)</span> and <span class="process-math">\(v(t)\)</span> given the circuit shown in <a href="ch6-inductors-8.html#rl-charging-example3-diagram" class="xref" data-knowl="./knowl/xref/rl-charging-example3-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.64">Figure 6.6.64</a>. The switch has been open for a very long time before closing at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-rl-charging-example3-diagram.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of a 10V source, four resistors, inductor, and SPST switch. The high-potential end of the 10V source connects to the 200ohm resistor at node a. The 200ohm resistor connects to one end of the SPST switch at node b. The other end of the SPST switch connects to the 250mH inductor and 500ohm (A) resistor at node c. The 500ohm (A) and 500ohm (B) resistors connect at node d. The 250mH inductor connects to the 250ohm resistor at node e. The low-potential end of the 10V source connects to the 250ohm resistor and 500ohm (B) resistor at node f. Voltage v(t) drops over the 250ohm resistor from node e to node f. Branch current i(t) flows through the 250ohm resistor from node e to node f. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.64<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch6-inductors-8.html#ch6-charging-ex3" class="xref" data-knowl="./knowl/xref/ch6-charging-ex3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.6.18">Exercise 6.6.18</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.64"><a tabindex="-1" href="#rl-charging-example3-diagram" title="Copy heading and permalink for Figure 6.6.64" aria-label="Copy heading and permalink for Figure 6.6.64">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(t) \amp= 20~\textrm{mA}~\left[1 - \textrm{e}^{-1667t}\right]~u(t)\\
+v(t) \amp= 5~\textrm{V}~\left[1 - \textrm{e}^{-1667t}\right]~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.6.18.1"><a tabindex="-1" href="#ch6-charging-ex3-2" title="Copy heading and permalink for Answer 6.6.18.1" aria-label="Copy heading and permalink for Answer 6.6.18.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">First, simplify the circuit by combining the two series resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-chargingrl-example3-solution1.svg" role="img" class="contained" alt="Circuit with 5 nodes consisting of a 10V source, three resistors, inductor, and SPST switch. The high-potential end of the 10V source connects to the 200ohm resistor at node a. The 200ohm resistor connects to one end of the SPST switch at node b. The other end of the SPST switch connects to the 250mH inductor and 1000ohm resistor at node c. The 250mH inductor connects to the 250ohm resistor at node d. The low-potential end of the 10V source connects to the 250ohm resistor and 1000ohm resistor at node e. Voltage v(t) drops over the 250ohm resistor from node d to node e. Branch current i(t) flows through the 250ohm resistor from node d to node e. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.65<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.65"><a tabindex="-1" href="#ch6-charging-ex3-3-2" title="Copy heading and permalink for Figure 6.6.65" aria-label="Copy heading and permalink for Figure 6.6.65">🔗</a></div></figcaption>
+</figure>
+<div class="para">Analyze the circuit in the final steady-state condition. The inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-chargingrl-example3-solution2.svg" role="img" class="contained" alt="Circuit with 3 nodes and 2 meshes consisting of a 10V source and three resistors. The high-potential end of the 10V source connects to the 200ohm resistor at node a. The 200ohm, 250ohm, and 1000ohm resistors connect at node b. The low-potential end of the 10V source connects to the 250ohm and 1000ohm resistors at node c. Branch current i(infinity) flows through the 250ohm resistor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.66<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.66"><a tabindex="-1" href="#ch6-charging-ex3-3-4" title="Copy heading and permalink for Figure 6.6.66" aria-label="Copy heading and permalink for Figure 6.6.66">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use source transformation to convert the voltage source into a current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{10~\textrm{V}}{0.2~\textrm{k}\Omega} = 50~\textrm{mA}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-chargingrl-example3-solution3.svg" role="img" class="contained" alt="Circuit with 2 nodes and 3 meshes consisting of a 50mA source, 200ohm resistor, 250ohm resistor, and 1000ohm resistor. All four circuit elements are connected in parallel between nodes a and b. The 50mA source flows out of node b into node a. Branch current i(infinity) flows through the 250ohm resistor from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.67<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.67"><a tabindex="-1" href="#ch6-charging-ex3-3-7" title="Copy heading and permalink for Figure 6.6.67" aria-label="Copy heading and permalink for Figure 6.6.67">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= \frac{1}{\frac{1}{200~\Omega}+\frac{1}{250~\Omega}+\frac{1}{1000~\Omega}}\\
+\amp= 100~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The voltage <span class="process-math">\(v(\infty)\)</span> is dropped in parallel with all three resistors. Use Ohm’s law with the source current and <span class="process-math">\(R_{EQ}\)</span> to calculate this value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(\infty) \amp= (0.1~\textrm{k}\Omega)(50~\textrm{mA})\\
+\amp= 5~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law through the branch with the 250 Ω resistor to calculate <span class="process-math">\(i(\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(\infty) \amp= \frac{5~\textrm{V}}{0.25~\textrm{k}\Omega}\\
+\amp= 20~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t = 0^+\)</span> to calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-chargingrl-example3-solution4.svg" role="img" class="contained" alt="Circuit with 4 nodes and 2 meshes consisting of a 10V source, three resistors, and one inductor. The high-potential end of the 10V source connects to the 200ohm resistor at node a. The 200ohm resistor, 250mH inductor, and 1000ohm resistor connect at node b. The 250mH inductor connects to the 250ohm resistor at node c. The low-potential end of the 10V source connects to the 250ohm and 1000ohm resistors at node d. Voltage v(t) drops over the 250ohm resistor from node c to node d. Branch current i(t) flows through the 250ohm resistor from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.68<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.68"><a tabindex="-1" href="#ch6-charging-ex3-3-15" title="Copy heading and permalink for Figure 6.6.68" aria-label="Copy heading and permalink for Figure 6.6.68">🔗</a></div></figcaption>
+</figure>
+<div class="para">Deactivate the voltage source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch6-chargingrl-example3-solution5.svg" role="img" class="contained" alt="Circuit with 3 nodes and 2 meshes consisting of three resistors and one inductor. The 200ohm resistor, 250mH inductor, and 1000ohm resistor connect at node a. The 250mH inductor connects to the 250ohm resistor at node b. The 200ohm, 250ohm, and 1000ohm resistors at node c. Voltage v(t) drops over the 250ohm resistor from node b to node c. Branch current i(t) flows through the 250ohm resistor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.69<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.69"><a tabindex="-1" href="#ch6-charging-ex3-3-17" title="Copy heading and permalink for Figure 6.6.69" aria-label="Copy heading and permalink for Figure 6.6.69">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= (200~\Omega // 1000~\Omega) + 250~\Omega\\
+\amp= 166.67~\Omega + 250~\Omega\\
+\amp= 416.67~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to calculate <span class="process-math">\(\tau\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\tau \amp= \frac{0.25~\textrm{H}}{416.67~\Omega}\\
+\amp= 6 \times 10^{-4}~\textrm{s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-chargingrlcurrent" class="xref" data-knowl="./knowl/xref/ch6-chargingrlcurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.6">(6.5.6)</a> to derive an equation for <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = 20~\textrm{mA}~\left[1 - \textrm{e}^{-1667t}\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= (0.25~\textrm{k}\Omega)(20~\textrm{mA}\left[1 - \textrm{e}^{-1667t}\right]~u(t))\\
+\amp= 5~\textrm{V}~\left[1 - \textrm{e}^{-1667t}\right]~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-charging-ex3-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.18.1"><a tabindex="-1" href="#ch6-charging-ex3-3" title="Copy heading and permalink for Solution 6.6.18.1" aria-label="Copy heading and permalink for Solution 6.6.18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.6.18"><a tabindex="-1" href="#ch6-charging-ex3" title="Copy heading and permalink for Exercise 6.6.18" aria-label="Copy heading and permalink for Exercise 6.6.18">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch6-inductors-8.html#ch6-charging-ex3">In Context</a></span>
+</body>
+</html>

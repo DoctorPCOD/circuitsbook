@@ -1,0 +1,15 @@
+INFO    : Building target web
+ERROR   : XInclude Error caused build to fail:
+ERROR   : /Users/ajp/ENGIN-2223_yellow_book/source/ch2-introduction.ptx:9:270:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: xref line 9 and p
+/Users/ajp/ENGIN-2223_yellow_book/source/ch2-introduction.ptx:14:18:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 9 and introduction
+/Users/ajp/ENGIN-2223_yellow_book/source/ch2-introduction.ptx:19:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: introduction line 6 and chapter
+/Users/ajp/ENGIN-2223_yellow_book/source/main.ptx:16:0:ERROR:XINCLUDE:XINCLUDE_NO_FALLBACK: could not load /Users/ajp/ENGIN-2223_yellow_book/source/ch2-introduction.ptx, and no fallback was found
+CRITICAL: XML syntax for source file is invalid
+INFO    : ------------------------
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

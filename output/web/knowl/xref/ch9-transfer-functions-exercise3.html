@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">33<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive a transfer function for the circuit shown in <a href="ch9-phasoranalysis-8.html#transfer-functions-exercise3-diagram" class="xref" data-knowl="./knowl/xref/transfer-functions-exercise3-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 9.6.116">Figure 9.6.116</a>. Then, determine the filter type.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-transfer-functions-exercise3-diagram.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of voltage source Vin, resistor R, capacitor C, and inductor L. The high-potential end of Vin, R, and C connect at node a. R, C, and L connect at node b. The low-potential end of Vin connects to L at node c. Voltage Vout drops from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.116<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch9-phasoranalysis-8.html#ch9-transfer-functions-exercise3" class="xref" data-knowl="./knowl/xref/ch9-transfer-functions-exercise3.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 9.6.33">Exercise 9.6.33</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.116"><a tabindex="-1" href="#transfer-functions-exercise3-diagram" title="Copy heading and permalink for Figure 9.6.116" aria-label="Copy heading and permalink for Figure 9.6.116">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+H(j\omega) = \frac{-\omega^2 + j\omega \frac{1}{RC}}{-\omega^2 + j\omega\frac{1}{RC} + \frac{1}{LC}}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The circuit is a passive, second-order, high-pass filter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 9.6.33.1"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-2" title="Copy heading and permalink for Answer 9.6.33.1" aria-label="Copy heading and permalink for Answer 9.6.33.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Calculate the equivalent impedance of the resistor and capacitor in parallel.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R//C \amp= R//\frac{1}{j\omega C}\\
+\amp= \frac{\frac{R}{j\omega C}}{R + \frac{1}{j\omega C}}\\
+\amp= \frac{R}{j\omega CR + 1}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the voltage divider rule to calculate <span class="process-math">\(H(j\omega)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+H(j\omega) \amp= \frac{j\omega L}{j\omega L + \frac{R}{j\omega CR + 1}}\\
+\amp= \frac{-\omega^2 LCR + j\omega L}{-\omega^2 LCR + j\omega L + R}\\
+\amp= \frac{-\omega^2 + j\omega \frac{1}{RC}}{-\omega^2 + j\omega\frac{1}{RC} + \frac{1}{LC}}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(\omega=0\text{.}\)</span> <span class="process-math">\(v_{out}(0)\)</span> is zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-transfer-functions-exercise3-figure1.svg" role="img" class="contained" alt="Circuit with three nodes consisting of voltage source Vin, resistor R, and short. The high-potential end of Vin and R connect at node a. R and the short connect at node b. The low-potential end of Vin connects to the short at node c. Voltage Vout(0) drops from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.117<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.117"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-6" title="Copy heading and permalink for Figure 9.6.117" aria-label="Copy heading and permalink for Figure 9.6.117">🔗</a></div></figcaption>
+</figure>
+<div class="para">Analyze the circuit at <span class="process-math">\(\omega \rightarrow \infty\text{.}\)</span> <span class="process-math">\(v_{out}(\infty)\)</span> is not zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch9-transfer-functions-exercise3-figure2.svg" role="img" class="contained" alt="Circuit with voltage source vin connected to an open. Vout (infinity) drops over the source."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.6.118<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.6.118"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-8" title="Copy heading and permalink for Figure 9.6.118" aria-label="Copy heading and permalink for Figure 9.6.118">🔗</a></div></figcaption>
+</figure>
+<div class="para">This circuit is a passive, second-order, high-pass filter. (Refer to <a href="ch9-passivefilters.html#ch9-filtertype-table" class="xref" data-knowl="./knowl/xref/ch9-filtertype-table.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 9.3.31: Determination of filter type based on very-low and very-high frequency analysis of the output voltage.">Table 9.3.31</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.33.1"><a tabindex="-1" href="#ch9-transfer-functions-exercise3-3" title="Copy heading and permalink for Solution 9.6.33.1" aria-label="Copy heading and permalink for Solution 9.6.33.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 9.6.33"><a tabindex="-1" href="#ch9-transfer-functions-exercise3" title="Copy heading and permalink for Exercise 9.6.33" aria-label="Copy heading and permalink for Exercise 9.6.33">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch9-phasoranalysis-8.html#ch9-transfer-functions-exercise3">In Context</a></span>
+</body>
+</html>

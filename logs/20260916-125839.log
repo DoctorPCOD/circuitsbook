@@ -1,0 +1,22 @@
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : successful application of /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Validating source of target web (method: local, report form: full, engine: jing).
+INFO    : converting /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ikgmrv04/merged.xml to enhanced (pre-processed) PreTeXt source as /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ikgmrv04/assembled-attributed.xml
+INFO    : XSL conversion of /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ikgmrv04/merged.xml by /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+WARNING : * PTX:DEPRECATE: (2026-07-30) the external directory is a property of your source, and is now declared with a "directories/@external" attribute within "docinfo".  The publication file entry "source/directories/@external" is honored meanwhile, but please relocate it.
+INFO    : * failed to load "": No such file or directory
+INFO    : * failed to load "": No such file or directory
+ERROR   : processing with /Users/ajp/.ptx/2.52.3/core/xsl/utilities/pretext-enhanced-source.xsl has failed
+
+ERROR   : Cannot resolve URI 
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

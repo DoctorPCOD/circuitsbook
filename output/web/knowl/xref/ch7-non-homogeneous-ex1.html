@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive an equation for <span class="process-math">\(v(t)\)</span> given the circuit shown in <a href="ch7-secondorder-10.html#non-homogeneous-second-example1-diagram" class="xref" data-knowl="./knowl/xref/non-homogeneous-second-example1-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.37">Figure 7.8.37</a>. The switch is in position b for a very long time before moving to position a at a time of zero seconds. The component values are <span class="process-math">\(I_S = 200~\textrm{mA}\text{,}\)</span> <span class="process-math">\(R_S = 100~\Omega\text{,}\)</span> <span class="process-math">\(R_1 = 20~\Omega\text{,}\)</span> <span class="process-math">\(R_2 = 40~\Omega\text{,}\)</span> <span class="process-math">\(C_1 = 5~\textrm{mF}\text{,}\)</span> and <span class="process-math">\(C_2 = 20~\textrm{mF}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-non-homogeneous-second-example1-diagram.svg" role="img" class="contained" alt="Circuit with five nodes consisting of current source Is, resistors (Rs, R1, and R2), SPDT switch, and capacitors C1 and C2. Is, Rs, and position a of the SPDT switch connect at node a. Is flows into node a. Is, Rs, position b of the SPDT switch, C1, and C2 connect at node b. Is flows out of node b. The input of the SPDT switch and R1 connect at node c. R1, C1, and R2 connect at node d. R2 and C2 connect at node e. Voltage vX(t) drops over C1 from node d to node b. Voltage v(t) drops over C2 from node e to node b. The SPDT switch is depicted as switching from position b to position a."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.37<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch7-secondorder-10.html#ch7-non-homogeneous-ex1" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-ex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.8.11">Exercise 7.8.11</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.37"><a tabindex="-1" href="#non-homogeneous-second-example1-diagram" title="Copy heading and permalink for Figure 7.8.37" aria-label="Copy heading and permalink for Figure 7.8.37">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[20~\textrm{V} -20.7~\textrm{V}~\textrm{e}^{-0.273t} + 0.739~\textrm{V}~\textrm{e}^{-7.64t}\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.8.11.1"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-2" title="Copy heading and permalink for Answer 7.8.11.1" aria-label="Copy heading and permalink for Answer 7.8.11.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The initial voltage drops will both be zero as the circuit is not connected to a source in its initial steady-state configuration. Both of these values are continuous with time, as they are voltages measured over capacitors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">To calculate the particular solution, analyze the circuit in its final steady-state condition. Each capacitor can be replaced by an open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-non-homogeneous-example1-figure1.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of current source Is and resistors Rs, R1, and R2. Is, Rs, and R1 connect at node a. Is flows into node a. R1 and R2 connect at node b. R2 floats at node c. Is and Rs connect at node d. Is flows out of node d. Voltage vX(infinity) drops from node b to node d. Voltage v(infinity) drops from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.38<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.38"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-3" title="Copy heading and permalink for Figure 7.8.38" aria-label="Copy heading and permalink for Figure 7.8.38">🔗</a></div></figcaption>
+</figure>
+<div class="para">Neither <span class="process-math">\(R_1\)</span> nor <span class="process-math">\(R_2\)</span> contribute to the circuit in this configuration. Both <span class="process-math">\(v_X(\infty)\)</span> and <span class="process-math">\(v(\infty)\)</span> are equal to each other. Use Ohm’s law to calculate this voltage.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(\infty) \amp= (0.2~\textrm{A})(100~\Omega)\\
+\amp= 20~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t=0^+\)</span> to derive the differential equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-non-homogeneous-example1-figure2.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of current source Is, resistors (Rs, R1, and R2) and capacitors C1 and C2. Is, Rs, and R1 connect at node a. Is flows into node a. R1, C1, and R2 connect at node b. R2 and C2 connect at node c. Is, Rs, C1, and C2 connect at node d. Is flows out of node d. Voltage vX(t) drops over C1 from node b to node d. Voltage v(t) drops over C2 from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.39<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.39"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-7" title="Copy heading and permalink for Figure 7.8.39" aria-label="Copy heading and permalink for Figure 7.8.39">🔗</a></div></figcaption>
+</figure>
+<div class="para">Transform the current source to a voltage source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-non-homogeneous-example1-figure3.svg" role="img" class="contained" alt="Circuit with two meshes and five nodes consisting of voltage source Is*Rs, resistors Rs, R1, and R2, and capacitors C1 and C2. The high-potential end of the voltage source connects to Rs at node a. Rs and R1 connect at node b. R1, C1, and R2 connect at node c. R2 and C2 connect at node d. The low-potential end of the voltage source, C1, and C2 connect at node e. Voltage vX(t) drops over C1 from node c to node e. Voltage v(t) drops over C2 from node d to node e."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.40<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.40"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-9" title="Copy heading and permalink for Figure 7.8.40" aria-label="Copy heading and permalink for Figure 7.8.40">🔗</a></div></figcaption>
+</figure>
+<div class="para">Combine series resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-non-homogeneous-example1-figure4.svg" role="img" class="contained" alt="Same circuit as above with Rs and R1 depicted as a single resistor of value Rs+R1."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.41<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.41"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-11" title="Copy heading and permalink for Figure 7.8.41" aria-label="Copy heading and permalink for Figure 7.8.41">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform KCL at the node connecting <span class="process-math">\(R_S+R_1\text{,}\)</span> <span class="process-math">\(C_1\text{,}\)</span> and <span class="process-math">\(R_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align}
+\frac{I_SR_S-v_X(t)}{R_S+R_1} \amp= C_1\frac{dv_X(t)}{dt} + C_2\frac{dv(t)}{dt}\tag{7.8.16}\\
+\frac{I_SR_S}{R_S+R_1} \amp= \frac{v_X(t)}{R_S+R_1} + C_1\frac{dv_X(t)}{dt} + C_2\frac{dv(t)}{dt}\tag{7.8.17}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Perform KVL around the right-hand loop of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation}
+v_X(t) = R_2C_2\frac{dv(t)}{dt} + v(t)\tag{7.8.18}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plus <a href="ch7-secondorder-10.html#ch7-non-homogeneous-ex1-eq-kvl" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-ex1-eq-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.18">(7.8.18)</a> into <a href="ch7-secondorder-10.html#ch7-non-homogeneous-ex1-3-13-1" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-ex1-eq-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.17">(7.8.17)</a> and reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{I_SR_S}{R_S+R_1} \amp= \frac{1}{R_S+R_1}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_1\frac{d}{dt}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_2\frac{dv(t)}{dt}\\
+\amp= \frac{R_2C_2}{R_S+R_1}\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t) + C_1C_2R_2\frac{d^2v(t)}{dt^2} + C_1\frac{dv(t)}{dt} + C_2\frac{dv(t)}{dt}\\
+\amp= C_1C_2R_2\frac{d^2v(t)}{dt^2} + \left(\frac{R_2C_2}{R_S+R_1} + C_1 + C_2\right)\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t)\\
+\frac{I_SR_S}{C_1C_2(R_S+R_1)R_2} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{(R_S+R_1)C_1} + \frac{1}{R_2C_2} + \frac{1}{R_2C_1}\right)\frac{dv(t)}{dt} + \frac{1}{C_1C_2(R_S+R_1)R_2}v(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug in component values, using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+41.667 = \frac{d^2v(t)}{dt^2} + 7.9167\frac{dv(t)}{dt} + 2.0833
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> to calculate the damping parameter and use <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\alpha \amp= 3.9583~\textrm{Np/s}\\
+\omega_0 \amp= 1.4434~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<a href="ch7-secondorder-10.html#ch7-non-homogeneous-ex1-eq-kvl" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-ex1-eq-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.18">(7.8.18)</a> can be used to calculate <span class="process-math">\(v'(0^+)\text{.}\)</span> Because both <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v_X(0^+)\)</span> are zero, <span class="process-math">\(v'(0^+)\)</span> will also be zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The circuit is overdamped. Use <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.3">(7.2.3)</a> and <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.4">(7.2.4)</a> to calculate the roots of the characteristic equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+s_1 \amp= -3.9583 + \sqrt{3.9583^2 - 1.4434^2}\\
+\amp= -0.2725\\
+s_2	\amp= -3.9583 - \sqrt{3.9583^2 - 1.4434^2}\\
+\amp= -7.6441
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.4">(7.6.4)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.5">(7.6.5)</a> to calculate the coefficients of the equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+A_1 \amp= \frac{(0-20)(-7.6441)}{-7.6441-(-0.2725)}\\
+\amp= -20.7394~\textrm{V}\\
+A_2 \amp= \frac{- (0-20)(-0.2725)}{-7.6441-(-0.2725)}\\
+\amp= 0.7394~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug these values into <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a> to derive the equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[20~\textrm{V} -20.7~\textrm{V}~\textrm{e}^{-0.273t} + 0.739~\textrm{V}~\textrm{e}^{-7.64t}\right]~u(t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.11.1"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3" title="Copy heading and permalink for Solution 7.8.11.1" aria-label="Copy heading and permalink for Solution 7.8.11.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 7.8.11"><a tabindex="-1" href="#ch7-non-homogeneous-ex1" title="Copy heading and permalink for Exercise 7.8.11" aria-label="Copy heading and permalink for Exercise 7.8.11">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-secondorder-10.html#ch7-non-homogeneous-ex1">In Context</a></span>
+</body>
+</html>

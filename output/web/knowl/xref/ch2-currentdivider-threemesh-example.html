@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h2 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Current divider with a three-mesh circuit.</span>
+</h2>
+<div class="para">Calculate <span class="process-math">\(I_{OUT}\)</span> in the circuit shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-currentdividerexmeshesfig1.svg" role="img" class="contained" alt="Circuit with 3 meshes and 3 nodes consisting of a current source Is and four resistors (R1, R2, R3, and R4). Is, R1, and R2 connect at node a. Is flows into node a. R2, R3, and R4 connect at node b. Is, R1, R3, and R4 connect at node c. Is flows out of node c. Branch current Ix flows through R2 from node a to node b. Branch current Iout flows through R4 from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circuit used to demonstrate the current divider rule in a three-mesh circuit.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.6.5"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-2" title="Copy heading and permalink for Figure 2.6.5" aria-label="Copy heading and permalink for Figure 2.6.5">🔗</a></div></figcaption>
+</figure> 
+<div class="para">The current divider rule cannot immediately be applied to calculate <span class="process-math">\(I_{OUT}\text{.}\)</span> This is because the resistors are not all in parallel with the current source. However, the current divider rule can be applied directly to calculate <span class="process-math">\(I_X\text{,}\)</span> provided that the equivalent resistance seen by <span class="process-math">\(R_1\)</span> is calculated. This creates a circuit with two resistances in parallel with the current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">The equivalent resistance seen by <span class="process-math">\(R_1\)</span> is equal to<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+R_2 + (R_3 // R_4).
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">Now, the current divider rule can be used to calculate <span class="process-math">\(I_X\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+I_X = I_S\left(\frac{R_1 // (R_2 + (R_3 // R_4))}{R_2+(R_3//R_4)}\right)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">Now that <span class="process-math">\(I_X\)</span> is known, the circuit can be re-drawn to represent <span class="process-math">\(I_X\)</span> as a source in parallel with resistors <span class="process-math">\(R_3\)</span> and <span class="process-math">\(R_4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-currentdividerexmeshesfig2.svg" role="img" class="contained" alt="Circuit with two nodes and two meshes consisting of a current source Ix and resistors R3 and R4. All three circuit elements are connected in parallel between nodes a and b. Current source Ix flows out of node b into node a. Branch current Iout flows through R4 from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.6.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The circuit with <span class="process-math">\(I_X\)</span> represented as a source.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.6.6"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-9" title="Copy heading and permalink for Figure 2.6.6" aria-label="Copy heading and permalink for Figure 2.6.6">🔗</a></div></figcaption>
+</figure> 
+<div class="para">Use the current divider rule to calculate the output voltage.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I_{OUT} \amp= I_X\left(\frac{R_3//R_4}{R_4}\right)\\
+\amp= I_S\left(\frac{R_1 // (R_2 + (R_3 // R_4))}{R_2+(R_3//R_4)}\right)\left(\frac{R_3//R_4}{R_4}\right)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para">This process can be repeatedly iterated if there are four or more meshes in a circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.6.4: Current divider with a three-mesh circuit"><a tabindex="-1" href="#ch2-currentdivider-threemesh-example" title="Copy heading and permalink for Example 2.6.4: Current divider with a three-mesh circuit" aria-label="Copy heading and permalink for Example 2.6.4: Current divider with a three-mesh circuit">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch2-currentdivider.html#ch2-currentdivider-threemesh-example">In Context</a></span>
+</body>
+</html>

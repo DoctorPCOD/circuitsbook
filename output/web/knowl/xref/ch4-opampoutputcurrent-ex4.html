@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">The LM118 op-amp chip can sink up to 65 mA of current. Calculate the smallest load resistor that can be used in the circuit shown in <a href="ch4-op-amps-10.html#examplecircuit414" class="xref" data-knowl="./knowl/xref/examplecircuit414.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.8.19">Figure 4.8.19</a>. Then, calculate the power consumed by that resistor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch4-examplecircuit414.svg" role="img" class="contained" alt="Op-amp circuit with 3V source, 6V source, 500ohm resistor, 200ohm resistor, 1k resistor, and Rload. The high-potential end of the 3V source connects to the 500ohm resistor at node A. The high-potential end of the 6V source connects to the 200ohm resistor at node B. The 500ohm resistor, 200ohm resistor, 1k resistor, and inverting input of the op-amp connect at node C. The 1k resistor, Rload, and output of the op-amp connect at node D. The low-potential end of both voltage sources, non-inverting input of the op-amp, and Rload connect to GND at node E."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.8.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch4-op-amps-10.html#ch4-opampoutputcurrent-ex4" class="xref" data-knowl="./knowl/xref/ch4-opampoutputcurrent-ex4.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 4.8.14">Exercise 4.8.14</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 4.8.19"><a tabindex="-1" href="#examplecircuit414" title="Copy heading and permalink for Figure 4.8.19" aria-label="Copy heading and permalink for Figure 4.8.19">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{LOAD} \amp= 1.24~\textrm{k}\Omega\\
+P_{LOAD} \amp= 1.04~\textrm{W}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 4.8.14.1"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-2" title="Copy heading and permalink for Answer 4.8.14.1" aria-label="Copy heading and permalink for Answer 4.8.14.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The op-amp circuit is an inverting summing op-amp. Apply <a href="ch4-dividedfeedback.html#ch4-invertingsummingampeq" class="xref" data-knowl="./knowl/xref/ch4-invertingsummingampeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 4.5.5">(4.5.5)</a> to calculate <span class="process-math">\(V_{OUT}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+V_{OUT} \amp= (-1~\textrm{k}\Omega)\left(\frac{3~\textrm{V}}{0.5~\textrm{k}\Omega}+\frac{6~\textrm{V}}{0.2~\textrm{k}\Omega}\right)\\
+\amp= (-1~\textrm{k}\Omega)(6~\textrm{mA}+30~\textrm{mA})\\
+\amp= (-1~\textrm{k}\Omega)(36~\textrm{mA})\\
+\amp= -36~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate the current through the 1 kΩ feedback resistor that flows into the output node of the op-amp.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I_{F} \amp= \frac{0~\textrm{V} - (-36~\textrm{V})}{1~\textrm{k}\Omega}\\
+\amp= 36~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The op-amp can only sink 65 mA of current. Calculate the current that can flow into the output node of the op-amp through the load resistor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I_{LOAD} \amp= 65~\textrm{mA} - 36~\textrm{mA}\\
+\amp= 29~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law to calculate the minimum load resistance that can be used in the circuit so as not to exceed 29 mA.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{LOAD,MIN} \amp= \frac{0~\textrm{V} - (-36~\textrm{V})}{29~\textrm{mA}}\\
+\amp= \frac{36~\textrm{V}}{29~\textrm{mA}}\\
+\amp= 1.24~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch2-ohmslaw.html#ch2-ohmpower-3-1" class="xref" data-knowl="./knowl/xref/ohmspower2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.5">(2.4.5)</a> to calculate the power consumed by the resistor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+P_{LOAD} \amp= (29~\textrm{mA})^2(1.24~\textrm{k}\Omega)\\
+\amp= (841~\textrm{mA}^2)(1.24~\textrm{k}\Omega)\\
+\amp= 1,040~\textrm{mW}\\
+\amp= 1.04~\textrm{W}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 4.8.14.1"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4-3" title="Copy heading and permalink for Solution 4.8.14.1" aria-label="Copy heading and permalink for Solution 4.8.14.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 4.8.14"><a tabindex="-1" href="#ch4-opampoutputcurrent-ex4" title="Copy heading and permalink for Exercise 4.8.14" aria-label="Copy heading and permalink for Exercise 4.8.14">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch4-op-amps-10.html#ch4-opampoutputcurrent-ex4">In Context</a></span>
+</body>
+</html>

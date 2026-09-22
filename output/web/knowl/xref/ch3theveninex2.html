@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive the Norton equivalent circuit between nodes a and b in the circuit shown in <a href="ch3-circuittheorems-10.html#circuit312fig" class="xref" data-knowl="./knowl/xref/circuit312fig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.8.58">Figure 3.8.58</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch3-circuit312fig.svg" role="img" class="contained" alt="Circuit with 2 meshes and 3 nodes consisting of a 3V source, 1.5k resistor, 2.2k resistor, and 26mA source. The 1.5k resistor, 2.2k resistor, and 26mA source connect at node A. The 26mA source flows into node A. The low-potential end of the 3V source, 2.2k resistor, and 26mA source connect at node B. The 26mA source flows out of node B. The high-potential end of the 3V source and 1.5k resistor connect at node C."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.58<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch3-circuittheorems-10.html#ch3theveninex2" class="xref" data-knowl="./knowl/xref/ch3theveninex2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.8.12">Exercise 3.8.12</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.58"><a tabindex="-1" href="#circuit312fig" title="Copy heading and permalink for Figure 3.8.58" aria-label="Copy heading and permalink for Figure 3.8.58">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<figure class="figure figure-like"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch3-circuit312figans.svg" role="img" class="contained" alt="Circuit containing 1 mesh and 2 nodes consisting of a 28mA source and 892ohm resistor. Both elements are wired in parallel between nodes A and B. The 28mA source flows out of node B and into node A."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.59<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Answer to <a href="ch3-circuittheorems-10.html#ch3theveninex2" class="xref" data-knowl="./knowl/xref/ch3theveninex2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 3.8.12">Exercise 3.8.12</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.59"><a tabindex="-1" href="#circuit312figans" title="Copy heading and permalink for Figure 3.8.59" aria-label="Copy heading and permalink for Figure 3.8.59">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Answer 3.8.12.1"><a tabindex="-1" href="#ch3theveninex2-2" title="Copy heading and permalink for Answer 3.8.12.1" aria-label="Copy heading and permalink for Answer 3.8.12.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">There are two techniques to solve this circuit. Source transformation is the most direct means of solving the circuit and will be used first. Superposition can also be used, and this process will be described after source transformation is used.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">If using source transformation, it’s most beneficial to transform voltage sources into current sources (if possible), as this will most easily lead to a Norton equivalent circuit. To that end, first transform the voltage source into a current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I_S	\amp=	\frac{3~\textrm{V}}{1.5~\textrm{k}\Omega}\\
+\amp=	2~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The circuit is re-drawn below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch3-circuit312figans1.svg" role="img" class="contained" alt="Circuit containing 3 meshes and 2 nodes consisting of a 2mA source, 1.5k resistor, 2.2k resistor, and 26mA source. All circuit elements are wired in parallel between nodes A and B. Both current sources flow out of node B and into node A."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.60<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the voltage source transformed into a current source.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.60"><a tabindex="-1" href="#circuit312figans1" title="Copy heading and permalink for Figure 3.8.60" aria-label="Copy heading and permalink for Figure 3.8.60">🔗</a></div></figcaption>
+</figure>
+<div class="para">The two current sources are in parallel and can be added, this also corresponds to the Norton equivalent current of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I_N \amp= 2~\textrm{mA} + 26~\textrm{mA}\\
+\amp= 28~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The two resistors can be combined in parallel, this also corresponds to the Norton equivalent resistance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_N \amp= 1.5~\textrm{k}\Omega // 2.2~\textrm{k}\Omega\\
+\amp= 0.892~\textrm{k}\Omega\\
+\amp = 892~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">To use superposition to derive the Norton equivalent circuit, first analyze the circuit with the current source deactivated. This circuit is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch3-circuit312figans2.svg" role="img" class="contained" alt="Circuit containing 1 mesh and 3 nodes consisting of a 3V source, 1.5k resistor, and 2.2k resistor. All circuit elements are connected in series. The 1.5k and 2.2k resistors connect at node A. The 2.2k resistor connects to the low-potential end of the 3V source at node B. The high-potential end of the 3V source and 1.5k resistor connect at node C."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.61<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the current source deactivated.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.61"><a tabindex="-1" href="#circuit312figans2" title="Copy heading and permalink for Figure 3.8.61" aria-label="Copy heading and permalink for Figure 3.8.61">🔗</a></div></figcaption>
+</figure>
+<div class="para">The Norton equivalent current through this subcircuit is equal to the current through nodes a and b when those two nodes are shorted. Shorting those nodes effectively removes the 2.2 kΩ resistor from the circuit. This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch3-circuit312figans3.svg" role="img" class="contained" alt="Circuit with 1 mesh and 2 nodes consisting of a 3V source and 1.5k resistor. Both circuit elements are wired in series. The high-potential end of the 3V source connects to the 1.5k resistor at node C. The 1.5k resistor connects to the low-potential end of the 3V source at node A/B (A is shorted to B). Current In1 is defined as flowing through the 1.5k resistor from node C to node A/B."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.62<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the current source deactivated and a short placed between nodes a and b.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.62"><a tabindex="-1" href="#circuit312figans3" title="Copy heading and permalink for Figure 3.8.62" aria-label="Copy heading and permalink for Figure 3.8.62">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate the current <span class="process-math">\(I_{N1}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I_{N1} \amp= \frac{3~\textrm{V}}{1.5~\textrm{k}\Omega}\\
+\amp= 2~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Next, analyze the circuit with the voltage source deactivated. This circuit is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch3-circuit312figans4.svg" role="img" class="contained" alt="Circuit with 2 meshes and 2 nodes consisting of a 1.5k resistor, 2.2k resistor, and 26mA source. All circuit elements are wired in parallel between nodes A and B. The 26mA source flows from node B to node A."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.63<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the voltage source deactivated.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.63"><a tabindex="-1" href="#circuit312figans4" title="Copy heading and permalink for Figure 3.8.63" aria-label="Copy heading and permalink for Figure 3.8.63">🔗</a></div></figcaption>
+</figure>
+<div class="para">The Norton equivalent current through this subcircuit is equal to the current through nodes a and b when those two nodes are shorted. Shorting those nodes effectively removes both resistors from the circuit. (This is because both resistors are in parallel with the short.) This is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch3-circuit312figans5.svg" role="img" class="contained" alt="Circuit with 1 mesh and 1 node consisting of a 26mA source. Both ends of the 26mA source are shorted together, representing node A/B. Current In2 is defined as flowing in the same direction as the 26mA source."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.64<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the voltage source deactivated and a short placed between nodes a and b.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.64"><a tabindex="-1" href="#circuit312figans5" title="Copy heading and permalink for Figure 3.8.64" aria-label="Copy heading and permalink for Figure 3.8.64">🔗</a></div></figcaption>
+</figure>
+<div class="para">The quantity <span class="process-math">\(I_{N2}\)</span> is equal to the source current, 26 mA.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The total Norton equivalent current can now be calculated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+I_N \amp= I_{N1} + I_{N2}\\
+\amp= 2~\textrm{mA} + 26~\textrm{mA}\\
+\amp= 28~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">To calculate the Norton equivalent resistance, deactivate both sources and calculate the equivalent resistance as seen through nodes a and b. The circuit with both independent sources deactivated is shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch3-circuit312figans6.svg" role="img" class="contained" alt="Circuit with 1 mesh and 2 nodes consisting of a 1.5k resistor and 2.2k resistor. The 1.5k and 2.2k resistors connect at node A. The 1.5k and 2.2k resistors connect at node B."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.8.65<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram with the both sources deactivated.<div class="autopermalink" aria-hidden="true" data-description="Figure 3.8.65"><a tabindex="-1" href="#circuit312figans6" title="Copy heading and permalink for Figure 3.8.65" aria-label="Copy heading and permalink for Figure 3.8.65">🔗</a></div></figcaption>
+</figure>
+<div class="para">The Norton equivalent resistance is equal to the parallel combination of both resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_N \amp= 1.5~\textrm{k}\Omega // 2.2~\textrm{k}\Omega\\
+\amp= 0.892~\textrm{k}\Omega\\
+\amp= 892~\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch3theveninex2-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 3.8.12.1"><a tabindex="-1" href="#ch3theveninex2-3" title="Copy heading and permalink for Solution 3.8.12.1" aria-label="Copy heading and permalink for Solution 3.8.12.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3.8.12"><a tabindex="-1" href="#ch3theveninex2" title="Copy heading and permalink for Exercise 3.8.12" aria-label="Copy heading and permalink for Exercise 3.8.12">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch3-circuittheorems-10.html#ch3theveninex2">In Context</a></span>
+</body>
+</html>

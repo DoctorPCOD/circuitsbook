@@ -1,0 +1,472 @@
+WARNING : Using CLI version 2.29.2 but project's `requirements.txt`
+WARNING : is configured to use 2.28.2. Consider either installing
+WARNING : CLI version 2.28.2 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.29.2.
+INFO    : Building target web
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : converting latex-image pictures from /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx to svg graphics for placement in /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'cli.version': '2.29', 'publisher': '/Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/extract-latex-image.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/extract-latex-image.xsl
+INFO    : converting analogsignalquantized.tex to analogsignalquantized.pdf
+INFO    : cropping analogsignalquantized.pdf to cropped-analogsignalquantized.pdf
+INFO    : renaming cropped-analogsignalquantized.pdf to analogsignalquantized.pdf
+INFO    : converting analogsignalquantized.pdf to analogsignalquantized.svg
+INFO    : converting tempdatadifferentrollingaverage.tex to tempdatadifferentrollingaverage.pdf
+INFO    : cropping tempdatadifferentrollingaverage.pdf to cropped-tempdatadifferentrollingaverage.pdf
+INFO    : renaming cropped-tempdatadifferentrollingaverage.pdf to tempdatadifferentrollingaverage.pdf
+INFO    : converting tempdatadifferentrollingaverage.pdf to tempdatadifferentrollingaverage.svg
+INFO    : converting atmega328ppdip.tex to atmega328ppdip.pdf
+INFO    : cropping atmega328ppdip.pdf to cropped-atmega328ppdip.pdf
+INFO    : renaming cropped-atmega328ppdip.pdf to atmega328ppdip.pdf
+INFO    : converting atmega328ppdip.pdf to atmega328ppdip.svg
+INFO    : converting parallelinstructionfetch.tex to parallelinstructionfetch.pdf
+INFO    : cropping parallelinstructionfetch.pdf to cropped-parallelinstructionfetch.pdf
+INFO    : renaming cropped-parallelinstructionfetch.pdf to parallelinstructionfetch.pdf
+INFO    : converting parallelinstructionfetch.pdf to parallelinstructionfetch.svg
+INFO    : converting fastpwm.tex to fastpwm.pdf
+INFO    : cropping fastpwm.pdf to cropped-fastpwm.pdf
+INFO    : renaming cropped-fastpwm.pdf to fastpwm.pdf
+INFO    : converting fastpwm.pdf to fastpwm.svg
+INFO    : converting floatinggateschematic.tex to floatinggateschematic.pdf
+INFO    : cropping floatinggateschematic.pdf to cropped-floatinggateschematic.pdf
+INFO    : renaming cropped-floatinggateschematic.pdf to floatinggateschematic.pdf
+INFO    : converting floatinggateschematic.pdf to floatinggateschematic.svg
+INFO    : converting serialparallelio.tex to serialparallelio.pdf
+INFO    : cropping serialparallelio.pdf to cropped-serialparallelio.pdf
+INFO    : renaming cropped-serialparallelio.pdf to serialparallelio.pdf
+INFO    : converting serialparallelio.pdf to serialparallelio.svg
+INFO    : converting dramschematic.tex to dramschematic.pdf
+INFO    : cropping dramschematic.pdf to cropped-dramschematic.pdf
+INFO    : renaming cropped-dramschematic.pdf to dramschematic.pdf
+INFO    : converting dramschematic.pdf to dramschematic.svg
+INFO    : converting fastpwmchangeocrna.tex to fastpwmchangeocrna.pdf
+INFO    : cropping fastpwmchangeocrna.pdf to cropped-fastpwmchangeocrna.pdf
+INFO    : renaming cropped-fastpwmchangeocrna.pdf to fastpwmchangeocrna.pdf
+INFO    : converting fastpwmchangeocrna.pdf to fastpwmchangeocrna.svg
+INFO    : converting picontrolblockdiagram.tex to picontrolblockdiagram.pdf
+INFO    : cropping picontrolblockdiagram.pdf to cropped-picontrolblockdiagram.pdf
+INFO    : renaming cropped-picontrolblockdiagram.pdf to picontrolblockdiagram.pdf
+INFO    : converting picontrolblockdiagram.pdf to picontrolblockdiagram.svg
+INFO    : converting sensorwithresistanceoutput.tex to sensorwithresistanceoutput.pdf
+INFO    : cropping sensorwithresistanceoutput.pdf to cropped-sensorwithresistanceoutput.pdf
+INFO    : renaming cropped-sensorwithresistanceoutput.pdf to sensorwithresistanceoutput.pdf
+INFO    : converting sensorwithresistanceoutput.pdf to sensorwithresistanceoutput.svg
+INFO    : converting normalmodetiming.tex to normalmodetiming.pdf
+INFO    : cropping normalmodetiming.pdf to cropped-normalmodetiming.pdf
+INFO    : renaming cropped-normalmodetiming.pdf to normalmodetiming.pdf
+INFO    : converting normalmodetiming.pdf to normalmodetiming.svg
+INFO    : converting memoryaddressingdecoder.tex to memoryaddressingdecoder.pdf
+INFO    : cropping memoryaddressingdecoder.pdf to cropped-memoryaddressingdecoder.pdf
+INFO    : renaming cropped-memoryaddressingdecoder.pdf to memoryaddressingdecoder.pdf
+INFO    : converting memoryaddressingdecoder.pdf to memoryaddressingdecoder.svg
+INFO    : converting instructionexecstatediagram.tex to instructionexecstatediagram.pdf
+INFO    : cropping instructionexecstatediagram.pdf to cropped-instructionexecstatediagram.pdf
+INFO    : renaming cropped-instructionexecstatediagram.pdf to instructionexecstatediagram.pdf
+INFO    : converting instructionexecstatediagram.pdf to instructionexecstatediagram.svg
+INFO    : converting siporegisterschematic.tex to siporegisterschematic.pdf
+INFO    : cropping siporegisterschematic.pdf to cropped-siporegisterschematic.pdf
+INFO    : renaming cropped-siporegisterschematic.pdf to siporegisterschematic.pdf
+INFO    : converting siporegisterschematic.pdf to siporegisterschematic.svg
+INFO    : converting phasePWMsymmetry.tex to phasePWMsymmetry.pdf
+INFO    : cropping phasePWMsymmetry.pdf to cropped-phasePWMsymmetry.pdf
+INFO    : renaming cropped-phasePWMsymmetry.pdf to phasePWMsymmetry.pdf
+INFO    : converting phasePWMsymmetry.pdf to phasePWMsymmetry.svg
+INFO    : converting adconatmega328p.tex to adconatmega328p.pdf
+INFO    : cropping adconatmega328p.pdf to cropped-adconatmega328p.pdf
+INFO    : renaming cropped-adconatmega328p.pdf to adconatmega328p.pdf
+INFO    : converting adconatmega328p.pdf to adconatmega328p.svg
+INFO    : converting picontrolgraphthesecond.tex to picontrolgraphthesecond.pdf
+INFO    : cropping picontrolgraphthesecond.pdf to cropped-picontrolgraphthesecond.pdf
+INFO    : renaming cropped-picontrolgraphthesecond.pdf to picontrolgraphthesecond.pdf
+INFO    : converting picontrolgraphthesecond.pdf to picontrolgraphthesecond.svg
+INFO    : converting phasecorrectpwm.tex to phasecorrectpwm.pdf
+INFO    : cropping phasecorrectpwm.pdf to cropped-phasecorrectpwm.pdf
+INFO    : renaming cropped-phasecorrectpwm.pdf to phasecorrectpwm.pdf
+INFO    : converting phasecorrectpwm.pdf to phasecorrectpwm.svg
+INFO    : converting stackoperations.tex to stackoperations.pdf
+INFO    : cropping stackoperations.pdf to cropped-stackoperations.pdf
+INFO    : renaming cropped-stackoperations.pdf to stackoperations.pdf
+INFO    : converting stackoperations.pdf to stackoperations.svg
+INFO    : converting programmemorymap.tex to programmemorymap.pdf
+INFO    : cropping programmemorymap.pdf to cropped-programmemorymap.pdf
+INFO    : renaming cropped-programmemorymap.pdf to programmemorymap.pdf
+INFO    : converting programmemorymap.pdf to programmemorymap.svg
+INFO    : converting harvardarchitecture.tex to harvardarchitecture.pdf
+INFO    : cropping harvardarchitecture.pdf to cropped-harvardarchitecture.pdf
+INFO    : renaming cropped-harvardarchitecture.pdf to harvardarchitecture.pdf
+INFO    : converting harvardarchitecture.pdf to harvardarchitecture.svg
+INFO    : converting the3bitflashadc.tex to the3bitflashadc.pdf
+INFO    : cropping the3bitflashadc.pdf to cropped-the3bitflashadc.pdf
+INFO    : renaming cropped-the3bitflashadc.pdf to the3bitflashadc.pdf
+INFO    : converting the3bitflashadc.pdf to the3bitflashadc.svg
+INFO    : converting spicpolsck.tex to spicpolsck.pdf
+INFO    : cropping spicpolsck.pdf to cropped-spicpolsck.pdf
+INFO    : renaming cropped-spicpolsck.pdf to spicpolsck.pdf
+INFO    : converting spicpolsck.pdf to spicpolsck.svg
+INFO    : converting avccpinfilter.tex to avccpinfilter.pdf
+INFO    : cropping avccpinfilter.pdf to cropped-avccpinfilter.pdf
+INFO    : renaming cropped-avccpinfilter.pdf to avccpinfilter.pdf
+INFO    : converting avccpinfilter.pdf to avccpinfilter.svg
+INFO    : converting modelaluschematic.tex to modelaluschematic.pdf
+INFO    : cropping modelaluschematic.pdf to cropped-modelaluschematic.pdf
+INFO    : renaming cropped-modelaluschematic.pdf to modelaluschematic.pdf
+INFO    : converting modelaluschematic.pdf to modelaluschematic.svg
+INFO    : converting analogsignalquanterror.tex to analogsignalquanterror.pdf
+INFO    : cropping analogsignalquanterror.pdf to cropped-analogsignalquanterror.pdf
+INFO    : renaming cropped-analogsignalquanterror.pdf to analogsignalquanterror.pdf
+INFO    : converting analogsignalquanterror.pdf to analogsignalquanterror.svg
+INFO    : converting onepointcalibration.tex to onepointcalibration.pdf
+INFO    : cropping onepointcalibration.pdf to cropped-onepointcalibration.pdf
+INFO    : renaming cropped-onepointcalibration.pdf to onepointcalibration.pdf
+INFO    : converting onepointcalibration.pdf to onepointcalibration.svg
+INFO    : converting avrclockdistribution.tex to avrclockdistribution.pdf
+INFO    : cropping avrclockdistribution.pdf to cropped-avrclockdistribution.pdf
+INFO    : renaming cropped-avrclockdistribution.pdf to avrclockdistribution.pdf
+INFO    : converting avrclockdistribution.pdf to avrclockdistribution.svg
+INFO    : converting twiconnection.tex to twiconnection.pdf
+INFO    : cropping twiconnection.pdf to cropped-twiconnection.pdf
+INFO    : renaming cropped-twiconnection.pdf to twiconnection.pdf
+INFO    : converting twiconnection.pdf to twiconnection.svg
+INFO    : converting pwmvariousfreq.tex to pwmvariousfreq.pdf
+INFO    : cropping pwmvariousfreq.pdf to cropped-pwmvariousfreq.pdf
+INFO    : renaming cropped-pwmvariousfreq.pdf to pwmvariousfreq.pdf
+INFO    : converting pwmvariousfreq.pdf to pwmvariousfreq.svg
+INFO    : converting indirectdatadisplacementaddressing.tex to indirectdatadisplacementaddressing.pdf
+INFO    : cropping indirectdatadisplacementaddressing.pdf to cropped-indirectdatadisplacementaddressing.pdf
+INFO    : renaming cropped-indirectdatadisplacementaddressing.pdf to indirectdatadisplacementaddressing.pdf
+INFO    : converting indirectdatadisplacementaddressing.pdf to indirectdatadisplacementaddressing.svg
+INFO    : converting indirectdataaddressing.tex to indirectdataaddressing.pdf
+INFO    : cropping indirectdataaddressing.pdf to cropped-indirectdataaddressing.pdf
+INFO    : renaming cropped-indirectdataaddressing.pdf to indirectdataaddressing.pdf
+INFO    : converting indirectdataaddressing.pdf to indirectdataaddressing.svg
+INFO    : converting directtwoaddressing.tex to directtwoaddressing.pdf
+INFO    : cropping directtwoaddressing.pdf to cropped-directtwoaddressing.pdf
+INFO    : renaming cropped-directtwoaddressing.pdf to directtwoaddressing.pdf
+INFO    : converting directtwoaddressing.pdf to directtwoaddressing.svg
+INFO    : converting analogsignalsampled.tex to analogsignalsampled.pdf
+INFO    : cropping analogsignalsampled.pdf to cropped-analogsignalsampled.pdf
+INFO    : renaming cropped-analogsignalsampled.pdf to analogsignalsampled.pdf
+INFO    : converting analogsignalsampled.pdf to analogsignalsampled.svg
+INFO    : converting flowchartpollingvsinterrupt.tex to flowchartpollingvsinterrupt.pdf
+INFO    : cropping flowchartpollingvsinterrupt.pdf to cropped-flowchartpollingvsinterrupt.pdf
+INFO    : renaming cropped-flowchartpollingvsinterrupt.pdf to flowchartpollingvsinterrupt.pdf
+INFO    : converting flowchartpollingvsinterrupt.pdf to flowchartpollingvsinterrupt.svg
+INFO    : converting piporegisterschematic.tex to piporegisterschematic.pdf
+INFO    : cropping piporegisterschematic.pdf to cropped-piporegisterschematic.pdf
+INFO    : renaming cropped-piporegisterschematic.pdf to piporegisterschematic.pdf
+INFO    : converting piporegisterschematic.pdf to piporegisterschematic.svg
+INFO    : converting phasecorrecttopchange.tex to phasecorrecttopchange.pdf
+INFO    : cropping phasecorrecttopchange.pdf to cropped-phasecorrecttopchange.pdf
+INFO    : renaming cropped-phasecorrecttopchange.pdf to phasecorrecttopchange.pdf
+INFO    : converting phasecorrecttopchange.pdf to phasecorrecttopchange.svg
+INFO    : converting propcontrolgraph.tex to propcontrolgraph.pdf
+INFO    : cropping propcontrolgraph.pdf to cropped-propcontrolgraph.pdf
+INFO    : renaming cropped-propcontrolgraph.pdf to propcontrolgraph.pdf
+INFO    : converting propcontrolgraph.pdf to propcontrolgraph.svg
+INFO    : converting atmega328ptqfp.tex to atmega328ptqfp.pdf
+INFO    : cropping atmega328ptqfp.pdf to cropped-atmega328ptqfp.pdf
+INFO    : renaming cropped-atmega328ptqfp.pdf to atmega328ptqfp.pdf
+INFO    : converting atmega328ptqfp.pdf to atmega328ptqfp.svg
+INFO    : converting blkdiagram.tex to blkdiagram.pdf
+INFO    : cropping blkdiagram.pdf to cropped-blkdiagram.pdf
+INFO    : renaming cropped-blkdiagram.pdf to blkdiagram.pdf
+INFO    : converting blkdiagram.pdf to blkdiagram.svg
+INFO    : converting indirectdataaddressingpostinc.tex to indirectdataaddressingpostinc.pdf
+INFO    : cropping indirectdataaddressingpostinc.pdf to cropped-indirectdataaddressingpostinc.pdf
+INFO    : renaming cropped-indirectdataaddressingpostinc.pdf to indirectdataaddressingpostinc.pdf
+INFO    : converting indirectdataaddressingpostinc.pdf to indirectdataaddressingpostinc.svg
+INFO    : converting picdontrolblockdiagram.tex to picdontrolblockdiagram.pdf
+INFO    : cropping picdontrolblockdiagram.pdf to cropped-picdontrolblockdiagram.pdf
+INFO    : renaming cropped-picdontrolblockdiagram.pdf to picdontrolblockdiagram.pdf
+INFO    : converting picdontrolblockdiagram.pdf to picdontrolblockdiagram.svg
+INFO    : converting circbufferarray.tex to circbufferarray.pdf
+INFO    : cropping circbufferarray.pdf to cropped-circbufferarray.pdf
+INFO    : renaming cropped-circbufferarray.pdf to circbufferarray.pdf
+INFO    : converting circbufferarray.pdf to circbufferarray.svg
+INFO    : converting avrcpublockdiagram.tex to avrcpublockdiagram.pdf
+INFO    : cropping avrcpublockdiagram.pdf to cropped-avrcpublockdiagram.pdf
+INFO    : renaming cropped-avrcpublockdiagram.pdf to avrcpublockdiagram.pdf
+INFO    : converting avrcpublockdiagram.pdf to avrcpublockdiagram.svg
+INFO    : converting pipelineadcdiagram.tex to pipelineadcdiagram.pdf
+INFO    : cropping pipelineadcdiagram.pdf to cropped-pipelineadcdiagram.pdf
+INFO    : renaming cropped-pipelineadcdiagram.pdf to pipelineadcdiagram.pdf
+INFO    : converting pipelineadcdiagram.pdf to pipelineadcdiagram.svg
+INFO    : converting ctcmodepintoggling.tex to ctcmodepintoggling.pdf
+INFO    : cropping ctcmodepintoggling.pdf to cropped-ctcmodepintoggling.pdf
+INFO    : renaming cropped-ctcmodepintoggling.pdf to ctcmodepintoggling.pdf
+INFO    : converting ctcmodepintoggling.pdf to ctcmodepintoggling.svg
+INFO    : converting exampleflowchart.tex to exampleflowchart.pdf
+INFO    : cropping exampleflowchart.pdf to cropped-exampleflowchart.pdf
+INFO    : renaming cropped-exampleflowchart.pdf to exampleflowchart.pdf
+INFO    : converting exampleflowchart.pdf to exampleflowchart.svg
+INFO    : converting analogcomparatorsymbol.tex to analogcomparatorsymbol.pdf
+INFO    : cropping analogcomparatorsymbol.pdf to cropped-analogcomparatorsymbol.pdf
+INFO    : renaming cropped-analogcomparatorsymbol.pdf to analogcomparatorsymbol.pdf
+INFO    : converting analogcomparatorsymbol.pdf to analogcomparatorsymbol.svg
+INFO    : converting busdiagrams.tex to busdiagrams.pdf
+INFO    : cropping busdiagrams.pdf to cropped-busdiagrams.pdf
+INFO    : renaming cropped-busdiagrams.pdf to busdiagrams.pdf
+INFO    : converting busdiagrams.pdf to busdiagrams.svg
+INFO    : converting datadirectionschematic.tex to datadirectionschematic.pdf
+INFO    : cropping datadirectionschematic.pdf to cropped-datadirectionschematic.pdf
+INFO    : renaming cropped-datadirectionschematic.pdf to datadirectionschematic.pdf
+INFO    : converting datadirectionschematic.pdf to datadirectionschematic.svg
+INFO    : converting ch2sisoregister.tex to ch2sisoregister.pdf
+INFO    : cropping ch2sisoregister.pdf to cropped-ch2sisoregister.pdf
+INFO    : renaming cropped-ch2sisoregister.pdf to ch2sisoregister.pdf
+INFO    : converting ch2sisoregister.pdf to ch2sisoregister.svg
+INFO    : converting tcntoutputcompare.tex to tcntoutputcompare.pdf
+INFO    : cropping tcntoutputcompare.pdf to cropped-tcntoutputcompare.pdf
+INFO    : renaming cropped-tcntoutputcompare.pdf to tcntoutputcompare.pdf
+INFO    : converting tcntoutputcompare.pdf to tcntoutputcompare.svg
+INFO    : converting spiindependent.tex to spiindependent.pdf
+INFO    : cropping spiindependent.pdf to cropped-spiindependent.pdf
+INFO    : renaming cropped-spiindependent.pdf to spiindependent.pdf
+INFO    : converting spiindependent.pdf to spiindependent.svg
+INFO    : converting vonneumannarchitecture.tex to vonneumannarchitecture.pdf
+INFO    : cropping vonneumannarchitecture.pdf to cropped-vonneumannarchitecture.pdf
+INFO    : renaming cropped-vonneumannarchitecture.pdf to vonneumannarchitecture.pdf
+INFO    : converting vonneumannarchitecture.pdf to vonneumannarchitecture.svg
+INFO    : converting indirectdataaddressingpredec.tex to indirectdataaddressingpredec.pdf
+INFO    : cropping indirectdataaddressingpredec.pdf to cropped-indirectdataaddressingpredec.pdf
+INFO    : renaming cropped-indirectdataaddressingpredec.pdf to indirectdataaddressingpredec.pdf
+INFO    : converting indirectdataaddressingpredec.pdf to indirectdataaddressingpredec.svg
+INFO    : converting ctcmodetiming.tex to ctcmodetiming.pdf
+INFO    : cropping ctcmodetiming.pdf to cropped-ctcmodetiming.pdf
+INFO    : renaming cropped-ctcmodetiming.pdf to ctcmodetiming.pdf
+INFO    : converting ctcmodetiming.pdf to ctcmodetiming.svg
+INFO    : converting usartblock.tex to usartblock.pdf
+INFO    : cropping usartblock.pdf to cropped-usartblock.pdf
+INFO    : renaming cropped-usartblock.pdf to usartblock.pdf
+INFO    : converting usartblock.pdf to usartblock.svg
+INFO    : converting phasecorrecticr1change.tex to phasecorrecticr1change.pdf
+INFO    : cropping phasecorrecticr1change.pdf to cropped-phasecorrecticr1change.pdf
+INFO    : renaming cropped-phasecorrecticr1change.pdf to phasecorrecticr1change.pdf
+INFO    : converting phasecorrecticr1change.pdf to phasecorrecticr1change.svg
+INFO    : converting ioregisteraddressing.tex to ioregisteraddressing.pdf
+INFO    : cropping ioregisteraddressing.pdf to cropped-ioregisteraddressing.pdf
+INFO    : renaming cropped-ioregisteraddressing.pdf to ioregisteraddressing.pdf
+INFO    : converting ioregisteraddressing.pdf to ioregisteraddressing.svg
+INFO    : converting twimodule.tex to twimodule.pdf
+INFO    : cropping twimodule.pdf to cropped-twimodule.pdf
+INFO    : renaming cropped-twimodule.pdf to twimodule.pdf
+INFO    : converting twimodule.pdf to twimodule.svg
+INFO    : converting resetprogramcounter.tex to resetprogramcounter.pdf
+INFO    : cropping resetprogramcounter.pdf to cropped-resetprogramcounter.pdf
+INFO    : renaming cropped-resetprogramcounter.pdf to resetprogramcounter.pdf
+INFO    : converting resetprogramcounter.pdf to resetprogramcounter.svg
+INFO    : converting alternatepinfunctions.tex to alternatepinfunctions.pdf
+INFO    : cropping alternatepinfunctions.pdf to cropped-alternatepinfunctions.pdf
+INFO    : renaming cropped-alternatepinfunctions.pdf to alternatepinfunctions.pdf
+INFO    : converting alternatepinfunctions.pdf to alternatepinfunctions.svg
+INFO    : converting tcntmeasureperiodanddutycycle.tex to tcntmeasureperiodanddutycycle.pdf
+INFO    : cropping tcntmeasureperiodanddutycycle.pdf to cropped-tcntmeasureperiodanddutycycle.pdf
+INFO    : renaming cropped-tcntmeasureperiodanddutycycle.pdf to tcntmeasureperiodanddutycycle.pdf
+INFO    : converting tcntmeasureperiodanddutycycle.pdf to tcntmeasureperiodanddutycycle.svg
+INFO    : converting pcontrolblock.tex to pcontrolblock.pdf
+INFO    : cropping pcontrolblock.pdf to cropped-pcontrolblock.pdf
+INFO    : renaming cropped-pcontrolblock.pdf to pcontrolblock.pdf
+INFO    : converting pcontrolblock.pdf to pcontrolblock.svg
+INFO    : converting multipointcalibration.tex to multipointcalibration.pdf
+INFO    : cropping multipointcalibration.pdf to cropped-multipointcalibration.pdf
+INFO    : renaming cropped-multipointcalibration.pdf to multipointcalibration.pdf
+INFO    : converting multipointcalibration.pdf to multipointcalibration.svg
+INFO    : converting tmp36dataplotted.tex to tmp36dataplotted.pdf
+INFO    : cropping tmp36dataplotted.pdf to cropped-tmp36dataplotted.pdf
+INFO    : renaming cropped-tmp36dataplotted.pdf to tmp36dataplotted.pdf
+INFO    : converting tmp36dataplotted.pdf to tmp36dataplotted.svg
+INFO    : converting tcntmeasureperiod.tex to tcntmeasureperiod.pdf
+INFO    : cropping tcntmeasureperiod.pdf to cropped-tcntmeasureperiod.pdf
+INFO    : renaming cropped-tcntmeasureperiod.pdf to tcntmeasureperiod.pdf
+INFO    : converting tcntmeasureperiod.pdf to tcntmeasureperiod.svg
+INFO    : converting fastpwmglitch.tex to fastpwmglitch.pdf
+INFO    : cropping fastpwmglitch.pdf to cropped-fastpwmglitch.pdf
+INFO    : renaming cropped-fastpwmglitch.pdf to fastpwmglitch.pdf
+INFO    : converting fastpwmglitch.pdf to fastpwmglitch.svg
+INFO    : converting directdataaddressing.tex to directdataaddressing.pdf
+INFO    : cropping directdataaddressing.pdf to cropped-directdataaddressing.pdf
+INFO    : renaming cropped-directdataaddressing.pdf to directdataaddressing.pdf
+INFO    : converting directdataaddressing.pdf to directdataaddressing.svg
+INFO    : converting phasecorrectpwmtimercounter.tex to phasecorrectpwmtimercounter.pdf
+INFO    : cropping phasecorrectpwmtimercounter.pdf to cropped-phasecorrectpwmtimercounter.pdf
+INFO    : renaming cropped-phasecorrectpwmtimercounter.pdf to phasecorrectpwmtimercounter.pdf
+INFO    : converting phasecorrectpwmtimercounter.pdf to phasecorrectpwmtimercounter.svg
+INFO    : converting modelmcublockdiagram.tex to modelmcublockdiagram.pdf
+INFO    : cropping modelmcublockdiagram.pdf to cropped-modelmcublockdiagram.pdf
+INFO    : renaming cropped-modelmcublockdiagram.pdf to modelmcublockdiagram.pdf
+INFO    : converting modelmcublockdiagram.pdf to modelmcublockdiagram.svg
+INFO    : converting directsingleaddressing.tex to directsingleaddressing.pdf
+INFO    : cropping directsingleaddressing.pdf to cropped-directsingleaddressing.pdf
+INFO    : renaming cropped-directsingleaddressing.pdf to directsingleaddressing.pdf
+INFO    : converting directsingleaddressing.pdf to directsingleaddressing.svg
+INFO    : converting pwmvariousdutycycle.tex to pwmvariousdutycycle.pdf
+INFO    : cropping pwmvariousdutycycle.pdf to cropped-pwmvariousdutycycle.pdf
+INFO    : renaming cropped-pwmvariousdutycycle.pdf to pwmvariousdutycycle.pdf
+INFO    : converting pwmvariousdutycycle.pdf to pwmvariousdutycycle.svg
+INFO    : converting atmega328pqfn.tex to atmega328pqfn.pdf
+INFO    : cropping atmega328pqfn.pdf to cropped-atmega328pqfn.pdf
+INFO    : renaming cropped-atmega328pqfn.pdf to atmega328pqfn.pdf
+INFO    : converting atmega328pqfn.pdf to atmega328pqfn.svg
+INFO    : converting tcntinputcapture.tex to tcntinputcapture.pdf
+INFO    : cropping tcntinputcapture.pdf to cropped-tcntinputcapture.pdf
+INFO    : renaming cropped-tcntinputcapture.pdf to tcntinputcapture.pdf
+INFO    : converting tcntinputcapture.pdf to tcntinputcapture.svg
+INFO    : converting sensorwithvoltageoutput.tex to sensorwithvoltageoutput.pdf
+INFO    : cropping sensorwithvoltageoutput.pdf to cropped-sensorwithvoltageoutput.pdf
+INFO    : renaming cropped-sensorwithvoltageoutput.pdf to sensorwithvoltageoutput.pdf
+INFO    : converting sensorwithvoltageoutput.pdf to sensorwithvoltageoutput.svg
+INFO    : converting spidaisy.tex to spidaisy.pdf
+INFO    : cropping spidaisy.pdf to cropped-spidaisy.pdf
+INFO    : renaming cropped-spidaisy.pdf to spidaisy.pdf
+INFO    : converting spidaisy.pdf to spidaisy.svg
+INFO    : converting saradcprocess.tex to saradcprocess.pdf
+INFO    : cropping saradcprocess.pdf to cropped-saradcprocess.pdf
+INFO    : renaming cropped-saradcprocess.pdf to saradcprocess.pdf
+INFO    : converting saradcprocess.pdf to saradcprocess.svg
+INFO    : converting atmega328p32qfn.tex to atmega328p32qfn.pdf
+INFO    : cropping atmega328p32qfn.pdf to cropped-atmega328p32qfn.pdf
+INFO    : renaming cropped-atmega328p32qfn.pdf to atmega328p32qfn.pdf
+INFO    : converting atmega328p32qfn.pdf to atmega328p32qfn.svg
+INFO    : converting datamemorymap.tex to datamemorymap.pdf
+INFO    : cropping datamemorymap.pdf to cropped-datamemorymap.pdf
+INFO    : renaming cropped-datamemorymap.pdf to datamemorymap.pdf
+INFO    : converting datamemorymap.pdf to datamemorymap.svg
+INFO    : converting tcntblockdiagram.tex to tcntblockdiagram.pdf
+INFO    : cropping tcntblockdiagram.pdf to cropped-tcntblockdiagram.pdf
+INFO    : renaming cropped-tcntblockdiagram.pdf to tcntblockdiagram.pdf
+INFO    : converting tcntblockdiagram.pdf to tcntblockdiagram.svg
+INFO    : converting analogsignal.tex to analogsignal.pdf
+INFO    : cropping analogsignal.pdf to cropped-analogsignal.pdf
+INFO    : renaming cropped-analogsignal.pdf to analogsignal.pdf
+INFO    : converting analogsignal.pdf to analogsignal.svg
+INFO    : converting iopullup.tex to iopullup.pdf
+INFO    : cropping iopullup.pdf to cropped-iopullup.pdf
+INFO    : renaming cropped-iopullup.pdf to iopullup.pdf
+INFO    : converting iopullup.pdf to iopullup.svg
+INFO    : converting r2rladder.tex to r2rladder.pdf
+INFO    : cropping r2rladder.pdf to cropped-r2rladder.pdf
+INFO    : renaming cropped-r2rladder.pdf to r2rladder.pdf
+INFO    : converting r2rladder.pdf to r2rladder.svg
+INFO    : converting pidcontrolgraphthesecond.tex to pidcontrolgraphthesecond.pdf
+INFO    : cropping pidcontrolgraphthesecond.pdf to cropped-pidcontrolgraphthesecond.pdf
+INFO    : renaming cropped-pidcontrolgraphthesecond.pdf to pidcontrolgraphthesecond.pdf
+INFO    : converting pidcontrolgraphthesecond.pdf to pidcontrolgraphthesecond.svg
+INFO    : converting languagehierarchy.tex to languagehierarchy.pdf
+INFO    : cropping languagehierarchy.pdf to cropped-languagehierarchy.pdf
+INFO    : renaming cropped-languagehierarchy.pdf to languagehierarchy.pdf
+INFO    : converting languagehierarchy.pdf to languagehierarchy.svg
+INFO    : converting practicewaveform.tex to practicewaveform.pdf
+INFO    : cropping practicewaveform.pdf to cropped-practicewaveform.pdf
+INFO    : renaming cropped-practicewaveform.pdf to practicewaveform.pdf
+INFO    : converting practicewaveform.pdf to practicewaveform.svg
+INFO    : converting admuxadcconnection.tex to admuxadcconnection.pdf
+INFO    : cropping admuxadcconnection.pdf to cropped-admuxadcconnection.pdf
+INFO    : renaming cropped-admuxadcconnection.pdf to admuxadcconnection.pdf
+INFO    : converting admuxadcconnection.pdf to admuxadcconnection.svg
+INFO    : converting sramschematic.tex to sramschematic.pdf
+INFO    : cropping sramschematic.pdf to cropped-sramschematic.pdf
+INFO    : renaming cropped-sramschematic.pdf to sramschematic.pdf
+INFO    : converting sramschematic.pdf to sramschematic.svg
+INFO    : converting fastpwmtimercounter.tex to fastpwmtimercounter.pdf
+INFO    : cropping fastpwmtimercounter.pdf to cropped-fastpwmtimercounter.pdf
+INFO    : renaming cropped-fastpwmtimercounter.pdf to fastpwmtimercounter.pdf
+INFO    : converting fastpwmtimercounter.pdf to fastpwmtimercounter.svg
+INFO    : converting tcntdoublebuffer.tex to tcntdoublebuffer.pdf
+INFO    : cropping tcntdoublebuffer.pdf to cropped-tcntdoublebuffer.pdf
+INFO    : renaming cropped-tcntdoublebuffer.pdf to tcntdoublebuffer.pdf
+INFO    : converting tcntdoublebuffer.pdf to tcntdoublebuffer.svg
+INFO    : converting tempresponse.tex to tempresponse.pdf
+INFO    : cropping tempresponse.pdf to cropped-tempresponse.pdf
+INFO    : renaming cropped-tempresponse.pdf to tempresponse.pdf
+INFO    : converting tempresponse.pdf to tempresponse.svg
+INFO    : converting pisoregisterschematic.tex to pisoregisterschematic.pdf
+INFO    : cropping pisoregisterschematic.pdf to cropped-pisoregisterschematic.pdf
+INFO    : renaming cropped-pisoregisterschematic.pdf to pisoregisterschematic.pdf
+INFO    : converting pisoregisterschematic.pdf to pisoregisterschematic.svg
+INFO    : converting programcounterschematic.tex to programcounterschematic.pdf
+INFO    : cropping programcounterschematic.pdf to cropped-programcounterschematic.pdf
+INFO    : renaming cropped-programcounterschematic.pdf to programcounterschematic.pdf
+INFO    : converting programcounterschematic.pdf to programcounterschematic.svg
+INFO    : converting spidiagram.tex to spidiagram.pdf
+INFO    : cropping spidiagram.pdf to cropped-spidiagram.pdf
+INFO    : renaming cropped-spidiagram.pdf to spidiagram.pdf
+INFO    : converting spidiagram.pdf to spidiagram.svg
+INFO    : converting bitaddressing.tex to bitaddressing.pdf
+INFO    : cropping bitaddressing.pdf to cropped-bitaddressing.pdf
+INFO    : renaming cropped-bitaddressing.pdf to bitaddressing.pdf
+INFO    : converting bitaddressing.pdf to bitaddressing.svg
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-mxoyrk7v
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/output/web.
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/generated-assets
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 7.9.17
+INFO    : Downloading Runestone Services, version 7.9.17
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-denver
+INFO    : converting /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx to HTML in /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-n1s6lcr7
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2223 - Microcontrollers/ENGIN-2223_yellow_book/source/main.ptx by /Users/ajp/.ptx/2.29.2/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/ajp/.ptx/2.29.2/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-n1s6lcr7
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-wvncit1v
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

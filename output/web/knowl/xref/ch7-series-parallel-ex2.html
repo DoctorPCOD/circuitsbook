@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive an equation for <span class="process-math">\(v(t)\)</span> for the circuit shown in <a href="ch7-secondorder-10.html#series-rlc-example2-diagram" class="xref" data-knowl="./knowl/xref/series-rlc-example2-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.4">Figure 7.8.4</a>. The switch is in position a for a very long time before moving to position b at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-series-rlc-example2-diagram.svg" role="img" class="contained" alt="Circuit with seven nodes consisting of a 28V source, 20V source, three resistors (160ohm, 960ohm, and 480ohm), and SPDT switch, 12.5nF capacitor, and 500uH inductor. The high-potential end of the 28V source connects to the 160ohm resistor at node c. The 160ohm resistor connects to position a of the SPDT switch at node a. Position b of the SPDT switch and the 960ohm resistor connect at node b. The input of the SPDT switch, capacitor, and 480ohm resistor connect at node d. The 960ohm resistor, 480ohm resistor, and inductor connect at node e. The inductor and high-potential end of the 20V source connect at node f. The low-potential end of both sources and the capacitor connect at node g. Branch current iL(t) flows through the inductor from node e to node f. Voltage v(t) drops over the capacitor from node d to node g. The SPDT switch is depicted as switching from position a to position b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch7-secondorder-10.html#ch7-series-parallel-ex2" class="xref" data-knowl="./knowl/xref/ch7-series-parallel-ex2.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.8.2">Exercise 7.8.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.4"><a tabindex="-1" href="#series-rlc-example2-diagram" title="Copy heading and permalink for Figure 7.8.4" aria-label="Copy heading and permalink for Figure 7.8.4">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[20~\textrm{V} + \textrm{e}^{-320000t}\left(6~\textrm{V}~\cos(240000)+3.83~\textrm{V}~\sin(240000t)\right)\right]~u(t) + 26~\textrm{V}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 7.8.2.1"><a tabindex="-1" href="#ch7-series-parallel-ex2-2" title="Copy heading and permalink for Answer 7.8.2.1" aria-label="Copy heading and permalink for Answer 7.8.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Draw the circuit in the initial steady-state condition. The capacitor can be replaced by an open and the inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-series-parallel-example2-figure1.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of a 28V source, 20V source, 160ohm resistor, and 480ohm resistor. The high-potential end of the 28V source connects to the 160ohm resistor at node a. The two resistors connect at node b. The 480ohm resistor connects to the high-potential end of the 20V source at node c. The low-potential end of both sources connect at node d. Branch current iL(0) flows through the 480ohm resistor from node b to node c. Voltage v(0) drops from node b to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.5"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-2" title="Copy heading and permalink for Figure 7.8.5" aria-label="Copy heading and permalink for Figure 7.8.5">🔗</a></div></figcaption>
+</figure>
+<div class="para">Use Ohm’s law to calculate the initial current through the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i_L(0) \amp= \frac{28~\textrm{V} - 20~\textrm{V}}{480~\Omega+160~\Omega}\\
+\amp= \frac{8~\textrm{V}}{640~\Omega}\\
+\amp= 12.5~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use Ohm’s law over the 160 Ω resistor to calculate <span class="process-math">\(v(0)\text{.}\)</span> (Note that you can also calculate this by using Ohm’s law over the 480 Ω resistor. Try it out if you want extra practice.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\frac{28~\textrm{V} - v(0)}{0.16~\textrm{k}\Omega} \amp= i_L(0)\\
+28~\textrm{V} - v(0) \amp= (12.5~\textrm{mA})(0.16~\textrm{k}\Omega)\\
+\amp= 2~\textrm{V}\\
+v(0) \amp= 28~\textrm{V} - 2~\textrm{V}\\
+\amp= 26~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t=0^+\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-series-parallel-example2-figure2.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of a 20V source, two resistors (960ohm and 480ohm), a 12.5nF capacitor, and 500uH inductor. The capacitor and two resistors connect at node a. The two resistors and inductor connect at node b. The inductor connects to the high-potential end of the 20V source at node c. The capacitor and low-potential end of the 20V source connect at node d. Voltage v(t) drops over the capacitor from node a to node d. Branch current iL(t) flows through the inductor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.6"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-8" title="Copy heading and permalink for Figure 7.8.6" aria-label="Copy heading and permalink for Figure 7.8.6">🔗</a></div></figcaption>
+</figure>
+<div class="para">Simplify the circuit by combining the two parallel resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-series-parallel-example2-figure3.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of a 12.5nF capacitor, 320ohm resistor, 500uH inductor, and 20V source. The capacitor and resistor connect at node a. The resistor and inductor connect at node b. The inductor and high-potential end of the 20V source connect at node c. The capacitor and low-potential end of the 20V source connect at node d. Voltage v(t) drops over the capacitor from node a to node d. Branch current iL(t) flows through the inductor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.7"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-10" title="Copy heading and permalink for Figure 7.8.7" aria-label="Copy heading and permalink for Figure 7.8.7">🔗</a></div></figcaption>
+</figure>
+<div class="para">This is a non-homogeneous series RLC circuit. We will need to derive the final steady-state value of the voltage. Draw the circuit in its final steady-state configuration. The capacitor can be replaced by an open and the inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch7-series-parallel-example2-figure4.svg" role="img" class="contained" alt="Circuit with three nodes consisting of a 320ohm resistor and 20V source. One end of the 320ohm resistor floats at node a. The 320ohm resistor and high-potential end of the 20V source connect at node b. The low-potential end of the 20V source floats at node c. Voltage v(infinity) drops from node a to node c. Branch current iL(infinity) flows through the resistor from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.8"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-12" title="Copy heading and permalink for Figure 7.8.8" aria-label="Copy heading and permalink for Figure 7.8.8">🔗</a></div></figcaption>
+</figure>
+<div class="para">The value of <span class="process-math">\(v(\infty)\)</span> is 20 V.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Draw the circuit in the final steady-state condition. The capacitor can be replaced by an open and the inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.5">(7.3.5)</a> to calculate the damping parameter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\alpha \amp= \frac{320~\Omega}{2(500\times10^{-6}~\textrm{H})}\\
+\amp= 320000~\textrm{Np/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.6">(7.3.6)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\omega_0 \amp= \frac{1}{\sqrt{(500\times10^{-6}~\textrm{H})(12.5\times10^{-9}~\textrm{F})}}\\
+\amp= 400000~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The circuit is underdamped. Use <a href="ch7-damping-types.html#ch7-eq-oscillation-freq" class="xref" data-knowl="./knowl/xref/ch7-eq-oscillation-freq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.5">(7.2.5)</a> to calculate the oscillation frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\beta \amp= \sqrt{400000^2-320000^2}\\
+\amp= 240000~\textrm{rad/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.8">(7.3.8)</a> to calculate the initial first derivative of the voltage drop. Note that the current is negative because the current through the inductor flows in the opposite direction as current through the capacitor (which is defined from high to low potential).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v'(0) \amp= \frac{-0.0125~\textrm{A}}{12.5\times10^{-9}~\textrm{F}}\\
+\amp= -1000000~\textrm{V/s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under-B1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.7">(7.6.7)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under-B2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.8">(7.6.8)</a> to calculate the coefficients of the underdamped equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+B_1 \amp= 26~\textrm{V} - 20~\textrm{V}\\
+\amp= 6~\textrm{V}\\
+B_2 \amp= \frac{-1000000 + 320000 [26-20]}{240000}\\
+\amp= 3.83~\textrm{V}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Plug these values into <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-underdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.6">(7.6.6)</a> to derive an equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+v(t) = \left[20~\textrm{V} + \textrm{e}^{-320000t}\left(6~\textrm{V}~\cos(240000)+3.83~\textrm{V}~\sin(240000t)\right)\right]~u(t) + 26~\textrm{V}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-series-parallel-ex2-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.2.1"><a tabindex="-1" href="#ch7-series-parallel-ex2-3" title="Copy heading and permalink for Solution 7.8.2.1" aria-label="Copy heading and permalink for Solution 7.8.2.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 7.8.2"><a tabindex="-1" href="#ch7-series-parallel-ex2" title="Copy heading and permalink for Exercise 7.8.2" aria-label="Copy heading and permalink for Exercise 7.8.2">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch7-secondorder-10.html#ch7-series-parallel-ex2">In Context</a></span>
+</body>
+</html>

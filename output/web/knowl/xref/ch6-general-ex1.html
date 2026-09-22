@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
+</h2>
+<div class="para">Derive equations for <span class="process-math">\(i(t)\)</span> and <span class="process-math">\(v(t)\)</span> given the circuit shown in <a href="ch6-inductors-8.html#general-rl-example1-diagram" class="xref" data-knowl="./knowl/xref/general-rl-example1-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 6.6.81">Figure 6.6.81</a>. The switch is open for a very long time before closing at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-general-rl-example1-diagram.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of a 15mA source, 24V source, four resistors, inductor, and SPST switch. The 15mA source, 2kohm and 4kohm (A) resistors connect at node a. The 15mA source flows into node a. The 4kohm (A), 6kohm, and one end of the SPST switch connect at node b. The other end of the SPST switch and 4kohm (B) connect at node c. The 4kohm (B) connects to the high-potential end of the 24V source at node d. The 6kohm resistor and 240mH inductor connect at node e. The 15mA source, 2kohm resistor, 240mH inductor, and low-potential end of the 24V source connect at node f. The 15mA source flows out of node f. Voltage v(t) drops over the inductor from node e to node f. Branch current i(t) flows through the inductor from node e to node f. The SPST switch is depicted as closing."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.81<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch6-inductors-8.html#ch6-general-ex1" class="xref" data-knowl="./knowl/xref/ch6-general-ex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 6.6.21">Exercise 6.6.21</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.81"><a tabindex="-1" href="#general-rl-example1-diagram" title="Copy heading and permalink for Figure 6.6.81" aria-label="Copy heading and permalink for Figure 6.6.81">🔗</a></div></figcaption>
+</figure><div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(t) \amp= \left[3.14~\textrm{mA} - 0.64~\textrm{mA}~\textrm{e}^{-35000t}\right]~u(t) + 2.5~\textrm{mA}~u(-t)\\
+v(t) \amp= 5.4~\textrm{V}~\textrm{e}^{-35000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 6.6.21.1"><a tabindex="-1" href="#ch6-general-ex1-2" title="Copy heading and permalink for Answer 6.6.21.1" aria-label="Copy heading and permalink for Answer 6.6.21.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Analyze the circuit in the initial steady-state condition. The inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-generalrl-example1-solution1.svg" role="img" class="contained" alt="Circuit with 3 nodes and 2 meshes consisting of a 15mA source and three resistors. The 15mA source, 2kohm, and 4kohm resistors connect at node a. The 15mA source flows into node a. The 4kohm and 6kohm resistors connect at node b. The 15mA source, 2kohm and 6kohm resistors connect at node c. The 15mA source flows out of node c. Branch current i(0) flows through the 6kohm resistor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.82<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.82"><a tabindex="-1" href="#ch6-general-ex1-3-2" title="Copy heading and permalink for Figure 6.6.82" aria-label="Copy heading and permalink for Figure 6.6.82">🔗</a></div></figcaption>
+</figure>
+<div class="para">Combine the two series resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-generalrl-example1-solution2.svg" role="img" class="contained" alt="Circuit with 2 nodes and 2 meshes consisting of a 15mA source, 2kohm resistor, and 10kohm resistor. All three circuit elements are connected in parallel between nodes a and b. The 15mA source flows out of node b into node a. Branch current i(0) flows through the 10kohm resistor from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.83<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.83"><a tabindex="-1" href="#ch6-general-ex1-3-4" title="Copy heading and permalink for Figure 6.6.83" aria-label="Copy heading and permalink for Figure 6.6.83">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= \frac{(2~\textrm{k}\Omega)(10~\textrm{k}\Omega)}{2~\textrm{k}\Omega+10~\textrm{k}\Omega}\\
+\amp= \frac{20~\textrm{k}\Omega^2}{12~\textrm{k}\Omega}\\
+\amp= 1.67~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the current divider rule to calculate <span class="process-math">\(i(0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(0) \amp= 15~\textrm{mA}\left(\frac{1.67~\textrm{k}\Omega}{10~\textrm{k}\Omega}\right)\\
+\amp= 2.5~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit in the final steady-state condition. The inductor can be replaced by a short.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-generalrl-example1-solution3.svg" role="img" class="contained" alt="Circuit with 4 nodes and 3 meshes consisting of a 15mA source, 24V source, and four resistors. The 15mA source, 2kohm and 4kohm (A) resistors connect at node a. The 15mA source flows into node a. The 4kohm (A), 6kohm, and 4kohm (B) resistors connect at node b. The 4kohm resistor connects to the high-potential end of the 24V source at node c. The 15mA source, 2kohm and 6kohm resistors connect to the low-potential end of the 24V source at node d. Branch current i(infinity) is defined through the 6kohm resistor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.84<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.84"><a tabindex="-1" href="#ch6-general-ex1-3-10" title="Copy heading and permalink for Figure 6.6.84" aria-label="Copy heading and permalink for Figure 6.6.84">🔗</a></div></figcaption>
+</figure>
+<div class="para">Perform source transformation on both sources.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The 15 mA current source becomes<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+(15~\textrm{mA})(2~\textrm{k}\Omega) = 30~\textrm{V}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The 24 V source becomes<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{24~\textrm{V}}{4~\textrm{k}\Omega} = 6~\textrm{mA}.
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-generalrl-example1-solution4.svg" role="img" class="contained" alt="Circuit with 4 nodes and 3 meshes consisting of a 30V source, 6mA source, and four resistors. The high-potential end of the 30V source connects to the 2kohm resistor at node a. The 2kohm and 4kohm (A) resistors connect at node b. The 4kohm (A), 6kohm, 4kohm (B) resistors and 6mA source connect at node c. The 6mA source flows into node c. The low-potential end of the 30V source, 6kohm, 4kohm (B), and 6mA source connect at node d. The 6mA source flows out of node d. Branch current i(infinity) flows through the 6kohm resistor from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.85<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.85"><a tabindex="-1" href="#ch6-general-ex1-3-16" title="Copy heading and permalink for Figure 6.6.85" aria-label="Copy heading and permalink for Figure 6.6.85">🔗</a></div></figcaption>
+</figure>
+<div class="para">Combine the series resistors.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-generalrl-example1-solution5.svg" role="img" class="contained" alt="Circuit with 3 nodes and 3 meshes consisting of a 30V source, 6mA source, and three resistors. The high-potential end of the 30V source connects to the 6kohm (A) resistor at node a. The 6kohm (A), 6kohm (B), 4kohm resistors and 6mA source connect at node b. The 6mA source flows into node b. The low-potential end of the 30V source, 6kohm (B), 4kohm, and 6mA source connect at node c. The 6mA source flows out of node c. Branch current i(infinity) flows through the 6kohm (B) resistor from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.86<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.86"><a tabindex="-1" href="#ch6-general-ex1-3-18" title="Copy heading and permalink for Figure 6.6.86" aria-label="Copy heading and permalink for Figure 6.6.86">🔗</a></div></figcaption>
+</figure>
+<div class="para">Convert the voltage source to a current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{30~\textrm{V}}{6~\textrm{k}\Omega} = 5~\textrm{mA}
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch6-generalrl-example1-solution6.svg" role="img" class="contained" alt="Circuit with 2 nodes and 4 meshes consisting of a 5mA source, 6mA source, and three resistors (6k, 6k, and 4k). All five circuit elements are connected in parallel between nodes a and b. Both current sources flow out of node b and into node a. Branch current i(infinity) flows through one of the 6kohm resistors from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.87<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.87"><a tabindex="-1" href="#ch6-general-ex1-3-21" title="Copy heading and permalink for Figure 6.6.87" aria-label="Copy heading and permalink for Figure 6.6.87">🔗</a></div></figcaption>
+</figure>
+<div class="para">The two current sources are in parallel and can be combined.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch6-generalrl-example1-solution7.svg" role="img" class="contained" alt="Circuit with 2 nodes and 4 meshes consisting of an 11mA source and three resistors (6k, 6k, and 4k). All four circuit elements are connected in parallel between nodes a and b. The current source flows out of node b and into node a. Branch current i(infinity) flows through one of the 6kohm resistors from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.88<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.88"><a tabindex="-1" href="#ch6-general-ex1-3-23" title="Copy heading and permalink for Figure 6.6.88" aria-label="Copy heading and permalink for Figure 6.6.88">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= \frac{1}{\frac{1}{6~\textrm{k}\Omega} + \frac{1}{6~\textrm{k}\Omega} + \frac{1}{4~\textrm{k}\Omega}}\\
+\amp= 1.714~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use the current divider rule to calculate <span class="process-math">\(i(\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+i(\infty) \amp= 11~\textrm{mA}\left(\frac{1.71~\textrm{k}\Omega}{6~\textrm{k}\Omega}\right)\\
+\amp= 3.14~\textrm{mA}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Analyze the circuit at <span class="process-math">\(t = 0^+\text{.}\)</span> Deactivate the sources to calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-generalrl-example1-solution8.svg" role="img" class="contained" alt="Circuit with 4 nodes and 2 meshes consisting of four resistors and one inductor. The 2kohm and 4kohm (A) resistors connect at node a. The 4kohm (A), 6kohm, and 4kohm (B) resistors connect at node b. The 6kohm resistor connects to the 240mH inductor at node c. The 2kohm and 4kohm (B) resistors connect to the 240mH inductor at node d. Voltage v(t) drops over the inductor from node c to node d. Branch current i(t) flows through the inductor from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.89<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.89"><a tabindex="-1" href="#ch6-general-ex1-3-29" title="Copy heading and permalink for Figure 6.6.89" aria-label="Copy heading and permalink for Figure 6.6.89">🔗</a></div></figcaption>
+</figure>
+<div class="para">Calculate the equivalent resistance as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+R_{EQ} \amp= (2~\textrm{k}\Omega+4~\textrm{k}\Omega)//4~\textrm{k}\Omega+6~\textrm{k}\Omega\\
+\amp= 6~\textrm{k}\Omega//4~\textrm{k}\Omega+6~\textrm{k}\Omega\\
+\amp= 2.4~\textrm{k}\Omega+6~\textrm{k}\Omega\\
+\amp= 8.4~\textrm{k}\Omega
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to calculate <span class="process-math">\(\tau\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+\tau \amp= \frac{L}{R}\\
+\amp= \frac{.24~\textrm{H}}{8400~\Omega}\\
+\amp= 2.86\times10^{-5}~\textrm{s}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-generalrlcurrent" class="xref" data-knowl="./knowl/xref/ch6-generalrlcurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.13">(6.5.13)</a> to calculate <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+i(t) = \left[3.14~\textrm{mA} - 0.64~\textrm{mA}~\textrm{e}^{-35000t}\right]~u(t) + 2.5~\textrm{mA}~u(-t)
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-generalrlvoltage" class="xref" data-knowl="./knowl/xref/ch6-generalrlvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.14">(6.5.14)</a> to calculate <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{align*}
+v(t) \amp= (8.4~\textrm{k}\Omega)\left[(3.14~\textrm{mA} - 2.5~\textrm{mA})~\textrm{e}^{-35000t}\right]~u(t)\\
+\amp= 5.4~\textrm{V}~\textrm{e}^{-35000t}~u(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-general-ex1-3-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.21.1"><a tabindex="-1" href="#ch6-general-ex1-3" title="Copy heading and permalink for Solution 6.6.21.1" aria-label="Copy heading and permalink for Solution 6.6.21.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 6.6.21"><a tabindex="-1" href="#ch6-general-ex1" title="Copy heading and permalink for Exercise 6.6.21" aria-label="Copy heading and permalink for Exercise 6.6.21">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="ch6-inductors-8.html#ch6-general-ex1">In Context</a></span>
+</body>
+</html>

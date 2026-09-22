@@ -2373,15 +2373,15 @@
 			<p>A <term>filter</term> is a circuit that selectively blocks certain frequencies (or a range of frequencies) from passing through to the output. Filters can be passive (made of passive components only) or active (made with a combination of passive and active components, mostly commonly op-amps). Active filters will be discussed in <xref ref="ch9-activefilters" />. </p> 
 			
 			<p>Filters are defined by their frequency response. The four types of frequency responses are low-pass, high-pass, band-pass, and band-stop.</p>
+			
+			<p>Filters are additionally defined by the circuit order. <term>First-order filters</term> consist of first-order circuits (only one energy storage device is included in the design). <term>Second-order filters</term> consist of second-order circuits (two energy storage devices are included in the design).</p>
 
 			<p>The <term>cutoff frequency</term> (<m>\omega_c</m>) of a filter defines the frequency at which input signals become modified by the circuit and either start to become blocked from or start to become passed to the output.</p>
 
-			<p>Filters are additionally defined by the circuit order. <term>First-order filters</term> consist of first-order circuits (only one energy storage device is included in the design). <term>Second-order filters</term> consist of second-order circuits (two energy storage devices are included in the design).</p>
+			<p>The cutoff frequency of a filter is defined by as the frequency where the magnitude of the transfer function of the filter is equal to <m>1/\sqrt{2}</m> relative to the magnitude of the transfer function in the <term>pass-band</term>, as described in <xref ref="ch9-cutoff-frequency-second-order" />. The pass-band defines the range of frequencies where the output signal is not blocked by the filter. For band-pass and band-stop filters, there will be two cutoff frequencies, denoted as <m>\omega_{c1}</m> and <m>\omega_{c2}</m>. (These two values will be defined in <xref ref="ch9-bpf-and-bsf" />.) The unit of the cutoff frequency is rad/s.</p>
 			
-			<p>The cutoff frequency of a first-order filter is defined by <xref ref="ch9-cutoff-frequency-first-order" />, where <m>\tau</m> was defined in <xref ref="ch5-firstorderlinearode-standard" />. The unit of the cutoff frequency is rad/s.</p>
-
 			<p>
-				<md number="yes" xml:id="ch9-cutoff-frequency-first-order">\omega_c = \frac{1}{\tau}</md>
+				<md number="yes" xml:id="ch9-cutoff-frequency-second-order">|H(\omega_c)| = \frac{1}{\sqrt{2}}</md>
 			</p>
 
 			<remark>
@@ -2394,12 +2394,6 @@
 					</ul>
 				</p>
 			</remark>
-
-			<p>The cutoff frequency of a second-order filter is defined as the frequency where the magnitude of the transfer function of the filter is equal to <m>1/\sqrt{2}</m>, as described in <xref ref="ch9-cutoff-frequency-second-order" />. For band-pass and band-stop filters, there will be two cutoff frequencies, denoted as <m>\omega_{c1}</m> and <m>\omega_{c2}</m>.</p>
-			
-			<p>
-				<md number="yes" xml:id="ch9-cutoff-frequency-second-order">H(\omega_c) = \frac{1}{\sqrt{2}}</md>
-			</p>
 
 			<p>A second-order filter is also characterized by a quantity known as the <term>quality factor</term>, <m>Q</m> (sometimes known as q-factor), which defines the <q>narrowness</q> of the filter response at the resonant frequency. A high quality factor means that the filter has a very narrow response (and vice versa). The quality factor of a second-order circuit is defined in <xref ref="ch9-quality-factor" />, where <m>\omega_0</m> is the resonant frequency of the filter, and where <m>a_1</m> is one of the coefficients defined in <xref ref="ch7-secondorderlinearode" /> for a second-order differential equation <alert>in standard form</alert>.</p>
 
@@ -2425,7 +2419,7 @@
 		<subsection xml:id="ch9-lpfs">
 			<title>Low-Pass Filters (LPF)</title>
 
-			<p>A <term>low-pass filter</term> blocks high frequency signals (signals with a frequency above the cutoff frequency) from passing through to the output. (Only low frequencies can pass through, hence the name <q>low-pass filter.</q>) A common use of low-pass filters is to remove high frequency noise from a circuit's output.</p>
+			<p>A <term>low-pass filter</term> blocks high frequency signals (signals with a frequency above the cutoff frequency) from passing through to the output. (Only low frequencies can pass through, hence the name <q>low-pass filter.</q>) A common use of low-pass filters is to remove high frequency noise from a circuit's output. The pass-band of a low-pass filter encompasses low frequencies. When calculating the cutoff frequency of a low-pass filter, the magnitude of the transfer function in the pass-band will be equal to <m>|H(0)|</m>.</p>
 
 			<p>As the frequency of the input source changes, the magnitude of the output voltage will change. This can be characterized by calculating <m>v_{out}/v_{in}</m> at varying frequencies and looking at the response. An ideal low-pass filter has what's called a <term><q>brick wall</q> response</term>: all frequencies above the cutoff frequency are completely eliminated from the output, and all frequencies below the cutoff frequency are able to pass through with no change in magnitude.</p>
 			
@@ -2451,14 +2445,14 @@
 			<p>A second-order low-pass filter will cause a much faster decay of the output signal compared to a first-order low-pass filter. A comparison of waveforms for a first and second-order low-pass filter (with identical cutoff frequencies) is shown in <xref ref="lpf-magnitude-response-first-and-second" />.</p>
 
 			<figure xml:id="lpf-magnitude-response-first-and-second">
-  				<caption>Output response comparison between a first-order low-pass filter and a second-order low-pass filter.</caption>
+  				<caption>Output response comparison between a first-order low-pass filter and a second-order low-pass filter with equal cutoff frequencies.</caption>
 				<image width="100%" xml:id="ch9-lpf-magnitude-response-first-and-second">
 					<shortdescription>Graph of vout/vin on y-axis and w/wc on x-axis. Graph is log-log. Black line is 1 until around w/wc=1, then gradually decays. Gray line is 1 until around w/wc=1, then more quickly decays.</shortdescription>
 					<latex-image>
 						\begin{tikzpicture}[font=\sffamily]
 							\begin{loglogaxis}[xlabel=$\omega/\omega_c$, ylabel=$v_{out}/v_{in}$, xmin=0.01, xmax=100, legend pos=south west, clip=false, height=5cm, width=\linewidth]
 								\addplot [thick, domain=0.01:100, samples=100]	{1/(sqrt(x^2+1))};
-								\addplot [thick, gray, domain=0.01:100, samples=100]	{1/(sqrt((1-x^2)^2+x^2))};
+								\addplot [thick, gray, domain=0.01:100, samples=100]	{sqrt(0.5)/(sqrt((1-x^2)^2+x^2))};
 								\legend{first-order filter, second-order filter}
 							\end{loglogaxis}
 						\end{tikzpicture}
@@ -2554,6 +2548,15 @@
 						<md>H(j\omega) = \frac{10000}{-\omega^2 + 20j\omega + 10000}</md>
 					</p>
 
+					<p>Calculate the magnitude of the transfer function.</p>
+					
+					<p>
+						<md>
+							<mrow>|H(j\omega)| \amp= \Big|\frac{\frac{1}{LC}}{-\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}\Big|</mrow>
+							<mrow>\amp= \frac{\frac{1}{LC}}{\sqrt{\left(\frac{1}{LC}-\omega^2\right)^2 + \left(\frac{1}{RC}\omega\right)^2}}</mrow>
+						</md>
+					</p>
+
 					<p>Calculate the resonant frequency of the circuit.</p>
 					
 					<p>
@@ -2569,6 +2572,17 @@
 						<md>
 							<mrow>Q \amp= \frac{100}{20}</mrow>
 							<mrow>\amp= 5</mrow>
+						</md>
+					</p>
+
+					<p>Calculate the magnitude of the transfer function in the pass-band. (I.E. <m>|H(0)|</m>.)</p>
+					
+					<p>
+						<md>
+							<mrow>|H(0)| \amp= \frac{\frac{1}{LC}}{\sqrt{\left(\frac{1}{LC}-0\right)^2 + \left(\frac{1}{RC}(0)\right)^2}}</mrow>
+							<mrow>\amp= \frac{\frac{1}{LC}}{\sqrt{\left(\frac{1}{LC}\right)^2}}</mrow>
+							<mrow>\amp= \frac{\frac{1}{LC}}{\frac{1}{LC}}</mrow>
+							<mrow>\amp= 1</mrow>
 						</md>
 					</p>
 
@@ -2622,7 +2636,7 @@
 		<subsection xml:id="ch9-hpfs">
 			<title>High-Pass Filters (HPF)</title>
 
-			<p>A <term>high-pass filter</term> blocks low frequency signals (signals with a frequency below the cutoff frequency) from passing through to the output. (Only high frequencies can pass through, hence the name <q>high-pass filter.</q>)</p>
+			<p>A <term>high-pass filter</term> blocks low frequency signals (signals with a frequency below the cutoff frequency) from passing through to the output. (Only high frequencies can pass through, hence the name <q>high-pass filter.</q>) The pass-band of a high-pass filter encompasses high frequencies. When calculating the cutoff frequency of a high-pass filter, the magnitude of the transfer function in the pass-band will be equal to <m>|H(\infty)|</m>.</p>
 
 			<p>As the frequency of the input source changes, the magnitude of the output voltage will change. This can be characterized by calculating <m>v_{out}/v_{in}</m> at varying frequencies and looking at the response. An ideal high-pass filter has an ideal brick wall response where all frequencies below the cutoff frequency are completely eliminated from the output, and all frequencies above the cutoff frequency are able to pass through with no change in magnitude.</p>
 			
@@ -2648,14 +2662,14 @@
 			<p>A second-order high-pass filter will cause a much faster rise of the output signal compared to a first-order high-pass filter. A comparison of waveforms for a first and second-order high-pass filter (with identical cutoff frequencies) is shown in <xref ref="hpf-magnitude-response-first-and-second" />.</p>
 
 			<figure xml:id="hpf-magnitude-response-first-and-second">
-  				<caption>Output response comparison between a first-order high-pass filter and a second-order high-pass filter.</caption>
+  				<caption>Output response comparison between a first-order high-pass filter and a second-order high-pass filter with equal cutoff frequencies.</caption>
 				<image width="100%" xml:id="ch9-hpf-magnitude-response-first-and-second">
 					<shortdescription>Graph of vout/vin on y-axis and w/wc on x-axis. Graph is log-log. Black line rises until around w/wc=1, then is 1. Gray line rises faster until around w/wc=1, then is 1.</shortdescription>
 					<latex-image>
 						\begin{tikzpicture}[font=\sffamily]
 							\begin{loglogaxis}[xlabel=$\omega/\omega_c$, ylabel=$v_{out}/v_{in}$, xmin=0.01, xmax=100, legend pos=south east, clip=false, height=5cm, width=\linewidth]
 								\addplot [thick, domain=0.01:100, samples=100]	{x/(sqrt(x^2+1))};
-								\addplot [thick, gray, domain=0.01:100, samples=100]	{x^2/(sqrt((1-x^2)^2+x^2))};
+								\addplot [thick, gray, domain=0.01:100, samples=100]	{sqrt(0.5)*x^2/(sqrt((1-x^2)^2+x^2))};
 								\legend{first-order filter, second-order filter}
 							\end{loglogaxis}
 						\end{tikzpicture}
@@ -2744,6 +2758,16 @@
 						<md>H(j\omega) = \frac{-\omega^2}{-\omega^2 + 50000j\omega + 900000000}</md>
 					</p>
 
+					<p>Calculate the magnitude of the transfer function.</p>
+					
+					<p>
+						<md>
+							<mrow>|H(j\omega)| \amp= \Big| \frac{-\omega^2}{-\omega^2 + \left[\frac{1}{CR_1} + \frac{R_2}{L}\right]j\omega + \left[\frac{R_2}{R_1LC} + \frac{1}{LC}\right]}\Big|</mrow>
+							<mrow>\amp= \frac{\omega^2}{\sqrt{\left(\left[\frac{R_2}{R_1LC} + \frac{1}{LC}\right]-\omega^2\right)^2 + \left(\left[\frac{1}{CR_1} + \frac{R_2}{L}\right]\omega\right)^2}}</mrow>
+						</md>
+						
+					</p>
+
 					<p>Calculate the resonant frequency of the circuit.</p>
 					
 					<p>
@@ -2761,6 +2785,14 @@
 							<mrow>\amp= 0.6</mrow>
 						</md>
 					</p>
+
+					<p>Note that at sufficiently large values of <m>\omega</m>, the magnitude of the transfer function becomes equal to</p>
+					
+					<p>
+						<md>\frac{\omega^2}{\omega^2} = 1</md>.
+					</p>
+
+					<p>This means that the magnitude of the transfer function in the pass-band is equal to one.</p>
 
 					<p>Set <m>|H(j\omega)|</m> equal to <m>1/\sqrt{2}</m> and solve for <m>\omega</m> to calculate the cutoff frequency of the circuit.</p>
 
@@ -2783,6 +2815,26 @@
 							<mrow>\omega_c \amp= 36300~\textrm{rad/s}</mrow>
 						</md>
 					</p>
+
+					<p>The Bode plot for this filter is shown below.</p>
+
+					<figure>
+  						<caption></caption>
+						<image width="100%" xml:id="ch9-hpf-example1-bode">
+							<shortdescription>Top: magnitude response showing HPF behavior. Bottom: phase response with the phase decreasing from 180 degrees to 0 degrees.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\begin{groupplot}[group style={group name=my plots, group size=1 by 2, vertical sep=0pt, xlabels at=edge bottom, xticklabels at=edge bottom,}, width=\linewidth, height=5cm, xlabel=$\omega$~(rad/s), xmin=1000, xmax=1000000]
+										\nextgroupplot[ylabel=$|H(j\omega)|$, ymode=log, xmode=log]
+											\addplot[thick, domain=1000:1000000, samples=100]	{x^2/sqrt((9E8-x^2)^2+(50000*x)^2)};
+										\nextgroupplot[ylabel=$\angle H(j\omega)$~($^\circ$), xmode=log, ytick={0, 90, 180}]
+											\addplot[thick, domain=1000:30000, samples=100]	{180-atan(50000*x/(9E8-x^2))};
+											\addplot[thick, domain=31000:1000000, samples=100]	{-atan(50000*x/(9E8-x^2))};
+									\end{groupplot}
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
 				</statement>
 			</example>
 	
@@ -2953,7 +3005,7 @@
   				</image>
 			</figure>
 
-			<p>Band-pass filters are characterized by their quality factor. A filter with a high quality factor will have a very narrow pass-band (low bandwidth), and vice versa. A graph showing the output response of band-pass filters with different quality factors is shown in <xref ref="bpf-magnitude-response-highq-and-lowq" />.</p>
+			<p>Band-pass filters are characterized by their quality factor. A filter with a high quality factor will have a very narrow pass-band (low bandwidth), and vice versa. A graph showing the output response of band-pass filters with the same center frequency but with different quality factors is shown in <xref ref="bpf-magnitude-response-highq-and-lowq" />.</p>
 			
 			<figure xml:id="bpf-magnitude-response-highq-and-lowq">
   				<caption>Output response comparison between a low q-factor band-pass filter and a high q-factor band-pass filter.</caption>
@@ -3033,17 +3085,73 @@
 						</md>
 					</p>
 
-					<p>The bode plot for this circuit is shown below.</p>
+					<p>There is no value of the magnitude of the transfer function that is equal to <m>1/\sqrt{2}</m>. Therefore, it's not possible to directly calculate the cutoff frequencies of this circuit. However, this circuit is built from two stages. The first stage (consisting of resistor <m>R_1</m> and capacitor <m>C_1</m>) is a high-pass filter. The second stage (consisting of resistor <m>R_2</m> and capacitor <m>C_2</m>) is a low-pass filter. The cutoff frequency of each of these two stages can be calculated.</p>
+
+					<p>Stage one is a HPF with a transfer function defined below.</p>
+					
+					<p>
+						<md>H(j\omega) = \frac{j\omega}{j\omega + \frac{1}{R_1C_1}}</md>
+					</p>
+
+					<p>The magnitude of this transfer function is equal to</p>
+					
+					<p>
+						<md>|H(j\omega)| = \frac{\omega}{\sqrt{\omega^2 + \left(\frac{1}{R_1C_1}\right)^2}}</md>
+					</p>
+
+					<p>Set <m>|H(j\omega)|</m> equal to <m>1/\sqrt{2}</m> and solve for <m>\omega</m> to calculate the cutoff frequency of stage one. This will be one of the two cutoff frequencies of the band-pass filter.</p>
+			
+					<p>
+						<md>
+							<mrow>|H(j\omega_c)| = \frac{1}{\sqrt{2}} \amp= \frac{\omega_c}{\sqrt{\omega_c^2 + \left(\frac{1}{R_1C_1}\right)^2}}</mrow>
+							<mrow>\frac{1}{2} \amp= \frac{\omega_c^2}{\omega_c^2 + \left(\frac{1}{R_1C_1}\right)^2}</mrow>
+							<mrow>\omega_c^2 + \left(\frac{1}{R_1C_1}\right)^2 \amp= 2\omega_c^2</mrow>
+							<mrow>\omega_c^2 \amp= \left(\frac{1}{R_1C_1}\right)^2</mrow>
+							<mrow>\omega_c \amp= \frac{1}{R_1C_1}</mrow>
+							<mrow>\amp= \frac{1}{(200)(40 \times 10^{-6})}</mrow>
+							<mrow>\amp= 125~\textrm{rad/s}</mrow>
+						</md>
+					</p>
+
+					<p>Stage two is a LPF with a transfer function defined below.</p>
+					
+					<p>
+						<md>H(j\omega) = \frac{\frac{1}{R_2C_2}}{j\omega + \frac{1}{R_2C_2}}</md>
+					</p>
+
+					<p>The magnitude of this transfer function is equal to</p>
+					
+					<p>
+						<md>|H(j\omega)| = \frac{\frac{1}{R_2C_2}}{\sqrt{\omega^2 + \left(\frac{1}{R_2C_2}\right)^2}}</md>
+					</p>
+
+					<p>Set <m>|H(j\omega)|</m> equal to <m>1/\sqrt{2}</m> and solve for <m>\omega</m> to calculate the cutoff frequency of stage two. This will be the second of the two cutoff frequencies of the band-pass filter.</p>
+			
+					<p>
+						<md>
+							<mrow>|H(j\omega_c)| = \frac{1}{\sqrt{2}} \amp= \frac{\frac{1}{R_2C_2}}{\sqrt{\omega_c^2 + \left(\frac{1}{R_2C_2}\right)^2}}</mrow>
+							<mrow>\frac{1}{2} \amp= \frac{\left(\frac{1}{R_2C_2}\right)^2}{\omega_c^2 + \left(\frac{1}{R_2C_2}\right)^2}</mrow>
+							<mrow>\omega_c^2 + \left(\frac{1}{R_2C_2}\right)^2 \amp= 2\left(\frac{1}{R_2C_2}\right)^2</mrow>
+							<mrow>\omega_c^2 \amp= \left(\frac{1}{R_2C_2}\right)^2</mrow>
+							<mrow>\omega_c \amp= \frac{1}{R_2C_2}</mrow>
+							<mrow>\amp= \frac{1}{(120)(20 \times 10^{-6})}</mrow>
+							<mrow>\amp= 417~\textrm{rad/s}</mrow>
+						</md>
+					</p>
+
+					<p>The bode plot for this circuit is shown below. The bode plots of each stages are shown in dashed lines to make it clear how the overall transfer function relates to the transfer functions of each stage.</p>
 
 					<figure>
   						<caption></caption>
 						<image width="100%" xml:id="ch9-transfer-function-bpf-bode">
-							<shortdescription>Top: magnitude response showing BPF behavior. Bottom: phase response with the phase decreasing from 90 degrees to -90 degrees.</shortdescription>
+							<shortdescription>Top: magnitude response showing BPF behavior. Dashed line shows HPF stage one which closely resembles the BPF magnitude at low frequencies. Dotted line shows LPF stage two which clearly resembles the BPF magnitude at high frequencies. Bottom: phase response with the phase decreasing from 90 degrees to -90 degrees.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\begin{groupplot}[group style={group name=my plots, group size=1 by 2, vertical sep=0pt, xlabels at=edge bottom, xticklabels at=edge bottom,}, width=\linewidth, height=5cm, xlabel=$\omega$~(rad/s), xmin=1, xmax=100000]
 										\nextgroupplot[ylabel=$|H(j\omega)|$, ymode=log, xmode=log]
 											\addplot[thick, domain=1:100000, samples=100]	{(416.6667*x)/sqrt((52083-x^2)^2+(750^2*x^2))};
+											\addplot[dashed, thick, domain=1:100000, samples=100]	{x/sqrt(x^2+125^2)};
+											\addplot[dotted, thick, domain=1:100000, samples=100]	{416.666/sqrt(x^2+416.666^2)};
 										\nextgroupplot[ylabel=$\angle H(j\omega)$~($^\circ$), xmode=log, ytick={-90,0,90}]
 											\addplot[thick, domain=1:228.2, samples=100]	{90-atan(x*750/(52083-x^2))};
 											\addplot[thick, domain=228.3:100000, samples=100]	{90-atan(x*750/(52083-x^2))-180};
@@ -3084,7 +3192,7 @@
   				</image>
 			</figure>
 
-			<p>Band-stop filters are characterized by their quality factor. A filter with a high quality factor will have a very narrow stop-band (low bandwidth), and vice versa. A graph showing the output response of band-stop filters with different quality factors is shown in <xref ref="bsf-magnitude-response-highq-and-lowq" />.</p>
+			<p>Band-stop filters are characterized by their quality factor. A filter with a high quality factor will have a very narrow stop-band (low bandwidth), and vice versa. A graph showing the output response of band-stop filters with the same center frequency but with different quality factors is shown in <xref ref="bsf-magnitude-response-highq-and-lowq" />.</p>
 			
 			<figure xml:id="bsf-magnitude-response-highq-and-lowq">
   				<caption>Output response comparison between a low q-factor band-stop filter and a high q-factor band-stop filter.</caption>
@@ -3109,7 +3217,7 @@
 				<title>Band-stop filter analysis</title>
 				
 				<statement>
-					<p>Analyze the following band-stop filter. Calculate the center frequency, the bandwidth, and the quality factor of the circuit. The circuit parameters are <m>R = 10~\Omega</m>, <m>L = 200~\textrm{mH}</m>, and <m>C = 50~\mu\textrm{F}</m>.</p>
+					<p>Analyze the following band-stop filter. Calculate the center frequency, the bandwidth, cutoff frequencies, and the quality factor of the circuit. The circuit parameters are <m>R = 10~\Omega</m>, <m>L = 200~\textrm{mH}</m>, and <m>C = 50~\mu\textrm{F}</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -3168,6 +3276,20 @@
 					
 					<p>
 						<md>\beta = 50~\textrm{rad/s}</md>
+					</p>
+
+					<p>The two cutoff frequencies can be calculated directly from the center frequency and bandwidth.</p>
+					
+					<p>
+						<md>
+							<mrow>\omega_{c1}, \omega_{c2} \amp= \omega_0 \pm \frac{\beta}{2}</mrow>
+							<mrow>\omega_{c1} \amp= \omega_0 - \frac{\beta}{2}</mrow>
+							<mrow>\amp= 316~\textrm{rad/s} - 25~\textrm{rad/s}</mrow>
+							<mrow>\amp= 291~\textrm{rad/s}</mrow>
+							<mrow>\omega_{c2} \amp= \omega_0 + \frac{\beta}{2}</mrow>
+							<mrow>\amp= 316~\textrm{rad/s} + 25~\textrm{rad/s}</mrow>
+							<mrow>\amp= 341~\textrm{rad/s}</mrow>
+						</md>
 					</p>
 
 					<p>The Bode plot for this filter is shown below.</p>
@@ -3407,7 +3529,7 @@
 		
 			<p>It is possible to design filters that use an op-amp; these filters are known as active filters. Active filters are capable of generating output amplification (from the op-amp gain). While there are many different types of active filters, only a few will be discussed in this book.</p>
 
-			<p>All properties of active filters, such as cutoff frequency, bandwidth, quality factor, and so on, are defined as discussed in <xref ref="ch9-passivefilters" />.</p>
+			<p>All properties of active filters, such as cutoff frequency, bandwidth, quality factor, and so on, are defined as discussed in <xref ref="ch9-passivefilters" />. <alert>When calculating the cutoff frequency of an active filter, be sure to divide (normalize) by the gain of the op-amp circuit to calculate the frequency at which the magnitude of the transfer function is equal to <m>1/\sqrt{2}</m>.</alert></p>
 
 		</introduction>
 
@@ -8935,7 +9057,7 @@
 
 			<exercise xml:id="ch9-filters-exercise3">
 				<statement>
-					<p>Given the circuit shown in <xref ref="filters-exercise3-diagram" />, determine the filter type. Then, calculate the center frequency, bandwidth, and quality factor.</p>
+					<p>Given the circuit shown in <xref ref="filters-exercise3-diagram" />, determine the filter type. Then, calculate the center frequency, bandwidth, cutoff frequencies, and quality factor.</p>
 
 					<figure xml:id="filters-exercise3-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch9-filters-exercise3" />.</caption>
@@ -8962,6 +9084,8 @@
 						<md>
 							<mrow>\omega_c \amp= 100000~\textrm{rad/s}</mrow>
 							<mrow>\beta \amp= 100000~\textrm{rad/s}</mrow>
+							<mrow>\omega_{c1} \amp= 50000~\textrm{rad/s}</mrow>
+							<mrow>\omega_{c2} \amp= 150000~\textrm{rad/s}</mrow>
 							<mrow>Q \amp= 1</mrow>
 						</md>
 					</p>
@@ -9033,6 +9157,21 @@
 					
 					<p>
 						<md>\beta = 100000~\textrm{rad/s}</md>
+					</p>
+
+					<p>The two cutoff frequencies can be calculated directly from the center frequency and bandwidth.</p>
+					
+					<p>
+						<md>
+							<mrow>\omega_{c1}, \omega_{c2} \amp= \omega_0 \pm \frac{\beta}{2}</mrow>
+							<mrow>\omega_{c1} \amp= \omega_0 - \frac{\beta}{2}</mrow>
+							<mrow>\amp= 100000~\textrm{rad/s} - 50000~\textrm{rad/s}</mrow>
+							<mrow>\amp= 50000~\textrm{rad/s}</mrow>
+							<mrow>\omega_{c2} \amp= \omega_0 + \frac{\beta}{2}</mrow>
+							<mrow>\amp= 100000~\textrm{rad/s} + 5000~\textrm{rad/s}</mrow>
+							<mrow>\amp= 150000~\textrm{rad/s}</mrow>
+						</md>
+						
 					</p>
 
 					<p>Use <xref ref="ch9-quality-factor" /> to calculate the quality factor.</p>
@@ -9138,10 +9277,30 @@
 						<md>-\frac{R_2}{R_1}\frac{d}{dt}v_{in}(t) = \frac{d}{dt}v_{out}(t) + \frac{1}{R_1C}v_{out}(t)</md>
 					</p>
 
-					<p>Use <xref ref="ch9-cutoff-frequency-first-order" /> to calculate the cutoff frequency.</p>
+					<p>The transfer function of this circuit is</p>
 					
 					<p>
-						<md>\omega_c = \frac{1}{R_1C}</md>
+						<md>H(j\omega) = \frac{-\frac{R_2}{R_1} j\omega}{j\omega + \frac{1}{R_1C}}</md>.
+					</p>
+
+					<p>The gain of the op-amp circuit at <m>\omega \rightarrow \infty</m> is equal to</p>
+					
+					<p>
+						<md>G = -\frac{R_2}{R_1}</md>.
+					</p>
+
+					<p>Set <m>|H(j\omega)|</m> equal to <m>1/\sqrt{2}</m>. Divide by the op-amp gain. Then, solve for <m>\omega</m> to calculate the cutoff frequency of the circuit.</p>
+			
+					<p>
+						<md>
+							<mrow>\frac{|H(j\omega_c)|}{G} = \frac{1}{\sqrt{2}} \amp= \Big|\frac{-\frac{R_2}{R_1}j\omega_c}{(-\frac{R_2}{R_1})(j\omega_c + \frac{1}{R_1C})}\Big|</mrow>
+							<mrow>\amp= \Big|\frac{j\omega_c}{j\omega_c + \frac{1}{R_1C}}\Big|</mrow>
+							<mrow>\amp= \frac{\omega_c}{\sqrt{\omega_c^2 + \left(\frac{1}{R_1C}\right)^2}}</mrow>
+							<mrow>\frac{1}{2} \amp= \frac{\omega_c^2}{\omega_c^2 + \left(\frac{1}{R_1C}\right)^2}</mrow>
+							<mrow>\omega_c^2 + \left(\frac{1}{R_1C}\right)^2 \amp= 2\omega_c^2</mrow>
+							<mrow>\omega_c^2 \amp= \left(\frac{1}{R_1C}\right)^2</mrow>
+							<mrow>\omega_c \amp= \frac{1}{R_1C}</mrow>
+						</md>
 					</p>
 				</solution>
 			</exercise>
@@ -9233,15 +9392,33 @@
 					<p>Derive the differential equation (in standard form) corresponding to the circuit.</p>
 					
 					<p>
-						<md>-\frac{1}{R_1C}\frac{d}{dt}v_{in}(t) = \frac{d}{dt}v_{out}(t) + \frac{1}{R_2C}v_{out}(t)</md>
+						<md>-\frac{1}{R_1C} = \frac{d}{dt}v_{out}(t) + \frac{1}{R_2C}v_{out}(t)</md>
 					</p>
 
-					<p>Use <xref ref="ch9-cutoff-frequency-first-order" /> to calculate the cutoff frequency.</p>
+					<p>The transfer function of this circuit is</p>
 					
 					<p>
+						<md>H(j\omega) = \frac{-\frac{1}{R_1C}}{j\omega + \frac{1}{R_2C}}</md>.
+					</p>
+
+					<p>The gain of the op-amp circuit at <m>\omega = 0</m> is equal to</p>
+					
+					<p>
+						<md>G = -\frac{R_2}{R_1}</md>.
+					</p>
+
+					<p>Set <m>|H(j\omega)|</m> equal to <m>1/\sqrt{2}</m>. Divide by the op-amp gain. Then, solve for <m>\omega</m> to calculate the cutoff frequency of the circuit.</p>
+			
+					<p>
 						<md>
+							<mrow>\frac{|H(j\omega_c)|}{G} = \frac{1}{\sqrt{2}} \amp= \Big|\frac{-\frac{1}{R_1C}}{(-\frac{R_2}{R_1})(j\omega_c + \frac{1}{R_2C})}\Big|</mrow>
+							<mrow>\amp= \Big|\frac{\frac{1}{R_2C}}{j\omega_c + \frac{1}{R_2C}}\Big|</mrow>
+							<mrow>\amp= \frac{\frac{1}{R_2C}}{\sqrt{\omega_c^2 + \left(\frac{1}{R_2C}\right)^2}}</mrow>
+							<mrow>\frac{1}{2} \amp= \frac{\left(\frac{1}{R_2C}\right)^2}{\omega_c^2 + \left(\frac{1}{R_2C}\right)^2}</mrow>
+							<mrow>\omega_c^2 + \left(\frac{1}{R_2C}\right)^2 \amp= 2\left(\frac{1}{R_2C}\right)^2</mrow>
+							<mrow>\omega_c^2 \amp= \left(\frac{1}{R_2C}\right)^2</mrow>
 							<mrow>\omega_c \amp= \frac{1}{R_2C}</mrow>
-							<mrow>\amp= \frac{1}{(20000~\Omega)(5\times10^{-6}~\textrm{F})}</mrow>
+							<mrow>\amp= \frac{1}{(20000)(5 \times 10^{-6})}</mrow>
 							<mrow>\amp= 10~\textrm{rad/s}</mrow>
 						</md>
 					</p>

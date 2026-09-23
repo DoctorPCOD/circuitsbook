@@ -229,7 +229,7 @@
       					<cell><m>\vec{S}</m></cell>
       					<cell><p>VA (volt-amp)</p></cell>
 						<cell><m>\frac{\textrm{kg}}{\textrm{m}^2\textrm{s}^3}</m></cell>
-						<cell><p><xref ref="ch10-complexappdxarent" /></p></cell>
+						<cell><p><xref ref="ch10-complexapparent" /></p></cell>
 					</row>
 					<row bottom="minor">
       					<cell><p>current</p></cell>

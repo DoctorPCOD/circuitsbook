@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<appendix xml:id="appa-units">
+<appendix xml:id="appdxa-units">
 	<title>Units and Unit Conversions</title>
 
 	<introduction>
@@ -9,7 +9,7 @@
 		
 		<p>It is important to note that two quantities with different units cannot be combined together using addition or subtraction. (A common phrase used by physics and engineering professors is that <q>you can't add apples to oranges.</q>) This saying is helpful to keep in mind when performing a <q>smell test</q> on calculations. If an addition or subtraction operation is being performed between two or more quantities, then those quantities <alert>must</alert> have the same unit. If not, a mistake was made at some point in the problem-solving process. (This is particularly helpful when deriving differential equations in <xref ref="ch7-secondorder" /> or transfer functions in <xref ref="ch9-phasoranalysis" /> or <xref ref="ch11-laplace" />.)</p>
 
-		<p>It is strongly recommended that every student perform a dimensional analysis on problems prior to solving. In this book, questions in later chapters frequently utilize base units (which are units used without an SI prefix, not necessarily to be confused with <xref ref="appa-si-base-units" />) to ensure that the dimensional analysis will work out properly. This will be explored in a little more detail in <xref ref="appa-diffeq-coefficients" />.</p>
+		<p>It is strongly recommended that every student perform a dimensional analysis on problems prior to solving. In this book, questions in later chapters frequently utilize base units (which are units used without an SI prefix, not necessarily to be confused with <xref ref="appdxa-si-base-units" />) to ensure that the dimensional analysis will work out properly. This will be explored in a little more detail in <xref ref="appdxa-diffeq-coefficients" />.</p>
 		
 		<p>It is expected that the reader of this textbook is familiar with the unit conversion process. It will not be covered in this appendix.</p>
 
@@ -18,18 +18,18 @@
 		</remark>
   	</introduction>
 
-  	<section xml:id="appa-section1">
+  	<section xml:id="appdxa-section1">
 		<title>The International Standard of Units</title>
 
 		<introduction>
-			<p>The <term>international standard of units (SI)</term> is the modern system of units. It is considered a <term>metric system</term> as it is composed of units that are based on powers of ten. This system of units uses base units (described in <xref ref="appa-si-base-units-table" />) that are explained by physical properties such as the speed of light in a vacuum (a value that does not change regardless of one's position or motion in the universe). The SI system of units is the established standard used in scientific fields (even in the United States).</p>
+			<p>The <term>international standard of units (SI)</term> is the modern system of units. It is considered a <term>metric system</term> as it is composed of units that are based on powers of ten. This system of units uses base units (described in <xref ref="appdxa-si-base-units-table" />) that are explained by physical properties such as the speed of light in a vacuum (a value that does not change regardless of one's position or motion in the universe). The SI system of units is the established standard used in scientific fields (even in the United States).</p>
 		
 		</introduction>
 
-		<subsection xml:id="appa-si-base-units">
+		<subsection xml:id="appdxa-si-base-units">
 			<title>SI Base Units</title>
 				
-			<p>There are seven units in the SI system that can be used to derive every other unit in the system. These seven units are known as SI base units. The SI base units are defined in <xref ref="appa-si-base-units-table" />.</p>
+			<p>There are seven units in the SI system that can be used to derive every other unit in the system. These seven units are known as SI base units. The SI base units are defined in <xref ref="appdxa-si-base-units-table" />.</p>
 
 			<remark>
 				<title>Note on the use of the term <q>base units</q></title>
@@ -37,7 +37,7 @@
 				<p>Problems worked out in this textbook will frequently use the term <q>base units</q> to describe a unit used without an SI prefix (A instead of mA, for example). This should not be confused with SI base units!</p>
 			</remark>
 
-			<table xml:id="appa-si-base-units-table">
+			<table xml:id="appdxa-si-base-units-table">
 				<title>SI Base Units.</title>
   				<tabular halign="left" width="100%">
 					<col width="20%" />
@@ -88,18 +88,18 @@
 
 		</subsection>
 
-		<subsection xml:id="appa-si-derived-units">
+		<subsection xml:id="appdxa-si-derived-units">
 			<title>SI Derived Units</title>
 				
-			<p>All other units can be derived from base units and are therefore called derived units. For example, the unit used for velocity (meters per second) is derived from the base units of meter and second: m/s. Most of the units used in this book are derived units. These will be presented in <xref ref="appa-table-of-units-in-this-book" /> in <xref ref="appa-section2" /> for the units used in this textbook.</p>
+			<p>All other units can be derived from base units and are therefore called derived units. For example, the unit used for velocity (meters per second) is derived from the base units of meter and second: m/s. Most of the units used in this book are derived units. These will be presented in <xref ref="appdxa-table-of-units-in-this-book" /> in <xref ref="appdxa-section2" /> for the units used in this textbook.</p>
 		</subsection>
 
-		<subsection xml:id="appa-si-prefixes">
+		<subsection xml:id="appdxa-si-prefixes">
 			<title>SI Prefixes</title>
 				
-			<p>At times, there are quantities that are either extremely small or extremely large. Instead of using scientific notation to deal with these quantities, we can instead use prefixes. The <term>SI prefixes</term> have been standardized for use with SI units. These prefixes can be used with any type of SI unit: meter, volt, second, gram, and so on. Common SI prefixes are defined in <xref ref="appa-table-of-si-prefixes" />.</p>
+			<p>At times, there are quantities that are either extremely small or extremely large. Instead of using scientific notation to deal with these quantities, we can instead use prefixes. The <term>SI prefixes</term> have been standardized for use with SI units. These prefixes can be used with any type of SI unit: meter, volt, second, gram, and so on. Common SI prefixes are defined in <xref ref="appdxa-table-of-si-prefixes" />.</p>
 
-			<table xml:id="appa-table-of-si-prefixes">
+			<table xml:id="appdxa-table-of-si-prefixes">
 				<title>SI Base Units.</title>
   				<tabular halign="left" width="100%">
 					<col width="30%" />
@@ -181,26 +181,27 @@
 
 	</section>
 
-	<section xml:id="appa-section2">
+	<section xml:id="appdxa-section2">
 		<title>Units in This Textbook</title>
 
 		<introduction>
-			<p>Performing a dimensional analysis on some equations in this textbook can be complicated. How do we know the relationship between a farad, ohm, and second? <xref ref="appa-table-of-units-in-this-book" /> will list many properties used in this textbook, including the definition of the unit in SI base units. In <xref ref="appa-diffeq-coefficients" />, dimensional analysis of many terms that appear in differential equations (and transfer functions) will be performed. This will hopefully help for two reasons: first, to help in performing a <q>smell test</q> when deriving differential equations and transfer functions, and second, to verify that the units produced from the mathematics are accurate.</p>
+			<p>Performing a dimensional analysis on some equations in this textbook can be complicated. How do we know the relationship between a farad, ohm, and second? <xref ref="appdxa-table-of-units-in-this-book" /> will list many properties used in this textbook, including the definition of the unit in SI base units. In <xref ref="appdxa-diffeq-coefficients" />, dimensional analysis of many terms that appear in differential equations (and transfer functions) will be performed. This will hopefully help for two reasons: first, to help in performing a <q>smell test</q> when deriving differential equations and transfer functions, and second, to verify that the units produced from the mathematics are accurate.</p>
 
 			<p>Note that the radian is not defined as a base unit by SI, but is also not derived from existing base units. It will be treated as not a unit in this textbook for simplicities sake.</p>
 		</introduction>
 
-		<subsection xml:id="appa-table-of-properties">
+		<subsection xml:id="appdxa-table-of-properties">
 			<title>Table of Properties and Units</title>
 
-			<p><xref ref="appa-table-of-units-in-this-book" /> lists most (but not all) properties used in this textbook. They are listed in alphabetical order by the property name.</p>
+			<p><xref ref="appdxa-table-of-units-in-this-book" /> lists most (but not all) properties used in this textbook. They are listed in alphabetical order by the property name.</p>
 
-			<table xml:id="appa-table-of-units-in-this-book">
+			<table xml:id="appdxa-table-of-units-in-this-book">
 				<title>Properties frequently used in this textbook.</title>
   				<tabular halign="left" width="100%">
 					<col width="20%" />
 					<col width="20%" />
-					<col width="40%" />
+					<col width="20%" />
+					<col width="20%" />
 					<col width="20%" />
     				<row header="yes" bottom="medium">
       					<cell><p>Property</p></cell>
@@ -228,7 +229,7 @@
       					<cell><m>\vec{S}</m></cell>
       					<cell><p>VA (volt-amp)</p></cell>
 						<cell><m>\frac{\textrm{kg}}{\textrm{m}^2\textrm{s}^3}</m></cell>
-						<cell><p><xref ref="ch10-complexapparent" /></p></cell>
+						<cell><p><xref ref="ch10-complexappdxarent" /></p></cell>
 					</row>
 					<row bottom="minor">
       					<cell><p>current</p></cell>
@@ -318,24 +319,24 @@
 			</table>
 		</subsection>
 
-		<subsection xml:id="appa-diffeq-coefficients">
+		<subsection xml:id="appdxa-diffeq-coefficients">
 			<title>Units for Coefficients in Differential Equations and Transfer Functions</title>
 
 			<p>It can be difficult to understand the units involved with quantities used to derive the coefficients of a differential equation. (These coefficients are introduced in <xref ref="ch5-first-order-linear-ODEs" /> for first-order circuits and in <xref ref="ch7-second-order-review" /> for second-order circuits.)</p>
 			
 			<p>In first-order differential equations, the unit of each term in the equation will either be V/s or A/s. This means that <m>y(t)</m> will have a unit of V/s or A/s, <m>a_1</m> (which is equal to one in a standard-form differential equation) will have no unit, and <m>a_0</m> will have a unit of 1/s.</p>
 			
-			<p>In first-order RC circuits, the coefficient <m>a_0</m> has an equation in terms of <m>\frac{1}{RC}</m>. The unit derivation, demonstrating that the unit is 1/s, is shown in <xref ref="appa-rc-a0" />. In non-homogeneous RC circuits, when solving for voltage, the function <m>y(t)</m> has an equation in terms of <m>\frac{V}{RC}</m>, which has a unit of V/s.</p>
+			<p>In first-order RC circuits, the coefficient <m>a_0</m> has an equation in terms of <m>\frac{1}{RC}</m>. The unit derivation, demonstrating that the unit is 1/s, is shown in <xref ref="appdxa-rc-a0" />. In non-homogeneous RC circuits, when solving for voltage, the function <m>y(t)</m> has an equation in terms of <m>\frac{V}{RC}</m>, which has a unit of V/s.</p>
 			
-			<proof xml:id="appa-rc-a0">
+			<proof xml:id="appdxa-rc-a0">
 				<p>
 					<md>\frac{1}{\textrm{F}\Omega} = \frac{1}{\left(\frac{\textrm{s}^4\textrm{A}^2}{\textrm{kgm}^2}\right)\left(\frac{\textrm{kgm}^2}{\textrm{s}^3\textrm{A}^2}\right)} = \frac{1}{\textrm{s}}</md>
 				</p>
 			</proof>
 
-			<p>In first-order RL circuits, the coefficient <m>a_0</m> has an equation in terms of <m>\frac{R}{L}</m>. The unit derivation, demonstrating that the unit is 1/s, is shown in <xref ref="appa-rl-a0" />. In non-homogeneous RL circuits, when solving for current, the function <m>y(t)</m> has an equation in terms of <m>\frac{IR}{L}</m>, which has a unit of A/s.</p>
+			<p>In first-order RL circuits, the coefficient <m>a_0</m> has an equation in terms of <m>\frac{R}{L}</m>. The unit derivation, demonstrating that the unit is 1/s, is shown in <xref ref="appdxa-rl-a0" />. In non-homogeneous RL circuits, when solving for current, the function <m>y(t)</m> has an equation in terms of <m>\frac{IR}{L}</m>, which has a unit of A/s.</p>
 
-			<proof xml:id="appa-rl-a0">
+			<proof xml:id="appdxa-rl-a0">
 				<p>
 					<md>\frac{\Omega}{\textrm{H}} = \frac{\frac{\textrm{kgm}^2}{\textrm{s}^3\textrm{A}^2}}{\frac{\textrm{kgm}^2}{\textrm{s}^2\textrm{A}^2}} = \frac{1}{\textrm{s}}</md>
 				</p>
@@ -343,17 +344,17 @@
 
 			<p>In second-order differential equations, the unit of each term in the equation will either be V/s<m>^2</m> or A/s<m>^2</m>. This means that <m>y(t)</m> will have a unit of V/s<m>^2</m> or A/s<m>^2</m>, <m>a_2</m> (which is equal to one in a standard-form differential equation) will have no unit, <m>a_1</m> will have a unit of 1/s, and <m>a_0</m> will have a unit of 1/s<m>^2</m>.</p>
 
-			<p>In second-order circuits, the coefficient <m>a_1</m> will have an equation in terms of <m>\frac{1}{RC}</m> and <m>\frac{R}{L}</m>, which were demonstrated in <xref ref="appa-rc-a0" /> and <xref ref="appa-rl-a0" /> to have a unit of 1/s. The coefficient <m>a_0</m> will have an equation in terms of <m>\frac{1}{LC}</m>. The unit derivation, demonstrating that the unit is 1/s<m>^2</m>, is shown in <xref ref="appa-rlc-a0" />. In non-homogeneous second-order circuits, the function <m>y(t)</m> has an equation in terms of <m>\frac{V}{LC}</m>, which has a unit of V/s<m>^2</m>, <m>\frac{IR}{LC}</m> which has a unit of V/s<m>^2</m>, <m>\frac{V}{RLC}</m>, which has a unit of A/s<m>^2</m>, or <m>\frac{I}{LC}</m>, which has a unit of A/s<m>^2</m>.</p>
+			<p>In second-order circuits, the coefficient <m>a_1</m> will have an equation in terms of <m>\frac{1}{RC}</m> and <m>\frac{R}{L}</m>, which were demonstrated in <xref ref="appdxa-rc-a0" /> and <xref ref="appdxa-rl-a0" /> to have a unit of 1/s. The coefficient <m>a_0</m> will have an equation in terms of <m>\frac{1}{LC}</m>. The unit derivation, demonstrating that the unit is 1/s<m>^2</m>, is shown in <xref ref="appdxa-rlc-a0-proof" />. In non-homogeneous second-order circuits, the function <m>y(t)</m> has an equation in terms of <m>\frac{V}{LC}</m>, which has a unit of V/s<m>^2</m>, <m>\frac{IR}{LC}</m> which has a unit of V/s<m>^2</m>, <m>\frac{V}{RLC}</m>, which has a unit of A/s<m>^2</m>, or <m>\frac{I}{LC}</m>, which has a unit of A/s<m>^2</m>.</p>
 
-			<proof xml:id="appa-rlc-a0">
+			<proof xml:id="appdxa-rlc-a0-proof">
 				<p>
 					<md>\frac{1}{\textrm{FH}} = \frac{1}{\left(\frac{\textrm{s}^4\textrm{A}^2}{\textrm{kgm}^2}\right)\left(\frac{\textrm{kgm}^2}{\textrm{s}^2\textrm{A}^2}\right)} = \frac{1}{\textrm{s}^2}</md>
 				</p>
 			</proof>
 
-			<p>The damping parameter, <m>\alpha</m> has a unit of Np/s. In SI base units, that is a unit of 1/s. This is consistent with the unit derivation shown in <xref ref="appa-rc-a0" /> and <xref ref="appa-rl-a0" />. The resonant frequency, <m>\omega_0</m>, has a unit of rad/s. In SI base units, that is a unit of 1/s. The derivation for this unit is shown in <xref ref="appa-rlc-w0" />.</p>
+			<p>The damping parameter, <m>\alpha</m> has a unit of Np/s. In SI base units, that is a unit of 1/s. This is consistent with the unit derivation shown in <xref ref="appdxa-rc-a0" /> and <xref ref="appdxa-rl-a0" />. The resonant frequency, <m>\omega_0</m>, has a unit of rad/s. In SI base units, that is a unit of 1/s. The derivation for this unit is shown in <xref ref="appdxa-rlc-w0" />.</p>
 			
-			<proof xml:id="appa-rlc-w0">
+			<proof xml:id="appdxa-rlc-w0">
 				<p>
 					<md>
 						<mrow>\omega_0 \amp= \sqrt{a_0}</mrow>

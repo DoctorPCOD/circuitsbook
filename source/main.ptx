@@ -25,8 +25,8 @@
     <xi:include href="./ch12-555timer.ptx" />
 
     <!-- Include backmatter -->
-    <!--<xi:include href="./end_appendixA_units.ptx" />-->
+    <!---->
     <xi:include href="./backmatter.ptx" />
-
+    <xi:include href="./end_appendixA_units.ptx" />
   </book>
 </pretext>

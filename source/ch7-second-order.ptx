@@ -2104,11 +2104,11 @@
 					<li><p>Calculate the damping parameter, resonant frequency, and roots of the general solution.</p></li>
 					<li><p>Calculate the initial conditions of the circuit (including the first derivative of the initial condition).</p></li>
 					<li><p>Refer to <xref ref="ch7-particularsolutions-table" /> to find the format for the particular solution. Plug <m>v_P(t)</m> or <m>i_P(t)</m> into the differential equation to calculate the coefficients (<m>K_1</m>, <m>K_2</m>, etc.) of the particular solution.</p></li>
-					<li><p>Calculate the general solution coefficients (<m>A_1</m> and <m>A_2</m> or <m>B_1</m> and <m>B_2</m>) using the following two equations:</p>
+					<li><p>Calculate the general solution coefficients (<m>A_1</m> and <m>A_2</m> or <m>B_1</m> and <m>B_2</m>) using the following two equations:</p><p>
 						<ul>
 							<li><p><m>v(0) = v_P(0) + v_G(0)</m></p></li>
 							<li><p><m>v'(0) = v'_P(0) + v'_G(0)</m></p></li>
-						</ul></li>
+						</ul></p></li>
 				</ol>
 			</p>
 

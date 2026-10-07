@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch2-meshanalysis">
@@ -565,8 +588,8 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="ch2-branchvmesh-4-2-1">The circuit shown in <a href="ch2-meshanalysis.html#meshvsbranchfig" class="xref" data-knowl="./knowl/xref/meshvsbranchfig.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.8.2">Figure 2.8.2</a> has two meshes (and therefore two mesh currents: <span class="process-math">\(I_A\)</span> and <span class="process-math">\(I_B\)</span>). In addition, there are three branch currents defined as <span class="process-math">\(I_1\text{,}\)</span> <span class="process-math">\(I_2\text{,}\)</span> and <span class="process-math">\(I_3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-branchvmesh-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="meshvsbranchfig"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-meshvsbranchfig.svg" role="img" class="contained" alt="Circuit with 2 meshes and 4 nodes consisting of Vs and resistors R1, R2, R3, and R4. The high-potential end of Vs connects to R1 at node A. Resistors R1, R2, and R3 connect at node B. Resistors R3 and R4 connect at node C. The low-potential end of Vs and resistors R2 and R4 connect at node D. Branch current I1 is defined as flowing through R1 from node A to node B. Branch current I2 is defined as flowing through R2 from node B to node C. Branch current I3 is defined as flowing through R3 from node B to node C. Mesh current Ia flows through Vs, R1, and R2 through nodes D, A, B, and D. Mesh current Ib flows through R2, R3, and R4 through nodes D, B, C, and D."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>This circuit contains two meshes and three defined branches.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.8.2"><a tabindex="-1" href="#meshvsbranchfig" title="Copy heading and permalink for Figure 2.8.2" aria-label="Copy heading and permalink for Figure 2.8.2">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="meshvsbranchfig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-meshvsbranchfig.svg" role="img" class="contained" alt="Circuit with 2 meshes and 4 nodes consisting of Vs and resistors R1, R2, R3, and R4. The high-potential end of Vs connects to R1 at node A. Resistors R1, R2, and R3 connect at node B. Resistors R3 and R4 connect at node C. The low-potential end of Vs and resistors R2 and R4 connect at node D. Branch current I1 is defined as flowing through R1 from node A to node B. Branch current I2 is defined as flowing through R2 from node B to node C. Branch current I3 is defined as flowing through R3 from node B to node C. Mesh current Ia flows through Vs, R1, and R2 through nodes D, A, B, and D. Mesh current Ib flows through R2, R3, and R4 through nodes D, B, C, and D."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.8.2"><a tabindex="-1" href="#meshvsbranchfig" title="Copy heading and permalink for Figure 2.8.2" aria-label="Copy heading and permalink for Figure 2.8.2">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch2-branchvmesh-4-2-3">Each branch current is solved for as a function of the two mesh currents.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-branchvmesh-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -640,7 +663,7 @@ I_3 \amp= I_B
 <div class="para" id="ch2-meshanalysismethod-4-2-1">The circuit shown below will be used to demonstrate the mesh analysis procedure. It has been carefully chosen to contain both a dependent source and a supermesh. Each of the meshes have already been identified and labeled.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-meshanalysismethod-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch2-meshanalysismethod-4-2-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-meshanalysisex1.svg" role="img" class="contained" alt="Circuit with 3 meshes and 5 nodes consisting of rm*I CCVS, current source Is, and resistors R1, R2, R3, R4, and R5. Resistors R2 and R3 connect to Is at node A. Is flows into node A. The high-potential end of the CCVS connects to resistors R1 and R2 at node B. Resistors R1, R3, and R4 connect at node C. Is connects to resistors R4 and R5 at node D. Is flows out of node D. The low-potential end of the CCVS connects to resistor R5 at node E. Mesh current I1 flows through the CCVS, resistor R2, Is, and resistor R5 through nodes E, B, A, D, and E. Mesh current I2 flows through Is, resistor R3, and resistor R4 through nodes D, A, C, and D. Mesh current I3 flows through resistors R1, R3, and R2 through nodes B, C, A, and B. Branch current I is defined as flowing through R2 from node B to node A."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit used to demonstrate the mesh analysis method.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.8.4"><a tabindex="-1" href="#ch2-meshanalysismethod-4-2-2" title="Copy heading and permalink for Figure 2.8.4" aria-label="Copy heading and permalink for Figure 2.8.4">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.8.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.8.4"><a tabindex="-1" href="#ch2-meshanalysismethod-4-2-2" title="Copy heading and permalink for Figure 2.8.4" aria-label="Copy heading and permalink for Figure 2.8.4">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch2-meshanalysismethod-4-2-3">There is only one regular mesh in this circuit: the one containing mesh current <span class="process-math">\(I_3\text{.}\)</span> The other two meshes correspond to a supermesh due to the current source that exists at the intersection of the two meshes. Therefore there is only one mesh equation to find, shown in <a href="ch2-meshanalysis.html#mesh1eq" class="xref" data-knowl="./knowl/xref/mesh1eq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.8.1">(2.8.1)</a>. (Note that we are ignoring <span class="process-math">\(I\text{,}\)</span> the branch current used to define the current-controlled voltage source.) This concludes step two.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-meshanalysismethod-4-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 

@@ -74,4 +74,5 @@
 <use data-text="p" xlink:href="#font_1_3" transform="matrix(9.9626,0,0,-9.962899,254.692,55.272306)"/>
 <use data-text="0" xlink:href="#font_3_2" transform="matrix(9.9626,0,0,-9.962899,258.565,55.272306)"/>
 <use data-text="q" xlink:href="#font_1_4" transform="matrix(9.9626,0,0,-9.962899,263.547,55.272306)"/>
+<path transform="matrix(1,0,0,-1.00003,35.139,88.21629)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0H106.30052M106.30052 0H212.60106"/>
 </svg>

@@ -94,7 +94,7 @@ i(0) \amp= 0.4~\textrm{A}\frac{0.6~\Omega}{6~\Omega}\\
 </figure>
 <div class="para">There are two methods that can be used to calculate the equivalent resistance as seen by the inductor. The first method that will be used is to derive the Thévenin equivalent circuit as seen by the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-homogeneousrl-example5-solution5.svg" role="img" class="contained" alt="Circuit with 3 nodes and 1 mesh consisting of a CCVS (rm*iX(t)), and resistors R1 and R2. The high-potential end of the CCVS connects at node a. The low-potential end of the CCVS connects to R1 and R2 at node c. R1 and R2 connect at node b. Branch current iX(t) flows through R1 from node c to node b. The Thevenin equivalent circuit is defined between nodes a and b."></div>
+<figure class="figure figure-like"><div class="image-box" style="width: 55%; margin-left: 22.5%; margin-right: 22.5%;"><img src="generated/latex-image/ch6-homogeneousrl-example5-solution5.svg" role="img" class="contained" alt="Circuit with 3 nodes and 1 mesh consisting of a CCVS (rm*iX(t)), and resistors R1 and R2. The high-potential end of the CCVS connects at node a. The low-potential end of the CCVS connects to R1 and R2 at node c. R1 and R2 connect at node b. Branch current iX(t) flows through R1 from node c to node b. The Thevenin equivalent circuit is defined between nodes a and b."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.53<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.53"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-15" title="Copy heading and permalink for Figure 6.6.53" aria-label="Copy heading and permalink for Figure 6.6.53">🔗</a></div></figcaption>
 </figure>
 <div class="para">Use the test source method to calculate the Thévenin equivalent resistance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -131,24 +131,13 @@ I_{TEST} \amp= i_X(t) + \frac{R_1}{R_2} i_X(t)\\
 \begin{align*}
 R_{TH} \amp= \frac{V_{TEST}}{I_{TEST}}\\
 \amp= \frac{(r_m + R_1)i_X(t)}{\left(1 + \frac{R_1}{R_2}\right)i_X(t)}\\
-\amp= \frac{r_m + R_1}{1 + \frac{R_1}{R_2}}
+\amp= \frac{r_m + R_1}{1 + \frac{R_1}{R_2}}\\
+\amp= 7.2~\Omega
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug in numerical quantities to derive this value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{align*}
-R_{TH} \amp= \frac{8~\textrm{V/A} + 1~\Omega}{1 + \frac{1~\Omega}{4~\Omega}}\\
-\amp= \frac{9~\Omega}{1 + 0.25}\\
-\amp= 7.2~\Omega
-\end{align*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to calculate <span class="process-math">\(\tau\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.5">(6.5.5)</a> to calculate <span class="process-math">\(\tau\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -157,14 +146,14 @@ R_{TH} \amp= \frac{8~\textrm{V/A} + 1~\Omega}{1 + \frac{1~\Omega}{4~\Omega}}\\
 \amp= 0.833~\textrm{s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The second method that can be used to solve the circuit is to derive a differential equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The second method that can be used to solve the circuit is to derive a differential equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch6-homogeneousrl-example5-solution7.svg" role="img" class="contained" alt="Circuit with 3 nodes and 2 meshes consisting of an inductor L, CCVS rm*iX(t), and two resistors R1 and R2. L and the high-potential end of the CCVS connect at node a. The low-potential end of the CCVS connects to R1 and R2 at node b. L, R1, and R2 connect at node c. Voltage v(t) drops over the inductor from node a to node c. Branch current i(t) flows through the inductor from node a to node c. Branch current iX(t) flows through R1 from node b to node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.55<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.55"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-29" title="Copy heading and permalink for Figure 6.6.55" aria-label="Copy heading and permalink for Figure 6.6.55">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6.55<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 6.6.55"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-27" title="Copy heading and permalink for Figure 6.6.55" aria-label="Copy heading and permalink for Figure 6.6.55">🔗</a></div></figcaption>
 </figure>
-<div class="para">Use KVL around the left-hand mesh.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use KVL around the left-hand mesh.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -172,9 +161,9 @@ R_{TH} \amp= \frac{8~\textrm{V/A} + 1~\Omega}{1 + \frac{1~\Omega}{4~\Omega}}\\
 L\frac{di(t)}{dt} = r_mi_X(t) + R_1i_X(t)\tag{6.6.1}
 \end{equation}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use KCL at the node connecting all three circuit branches. (Note that the voltage dropped over <span class="process-math">\(R_2\)</span> is equal to the voltage dropped over <span class="process-math">\(R_1\text{,}\)</span> which is equal to <span class="process-math">\(R_1i_X(t)\text{.}\)</span>)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use KCL at the node connecting all three circuit branches. (Note that the voltage dropped over <span class="process-math">\(R_2\)</span> is equal to the voltage dropped over <span class="process-math">\(R_1\text{,}\)</span> which is equal to <span class="process-math">\(R_1i_X(t)\text{.}\)</span>)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -182,9 +171,9 @@ L\frac{di(t)}{dt} = r_mi_X(t) + R_1i_X(t)\tag{6.6.1}
 i(t) + i_X(t) + \frac{R_1}{R_2}i_X(t) = 0\tag{6.6.2}
 \end{equation}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Solve <a href="ch6-inductors-8.html#ch6-homogeneous-ex5-kclequation" class="xref" data-knowl="./knowl/xref/ch6-homogeneous-ex5-kclequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.6.2">(6.6.2)</a> for <span class="process-math">\(i_X(t)\)</span> and simplify.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Solve <a href="ch6-inductors-8.html#ch6-homogeneous-ex5-kclequation" class="xref" data-knowl="./knowl/xref/ch6-homogeneous-ex5-kclequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.6.2">(6.6.2)</a> for <span class="process-math">\(i_X(t)\)</span> and simplify.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -196,36 +185,24 @@ i_X(t) \amp= -\left(\frac{1}{1+\frac{R_1}{R_2}}\right)i(t)\\
 \amp= -\left(\frac{R_2}{R_1+R_2}\right)i(t)
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug the simplified equation for <span class="process-math">\(i_X(t)\)</span> into <a href="ch6-inductors-8.html#ch6-homogeneous-ex5-kvlequation" class="xref" data-knowl="./knowl/xref/ch6-homogeneous-ex5-kvlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.6.1">(6.6.1)</a> and reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Plug the simplified equation for <span class="process-math">\(i_X(t)\)</span> into <a href="ch6-inductors-8.html#ch6-homogeneous-ex5-kvlequation" class="xref" data-knowl="./knowl/xref/ch6-homogeneous-ex5-kvlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.6.1">(6.6.1)</a> and reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
 L\frac{di(t)}{dt} \amp= -(r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)i(t)\\
-L\frac{di(t)}{dt} + (r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)i(t) \amp= 0\\
-\frac{di(t)}{dt} + \frac{(r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)}{L}i(t) \amp= 0
+0 \amp= L\frac{di(t)}{dt} + (r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)i(t)\\
+\amp= \frac{di(t)}{dt} + \frac{(r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)}{L}i(t)\\
+\amp= \frac{di(t)}{dt} + 1.2i(t)
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug in numerical quantities to obtain the differential equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">This yields the same result as the Thévenin equivalent circuit method, as expected. If we had not already derived the equivalent resistance as seen by the inductor, we could use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.5">(6.5.5)</a> to solve for <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{align*}
-\frac{di(t)}{dt} + \frac{(8 + 1)\left(\frac{4}{1+4}\right)}{6}i(t) \amp= 0\\
-\frac{di(t)}{dt} + \frac{(9)(0.8)}{6}i(t) \amp= 0\\
-\frac{di(t)}{dt} + \frac{7.2}{6}i(t) \amp= 0\\
-\frac{di(t)}{dt} + 1.2i(t) \amp= 0
-\end{align*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">This yields the same result as the Thévenin equivalent circuit method, as expected. If we had not already derived the equivalent resistance as seen by the inductor, we could use <a href="ch6-resistor-inductor-circuits.html#ch6-taurlequation" class="xref" data-knowl="./knowl/xref/ch6-taurlequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to solve for <span class="process-math">\(R\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-homogeneousrlcurrent" class="xref" data-knowl="./knowl/xref/ch6-homogeneousrlcurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.2">(6.5.2)</a> to derive an equation for <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-41" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-homogeneousrlcurrent" class="xref" data-knowl="./knowl/xref/ch6-homogeneousrlcurrent.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.4">(6.5.4)</a> to derive an equation for <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -233,9 +210,9 @@ L\frac{di(t)}{dt} + (r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)i(t) \amp= 0\\
 i(t) = 40~\textrm{mA}~\textrm{e}^{-1.2t}~u(t) + 40~\textrm{mA}~u(-t)
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-homogeneousrlvoltage" class="xref" data-knowl="./knowl/xref/ch6-homogeneousrlvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.3">(6.5.3)</a> to derive an equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch6-resistor-inductor-circuits.html#ch6-homogeneousrlvoltage" class="xref" data-knowl="./knowl/xref/ch6-homogeneousrlvoltage.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.5.6">(6.5.6)</a> to derive an equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -244,7 +221,7 @@ v(t) \amp= -(7.2~\Omega)(40~\textrm{mA}~\textrm{e}^{-1.2}~u(t))\\
 \amp= -288~\textrm{mV}~\textrm{e}^{-1.2t}~u(t)
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-44" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneous-ex5-3-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 6.6.15.1"><a tabindex="-1" href="#ch6-homogeneous-ex5-3" title="Copy heading and permalink for Solution 6.6.15.1" aria-label="Copy heading and permalink for Solution 6.6.15.1">🔗</a></div>
 </div></details>

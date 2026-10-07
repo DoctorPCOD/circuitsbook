@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch9-complexanalysis">
@@ -582,10 +605,9 @@ eBookConfig.enable_chatcodes =  false;
 </div> 
 <div class="para logical" id="ch9-voltagedivider-5-2-4">
 <div class="displaymath process-math" id="ch9-voltagedivider-5-2-4-1">
-\begin{align*}
-\vec{Z_C} \amp= \frac{1}{j(2\pi60)(25 \times 10^{-6})}\\
-\amp= -j106.10~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{j(2\pi60)(25 \times 10^{-6})} = -j106.10~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-voltagedivider-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -594,10 +616,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="ch9-voltagedivider-5-2-6">
 <div class="displaymath process-math" id="ch9-voltagedivider-5-2-6-1">
 \begin{align*}
-\vec{Z_{L65}} \amp= j(2\pi 60)(0.065)\\
-\amp= j24.5044~\Omega\\
-\vec{Z_{L210}} \amp= j(2\pi 60)(0.210)\\
-\amp= j79.1681~\Omega
+j(2\pi 60)(0.065) \amp= j24.5044~\Omega\\
+j(2\pi 60)(0.210) \amp= j79.1681~\Omega
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-voltagedivider-5-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -620,10 +640,9 @@ eBookConfig.enable_chatcodes =  false;
 </div> 
 <div class="para logical" id="ch9-voltagedivider-5-2-11">
 <div class="displaymath process-math" id="ch9-voltagedivider-5-2-11-1">
-\begin{align*}
-\vec{Z'} \amp= (55~\Omega) + (j24.5044~\Omega)\\
-\amp= 55 + j24.5044~\Omega
-\end{align*}
+\begin{equation*}
+(55~\Omega) + (j24.5044~\Omega) = 55 + j24.5044~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-voltagedivider-5-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -631,10 +650,9 @@ eBookConfig.enable_chatcodes =  false;
 </div> 
 <div class="para logical" id="ch9-voltagedivider-5-2-13">
 <div class="displaymath process-math" id="ch9-voltagedivider-5-2-13-1">
-\begin{align*}
-\vec{Z''} \amp= (105~\Omega) + (j79.1681~\Omega)\\
-\amp= 105 + j79.1681~\Omega
-\end{align*}
+\begin{equation*}
+(105~\Omega) + (j79.1681~\Omega) = 105 + j79.1681~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-voltagedivider-5-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -645,10 +663,9 @@ eBookConfig.enable_chatcodes =  false;
 </div> 
 <div class="para logical" id="ch9-voltagedivider-5-2-16">
 <div class="displaymath process-math" id="ch9-voltagedivider-5-2-16-1">
-\begin{align*}
-\vec{Z'''} \amp= \frac{(-j106.10~\Omega)(105 + j79.1681)}{(-j106.10~\Omega)+(105 + j79.1681)}\\
-\amp= 100.60 -j80.297~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(-j106.10~\Omega)(105 + j79.1681)}{(-j106.10~\Omega)+(105 + j79.1681)} = 100.60 -j80.297~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-voltagedivider-5-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -672,7 +689,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="ch9-voltagedivider-5-2-21">
 <div class="displaymath process-math" id="ch9-voltagedivider-5-2-21-1">
 \begin{equation*}
-v_{out}(t) = 116.8~\textrm{V}~\cos{(2\pi60 t+41.1\pi/180)}
+v_{out}(t) = 117~\textrm{V}~\cos{(2\pi60 t+41.1\pi/180)}
 \end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-voltagedivider-5-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -704,72 +721,78 @@ v_{out}(t) = 116.8~\textrm{V}~\cos{(2\pi60 t+41.1\pi/180)}
 <figure class="figure figure-like" id="ch9-currentdivider-5-2-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure1.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of current source Iac, three resistors (8ohm, 3ohm, and 5ohm), one 470uF capacitor, and one 25mH inductor. The high-potential end of Iac connects to 8ohm and 3ohm at node a. The 3ohm, 470uF, and 5ohm connect at node b. The 5ohm and 25mH connect at node c. The low-potential end of Iac, 8ohm, 470uF, and 25mH connect at node d. Branch current i1 flows through the 8ohm resistor from node a to node d. Branch current i2 flows through the 3ohm resistor from node a to node b. Branch current i3 flows through the 470uF capacitor from node b to node d. Branch current i4 flows from node c to node d."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.7"><a tabindex="-1" href="#ch9-currentdivider-5-2-2" title="Copy heading and permalink for Figure 9.1.7" aria-label="Copy heading and permalink for Figure 9.1.7">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch9-currentdivider-5-2-3">Calculate the impedances of the inductor and the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-3">Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the impedance of the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch9-currentdivider-5-2-4">
 <div class="displaymath process-math" id="ch9-currentdivider-5-2-4-1">
-\begin{align*}
-\vec{Z_L} \amp= j2\pi50(0.025)\\
-\amp= j7.85~\Omega\\
-\vec{Z_C} \amp= \frac{1}{j(2\pi50)(470\times10^{-6})}\\
-\amp= -j6.77~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{j(2\pi50)(470\times10^{-6})} = -j6.77~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch9-currentdivider-5-2-5">Convert the current source to phasor form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-5">Use <a href="ch8-impedance.html#ch8-eq-impedance-inductor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.5">(8.2.5)</a> to calculate the impedance of the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch9-currentdivider-5-2-6">
 <div class="displaymath process-math" id="ch9-currentdivider-5-2-6-1">
+\begin{equation*}
+j2\pi50(0.025) = j7.85~\Omega
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch9-currentdivider-5-2-7">Convert the current source to phasor form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch9-currentdivider-5-2-8">
+<div class="displaymath process-math" id="ch9-currentdivider-5-2-8-1">
 \begin{align*}
 \vec{I_{AC}} \amp= 10\cos{120^\circ} + j10\sin{120^\circ}~\textrm{A}\\
 \amp= -5+j8.66~\textrm{A}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-currentdivider-5-2-7"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure2.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of current source Iac and five impedances (8ohm, 3ohm, 5ohm, -j6.77ohm, and j7.85ohm). The high-potential end of Iac connects to 8ohm and 3ohm at node a. The 3ohm, -j6.77ohm, and 5ohm connect at node b. The 5ohm and j7.85 connect at node c. The low-potential end of Iac, 8ohm, -j6.77ohm, and j7.85 connect at node d. Branch current i1 flows through the 8ohm resistor from node a to node d. Branch current i2 flows through the 3ohm resistor from node a to node b. Branch current i3 flows through the -j6.77ohm capacitor from node b to node d. Branch current i4 flows from node c to node d."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.8"><a tabindex="-1" href="#ch9-currentdivider-5-2-7" title="Copy heading and permalink for Figure 9.1.8" aria-label="Copy heading and permalink for Figure 9.1.8">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch9-currentdivider-5-2-9"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure2.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of current source Iac and five impedances (8ohm, 3ohm, 5ohm, -j6.77ohm, and j7.85ohm). The high-potential end of Iac connects to 8ohm and 3ohm at node a. The 3ohm, -j6.77ohm, and 5ohm connect at node b. The 5ohm and j7.85 connect at node c. The low-potential end of Iac, 8ohm, -j6.77ohm, and j7.85 connect at node d. Branch current i1 flows through the 8ohm resistor from node a to node d. Branch current i2 flows through the 3ohm resistor from node a to node b. Branch current i3 flows through the -j6.77ohm capacitor from node b to node d. Branch current i4 flows from node c to node d."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.8"><a tabindex="-1" href="#ch9-currentdivider-5-2-9" title="Copy heading and permalink for Figure 9.1.8" aria-label="Copy heading and permalink for Figure 9.1.8">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch9-currentdivider-5-2-8">The 5 Ω resistor and j7.85 Ω impedance are connected in series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-10">The 5 Ω resistor and j7.85 Ω impedance are connected in series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-currentdivider-5-2-9"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure3.svg" role="img" class="contained" alt="Circuit with three meshes and three nodes consisting of current source Iac and four impedances (8ohm, 3ohm, 5+j7.85ohm, and -j6.77ohm). The high-potential end of Iac connects to 8ohm and 3ohm at node a. The 3ohm, -j6.77ohm, and 5+j7.85ohm connect at node b. The low-potential end of Iac, 8ohm, -j6.77ohm, and 5+j7.85ohm connect at node c. Branch current i1 flows through the 8ohm resistor from node a to node c. Branch current i2 flows through the 3ohm resistor from node a to node b. Branch current i3 flows through the -j6.77ohm capacitor from node b to node c. Branch current i4 flows through the 5+j7.85ohm impedance from node b to node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.9"><a tabindex="-1" href="#ch9-currentdivider-5-2-9" title="Copy heading and permalink for Figure 9.1.9" aria-label="Copy heading and permalink for Figure 9.1.9">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch9-currentdivider-5-2-11"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure3.svg" role="img" class="contained" alt="Circuit with three meshes and three nodes consisting of current source Iac and four impedances (8ohm, 3ohm, 5+j7.85ohm, and -j6.77ohm). The high-potential end of Iac connects to 8ohm and 3ohm at node a. The 3ohm, -j6.77ohm, and 5+j7.85ohm connect at node b. The low-potential end of Iac, 8ohm, -j6.77ohm, and 5+j7.85ohm connect at node c. Branch current i1 flows through the 8ohm resistor from node a to node c. Branch current i2 flows through the 3ohm resistor from node a to node b. Branch current i3 flows through the -j6.77ohm capacitor from node b to node c. Branch current i4 flows through the 5+j7.85ohm impedance from node b to node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.9"><a tabindex="-1" href="#ch9-currentdivider-5-2-11" title="Copy heading and permalink for Figure 9.1.9" aria-label="Copy heading and permalink for Figure 9.1.9">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch9-currentdivider-5-2-10">Refer to <a href="ch2-currentdivider.html#ch2-currentdivider-threemesh-example" class="xref" data-knowl="./knowl/xref/ch2-currentdivider-threemesh-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.6.4: Current divider with a three-mesh circuit">Example 2.6.4</a> for solving a current divider circuit with three meshes. We will need to calculate the equivalent impedance as seen by the −j6.77 Ω impedance to calculate the branch currents. This impedance will be referred to as <span class="process-math">\(\vec{Z'}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-12">Refer to <a href="ch2-currentdivider.html#ch2-currentdivider-threemesh-example" class="xref" data-knowl="./knowl/xref/ch2-currentdivider-threemesh-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.6.4: Current divider with a three-mesh circuit">Example 2.6.4</a> for solving a current divider circuit with three meshes. We will need to calculate the equivalent impedance as seen by the −j6.77 Ω impedance to calculate the branch currents. This impedance will be referred to as <span class="process-math">\(\vec{Z'}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para logical" id="ch9-currentdivider-5-2-11">
-<div class="displaymath process-math" id="ch9-currentdivider-5-2-11-1">
+<div class="para logical" id="ch9-currentdivider-5-2-13">
+<div class="displaymath process-math" id="ch9-currentdivider-5-2-13-1">
 \begin{align*}
 \vec{Z'} \amp= \frac{(-j6.77)(5+j7.85~\Omega)}{(-j6.77)+(5+j7.85~\Omega)}\\
 \amp= 8.7635 - j8.6680~\Omega
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-currentdivider-5-2-12"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure4.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of current source Iac and three impedances (8ohm, 3ohm, and 8.76-j8.67ohm). The high-potential end of Iac connects to the 8ohm and 3ohm at node a. The 3ohm and 8.76-j8.67ohm connect at node b. The low-potential end of Iac, 8ohm, and 8.76-j8.67ohm connect at node c. Branch current I1 flows through the 8ohm resistor from node a to node c. Branch current I2 flows from node a to node b."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.10"><a tabindex="-1" href="#ch9-currentdivider-5-2-12" title="Copy heading and permalink for Figure 9.1.10" aria-label="Copy heading and permalink for Figure 9.1.10">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch9-currentdivider-5-2-14"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure4.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of current source Iac and three impedances (8ohm, 3ohm, and 8.76-j8.67ohm). The high-potential end of Iac connects to the 8ohm and 3ohm at node a. The 3ohm and 8.76-j8.67ohm connect at node b. The low-potential end of Iac, 8ohm, and 8.76-j8.67ohm connect at node c. Branch current I1 flows through the 8ohm resistor from node a to node c. Branch current I2 flows from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.10"><a tabindex="-1" href="#ch9-currentdivider-5-2-14" title="Copy heading and permalink for Figure 9.1.10" aria-label="Copy heading and permalink for Figure 9.1.10">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch9-currentdivider-5-2-13">The 3 Ω  resistor and 8.76−j8.67 Ω impedance are connected in series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-15">The 3 Ω  resistor and 8.76−j8.67 Ω impedance are connected in series.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-currentdivider-5-2-14"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure5.svg" role="img" class="contained" alt="Circuit with two meshes and two nodes consisting of current source Iac and two impedances (8ohm and 11.8-j8.67ohm). All three circuit elements connect in parallel between nodes a and b. The high-potential end of Iac is at node a. Branch current I1 flows through the 8ohm resistor from node a to node b. Branch current I2 flows through the 11.8-j8.67ohm impedance from node a to node b."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.11"><a tabindex="-1" href="#ch9-currentdivider-5-2-14" title="Copy heading and permalink for Figure 9.1.11" aria-label="Copy heading and permalink for Figure 9.1.11">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch9-currentdivider-5-2-16"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure5.svg" role="img" class="contained" alt="Circuit with two meshes and two nodes consisting of current source Iac and two impedances (8ohm and 11.8-j8.67ohm). All three circuit elements connect in parallel between nodes a and b. The high-potential end of Iac is at node a. Branch current I1 flows through the 8ohm resistor from node a to node b. Branch current I2 flows through the 11.8-j8.67ohm impedance from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.11"><a tabindex="-1" href="#ch9-currentdivider-5-2-16" title="Copy heading and permalink for Figure 9.1.11" aria-label="Copy heading and permalink for Figure 9.1.11">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch9-currentdivider-5-2-15">Calculate the equivalent impedance of this circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch9-currentdivider-5-2-16">
-<div class="displaymath process-math" id="ch9-currentdivider-5-2-16-1">
-\begin{align*}
-\vec{Z_{EQ1}} \amp= \frac{(8~\Omega)(11.7635 - j8.6680~\Omega)}{(8~\Omega)+(11.7635 - j8.6680~\Omega)}\\
-\amp= 5.2841 - j1.1911~\Omega
-\end{align*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch9-currentdivider-5-2-17">Use the current divider rule to calculate <span class="process-math">\(\vec{I_1}\)</span> and <span class="process-math">\(\vec{I_2}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-17">Calculate the equivalent impedance of this circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch9-currentdivider-5-2-18">
 <div class="displaymath process-math" id="ch9-currentdivider-5-2-18-1">
+\begin{equation*}
+\frac{(8~\Omega)(11.7635 - j8.6680~\Omega)}{(8~\Omega)+(11.7635 - j8.6680~\Omega)} = 5.2841 - j1.1911~\Omega
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch9-currentdivider-5-2-19">Use the current divider rule to calculate <span class="process-math">\(\vec{I_1}\)</span> and <span class="process-math">\(\vec{I_2}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch9-currentdivider-5-2-20">
+<div class="displaymath process-math" id="ch9-currentdivider-5-2-20-1">
 \begin{align*}
 \vec{I_1} \amp= (-5+j8.66~\textrm{A})\frac{5.2841 - j1.1911~\Omega}{8~\Omega}\\
 \amp= -2.0131 + j6.4647~\textrm{A}\\
@@ -779,30 +802,30 @@ v_{out}(t) = 116.8~\textrm{V}~\cos{(2\pi60 t+41.1\pi/180)}
 \amp= 3.7070~\textrm{A} \angle 143.6815^\circ
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch9-currentdivider-5-2-19">Convert both of these values into time-varying signals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-21">Convert both of these values into time-varying signals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para logical" id="ch9-currentdivider-5-2-20">
-<div class="displaymath process-math" id="ch9-currentdivider-5-2-20-1">
+<div class="para logical" id="ch9-currentdivider-5-2-22">
+<div class="displaymath process-math" id="ch9-currentdivider-5-2-22-1">
 \begin{align*}
 i_1(t) \amp= 6.77~\textrm{A}~\cos(2\pi50t+107\pi/180)\\
 i_2(t) \amp= 3.71~\textrm{A}~\cos(2\pi50t+144\pi/180)
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch9-currentdivider-5-2-21">Re-draw the circuit. Current <span class="process-math">\(\vec{I_2}\)</span> can be used to represent a source supplying the −j6.77 Ω and 5+j7.85 Ω impedances.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-23">Re-draw the circuit. Current <span class="process-math">\(\vec{I_2}\)</span> can be used to represent a source supplying the −j6.77 Ω and 5+j7.85 Ω impedances.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-currentdivider-5-2-22"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure6.svg" role="img" class="contained" alt="Circuit with two meshes and two nodes consisting of current source I2 and two impedances (-j6.77ohm and 5+j7.85ohm). All three circuit elements connect in parallel between nodes a and b. The high-potential end of Iac is at node a. Branch current I3 flows through the -j6.77ohm impedance from node a to node b. Branch current I4 flows through the 5+j7.85ohm impedance from node a to node b."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.12"><a tabindex="-1" href="#ch9-currentdivider-5-2-22" title="Copy heading and permalink for Figure 9.1.12" aria-label="Copy heading and permalink for Figure 9.1.12">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch9-currentdivider-5-2-24"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-current-divider-example-figure6.svg" role="img" class="contained" alt="Circuit with two meshes and two nodes consisting of current source I2 and two impedances (-j6.77ohm and 5+j7.85ohm). All three circuit elements connect in parallel between nodes a and b. The high-potential end of Iac is at node a. Branch current I3 flows through the -j6.77ohm impedance from node a to node b. Branch current I4 flows through the 5+j7.85ohm impedance from node a to node b."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.12"><a tabindex="-1" href="#ch9-currentdivider-5-2-24" title="Copy heading and permalink for Figure 9.1.12" aria-label="Copy heading and permalink for Figure 9.1.12">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch9-currentdivider-5-2-23">The equivalent impedance of this circuit was previously calculated as <span class="process-math">\(\vec{Z'}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-25">The equivalent impedance of this circuit was previously calculated as <span class="process-math">\(\vec{Z'}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch9-currentdivider-5-2-24">Use the current divider rule to calculate <span class="process-math">\(\vec{I_3}\)</span> and <span class="process-math">\(\vec{I_4}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-26">Use the current divider rule to calculate <span class="process-math">\(\vec{I_3}\)</span> and <span class="process-math">\(\vec{I_4}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para logical" id="ch9-currentdivider-5-2-25">
-<div class="displaymath process-math" id="ch9-currentdivider-5-2-25-1">
+<div class="para logical" id="ch9-currentdivider-5-2-27">
+<div class="displaymath process-math" id="ch9-currentdivider-5-2-27-1">
 \begin{align*}
 \vec{I_3} \amp= (-2.99+j2.20~\textrm{A})\frac{8.7635 - j8.6680~\Omega}{-j6.77~\Omega}\\
 \amp= -6.6638 - j1.0549~\textrm{A}\\
@@ -812,18 +835,18 @@ i_2(t) \amp= 3.71~\textrm{A}~\cos(2\pi50t+144\pi/180)
 \amp= 4.9077~\textrm{A} \angle 41.4772^\circ
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch9-currentdivider-5-2-26">Convert both of these values into time-varying signals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-currentdivider-5-2-28">Convert both of these values into time-varying signals.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para logical" id="ch9-currentdivider-5-2-27">
-<div class="displaymath process-math" id="ch9-currentdivider-5-2-27-1">
+<div class="para logical" id="ch9-currentdivider-5-2-29">
+<div class="displaymath process-math" id="ch9-currentdivider-5-2-29-1">
 \begin{align*}
 i_3(t) \amp= 6.75~\textrm{A}~\cos(2\pi50t-171\pi/180)\\
 i_4(t) \amp= 4.91~\textrm{A}~\cos(2\pi50t+41.5\pi/180)
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-currentdivider-5-2-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 9.1.6: Complex current divider"><a tabindex="-1" href="#ch9-currentdivider-5" title="Copy heading and permalink for Example 9.1.6: Complex current divider" aria-label="Copy heading and permalink for Example 9.1.6: Complex current divider">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Subsection 9.1.2: Complex Current Divider"><a tabindex="-1" href="#ch9-currentdivider" title="Copy heading and permalink for Subsection 9.1.2: Complex Current Divider" aria-label="Copy heading and permalink for Subsection 9.1.2: Complex Current Divider">🔗</a></div>
@@ -851,10 +874,8 @@ i_4(t) \amp= 4.91~\textrm{A}~\cos(2\pi50t+41.5\pi/180)
 <div class="para logical" id="ch9-kclkvl-5-2-4">
 <div class="displaymath process-math" id="ch9-kclkvl-5-2-4-1">
 \begin{align*}
-\vec{Z_{C20}} \amp= \frac{1}{j(2\pi 100)(20 \times 10^{-6})}\\
-\amp= -j79.5775~\Omega\\
-\vec{Z_{C25}} \amp= \frac{1}{j(2\pi 100)(25 \times 10^{-6})}\\
-\amp= -63.6620~\Omega
+\frac{1}{j(2\pi 100)(20 \times 10^{-6})} \amp= -j79.5775~\Omega\\
+\frac{1}{j(2\pi 100)(25 \times 10^{-6})} \amp= -63.6620~\Omega
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-kclkvl-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -864,10 +885,8 @@ i_4(t) \amp= 4.91~\textrm{A}~\cos(2\pi50t+41.5\pi/180)
 <div class="para logical" id="ch9-kclkvl-5-2-6">
 <div class="displaymath process-math" id="ch9-kclkvl-5-2-6-1">
 \begin{align*}
-\vec{Z_{L25}} \amp= j(2\pi 100)(0.025)\\
-\amp= j15.7080~\Omega\\
-\vec{Z_{L100}} \amp= j(2\pi 100)(0.1)\\
-\amp= j62.8319~\Omega
+j(2\pi 100)(0.025) \amp= j15.7080~\Omega\\
+j(2\pi 100)(0.1) \amp= j62.8319~\Omega
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-kclkvl-5-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -922,11 +941,11 @@ i_4(t) \amp= 4.91~\textrm{A}~\cos(2\pi50t+41.5\pi/180)
 <div class="displaymath process-math" id="ch9-kclkvl-5-2-17-1">
 \begin{equation*}
 \begin{bmatrix} 
-1 				\amp 1 			\amp 1 		\amp 0 			\amp 0			\amp (3.76+j1.37)\\
+1 				\amp 1 			\amp 1 		\amp 0 			\amp 0			\amp 3.76+j1.37\\
 0 				\amp 1 			\amp 0 		\amp 1 			\amp -1			\amp 0\\
--(50+j15.71)	\amp 0			\amp 20		\amp 0			\amp 0			\amp -(14.14+j14.14)\\
-0				\amp 0			\amp 0		\amp (j62.83)	\amp (100-j63.66)	\amp (14.14+j14.14)\\
-0				\amp (-j79.58)	\amp -20	\amp -(j62.83)	\amp 0			\amp 0
+-(50+j15.7)		\amp 0			\amp 20		\amp 0			\amp 0			\amp -(14.1+j14.1)\\
+0				\amp 0			\amp 0		\amp j62.8		\amp 100-j63.7	\amp 14.1+j14.1\\
+0				\amp (-j79.6)	\amp -20	\amp -(j62.8)	\amp 0			\amp 0
 \end{bmatrix}
 \end{equation*}
 </div>
@@ -987,12 +1006,9 @@ i_5(t) \amp= 0.564~\textrm{A}~\cos{(2\pi100t + 123\pi/180)}
 <div class="para logical" id="ch9-meshanalysis-3-2-4">
 <div class="displaymath process-math" id="ch9-meshanalysis-3-2-4-1">
 \begin{align*}
-\vec{Z_{C220}} \amp= \frac{1}{j(2\pi 250)(220 \times 10^{-9})}\\
-\amp= -j2893.7~\Omega\\
-\vec{Z_{C470}} \amp= \frac{1}{j(2\pi 250)(470 \times 10^{-9})}\\
-\amp= -j1354.5~\Omega\\
-\vec{Z_{C680}} \amp= \frac{1}{j(2\pi 250)(680 \times 10^{-9})}\\
-\amp= -j936.21~\Omega
+\frac{1}{j(2\pi 250)(220 \times 10^{-9})} \amp= -j2893.7~\Omega\\
+\frac{1}{j(2\pi 250)(470 \times 10^{-9})} \amp= -j1354.5~\Omega\\
+\frac{1}{j(2\pi 250)(680 \times 10^{-9})} \amp= -j936.21~\Omega
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-meshanalysis-3-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1062,10 +1078,10 @@ i_5(t) \amp= 0.564~\textrm{A}~\cos{(2\pi100t + 123\pi/180)}
 <div class="displaymath process-math" id="ch9-meshanalysis-3-2-19-1">
 \begin{equation*}
 \begin{bmatrix} 
-(j936.21) 		\amp -220			\amp (720-j2290.72)	\amp 0 		\amp 0\\
-(-j936.21)	 	\amp (900-j2893.73)	\amp -(220-j936.21) \amp 0	 	\amp (212.12-j252.79)\\
-1				\amp -1				\amp 0				\amp 2		\amp 0\\
-(-j936.21)		\amp 0				\amp (j936.21)		\amp -1		\amp 0
+j936 		\amp -220		\amp 720-j2290		\amp 0 		\amp 0\\
+-j936	 	\amp 900-j2890	\amp -(220-j936)	\amp 0	 	\amp 212-j253\\
+1			\amp -1			\amp 0				\amp 2		\amp 0\\
+-j936		\amp 0			\amp j936			\amp -1		\amp 0
 \end{bmatrix}
 \end{equation*}
 </div>
@@ -1124,10 +1140,9 @@ v_X(t) \amp= 50.9~\textrm{mV}~\cos{(2\pi100t + 15.4\pi/180)}
 </div> 
 <div class="para logical" id="ch9-superposition-4-2-4">
 <div class="displaymath process-math" id="ch9-superposition-4-2-4-1">
-\begin{align*}
-\vec{Z_C} \amp= \frac{1}{j(2\pi 60)(68 \times 10^{-6})}\\
-\amp= -j39.0086~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{j(2\pi 60)(68 \times 10^{-6})} = -j39.0086~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-superposition-4-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1135,10 +1150,9 @@ v_X(t) \amp= 50.9~\textrm{mV}~\cos{(2\pi100t + 15.4\pi/180)}
 </div> 
 <div class="para logical" id="ch9-superposition-4-2-6">
 <div class="displaymath process-math" id="ch9-superposition-4-2-6-1">
-\begin{align*}
-\vec{Z_L} \amp= j(2\pi 60)(0.055)\\
-\amp= j20.7345~\Omega
-\end{align*}
+\begin{equation*}
+j(2\pi 60)(0.055) = j20.7345~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-superposition-4-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1179,10 +1193,9 @@ v_X(t) \amp= 50.9~\textrm{mV}~\cos{(2\pi100t + 15.4\pi/180)}
 </div> 
 <div class="para logical" id="ch9-superposition-4-2-18">
 <div class="displaymath process-math" id="ch9-superposition-4-2-18-1">
-\begin{align*}
-\vec{Z'} \amp= \frac{(27 - j18.2741~\Omega)(20~\Omega)}{(27 - j18.2741~\Omega)+(20~\Omega)}\\
-\amp= 12.6070 - j2.8745~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(27 - j18.2741~\Omega)(20~\Omega)}{(27 - j18.2741~\Omega)+(20~\Omega)} = 12.6070 - j2.8745~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-superposition-4-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1209,10 +1222,9 @@ v_X(t) \amp= 50.9~\textrm{mV}~\cos{(2\pi100t + 15.4\pi/180)}
 </div> 
 <div class="para logical" id="ch9-superposition-4-2-25">
 <div class="displaymath process-math" id="ch9-superposition-4-2-25-1">
-\begin{align*}
-R_{EQ} \amp= \frac{(16~\Omega)(20~\Omega)}{(16~\Omega)+(20~\Omega)}\\
-\amp= 8.8889~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(16~\Omega)(20~\Omega)}{(16~\Omega)+(20~\Omega)} = 8.8889~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-superposition-4-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1223,10 +1235,9 @@ R_{EQ} \amp= \frac{(16~\Omega)(20~\Omega)}{(16~\Omega)+(20~\Omega)}\\
 </div> 
 <div class="para logical" id="ch9-superposition-4-2-28">
 <div class="displaymath process-math" id="ch9-superposition-4-2-28-1">
-\begin{align*}
-\vec{Z_{EQ}} \amp= \frac{(12 + j20.7345~\Omega)((15 - j39.0086~\Omega)+8.8889~\Omega)}{(12 + j20.7345~\Omega)+((15 - j39.0086~\Omega)+8.8889~\Omega)}\\
-\amp= 23.9332 + j12.9449~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(12 + j20.7345~\Omega)((15 - j39.0086~\Omega)+8.8889~\Omega)}{(12 + j20.7345~\Omega)+((15 - j39.0086~\Omega)+8.8889~\Omega)} = 23.9332 + j12.9449~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-superposition-4-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1234,10 +1245,9 @@ R_{EQ} \amp= \frac{(16~\Omega)(20~\Omega)}{(16~\Omega)+(20~\Omega)}\\
 </div> 
 <div class="para logical" id="ch9-superposition-4-2-30">
 <div class="displaymath process-math" id="ch9-superposition-4-2-30-1">
-\begin{align*}
-\vec{I_2} \amp= (2~\textrm{A})\frac{23.9332 + j12.9449~\Omega}{23.8889 - j39.0086~\Omega}\\
-\amp= 0.0638 + j1.1880~\textrm{A}
-\end{align*}
+\begin{equation*}
+(2~\textrm{A})\frac{23.9332 + j12.9449~\Omega}{23.8889 - j39.0086~\Omega} = 0.0638 + j1.1880~\textrm{A}
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-superposition-4-2-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1314,10 +1324,9 @@ v(t) = 31.8~\textrm{V}~\cos(2\pi60t+63.6\pi/180)
 </div> 
 <div class="para logical" id="ch9-sourcetransform-11-2-4">
 <div class="displaymath process-math" id="ch9-sourcetransform-11-2-4-1">
-\begin{align*}
-\vec{Z_C} \amp= \frac{1}{j(2\pi 250)(100 \times 10^{-6})}\\
-\amp= -j6.3662~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{j(2\pi 250)(100 \times 10^{-6})} = -j6.3662~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sourcetransform-11-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1325,10 +1334,9 @@ v(t) = 31.8~\textrm{V}~\cos(2\pi60t+63.6\pi/180)
 </div> 
 <div class="para logical" id="ch9-sourcetransform-11-2-6">
 <div class="displaymath process-math" id="ch9-sourcetransform-11-2-6-1">
-\begin{align*}
-\vec{Z_L} \amp= j(2\pi 250)(0.003)\\
-\amp= j4.7124~\Omega
-\end{align*}
+\begin{equation*}
+j(2\pi 250)(0.003) = j4.7124~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sourcetransform-11-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1355,10 +1363,9 @@ v(t) = 31.8~\textrm{V}~\cos(2\pi60t+63.6\pi/180)
 </div> 
 <div class="para logical" id="ch9-sourcetransform-11-2-13">
 <div class="displaymath process-math" id="ch9-sourcetransform-11-2-13-1">
-\begin{align*}
-\vec{Z'} \amp= \frac{(8~\Omega)(-j6.37~\Omega)}{(8~\Omega)+(-j6.37~\Omega)}\\
-\amp= 3.1018 - j3.8979~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(8~\Omega)(-j6.37~\Omega)}{(8~\Omega)+(-j6.37~\Omega)} = 3.1018 - j3.8979~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sourcetransform-11-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1369,19 +1376,18 @@ v(t) = 31.8~\textrm{V}~\cos(2\pi60t+63.6\pi/180)
 </div> 
 <div class="para logical" id="ch9-sourcetransform-11-2-16">
 <div class="displaymath process-math" id="ch9-sourcetransform-11-2-16-1">
-\begin{align*}
-\vec{V'} \amp= (3~\textrm{A})(3.10-j3.90~\Omega)\\
-\amp= 9.3054 - j11.6936~\textrm{V}
-\end{align*}
+\begin{equation*}
+(3~\textrm{A})(3.10-j3.90~\Omega) = 9.3054 - j11.6936~\textrm{V}
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sourcetransform-11-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-sourcetransform-11-2-17"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-source-transform-example-figure5.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of a voltage source V’ and three impedances (3.1-j3.9ohm, 6ohm, and j4.71ohm). The high-potential end of V’ and the 3.1-j3.9ohm connect at node a. The 3.1-j3.9ohm and j4.71ohm connect at node b. The j4.71ohm and 6ohm connect at node c. The low-potential end of V’ and 6ohm connect at node d. Voltage V drops over the 6ohm resistor from node c to node d."></div>
+<figure class="figure figure-like" id="ch9-sourcetransform-11-2-17"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-cplx-source-transform-example-figure5.svg" role="img" class="contained" alt="Circuit with one mesh and four nodes consisting of a voltage source V’ and three impedances (3.1-j3.9ohm, 6ohm, and j4.71ohm). The high-potential end of V’ and the 3.1-j3.9ohm connect at node a. The 3.1-j3.9ohm and j4.71ohm connect at node b. The j4.71ohm and 6ohm connect at node c. The low-potential end of V’ and 6ohm connect at node d. Voltage V drops over the 6ohm resistor from node c to node d."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.38<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.38"><a tabindex="-1" href="#ch9-sourcetransform-11-2-17" title="Copy heading and permalink for Figure 9.1.38" aria-label="Copy heading and permalink for Figure 9.1.38">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch9-sourcetransform-11-2-18">The 3.1−j3.9 Ω impedance is connected in series with the j4.71 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sourcetransform-11-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-sourcetransform-11-2-19"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch9-cplx-source-transform-example-figure6.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes consisting of a voltage source V’ and two impedances (3.1+j0.815ohm and 6ohm). The high-potential end of V’ and the 3.1+j0.815ohm connect at node a. The 3.1+j0.815ohm and 6ohm connect at node b. The low-potential end of V’ and 6ohm connect at node c. Voltage V drops over the 6ohm resistor from node b to node c."></div>
+<figure class="figure figure-like" id="ch9-sourcetransform-11-2-19"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch9-cplx-source-transform-example-figure6.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes consisting of a voltage source V’ and two impedances (3.1+j0.815ohm and 6ohm). The high-potential end of V’ and the 3.1+j0.815ohm connect at node a. The 3.1+j0.815ohm and 6ohm connect at node b. The low-potential end of V’ and 6ohm connect at node c. Voltage V drops over the 6ohm resistor from node b to node c."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.39<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.39"><a tabindex="-1" href="#ch9-sourcetransform-11-2-19" title="Copy heading and permalink for Figure 9.1.39" aria-label="Copy heading and permalink for Figure 9.1.39">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch9-sourcetransform-11-2-20">Use the voltage divider rule to calculate <span class="process-math">\(\vec{V}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sourcetransform-11-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1423,7 +1429,7 @@ v(t) = 9.81~\textrm{V}~\cos(2\pi250t-56.6\pi/180)
 <article class="example example-like" id="ch9-theveninnorton-5"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.41</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complex Thévenin equivalent circuit.</span>
 </h3>
-<div class="para" id="ch9-theveninnorton-5-2-1">Derive a Thévenin equivalent circuit for the circuit shown below. The source voltage is <span class="process-math">\(v_{AC}(t) = 3~\textrm{V}~\cos(2\pi 100t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch9-theveninnorton-5-2-1">Derive a Thévenin equivalent circuit for the circuit shown below. The source voltage is <span class="process-math">\(v_{AC}(t) = 3~\textrm{V}~\cos(2\pi 100t)\text{.}\)</span> The proportionality constant of the VCCS has a unit of A/V.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch9-theveninnorton-5-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch9-cplx-thevenin-example-figure1.svg" role="img" class="contained" alt="Circuit with three meshes and four nodes consisting of voltage source Vac, VCCS 0.3*Vx, two resistors (47ohm and 68ohm), and two capacitors (22uF and 47uF). The high-potential end of Vac connects to 47ohm at node c. The 47ohm, 22uF, and 47uF connect at node d. The 47uF, 68ohm, and VCCS connect at node a. The VCCS flows out of node a. The low-potential end of Vac, 22uF, 68ohm, and VCCS connect at node d. The VCCS flows into node d. Voltage Vx drops over the 22uF capacitor from node d to node b. The Thevenin equivalent circuit is defined between nodes a and b."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.42<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.42"><a tabindex="-1" href="#ch9-theveninnorton-5-2-2" title="Copy heading and permalink for Figure 9.1.42" aria-label="Copy heading and permalink for Figure 9.1.42">🔗</a></div></figcaption>
@@ -1433,10 +1439,8 @@ v(t) = 9.81~\textrm{V}~\cos(2\pi250t-56.6\pi/180)
 <div class="para logical" id="ch9-theveninnorton-5-2-4">
 <div class="displaymath process-math" id="ch9-theveninnorton-5-2-4-1">
 \begin{align*}
-\vec{Z_{C22}} \amp= \frac{1}{j(2\pi100)(22 \times 10^{-6})}\\
-\amp= -j72.3432~\Omega\\
-\vec{Z_{C47}} \amp= \frac{1}{j(2\pi100)(47 \times 10^{-6})}\\
-\amp= -j33.8628~\Omega
+\frac{1}{j(2\pi100)(22 \times 10^{-6})} \amp= -j72.3432~\Omega\\
+\frac{1}{j(2\pi100)(47 \times 10^{-6})} \amp= -j33.8628~\Omega
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1619,10 +1623,9 @@ C \amp= \frac{1}{(2\pi100)(2.1415)}\\
 </div> 
 <div class="para logical" id="ch9-theveninnorton-9-2-4">
 <div class="displaymath process-math" id="ch9-theveninnorton-9-2-4-1">
-\begin{align*}
-\vec{Z_C} \amp= \frac{1}{j(2\pi2000)(470\times 10^{-9})}\\
-\amp= -j169.31~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{j(2\pi2000)(470\times 10^{-9})} = -j169.31~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-9-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1631,10 +1634,8 @@ C \amp= \frac{1}{(2\pi100)(2.1415)}\\
 <div class="para logical" id="ch9-theveninnorton-9-2-6">
 <div class="displaymath process-math" id="ch9-theveninnorton-9-2-6-1">
 \begin{align*}
-\vec{Z_{L10}} \amp= j(2\pi2000)(0.01)\\
-\amp= j125.66~\Omega\\
-\vec{Z_{L20}} \amp= j(2\pi2000)(0.02)\\
-\amp= j251.33~\Omega
+j(2\pi2000)(0.01) \amp= j125.66~\Omega\\
+j(2\pi2000)(0.02) \amp= j251.33~\Omega
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-9-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1667,24 +1668,22 @@ C \amp= \frac{1}{(2\pi100)(2.1415)}\\
 </div> 
 <div class="para logical" id="ch9-theveninnorton-9-2-15">
 <div class="displaymath process-math" id="ch9-theveninnorton-9-2-15-1">
-\begin{align*}
-\vec{I'} \amp= \frac{-15 + j25.9808~\textrm{V}}{-j169.31~\Omega}\\
-\amp= -0.1534 - j0.0886~\textrm{A}
-\end{align*}
+\begin{equation*}
+\frac{-15 + j25.9808~\textrm{V}}{-j169.31~\Omega} = -0.1534 - j0.0886~\textrm{A}
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-9-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch9-theveninnorton-9-2-16"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch9-cplx-norton-example-figure5.svg" role="img" class="contained" alt="Circuit with three meshes and three nodes consisting of current source I’ and three impedances (220ohm, -j169ohm, and j251ohm). All circuit elements are connected in parallel between nodes a and b. The high-potential end of I’ connects to node a. Branch current In flows through the 220ohm impedance from node a to node b."></div>
+<figure class="figure figure-like" id="ch9-theveninnorton-9-2-16"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/ch9-cplx-norton-example-figure5.svg" role="img" class="contained" alt="Circuit with three meshes and three nodes consisting of current source I’ and three impedances (220ohm, -j169ohm, and j251ohm). All circuit elements are connected in parallel between nodes a and b. The high-potential end of I’ connects to node a. Branch current In flows through the 220ohm impedance from node a to node b."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1.52<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 9.1.52"><a tabindex="-1" href="#ch9-theveninnorton-9-2-16" title="Copy heading and permalink for Figure 9.1.52" aria-label="Copy heading and permalink for Figure 9.1.52">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch9-theveninnorton-9-2-17">Calculate the equivalent impedance of the circuit as seen by the source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-9-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch9-theveninnorton-9-2-18">
 <div class="displaymath process-math" id="ch9-theveninnorton-9-2-18-1">
-\begin{align*}
-\vec{Z_{EQ}} \amp= \frac{1}{\frac{1}{-j169.31~\Omega}+\frac{1}{j251.33~\Omega}+\frac{1}{220~\Omega}}\\
-\amp= 186.47 - j79.067~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{\frac{1}{-j169.31~\Omega}+\frac{1}{j251.33~\Omega}+\frac{1}{220~\Omega}} = 186.47 - j79.067~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-9-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1719,10 +1718,9 @@ i_{n}(t) = 163~\textrm{mA}~\cos(2\pi2000t - 173\pi/180)
 </div> 
 <div class="para logical" id="ch9-theveninnorton-9-2-26">
 <div class="displaymath process-math" id="ch9-theveninnorton-9-2-26-1">
-\begin{align*}
-\vec{Z'} \amp= \frac{(-j169.31~\Omega)(j251.33~\Omega)}{(-j169.31~\Omega)+(j251.33~\Omega)}\\
-\amp= -j518.86~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(-j169.31~\Omega)(j251.33~\Omega)}{(-j169.31~\Omega)+(j251.33~\Omega)} = -j518.86~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-theveninnorton-9-2-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 

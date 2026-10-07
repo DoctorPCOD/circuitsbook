@@ -77,7 +77,7 @@
 
 		<p><md number="yes" xml:id="ch7-secondorderlinearode-standard">\frac{d^2f(t)}{dt^2} + 2\alpha\frac{df(t)}{dt} + \omega_0^2 f(t) = y(t)</md></p>
 
-		<p>When the function <m>y(t)</m> as defined in <xref ref="ch7-secondorderlinearode-standard" /> is equal to zero, the equation is said to be <term>homogeneous</term>, otherwise the equation is non-homogeneous. This chapter will cover both constant input and non-constant input non-homogeneous circuits. However, for non-constant input non-homogeneous circuits, we will find that it is much easier to analyze them using the method introduced in <xref ref="ch11-laplace" />.</p>
+		<p>When the function <m>y(t)</m> as defined in <xref ref="ch7-secondorderlinearode-standard" /> is equal to zero, the equation is said to be <term>homogeneous</term>, otherwise the equation is <term>non-homogeneous</term>. This chapter will cover both constant input and non-constant input non-homogeneous circuits. However, for non-constant input non-homogeneous circuits, we will find that it is much easier to analyze them using the method introduced in <xref ref="ch11-laplace" />.</p>
 
 		<p>In order to obtain the exact solution of a second-order, linear, ordinary differential equation, we will need to know the initial value of the function being described by the equation <alert>and the initial value of the first derivative of the function being described by the equation</alert>. Both of these values must be calculated at a time of <m>0^+</m>, which is important to keep in mind if a quantity is discontinuous with time. If the equation is non-homogeneous, we will also need to know the value of the particular solution.</p>
 
@@ -236,7 +236,7 @@
 		<title>The Series RLC Circuit</title>
 
 		<introduction>
-			<p>A common form of second-order circuit is the series RLC circuit. A series RLC circuit is configured such that, in the final configuration of the circuit after a change to the source conditions is made, the circuit components contain one or more resistor, capacitor, and inductor, all in series with each other. In this section, we'll analyze both homogeneous and non-homogeneous series RLC circuits to derive their common properties. We'll see that, regardless of if a circuit is homogeneous or not, properties such as the damping parameter and resonant frequency will be the same for all series RLC circuits.</p>
+			<p>A common form of second-order circuit is the series RLC circuit. A series RLC circuit is configured such that, in the final configuration of the circuit after a change to the source conditions is made, the circuit components include one capacitor (or equivalent capacitance), one inductor (or equivalent inductance), and one or more resistor, all in series with each other. In this section, we'll analyze both homogeneous and non-homogeneous series RLC circuits to derive their common properties. We'll see that, regardless of if a circuit is homogeneous or not, properties such as the damping parameter and resonant frequency will be the same for all series RLC circuits.</p>
 
 			<p>An example of a series RLC circuit is shown in <xref ref="seriesrlc-diagram" />.</p>
 			
@@ -290,17 +290,26 @@
 
 			<p>For a second equation, the voltage over and current through the capacitor must be related. Fortunately, we already have an equation that describes this relationship: <xref ref="ch5-ivcapequation" />.</p>
 			
-			<p>Plug <xref ref="ch5-ivcapequation" /> into <xref ref="ch7-eq-homogeneous-seriesrlc-kvl" /> and simplify to standard form. The result is shown in <xref ref="ch7-homogeneous-seriesrlc-diffeq" />.</p>
+			<p>Plug <xref ref="ch5-ivcapequation" /> into <xref ref="ch7-eq-homogeneous-seriesrlc-kvl" /> and simplify to standard form. The result is shown in <xref ref="ch7-homogeneous-seriesrlc-diffeq" /> and derived in <xref ref="ch7-homogeneous-seriesrlc-diffeq-proof" />.</p>
 			
 			<p>
-				<md number="yes">
-					<mrow>0 \amp= RC \frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)</mrow>
-					<mrow>\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)</mrow>
-					<mrow xml:id="ch7-homogeneous-seriesrlc-diffeq">\amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)</mrow>
+				<md number="yes" xml:id="ch7-homogeneous-seriesrlc-diffeq">
+					0 = \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)
 				</md>
 			</p>
 
-			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can easily derive values for the damping parameter and resonant frequency of a series RLC circuit. These are defined in <xref ref="ch7-eq-seriesrlc-alpha" /> and <xref ref="ch7-eq-seriesrlc-omega0" />, respectively.</p>
+			<proof xml:id="ch7-homogeneous-seriesrlc-diffeq-proof">
+				<p>
+					<md>
+						<mrow>0 \amp= Ri(t) + L\frac{di(t)}{dt} + v(t)</mrow>
+						<mrow>\amp= R\left(C \frac{dv(t)}{dt}\right) + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)</mrow>
+						<mrow>\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)</mrow>
+						<mrow>\amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can derive values for the damping parameter and resonant frequency of a series RLC circuit. These are defined in <xref ref="ch7-eq-seriesrlc-alpha" /> and <xref ref="ch7-eq-seriesrlc-omega0" />, respectively.</p>
 
 			<p>
 				<md number="yes">
@@ -309,14 +318,24 @@
 				</md>
 			</p>
 
-			<p>Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <m>t=0^+</m>. We therefore must analyze <xref ref="ch7-eq-homogeneous-seriesrlc-kvl" /> and <xref ref="ch5-ivcapequation" /> to see if either one contains a first derivative of the voltage. This is defined in <xref ref="ch5-ivcapequation" />. We can therefore solve this at <m>t=0^+</m> to derive the first derivative initial condition value for a series RLC circuit. This value is described in <xref ref="ch7-eq-seriesrlc-vpzero" />. (It is vitally important to point out that this first derivative initial condition is <alert>only valid for series RLC circuits</alert>!)</p>
+			<p>Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <m>t=0^+</m>. We therefore must analyze <xref ref="ch7-eq-homogeneous-seriesrlc-kvl" /> and <xref ref="ch5-ivcapequation" /> to see if either one contains a first derivative of the voltage. This is defined in <xref ref="ch5-ivcapequation" />. We can therefore solve this at <m>t=0^+</m> to derive the first derivative initial condition value for a series RLC circuit. This value is described in <xref ref="ch7-eq-seriesrlc-vpzero" /> and derived in <xref ref="ch7-seriesrlc-vpzero-proof" />. (It is vitally important to point out that this first derivative initial condition is <alert>only valid for series RLC circuits</alert>!)</p>
 			
 			<p>
-				<md number="yes">
-					<mrow>i(0^+) \amp= Cv'(0^+)</mrow>
-					<mrow xml:id="ch7-eq-seriesrlc-vpzero">v'(0^+) \amp= \frac{i(0^+)}{C}</mrow>
+				<md number="yes" xml:id="ch7-eq-seriesrlc-vpzero">
+					v'(0^+) = \frac{i(0^+)}{C}
 				</md>
 			</p>
+
+			<proof xml:id="ch7-seriesrlc-vpzero-proof">
+				<p>
+					<md>
+						<mrow>i(t) \amp= C\frac{dv(t)}{dt}</mrow>
+						<mrow>\amp= Cv'(t)</mrow>
+						<mrow>i(0^+) \amp= Cv'(0^+)</mrow>
+						<mrow>v'(0^+) \amp= \frac{i(0^+)}{C}</mrow>
+					</md>
+				</p>
+			</proof>
 
 		</subsection>
 
@@ -350,15 +369,24 @@
 
 			<p>For a second equation, the voltage over and current through the capacitor must be related. Fortunately, we already have an equation that describes this relationship: <xref ref="ch5-ivcapequation" />.</p>
 			
-			<p>Plug <xref ref="ch5-ivcapequation" /> into <xref ref="ch7-eq-non-homogeneous-seriesrlc-kvl" /> and simplify to standard form. The result is shown in <xref ref="ch7-non-homogeneous-seriesrlc-diffeq" />.</p>
+			<p>Plug <xref ref="ch5-ivcapequation" /> into <xref ref="ch7-eq-non-homogeneous-seriesrlc-kvl" /> and simplify to standard form. The result is shown in <xref ref="ch7-non-homogeneous-seriesrlc-diffeq" /> and derived in <xref ref="ch7-non-homogeneous-rlc-diffeq-proof" />.</p>
 			
 			<p>
-				<md number="yes">
-					<mrow>V_{IN} \amp= RC \frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)</mrow>
-					<mrow>\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)</mrow>
-					<mrow xml:id="ch7-non-homogeneous-seriesrlc-diffeq">\frac{V_{IN}}{LC} \amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)</mrow>
+				<md number="yes" xml:id="ch7-non-homogeneous-seriesrlc-diffeq">
+					\frac{V_{IN}}{LC} = \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)
 				</md>
 			</p>
+
+			<proof xml:id="ch7-non-homogeneous-rlc-diffeq-proof">
+				<p>
+					<md>
+						<mrow>V_{IN} \amp= Ri(t) + L\frac{di(t)}{dt} + v(t)</mrow>
+						<mrow>\amp= R\left(C \frac{dv(t)}{dt}\right) + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)</mrow>
+						<mrow>\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)</mrow>
+						<mrow>\frac{V_{IN}}{LC} \amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)</mrow>
+					</md>
+				</p>
+			</proof>
 
 			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can see that the values for the damping parameter and resonant frequency are identical to that of a homogeneous series RLC circuit. In addition, because <xref ref="ch5-ivcapequation" /> is still the equation that describes the first derivative of voltage, the initial condition of the first derivative continues to be defined by <xref ref="ch7-eq-seriesrlc-vpzero" />.</p>
 
@@ -377,18 +405,15 @@
 			<figure xml:id="parallelrlc-diagram">
   				<caption>A parallel RLC circuit.</caption>
 				<image width="80%" xml:id="ch7-parallelrlc-diagram">
-					<shortdescription>Circuit with 4 nodes consisting of current source Iin, SPDT switch, resistor R, inductor L, and capacitor C. Iin connects to position a of the SPDT switch at node a. Iin flows into node a. Position b of the SPDT switch is floating at node b. The input of the SPDT switch, R, L, and C connect at node c. Iin, R, L, and C connect at node d. Iin flows out of node d. Branch current i(t) flows through L from node c to node d. Voltage v(t) drops over C from node c to node d. The SPDT switch is depicted as being in position a.</shortdescription>
+					<shortdescription>Circuit with 3 nodes consisting of current source Iin, SPST switch, resistor R, inductor L, and capacitor C. Iin connects to the SPST switch at node a. Iin flows into node a. The SPST switch, R, L, and C connect at node b. Iin, R, L, and C connect at node c. Iin flows out of node c. Branch current i(t) flows through L from node b to node c. Voltage v(t) drops over C from node b to node c. The SPST switch is depicted as being open.</shortdescription>
 					<latex-image>
 						\begin{tikzpicture}[font=\sffamily]
-							\draw[]	(2.5,2.5) node[cute spdt up, xscale=-1, anchor=in] (switch) {};
-							\draw[]	(0,0) to [I, l^=$I_{IN}$]							++(up:2.75);
-							\draw[]	(2.5,2.5) --++ (right:0.5) to [R, l_=$R$, *-*]		++(down:2.5);
-							\draw[]	(5.5,2.5) to [L, l_=$L$, i^=$i(t)$, *-*]			++(down:2.5);
-							\draw[]	(8,2.5) to [C, l_=$C$, v^=$v(t)$]					++(down:2.5);
-							\draw[]	(switch.out 1) node[above] {a}						 -| (0,2.75);
-							\node[below]	at (switch.out 2) {b};
-							\draw[]	(0,0) to [short]									(8,0);
-							\draw[]	(3,2.5) to [short]									(8,2.5);
+							\draw[]	(0,0) to [I, l^=$I_{IN}$]					++(up:2.5);
+							\draw[]	(0,2.5) to [cute open switch]				++(right:2.5) --++ (right:5);
+							\draw[]	(2.5,2.5) to [R, l_=$R$, *-*]				++(down:2.5);
+							\draw[]	(5,2.5) to [L, l_=$L$, i^=$i(t)$, *-*]		++(down:2.5);
+							\draw[]	(7.5,2.5) to [C, l_=$C$, v^=$v(t)$]			++(down:2.5);
+							\draw[]	(0,0) to [short]							(7.5,0);
 						\end{tikzpicture}
 					</latex-image>
   				</image>
@@ -398,7 +423,7 @@
 		<subsection xml:id="ch7-homoparallelrlc">
 			<title>Homogeneous Parallel RLC Circuits</title>
 
-			<p>Consider the parallel RLC circuit shown in <xref ref="parallelrlc-diagram" />. The homogeneous condition considers that the switch is in position a for a very long time before moving to position b at time <m>t=0</m>.</p>
+			<p>Consider the parallel RLC circuit shown in <xref ref="parallelrlc-diagram" />. The homogeneous condition considers that the switch is closed for a very long time before opening at time <m>t=0</m>.</p>
 
 			<p>Kirchhoff's laws will be used to derive a second-order differential equation for this circuit. With the switch in position b, the circuit resembles that shown in <xref ref="homogeneous-parallelrlc-diagram-t0plus" />.</p>
 			
@@ -426,17 +451,26 @@
 
 			<p>For a second equation, the voltage over and current through the inductor must be related. Fortunately, we already have an equation that describes this relationship: <xref ref="ch6-voltageinductor" />.</p>
 			
-			<p>Plug <xref ref="ch6-voltageinductor" /> into <xref ref="ch7-eq-homogeneous-parallelrlc-kcl" /> and simplify to standard form. The result is shown in <xref ref="ch7-homogeneous-parallelrlc-diffeq" />.</p>
+			<p>Plug <xref ref="ch6-voltageinductor" /> into <xref ref="ch7-eq-homogeneous-parallelrlc-kcl" /> and simplify to standard form. The result is shown in <xref ref="ch7-homogeneous-parallelrlc-diffeq" /> and derived in <xref ref="ch7-homogeneous-parallelrlc-diffeq-proof" />.</p>
 			
 			<p>
-				<md number="yes">
-					<mrow>0 \amp= \frac{1}{R}L\frac{di(t)}{dt} + i(t) + C\frac{d}{dt}\left(L\frac{di(t)}{dt}\right)</mrow>
-					<mrow>\amp= LC\frac{d^2i(t)}{dt^2} + \frac{L}{R}\frac{di(t)}{dt} + i(t)</mrow>
-					<mrow xml:id="ch7-homogeneous-parallelrlc-diffeq">\amp= \frac{d^2i(t)}{dt^2} + \frac{1}{RC}\frac{di(t)}{dt} + \frac{1}{LC}i(t)</mrow>
+				<md number="yes" xml:id="ch7-homogeneous-parallelrlc-diffeq">
+					0 = \frac{d^2i(t)}{dt^2} + \frac{1}{RC}\frac{di(t)}{dt} + \frac{1}{LC}i(t)
 				</md>
 			</p>
 
-			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can easily derive values for the damping parameter and resonant frequency of a parallel RLC circuit. These are defined in <xref ref="ch7-eq-parallelrlc-alpha" /> and <xref ref="ch7-eq-parallelrlc-omega0" />, respectively.</p>
+			<proof xml:id="ch7-homogeneous-parallelrlc-diffeq-proof">
+				<p>
+					<md>
+						<mrow>0 \amp= \frac{v(t)}{R} + i(t) + C\frac{dv(t)}{dt}</mrow>
+						<mrow>\amp= \frac{1}{R}\left(L\frac{di(t)}{dt}\right) + i(t) + C\frac{d}{dt}\left(L\frac{di(t)}{dt}\right)</mrow>
+						<mrow>\amp= LC\frac{d^2i(t)}{dt^2} + \frac{L}{R}\frac{di(t)}{dt} + i(t)</mrow>
+						<mrow>\amp= \frac{d^2i(t)}{dt^2} + \frac{1}{RC}\frac{di(t)}{dt} + \frac{1}{LC}i(t)</mrow>
+					</md>
+				</p>
+			</proof>
+
+			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can derive values for the damping parameter and resonant frequency of a parallel RLC circuit. These are defined in <xref ref="ch7-eq-parallelrlc-alpha" /> and <xref ref="ch7-eq-parallelrlc-omega0" />, respectively.</p>
 
 			<p>
 				<md number="yes">
@@ -445,21 +479,31 @@
 				</md>
 			</p>
 
-			<p>Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <m>t=0^+</m>. We therefore must analyze <xref ref="ch7-eq-homogeneous-parallelrlc-kcl" /> and <xref ref="ch6-voltageinductor" /> to see if either one contains a first derivative of the current. This is defined in <xref ref="ch6-voltageinductor" />. We can therefore solve this at <m>t=0^+</m> to derive the first derivative initial condition value for a parallel RLC circuit. This value is described in <xref ref="ch7-eq-parallelrlc-ipzero" />. (It is vitally important to point out that this first derivative initial condition is <alert>only valid for parallel RLC circuits</alert>!)</p>
+			<p>Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <m>t=0^+</m>. We therefore must analyze <xref ref="ch7-eq-homogeneous-parallelrlc-kcl" /> and <xref ref="ch6-voltageinductor" /> to see if either one contains a first derivative of the current. This is defined in <xref ref="ch6-voltageinductor" />. We can therefore solve this at <m>t=0^+</m> to derive the first derivative initial condition value for a parallel RLC circuit. This value is described in <xref ref="ch7-eq-parallelrlc-ipzero" /> and derived in <xref ref="ch7-parallelrlc-ipzero-proof" />. (It is vitally important to point out that this first derivative initial condition is <alert>only valid for parallel RLC circuits</alert>!)</p>
 			
 			<p>
-				<md number="yes">
-					<mrow>v(0^+) \amp= Li'(0^+)</mrow>
-					<mrow xml:id="ch7-eq-parallelrlc-ipzero">i'(0^+) \amp= \frac{v(0^+)}{L}</mrow>
+				<md number="yes" xml:id="ch7-eq-parallelrlc-ipzero">
+					i'(0^+) = \frac{v(0^+)}{L}
 				</md>
 			</p>
+
+			<proof xml:id="ch7-parallelrlc-ipzero-proof">
+				<p>
+					<md>
+						<mrow>v(t) \amp= L\frac{di(t)}{dt}</mrow>
+						<mrow>\amp= Li'(t)</mrow>
+						<mrow>v(0^+) \amp= Li'(0^+)</mrow>
+						<mrow>i'(0^+) \amp= \frac{v(0^+)}{L}</mrow>
+					</md>
+				</p>
+			</proof>
 
 		</subsection>
 
 		<subsection xml:id="ch7-non-homoparallelrlc">
 			<title>Non-Homogeneous Parallel RLC Circuits</title>
 
-			<p>Consider the parallel RLC circuit shown in <xref ref="parallelrlc-diagram" />. The non-homogeneous condition considers that the switch is in position b for a very long time before moving to position a at time <m>t=0</m>.</p>
+			<p>Consider the parallel RLC circuit shown in <xref ref="parallelrlc-diagram" />. The non-homogeneous condition considers that the switch is open for a very long time before closing at time <m>t=0</m>.</p>
 
 			<p>Kirchhoff's laws will be used to derive a second-order differential equation for this circuit. With the switch in position b, the circuit resembles that shown in <xref ref="non-homogeneous-parallelrlc-diagram-t0plus" />.</p>
 			
@@ -488,15 +532,24 @@
 
 			<p>For a second equation, the voltage over and current through the inductor must be related. Fortunately, we already have an equation that describes this relationship: <xref ref="ch6-voltageinductor" />.</p>
 			
-			<p>Plug <xref ref="ch6-voltageinductor" /> into <xref ref="ch7-eq-non-homogeneous-parallelrlc-kcl" /> and simplify to standard form. The result is shown in <xref ref="ch7-non-homogeneous-parallelrlc-diffeq" />.</p>
+			<p>Plug <xref ref="ch6-voltageinductor" /> into <xref ref="ch7-eq-non-homogeneous-parallelrlc-kcl" /> and simplify to standard form. The result is shown in <xref ref="ch7-non-homogeneous-parallelrlc-diffeq" /> and derived in <xref ref="ch7-non-homogeneous-parallelrlc-diffeq-proof" />.</p>
 			
 			<p>
-				<md number="yes">
-					<mrow>I_{IN} \amp= \frac{1}{R}L\frac{di(t)}{dt} + i(t) + C\frac{d}{dt}\left(L\frac{di(t)}{dt}\right)</mrow>
-					<mrow>\amp= LC\frac{d^2i(t)}{dt^2} + \frac{L}{R}\frac{di(t)}{dt} + i(t)</mrow>
-					<mrow xml:id="ch7-non-homogeneous-parallelrlc-diffeq">\frac{I_{IN}}{LC} \amp= \frac{d^2i(t)}{dt^2} + \frac{1}{RC}\frac{di(t)}{dt} + \frac{1}{LC}i(t)</mrow>
+				<md number="yes" xml:id="ch7-non-homogeneous-parallelrlc-diffeq">
+					\frac{I_{IN}}{LC} = \frac{d^2i(t)}{dt^2} + \frac{1}{RC}\frac{di(t)}{dt} + \frac{1}{LC}i(t)
 				</md>
 			</p>
+
+			<proof xml:id="ch7-non-homogeneous-parallelrlc-diffeq-proof">
+				<p>
+					<md>
+						<mrow>I_{IN} \amp= \frac{v(t)}{R} + i(t) + C\frac{dv(t)}{dt}</mrow>
+						<mrow>\amp= \frac{1}{R}\left(L\frac{di(t)}{dt}\right) + i(t) + C\frac{d}{dt}\left(L\frac{di(t)}{dt}\right)</mrow>
+						<mrow>\amp= LC\frac{d^2i(t)}{dt^2} + \frac{L}{R}\frac{di(t)}{dt} + i(t)</mrow>
+						<mrow>\frac{I_{IN}}{LC} \amp= \frac{d^2i(t)}{dt^2} + \frac{1}{RC}\frac{di(t)}{dt} + \frac{1}{LC}i(t)</mrow>
+					</md>
+				</p>
+			</proof>
 
 			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can see that the values for the damping parameter and resonant frequency are identical to that of a homogeneous parallel RLC circuit. In addition, because <xref ref="ch6-voltageinductor" /> is still the equation that describes the first derivative of current, the initial condition of the first derivative continues to be defined by <xref ref="ch7-eq-parallelrlc-ipzero" />.</p>
 
@@ -505,29 +558,26 @@
 		<subsection xml:id="ch7-parallel-rlc-parasitic-resistance">
 			<title>Analysis with Parasitic Resistance</title>
 
-			<p>The analyses above ignores the parasitic resistance that exists in real inductors. A realistic circuit, which explicitly includes the parasitic resistance in series with the inductor, can be analyzed. The corresponding circuit diagram is shown in <xref ref="parallelrlc-parasitic-resistance-general" />.</p>
+			<p>The analyses above ignore the parasitic resistance that exists in real inductors. A realistic circuit, which explicitly includes the parasitic resistance in series with the inductor, can be analyzed. The corresponding circuit diagram is shown in <xref ref="parallelrlc-parasitic-resistance-general" />.</p>
 			
 			<figure xml:id="parallelrlc-parasitic-resistance-general">
   				<caption>Parallel RLC circuit with parasitic resistance.</caption>
 				<image width="80%" xml:id="ch7-parallelrlc-parasitic-resistance-general">
-					<shortdescription>Circuit with 5 nodes consisting of current source Iin, SPDT switch, resistor R, resistor Rp, inductor L, and capacitor C. Iin connects to position a of the SPDT switch at node a. Iin flows into node a. Position b of the SPDT switch is floating at node b. The input of the SPDT switch, R, L, and C connect at node c. L and Rp connect at node e. Iin, R, Rp, and C connect at node d. Iin flows out of node d. Branch current i(t) flows through L from node c to node e. Voltage v(t) drops over C from node c to node d. The SPDT switch is depicted as being in position a.</shortdescription>
+					<shortdescription>Circuit with 4 nodes consisting of current source Iin, SPST switch, resistor R, resistor Rp, inductor L, and capacitor C. Iin connects to the SPST switch at node a. Iin flows into node a. The SPST switch, R, L, and C connect at node b. L and Rp connect at node c. Iin, R, Rp, and C connect at node d. Iin flows out of node d. Branch current i(t) flows through L from node b to node c. Voltage v(t) drops over C from node b to node d. The SPST switch is depicted as being open.</shortdescription>
 					<latex-image>
 						\begin{tikzpicture}[font=\sffamily]
-							\draw[]	(2.5,5) node[cute spdt up, xscale=-1, anchor=in] (switch) {};
-							\draw[]	(0,0) to [I, l^=$I_{IN}$]				++(up:5.25);
-							\draw[]	(2.5,5) --++ (right:0.5) to [R, l_=$R$, *-*]	++(down:5);
-							\draw[]	(5.5,5) to [L, l_=$L$, i^=$i(t)$, *-]	++(down:2.5) to [R, l_=$R_P$, -*]	++(down:2.5);
-							\draw[]	(8,5) to [C, l_=$C$, v^=$v(t)$]			++(down:5);
-							\draw[]	(switch.out 1) node[above] {a}			-| (0,2.75);
-							\node[below]	at (switch.out 2) {b};
-							\draw[]	(0,0) to [short]						(8,0);
-							\draw[]	(3,5) to [short]						(8,5);
+							\draw[]	(0,0) to [I, l^=$I_{IN}$]				++(up:5);
+							\draw[]	(0,5) to [cute open switch]				++(right:2.5) --++ (right:5);
+							\draw[]	(2.5,5) to [R, l_=$R$, *-*]				++(down:5);
+							\draw[]	(5,5) to [L, l_=$L$, i^=$i(t)$, *-]		++(down:2.5) to [R, l_=$R_P$, -*]	++(down:2.5);
+							\draw[]	(7.5,5) to [C, l_=$C$, v^=$v(t)$]		++(down:5);
+							\draw[]	(0,0) to [short]						(7.5,0);
 						\end{tikzpicture}
 					</latex-image>
   				</image>
 			</figure>
 
-			<p>Consider the circuit with the switch having moved to position b at a time of zero seconds, depicted in <xref ref="homogeneous-parallelrlc-parasitic-diagram-t0plus" />. This analysis corresponds to the homogeneous circuit. Hopefully by now you realize that, whether the circuit is homogeneous or not, the initial condition of the first derivative, damping parameter, and oscillation frequency will be defined by the same equations. Therefore, a separate analysis will not be performed for the non-homogeneous circuit.</p>
+			<p>Consider the circuit with the switch having been closed for a long time before opening at a time of zero seconds, depicted in <xref ref="homogeneous-parallelrlc-parasitic-diagram-t0plus" />. This analysis corresponds to the homogeneous circuit. Hopefully by now you realize that, whether the circuit is homogeneous or not, the initial condition of the first derivative, damping parameter, and oscillation frequency will be defined by the same equations. Therefore, a separate analysis will not be performed for the non-homogeneous circuit.</p>
 			
 			<figure xml:id="homogeneous-parallelrlc-parasitic-diagram-t0plus">
   				<caption>The parallel RLC circuit shown in <xref ref="parallelrlc-parasitic-resistance-general" /> after the switch has been moved to position b.</caption>
@@ -570,7 +620,7 @@
 				</p>
 			</proof>
 
-			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can easily derive values for the damping parameter and resonant frequency of a parallel RLC circuit with parasitic resistance. These are defined in <xref ref="ch7-eq-parallelrlc-parasitic-alpha" /> and <xref ref="ch7-eq-parallelrlc-parasitic-omega0" />, respectively.</p>
+			<p>Referring to <xref ref="ch7-secondorderlinearode-standard" />, we can derive values for the damping parameter and resonant frequency of a parallel RLC circuit with parasitic resistance. These are defined in <xref ref="ch7-eq-parallelrlc-parasitic-alpha" /> and <xref ref="ch7-eq-parallelrlc-parasitic-omega0" />, respectively.</p>
 
 			<p>
 				<md number="yes">
@@ -579,15 +629,25 @@
 				</md>
 			</p>
 
-			<p>Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <m>t=0^+</m>. We therefore must analyze <xref ref="ch7-eq-homogeneous-parallelrlc-kcl" /> and <xref ref="ch7-eq-parasiticrlc-kvl" /> to see if either one contains a first derivative of the current. This is defined in <xref ref="ch7-eq-parasiticrlc-kvl" />. We can therefore solve this at <m>t=0^+</m> to derive the first derivative initial condition value for a parallel RLC circuit with parasitic resistance. This value is described in <xref ref="ch7-eq-parallelrlc-parasitic-ipzero" />.</p>
+			<p>Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <m>t=0^+</m>. We therefore must analyze <xref ref="ch7-eq-homogeneous-parallelrlc-kcl" /> and <xref ref="ch7-eq-parasiticrlc-kvl" /> to see if either one contains a first derivative of the current. This is defined in <xref ref="ch7-eq-parasiticrlc-kvl" />. We can therefore solve this at <m>t=0^+</m> to derive the first derivative initial condition value for a parallel RLC circuit with parasitic resistance. This value is described in <xref ref="ch7-eq-parallelrlc-parasitic-ipzero" /> and derived in <xref ref="ch7-parallelrlc-parasitic-ipzero-proof" />.</p>
 			
 			<p>
-				<md number="yes">
-					<mrow>v(0^+) \amp= Li'(0^+) - R_Pi(0^+)</mrow>
-					<mrow>Li'(0^+) \amp= v(0^+) + R_Pi(0^+)</mrow>
-					<mrow xml:id="ch7-eq-parallelrlc-parasitic-ipzero">i'(0^+) \amp= \frac{v(0^+)-R_Pi(0^+)}{L}</mrow>
+				<md number="yes" xml:id="ch7-eq-parallelrlc-parasitic-ipzero">
+					i'(0^+) = \frac{v(0^+)-R_Pi(0^+)}{L}
 				</md>
 			</p>
+
+			<proof xml:id="ch7-parallelrlc-parasitic-ipzero-proof">
+				<p>
+					<md>
+						<mrow>v(t) \amp= L\frac{di(t)}{dt} + R_Pi(t)</mrow>
+						<mrow>\amp= Li'(t) + R_Pi(t)</mrow>
+						<mrow>v(0^+) \amp= Li'(0^+) + R_Pi(0^+)</mrow>
+						<mrow>Li'(0^+) \amp= v(0^+) - R_Pi(0^+)</mrow>
+						<mrow>i'(0^+) \amp= \frac{v(0^+)-R_Pi(0^+)}{L}</mrow>
+					</md>
+				</p>
+			</proof>
 			
 		</subsection>
 
@@ -605,7 +665,7 @@
 		<subsection xml:id="ch7-homogeneous-overdamped-solutions">
 			<title>The Overdamped Solution</title>
 
-			<p>The solution to a homogeneous overdamped circuit is described in <xref ref="ch7-eq-homogeneous-over" />, with the equation coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-homogeneous-over-A1" /> and <xref ref="ch7-eq-homogeneous-over-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
+			<p>The solution to a homogeneous overdamped circuit is described in <xref ref="ch7-eq-homogeneous-over" />, with coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-homogeneous-over-A1" /> and <xref ref="ch7-eq-homogeneous-over-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
 			
 			<p>
 				<md number="yes">
@@ -661,7 +721,7 @@
 		<subsection xml:id="ch7-homogeneous-underdamped-solutions">
 			<title>The Underdamped Solution</title>
 
-			<p>The solution to a homogeneous underdamped circuit is described in <xref ref="ch7-eq-homogeneous-under" />, with the equation coefficients <m>B_1</m> and <m>B_2</m> defined in <xref ref="ch7-eq-homogeneous-under-B1" /> and <xref ref="ch7-eq-homogeneous-under-B2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
+			<p>The solution to a homogeneous underdamped circuit is described in <xref ref="ch7-eq-homogeneous-under" />, with coefficients <m>B_1</m> and <m>B_2</m> defined in <xref ref="ch7-eq-homogeneous-under-B1" /> and <xref ref="ch7-eq-homogeneous-under-B2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
 			
 			<p>
 				<md number="yes">
@@ -711,7 +771,7 @@
 		<subsection xml:id="ch7-homogeneous-critically-solutions">
 			<title>The Critically Damped Solution</title>
 
-			<p>The solution to a homogeneous critically damped circuit is described in <xref ref="ch7-eq-homogeneous-critical" />, with the equation coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-homogeneous-critical-A1" /> and <xref ref="ch7-eq-homogeneous-critical-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
+			<p>The solution to a homogeneous critically damped circuit is described in <xref ref="ch7-eq-homogeneous-critical" />, with coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-homogeneous-critical-A1" /> and <xref ref="ch7-eq-homogeneous-critical-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
 			
 			<p>
 				<md number="yes">
@@ -764,7 +824,7 @@
 				<title>Homogeneous RLC series circuit</title>
 				
 				<statement>
-					<p>Derive an equation for <m>v(t)</m> for the circuit shown below. The circuit is closed for a very long time before opening at a time of zero seconds.</p>
+					<p>Derive an equation for <m>v(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds.</p>
 					
 					<figure>
   						<caption></caption>
@@ -931,7 +991,10 @@
 					<p>Plug all of these quantities into <xref ref="ch7-eq-homogeneous-under" /> to calculate the equation for <m>v(t)</m>.</p>
 
 					<p>
-						<md>v(t) = \textrm{e}^{-2670 t} \left[13.75~\textrm{V}~\cos(3761.35 t) -7.92~\textrm{V}~\sin(3761.35 t)	\right]~u(t) + 13.75~\textrm{V}~u(-t)</md>
+						<md>
+							<mrow>v(t) \amp= \textrm{e}^{-2670 t} \left[13.75~\textrm{V}~\cos(3761.35 t) -7.92~\textrm{V}~\sin(3761.35 t) \right]~u(t)</mrow>
+							<mrow>\amp+ 13.75~\textrm{V}~u(-t)</mrow>
+						</md>
 					</p>
 
 					<p>The voltage is plotted below as a function of time.</p>
@@ -958,7 +1021,7 @@
 				<title>Homogeneous parallel RLC circuit</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> for the circuit below. The switch is closed for a very long time before opening at a time of zero seconds.</p>
+					<p>Derive an equation for <m>i(t)</m> for the circuit below. The switch is closed for a very long time before opening at a time of zero seconds.</p>
 
 					<figure>
   						<caption></caption>
@@ -1102,7 +1165,7 @@
 				<title>Homogeneous parallel RLC circuit with parasitic resistance</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The inductor has a parasitic resistance of 60<nbsp />&#8486;, which is not explicitly shown on the circuit diagram.</p>
+					<p>Derive an equation for <m>i(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The inductor has a parasitic resistance of 60<nbsp />&#8486;, which is not explicitly shown on the circuit diagram.</p>
 
 					<figure>
   						<caption></caption>
@@ -1210,7 +1273,10 @@
 					<p>Plug all of these quantities into <xref ref="ch7-eq-homogeneous-over" /> to derive the equation for <m>i(t)</m>.</p>
 
 					<p>
-						<md>i(t) = \left(87.95~\textrm{mA}~\textrm{e}^{-1070.52t} - 0.10~\textrm{mA}~\textrm{e}^{-966647.46t}\right)~u(t) + 87.85~\textrm{mA}~u(-t)</md>
+						<md>
+							<mrow>i(t) \amp= \left(87.95~\textrm{mA}~\textrm{e}^{-1070.52t} - 0.10~\textrm{mA}~\textrm{e}^{-966647.46t}\right)~u(t)</mrow>
+							<mrow>\amp+ 87.85~\textrm{mA}~u(-t)</mrow>
+						</md>
 					</p>
 
 					<p>The current is plotted below as a function of time.</p>
@@ -1234,130 +1300,11 @@
 				
 			</example>
 
-			<example>
-				<title>Homogeneous general second-order circuit in symbolic form</title>
-				
-				<statement>
-					<p>Derive a second order differential equation in terms of <m>v(t)</m> (in standard form) for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds.</p>
-
-					<figure>
-						<caption></caption>
-						<image width="100%" xml:id="ch7-homogeneous-general-symbolic-example-fig1">
-							<shortdescription>Circuit with 5 nodes consisting of a voltage source Vs, resistor Rs, SPST switch, capacitor C, resistor R1, resistor R2, and inductor L. The high-potential end of Vs and Rs connect at node a. Rs and the SPST switch connect at node b. The SPST switch, C, R1, and L connect at node c. L and R2 connect at node d. The low-potential end of Vs, C, R1, and R2 connect at node e. Voltage v(t) drops over R2 from node d to node e. The SPST switch is depicted as opening.</shortdescription>
-							<latex-image>
-								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [V, l_=$V_S$]				(0,0);
-									\draw[]	(0,2.5) to [R, l^=$R_S$]				(2.5,2.5);
-									\draw[]	(2.5,2.5) to [cute opening switch]		(5,2.5);
-									\draw[]	(5,2.5) to [C, l_=$C$, *-*]				(5,0);
-									\draw[]	(5,2.5) to [short]						(7.5,2.5);
-									\draw[]	(7.5,2.5) to [R, l_=$R_1$, *-*]			(7.5,0);
-									\draw[]	(7.5,2.5) to [L, l^=$L$]				(10,2.5);
-									\draw[]	(10,2.5) to [R, l_=$R_2$, v^=$v(t)$]	(10,0);
-									\draw[]	(0,0) to [short]						(10,0);
-								\end{tikzpicture}
-							</latex-image>
-  						</image>
-					</figure>
-
-					<p>First, analyze the initial conditions of the circuit. The inductor can be replaced by a short and the capacitor can be replaced by an open.</p>
-
-					<figure>
-						<caption></caption>
-						<image width="60%" xml:id="ch7-homogeneous-general-symbolic-example-fig2">
-							<shortdescription>Circuit with two meshes and three nodes consisting of voltage source Vs and resistors Rs, R1, and R2. The high-potential end of Vs and Rs connect at node a. Rs, R1, and R2 connect at node b. The low-potential end of Vs, R1, and R2 connect at node c. Voltage v(0) drops over R2 from node b to node c.</shortdescription>
-							<latex-image>
-								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [V, l_=$V_S$]						(0,0);
-									\draw[]	(0,2.5) to [R, l^=$R_S$]						(2.5,2.5);
-									\draw[]	(2.5,2.5) to [short]							(5,2.5);
-									\draw[]	(2.5,2.5) to [R, l_=$R_1$, *-*]					(2.5,0);
-									\draw[]	(5,2.5) to [R, l_=$R_2$, v^=$v(0)$]				(5,0);
-									\draw[]	(0,0) to [short]								(5,0);
-								\end{tikzpicture}
-							</latex-image>
-  						</image>
-					</figure>
-
-					<p>Use a voltage divider to calculate the initial voltage. This value will be continuous with time. This is because resistor <m>R_2</m> is in series with the inductor, and the current through the inductor is continuous with time. Therefore, <m>R_2i(t)</m>, which is equal to <m>v(t)</m>, will be continuous with time. There will be no need to analyze the circuit at <m>t=0^+</m> to check for discontinuities.</p>
-
-					<p>
-						<md>v(0) = V_S\left(\frac{R_2//R_1}{R_S+R_2//R_1}\right)</md>
-					</p>
-
-					<p>Analyze the circuit at <m>t=0^+</m> to derive the second-order equation. Two terms (<m>i(t)</m> and <m>v_X(t)</m>) are introduced to assist in the analysis.</p>
-
-					<figure>
-						<caption></caption>
-						<image width="60%" xml:id="ch7-homogeneous-general-symbolic-example-fig3">
-							<shortdescription>Circuit with two meshes and three nodes consisting of capacitor C, inductor L, and resistors R1 and R2. C, R1, and L connect at node a. L and R2 connect at node b. C, R1, and R2 connect at node c. Voltage vx(t) drops over C from node a to node c. Branch current i(t) flows through L from node a to node b. Voltage v(t) drops over R2 from node b to node c.</shortdescription>
-							<latex-image>
-								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [C, l_=$C$, v^=$v_X(t)$]			(0,0);
-									\draw[]	(0,2.5) to [short]							(2.5,2.5);
-									\draw[]	(2.5,2.5) to [R, l^=$R_1$, *-*]				(2.5,0);
-									\draw[]	(2.5,2.5) to [L, l^=$L$, i^=$i(t)$]			(5,2.5);
-									\draw[]	(5,2.5) to [R, l_=$R_2$, v^=$v(t)$]			(5,0);
-									\draw[]	(0,0) to [short]							(5,0);
-								\end{tikzpicture}
-							</latex-image>
-  						</image>
-					</figure>
-
-					<p>Perform KVL around the loop consisting of the capacitor, inductor, and <m>R_2</m>.</p>
-
-					<p>
-						<md number="yes" xml:id="ch7-homogeneous-general-symbolic-ex-kvl">v_X(t) = L\frac{di(t)}{dt} + v(t)</md>
-					</p>
-
-					<p>The inductor is in series with resistor <m>R_2</m>. This means that the current through the inductor can be calculated using Ohm's law with <m>R_2</m>. This current is equal to <m>v(t)/R_2</m>. Plug this quantity into <xref ref="ch7-homogeneous-general-symbolic-ex-kvl" /> to eliminate the <m>i(t)</m> term from the equation.</p>
-
-					<p>
-						<md number="yes" xml:id="ch7-homogeneous-general-symbolic-vx">v_X(t) = \frac{L}{R_2}\frac{dv(t)}{dt} + v(t)</md>
-					</p>
-
-					<p>Perform KCL at the node connecting the capacitor, <m>R_1</m>, and the inductor.</p>
-
-					<p>
-						<md number="yes" xml:id="ch7-homogeneous-general-symbolic-kcl">\frac{v(t)}{R_2} + C\frac{dv_X(t)}{dt} + \frac{v_X(t)}{R_1} = 0</md>
-					</p>
-
-					<p>Plug <xref ref="ch7-homogeneous-general-symbolic-vx" /> into <xref ref="ch7-homogeneous-general-symbolic-kcl" /> and reduce to standard form.</p>
-
-					<p>
-						<md>
-							<mrow>0 \amp= \frac{v(t)}{R_2} + C\frac{d}{dt}\left(\frac{L}{R_2}\frac{dv(t)}{dt} + v(t)\right) + \frac{1}{R_1}\left(\frac{L}{R_2}\frac{dv(t)}{dt} + v(t)\right)</mrow>
-							<mrow>\amp= \frac{1}{R_2}v(t) + \frac{CL}{R_2}\frac{d^2v(t)}{dt^2} + C\frac{dv(t)}{dt} + \frac{L}{R_1R_2}\frac{dv(t)}{dt} + \frac{1}{R_1}v(t)</mrow>
-							<mrow>\amp= \frac{CL}{R_2}\frac{d^2v(t)}{dt^2} + \left(C + \frac{L}{R_1R_2}\right)\frac{dv(t)}{dt} + \left(\frac{1}{R_2} + \frac{1}{R_1}\right)v(t)</mrow>
-							<mrow>\amp= \frac{d^2v(t)}{dt^2} + \left(\frac{R_2}{L} + \frac{1}{R_1C}\right)\frac{dv(t)}{dt} + \left(\frac{1}{LC} + \frac{R_2}{R_1LC}\right)v(t)</mrow>
-						</md>
-					</p>
-
-					<p>Derive equations for alpha and omega.</p>
-
-					<p>
-						<md>
-							<mrow>\alpha \amp= \frac{R_2}{2L} + \frac{1}{2CR_1}</mrow>
-							<mrow>\omega_0 \amp= \sqrt{\frac{R_2}{R_1LC}+\frac{1}{LC}}</mrow>
-						</md>
-					</p>
-
-					<p>Derive an equation for the initial derivative of the voltage drop. (Note: this comes from <xref ref="ch7-homogeneous-general-symbolic-vx" />.)</p>
-
-					<p>
-						<md>v'(0^+) = \frac{R_2}{L}\left(v_X(0^+)-v(0^+)\right)</md>
-					</p>
-
-					<p>This circuit can now be solved given any numerical values of <m>V_S</m>, <m>R_S</m>, <m>L</m>, <m>C</m>, <m>R_1</m> and <m>R_2</m>.</p>
-				</statement>
-				
-			</example>
-
 			<example xml:id="ch7-homogeneous-numerical-diffeq-example">
-				<title>Homogeneous general second-order circuit in numeric form</title>
+				<title>Homogeneous general second-order circuit</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The circuit parameters are <m>R_1 = 20~\Omega</m>, <m>R_2 = 30~\Omega</m>, <m>R_3 = 30~\Omega</m>, <m>L_1 = 500~\textrm{mH}</m>, and <m>L_2 = 400~\textrm{mH}</m>.</p>
+					<p>Derive an equation for <m>i(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The circuit parameters are: <m>R_1 = 20~\Omega</m>, <m>R_2 = 30~\Omega</m>, <m>R_3 = 30~\Omega</m>, <m>L_1 = 500~\textrm{mH}</m>, and <m>L_2 = 400~\textrm{mH}</m>.</p>
 
 					<figure>
 						<caption></caption>
@@ -1394,7 +1341,7 @@
 									\draw[]	(5,2.5) to [R, l_=$R_2$, *-*, v^=$v_X(0^-)$]		(5,0);
 									\draw[]	(5,2.5) to [R, l^=$R_3$]							(7.5,2.5);
 									\draw[]	(7.5,2.5) to [short, i^=$i(0)$]						(7.5,0);
-									draw[]	(0,0) to [short]									(7.5,0);
+									\draw[]	(0,0) to [short]									(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1531,10 +1478,14 @@
 					
 					<p>
 						<md>
-							<mrow>\amp= \left(1 + \frac{R_1}{R_2}\right)\left(R_3i(t) + L_2\frac{di(t)}{dt}\right) + \frac{L_1}{R_2}\frac{d}{dt}\left(R_3i(t) + L_2\frac{di(t)}{dt}\right) + L_1\frac{di(t)}{dt} + R_1i(t)</mrow>
-							<mrow>\amp= R_3i(t) + L_2\frac{di(t)}{dt} + \frac{R_1R_3}{R_2}i(t) + \frac{L_2R_1}{R_2}\frac{di(t)}{dt} + \frac{L_1R_3}{R_2}\frac{di(t)}{dt} + \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + L_1\frac{di(t)}{dt} + R_1i(t)</mrow>
-							<mrow>\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left(L_2 + \frac{L_2R_1}{R_2} + \frac{L_1R_3}{R_2} + L_1\right)\frac{di(t)}{dt} + \left(R_3 + \frac{R_1R_3}{R_2} + R_1\right)i(t)</mrow>
-							<mrow>\amp= \frac{d^2i(t)}{dt^2} + \left(\frac{R_2}{L_1} + \frac{R_1}{L_1} + \frac{R_3}{L_2} + \frac{R_2}{L_2}\right)\frac{di(t)}{dt} + \left(\frac{R_2R_3}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_1R_2}{L_1L_2}\right)i(t)</mrow>
+							<mrow>0 \amp= \left(1 + \frac{R_1}{R_2}\right)\left(R_3i(t) + L_2\frac{di(t)}{dt}\right) + \frac{L_1}{R_2}\frac{d}{dt}\left(R_3i(t) + L_2\frac{di(t)}{dt}\right)</mrow>
+							<mrow>\amp+ L_1\frac{di(t)}{dt} + R_1i(t)</mrow>
+							<mrow>\amp= R_3i(t) + L_2\frac{di(t)}{dt} + \frac{R_1R_3}{R_2}i(t) + \frac{L_2R_1}{R_2}\frac{di(t)}{dt} + \frac{L_1R_3}{R_2}\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + L_1\frac{di(t)}{dt} + R_1i(t)</mrow>
+							<mrow>\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left(L_2 + \frac{L_2R_1}{R_2} + \frac{L_1R_3}{R_2} + L_1\right)\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left(R_3 + \frac{R_1R_3}{R_2} + R_1\right)i(t)</mrow>
+							<mrow>\amp= \frac{d^2i(t)}{dt^2} + \left(\frac{R_2}{L_1} + \frac{R_1}{L_1} + \frac{R_3}{L_2} + \frac{R_2}{L_2}\right)\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left(\frac{R_2R_3}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_1R_2}{L_1L_2}\right)i(t)</mrow>
 						</md>
 					</p>
 
@@ -1645,7 +1596,7 @@
 		<subsection xml:id="ch7-non-homogeneous-overdamped-solution">
 			<title>The Overdamped Solution</title>
 
-			<p>The solution to a constant-input non-homogeneous overdamped circuit is described in <xref ref="ch7-eq-non-homogeneous-over" />, with the equation coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-non-homogeneous-over-A1" /> and <xref ref="ch7-eq-non-homogeneous-over-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
+			<p>The solution to a constant-input non-homogeneous overdamped circuit is described in <xref ref="ch7-eq-non-homogeneous-over" />, with coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-non-homogeneous-over-A1" /> and <xref ref="ch7-eq-non-homogeneous-over-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
 			
 			<p>
 				<md number="yes">
@@ -1685,11 +1636,13 @@
 						<mrow>A_1 \amp= v(0) - v(\infty) - A_2</mrow>
 						<mrow>v'(0^+) \amp= (v(0) - v(\infty) - A_2)s_1 + A_2s_2</mrow>
 						<mrow>\amp= v(0^+)s_1 - v(\infty)s_1 - A_2s_1 + A_2s_2</mrow>
-						<mrow>v'(0^+) - v(0^+)s_1 + v(\infty)s_2 \amp= A_2 (s_2-s_1)</mrow>
+						<mrow>A_2 (s_2-s_1) \amp= v'(0^+) - v(0^+)s_1 + v(\infty)s_2</mrow>
 						<mrow>A_2 \amp= \frac{v'(0^+) - v(0^+)s_1 + v(\infty)s_2}{s_2-s_1}</mrow>
 						<mrow>A_1 \amp= v(0) - v(\infty) - \frac{v'(0^+) - v(0^+)s_1 + v(\infty)s_2}{s_2-s_1}</mrow>
-						<mrow>A_1(s_2-s_1) \amp= v(0^+)(s_2-s_1) - v(\infty)(s_2-s_1) - v'(0^+) + s_1v(0^+) - s_1v(\infty)</mrow>
-						<mrow>\amp= v(0^+)s_2 - v(0^+)s_1 + v(0^+)s_1 - v(\infty)s_2 + v(\infty)s_1 - v(\infty)s_1 - v'(0^+)</mrow>
+						<mrow>A_1(s_2-s_1) \amp= v(0^+)(s_2-s_1) - v(\infty)(s_2-s_1) - v'(0^+)</mrow>
+						<mrow>\amp+ s_1v(0^+) - s_1v(\infty)</mrow>
+						<mrow>\amp= v(0^+)s_2 - v(0^+)s_1 + v(0^+)s_1 - v(\infty)s_2</mrow>
+						<mrow>\amp+ v(\infty)s_1 - v(\infty)s_1 - v'(0^+)</mrow>
 						<mrow>\amp= v(0^+)s_2 - v(\infty)s_2 - v'(0^+)</mrow>
 						<mrow>A_1 \amp= \frac{v(0^+)s_2 - v(\infty)s_2 - v'(0^+)}{s_2-s_1}</mrow>
 					</md>
@@ -1701,7 +1654,7 @@
 		<subsection xml:id="ch7-non-homogeneous-underdamped-solution">
 			<title>The Underdamped Solution</title>
 
-			<p>The solution to a constant-input non-homogeneous underdamped circuit is described in <xref ref="ch7-eq-non-homogeneous-under" />, with the equation coefficients <m>B_1</m> and <m>B_2</m> defined in <xref ref="ch7-eq-non-homogeneous-under-B1" /> and <xref ref="ch7-eq-non-homogeneous-under-B2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
+			<p>The solution to a constant-input non-homogeneous underdamped circuit is described in <xref ref="ch7-eq-non-homogeneous-under" />, with coefficients <m>B_1</m> and <m>B_2</m> defined in <xref ref="ch7-eq-non-homogeneous-under-B1" /> and <xref ref="ch7-eq-non-homogeneous-under-B2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
 			
 			<p>
 				<md number="yes">
@@ -1752,7 +1705,7 @@
 		<subsection xml:id="ch7-non-homogeneous-critically-damped-solution">
 			<title>The Critically Damped Solution</title>
 
-			<p>The solution to a constant-input non-homogeneous critically damped circuit is described in <xref ref="ch7-eq-non-homogeneous-critical" />, with the equation coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-non-homogeneous-critical-A1" /> and <xref ref="ch7-eq-non-homogeneous-critical-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
+			<p>The solution to a constant-input non-homogeneous critically damped circuit is described in <xref ref="ch7-eq-non-homogeneous-critical" />, with coefficients <m>A_1</m> and <m>A_2</m> defined in <xref ref="ch7-eq-non-homogeneous-critical-A1" /> and <xref ref="ch7-eq-non-homogeneous-critical-A2" />, respectively. Note that this equation is defined with voltage terms. If calculating current, all <m>v(t)</m> terms can be replaced by <m>i(t)</m> terms.</p>
 			
 			<p>
 				<md number="yes">
@@ -1806,22 +1759,21 @@
 				<title>Constant-input non-homogeneous general second-order circuit</title>
 				
 				<statement>
-					<p>Calculate <m>v(t)</m> for the circuit below. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are <m>V_S = 20~\textrm{V}</m>, <m>R_S = 10~\Omega</m>, <m>R_1 = 1~\textrm{k}\Omega</m>, <m>R_2 = 10~\Omega</m>, <m>L = 20~\textrm{mH}</m>, and <m>C = 100~\textrm{nF}</m>.</p>
+					<p>Derive an equation for <m>v(t)</m> for the circuit below. The switch is in position b for a very long time before moving to position a at a time of zero seconds. The circuit parameters are: <m>V_S = 20~\textrm{V}</m>, <m>R_S = 10~\Omega</m>, <m>R_1 = 1~\textrm{k}\Omega</m>, <m>R_2 = 10~\Omega</m>, <m>L = 20~\textrm{mH}</m>, and <m>C = 100~\textrm{nF}</m>.</p>
 
 					<figure>
 						<caption></caption>
-						<image width="100%" xml:id="ch7-const-non-homogeneous-example1-figure1">
-							<shortdescription>Circuit with six nodes consisting of voltage source Vs, resistors (Rs, R1, and R2), inductor L, capacitor C, and SPST switch. The high-potential end of Vs connects to Rs at node a. Rs connects to the SPST switch at node b. The SPST switch and L connect at node c. L, R1, and R2 connect at node d. R2 and C connect at node e. The low-potential end of Vs, R1, and C connect at node f. branch current i(t) flows through L from node c to node d. Voltage vX(t) drops over R1 from node d to node f. Voltage v(t) drops over C from node e to node f. The SPST switch is depicted as closing.</shortdescription>
+						<image width="80%" xml:id="ch7-const-non-homogeneous-example1-figure1">
+							<shortdescription>Circuit with six nodes consisting of voltage source Vs, resistors (Rs, R1, and R2), inductor L, capacitor C, and SPDT switch. The high-potential end of Vs connects to Rs at node c. Rs connects to position a of the SPDT switch at node a. The input of the SPDT switch and L connect at node d. L, R1, and R2 connect at node e. R2 and C connect at node f. The low-potential end of Vs, position b of the SPDT switch, R1, and C connect at node b. branch current i(t) flows through L from node d to node e. Voltage vX(t) drops over R1 from node e to node b. Voltage v(t) drops over C from node f to node b. The SPDT switch is depicted as moving from position b to position a.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [V, l_=$V_S$]							(0,0);
-									\draw[]	(0,2.5) to [R, l^=$R_S$]							(2.5,2.5);
-									\draw[]	(2.5,2.5) to [cute closing switch]					(5,2.5);
-									\draw[]	(5,2.5) to [L, l^=$L$, i^=$i(t)$]					(7.5,2.5);
-									\draw[]	(7.5,2.5) to [R, l_=$R_1$, *-*, v^=$v_X(t)$]		(7.5,0);
-									\draw[]	(7.5,2.5) to [R, l^=$R_2$]							(10,2.5);
-									\draw[]	(10,2.5) to [C, l_=$C$, v^=$v(t)$]					(10,0);
-									\draw[]	(0,0) to [short]									(10,0);
+									\draw[]	(2.5,2.5) node[cute spdt up arrow, rotate=180, anchor=in] (switch) {};
+									\draw[]	(switch.out 2) node[above] {a} to [R, l_=$R_S$]		++(left:2.5) to  [V, l_=$V_S$] ++(down:2.75) |- (7.5,0);
+									\draw[]	(switch.out 1) node[above left] {b} --++ (-0.5,0) to [short, -*] ++(down:2.08);
+									\draw[]	(2.5,2.5) to [L, l^=$L$, i^=$i(t)$]					(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=$R_1$, *-*, v^=$v_X(t)$]		(5,0);
+									\draw[]	(5,2.5) to [R, l^=$R_2$]							(7.5,2.5);
+									\draw[]	(7.5,2.5) to [C, l_=$C$, v^=$v(t)$]					(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1851,7 +1803,7 @@
 
 					<figure>
 						<caption></caption>
-						<image width="40%" xml:id="ch7-const-non-homogeneous-example1-figure3">
+						<image width="30%" xml:id="ch7-const-non-homogeneous-example1-figure3">
 							<shortdescription>Circuit with two resistors R1 and R2 connected in series. vX(0+) drops over resistor R1.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -1924,14 +1876,14 @@
 					<p>Perform KVL around the left-hand loop of the circuit.</p>
 					
 					<p>
-						<md number="yes" xml:id="ch7-const-non-homogeneous-example1-kvl-lhs">V_S = R_si(t) + L\frac{di(t)}{dt} + v_X(t)</md>
+						<md number="yes" xml:id="ch7-const-non-homogeneous-example1-kvl-lhs">V_S = R_Si(t) + L\frac{di(t)}{dt} + v_X(t)</md>
 					</p>
 
 					<p>Plug <xref ref="ch7-const-non-homogeneous-example1-kcl" /> into <xref ref="ch7-const-non-homogeneous-example1-kvl-lhs" /> to remove <m>i(t)</m> terms.</p>
 					
 					<p>
 						<md number="yes">
-							<mrow>V_S \amp= R_s\left(\frac{v_X(t)}{R_1} + C\frac{dv(t)}{dt}\right) + L\frac{d}{dt}\left(\frac{v_X(t)}{R_1} + C\frac{dv(t)}{dt}\right) + v_X(t)</mrow>
+							<mrow>V_S \amp= R_S\left(\frac{v_X(t)}{R_1} + C\frac{dv(t)}{dt}\right) + L\frac{d}{dt}\left(\frac{v_X(t)}{R_1} + C\frac{dv(t)}{dt}\right) + v_X(t)</mrow>
 							<mrow xml:id="ch7-const-non-homogeneous-example1-almost">\amp= \frac{R_S}{R_1}v_X(t) + R_SC\frac{dv(t)}{dt} + \frac{L}{R_1}\frac{dv_X(t)}{dt} + LC\frac{d^2v(t)}{dt^2} + v_X(t)</mrow>
 						</md>
 					</p>
@@ -1946,10 +1898,15 @@
 					
 					<p>
 						<md>
-							<mrow>V_S \amp= \frac{R_S}{R_1}\left(R_2C\frac{dv(t)}{dt} + v(t)\right) + R_SC\frac{dv(t)}{dt} + \frac{L}{R_1}\frac{d}{dt}\left(R_2C\frac{dv(t)}{dt} + v(t)\right) + LC\frac{d^2v(t)}{dt^2} + R_2C\frac{dv(t)}{dt} + v(t)</mrow>
-							<mrow>\amp= \frac{R_SR_2C}{R_1}\frac{dv(t)}{dt} + \frac{R_S}{R_1}v(t) + R_SC\frac{dv(t)}{dt} + \frac{LR_2C}{R_1}\frac{d^2v(t)}{dt^2} + \frac{L}{R_1}\frac{dv(t)}{dt} + LC\frac{d^2v(t)}{dt^2} + R_2C\frac{dv(t)}{dt} + v(t)</mrow>
-							<mrow>\amp= \left(\frac{LC(R_1+R_2)}{R_1}\right)\frac{d^2v(t)}{dt^2} + \left(\frac{R_SR_2C}{R_1}+R_SC + \frac{L}{R_1} + R_2C\right)\frac{dv(t)}{dt} + \left(1 + \frac{R_S}{R_1}\right)v(t)</mrow>
-							<mrow>\frac{V_SR_1}{LC(R_1+R_2)} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{R_SR_2+R_SR_1+R_1R_2}{L(R_1+R_2)} + \frac{1}{C(R_1+R)2}\right)\frac{dv(t)}{dt} + \left(\frac{R_1+R_S}{LC(R_1+R_2)}\right)v(t)</mrow>
+							<mrow>V_S \amp= \frac{R_S}{R_1}\left(R_2C\frac{dv(t)}{dt} + v(t)\right) + R_SC\frac{dv(t)}{dt} </mrow>
+							<mrow>\amp+ \frac{L}{R_1}\frac{d}{dt}\left(R_2C\frac{dv(t)}{dt} + v(t)\right) + LC\frac{d^2v(t)}{dt^2} + R_2C\frac{dv(t)}{dt} + v(t)</mrow>
+							<mrow>\amp= \frac{R_SR_2C}{R_1}\frac{dv(t)}{dt} + \frac{R_S}{R_1}v(t) + R_SC\frac{dv(t)}{dt} + \frac{LR_2C}{R_1}\frac{d^2v(t)}{dt^2}</mrow>
+							<mrow>\amp + \frac{L}{R_1}\frac{dv(t)}{dt} + LC\frac{d^2v(t)}{dt^2} + R_2C\frac{dv(t)}{dt} + v(t)</mrow>
+							<mrow>\amp= \left(\frac{LC(R_1+R_2)}{R_1}\right)\frac{d^2v(t)}{dt^2}</mrow>
+							<mrow>\amp + \left(\frac{R_SR_2C}{R_1}+R_SC + \frac{L}{R_1} + R_2C\right)\frac{dv(t)}{dt} + \left(1 + \frac{R_S}{R_1}\right)v(t)</mrow>
+							<mrow>\frac{V_SR_1}{LC(R_1+R_2)} \amp= \frac{d^2v(t)}{dt^2}</mrow>
+							<mrow>\amp+ \left(\frac{R_SR_2+R_SR_1+R_1R_2}{L(R_1+R_2)} + \frac{1}{C(R_1+R)2}\right)\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ \left(\frac{R_1+R_S}{LC(R_1+R_2)}\right)v(t)</mrow>
 						</md>
 					</p>
 
@@ -2123,18 +2080,18 @@
 				<title>Polynomial input non-homogeneous second-order circuit (symbolic)</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> for the circuit below.</p>
+					<p>Derive an equation for <m>i(t)</m> for the circuit below.</p>
 					
 					<figure>
 						<caption></caption>
 						<image width="80%" xml:id="ch7-varinput-symbolic-example1-figure1">
-							<shortdescription>Circuit with current source (Is*t*u(t)), resistor R, capacitor C, and inductor L all connected in parallel between nodes a and b. The current source flows out of node b into node a. Branch current i(t) flows through L from node a to node b.</shortdescription>
+							<shortdescription>Circuit with current source (Is*t*u(t)), resistor R, capacitor C, and inductor L all connected in parallel between nodes a and b. The current source flows out of node b into node a. Branch current i(t) flows through L from node a to node b. Voltage v(t) drops from node a to node b.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,0) to [I, l^=$I_S~t~u(t)$]			(0,2.5);
 									\draw[]	(0,2.5) to [short]						(7.5,2.5);
 									\draw[]	(2.5,2.5) to [R, l_=$R$, *-*]			(2.5,0);
-									\draw[]	(5,2.5) to [C, l_=$C$, *-*]				(5,0);
+									\draw[]	(5,2.5) to [C, l_=$C$, v^=$v(t)$, *-*]	(5,0);
 									\draw[]	(7.5,2.5) to [L, l_=$L$, i^=$i(t)$]		(7.5,0);
 									\draw[]	(0,0) to [short]						(7.5,0);
 								\end{tikzpicture}
@@ -2149,13 +2106,13 @@
 					<figure>
 						<caption></caption>
 						<image width="80%" xml:id="ch7-varinput-symbolic-example1-figure2">
-							<shortdescription>Circuit with current source (Is*t), resistor R, capacitor C, and inductor L all connected in parallel between nodes a and b. The current source flows out of node b into node a. Branch current i(t) flows through L from node a to node b.</shortdescription>
+							<shortdescription>Circuit with current source (Is*t), resistor R, capacitor C, and inductor L all connected in parallel between nodes a and b. The current source flows out of node b into node a. Branch current i(t) flows through L from node a to node b. Voltage v(t) drops from node a to node b.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,0) to [I, l^=$I_S~t$]				(0,2.5);
 									\draw[]	(0,2.5) to [short]						(7.5,2.5);
 									\draw[]	(2.5,2.5) to [R, l_=$R$, *-*]			(2.5,0);
-									\draw[]	(5,2.5) to [C, l_=$C$, *-*]				(5,0);
+									\draw[]	(5,2.5) to [C, v^=$v(t)$, l_=$C$, *-*]	(5,0);
 									\draw[]	(7.5,2.5) to [L, l_=$L$, i^=$i(t)$]		(7.5,0);
 									\draw[]	(0,0) to [short]						(7.5,0);
 								\end{tikzpicture}
@@ -2181,7 +2138,7 @@
 
 					<p>Note that this is a parallel RLC circuit, so the equation looks very similar to <xref ref="ch7-homogeneous-parallelrlc-diffeq" />. In fact, the general solution is identical for all parallel RLC circuits.</p>
 
-					<p>The particular form of the solution will need to be derived. Consult <xref ref="ch7-particularsolutions-table" />. The source is a polynomial. We can be reasonably certain that 0 will not be a root of the general solution, as a root of zero implies that the circuit has a constant amplitude output, which is not realizable in a circuit containing any positive resistance. (Refer to <xref ref="ch9-funcpolezero" /> for more information on this topic.)</p>
+					<p>The particular form of the solution will need to be derived. Consult <xref ref="ch7-particularsolutions-table" />. The source is a polynomial. We can be reasonably certain that zero will not be a root of the general solution, as a root of zero implies that the resonant frequency is zero. (Refer to <xref ref="ch9-funcpolezero" /> for more information on this topic.)</p>
 					
 					<p>
 						<md>i_P(t) = K_1t + K_2</md>
@@ -2236,7 +2193,7 @@
 				<title>Sinusoidal input non-homogeneous second-order circuit (numeric)</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> for the circuit below. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are <m>v_S(t) = 5~\textrm{V}~\sin{(2\pi100t)}</m>, <m>R_S = 50~\Omega</m>, <m>R = 100~\Omega</m>, <m>C = 1~\mu\textrm{F}</m>, and <m>L = 100~\textrm{mH}</m>.</p>
+					<p>Derive an equation for <m>i(t)</m> for the circuit below. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are: <m>v_S(t) = 5~\textrm{V}~\sin{(2\pi100t)}</m>, <m>R_S = 50~\Omega</m>, <m>R = 100~\Omega</m>, <m>C = 1~\mu\textrm{F}</m>, and <m>L = 100~\textrm{mH}</m>.</p>
 					
 					<figure>
 						<caption></caption>
@@ -2256,7 +2213,7 @@
   						</image>
 					</figure>
 
-					<p>The initial current will be zero, due to the lack of connection to the source. This current will be continuous with time because it's in series with the inductor.</p>
+					<p>The initial current will be zero, due to the lack of connection to the source. This current will be continuous with time because it's measured through the inductor.</p>
 
 					<p>The voltage <m>v(t)</m> may not be continuous with time. At <m>t=0^+</m>, the voltage over the capacitor will be zero, the current through the inductor will be zero, and <m>v_S(0)</m> will be zero (this is because <m>\sin(0)=0</m>). This means that <m>v(0^+)=0</m>, as there are no sources connected to <m>R</m> at that time.</p>
 					
@@ -2322,10 +2279,13 @@
 						</md>
 					</p>
 
-					<p>The differential equation is as shown below.</p>
+					<p>The differential equation is given below.</p>
 					
 					<p>
-						<md>\frac{R}{L(R+R_S)}\left(2\pi 500\cos{(2\pi100t)}\right) = \frac{d^2i(t)}{dt^2} + \left(\frac{RR_S}{L(R+R_S)}\right)\frac{di(t)}{dt} + \left(\frac{1}{LC}\right)i(t)</md>
+						<md>
+							<mrow>\frac{R}{L(R+R_S)}\left(2\pi 500\cos{(2\pi100t)}\right) \amp= \frac{d^2i(t)}{dt^2} + \left(\frac{RR_S}{L(R+R_S)}\right)\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left(\frac{1}{LC}\right)i(t)</mrow>
+						</md>
 					</p>
 
 					<p>Plug in component values using base units.</p>
@@ -2486,8 +2446,9 @@
 					
 					<p>
 						<md>
-							<mrow>i(t) \amp=  \left[ \left(2.18\times10^{-3}\right)~\textrm{A}~\cos(2\pi100t) + \left(4.75\times10^{-5}\right)~\textrm{A}~\sin(2\pi100t) \right.</mrow>
-							<mrow>\amp+ \left.\textrm{e}^{-166.67 t} \left[\left(-2.18\times10^{-3}\right)~\textrm{A}~\cos(3157.88 t) - \left(1.25\times10^{-4}\right)~\textrm{A}~\sin(3157.88 t)\right] \right]~u(t)</mrow>
+							<mrow>i(t) \amp=  \biggl[ \left(2.18\times10^{-3}\right)~\textrm{A}~\cos(2\pi100t) + \left(4.75\times10^{-5}\right)~\textrm{A}~\sin(2\pi100t)</mrow>
+							<mrow>\amp+ \textrm{e}^{-166.67 t} \biggl[\left(-2.18\times10^{-3}\right)~\textrm{A}~\cos(3157.88 t)</mrow>
+							<mrow>\amp- \left(1.25\times10^{-4}\right)~\textrm{A}~\sin(3157.88 t)\biggr] \biggr]~u(t)</mrow>
 						</md>
 					</p>
 
@@ -2624,7 +2585,6 @@
 					<p>
 						<md>
 							<mrow>\omega_0 \amp= \frac{1}{\sqrt{(0.5~\textrm{H})(50\times10^{-6}~\textrm{F})}}</mrow>
-							<mrow>\amp= \frac{1}{0.005}</mrow>
 							<mrow>\amp= 200~\textrm{rad/s}</mrow>
 						</md>
 					</p>
@@ -2673,7 +2633,12 @@
 				</statement>
 
 				<answer>
-					<p><md>v(t) = \left[20~\textrm{V} + \textrm{e}^{-320000t}\left(6~\textrm{V}~\cos(240000)+3.83~\textrm{V}~\sin(240000t)\right)\right]~u(t) + 26~\textrm{V}~u(-t)</md></p>
+					<p>
+						<md>
+							<mrow>v(t) \amp= \left[20~\textrm{V} + \textrm{e}^{-320000t}\left(6~\textrm{V}~\cos(240000)+3.83~\textrm{V}~\sin(240000t)\right)\right]~u(t)</mrow>
+							<mrow>\amp+ 26~\textrm{V}~u(-t)</mrow>
+						</md>
+					</p>
 				</answer>
 
 				<solution>
@@ -2823,7 +2788,10 @@
 					<p>Plug these values into <xref ref="ch7-eq-non-homogeneous-under" /> to derive an equation for <m>v(t)</m>.</p>
 
 					<p>
-						<md>v(t) = \left[20~\textrm{V} + \textrm{e}^{-320000t}\left(6~\textrm{V}~\cos(240000)+3.83~\textrm{V}~\sin(240000t)\right)\right]~u(t) + 26~\textrm{V}~u(-t)</md>
+						<md>
+							<mrow>v(t) \amp= \left[20~\textrm{V} + \textrm{e}^{-320000t}\left(6~\textrm{V}~\cos(240000)+3.83~\textrm{V}~\sin(240000t)\right)\right]~u(t)</mrow>
+							<mrow>\amp+ 26~\textrm{V}~u(-t)</mrow>
+						</md>
 					</p>
 				</solution>
 			</exercise>
@@ -2851,7 +2819,7 @@
 				</statement>
 
 				<answer>
-					<p><md>v(t) = \left(\textrm{e}^{-27.8t}\left[26~\textrm{V}~\cos{127t} + 5.7~\textrm{V}~\sin{127t}\right]\right)~u(t) + 26~\textrm{V}~u(-t)</md></p>
+					<p><md>v(t) = \left(\textrm{e}^{-27.8t}\left[28~\textrm{V}~\cos{127t} + 6.14~\textrm{V}~\sin{127t}\right]\right)~u(t) + 28~\textrm{V}~u(-t)</md></p>
 				</answer>
 
 				<solution>
@@ -2899,7 +2867,6 @@
 					<p>
 						<md>
 							<mrow>\alpha \amp= \frac{10~\Omega}{2(0.18~\textrm{H})}</mrow>
-							<mrow>\amp= \frac{10~\Omega}{0.36~\textrm{H}}</mrow>
 							<mrow>\amp= 27.7778~\textrm{Np/s}</mrow>
 						</md>
 					</p>
@@ -2909,7 +2876,6 @@
 					<p>
 						<md>
 							<mrow>\omega_0 \amp= \frac{1}{\sqrt{(0.18~\textrm{H})(330 \times 10^{-6}~\textrm{F})}}</mrow>
-							<mrow>\amp= \frac{1}{0.0077}</mrow>
 							<mrow>\amp= 129.7498~\textrm{rad/s}</mrow>
 						</md>
 					</p>
@@ -2918,7 +2884,7 @@
 					
 					<p>
 						<md>
-							<mrow>\beta = \sqrt{(129.7498~\textrm{rad/s})^2 - (27.7778~\textrm{Np/s})^2}</mrow>
+							<mrow>\beta \amp= \sqrt{(129.7498~\textrm{rad/s})^2 - (27.7778~\textrm{Np/s})^2}</mrow>
 							<mrow>\amp= 126.7415~\textrm{rad/s}</mrow>
 						</md>
 					</p>
@@ -2927,16 +2893,16 @@
 					
 					<p>
 						<md>
-							<mrow>B_1 \amp= 26~\textrm{V}</mrow>
-							<mrow>B_2 \amp= \frac{0~\textrm{V/s} + (27.7778~\textrm{Np/s})(26~\textrm{V})}{126.7415~\textrm{rad/s}}</mrow>
-							<mrow>\amp= 5.6984~\textrm{V}</mrow>
+							<mrow>B_1 \amp= 28~\textrm{V}</mrow>
+							<mrow>B_2 \amp= \frac{0~\textrm{V/s} + (27.7778~\textrm{Np/s})(28~\textrm{V})}{126.7415~\textrm{rad/s}}</mrow>
+							<mrow>\amp= 6.1367~\textrm{V}</mrow>
 						</md>
 					</p>
 
 					<p>Plug these values into <xref ref="ch7-eq-homogeneous-under" /> to derive an equation for <m>v(t)</m>.</p>
 					
 					<p>
-						<md>v(t) = \left(\textrm{e}^{-27.8t}\left[26~\textrm{V}~\cos{127t} + 5.7~\textrm{V}~\sin{127t}\right]\right)~u(t) + 26~\textrm{V}~u(-t)</md>
+						<md>v(t) = \left(\textrm{e}^{-27.8t}\left[26~\textrm{V}~\cos{127t} + 6.14~\textrm{V}~\sin{127t}\right]\right)~u(t) + 26~\textrm{V}~u(-t)</md>
 					</p>
 
 
@@ -3043,7 +3009,6 @@
 					<p>
 						<md>
 							<mrow>\alpha \amp= \frac{1}{2(150~\Omega)(100\times10^{-9}~\textrm{F})}</mrow>
-							<mrow>\amp= \frac{1}{3\times10^{-5}}</mrow>
 							<mrow>\amp= 33333.33~\textrm{Np/s}</mrow>
 						</md>
 					</p>
@@ -3053,7 +3018,6 @@
 					<p>
 						<md>
 							<mrow>\omega_0 \amp= \frac{1}{\sqrt{(0.02~\textrm{H})(100\times10^{-9}~\textrm{F})}}</mrow>
-							<mrow>\amp= \frac{1}{4.47\times10^{-5}}</mrow>
 							<mrow>\amp= 22360.68~\textrm{rad/s}</mrow>
 						</md>
 					</p>
@@ -3063,10 +3027,8 @@
 					<p>
 						<md>
 							<mrow>s_1 \amp= -33333.33 + \sqrt{33333.33^2 - 22360.68^2}</mrow>
-							<mrow>\amp= -33333.33 + 24720.66</mrow>
 							<mrow>\amp= -8612.67</mrow>
 							<mrow>s_2 \amp= -33333.33 - \sqrt{33333.33^2 - 22360.68^2}</mrow>
-							<mrow>\amp= -33333.33 - 24720.66</mrow>
 							<mrow>\amp= -58056.99</mrow>
 						</md>
 					</p>
@@ -3344,7 +3306,6 @@
 					<p>
 						<md>
 							<mrow>\alpha \amp= \frac{1}{2(35)(0.005)} + \frac{10}{2(0.1)}</mrow>
-							<mrow>\amp= 2.86 + 50</mrow>
 							<mrow>\amp= 52.86~\textrm{Np/s}</mrow>
 						</md>
 					</p>
@@ -3354,7 +3315,6 @@
 					<p>
 						<md>
 							<mrow>\omega_0 \amp= \sqrt{\frac{1}{(0.1)(0.005)}+\frac{10}{(35)(0.1)(0.005)}}</mrow>
-							<mrow>\amp= \sqrt{2000+571.43}</mrow>
 							<mrow>\amp= 50.71~\textrm{rad/s}</mrow>
 						</md>
 					</p>
@@ -3364,10 +3324,8 @@
 					<p>
 						<md>
 							<mrow>s_1 \amp= -52.86 + \sqrt{52.86^2 - 50.71^2}</mrow>
-							<mrow>\amp= -52.86 + 14.91</mrow>
 							<mrow>\amp= -37.94</mrow>
 							<mrow>s_2 \amp= -52.86 - \sqrt{52.86^2 - 50.71^2}</mrow>
-							<mrow>\amp= -52.86 - 14.91</mrow>
 							<mrow>\amp= -67.77</mrow>
 						</md>
 					</p>
@@ -3377,7 +3335,6 @@
 					<p>
 						<md>
 							<mrow>i'(0) \amp= \frac{0.224~\textrm{V}- (0.0224~\textrm{A})(10~\Omega)}{0.1~\textrm{H}}</mrow>
-							<mrow>\amp= \frac{0.224~\textrm{V} - 0.224~\textrm{V}}{0.1~\textrm{H}}</mrow>
 							<mrow>\amp= 0~\textrm{A}</mrow>
 						</md>
 					</p>
@@ -3405,7 +3362,7 @@
 
 			<exercise xml:id="ch7-homogeneous-ex2">
 				<statement>
-					<p>Derive an equation for <m>v(t)</m> given the circuit shown in <xref ref="homogeneous-second-example2-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are <m>L = 5~\textrm{mH}</m>, <m>R_1 = 60~\Omega</m>, <m>R_2 = 40~\Omega</m>, and <m>C = 2~\mu\textrm{F}</m>.</p>
+					<p>Derive an equation for <m>v(t)</m> given the circuit shown in <xref ref="homogeneous-second-example2-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are: <m>L = 5~\textrm{mH}</m>, <m>R_1 = 60~\Omega</m>, <m>R_2 = 40~\Omega</m>, and <m>C = 2~\mu\textrm{F}</m>.</p>
 
 					<figure xml:id="homogeneous-second-example2-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch7-homogeneous-ex2" />.</caption>
@@ -3429,7 +3386,10 @@
 
 				<answer>
 					<p>
-						<md>v(t) = \textrm{e}^{-4900t}\left[1.88~\textrm{V}~\cos(6000 t)+1.53~\textrm{V}~\sin(6000t)\right]~u(t) + 1.88~\textrm{V}~u(-t)</md>
+						<md>
+							<mrow>v(t) \amp= \textrm{e}^{-4900t}\left[1.88~\textrm{V}~\cos(6000 t)+1.53~\textrm{V}~\sin(6000t)\right]~u(t)</mrow>
+							<mrow>\amp+ 1.88~\textrm{V}~u(-t)</mrow>
+						</md>
 					</p>
 				</answer>
 
@@ -3462,7 +3422,7 @@
 						</md>
 					</p>
 
-					<p>Use the voltage divider rule to calculate <m>v(0)</m>. This value is also equal to <m>v_X(0)</m>.</p>
+					<p>Use the voltage divider rule to calculate <m>v(0)</m>. This value is also equal to <m>v_X(0^-)</m>.</p>
 
 					<p>
 						<md>
@@ -3529,16 +3489,11 @@
 							<mrow>\amp= \frac{R_2C}{L}\frac{dv(t)}{dt} + \frac{1}{L}v(t) + \frac{R_2C}{R_1}\frac{d^2v(t)}{dt^2} + \frac{1}{R_1}\frac{dv(t)}{dt} + C\frac{d^2v(t)}{dt^2}</mrow>
 							<mrow>\amp= \left[ \frac{R_2C}{R_1} + C\right]\frac{d^2v(t)}{dt^2} + \left[\frac{R_2C}{L}+\frac{1}{R_1}\right]\frac{dv(t)}{dt} + \frac{1}{L}v(t)</mrow>
 							<mrow>\amp= \frac{d^2v(t)}{dt^2} + \left[\frac{R_1R_2C+L}{LC(R_1+R_2)}\right]\frac{dv(t)}{dt} + \left[\frac{R_1}{LC(R_1+R_2)}\right]v(t)</mrow>
+							<mrow>\amp= \frac{d^2}{dt^2}v(t) + 9800\frac{d}{dt}v(t) + 60000000v(t)</mrow>
 						</md>
 					</p>
 
-					<p>Plug in component values.</p>
-					
-					<p>
-						<md>0 = \frac{d^2}{dt^2}v(t) + 9800\frac{d}{dt}v(t) + 60000000v(t)</md>
-					</p>
-
-					<p>Calculate the damping parameter and resonant frequency.</p>
+					<p>Use <xref ref="ch7-eq-damping-parameter" /> and <xref ref="ch7-eq-resonant-frequency" /> to calculate the damping parameter and resonant frequency.</p>
 					
 					<p>
 						<md>
@@ -3553,16 +3508,6 @@
 						<md>
 							<mrow>\beta \amp= \sqrt{7745.97^2-4900^2}</mrow>
 							<mrow>\amp= 5999.17~\textrm{rad/s}</mrow>
-						</md>
-					</p>
-
-					<p><xref ref="ch7-eq-homogeneous-example2-kcl" /> can be used to calculate the initial first derivative of the voltage.</p>
-
-					<p>
-						<md>
-							<mrow>0 \amp= i_L(0^+) + \frac{1}{R_1}v_X(0^+) + Cv'(0^+)</mrow>
-							<mrow>Cv'(0^+) \amp= -i_L(0^+) - \frac{1}{R_1}v_X(0^+)</mrow>
-							<mrow>v'(0^+) \amp= \frac{-i_L(0^+) - \frac{1}{R_1}v_X(0^+)}{C}</mrow>
 						</md>
 					</p>
 
@@ -3589,19 +3534,19 @@
 
 					<p>
 						<md>
-							<mrow>0 \amp= -31.25~\textrm{mA} + \frac{v_X(0^+)}{0.06~\textrm{k}\Omega} + \frac{v_X(0^+) - 1.875~\textrm{V}}{0.04~\textrm{k}\Omega}</mrow>
-							<mrow>\amp= -31.25~\textrm{mA} + 16.67~\textrm{k}\Omega^{-1}v_X(0^+) + 25v_X(0^+) - 46.875~\textrm{mA}</mrow>
-							<mrow>78.125~\textrm{mA} \amp= 41.67~\textrm{k}\Omega^{-1}v_X(0^+)</mrow>
+							<mrow>31.25~\textrm{mA} \amp= \frac{v_X(0^+)}{R_1} + \frac{v_X(0^+) - 1.875~\textrm{V}}{R_2}</mrow>
 							<mrow>v_X(0^+) \amp= 1.875~\textrm{V}</mrow>
 						</md>
 					</p>
 
-					<p>Now we can calculate the initial condition of the first derivative of the voltage.</p>
+					<p>Use <xref ref="ch7-eq-homogeneous-example2-kcl" /> to calculate the initial first derivative of the voltage.</p>
 
 					<p>
 						<md>
+							<mrow>0 \amp= i_L(0^+) + \frac{1}{R_1}v_X(0^+) + Cv'(0^+)</mrow>
+							<mrow>Cv'(0^+) \amp= -i_L(0^+) - \frac{1}{R_1}v_X(0^+)</mrow>
+							<mrow>v'(0^+) \amp= \frac{-i_L(0^+) - \frac{1}{R_1}v_X(0^+)}{C}</mrow>
 							<mrow>\amp= \frac{0.03125~\textrm{A} - \frac{1}{60~\Omega}1.875~\textrm{V}}{2 \times 10^{-6}~\textrm{F}}</mrow>
-							<mrow>\amp= \frac{0.03125~\textrm{A} - 0.03125~\textrm{A}}{2 \times 10^{-6}~\textrm{F}}</mrow>
 							<mrow>\amp= 0~\textrm{V/s}</mrow>
 						</md>
 					</p>
@@ -3619,7 +3564,10 @@
 					<p>Plug into <xref ref="ch7-eq-homogeneous-under" /> to derive the equation for <m>v(t)</m>.</p>
 					
 					<p>
-						<md>v(t) = \textrm{e}^{-4900t}\left[1.88~\textrm{V}~\cos(6000 t)+1.53~\textrm{V}~\sin(6000t)\right]~u(t) + 1.88~\textrm{V}~u(-t)</md>
+						<md>
+							<mrow>v(t) \amp= \textrm{e}^{-4900t}\left[1.88~\textrm{V}~\cos(6000 t)+1.53~\textrm{V}~\sin(6000t)\right]~u(t)</mrow>
+							<mrow>\amp+ 1.88~\textrm{V}~u(-t)</mrow>
+						</md>
 					</p>
 				</solution>
 			</exercise>
@@ -3652,7 +3600,11 @@
 
 				<answer>
 					<p>
-						<md>0 = \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt} + \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)</md>
+						<md>
+							<mrow>0 \amp= \frac{d^2i(t)}{dt^2}</mrow>
+							<mrow>\amp+ \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)</mrow>
+						</md>
 					</p>
 				</answer>
 
@@ -3713,10 +3665,14 @@
 
 					<p>
 						<md>
-							<mrow>0 \amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1}{R_2}\frac{d}{dt}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right] + R_1i(t) + \frac{R_1}{R_2}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right]</mrow><mrow>
-							\amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \frac{R_3L_1}{R_2}\frac{di(t)}{dt} + R_1i(t) + \frac{R_1L_2}{R_2}\frac{di(t)}{dt} + \frac{R_3R_1}{R_2}i(t)</mrow>
-							<mrow>\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left[L_1 + L_2 + \frac{L_1R_3}{R_2} + \frac{R_1L_2}{R_2}\right]\frac{di(t)}{dt} + \left[R_1 + \frac{R_1R_3}{R_2} + R_3\right]i(t)</mrow>
-							<mrow>\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt} + \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)</mrow>
+							<mrow>0 \amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1}{R_2}\frac{d}{dt}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right]</mrow>
+							<mrow>\amp+ R_1i(t) + \frac{R_1}{R_2}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right]</mrow><mrow>
+							\amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \frac{R_3L_1}{R_2}\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ R_1i(t) + \frac{R_1L_2}{R_2}\frac{di(t)}{dt} + \frac{R_3R_1}{R_2}i(t)</mrow>
+							<mrow>\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left[L_1 + L_2 + \frac{L_1R_3}{R_2} + \frac{R_1L_2}{R_2}\right]\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left[R_1 + \frac{R_1R_3}{R_2} + R_3\right]i(t)</mrow>
+							<mrow>\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)</mrow>
 						</md>
 					</p>
 				</solution>
@@ -3724,7 +3680,7 @@
 
 			<exercise xml:id="ch7-homogeneous-ex4">
 				<statement>
-					<p>Derive an equation for <m>i(t)</m> given the circuit shown in <xref ref="homogeneous-second-example4-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are <m>R_D = 20~\Omega</m>, <m>R = 10~\Omega</m>, <m>C = 400~\mu\textrm{F}</m>, and <m>L = 100~\textrm{mH}</m>.</p>
+					<p>Derive an equation for <m>i(t)</m> given the circuit shown in <xref ref="homogeneous-second-example4-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are: <m>R_D = 20~\Omega</m>, <m>R = 10~\Omega</m>, <m>C = 400~\mu\textrm{F}</m>, and <m>L = 100~\textrm{mH}</m>.</p>
 
 					<figure xml:id="homogeneous-second-example4-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch7-homogeneous-ex4" />.</caption>
@@ -3747,7 +3703,10 @@
 
 				<answer>
 					<p>
-						<md>i(t) = \textrm{e}^{-112.5 t} \left[ 66.7~\textrm{mA}~\cos{158 t} + 47.6~\textrm{mA}~\sin{158 t} \right]u(t) + 66.7~\textrm{mA}~u(-t)</md>
+						<md>
+							<mrow>i(t) \amp= \textrm{e}^{-113 t} \left[ 66.7~\textrm{mA}~\cos{158 t} + 47.6~\textrm{mA}~\sin{158 t} \right]u(t)</mrow>
+							<mrow>\amp+ 66.7~\textrm{mA}~u(-t)</mrow>
+						</md>
 					</p>
 				</answer>
 
@@ -3773,7 +3732,6 @@
 					<p>
 						<md>
 							<mrow>i(0) \amp= \frac{4~\textrm{V}}{50~\Omega + 10~\Omega}</mrow>
-							<mrow>\amp= \frac{4~\textrm{V}}{60~\Omega}</mrow>
 							<mrow>\amp= 0.0667~\textrm{A}</mrow>
 							<mrow>\amp= 66.6667~\textrm{mA}</mrow>
 						</md>
@@ -3825,16 +3783,11 @@
 							<mrow>\amp= \frac{L}{R_D}\frac{di(t)}{dt} + \frac{R}{R_D}i(t) + LC\frac{d^2i(t)}{dt^2} + RC\frac{di(t)}{dt} + i(t)</mrow>
 							<mrow>\amp= LC\frac{d^2i(t)}{dt^2} + \left(\frac{L}{R_D} + RC\right)\frac{di(t)}{dt} + \left(\frac{R}{R_D}+1\right)i(t)</mrow>
 							<mrow>\amp= \frac{d^2i(t)}{dt^2} + \left(\frac{1}{R_DC}+\frac{R}{L}\right)\frac{di(t)}{dt} + \left(\frac{R}{LCR_D}+\frac{1}{LC}\right)i(t)</mrow>
+							<mrow>\amp= \frac{d^2i(t)}{dt^2} + 225\frac{di(t)}{dt} + 37500</mrow>
 						</md>
 					</p>
 
-					<p>Plug in parameter values using base units.</p>
-					
-					<p>
-						<md>0 = \frac{d^2i(t)}{dt^2} + 225\frac{di(t)}{dt} + 37500</md>
-					</p>
-
-					<p>Calculate the values of the damping parameter and resonant frequency.</p>
+					<p>Use <xref ref="ch7-eq-damping-parameter" /> and <xref ref="ch7-eq-resonant-frequency" /> to calculate the damping parameter and resonant frequency.</p>
 					
 					<p>
 						<md>
@@ -3880,7 +3833,10 @@
 					<p>Plug the values into <xref ref="ch7-eq-homogeneous-under" /> to obtain an equation for <m>i(t)</m>.</p>
 					
 					<p>
-						<md>i(t) = \textrm{e}^{-112.5 t} \left[ 66.7~\textrm{mA}~\cos{158 t} + 47.6~\textrm{mA}~\sin{158 t} \right]u(t) + 66.7~\textrm{mA}~u(-t)</md>
+						<md>
+							<mrow>i(t) \amp= \textrm{e}^{-113 t} \left[ 66.7~\textrm{mA}~\cos{158 t} + 47.6~\textrm{mA}~\sin{158 t} \right]u(t)</mrow>
+							<mrow>\amp+ 66.7~\textrm{mA}~u(-t)</mrow>
+						</md>
 					</p>
 
 				</solution>
@@ -3888,7 +3844,7 @@
 
 			<exercise xml:id="ch7-homogeneous-ex5">
 				<statement>
-					<p>Derive an equation for <m>i(t)</m> given the circuit shown in <xref ref="homogeneous-second-example5-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are <m>R_D = 180~\Omega</m>, <m>R = 380~\Omega</m>, <m>C = 12~\mu\textrm{F}</m>, and <m>L = 22~\textrm{mH}</m>.</p>
+					<p>Derive an equation for <m>i(t)</m> given the circuit shown in <xref ref="homogeneous-second-example5-diagram" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are: <m>R_D = 180~\Omega</m>, <m>R = 380~\Omega</m>, <m>C = 12~\mu\textrm{F}</m>, and <m>L = 22~\textrm{mH}</m>.</p>
 
 					<figure xml:id="homogeneous-second-example5-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch7-homogeneous-ex5" />.</caption>
@@ -4058,16 +4014,11 @@
 							<mrow>\amp= L\frac{d^2i(t)}{dt^2} + \frac{LR}{R_D}\frac{d^2i(t)}{dt^2} + R\frac{di(t)}{dt} + \frac{L}{CR_D}\frac{di(t)}{dt} + \frac{1}{C}i(t)</mrow>
 							<mrow>\amp= \left[L+\frac{LR}{R_D}\right]\frac{d^2i(t)}{dt^2} + \left[R+\frac{L}{CR_D}\right]\frac{di(t)}{dt} + \left[\frac{1}{C}\right]i(t)</mrow>
 							<mrow>\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{RR_D}{L(R_D+R)} + \frac{1}{C(R_D+R)}\right]\frac{di(t)}{dt} + \left[\frac{R_D}{LC(R_D+R)}\right]i(t)</mrow>
+							<mrow>\amp= \frac{d^2i(t)}{dt^2} + 5744\frac{di(t)}{dt} +1196200i(t)</mrow>
 						</md>
 					</p>
 
-					<p>Plug in component values, using base units.</p>
-					
-					<p>
-						<md>0 = \frac{d^2i(t)}{dt^2} + 5744\frac{di(t)}{dt} +1196200i(t)</md>
-					</p>
-
-					<p>Calculate the damping parameter and resonant frequency.</p>
+					<p>Use <xref ref="ch7-eq-damping-parameter" /> and <xref ref="ch7-eq-resonant-frequency" /> to calculate the damping parameter and resonant frequency.</p>
 					
 					<p>
 						<md>
@@ -4091,8 +4042,7 @@
 					
 					<p>
 						<md>
-							<mrow>i'(0^+) \amp= \frac{v(0^+)}{L}</mrow>
-							<mrow>\amp= \frac{-0.3695~\textrm{V}}{0.022~\textrm{H}}</mrow>
+							<mrow>i'(0^+) \frac{-0.3695~\textrm{V}}{0.022~\textrm{H}}</mrow>
 							<mrow>\amp= -16.79~\textrm{A/s}</mrow>
 						</md>
 					</p>
@@ -4262,17 +4212,16 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{I_SR_S}{R_S+R_1} \amp= \frac{1}{R_S+R_1}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_1\frac{d}{dt}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_2\frac{dv(t)}{dt}</mrow>
-							<mrow>\amp= \frac{R_2C_2}{R_S+R_1}\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t) + C_1C_2R_2\frac{d^2v(t)}{dt^2} + C_1\frac{dv(t)}{dt} + C_2\frac{dv(t)}{dt}</mrow>
-							<mrow>\amp= C_1C_2R_2\frac{d^2v(t)}{dt^2} + \left(\frac{R_2C_2}{R_S+R_1} + C_1 + C_2\right)\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t)</mrow>
-							<mrow>\frac{I_SR_S}{C_1C_2(R_S+R_1)R_2} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{(R_S+R_1)C_1} + \frac{1}{R_2C_2} + \frac{1}{R_2C_1}\right)\frac{dv(t)}{dt} + \frac{1}{C_1C_2(R_S+R_1)R_2}v(t)</mrow>
+							<mrow>\frac{I_SR_S}{R_S+R_1} \amp= \frac{1}{R_S+R_1}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right)</mrow>
+							<mrow>\amp+ C_1\frac{d}{dt}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_2\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp= \frac{R_2C_2}{R_S+R_1}\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t) + C_1C_2R_2\frac{d^2v(t)}{dt^2}</mrow>
+							<mrow>\amp+ C_1\frac{dv(t)}{dt} + C_2\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp= C_1C_2R_2\frac{d^2v(t)}{dt^2} + \left(\frac{R_2C_2}{R_S+R_1} + C_1 + C_2\right)\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ \frac{1}{R_S+R_1}v(t)</mrow>
+							<mrow>\frac{I_SR_S}{C_1C_2(R_S+R_1)R_2} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{(R_S+R_1)C_1} + \frac{1}{R_2C_2} + \frac{1}{R_2C_1}\right)\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ \frac{1}{C_1C_2(R_S+R_1)R_2}v(t)</mrow>
+							<mrow>41.667 \amp= \frac{d^2v(t)}{dt^2} + 7.9167\frac{dv(t)}{dt} + 2.0833</mrow>
 						</md>
-					</p>
-
-					<p>Plug in component values, using base units.</p>
-					
-					<p>
-						<md>41.667 = \frac{d^2v(t)}{dt^2} + 7.9167\frac{dv(t)}{dt} + 2.0833</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
@@ -4356,8 +4305,8 @@
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(2.5,2.5) to [R, l_=$R_{S1}$] ++(left:2.5) to [V, l_=$V_{S1}$]	++(down:2.5) |- (5,0);
-									\draw[]	(2.5,2.5) to [R, l^=$R$, v_=$v_X(0)$]						++(right:2.5);
-									\draw[]	(5,2.5) to [short, i^=$i(0)$]		++(down:2.5);
+									\draw[]	(2.5,2.5) to [R, l^=$R$, v_=$v_X(0)$]	++(right:2.5);
+									\draw[]	(5,2.5) to [short, i^=$i(0)$]			++(down:2.5);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -4389,8 +4338,8 @@
 							<shortdescription>Circuit with one mesh and three nodes consisting of a voltage source Vs2 and resistors Rs2 and R. The low-potential end of Vs2 connects to Rs2 at node a. Rs2 and R connect at node b. The high-potential end of Vs2 connects to R at node c. Branch current i(infinity) flows through R from node b to node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,0) to [V, l^=$V_{S2}$]	++(up:2.5) to [R, l^=$R_{S2}$]	++(right:2.5);;
-									\draw[]	(2.5,2.5) to [R, l^=$R$]						++(right:2.5);
+									\draw[]	(0,0) to [V, l^=$V_{S2}$]	++(up:2.5) to [R, l^=$R_{S2}$]	++(right:2.5);
+									\draw[]	(2.5,2.5) to [R, l^=$R$]				++(right:2.5);
 									\draw[]	(5,2.5) to [short, i^=$i(\infty)$]		++(down:2.5) --++ (left:5);
 								\end{tikzpicture}
 							</latex-image>
@@ -4442,27 +4391,21 @@
 					
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{1}{R}\left(-V_{S2} - R_{S2}i(t) - L\frac{di(t)}{dt}\right) + C\frac{d}{dt}\left(-V_{S2} - R_{S2}i(t) - L\frac{di(t)}{dt}\right)</mrow>
+							<mrow>i(t) \amp= \frac{1}{R}\left(-V_{S2} - R_{S2}i(t) - L\frac{di(t)}{dt}\right)</mrow>
+							<mrow>\amp+ C\frac{d}{dt}\left(-V_{S2} - R_{S2}i(t) - L\frac{di(t)}{dt}\right)</mrow>
 							<mrow>\amp= \frac{-V_{S2}}{R} - \frac{R_{S2}}{R}i(t) - \frac{L}{R}\frac{di(t)}{dt} - R_{S2}C\frac{di(t)}{dt} - LC\frac{d^2i(t)}{dt^2}</mrow>
 							<mrow>\frac{-V_{S2}}{R} \amp= LC\frac{d^2i(t)}{dt^2} + \left(\frac{L}{R} + R_{S2}C\right)\frac{di(t)}{dt} + \left(1 + \frac{R_{S2}}{R}\right)i(t)</mrow>
 							<mrow>\frac{-V_{S2}}{RLC} \amp= \frac{d^2i(t)}{dt^2} + \left(\frac{1}{RC} + \frac{R_{S2}}{L}\right)\frac{di(t)}{dt} + \left(\frac{1}{LC} + \frac{R_{S2}}{RLC}\right)i(t)</mrow>
+							<mrow>-20 \amp= \frac{d^2i(t)}{dt^2} + 6\frac{di(t)}{dt} + 9</mrow>
 						</md>
-					</p>
-
-					<p>Plug in numerical values using base units.</p>
-					
-					<p>
-						<md>-20 = \frac{d^2i(t)}{dt^2} + 6\frac{di(t)}{dt} + 9</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
 					
 					<p>
 						<md>
-							<mrow>\alpha \amp= \frac{6}{2}</mrow>
-							<mrow>\amp= 3~\textrm{Np/s}</mrow>
-							<mrow>\omega_0 \amp= \sqrt{9}</mrow>
-							<mrow>\amp= 3~\textrm{rad/s}</mrow>
+							<mrow>\alpha \amp= 3~\textrm{Np/s}</mrow>
+							<mrow>\omega_0 \amp= 3~\textrm{rad/s}</mrow>
 						</md>
 					</p>
 
@@ -4471,7 +4414,6 @@
 					<p>
 						<md>
 							<mrow>i'(0^+) \amp= \frac{-v_X(0^+) - V_{S2} - R_{S2}i(0^+)}{L}</mrow>
-							<mrow>\amp= \frac{-1 - 10 - (4)(2)}{1}</mrow>
 							<mrow>\amp= -19~\textrm{A/s}</mrow>
 						</md>
 					</p>
@@ -4563,7 +4505,7 @@
 
 					<figure>
 						<caption></caption>
-						<image width="60%" xml:id="ch7-non-homogeneous-example3-figure2">
+						<image width="50%" xml:id="ch7-non-homogeneous-example3-figure2">
 							<shortdescription>Circuit with one mesh and three nodes consisting of resistors R1 and R2 and voltage source Vs. The low-potential end of Vs connects to R1 at node a. R1 and R2 connect at node b. R2 and the high-potential end of Vs connect at node c. Branch current i(infinity) flows through R1 from node a to node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -4610,7 +4552,7 @@
 					<p>
 						<md number="yes">
 							<mrow>\frac{V_S - v_X(t)}{R_2} \amp= C\frac{d}{dt}v_X(t) + i(t)</mrow>
-							<mrow xml:id="ch7-nonhomogeneous-ex3-kcl">\frac{V_S}{R_2} \amp= \left[\frac{1}{R_2} + C\frac{d}{dt}\right] %v_X(t) + i(t)</mrow>
+							<mrow xml:id="ch7-nonhomogeneous-ex3-kcl">\frac{V_S}{R_2} \amp= \left[\frac{1}{R_2} + C\frac{d}{dt}\right] v_X(t) + i(t)</mrow>
 						</md>
 					</p>
 
@@ -4628,13 +4570,8 @@
 							<mrow>\amp= \frac{R_1}{R_2}i(t) + \frac{L}{R_2}\frac{d}{dt}i(t) + R_1C\frac{d}{dt}i(t) + LC\frac{d^2}{dt^2}i(t) + i(t)</mrow>
 							<mrow>\amp= LC\frac{d^2}{dt^2}i(t) + \left[R_1C + \frac{L}{R_2}\right]\frac{d}{dt}i(t) + \left[\frac{R_1}{R_2} + 1\right]i(t)</mrow>
 							<mrow>\frac{V_S}{R_2LC} \amp= \frac{d^2}{dt^2}i(t) + \left[\frac{R_1}{L} + \frac{1}{R_2C}\right]\frac{d}{dt}i(t) + \left[\frac{R_1}{R_2LC} + \frac{1}{LC}\right]i(t)</mrow>
+							<mrow>750000 \amp= \frac{d^2}{dt^2}i(t) + 2700\frac{d}{dt}i(t) + 1500000i(t)</mrow>
 						</md>
-					</p>
-
-					<p>Plug in component values, using base units.</p>
-					
-					<p>
-						<md>750000 = \frac{d^2}{dt^2}i(t) + 2700\frac{d}{dt}i(t) + 1500000i(t)</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
@@ -4651,10 +4588,8 @@
 					<p>
 						<md>
 							<mrow>s_1 \amp= -1350 + \sqrt{1350^2 - 1224.74^2}</mrow>
-							<mrow>\amp= -1350 + 567.89</mrow>
 							<mrow>\amp= -782.10</mrow>
 							<mrow>s_2 \amp= -1350 - \sqrt{1350^2 - 1224.74^2}</mrow>
-							<mrow>\amp= -1350 - 567.89</mrow>
 							<mrow>\amp= -1917.90</mrow>
 						</md>
 					</p>
@@ -4664,7 +4599,6 @@
 					<p>
 						<md>
 							<mrow>i'(0^+) \amp= \frac{v_X(0^+) - R_1i(0^+)}{L}</mrow>
-							<mrow>\amp= \frac{0 - (10)(1.2)}{0.5}</mrow>
 							<mrow>\amp= -240~\textrm{A/s}</mrow>
 						</md>
 					</p>
@@ -4692,7 +4626,7 @@
 
 			<exercise xml:id="ch7-non-homogeneous-ex4">
 				<statement>
-					<p>Derive an equation for <m>v(t)</m> for the circuit shown in <xref ref="nonhomogeneous-example4-diagram" />. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are <m>I_S = 660~\textrm{mA}</m>, <m>R_S = 33~\Omega</m>, <m>R = 15~\Omega</m>, <m>L = 1.8~\textrm{mH}</m>, and <m>C = 560~\mu\textrm{F}</m>.</p>
+					<p>Derive an equation for <m>v(t)</m> for the circuit shown in <xref ref="nonhomogeneous-example4-diagram" />. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are: <m>I_S = 660~\textrm{mA}</m>, <m>R_S = 33~\Omega</m>, <m>R = 15~\Omega</m>, <m>L = 1.8~\textrm{mH}</m>, and <m>C = 560~\mu\textrm{F}</m>.</p>
 
 					<figure xml:id="nonhomogeneous-example4-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch7-non-homogeneous-ex4" />.</caption>
@@ -4979,9 +4913,13 @@
 					
 					<p>
 						<md number="yes">
-							<mrow>v_X(t) \amp= R_2\left(\frac{V_S}{R_S} - \frac{v_X(t)}{R_S} - i(t)\right) + \frac{1}{C}\int \left(\frac{V_S}{R_S} - \frac{v_X(t)}{R_S} - i(t)\right)\, dt</mrow>
-							<mrow>v_X(t) \amp= \frac{R_2}{R_2}V_S - \frac{R_2}{R_S}v_X(t) - R_2i(t) + \frac{1}{CR_S}\int V_S \,dt - \frac{1}{CR_S}\int v_X(t) \,dt - \frac{1}{C}\int i(t) \,dt</mrow>
-							<mrow xml:id="ch7-eq-non-homogeneous-5-almost">\frac{R_2}{R_S}V_S + \frac{1}{CR_S}\int V_S \,dt \amp= v_X(t) + \frac{R_2}{R_S} v_X(t) + \frac{1}{CR_S}\int v_X(t) \,dt + R_2i(t) + \frac{1}{C}\int i(t) \,dt</mrow>
+							<mrow>v_X(t) \amp= R_2\left(\frac{V_S}{R_S} - \frac{v_X(t)}{R_S} - i(t)\right)</mrow>
+							<mrow>\amp+ \frac{1}{C}\int \left(\frac{V_S}{R_S} - \frac{v_X(t)}{R_S} - i(t)\right)\, dt</mrow>
+							<mrow>v_X(t) \amp= \frac{R_2}{R_2}V_S - \frac{R_2}{R_S}v_X(t) - R_2i(t)</mrow>
+							<mrow>\amp+ \frac{1}{CR_S}\int V_S \,dt</mrow>
+							<mrow>\amp- \frac{1}{CR_S}\int v_X(t) \,dt - \frac{1}{C}\int i(t) \,dt</mrow>
+							<mrow xml:id="ch7-eq-non-homogeneous-5-almost">\frac{R_2}{R_S}V_S + \frac{1}{CR_S}\int V_S \,dt \amp= v_X(t) + \frac{R_2}{R_S} v_X(t)</mrow>
+							<mrow>\amp+ \frac{1}{CR_S}\int v_X(t) \,dt + R_2i(t) + \frac{1}{C}\int i(t) \,dt</mrow>
 						</md>
 					</p>
 
@@ -4995,18 +4933,22 @@
 
 					<p>
 						<md>
-							<mrow>\frac{R_2}{R_S}V_S + \frac{1}{CR_S}\int V_S \,dt \amp= \left(R_1i(t) + L\frac{di(t)}{dt}\right) + \frac{R_2}{R_S} \left(R_1i(t) + L\frac{di(t)}{dt}\right) + \frac{1}{CR_S}\int \left(R_1i(t) + L\frac{di(t)}{dt}\right) \,dt + R_2i(t) + \frac{1}{C}\int i(t) \,dt</mrow>
-							<mrow>\amp= R_1i(t) + L\frac{di(t)}{dt} + \frac{R_2R_1}{R_s}i(t) + \frac{R_2L}{R_S}\frac{di(t)}{dt} + \frac{R_1}{CR_S}\int i(t) \,dt + \frac{L}{CR_S}i(t) + R_2i(t) + \frac{1}{C}\int i(t) \,dt</mrow>
-							<mrow>\frac{R_2}{R_S}\frac{dV_S}{dt} + \frac{1}{CR_S}V_S \amp= R_1\frac{di(t)}{dt} + L\frac{d^2i(t)}{dt^2} + \frac{R_2R_1}{R_s}\frac{di(t)}{dt} + \frac{R_2L}{R_S}\frac{d^2i(t)}{dt^2} + \frac{R_1}{CR_S} i(t) + \frac{L}{CR_S}\frac{di(t)}{dt} + R_2\frac{di(t)}{dt} + \frac{1}{C}i(t)</mrow>
-							<mrow>\frac{V_S}{CR_S} \amp= \left[L + \frac{R_2L}{R_S}\right]\frac{d^2i(t)}{dt^2} + \left[R_1 + \frac{R_1R_2}{R_S} + \frac{L}{CR_S} + R_2\right]\frac{di(t)}{dt} + \left[\frac{R_1}{CR_S}+\frac{1}{C}\right]i(t)</mrow>
-							<mrow>\frac{V_S}{CL(R_S+R_2)} \amp= \frac{d^2i(t)}{dt^2} + \left[\frac{R_1R_S + R_1R_2 + R_2R_S}{L(R_S+R_2)} + \frac{1}{C(R_S+R_2)}\right]\frac{di(t)}{dt} + \left[\frac{R_1+R_S}{LC(R_S+R_2)}\right]i(t)</mrow>
+							<mrow>\frac{R_2}{R_S}V_S + \frac{1}{CR_S}\int V_S \,dt \amp= \left(R_1i(t) + L\frac{di(t)}{dt}\right) + \frac{R_2}{R_S} \left(R_1i(t) + L\frac{di(t)}{dt}\right)</mrow>
+							<mrow>\amp+ \frac{1}{CR_S}\int \left(R_1i(t) + L\frac{di(t)}{dt}\right) \,dt + R_2i(t)</mrow>
+							<mrow>\amp+ \frac{1}{C}\int i(t) \,dt</mrow>
+							<mrow>\amp= R_1i(t) + L\frac{di(t)}{dt} + \frac{R_2R_1}{R_S}i(t) + \frac{R_2L}{R_S}\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \frac{R_1}{CR_S}\int i(t) \,dt + \frac{L}{CR_S}i(t) + R_2i(t)</mrow>
+							<mrow>\amp+ \frac{1}{C}\int i(t) \,dt</mrow>
+							<mrow>\frac{R_2}{R_S}\frac{dV_S}{dt} + \frac{1}{CR_S}V_S \amp= R_1\frac{di(t)}{dt} + L\frac{d^2i(t)}{dt^2} + \frac{R_2R_1}{R_S}\frac{di(t)}{dt} + \frac{R_2L}{R_S}\frac{d^2i(t)}{dt^2}</mrow>
+							<mrow>\amp+ \frac{R_1}{CR_S} i(t) + \frac{L}{CR_S}\frac{di(t)}{dt} + R_2\frac{di(t)}{dt} + \frac{1}{C}i(t)</mrow>
+							<mrow>\frac{V_S}{CR_S} \amp= \left[L + \frac{R_2L}{R_S}\right]\frac{d^2i(t)}{dt^2}</mrow>
+							<mrow>\amp+ \left[R_1 + \frac{R_1R_2}{R_S} + \frac{L}{CR_S} + R_2\right]\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left[\frac{R_1}{CR_S}+\frac{1}{C}\right]i(t)</mrow>
+							<mrow>\frac{V_S}{CL(R_S+R_2)} \amp= \frac{d^2i(t)}{dt^2}</mrow>
+							<mrow>\amp+ \left[\frac{R_1R_S + R_1R_2 + R_2R_S}{L(R_S+R_2)} + \frac{1}{C(R_S+R_2)}\right]\frac{di(t)}{dt}</mrow>
+							<mrow>\amp+ \left[\frac{R_1+R_S}{LC(R_S+R_2)}\right]i(t)</mrow>
+							<mrow>2.5 \amp= \frac{d^2i(t)}{dt^2} + 5.5\frac{di(t)}{dt} + 8.75</mrow>
 						</md>
-					</p>
-
-					<p>Plug in component values, using base units.</p>
-					
-					<p>
-						<md>2.5 = \frac{d^2i(t)}{dt^2} + 5.5\frac{di(t)}{dt} + 8.75</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
@@ -5140,13 +5082,8 @@
 						<md>
 							<mrow>0 \amp= LC \frac{d^2i(t)}{dt^2} + i(t) + \frac{L}{r_m+R}\frac{di(t)}{dt}</mrow>
 							<mrow>\amp= \frac{d^2i(t)}{dt^2} + \frac{1}{C(r_m+R)}\frac{di(t)}{dt} + \frac{1}{LC}i(t)</mrow>
+							<mrow>\amp= \frac{d^2i(t)}{dt^2} + 2000 \frac{di(t)}{dt} + 1 \times 10^6</mrow>
 						</md>
-					</p>
-
-					<p>Plug in component values, using base units.</p>
-					
-					<p>
-						<md>0 = \frac{d^2i(t)}{dt^2} + 2000 \frac{di(t)}{dt} + 1 \times 10^6</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
@@ -5255,13 +5192,8 @@
 							<mrow>V_m~\textrm{e}^{-at} \amp= RC\frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)</mrow>
 							<mrow>\amp= RC\frac{dv(t)}{dt} + LC\frac{d^2v(t)}{dt^2} + v(t)</mrow>
 							<mrow>\frac{V_m~\textrm{e}^{-at}}{LC} \amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L}\frac{dv(t)}{dt} + \frac{1}{LC}v(t)</mrow>
+							<mrow>1600~\textrm{e}^{-2t} \amp= \frac{d^2v(t)}{dt^2} + 20\frac{dv(t)}{dt} + 100v(t)</mrow>
 						</md>
-					</p>
-
-					<p>Plug in parameter values, using base units.</p>
-					
-					<p>
-						<md>1600~\textrm{e}^{-2t} = \frac{d^2v(t)}{dt^2} + 20\frac{dv(t)}{dt} + 100v(t)</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
@@ -5316,7 +5248,7 @@
 
 			<exercise xml:id="ch7-challenge-ex2">
 				<statement>
-					<p>Derive an equation for <m>v(t)</m> given the circuit shown in <xref ref="challenge-exercise2-diagram" />. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are <m>V_{AC}(t) = 10~\textrm{V}~\sin(2\pi40t)</m>, <m>R_S = 10~\Omega</m>, <m>R = 10~\Omega</m>, <m>L = 0.5~\textrm{H}</m>, and <m>C = 2~\textrm{mF}</m>.</p>
+					<p>Derive an equation for <m>v(t)</m> given the circuit shown in <xref ref="challenge-exercise2-diagram" />. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are: <m>V_{AC}(t) = 10~\textrm{V}~\sin(2\pi40t)</m>, <m>R_S = 10~\Omega</m>, <m>R = 10~\Omega</m>, <m>L = 0.5~\textrm{H}</m>, and <m>C = 2~\textrm{mF}</m>.</p>
 
 					<figure xml:id="challenge-exercise2-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch7-challenge-ex2" />.</caption>
@@ -5339,7 +5271,7 @@
 
 				<answer>
 					<p>
-						<md>v(t) = \left[-0.080~\textrm{V}~\sin(2\pi40t) + \textrm{e}^{-5t}\left(0.644~\textrm{V}~\sin{31.2t}\right)\right]~u(t)</md>
+						<md>v(t) = \biggl[-0.080~\textrm{V}~\sin(2\pi40t) + \textrm{e}^{-5t}\left(0.644~\textrm{V}~\sin{31.2t}\right)\biggr]~u(t)</md>
 					</p>
 				</answer>
 
@@ -5358,7 +5290,7 @@
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$V_{AC}(t)$]	(0,0);
 									\draw[]	(0,2.5) to [R, l^=$R_S$]								(2.5,2.5);
-									\draw[]	(2.5,2.5) to [R, l_=$R$, *-*, v^=$v_x(t)$]				(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l_=$R$, *-*, v^=$v_X(t)$]				(2.5,0);
 									\draw[]	(2.5,2.5) to [L, l^=$L$]								(5,2.5);
 									\draw[]	(5,2.5) to [C, l_=$C$, v^=$v(t)$]						(5,0);
 									\draw[]	(0,0) to [short]										(5,0);
@@ -5388,16 +5320,11 @@
 					<p>
 						<md>
 							<mrow>\frac{V_{AC}(t)}{R_S} \amp= \left(\frac{1}{R_S} + \frac{1}{R}\right)\left(LC\frac{d^2v(t)}{dt^2} + v(t)\right)+ C\frac{dv(t)}{dt}</mrow>
-							<mrow>\amp= \frac{R+R_s}{RR_S}\left(LC\frac{d^2v(t)}{dt^2} + v(t)\right)+ C\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp= \frac{R+R_S}{RR_S}\left(LC\frac{d^2v(t)}{dt^2} + v(t)\right)+ C\frac{dv(t)}{dt}</mrow>
 							<mrow>\amp= \frac{(R+R_S)LC}{RR_S}\frac{d^2v(t)}{dt^2} + C\frac{dv(t)}{dt} + \frac{R+R_S}{RR_S}v(t)</mrow>
 							<mrow>\frac{V_{AC} R}{LC(R+R_S)} \amp= \frac{d^2v(t)}{dt^2} + \frac{RR_S}{L(R+R_S)}\frac{dv(t)}{dt} + \frac{1}{LC}v(t)</mrow>
+							<mrow>5000 \sin{(2\pi 40 t)} \amp= \frac{d^2v(t)}{dt^2} + 10\frac{dv(t)}{dt} + 1000</mrow>
 						</md>
-					</p>
-
-					<p>Plug in parameter values, using base units.</p>
-					
-					<p>
-						<md>5000 \sin{(2\pi 40 t)} = \frac{d^2v(t)}{dt^2} + 10\frac{dv(t)}{dt} + 1000</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter, and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
@@ -5492,7 +5419,10 @@
 					<p>The equation for <m>v(t)</m> has the following form.</p>
 					
 					<p>
-						<md>v(t) = \left[-0.080~\textrm{V}~\sin(2\pi40t) + \textrm{e}^{-5t}\left(B_1 \cos{31.225t} + B_2\sin{31.225t}\right)\right]~u(t)</md>
+						<md>
+							<mrow>v(t) \amp= \biggl[-0.080~\textrm{V}~\sin(2\pi40t)</mrow>
+							<mrow>\amp+ \textrm{e}^{-5t}\left(B_1 \cos{31.225t} + B_2\sin{31.225t}\right)\biggr]~u(t)</mrow>
+						</md>
 					</p>
 					
 					<p>Use <m>v(0^+)</m> and <m>v'(0^+)</m> to calculate <m>B_1</m> and <m>B_2</m>. Start with <m>v(0^+)</m>.</p>
@@ -5514,7 +5444,8 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{dv(t)}{dt} \amp= -5B_2\sin{31.225t} + 31.225B_2~\textrm{e}^{-5t}\cos{31.225t} - 20.1062\cos{(2\pi 40t)}</mrow>
+							<mrow>\frac{dv(t)}{dt} \amp= -5B_2\sin{31.225t} + 31.225B_2~\textrm{e}^{-5t}\cos{31.225t}</mrow>
+							<mrow>\amp- 20.1062\cos{(2\pi 40t)}</mrow>
 							<mrow>v'(0^+) = 0 \amp= -5B_2\sin{0} + 31.225B_2~\textrm{e}^{0}\cos{0} - 20.1062\cos{0}</mrow>
 							<mrow>0 \amp= 31.225B_2 - 20.1062</mrow>
 							<mrow>31.225B_2 \amp= 20.1062</mrow>
@@ -5611,11 +5542,9 @@
 					
 					<p>
 						<md>
-							<mrow>v_X(0) \amp= (0.6~\textrm{V})\left(-\frac{2~\textrm{K}\Omega}{1~\textrm{k}\Omega}\right)</mrow>
-							<mrow>\amp= (0.6~\textrm{V})(-2)</mrow>
+							<mrow>v_X(0) \amp= (0.6~\textrm{V})\left(-\frac{2~\textrm{k}\Omega}{1~\textrm{k}\Omega}\right)</mrow>
 							<mrow>\amp= -1.2~\textrm{V}</mrow>
-							<mrow>v(0) \amp= (0.6~\textrm{V})\left(-\frac{2~\textrm{K}\Omega}{1~\textrm{k}\Omega}\right)\left(-\frac{4.4~\textrm{K}\Omega}{2.2~\textrm{k}\Omega}\right)</mrow>
-							<mrow>\amp= (0.6~\textrm{V})(-2)(-2)</mrow>
+							<mrow>v(0) \amp= (0.6~\textrm{V})\left(-\frac{2~\textrm{k}\Omega}{1~\textrm{k}\Omega}\right)\left(-\frac{4.4~\textrm{k}\Omega}{2.2~\textrm{k}\Omega}\right)</mrow>
 							<mrow>\amp= 2.4~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -5646,8 +5575,7 @@
 					
 					<p>
 						<md>
-							<mrow>v(\infty) \amp= (1.4~\textrm{V})\left(-\frac{2~\textrm{K}\Omega}{1~\textrm{k}\Omega}\right)\left(-\frac{4.4~\textrm{K}\Omega}{2.2~\textrm{k}\Omega}\right)</mrow>
-							<mrow>\amp= (1.4~\textrm{V})(-2)(-2)</mrow>
+							<mrow>v(\infty) \amp= (1.4~\textrm{V})\left(-\frac{2~\textrm{k}\Omega}{1~\textrm{k}\Omega}\right)\left(-\frac{4.4~\textrm{k}\Omega}{2.2~\textrm{k}\Omega}\right)</mrow>
 							<mrow>\amp= 5.6~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -5695,26 +5623,22 @@
 
 					<p>
 						<md>
-							<mrow>\frac{V_{S2}}{R_1} \amp= -C_1\frac{d}{dt}\left(-R_2C_2\frac{dv(t)}{dt} - \frac{R_2}{R_{F2}}v(t)\right) - \frac{1}{R_{F1}}\left(-R_2C_2\frac{dv(t)}{dt} - \frac{R_2}{R_{F2}}v(t)\right)</mrow>
-							<mrow>\amp= R_2C_1C_2\frac{d^2v(t)}{dt^2} + \frac{C_1R_2}{R_{F2}}\frac{dv(t)}{dt} + \frac{C_2R_2}{R_{F1}}\frac{dv(t)}{dt} + \frac{R_2}{R_{F1}R_{F2}}v(t)</mrow>
-							<mrow>\frac{V_{S2}}{R_1R_2C_1C_2} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_2R_{F2}} + \frac{1}{C_1R_{F1}}\right)\frac{dv(t)}{dt} + \left(\frac{1}{C_1C_2R_{F1}R_{F2}}\right)v(t)</mrow>
+							<mrow>\frac{V_{S2}}{R_1} \amp= -C_1\frac{d}{dt}\left(-R_2C_2\frac{dv(t)}{dt} - \frac{R_2}{R_{F2}}v(t)\right)</mrow>
+							<mrow>\amp- \frac{1}{R_{F1}}\left(-R_2C_2\frac{dv(t)}{dt} - \frac{R_2}{R_{F2}}v(t)\right)</mrow>
+							<mrow>\amp= R_2C_1C_2\frac{d^2v(t)}{dt^2} + \frac{C_1R_2}{R_{F2}}\frac{dv(t)}{dt} + \frac{C_2R_2}{R_{F1}}\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ \frac{R_2}{R_{F1}R_{F2}}v(t)</mrow>
+							<mrow>\frac{V_{S2}}{R_1R_2C_1C_2} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_2R_{F2}} + \frac{1}{C_1R_{F1}}\right)\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ \left(\frac{1}{C_1C_2R_{F1}R_{F2}}\right)v(t)</mrow>
+							<mrow>4.1029 \amp= \frac{d^2v(t)}{dt^2} + 1.9987\frac{dv(t)}{dt} + 0.7327v(t)</mrow>
 						</md>
-					</p>
-
-					<p>Plug in component values using base units.</p>
-					
-					<p>
-						<md>4.1029 = \frac{d^2v(t)}{dt^2} + 1.9987\frac{dv(t)}{dt} + 0.7327v(t)</md>
 					</p>
 
 					<p>Use <xref ref="ch7-eq-damping-parameter" /> to calculate the damping parameter, and use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency.</p>
 					
 					<p>
 						<md>
-							<mrow>\alpha \amp= \frac{1.9987}{2}</mrow>
-							<mrow>\amp= 0.9994~\textrm{Np/s}</mrow>
-							<mrow>\omega_0 \amp= \sqrt{0.7327}</mrow>
-							<mrow>\amp= 0.8560~\textrm{rad/s}</mrow>
+							<mrow>\alpha \amp= 0.9994~\textrm{Np/s}</mrow>
+							<mrow>\omega_0 \amp= 0.8560~\textrm{rad/s}</mrow>
 						</md>
 					</p>
 
@@ -5784,7 +5708,10 @@
 
 				<answer>
 					<p>
-						<md>-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} = \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt} + \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)</md>
+						<md>
+							<mrow>-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)</mrow>
+						</md>
 					</p>
 				</answer>
 
@@ -5809,9 +5736,12 @@
 
 					<p>
 						<md>
-							<mrow>-\frac{v_{in}(t)}{R_1} \amp= \frac{1}{R_1C_1R_F}\int v(t) \,dt + \frac{1}{R_2C_1R_F}\int v(t) \,dt + \frac{C_2}{C_1R_F}v(t) + C_2 \frac{dv(t)}{dt} + \frac{C_1}{C_1R_F}v(t)</mrow>
-							<mrow>-\frac{1}{R_1}\frac{dv_{in}}{dt} \amp= \frac{1}{C_1R_1R_F}v(t) + \frac{1}{C_1R_2R_F}v(t) + \frac{C_2}{C_1R_F}\frac{dv(t)}{dt} + C_2\frac{d^2v(t)}{dt^2} + \frac{1}{R_F}\frac{dv(t)}{dt}</mrow>
-							<mrow>-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt} + \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)</mrow>
+							<mrow>-\frac{v_{in}(t)}{R_1} \amp= \frac{1}{R_1C_1R_F}\int v(t) \,dt + \frac{1}{R_2C_1R_F}\int v(t) \,dt + \frac{C_2}{C_1R_F}v(t)</mrow>
+							<mrow>\amp+ C_2 \frac{dv(t)}{dt} + \frac{C_1}{C_1R_F}v(t)</mrow>
+							<mrow>-\frac{1}{R_1}\frac{dv_{in}}{dt} \amp= \frac{1}{C_1R_1R_F}v(t) + \frac{1}{C_1R_2R_F}v(t) + \frac{C_2}{C_1R_F}\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ C_2\frac{d^2v(t)}{dt^2} + \frac{1}{R_F}\frac{dv(t)}{dt}</mrow>
+							<mrow>-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp+ \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)</mrow>
 						</md>
 						
 					</p>

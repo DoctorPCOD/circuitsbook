@@ -58,27 +58,18 @@ Q \amp= 1
 </figure>
 <div class="para">This circuit is a band-stop filter. (Refer to <a href="ch9-passivefilters.html#ch9-filtertype-table" class="xref" data-knowl="./knowl/xref/ch9-filtertype-table.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 9.3.31: Determination of filter type based on very-low and very-high frequency analysis of the output voltage.">Table 9.3.31</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The transfer function of this circuit is<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The transfer function of this circuit is given below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
-\begin{equation*}
-H(j\omega) = \frac{-\omega^2 + \frac{1}{LC}}{\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}\text{.}
-\end{equation*}
+\begin{align*}
+H(j\omega) \amp= \frac{-\omega^2 + \frac{1}{LC}}{\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}\\
+\amp= \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \times 10^{10}}
+\end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug in parameter values using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-H(j\omega) = \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \times 10^{10}}
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Use <a href="ch9-passivefilters.html#ch9-cutoff-frequency-second-order" class="xref" data-knowl="./knowl/xref/ch9-cutoff-frequency-second-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.1">(9.3.1)</a> to calculate the center frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch9-passivefilters.html#ch9-cutoff-frequency-second-order" class="xref" data-knowl="./knowl/xref/ch9-cutoff-frequency-second-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.1">(9.3.1)</a> to calculate the center frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -87,9 +78,9 @@ H(j\omega) = \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \t
 \amp= 100000~\textrm{rad/s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use <a href="ch9-passivefilters.html#ch9-bandwidth-a1" class="xref" data-knowl="./knowl/xref/ch9-bandwidth-a1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.4">(9.3.4)</a> to calculate the bandwidth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch9-passivefilters.html#ch9-bandwidth-a1" class="xref" data-knowl="./knowl/xref/ch9-bandwidth-a1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.4">(9.3.4)</a> to calculate the bandwidth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -97,9 +88,9 @@ H(j\omega) = \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \t
 \beta = 100000~\textrm{rad/s}
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The two cutoff frequencies can be calculated directly from the center frequency and bandwidth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The two cutoff frequencies can be calculated directly from the center frequency and bandwidth.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -113,9 +104,9 @@ H(j\omega) = \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \t
 \amp= 150000~\textrm{rad/s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use <a href="ch9-passivefilters.html#ch9-quality-factor" class="xref" data-knowl="./knowl/xref/ch9-quality-factor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.2">(9.3.2)</a> to calculate the quality factor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch9-passivefilters.html#ch9-quality-factor" class="xref" data-knowl="./knowl/xref/ch9-quality-factor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.3.2">(9.3.2)</a> to calculate the quality factor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -124,7 +115,7 @@ Q \amp= \frac{100000}{100000}\\
 \amp= 1
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-filters-exercise3-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 9.6.38.1"><a tabindex="-1" href="#ch9-filters-exercise3-3" title="Copy heading and permalink for Solution 9.6.38.1" aria-label="Copy heading and permalink for Solution 9.6.38.1">🔗</a></div>
 </div></details>

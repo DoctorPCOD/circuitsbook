@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch2-voltagedivider">
@@ -588,18 +611,18 @@ V_k = V_S\left(\frac{R_k}{R_1+R_2+R_3+...+R_k+...+R_n}\right)\tag{2.5.4}
 </h2>
 <div class="para" id="ch2-voltagedivider-2-8-2-1">Calculate <span class="process-math">\(V_{OUT}\)</span> in the circuit shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch2-voltagedivider-2-8-2-2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-voltagedividerexfig1.svg" role="img" class="contained" alt="Circuit with 20.5V source, 28k, 20k, 32k, 38k, 27k, and 30k resistors. There are three meshes and five nodes. High potential of 20.5V, 20k, and 28k connect at node a. 20k and 32k connect at node b. 38k, 28k, and 27k connect at node c. 27k and 30k connect at node d. Low potential of 20.5V, 38k, and 30k connect at node e. Vout is defined as high potential at c and low potential at e."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circuit used to demonstrate the voltage divider rule.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.2"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-2" title="Copy heading and permalink for Figure 2.5.2" aria-label="Copy heading and permalink for Figure 2.5.2">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch2-voltagedivider-2-8-2-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch2-voltagedividerexfig1.svg" role="img" class="contained" alt="Circuit with 20.5V source, 28k, 20k, 32k, 38k, 27k, and 30k resistors. There are three meshes and five nodes. High potential of 20.5V, 20k, and 28k connect at node a. 20k and 32k connect at node b. 38k, 28k, and 27k connect at node c. 27k and 30k connect at node d. Low potential of 20.5V, 38k, and 30k connect at node e. Vout is defined as high potential at c and low potential at e."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.2"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-2" title="Copy heading and permalink for Figure 2.5.2" aria-label="Copy heading and permalink for Figure 2.5.2">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch2-voltagedivider-2-8-2-3">Combine all resistors that are in series and re-draw the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch2-voltagedivider-2-8-2-4"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-voltagedividerexfig2.svg" role="img" class="contained" alt="Circuit with 20.5V source, 28k, 52k, 38k, and 57k resistors. Circuit has three meshes and three nodes. High potential of 20.5V, 28k, and 52k connect at node a. 52k, 28, 38, and 57k connect at node b. Low potential of 20.5V, 38k, and 57k connect at node c. Vout is defined as high potential at node b and low potential at node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circuit used to demonstrate the voltage divider rule, with all series resistors combined.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.3"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-4" title="Copy heading and permalink for Figure 2.5.3" aria-label="Copy heading and permalink for Figure 2.5.3">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch2-voltagedivider-2-8-2-4"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/ch2-voltagedividerexfig2.svg" role="img" class="contained" alt="Circuit with 20.5V source, 28k, 52k, 38k, and 57k resistors. Circuit has three meshes and three nodes. High potential of 20.5V, 28k, and 52k connect at node a. 52k, 28, 38, and 57k connect at node b. Low potential of 20.5V, 38k, and 57k connect at node c. Vout is defined as high potential at node b and low potential at node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.3"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-4" title="Copy heading and permalink for Figure 2.5.3" aria-label="Copy heading and permalink for Figure 2.5.3">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch2-voltagedivider-2-8-2-5">The 28 kΩ and 52 kΩ resistors are in parallel with each other and have an equivalent resistance of 18.2 kΩ. The 38 kΩ and 57 kΩ resistors are in parallel with each other and have an equivalent resistance of 22.8 kΩ. The circuit can be re-drawn again.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch2-voltagedivider-2-8-2-6"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch2-voltagedividerexfig3.svg" role="img" class="contained" alt="Circuit with 20.5V, 18.2k, and 22.8k all in series. Vout is defined as dropping over 22.8k."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circuit used to demonstrate the voltage divider rule, with all series and parallel resistors combined.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.4"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-6" title="Copy heading and permalink for Figure 2.5.4" aria-label="Copy heading and permalink for Figure 2.5.4">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.4"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-6" title="Copy heading and permalink for Figure 2.5.4" aria-label="Copy heading and permalink for Figure 2.5.4">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch2-voltagedivider-2-8-2-7">Use the voltage divider rule to calculate the output voltage.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-2-8-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -620,7 +643,7 @@ V_{OUT} \amp = 20.5~\textrm{V}\left(	\frac{22.8~\textrm{k}\Omega}{22.8~\textrm{k
 <div class="para" id="ch2-voltagedivider-twomesh-example-2-1">Calculate <span class="process-math">\(V_{OUT}\)</span> in the circuit shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch2-voltagedivider-twomesh-example-2-2"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch2-voltagedividerexmeshesfig1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes containing one voltage source Vs and four resistors (R1, R2, R3, and R4). The high-potential end of Vs is connected to R1 at node a. R1, R2, and R3 are connected at node b. R3 and R4 are connected at node c. The low-potential end of Vs, R2, and R4 are connected at node d. Voltage Vx is measured over R2 from node b to node d. Voltage Vout is measured over R4 from node c to node d."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A circuit used to demonstrate the voltage divider rule in a two-mesh circuit.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.6"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-2" title="Copy heading and permalink for Figure 2.5.6" aria-label="Copy heading and permalink for Figure 2.5.6">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.6"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-2" title="Copy heading and permalink for Figure 2.5.6" aria-label="Copy heading and permalink for Figure 2.5.6">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch2-voltagedivider-twomesh-example-2-3">The voltage divider rule cannot immediately be applied to calculate <span class="process-math">\(V_{OUT}\text{.}\)</span> This is because the resistors are not all in series with the voltage source <span class="process-math">\(V_S\text{.}\)</span> However, the voltage divider rule can be applied directly to calculate <span class="process-math">\(V_X\text{,}\)</span> provided that the equivalent resistance seen by <span class="process-math">\(R_2\)</span> is calculated. This creates a circuit with two resistances in series with the voltage source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -647,7 +670,7 @@ V_X = V_S\left(\frac{R_2 // (R_3 + R_4)}{R_1 + (R_2 // (R_3 + R_4))}\right)
 <div class="para" id="ch2-voltagedivider-twomesh-example-2-8">Now that <span class="process-math">\(V_X\)</span> is known, the circuit can be re-drawn to represent <span class="process-math">\(V_X\)</span> as a source in series with resistors <span class="process-math">\(R_3\)</span> and <span class="process-math">\(R_4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch2-voltagedivider-twomesh-example-2-9"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch2-voltagedividerexmeshesfig2.svg" role="img" class="contained" alt="Circuit with one mesh and three nodes containing a voltage source Vx and two resistors (R3 and R4). The high-potential end of Vx connects to R3 at node a. R3 and R4 connect at node b. The low-potential end of Vx connects to R4 at node c. Voltage Vout is measured over R4 from node b to node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The circuit with <span class="process-math">\(V_X\)</span> represented as a source.<div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.7"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-9" title="Copy heading and permalink for Figure 2.5.7" aria-label="Copy heading and permalink for Figure 2.5.7">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.5.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.5.7"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-9" title="Copy heading and permalink for Figure 2.5.7" aria-label="Copy heading and permalink for Figure 2.5.7">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch2-voltagedivider-twomesh-example-2-10">Use the voltage divider rule to calculate the output voltage.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch2-voltagedivider-twomesh-example-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 

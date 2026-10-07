@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch8-phasorarithmetic">
@@ -637,13 +660,15 @@ y = r\sin{\phi}\tag{8.1.5}
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Phasor Addition and Subtraction</span>
 </h2>
-<div class="para" id="ch8-phasoraddsub-2">Phasor addition and subtraction is simplest to complete when the phasors are in Cartesian form. To add two phasors together, simply add the real parts together to find the real part of the sum and add the imaginary parts together to find the imaginary part of the sum. The solution to <span class="process-math">\(\vec{Z_1} + \vec{Z_2}\)</span> is shown in <a href="ch8-phasorarithmetic.html#ch8-phasor-addition-example" class="xref" data-knowl="./knowl/xref/ch8-phasor-addition-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.6">(8.1.6)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasoraddsub-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-phasoraddsub-2">Phasor addition and subtraction is simplest to complete when the phasors are in Cartesian form. To add two phasors together, simply add the real parts together to find the real part of the sum and add the imaginary parts together to find the imaginary part of the sum. The solution to <span class="process-math">\(\vec{Z_1} + \vec{Z_2}\)</span> is shown in <a href="ch8-phasorarithmetic.html#ch8-phasoraddsub-3-1" class="xref" data-knowl="./knowl/xref/ch8-phasor-addition-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.8">(8.1.8)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasoraddsub-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch8-phasoraddsub-3">
-<div class="displaymath process-math" id="ch8-phasor-addition-example">
-\begin{equation}
-\vec{Z_1} + \vec{Z_2} = (x_1+x_2) + j(y_1+y_2)\tag{8.1.6}
-\end{equation}
+<div class="displaymath process-math" id="ch8-phasoraddsub-3-1">
+\begin{align}
+\vec{Z_1} \amp= x_1 + jy_1\tag{8.1.6}\\
+\vec{Z_2} \amp= x_2 + jy_2\tag{8.1.7}\\
+\vec{Z_1} + \vec{Z_2} \amp= (x_1+x_2) + j(y_1+y_2)\tag{8.1.8}
+\end{align}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasoraddsub-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -715,13 +740,15 @@ v_t(t) + v_2(t) = 14.9~\textrm{V}~\cos(2\pi100t + 35.0\pi/180)
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 8.1.2: Addition of two sinusoids"><a tabindex="-1" href="#ch8-phasoraddsub-4" title="Copy heading and permalink for Example 8.1.2: Addition of two sinusoids" aria-label="Copy heading and permalink for Example 8.1.2: Addition of two sinusoids">🔗</a></div>
 </article>
-<div class="para" id="ch8-phasoraddsub-5">Subtraction is very similar to addition. <em class="alert">However, it is important to note that subtraction, unlike addition, is not commutative.</em> The solution to <span class="process-math">\(\vec{Z_1} - \vec{Z_2}\)</span> is shown in <a href="ch8-phasorarithmetic.html#ch8-phasor-subtraction-example" class="xref" data-knowl="./knowl/xref/ch8-phasor-subtraction-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.7">(8.1.7)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasoraddsub-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-phasoraddsub-5">Subtraction is very similar to addition. <em class="alert">However, it is important to note that subtraction, unlike addition, is not commutative.</em> The solution to <span class="process-math">\(\vec{Z_1} - \vec{Z_2}\)</span> is shown in <a href="ch8-phasorarithmetic.html#ch8-phasoraddsub-6-1" class="xref" data-knowl="./knowl/xref/ch8-phasor-subtraction-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.11">(8.1.11)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasoraddsub-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch8-phasoraddsub-6">
-<div class="displaymath process-math" id="ch8-phasor-subtraction-example">
-\begin{equation}
-\vec{Z_1} - \vec{Z_2} = (x_1-x_2) + j(y_1-y_2)\tag{8.1.7}
-\end{equation}
+<div class="displaymath process-math" id="ch8-phasoraddsub-6-1">
+\begin{align}
+\vec{Z_1} \amp= x_1 + jy_1\tag{8.1.9}\\
+\vec{Z_2} \amp= x_2 + jy_2\tag{8.1.10}\\
+\vec{Z_1} - \vec{Z_2} \amp= (x_1-x_2) + j(y_1-y_2)\tag{8.1.11}
+\end{align}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasoraddsub-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -790,13 +817,15 @@ i_1(t) - i_2(t) = 228~\textrm{mA}~\cos(2\pi60t + 52.8\pi/180)
 </h2>
 <div class="para" id="ch8-phasormultdiv-2">Phasor multiplication and division is simplest to compute when phasors are in polar form. Recall that polar form (<span class="process-math">\(r\angle \phi\)</span>) is shorthand for <span class="process-math">\(r\textrm{e}^{j\phi}\text{.}\)</span> Multiplication and division in exponentials turns into addition and subtraction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasormultdiv-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch8-phasormultdiv-3">Two phasors <span class="process-math">\(\vec{Z_1}\)</span> and <span class="process-math">\(\vec{Z_2}\)</span> are multiplied together in <a href="ch8-phasorarithmetic.html#ch8-phasor-multiplication-example" class="xref" data-knowl="./knowl/xref/ch8-phasor-multiplication-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.8">(8.1.8)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasormultdiv-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-phasormultdiv-3">Two phasors <span class="process-math">\(\vec{Z_1}\)</span> and <span class="process-math">\(\vec{Z_2}\)</span> are multiplied together in <a href="ch8-phasorarithmetic.html#ch8-phasormultdiv-4-1" class="xref" data-knowl="./knowl/xref/ch8-phasor-multiplication-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.14">(8.1.14)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasormultdiv-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch8-phasormultdiv-4">
-<div class="displaymath process-math" id="ch8-phasor-multiplication-example">
-\begin{equation}
-\vec{Z_1}\vec{Z_2} = r_1r_2\angle(\phi_1+\phi_2)\tag{8.1.8}
-\end{equation}
+<div class="displaymath process-math" id="ch8-phasormultdiv-4-1">
+\begin{align}
+\vec{Z_1} \amp= r_1 \angle \phi_1\tag{8.1.12}\\
+\vec{Z_2} \amp= r_2 \angle \phi_2\tag{8.1.13}\\
+\vec{Z_1}\vec{Z_2} \amp= r_1r_2\angle(\phi_1+\phi_2)\tag{8.1.14}
+\end{align}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasormultdiv-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -830,7 +859,8 @@ z(t) \amp= 20~\textrm{k}\Omega~\cos(2\pi50t-90\pi/180)
 <div class="para logical" id="ch8-phasormultdiv-5-2-6">
 <div class="displaymath process-math" id="ch8-phasormultdiv-5-2-6-1">
 \begin{align*}
-\vec{I}\vec{Z} \amp= (4~\textrm{mA})(20~\textrm{k}\Omega)~\textrm{e}^{(120^\circ + (-90^\circ))}\\
+\vec{I}\vec{Z} \amp= (4~\textrm{mA})(20~\textrm{k}\Omega)~\textrm{e}^{j(120^\circ + (-90^\circ))}\\
+\amp= 80~\textrm{V}~\textrm{e}^{j30^\circ}\\
 \amp= 80~\textrm{V} \angle 30^\circ
 \end{align*}
 </div>
@@ -848,13 +878,15 @@ v(t) = 80~\textrm{V}~\cos(2\pi50t + 30\pi/180)
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 8.1.4: Multiplication of two sinusoids"><a tabindex="-1" href="#ch8-phasormultdiv-5" title="Copy heading and permalink for Example 8.1.4: Multiplication of two sinusoids" aria-label="Copy heading and permalink for Example 8.1.4: Multiplication of two sinusoids">🔗</a></div>
 </article>
-<div class="para" id="ch8-phasormultdiv-6">Two phasors in polar form are divided in <a href="ch8-phasorarithmetic.html#ch8-phasor-division-example" class="xref" data-knowl="./knowl/xref/ch8-phasor-division-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.9">(8.1.9)</a>. <em class="alert">It is important to note that division, unlike multiplication, is not commutative.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasormultdiv-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-phasormultdiv-6">Two phasors in polar form are divided in <a href="ch8-phasorarithmetic.html#ch8-phasormultdiv-7-1" class="xref" data-knowl="./knowl/xref/ch8-phasor-division-example.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.17">(8.1.17)</a>. <em class="alert">It is important to note that division, unlike multiplication, is not commutative.</em><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasormultdiv-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch8-phasormultdiv-7">
-<div class="displaymath process-math" id="ch8-phasor-division-example">
-\begin{equation}
-\frac{\vec{Z_1}}{\vec{Z_2}} = \frac{r_1}{r_2}\angle(\phi_1-\phi_2)\tag{8.1.9}
-\end{equation}
+<div class="displaymath process-math" id="ch8-phasormultdiv-7-1">
+\begin{align}
+\vec{Z_1} \amp= r_1 \angle \phi_1\tag{8.1.15}\\
+\vec{Z_2} \amp= r_2 \angle \phi_2\tag{8.1.16}\\
+\frac{\vec{Z_1}}{\vec{Z_2}} \amp= \frac{r_1}{r_2}\angle(\phi_1-\phi_2)\tag{8.1.17}
+\end{align}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasormultdiv-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -888,7 +920,8 @@ i(t) \amp= 5~\textrm{mA}~\cos(2\pi60t+30\pi/180)
 <div class="para logical" id="ch8-phasormultdiv-8-2-6">
 <div class="displaymath process-math" id="ch8-phasormultdiv-8-2-6-1">
 \begin{align*}
-\frac{\vec{V}}{\vec{I}} \amp= \frac{110~\textrm{V}}{5~\textrm{mA}}~\textrm{e}^{(60^\circ - 30^\circ)}\\
+\frac{\vec{V}}{\vec{I}} \amp= \frac{110~\textrm{V}}{5~\textrm{mA}}~\textrm{e}^{j(60^\circ - 30^\circ)}\\
+\amp= 22~\textrm{k}\Omega~\textrm{e}^{j30^\circ}\\
 \amp= 22~\textrm{k}\Omega \angle 30^\circ
 \end{align*}
 </div>
@@ -911,12 +944,12 @@ z(t) = 22~\textrm{k}\Omega~\cos(2\pi60t + 30\pi/180)
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Phasor Time-Differentiation and Time-Integration</span>
 </h2>
-<div class="para" id="ch8-phasorcalculus-2">Time differentiation of a phasor <span class="process-math">\(\vec{Z}\)</span> is defined in <a href="ch8-phasorarithmetic.html#ch8-phasor-time-differentiation" class="xref" data-knowl="./knowl/xref/ch8-phasor-time-differentiation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.10">(8.1.10)</a> and derived in <a href="ch8-phasorarithmetic.html#ch8-time-differentiation-proof" class="xref" data-knowl="./knowl/xref/ch8-time-differentiation-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 8.1.5.1">Derivation 8.1.5.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasorcalculus-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-phasorcalculus-2">Time differentiation of a phasor <span class="process-math">\(\vec{Z}\)</span> is defined in <a href="ch8-phasorarithmetic.html#ch8-phasor-time-differentiation" class="xref" data-knowl="./knowl/xref/ch8-phasor-time-differentiation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.18">(8.1.18)</a> and derived in <a href="ch8-phasorarithmetic.html#ch8-time-differentiation-proof" class="xref" data-knowl="./knowl/xref/ch8-time-differentiation-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 8.1.5.1">Derivation 8.1.5.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasorcalculus-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch8-phasorcalculus-3">
 <div class="displaymath process-math" id="ch8-phasor-time-differentiation">
 \begin{equation}
-\frac{d}{dt}\vec{Z} = j \omega \vec{Z}\tag{8.1.10}
+\frac{d}{dt}\vec{Z} = j \omega \vec{Z}\tag{8.1.18}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasorcalculus-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -928,7 +961,9 @@ z(t) = 22~\textrm{k}\Omega~\cos(2\pi60t + 30\pi/180)
 \begin{align*}
 z(t) \amp= Z_m \cos{(\omega t + \phi)}\\
 \vec{Z} \amp= Z_m~\textrm{e}^{j(\omega t + \phi)}\\
-\frac{d}{dt}\vec{Z} \amp= j\omega Z_m~\textrm{e}^{j(\omega t + \phi)}\\
+\frac{d}{dt}\vec{Z} \amp= \frac{d}{dt} \left(Z_m~\textrm{e}^{j(\omega t + \phi)}\right)\\
+\amp= Z_m \frac{d}{dt} \left(\textrm{e}^{j(\omega t + \phi)}\right)\\
+\amp= j\omega Z_m~\textrm{e}^{j(\omega t + \phi)}\\
 \amp= j\omega \vec{Z}
 \end{align*}
 </div>
@@ -936,12 +971,12 @@ z(t) \amp= Z_m \cos{(\omega t + \phi)}\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Derivation 8.1.5.1"><a tabindex="-1" href="#ch8-time-differentiation-proof" title="Copy heading and permalink for Derivation 8.1.5.1" aria-label="Copy heading and permalink for Derivation 8.1.5.1">🔗</a></div>
 </article></details>
-<div class="para" id="ch8-phasorcalculus-5">Time integration of a phasor <span class="process-math">\(\vec{Z}\)</span> is defined in <a href="ch8-phasorarithmetic.html#ch8-phasor-time-integration" class="xref" data-knowl="./knowl/xref/ch8-phasor-time-integration.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.11">(8.1.11)</a> and derived in <a href="ch8-phasorarithmetic.html#ch8-time-integration-proof" class="xref" data-knowl="./knowl/xref/ch8-time-integration-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 8.1.5.2">Derivation 8.1.5.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasorcalculus-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-phasorcalculus-5">Time integration of a phasor <span class="process-math">\(\vec{Z}\)</span> is defined in <a href="ch8-phasorarithmetic.html#ch8-phasor-time-integration" class="xref" data-knowl="./knowl/xref/ch8-phasor-time-integration.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.1.19">(8.1.19)</a> and derived in <a href="ch8-phasorarithmetic.html#ch8-time-integration-proof" class="xref" data-knowl="./knowl/xref/ch8-time-integration-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 8.1.5.2">Derivation 8.1.5.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasorcalculus-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch8-phasorcalculus-6">
 <div class="displaymath process-math" id="ch8-phasor-time-integration">
 \begin{equation}
-\frac{d}{dt}\vec{Z} = \frac{1}{j \omega} \vec{Z}\tag{8.1.11}
+\frac{d}{dt}\vec{Z} = \frac{1}{j \omega} \vec{Z}\tag{8.1.19}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-phasorcalculus-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -953,7 +988,9 @@ z(t) \amp= Z_m \cos{(\omega t + \phi)}\\
 \begin{align*}
 z(t) \amp= Z_m \cos{(\omega t + \phi)}\\
 \vec{Z} \amp= Z_m~\textrm{e}^{j(\omega t + \phi)}\\
-\int \vec{Z} \,dt \amp= \frac{1}{j\omega} Z_m~\textrm{e}^{j(\omega t + \phi)}\\
+\int \vec{Z} \,dt \amp= \int \left(Z_m~\textrm{e}^{j(\omega t + \phi)}\right)\,dt \\
+\amp= Z_m \int \left(\textrm{e}^{j(\omega t + \phi)}\right)\,dt \\
+\amp= \frac{1}{j\omega} Z_m~\textrm{e}^{j(\omega t + \phi)}\\
 \amp= \frac{1}{j\omega} \vec{Z}
 \end{align*}
 </div>

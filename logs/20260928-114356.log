@@ -1,0 +1,54 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.53.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.53.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : Generating any needed assets.
+WARNING : Now generating latex images
+INFO    : converting latex-image pictures from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx to svg graphics for placement in /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'cli.version': '2.53', 'publisher': '/Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.53.0/core/xsl/extract-latex-image.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.53.0/core/xsl/extract-latex-image.xsl
+INFO    : converting ch7-non-homogeneous-example2-figure2.tex to ch7-non-homogeneous-example2-figure2.pdf
+INFO    : cropping ch7-non-homogeneous-example2-figure2.pdf to cropped-ch7-non-homogeneous-example2-figure2.pdf
+INFO    : renaming cropped-ch7-non-homogeneous-example2-figure2.pdf to ch7-non-homogeneous-example2-figure2.pdf
+INFO    : converting ch7-non-homogeneous-example2-figure2.pdf to ch7-non-homogeneous-example2-figure2.svg
+INFO    : converting ch7-non-homogeneous-example2-figure1.tex to ch7-non-homogeneous-example2-figure1.pdf
+INFO    : cropping ch7-non-homogeneous-example2-figure1.pdf to cropped-ch7-non-homogeneous-example2-figure1.pdf
+INFO    : renaming cropped-ch7-non-homogeneous-example2-figure1.pdf to ch7-non-homogeneous-example2-figure1.pdf
+INFO    : converting ch7-non-homogeneous-example2-figure1.pdf to ch7-non-homogeneous-example2-figure1.svg
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ixi5bhla
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/output/web.
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : verifying and expanding input directory: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/../assets
+INFO    : input directory expanded to absolute path: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/assets
+INFO    : discovering source file's directory name: /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.53.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/ajp/.ptx/2.53.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.3.2
+INFO    : Downloading Runestone Services, version 8.3.2
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-denver
+INFO    : converting /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx to HTML in /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ldkf8e2v
+INFO    : XSL conversion of /Users/ajp/Dropbox/COD/Engineering 2210 - Circuit Analysis 1/new-Textbook/source/main.ptx by /Users/ajp/.ptx/2.53.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/ajp/.ptx/2.53.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ldkf8e2v
+INFO    : Removing temporary directory /var/folders/71/k29x_9652hd1cgj7kgcqdk400000gn/T/ptx-ixxpn3cp
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

@@ -59,22 +59,13 @@ v(t) = \left[25~\textrm{V}~\textrm{e}^{-2t} - 17~\textrm{V}~\textrm{e}^{-10t} - 
 \begin{align*}
 V_m~\textrm{e}^{-at} \amp= RC\frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)\\
 \amp= RC\frac{dv(t)}{dt} + LC\frac{d^2v(t)}{dt^2} + v(t)\\
-\frac{V_m~\textrm{e}^{-at}}{LC} \amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L}\frac{dv(t)}{dt} + \frac{1}{LC}v(t)
+\frac{V_m~\textrm{e}^{-at}}{LC} \amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L}\frac{dv(t)}{dt} + \frac{1}{LC}v(t)\\
+1600~\textrm{e}^{-2t} \amp= \frac{d^2v(t)}{dt^2} + 20\frac{dv(t)}{dt} + 100v(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug in parameter values, using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-1600~\textrm{e}^{-2t} = \frac{d^2v(t)}{dt^2} + 20\frac{dv(t)}{dt} + 100v(t)
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> to calculate the damping parameter and use <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> to calculate the damping parameter and use <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -83,11 +74,11 @@ V_m~\textrm{e}^{-at} \amp= RC\frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)
 \omega_0 \amp= 10~\textrm{rad/s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The circuit is critically damped.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The circuit is critically damped.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The particular solution has a format of <span class="process-math">\(v_P(t) = K~\textrm{e}^{-at}\text{,}\)</span> where <span class="process-math">\(a = 2\text{.}\)</span> Plug this into the differential equation and solve to calculate <span class="process-math">\(K\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The particular solution has a format of <span class="process-math">\(v_P(t) = K~\textrm{e}^{-at}\text{,}\)</span> where <span class="process-math">\(a = 2\text{.}\)</span> Plug this into the differential equation and solve to calculate <span class="process-math">\(K\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -98,9 +89,9 @@ V_m~\textrm{e}^{-at} \amp= RC\frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)
 K \amp= 25~\textrm{V}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The equation for <span class="process-math">\(v(t)\)</span> has the following form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The equation for <span class="process-math">\(v(t)\)</span> has the following form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -108,9 +99,9 @@ K \amp= 25~\textrm{V}
 v(t) = \left[25~\textrm{V}~\textrm{e}^{-2t} + A_1~\textrm{e}^{-10t} + A_2t~\textrm{e}^{-10t}\right]~u(t) + 8~\textrm{V}~u(-t)
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to calculate <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\text{.}\)</span> The first derivative is defined by <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.8">(7.3.8)</a>, which will be equal to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v'(0^+)\)</span> to calculate <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\text{.}\)</span> The first derivative is defined by <a href="ch7-the-series-rlc-circuit.html#ch7-eq-seriesrlc-vpzero" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.5">(7.3.5)</a>, which will be equal to zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -124,9 +115,9 @@ v'(0^+) = 0 \amp= -50 - 10A_1 + A_2\\
 A_2 \amp= -120~\textrm{V/s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug all of the values into the equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Plug all of the values into the equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -134,7 +125,7 @@ A_2 \amp= -120~\textrm{V/s}
 v(t) = \left[25~\textrm{V}~\textrm{e}^{-2t} - 17~\textrm{V}~\textrm{e}^{-10t} - 120~\textrm{V/s}~t~\textrm{e}^{-10t}\right]~u(t) + 8~\textrm{V}~u(-t)
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex1-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.17.1"><a tabindex="-1" href="#ch7-challenge-ex1-3" title="Copy heading and permalink for Solution 7.8.17.1" aria-label="Copy heading and permalink for Solution 7.8.17.1">🔗</a></div>
 </div></details>

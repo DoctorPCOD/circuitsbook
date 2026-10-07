@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,14 +542,37 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch8-deltawye">
 <h1 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Delta-Wye and Wye-Delta Transforms</span>
 </h1>
-<div class="para" id="ch8-deltawye-2">The concept of delta-wye and wye-delta transforms was discussed in <a href="ch2-deltawye-wyedelta.html" class="internal" title="Section 2.3: Delta-Wye and Wye-Delta Transforms">Section 2.3</a>. Just as we could do delta-wye and wye-delta transforms for resistive circuits, so we can do them with circuits containing resistors, capacitors, and inductors. These transforms can be used to find the equivalent impedance of circuit elements that are neither in parallel nor in series with each other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-deltawye-2">The concept of delta-wye and wye-delta transforms was discussed in <a href="ch2-deltawye-wyedelta.html" class="internal" title="Section 2.3: Delta-Wye and Wye-Delta Transforms">Section 2.3</a>. Just as we could perform delta-wye and wye-delta transforms for resistive circuits, so we can perform them with circuits containing resistors, capacitors, and inductors. These transforms can be used to find the equivalent impedance of circuit elements that are neither in parallel nor in series with each other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ch8-deltawye-3">A delta circuit arrangement of impedances is shown in <a href="ch8-deltawye.html#delta-wye-impedances-delta" class="xref" data-knowl="./knowl/xref/delta-wye-impedances-delta.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.3.1">Figure 8.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -611,10 +634,9 @@ eBookConfig.enable_chatcodes =  false;
 </div> 
 <div class="para logical" id="ch8-deltawye-14-2-4">
 <div class="displaymath process-math" id="ch8-deltawye-14-2-4-1">
-\begin{align*}
-\vec{Z_C} \amp= \frac{1}{j 2\pi1000(500\times10^{-9})}\\
-\amp= -j318.31~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{j 2\pi1000(500\times10^{-9})} = -j318.31~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-14-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -622,14 +644,13 @@ eBookConfig.enable_chatcodes =  false;
 </div> 
 <div class="para logical" id="ch8-deltawye-14-2-6">
 <div class="displaymath process-math" id="ch8-deltawye-14-2-6-1">
-\begin{align*}
-\vec{Z_L} \amp= j2\pi1000 (0.02)\\
-\amp= j125.66~\Omega
-\end{align*}
+\begin{equation*}
+j2\pi1000 (0.02) = j125.66~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-14-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch8-deltawye-14-2-7">None of the circuit elements shares a branch, therefore none are in series. None of the circuit elements share two nodes, therefore none are in parallel. A delta-wye transform is required. (Note that a wye-delta transform could be accomplished as well.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-14-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-deltawye-14-2-7">None of the circuit elements shares a branch, therefore none are in series. None of the circuit elements share two nodes, therefore none are in parallel. A delta-wye transform is required. (Note that a wye-delta transform could be performed as well.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-14-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="ch8-deltawye-14-2-8">The circuit has been re-drawn. The impedances in the delta configuration are highlighted in red, with each of the three nodes labeled.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-14-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -665,10 +686,9 @@ eBookConfig.enable_chatcodes =  false;
 </div> 
 <div class="para logical" id="ch8-deltawye-14-2-17">
 <div class="displaymath process-math" id="ch8-deltawye-14-2-17-1">
-\begin{align*}
-\vec{Z} \amp= \frac{(403.48+j41.60~\Omega)(331.01-j27.73~\Omega)}{(403.48+j41.60~\Omega)+(331.01-j27.73~\Omega)}\\
-\amp= 113.98-j176.68~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(403.48+j41.60~\Omega)(331.01-j27.73~\Omega)}{(403.48+j41.60~\Omega)+(331.01-j27.73~\Omega)} = 113.98-j176.68~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-14-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -693,7 +713,7 @@ C \amp= \frac{1}{2\pi1000(204.41)}\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-14-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch8-deltawye-14-2-22"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch8-delta-wye-impedance-example-figure5.svg" role="img" class="contained" alt="Circuit consisting of a 445ohm resistor in series with a 779nF capacitor."></div>
+<figure class="figure figure-like" id="ch8-deltawye-14-2-22"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/ch8-delta-wye-impedance-example-figure5.svg" role="img" class="contained" alt="Circuit consisting of a 445ohm resistor in series with a 779nF capacitor."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.3.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.3.8"><a tabindex="-1" href="#ch8-deltawye-14-2-22" title="Copy heading and permalink for Figure 8.3.8" aria-label="Copy heading and permalink for Figure 8.3.8">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Example 8.3.3: Using a delta-wye transformation to calculate equivalent impedance"><a tabindex="-1" href="#ch8-deltawye-14" title="Copy heading and permalink for Example 8.3.3: Using a delta-wye transformation to calculate equivalent impedance" aria-label="Copy heading and permalink for Example 8.3.3: Using a delta-wye transformation to calculate equivalent impedance">🔗</a></div>
 </article>
@@ -723,10 +743,9 @@ C \amp= \frac{1}{2\pi1000(204.41)}\\
 </div> 
 <div class="para logical" id="ch8-deltawye-18-2-4">
 <div class="displaymath process-math" id="ch8-deltawye-18-2-4-1">
-\begin{align*}
-\vec{Z_C} \amp= \frac{1}{j2\pi200(2\times10^{-6})}\\
-\amp= -j397.89~\Omega
-\end{align*}
+\begin{equation*}
+\frac{1}{j2\pi200(2\times10^{-6})} = -j397.89~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -734,10 +753,9 @@ C \amp= \frac{1}{2\pi1000(204.41)}\\
 </div> 
 <div class="para logical" id="ch8-deltawye-18-2-6">
 <div class="displaymath process-math" id="ch8-deltawye-18-2-6-1">
-\begin{align*}
-\vec{Z_L} \amp= j2\pi200 (0.2)\\
-\amp=j251.33~\Omega
-\end{align*}
+\begin{equation*}
+j2\pi200 (0.2) =j251.33~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -768,25 +786,23 @@ C \amp= \frac{1}{2\pi1000(204.41)}\\
 <figure class="figure figure-like" id="ch8-deltawye-18-2-13"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch8-wye-delta-impedance-figure3.svg" role="img" class="contained" alt="Circuit with three meshes and three nodes consisting of five impedances (600ohm, 800ohm, 147+j251ohm, 250-j147ohm, and -233-j398ohm). The 600ohm, 147+j251ohm, and -233-j398ohm connect at node a. The 600ohm, 147+j251ohm, 250-j147ohm, and 800ohm connect at node b. The -233-j398ohm, 250-j147ohm, and 800ohm connect at node c. The equivalent impedance is measured between nodes a and c."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.3.12"><a tabindex="-1" href="#ch8-deltawye-18-2-13" title="Copy heading and permalink for Figure 8.3.12" aria-label="Copy heading and permalink for Figure 8.3.12">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch8-deltawye-18-2-14">Calculate the equivalent impedance of the 600 Ω resistor in parallel with the 147.34+j251.33 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-deltawye-18-2-14">Calculate the equivalent impedance of the 600 Ω resistor in parallel with the 147+j251 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch8-deltawye-18-2-15">
 <div class="displaymath process-math" id="ch8-deltawye-18-2-15-1">
-\begin{align*}
-\vec{Z} \amp= \frac{(600~\Omega)(147.34+j251.33~\Omega)}{(600~\Omega)+(147.34+j251.33~\Omega)}\\
-\amp= 167.23 + j145.54~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(600~\Omega)(147.34+j251.33~\Omega)}{(600~\Omega)+(147.34+j251.33~\Omega)} = 167.23 + j145.54~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch8-deltawye-18-2-16">Calculate the equivalent impedance of the 800 Ω resistor in parallel with the 250−j146.56 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-deltawye-18-2-16">Calculate the equivalent impedance of the 800 Ω resistor in parallel with the 250−j147 Ω impedance.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch8-deltawye-18-2-17">
 <div class="displaymath process-math" id="ch8-deltawye-18-2-17-1">
-\begin{align*}
-\vec{Z} \amp= \frac{(800~\Omega)(250-j146.56~\Omega)}{(800~\Omega)+(250-j146.56~\Omega)}\\
-\amp= 202.12 -j83.45~\Omega
-\end{align*}
+\begin{equation*}
+\frac{(800~\Omega)(250-j146.56~\Omega)}{(800~\Omega)+(250-j146.56~\Omega)} = 202.12 -j83.45~\Omega
+\end{equation*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -806,7 +822,7 @@ C \amp= \frac{1}{2\pi1000(204.41)}\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch8-deltawye-18-2-22">This impedance is equivalent to a resistor in series with a capacitor. (We know it must be a capacitor because the reactance is negative.) Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the value of the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch8-deltawye-18-2-22">This impedance is equivalent to a 349 Ω resistor in series with a capacitor. (We know it must be a capacitor because the reactance is negative.) Use <a href="ch8-impedance.html#ch8-eq-impedance-capacitor" class="xref" data-knowl="./knowl/xref/ch8-eq-impedance-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 8.2.4">(8.2.4)</a> to calculate the value of the capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch8-deltawye-18-2-23">
 <div class="displaymath process-math" id="ch8-deltawye-18-2-23-1">
@@ -817,7 +833,7 @@ C \amp= \frac{1}{2\pi200(324.55)}\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch8-deltawye-18-2-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch8-deltawye-18-2-24"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch8-wye-delta-impedance-figure5.svg" role="img" class="contained" alt="Circuit with a 349ohm resistor in series with a 2.45uF capacitor."></div>
+<figure class="figure figure-like" id="ch8-deltawye-18-2-24"><div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/ch8-wye-delta-impedance-figure5.svg" role="img" class="contained" alt="Circuit with a 349ohm resistor in series with a 2.45uF capacitor."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.3.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 8.3.14"><a tabindex="-1" href="#ch8-deltawye-18-2-24" title="Copy heading and permalink for Figure 8.3.14" aria-label="Copy heading and permalink for Figure 8.3.14">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Example 8.3.9: Using a wye-delta transformation to calculate equivalent impedance"><a tabindex="-1" href="#ch8-deltawye-18" title="Copy heading and permalink for Example 8.3.9: Using a wye-delta transformation to calculate equivalent impedance" aria-label="Copy heading and permalink for Example 8.3.9: Using a wye-delta transformation to calculate equivalent impedance">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Section 8.3: Delta-Wye and Wye-Delta Transforms"><a tabindex="-1" href="#ch8-deltawye" title="Copy heading and permalink for Section 8.3: Delta-Wye and Wye-Delta Transforms" aria-label="Copy heading and permalink for Section 8.3: Delta-Wye and Wye-Delta Transforms">🔗</a></div>

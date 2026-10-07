@@ -5,7 +5,7 @@
 
 	<introduction>
 
-		<p><term>Capacitors</term> are circuit elements that are capable of storing and releasing (but not consuming) energy in the form of an electric field. The simplest model of a capacitor consists of two parallel plates of conducting material separated by an insulator (<term>dielectric</term>). As voltage is applied to the plates, charge builds up due to the fact that current cannot pass through the dielectric. This charge build-up creates a static electric field. This is depicted schematically in <xref ref="parallelplatewithcharge" />.</p>
+		<p><term>Capacitors</term> are circuit elements that are capable of storing and releasing (but not consuming) energy. This energy is stored in the form of an electric field. The simplest model of a capacitor consists of two parallel plates of conducting material separated by an <term>dielectric</term> (insulator). As voltage is applied to the plates, charge builds up due to the fact that current cannot pass through the dielectric. This charge build-up creates a static electric field. This is depicted schematically in <xref ref="parallelplatewithcharge" />.</p>
 
 		<figure xml:id="parallelplatewithcharge">
   			<caption>Two parallel plates of conducting material separated by an insulator will cause a buildup of charge when voltage is applied. This device is called a capacitor.</caption>
@@ -40,7 +40,7 @@
 		</figure>
 
 		<note>
-			<p>Using the hydraulic analogy of electric circuits, a capacitor can be thought of as acting like a rubber membrane sealed in a pipe. When water flows through the pipe, water molecules cannot pass through the membrane, but the stretching causes current to flow nonetheless. You can think of current as flowing <q>through</q> a capacitor without any electrons passing from cathode to anode. Eventually, with the application of a high enough voltage (known as the breakdown voltage), electrons will be able to pass through the insulating layer (this is generally not desirable).</p>
+			<p>Using the hydraulic analogy of electric circuits, a capacitor can be thought of as acting like a rubber membrane sealed in a pipe. When water flows through the pipe, water molecules cannot pass through the membrane, but the stretching causes motion (current). You can think of current as flowing <q>through</q> a capacitor without any electrons passing from cathode to anode. Eventually, with the application of a high enough voltage (known as the breakdown voltage), electrons will be able to pass through the insulating layer (this is generally not desirable).</p>
 		</note>
 
 		<p>Capacitors are described by their <term>capacitance</term>, which defines the amount of positive charge stored by the capacitor divided by the voltage applied to the capacitor to obtain that charge. This is defined mathematically by <xref ref="ch5-eqcapqvc" />. The symbol for capacitance is <m>C</m> and the unit is F (farad).</p>
@@ -66,7 +66,7 @@
 			<md number="yes" xml:id="ch5-capequation">C = \frac{\epsilon A}{d}</md>
 		</p>
 		
-		<p><term>Dielectric permittivity</term> describes how well a dielectric material can hold an electric charge. This value is mathematically expressed as the product of the vacuum permittivity (<m>\epsilon_0</m>) multiplied by the relative permittivity (<m>\epsilon_r</m>), described in <xref ref="ch5-epsilonequation" />. The vacuum permittivity is sometimes referred to as the <term>permittivity of free space</term>.</p>
+		<p><term>Dielectric permittivity</term> describes how well a dielectric material can hold an electric charge. This value is mathematically expressed as the product of the <term>vacuum permittivity</term> (<m>\epsilon_0</m>) multiplied by the relative permittivity (<m>\epsilon_r</m>), described in <xref ref="ch5-epsilonequation" />. The vacuum permittivity is sometimes referred to as the <term>permittivity of free space</term>.</p>
 
 		<p>
 			<md number="yes" xml:id="ch5-epsilonequation">\epsilon = \epsilon_0\epsilon_r</md>
@@ -116,7 +116,7 @@
 
 			<p><term>Non-polarized capacitors</term>, which have a circuit symbol shown in <xref ref="capsymbol" />, can be connected in any orientation in a circuit. Generally speaking, there are two metal layers separated by a dielectric. The different types of non-polarized capacitors are named after the type of dielectric used (vacuum, air, glass, paper, mica, and ceramic, to name a few).</p>
 
-			<p>Ceramic capacitors are very frequently used due to their small size and low cost. Physically, they resemble a small pancake with two metallic leads sticking out. Multiple layers of ceramic and metal are stacked up and placed into a package. The small size and dielectric choice means that while ceramic capacitors may have a large amount of capacitance per unit volume, their overall capacitance is low compared to other types of capacitors (namely, electrolytic capacitors). Because ceramic capacitors are non-polarized, they are good to use in AC circuits, particularly filter circuits.</p>
+			<p><term>Ceramic capacitors</term> are very frequently used due to their small size and low cost. Physically, they resemble a small pancake with two metallic leads sticking out. Multiple layers of ceramic and metal are stacked up and placed into a package. The small size and dielectric choice means that while ceramic capacitors may have a large amount of capacitance per unit volume, their overall capacitance is low compared to other types of capacitors (namely, electrolytic capacitors). Because ceramic capacitors are non-polarized, they are good to use in AC circuits, particularly filter circuits.</p>
 
 			<p>Ceramic capacitors are stamped with a code that can be used to determine the value of the capacitance. A diagram of a ceramic capacitor, including code, is shown in <xref ref="ceramiccapdiagram" />.</p>
 
@@ -211,12 +211,12 @@
   				</image>
 			</figure>
 
-			<p>The top of the cylindrical packaging is typically scored to allow breakage in case the capacitor is reverse-biased (plugged in backwards) or over-volted. On top of the hazard of over-volting the capacitor, reverse biasing the capacitor is also problematic. Aluminum electrolytic capacitors can and will explode under the right circumstances, and will release anisotropically via the scored top of the cylinder. (Therefore, it is not a good idea to point the top of an aluminum electrolytic capacitor at anything important, especially your face, if it is uncertain if it's connected properly or with the correct amount of voltage). Thankfully, as with ceramic capacitors, an aluminum electrolytic capacitor will fail open (removing itself from the circuit after exploding). The amount of capacitance of an aluminum electrolytic capacitor, as well as the voltage rating, is printed on the packaging.</p>
+			<p>The top of the cylindrical packaging is typically scored to allow breakage in case the capacitor is reverse-biased (plugged in backwards) or over-volted. On top of the hazard of over-volting the capacitor, reverse biasing the capacitor is also problematic. Aluminum electrolytic capacitors can and will explode under the right circumstances, and will release anisotropically via the scored top of the cylinder. (Therefore, it is not a good idea to point the top of an aluminum electrolytic capacitor at anything important, especially your face, if it is uncertain if it's connected properly or with the correct amount of voltage). Thankfully, as with ceramic capacitors, an aluminum electrolytic capacitor will fail open (removing itself from the circuit after exploding). The amount of capacitance of an aluminum electrolytic capacitor, as well as the voltage rating, is usually printed on the packaging.</p>
 
 			<p><term>Tantalum electrolytic capacitors</term> are made of a tantalum anode. They have a very large capacitance per unit of volume, making them good to use in applications where a small footprint is required. Physically, tantalum electrolytic capacitors resemble the pancake look of a ceramic capacitor. However, tantalum electrolytic capacitors are polarized and must be treated accordingly. Usually, the high potential end (anode) is indicated on the packaging with a plus sign, as shown in <xref ref="tantalumcapdiagram" />.</p>
 
 			<figure xml:id="tantalumcapdiagram">
-  				<caption>A diagram of a tantalum electrolytic capacitor. The plus sign corresponds to the high potential lead.</caption>
+  				<caption>A diagram of a tantalum electrolytic capacitor. The plus sign corresponds to the high-potential lead.</caption>
 				<image width="10%" xml:id="ch5-tantalumcapdiagram">
 					<shortdescription>A small pancake shape with two radial leads. One of the radial leads is labeled with a +.</shortdescription>
 					<latex-image>
@@ -240,7 +240,7 @@
 
 		<p>Capacitors can be measured with a digital multimeter or with an LRC meter. A digital multimeter will charge a capacitor with a known current and measure the voltage to calculate the capacitance. An LRC meter applies an AC voltage, measures the AC current, and uses the phase and amplitude differences to calculate the capacitance.</p>
 
-		<p>Capacitance must be measured from one end of the capacitor (or equivalent capacitance) to the other, in parallel, as shown in <xref ref="measuringcapacitance" />. When measuring the capacitance of a polarized capacitor, it is important to verify that the positive lead of the LRC meter connects to the anode of the capacitor and the negative lead of the LRC meter connects to the cathode of the capacitor.</p>
+		<p>Capacitance must be measured from one end of the capacitor (or equivalent capacitance) to the other, in parallel, as shown in <xref ref="measuringcapacitance" />. When measuring the capacitance of a polarized capacitor, it is important to verify that the positive lead of the meter connects to the anode of the capacitor and the negative lead of the meter connects to the cathode of the capacitor.</p>
 
 		<figure xml:id="measuringcapacitance">
   			<caption>A diagram of how capacitance is measured in parallel (across a component or components).</caption>
@@ -257,14 +257,14 @@
   			</image>
 		</figure>
 
-		<p>It is important to ensure that the capacitor(s) are completely discharged before making a measurement. Capacitors can be discharged by shorting the leads with a high value, high-wattage resistor for several seconds.</p>
+		<p>It is important to ensure that the capacitor(s) are completely discharged before making a measurement. Capacitors can be discharged by shorting the leads with a high value, high-wattage resistor for several seconds. <alert>Never discharge a capacitor by touching the leads as this can cause serious injury!</alert></p>
 
 	</section>
 	
 	<section xml:id="ch5-vicap">
 		<title>Voltage-Current Relationship in a Capacitor</title>
 
-		<p>The relationship between voltage and current in a capacitor can be quantified using the relationship between capacitance and charge (<xref ref="ch5-eqcapqvc" />) as well as the relationship between current and charge (<xref ref="ch1-currentequation" />). This relationship is shown in terms of current in <xref ref="ch5-ivcapequation" /> and derived in <xref ref="ch5-cdvdtderivation" />.</p>
+		<p>The relationship between voltage and current in a capacitor can be quantified using the relationship between capacitance and charge, <xref ref="ch5-eqcapqvc" />, as well as the relationship between current and charge, <xref ref="ch1-currentequation" />. This relationship is shown in terms of current in <xref ref="ch5-ivcapequation" /> and derived in <xref ref="ch5-cdvdtderivation" />. (Note that this equation assumes that capacitance does not change with respect to time. This is an assumption that will be valid for all examples in this textbook.)</p>
 
 		<p>
 			<md number="yes" xml:id="ch5-ivcapequation">i(t) = C\frac{dv(t)}{dt}</md>
@@ -280,7 +280,7 @@
 			</p>
 		</proof>
 
-		<p>Based on <xref ref="ch5-ivcapequation" />, if the voltage remains unchanging through time, there will be no current flowing through the branch that contains a capacitor. Therefore, in DC conditions, a capacitor can be replaced by an open circuit.</p>
+		<p>Based on <xref ref="ch5-ivcapequation" />, if the voltage remains unchanging through time, there will be no current through any circuit branch that contains a capacitor. Therefore, in DC conditions, a capacitor can be replaced by an open circuit.</p>
 
 		<p><xref ref="ch5-ivcapequation" /> can be refigured to solve for the voltage drop over a capacitor, shown in <xref ref="ch5-voltcapequation" />.</p>
 
@@ -323,7 +323,7 @@
   				</image>
 			</figure>
 
-			<p>As <m>v(t)</m> is equal to the sum of each individual voltage drop, the current-voltage relationship in capacitors (<xref ref="ch5-voltcapequation" />) can be used to determine the equivalent capacitance of series combinations of capacitors. This is given in <xref ref="ch5-seriescapequation" /> and derived in <xref ref="ch5-seriescapderivation" />.</p>
+			<p>As <m>v(t)</m> is equal to the sum of each individual voltage drop, the current-voltage relationship in capacitors, <xref ref="ch5-voltcapequation" />, can be used to determine the equivalent capacitance of series combinations of capacitors. This is given in <xref ref="ch5-seriescapequation" /> and derived in <xref ref="ch5-seriescapderivation" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch5-seriescapequation">\frac{1}{C_{EQ}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + ... + \frac{1}{C_n}</md>
@@ -333,14 +333,33 @@
 				<p>
 					<md>
 						<mrow>v(t) \amp= v_1(t) + v_2(t) + v_3(t) + ... + v_n(t)</mrow>
-						<mrow>\int_{-\infty}^{t} \frac{1}{C_{EQ}} i(\tau)\,d\tau \amp= \int_{-\infty}^{t} \frac{1}{C_1} i(\tau)\,d\tau + \int_{-\infty}^{t} \frac{1}{C_2} i(\tau)\,d\tau + \int_{-\infty}^{t} \frac{1}{C_3} i(\tau)\,d\tau + ... + \int_{-\infty}^{t} \frac{1}{C_n} i(\tau)\,d\tau</mrow>
-						<mrow>\frac{1}{C_{EQ}} \int_{-\infty}^{t} i(\tau)\,d\tau \amp= \frac{1}{C_1} \int_{-\infty}^{t} i(\tau)\,d\tau + \frac{1}{C_2} \int_{-\infty}^{t} i(\tau)\,d\tau + \frac{1}{C_3} \int_{-\infty}^{t} i(\tau)\,d\tau + ... + \frac{1}{C_n} \int_{-\infty}^{t} i(\tau)\,d\tau</mrow>
+						<mrow>\frac{1}{C_{EQ}} \int_{-\infty}^{t} i(\tau)\,d\tau \amp= \frac{1}{C_1} \int_{-\infty}^{t} i(\tau)\,d\tau + \frac{1}{C_2} \int_{-\infty}^{t} i(\tau)\,d\tau</mrow>
+						<mrow>\amp+ \frac{1}{C_3} \int_{-\infty}^{t} i(\tau)\,d\tau + ... + \frac{1}{C_n} \int_{-\infty}^{t} i(\tau)\,d\tau</mrow>
 						<mrow>\frac{1}{C_{EQ}} \amp= \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + ... + \frac{1}{C_n}</mrow>
 					</md>
 				</p>
 			</proof>
 
 			<p>Capacitors in series therefore combine similarly to resistors in parallel. The equivalent capacitance cannot be larger than the smallest capacitor in the series combination.</p>
+
+			<p>Frequently, it is necessary to combine two capacitors in series. In that case, we can solve <xref ref="ch5-seriescapequation" /> to find a handy equation to use without having to calculate the reciprocal of the sum of reciprocals. (Note: this equation will <alert>only</alert> work for two capacitors in series.) This solution is shown in <xref ref="ch5-eqtwocapacitorsseries" /> and is derived in <xref ref="ch5-twocapsseriesproof" />. (Note the similarity to <xref ref="ch2-eqtworesistorsparallel" />.)</p>
+
+			<p>
+				<md number="yes" xml:id="ch5-eqtwocapacitorsseries">
+					C_{EQ} = \frac{C_1C_2}{C_1+C_2}
+				</md>
+			</p>
+
+			<proof xml:id="ch5-twocapsseriesproof">
+				<p>
+					<md>
+						<mrow>\frac{1}{C_{EQ}}	\amp = \frac{1}{C_1} + \frac{1}{C_2}</mrow>
+						<mrow>					\amp = \frac{C_2}{C_1C_2} + \frac{C_1}{C_1C_2}</mrow>
+						<mrow>					\amp = \frac{C_1+C_2}{C_1C_2}</mrow>
+						<mrow>C_{EQ}			\amp = \frac{C_1C_2}{C_1+C_2}</mrow>
+					</md>
+				</p>
+			</proof>
 
 		</subsection>
 
@@ -369,7 +388,7 @@
   				</image>
 			</figure>
 
-			<p>As <m>i(t)</m> is equal to the sum of each individual current, the current-voltage relationship in capacitors (<xref ref="ch5-ivcapequation" />) can be used to determine the equivalent capacitance of parallel combinations of capacitors. This is shown in <xref ref="parallelcapequation" /> and derived in <xref ref="parallelcapderivation" />.</p>
+			<p>As <m>i(t)</m> is equal to the sum of each individual current, the current-voltage relationship in capacitors, <xref ref="ch5-ivcapequation" />, can be used to determine the equivalent capacitance of parallel combinations of capacitors. This is shown in <xref ref="parallelcapequation" /> and derived in <xref ref="parallelcapderivation" />.</p>
 
 			<p>
 				<md number="yes" xml:id="parallelcapequation">C_{EQ} = C_1 + C_2 + C_3 + ... + C_n</md>
@@ -391,9 +410,9 @@
 				<title>Calculating equivalent capacitance</title>
 				
 				<statement>
-					<p>Calculate the equivalent capacitance between nodes a and b in the circuit shown in <xref ref="equivalentcapacitanceex1" />.</p>
+					<p>Calculate the equivalent capacitance between nodes a and b in the circuit shown below.</p>
 
-					<figure xml:id="equivalentcapacitanceex1">
+					<figure>
   						<caption></caption>
 						<image width="70%" xml:id="ch5-equivalentcapacitanceex1">
 							<shortdescription>A circuit containing 7 caps and 6 nodes. 3uF (A) and 6uF are connected at node a. 3uF (A), 8uF, and 6uF (B) are connected at node b. 6uF (A) and 5uF are connected at node c. 5uF, 3uF (B), and 2uF are connected at node d. 2uF and 6uF (B) are connected at node e. 3uF (B) and 8uF are connected at node f.</shortdescription>
@@ -410,11 +429,24 @@
   						</image>
 					</figure>
 
-					<p>The 2<nbsp />&#181;F and 6<nbsp />&#181;F are in series and can be combined together. This combination is 1.5<nbsp />&#181;F. Similarly, the 3<nbsp />&#181;F is in series with the 8<nbsp />&#181;F with an equivalent capacitance of of 2.18<nbsp />&#181;F. Last, the 6<nbsp />&#181;F and 5<nbsp />&#181;F capacitors are in series with an equivalent capacitance of 2.73<nbsp />&#181;F. The circuit can now be re-drawn.</p>
+					<p>There are three sets of capacitors that are in series with each other. The equivalent capacitance of each of these three sets of series capacitors can be calculated.</p>
+					
+					<p>
+						<md>
+							<mrow>C_{2uF,6uF} \amp= \frac{(6~\mu\textrm{F})(2~\mu\textrm{F})}{6~\mu\textrm{F} + 2~\mu\textrm{F}}</mrow>
+							<mrow>\amp= 1.5~\mu\textrm{F}</mrow>
+							<mrow>C_{3uF,8uF} \amp= \frac{(3~\mu\textrm{F})(8~\mu\textrm{F})}{3~\mu\textrm{F} + 8~\mu\textrm{F}}</mrow>
+							<mrow>\amp= 2.1818~\mu\textrm{F}</mrow>
+							<mrow>C_{6uF,5uF} \amp= \frac{(6~\mu\textrm{F})(5~\mu\textrm{F})}{6~\mu\textrm{F} + 5~\mu\textrm{F}}</mrow>
+							<mrow>\amp= 2.7273~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+
+					<p>The circuit can now be re-drawn.</p>
 		
 					<figure>
   						<caption></caption>
-						<image width="60%">
+						<image width="70%"  xml:id="ch5-equivalentcapacitanceex2">
 							<shortdescription>A circuit containing 4 caps and 3 nodes. 3uF and 2.73uF are connected at node a. 3uF, 2.18uF, and 1.5uF are connected at node b. 2.73uF, 2.18uF, and 1.5uF are connected at node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -429,11 +461,11 @@
   						</image>
 					</figure>
 
-					<p>At this point the 1.5<nbsp />&#181;F and 2.18<nbsp />&#181;F capacitors can be combined in parallel to obtain. 3.68<nbsp />&#181;F. The circuit can again be re-drawn.</p>
+					<p>At this point the 1.5<nbsp />&#181;F and 2.18<nbsp />&#181;F capacitors can be combined in parallel to obtain an equivalent capacitance 3.68<nbsp />&#181;F. The circuit can again be re-drawn.</p>
 
 					<figure>
   						<caption></caption>
-						<image width="40%">
+						<image width="40%"  xml:id="ch5-equivalentcapacitanceex3">
 							<shortdescription>A circuit containing 3 caps and 3 nodes. 3uF and 2.73uF are connected at node a. 3uF and 3.68uF are connected at node b. 2.73uF and 3.68uF are connected at node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -447,11 +479,20 @@
   						</image>
 					</figure>
 
-					<p>The 2.73<nbsp />&#181;F capacitor is in series with the 3.68<nbsp />&#181;F capacitor. Combined, their equivalent capacitance is 1.57<nbsp />&#181;F. The circuit can be re-drawn again.</p>
+					<p>The 2.73<nbsp />&#181;F capacitor is in series with the 3.68<nbsp />&#181;F capacitor.</p>
+					
+					<p>
+						<md>
+							<mrow>C_{2.73uF,3.68uF} \amp= \frac{(2.7273~\mu\textrm{F})(3.6818~\mu\textrm{F})}{2.7273~\mu\textrm{F} + 3.6818~\mu\textrm{F}}</mrow>
+							<mrow>\amp= 1.5667~\mu\textrm{F}</mrow>
+						</md>
+					</p>
+						
+					<p>The circuit can be re-drawn again.</p>
 
 					<figure>
   						<caption></caption>
-						<image width="40%">
+						<image width="40%"  xml:id="ch5-equivalentcapacitanceex4">
 							<shortdescription>Circuit containing two caps and two nodes. Both capacitors are connected in parallel between nodes a and b. The capacitor values are 3uF and 1.57uF.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -465,7 +506,7 @@
   						</image>
 					</figure>
 
-					<p>The equivalent capacitance can now be calculated by summing together the two capacitances.</p>
+					<p>The equivalent capacitance can now be calculated by summing together the two remaining capacitances.</p>
 
 					<p>
 						<md>C_{EQ} = 4.57~\mu\textrm{F}</md>
@@ -496,7 +537,7 @@
 						\draw[]	(opamp.out) to [short, *-] ++ (right:0.5) node[right] {$v_{out}(t)$};
 						\draw[]	(opamp.+) node[ground] {};
 						\draw[]	(opamp.-) to [short, *-] ++(up:1.25) to [R, l^=$R$] ++ (right:2.25) -| (opamp.out);
-						\draw[]	($(opamp.-)-(2,0)$) to [sV, l_=$v_{in}(t)$] ($(opamp.-)-(2,1.5)$) node[ground] {};
+						\draw[]	($(opamp.-)-(2,0)$) to [sV, l_=$v_{in}(t)$] ++ (down:2.5) node[tlground] {};
 						\draw[]	($(opamp.-)-(2,0)$) node[below left] {+} to [C, l^=$C$] (opamp.-);
 					\end{tikzpicture}
 				</latex-image>
@@ -530,7 +571,7 @@
 						\draw[]	(opamp.out) to [short, *-] ++ (right:0.5) node[right] {$v_{out}(t)$};
 						\draw[]	(opamp.+) node[ground] {};
 						\draw[]	(opamp.-) to [short, *-] ++(up:1.25) to [C, l^=$C$] ++(right:2.25) -| (opamp.out);
-						\draw[]	($(opamp.-)-(2,0)$) to [sV, l_=$v_{in}(t)$] ($(opamp.-)-(2,1.5)$) node[ground] {};
+						\draw[]	($(opamp.-)-(2,0)$) to [sV, l_=$v_{in}(t)$] ++(down:2.5) node[tlground] {};
 						\draw[]	($(opamp.-)-(2,0)$) node[below left] {+} to [R, l^=$R$] (opamp.-);
 					\end{tikzpicture}
 				</latex-image>
@@ -609,7 +650,7 @@
 			<p>
 				<ul>
 					<li><p>First-order describes the highest-order derivative in the equation. A first-order equation has a first-derivative term and no higher-order derivatives.</p></li>
-					<li><p>Linear describes the operations that occur on the function. If the operations are linear, then the equation is linear.</p></li>
+					<li><p>Linear describes the operations that occur in the function. If the operations are linear, then the equation is linear.</p></li>
 					<li><p>Ordinary describes the types of derivatives in the equation. If there are no partial derivatives, then the equation is ordinary.</p></li>
 				</ul>
 			</p>
@@ -622,7 +663,7 @@
 
 			<p><md number="yes" xml:id="ch5-firstorderlinearode-standard">\frac{df(t)}{dt} + \frac{1}{\tau} f(t) = y(t)</md></p>
 
-			<p>When the function <m>y(t)</m> as defined in <xref ref="ch5-firstorderlinearode-standard" /> is equal to zero, the equation is said to be <term>homogeneous</term>, otherwise the equation is non-homogeneous. In this chapter and in <xref ref="ch6-inductors" />, <m>y(t)</m> will either be zero (homogeneous) or equal to a constant (non-homogeneous). This textbook will introduce non-constant non-homogeneous solutions in <xref ref="ch7-secondorder" /> and cover them in detail in <xref ref="ch11-laplace" />, which will provide a much simpler method for solving this type of circuit.</p>
+			<p>When the function <m>y(t)</m> as defined in <xref ref="ch5-firstorderlinearode-standard" /> is equal to zero, the equation is said to be <term>homogeneous</term>, otherwise the equation is <term>non-homogeneous</term>. In this chapter and in <xref ref="ch6-inductors" />, <m>y(t)</m> will either be zero (homogeneous) or equal to a constant (non-homogeneous). This textbook will introduce non-constant non-homogeneous solutions in <xref ref="ch7-secondorder" /> and cover them in detail in <xref ref="ch11-laplace" />, which will provide a much simpler method for solving this type of circuit.</p>
 
 			<p>In order to obtain the exact solution of a first-order, linear, ordinary differential equation, we will need to know the initial value of the function being described by the equation. If the equation is non-homogeneous, we will also need to know the value of the particular solution. In the non-homogeneous circuits introduced in this chapter and in <xref ref="ch6-inductors" />, the particular solution will be equal to the final steady-state value of the function being described by the equation.</p>
 
@@ -688,7 +729,7 @@
   				</image>
 			</figure>
 
-			<p>The differential equation for the circuit will be derived at the instant the switch changes position at <m>t = 0^+</m>. The circuit diagram in this condition is shown in <xref ref="homogeneousrcatzeroplus" />. (In general, the differential equation does not need to be re-derived for other RC circuits unless the circuit contains one or more dependent sources or op-amps. In those scenarios, the differential equation can be derived to calculate the time constant of the circuit, but it is not explicitly necessary.)</p>
+			<p>The differential equation for the circuit will be derived at the instant the switch changes position at <m>t = 0^+</m>. The circuit diagram in this condition is shown in <xref ref="homogeneousrcatzeroplus" />.</p>
 
 			<figure xml:id="homogeneousrcatzeroplus">
   				<caption>The RC circuit from <xref ref="homogeneousrccircuitfigure" /> drawn at <m>t = 0^+</m>.</caption>
@@ -705,17 +746,13 @@
   				</image>
 			</figure>
 
-			<p>Kirchhoff's laws can be used to derive the differential equation describing this circuit. The capacitor and resistor are in series with each other. Therefore, the current through both elements must be equal. Because the direction <m>i_R(t)</m> opposes the direction of <m>i(t)</m>, a negative sign is used in this relationship, defined in <xref ref="ch5-kclhomogeneousrc" />.</p>
+			<p>Kirchhoff's laws can be used to derive the differential equation describing this circuit. The capacitor and resistor are in series with each other. Therefore, the current through both elements must be equal. Because the direction of <m>i_R(t)</m> opposes the direction of <m>i(t)</m>, a negative sign is used in this relationship, defined in <xref ref="ch5-kclhomogeneousrc" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch5-kclhomogeneousrc">i_R(t) = -i(t)</md>
 			</p>
 
-			<p>The voltage-current relationship in a capacitor (<xref ref="ch5-ivcapequation" />) can be used to define the current through the capacitor, defined in <xref ref="ch5-cdvdthomogeneousrc" />.</p>
-
-			<p>
-				<md number="yes" xml:id="ch5-cdvdthomogeneousrc">C\frac{dv(t)}{d(t)} = i(t)</md>
-			</p>
+			<p>The voltage-current relationship in a capacitor, <xref ref="ch5-ivcapequation" />, can be used to define the current through the capacitor.</p>
 
 			<p>Ohm's law can be used to relate the current through the resistor and the voltage dropped over the resistor. Because the resistor and capacitor are in parallel, both share an equivalent voltage drop of <m>v(t)</m>. This relationship is defined in <xref ref="ch5-ohmshomogeneousrc" />.</p>
 
@@ -723,7 +760,7 @@
 				<md number="yes" xml:id="ch5-ohmshomogeneousrc">i_R(t) = \frac{v(t)}{R}</md>
 			</p>
 
-			<p>Plug <xref ref="ch5-cdvdthomogeneousrc" /> and <xref ref="ch5-ohmshomogeneousrc" /> into <xref ref="ch5-kclhomogeneousrc" /> and put the equation into standard form as described in <xref ref="ch5-first-order-linear-ODEs" />. This differential equation is given in <xref ref="ch5-standarddiffeqhomogeneousrc" />. The derivation is shown in <xref ref="ch5-derivationhomogeneousrc" />.</p>
+			<p>Plug <xref ref="ch5-ivcapequation" /> and <xref ref="ch5-ohmshomogeneousrc" /> into <xref ref="ch5-kclhomogeneousrc" /> and put the equation into standard form as described in <xref ref="ch5-first-order-linear-ODEs" />. This differential equation is given in <xref ref="ch5-standarddiffeqhomogeneousrc" />. The derivation is shown in <xref ref="ch5-derivationhomogeneousrc" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch5-standarddiffeqhomogeneousrc">\frac{dv(t)}{dt} + \frac{1}{RC}v(t) = 0</md>
@@ -746,13 +783,15 @@
 				<md number="yes" xml:id="ch5-homogeneousrctransient">v(t) = v(0^+) \textrm{e}^{-\frac{t}{\tau}}u(t) + v(0^-)u(-t)</md>
 			</p>
 
-			<p>The quantity <m>\tau</m> is the time constant of the circuit. It defines how quickly the voltage and current change at any point in the circuit. Larger <m>\tau</m> values imply that the capacitor will take a longer time to discharge. When comparing the homogeneous transient response given in <xref ref="ch5-standarddiffeqhomogeneousrc" /> with the standard form of a differential equation shown in <xref ref="ch5-firstorderlinearode-standard" />, we can find the value of <m>\tau</m>, given in <xref ref="ch5-taurcequation" />, where <m>R</m> is the equivalent resistance as seen by the capacitor (assuming there are no dependent sources or op-amps present in the circuit). If there are dependent sources or op-amps in the circuit, the Th&#233;venin equivalent circuit seen by the capacitor can be used to determine this equivalent resistance. (Alternatively, the differential equation can be derived from the circuit without doing a Th&#233;venin equivalence, and <m>\tau</m> can be determined by analyzing the coefficient <m>a_0</m> of the equation in standard form.)</p>
+			<p>The quantity <m>\tau</m> is the time constant of the circuit. It defines how quickly the voltage and current change at any point in the circuit. Larger <m>\tau</m> values imply that the capacitor will take a longer time to discharge.</p>
+			
+			<p>When comparing the homogeneous transient response given in <xref ref="ch5-standarddiffeqhomogeneousrc" /> with the standard form of a differential equation shown in <xref ref="ch5-firstorderlinearode-standard" />, we can find the value of <m>\tau</m>, given in <xref ref="ch5-taurcequation" />, where <m>R</m> is the equivalent resistance as seen by the capacitor (assuming there are no dependent sources or op-amps present in the circuit). If there are dependent sources or op-amps in the circuit, the Th&#233;venin equivalent resistance seen by the capacitor can be used to calculate this equivalent resistance. (Alternatively, the differential equation can be derived from the circuit without deriving a Th&#233;venin equivalent circuit, and <m>\tau</m> can be determined by analyzing the coefficient <m>a_0</m> of the differential equation in standard form.)</p>
 
 			<p>
 				<md number="yes" xml:id="ch5-taurcequation">\tau = RC</md>
 			</p>
 
-			<p>Using <xref ref="ch5-ivcapequation" />, the transient response of current through the discharging circuit can also be determined for times when <m>t \geq 0</m>. This is shown in <xref ref="ch5-homogeneousrccurrent" /> and derived in <xref ref="ch5-homogeneousrccurrentderivation" />. Note that because the capacitor acts as an open in DC steady-state conditions, the current through the circuit will be zero until <m>t = 0^+</m>.</p>
+			<p>Using <xref ref="ch5-ivcapequation" />, the transient response of current through the discharging capacitor can also be derived. This is shown in <xref ref="ch5-homogeneousrccurrent" /> and derived in <xref ref="ch5-homogeneousrccurrentderivation" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch5-homogeneousrccurrent">i(t) = \frac{-v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)</md>
@@ -762,18 +801,13 @@
 				<p>
 					<md>
 						<mrow>i(t) \amp= C\frac{dv(t)}{dt}</mrow>
-						<mrow>\amp= C\frac{d}{dt}\left(v(0^+) \textrm{e}^{-\frac{t}{\tau}}\right)</mrow>
-						<mrow>\amp= Cv(0^+)\frac{d}{dt}\left(\textrm{e}^{-\frac{t}{\tau}}\right)</mrow>
-						<mrow>\amp= -\frac{Cv(0^+)}{\tau}\textrm{e}^{-\frac{t}{\tau}}</mrow>
-						<mrow>\amp= -\frac{Cv(0^+)}{RC}\textrm{e}^{-\frac{t}{\tau}}</mrow>
-						<mrow>\amp= -\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}</mrow>
+						<mrow>\amp= C\frac{d}{dt}\left(v(0^+) \textrm{e}^{-\frac{t}{\tau}}u(t) + v(0^-)u(-t)\right)</mrow>
+						<mrow>\amp= C\frac{d}{dt}\left(v(0^+) \textrm{e}^{-\frac{t}{\tau}}u(t)\right) + C\frac{d}{dt}\left(v(0^-)u(-t)\right)</mrow>
+						<mrow>\amp= Cv(0^+)\frac{d}{dt}\left( \textrm{e}^{-\frac{t}{\tau}}\right)u(t) + Cv(0^-)\frac{d}{dt}\left(1\right)u(-t)</mrow>
+						<mrow>\amp= -\frac{Cv(0^+)}{\tau}\textrm{e}^{-\frac{t}{\tau}}u(t) + 0u(-t)</mrow>
+						<mrow>\amp= -\frac{Cv(0^+)}{RC}\textrm{e}^{-\frac{t}{\tau}}u(t)</mrow>
+						<mrow>\amp= -\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)</mrow>
 					</md>
-				</p>
-
-				<p>Because this was derived for times where <m>t \geq 0</m>, that can be explicitly described mathematically by multiplying the equation by the unit step function.</p>
-
-				<p>
-					<md>i(t) = -\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)</md>
 				</p>
 			</proof>
 
@@ -781,10 +815,10 @@
 				<title>Homogeneous discharging transient response</title>
 				
 				<statement>
-					<p>Calculate <m>v(t)</m> and <m>i(t)</m> for the circuit shown in <xref ref="dischargercexample1" />. The switch is closed for a very long time before opening at a time of 0<nbsp />seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of 0<nbsp />seconds.</p>
 
-					<figure xml:id="dischargercexample1">
-  						<caption>A homogeneous RC circuit.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="100%" xml:id="ch5-dischargercexample1">
 							<shortdescription>Circuit with 3 meshes and 5 nodes consisting of a 20V source, four 10k resistors (labeled A-D), 500nF capacitor, and SPST switch. The high-potential end of the 20V source connects to 10k (A) at node a. The 10k (A) resistor and one end of the SPST switch connect at node b. The other end of the SPST switch, 10k (B), capacitor, and 10k (C) connect at node c. The 10k (C) and 10k (D) connect at node d. The low-potential end of the 20V source, 10k (B), capacitor, and 10k (D) connect at node e. Voltage v(t) is defined over the capacitor from node c to node e. Branch current i(t) is defined through the capacitor from node c to node e. The SPST switch is depicted as opening.</shortdescription>
 							<latex-image>
@@ -806,30 +840,7 @@
 
 					<p>After the switch opens, the capacitor is no longer connected to any power sources. This confirms that the circuit is homogeneous and that <m>v(\infty) = 0</m>.</p>
 
-					<p>First, calculate the initial voltage drop over the capacitor by analyzing the steady-state condition of the circuit when <m>t \lt 0</m>. This condition is depicted in <xref ref="dischargercexample2" />.</p>
-
-					<figure xml:id="dischargercexample2">
-  						<caption>A homogeneous RC circuit in the initial steady-state condition.</caption>
-						<image width="100%" xml:id="ch5-dischargercexample2">
-							<shortdescription>Circuit with 2 meshes and 5 nodes consisting of a 20V source, four 10k resistors (labeled A-D), and SPST switch. The high-potential end of the 20V source connects to 10k (A) at node a. The 10k (A) resistor and one end of the SPST switch connect at node b. The other end of the SPST switch, 10k (B), and 10k (C) connect at node c. The 10k (C) and 10k (D) connect at node d. The low-potential end of the 20V source, 10k (B), and 10k (D) connect at node e. Voltage v(0) is defined from node c to node e. The SPST switch is depicted as closed.</shortdescription>
-							<latex-image>
-								\begin{tikzpicture}[font=\sffamily]
-									\def\H{2.25}
-									\draw[]	(0,\H) to [V, l_=20~V] ++(down:\H);
-									\draw[]	(0,\H) to [R, l^=10~k$\Omega$] ++(right:\H);
-									\draw[]	(\H,\H) to [cute closed switch] ++(right:\H);
-									\draw[]	(2*\H,\H) to [R, l_=10~k$\Omega$, *-*] ++(down:\H);
-									\draw[]	(2*\H,\H) to [short] ++(right:\H);
-									\draw[]	(3*\H,\H) to [open, v^=$v(0)$, *-*] ++(down:\H);
-									\draw[]	(3*\H,\H) to [R, l^=10~k$\Omega$] ++(right:\H);
-									\draw[]	(4*\H,\H) to [R, l^=10~k$\Omega$] ++(down:\H);
-									\draw[]	(0,0) to [short] ++(right:4*\H);
-								\end{tikzpicture}
-							</latex-image>
-  						</image>
-					</figure>
-
-					<p>This circuit can be simplified by combining the two resistors that are in series. The closed switch will not be drawn in subsequent circuit diagrams as it acts as a short in the DC steady-state.</p>
+					<p>First, calculate the initial voltage drop over the capacitor by analyzing the steady-state condition of the circuit when <m>t \lt 0</m>. This condition is depicted below. The capacitor can be replaced by an open and the closed switch can be replaced by a short.</p>
 
 					<figure>
   						<caption></caption>
@@ -850,7 +861,7 @@
   						</image>
 					</figure>
 
-					<p>The two resistors in parallel with <m>v(0)</m> can be reduced to their equivalent resistance. The voltage is dropped over this resistor.</p>
+					<p>The two resistors in parallel with <m>v(0)</m> can be reduced to their equivalent resistance. The voltage <m>v(0)</m> is dropped over this resistance.</p>
 
 					<figure>
   						<caption></caption>
@@ -920,7 +931,7 @@
   						</image>
 					</figure>
 
-					<p>The two 10<nbsp />k&#8486; on the right side of the circuit diagram are in series with each other and can be reduced.</p>
+					<p>The two 10<nbsp />k&#8486; resistors on the right side of the circuit diagram are in series with each other and can be reduced.</p>
 
 					<figure>
   						<caption></caption>
@@ -939,7 +950,7 @@
   						</image>
 					</figure>
 
-					<p>The 10<nbsp />k&#8486; is in parallel with the 20<nbsp />k&#8486; resistor. The equivalent resistance can be calculated.</p>
+					<p>The 10<nbsp />k&#8486; resistor is in parallel with the 20<nbsp />k&#8486; resistor. The equivalent resistance can be calculated.</p>
 
 					<p>
 						<md>
@@ -958,7 +969,7 @@
 						</md>
 					</p>
 
-					<p>The equations for <m>v(t)</m> and <m>i(t)</m> can now be derived using <xref ref="ch5-homogeneousrctransient" /> and <xref ref="ch5-homogeneousrccurrentderivation" />.</p>
+					<p>The equations for <m>v(t)</m> and <m>i(t)</m> can now be derived using <xref ref="ch5-homogeneousrctransient" /> and <xref ref="ch5-homogeneousrccurrent" />.</p>
 
 					<p>
 						<md>
@@ -997,10 +1008,10 @@
 				<title>Homogeneous RC circuit with dependent source</title>
 				
 				<statement>
-					<p>Calculate <m>v(t)</m> and <m>i(t)</m> for the circuit shown in <xref ref="dischargercexampledependent1" />. The switch is in position a for a very long time before moving to position b at a time of 0<nbsp />seconds. The unit of the proportionality constant of the CCVS is V/A.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> for the circuit shown below. The switch is in position a for a very long time before moving to position b at a time of 0<nbsp />seconds. The unit of the proportionality constant of the CCVS is V/A.</p>
 
-					<figure xml:id="dischargercexampledependent1">
-  						<caption>A homogeneous RC circuit with a dependent source.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="80%" xml:id="ch5-dischargercexampledependent1">
 							<shortdescription>Circuit with 2 meshes and 6 nodes consisting of a 6V source, 100ohm, 22ohm, 3.3uF, SPDT switch, and CCVS of 5i(t). The high-potential end of the 6V source connects to the 100ohm at node d. The 100ohm and output a of the SPDT switch connect at node a. Output b of the SPDT switch and the 22ohm connect at node b. The input of the SPDT switch connects to the high-potential end of the CCVS at node c. The low-potential end of the CCVS connects to the 3.3uF at node e. The low-potential end of the 6V source, 22ohm, and 2.2uF connect at node f. Voltage v(t) drops over the capacitor from node e to node f. Branch current i(t) is defined through the capacitor from node e to node f. The SPDT switch is depicted as moving from position a to position b.</shortdescription>
 							<latex-image>
@@ -1016,26 +1027,7 @@
   						</image>
 					</figure>
 
-					<p>First, calculate the initial voltage drop over the capacitor by analyzing the steady-state condition of the circuit when <m>t \lt 0</m>.</p>
-
-					<figure xml:id="dischargercexampledependent2">
-  						<caption></caption>
-						<image width="70%" xml:id="ch5-dischargercexampledependent2">
-							<shortdescription>Circuit with 1 mesh and 5 nodes consisting of a 6V source, 100ohm, 22ohm, SPDT switch, and CCVS of 5i(0). The high-potential end of the 6V source connects to the 100ohm at node d. The 100ohm and output a of the SPDT switch connect at node a. Output b of the SPDT switch and the 22ohm connect at node b. The input of the SPDT switch connects to the high-potential end of the CCVS at node c. The low-potential end of the CCVS connects to node e. The low-potential end of the 6V source and 22ohm connect at node e. Voltage v(0) drops from node c to node e. The SPDT switch is in position a.</shortdescription>
-							<latex-image>
-								\begin{tikzpicture}[font=\sffamily]
-									\def\H{2.5}
-									\node[cute spdt up, anchor=out 1, xscale=-1]	at (\H,\H) (S1) {};
-									\draw[]	(0,\H) to [V, l_=6~V] ++(down:\H) |- ($(S1.out 2)-(0,\H)$);
-									\draw[]	(0,\H) to [R, l^=100~$\Omega$] ++(right:\H) node[above] {a};
-									\draw[]	(S1.out 2) node[left] {b} to [R, l_=22~$\Omega$, -*] ++(down:\H);
-									\draw[]	(S1.in) to [cV, l^=$5i(0)$] ++(right:\H) to [open, v^=$v(0)$] ++(down:\H+0.4) |- ($(S1.out 2)-(0,\H)$);
-								\end{tikzpicture}
-							</latex-image>
-  						</image>
-					</figure>
-
-					<p>The 22<nbsp />&#8486; resistor does not contribute to the circuit.</p>
+					<p>First, calculate the initial voltage drop over the capacitor by analyzing the steady-state condition of the circuit when <m>t \lt 0</m>. The capacitor can be replaced by an open, and the closed switch can be replaced by a short. The 22<nbsp />&#8486; resistor does not contribute to the circuit in the initial steady-state condition and can be removed from the circuit diagram.</p>
 
 					<figure xml:id="dischargercexampledependent3">
   						<caption></caption>
@@ -1183,16 +1175,13 @@
   						</image>
 					</figure>
 
-					<p>Use <xref ref="ch5-ivcapequation" /> to calculate the current through the capacitor. Then use KVL to derive a value for <m>v(t)</m> in terms of <m>i(t)</m>, the resistor, and the CCVS.</p>
+					<p>Use KVL to derive a value for <m>v(t)</m> in terms of <m>i(t)</m>, the resistor, and the CCVS.</p>
 
 					<p>
-						<md number="yes">
-							<mrow xml:id="ch5-example-diffeq-it">i(t) \amp= C\frac{dv(t)}{dt}</mrow>
-							<mrow xml:id="ch5-example-diffeq-vt">v(t) \amp= -Ri(t) - r_mi(t)</mrow>
-						</md>
+						<md number="yes" xml:id="ch5-example-diffeq-vt">v(t) = -Ri(t) - r_mi(t)</md>
 					</p>
 
-					<p>Plug <xref ref="ch5-example-diffeq-it" /> into <xref ref="ch5-example-diffeq-vt" /> and solve for the differential equation in standard form.</p>
+					<p>Plug <xref ref="ch5-ivcapequation" /> into <xref ref="ch5-example-diffeq-vt" /> and solve for the differential equation in standard form.</p>
 
 					<p>
 						<md>
@@ -1221,7 +1210,7 @@
 		<subsection xml:id="ch5-charging">
 			<title>Charging from Zero Transient Response</title>
 
-			<p>The charging from zero transient response of a circuit corresponds to how the voltage and/or current changes with respect to a sudden application of voltage to the circuit components. This is another specific case of the general RC transient response, which will be discussed in <xref ref="ch5-generaltransient" />. This section specifically corresponds to scenarios where a fully discharged capacitor is suddenly connected to a circuit containing at least one resistive element and a power supply. The circuit diagram shown in <xref ref="nonhomogeneousrccircuitfigure" /> will be used to analyze the charging response. The switch is in position b for a long time before suddenly moving to position a at time <m>t=0</m>.</p>
+			<p>The charging from zero transient response of a circuit corresponds to how the voltage and/or current changes with respect to a sudden application of DC power to previously discharged circuit components. This is another specific case of the general RC transient response, which will be discussed in <xref ref="ch5-generaltransient" />. This section specifically corresponds to scenarios where a fully discharged capacitor is suddenly connected to a circuit containing at least one resistive element and a power supply. The circuit diagram shown in <xref ref="nonhomogeneousrccircuitfigure" /> will be used to analyze the charging response. The switch is in position b for a long time before suddenly moving to position a at time <m>t=0</m>.</p>
 
 			<figure xml:id="nonhomogeneousrccircuitfigure">
   				<caption>An RC circuit used to analyze the charging from zero transient response.</caption>
@@ -1257,7 +1246,7 @@
   				</image>
 			</figure>
 
-			<p>Due to KCL, the current through the resistor is equal to the current through the capacitor. Use Ohm's law to calculate the current through the resistor and equate it to <m>i(t)</m>. This is shown in <xref ref="ch5-chargingtransientkvl" />.</p>
+			<p>Due to KCL, the current through the resistor <m>R</m> is equal to the current through the capacitor. Use Ohm's law to calculate the current through the resistor and equate it to <m>i(t)</m>. This is shown in <xref ref="ch5-chargingtransientkvl" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch5-chargingtransientkvl">i(t) = \frac{V_{IN} -v(t)}{R}</md>
@@ -1288,7 +1277,7 @@
 
 			<p>Similar to the homogeneous RC circuit, the time constant <m>\tau</m> defines how quickly (or slowly) the capacitor responds to changes in voltage. The equation for the time constant continues to be defined by <xref ref="ch5-taurcequation" /> and is calculated in the same manner as with homogeneous RC circuits.</p>
 
-			<p><xref ref="ch5-ivcapequation" /> can be used to calculate the current through the capacitor during the charging process. The result is shown in <xref ref="ch5-rctransientchargingcurrentequation" /> and derived in <xref ref="ch5-rcchargingcurrentproof" /> for times when <m>t \geq 0</m>.</p>
+			<p><xref ref="ch5-ivcapequation" /> can be used to calculate the current through the capacitor during the charging process. The result is shown in <xref ref="ch5-rctransientchargingcurrentequation" /> and derived in <xref ref="ch5-rcchargingcurrentproof" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch5-rctransientchargingcurrentequation">i(t) = \frac{v(\infty)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)</md>
@@ -1298,20 +1287,14 @@
 				<p>
 					<md>
 						<mrow>i(t) \amp= C\frac{dv(t)}{dt}</mrow>
-						<mrow>\amp= C\frac{d}{dt}\left(v(\infty)\left[1-\textrm{e}^{-\frac{t}\tau}\right]\right)</mrow>
-						<mrow>\amp= v(\infty)C\frac{d}{dt}\left(1-\textrm{e}^{-\frac{t}\tau}\right)</mrow>
-						<mrow>\amp= v(\infty)C\frac{d}{dt}1 -v(\infty)C\frac{d}{dt}\left(\textrm{e}^{-\frac{t}\tau}\right)</mrow>
-						<mrow>\amp= 0 -v(\infty)C\frac{d}{dt}\left(\textrm{e}^{-\frac{t}\tau}\right)</mrow>
-						<mrow>\amp= -\frac{v(\infty)C}{-\tau}\textrm{e}^{-\frac{t}\tau}</mrow>
-						<mrow>\amp= \frac{v(\infty)C}{RC}\textrm{e}^{-\frac{t}\tau}</mrow>
-						<mrow>\amp= \frac{v(\infty)}{R}\textrm{e}^{-\frac{t}\tau}</mrow>
+						<mrow>\amp= C\frac{d}{dt}\left(v(\infty)\left[1-\textrm{e}^{-\frac{t}{\tau}}\right]u(t)\right)</mrow>
+						<mrow>\amp= v(\infty)C\frac{d}{dt}\left(1-\textrm{e}^{-\frac{t}\tau}\right)u(t)</mrow>
+						<mrow>\amp= v(\infty)C\frac{d}{dt}1 -v(\infty)C\frac{d}{dt}\left(\textrm{e}^{-\frac{t}\tau}\right)u(t)</mrow>
+						<mrow>\amp= 0 -v(\infty)C\frac{d}{dt}\left(\textrm{e}^{-\frac{t}\tau}\right)u(t)</mrow>
+						<mrow>\amp= -\frac{v(\infty)C}{-\tau}\textrm{e}^{-\frac{t}\tau}u(t)</mrow>
+						<mrow>\amp= \frac{v(\infty)C}{RC}\textrm{e}^{-\frac{t}\tau}u(t)</mrow>
+						<mrow>\amp= \frac{v(\infty)}{R}\textrm{e}^{-\frac{t}\tau}u(t)</mrow>
 					</md>
-				</p>
-
-				<p>Because this was derived for times where <m>t \geq 0</m>, that can be explicitly described mathematically by multiplying the equation by the unit step function.</p>
-
-				<p>
-					<md>i(t) = \frac{v(\infty)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)</md>
 				</p>
 			</proof>
 
@@ -1319,10 +1302,10 @@
 				<title>Charging transient response</title>
 				
 				<statement>
-					<p>Calculate <m>v(t)</m> and <m>i(t)</m> for the circuit shown in <xref ref="chargercexample1" />. The switch is open for a very long time before closing at a time of 0<nbsp />seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> for the circuit shown below. The switch is open for a very long time before closing at a time of 0<nbsp />seconds.</p>
 
-					<figure xml:id="chargercexample1">
-  						<caption>A non-homogeneous RC circuit.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="100%" xml:id="ch5-chargercexample1">
 							<shortdescription>Circuit with 3 meshes and 5 nodes consisting of an 800uA source, 40k resistor, 10k resistor, 30k resistor, 5k resistor, 20nF capacitor, and SPST switch. The 800uA source, 40k, and SPST switch connect at node a. The 800uA source flows into node a. The other end of the SPST switch and 10k connect at node b. The 10k, 30k, and 5k connect at node c. The 5k and capacitor connect at node d. The 800uA source, 40k, 30k, and capacitor connect at node e. Voltage v(t) is defined over the capacitor from node d to node e. Branch current i(t) flows through the capacitor from node d to node e. The SPST is depicted as closing.</shortdescription>
 							<latex-image>
@@ -1343,7 +1326,7 @@
 
 					<p>In the initial steady-state, the capacitor is disconnected from any source and has fully discharged. Therefore, <m>v(0) = 0</m>.</p>
 
-					<p>The final steady-state conditions can be calculated. Re-draw the circuit to represent the time after the switch closes. Because the circuit is under DC conditions, the capacitor can be represented as an open.</p>
+					<p>The final steady-state conditions can be calculated. Re-draw the circuit to represent the time after the switch closes. Because the circuit is under DC conditions, the capacitor can be represented as an open. The closed switch can be replaced by a short.</p>
 
 					<figure>
   						<caption></caption>
@@ -1351,15 +1334,14 @@
 							<shortdescription>Circuit with 2 meshes and 5 nodes consisting of an 800uA source, 40k resistor, 10k resistor, 30k resistor, 5k resistor, and SPST switch. The 800uA source, 40k, and SPST switch connect at node a. The 800uA source flows into node a. The other end of the SPST switch and 10k connect at node b. The 10k, 30k, and 5k connect at node c. The 5k connects at node d. The 800uA source, 40k, and 30k connect at node e. Voltage v(infinity) is defined from node d to node e. The SPST is depicted as closed.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw (0,0) to [I, l^=800~$\mu$A] (0,2.5);
-									\draw (0,2.5) to [short] (2,2.5);
-									\draw (2,2.5) to [R, l_=40~k$\Omega$, *-*] (2,0);
-									\draw (2,2.5) to [cute closed switch] (4,2.5);
-									\draw (4,2.5) to [R, l^=10~k$\Omega$] (6,2.5);
-									\draw (6,2.5) to [R, l_=30~k$\Omega$, *-*] (6,0);
-									\draw (6,2.5) to [R, l^=5~k$\Omega$] (8,2.5);
-									\draw (8,2.5) to [open, v^=$v(\infty)$] (8,0);
-									\draw (0,0) to [short] (8,0);
+									\draw[]	(0,0) to [I, l^=800~$\mu$A]				(0,2.5);
+									\draw[]	(0,2.5) to [short]						(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=40~k$\Omega$, *-*]	(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l^=10~k$\Omega$]		(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=30~k$\Omega$, *-*]	(5,0);
+									\draw[]	(5,2.5) to [R, l^=5~k$\Omega$]			(7.5,2.5);
+									\draw[]	(7.5,2.5) to [open, v^=$v(\infty)$]		(7.5,0);
+									\draw[]	(0,0) to [short]						(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1393,7 +1375,7 @@
   						</image>
 					</figure>
 
-					<p>Use the voltage divider rule to calculate <m>v(\infty)</m>. Note that the 5<nbsp />k&#8486; resistor does not contribute to <m>v(\infty)</m> as no current flows through it in a steady-state condition.</p>
+					<p>Note that the 5<nbsp />k&#8486; resistor does not contribute to <m>v(\infty)</m> as no current flows through it in a steady-state condition. The equivalent circuit contains three resistors in series with a voltage source. Use the voltage divider rule to calculate <m>v(\infty)</m>.</p>
 
 					<p>
 						<md>
@@ -1403,7 +1385,7 @@
 						</md>
 					</p>
 
-					<p>Analyze the charging circuit. Re-draw for time <m>t \geq 0</m>.</p>
+					<p>Analyze the charging circuit. Re-draw for time <m>t = 0^+</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -1411,15 +1393,14 @@
 							<shortdescription>Circuit with 3 meshes and 5 nodes consisting of an 800uA source, 40k resistor, 10k resistor, 30k resistor, 5k resistor, 20nF capacitor, and SPST switch. The 800uA source, 40k, and SPST switch connect at node a. The 800uA source flows into node a. The other end of the SPST switch and 10k connect at node b. The 10k, 30k, and 5k connect at node c. The 5k and capacitor connect at node d. The 800uA source, 40k, 30k, and capacitor connect at node e. Voltage v(t) is defined over the capacitor from node d to node e. Branch current i(t) flows through the capacitor from node d to node e. The SPST is depicted as closed.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw (0,0) to [I, l^=800~$\mu$A] (0,2.5);
-									\draw (0,2.5) to [short] (2,2.5);
-									\draw (2,2.5) to [R, l_=40~k$\Omega$, *-*] (2,0);
-									\draw (2,2.5) to [cute closed switch] (4,2.5);
-									\draw (4,2.5) to [R, l^=10~k$\Omega$] (6,2.5);
-									\draw (6,2.5) to [R, l_=30~k$\Omega$, *-*] (6,0);
-									\draw (6,2.5) to [R, l^=5~k$\Omega$] (8,2.5);
-									\draw (8,2.5) to [C, l_=20~nF, v^=$v(t)$, i_=$i(t)$] (8,0);
-									\draw (0,0) to [short] (8,0);
+									\draw[]	(0,0) to [I, l^=800~$\mu$A]							(0,2.5);
+									\draw[]	(0,2.5) to [short]									(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=40~k$\Omega$, *-*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [R, l^=10~k$\Omega$]					(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=30~k$\Omega$, *-*]				(5,0);
+									\draw[]	(5,2.5) to [R, l^=5~k$\Omega$]						(7.5,2.5);
+									\draw[]	(7.5,2.5) to [C, l_=20~nF, v^=$v(t)$, i_=$i(t)$] 	(7.5,0);
+									\draw[]	(0,0) to [short]									(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1523,25 +1504,20 @@
 				<p>
 					<md>
 						<mrow>i(t) \amp= C\frac{dv(t)}{dt}</mrow>
-						<mrow>\amp=C\frac{d}{dt}\left[v(\infty) + \left( v(0^+) - v(\infty) \right) \textrm{e}^{-\frac{t}{\tau}} \right]</mrow>
-						<mrow>\amp=C\frac{d}{dt}\left[v(\infty) + v(0^+)\textrm{e}^{-\frac{t}{\tau}} - v(\infty)\textrm{e}^{-\frac{t}{\tau}}\right]</mrow>
-						<mrow>\amp=C\frac{d}{dt}v(\infty) + C\frac{d}{dt}v(0^+)\textrm{e}^{-\frac{t}{\tau}} - C\frac{d}{dt}v(\infty)\textrm{e}^{-\frac{t}{\tau}}</mrow>
-						<mrow>\amp=0 + v(0^+)C\frac{d}{dt}\textrm{e}^{-\frac{t}{\tau}} - v(\infty)C\frac{d}{dt}\textrm{e}^{-\frac{t}{\tau}}</mrow>
-						<mrow>\amp=\frac{v(0^+)C}{-\tau}\textrm{e}^{-\frac{t}{\tau}} - \frac{v(\infty)C}{-\tau}\textrm{e}^{-\frac{t}{\tau}}</mrow>
-						<mrow>\amp=-\frac{v(0^+)C}{RC}\textrm{e}^{-\frac{t}{\tau}} + \frac{v(\infty)C}{RC}\textrm{e}^{-\frac{t}{\tau}}</mrow>
-						<mrow>\amp=-\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}} + \frac{v(\infty)}{R}\textrm{e}^{-\frac{t}{\tau}}</mrow>
-						<mrow>\amp=\frac{v(\infty)-v(0^+)}{R} \textrm{e}^{-\frac{t}{\tau}}</mrow>
+						<mrow>\amp=C\frac{d}{dt}\left[\left[v(\infty) + \left( v(0^+) - v(\infty) \right) \textrm{e}^{-\frac{t}{\tau}} \right] u(t) + v(0^-)u(-t)\right]</mrow>
+						<mrow>\amp=C\frac{d}{dt}\left[v(\infty)u(t) + v(0^+)\textrm{e}^{-\frac{t}{\tau}}u(t) - v(\infty)\textrm{e}^{-\frac{t}{\tau}}u(t) + v(0^-)u(-t)\right]</mrow>
+						<mrow>\amp=C\frac{d}{dt}\left(v(\infty)\right)u(t) + C\frac{d}{dt}\left(v(0^+)\textrm{e}^{-\frac{t}{\tau}}\right)u(t) - C\frac{d}{dt}\left(v(\infty)\textrm{e}^{-\frac{t}{\tau}}\right)u(t)</mrow>
+						<mrow>\amp+ C\frac{d}{dt}\left(v(0^-)\right)u(-t)</mrow>
+						<mrow>\amp=0 + v(0^+)C\frac{d}{dt}\left(\textrm{e}^{-\frac{t}{\tau}}\right)u(t) - v(\infty)C\frac{d}{dt}\left(\textrm{e}^{-\frac{t}{\tau}}\right)u(t) + 0</mrow>
+						<mrow>\amp=\frac{v(0^+)C}{-\tau}\textrm{e}^{-\frac{t}{\tau}}u(t) - \frac{v(\infty)C}{-\tau}\textrm{e}^{-\frac{t}{\tau}}u(t)</mrow>
+						<mrow>\amp=-\frac{v(0^+)C}{RC}\textrm{e}^{-\frac{t}{\tau}}u(t) + \frac{v(\infty)C}{RC}\textrm{e}^{-\frac{t}{\tau}}u(t)</mrow>
+						<mrow>\amp=-\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t) + \frac{v(\infty)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)</mrow>
+						<mrow>\amp=\frac{v(\infty)-v(0^+)}{R} \textrm{e}^{-\frac{t}{\tau}}u(t)</mrow>
 					</md>
-				</p>
-
-				<p>Because this was derived for times where <m>t \geq 0</m>, that can be explicitly described mathematically by multiplying the equation by the unit step function.</p>
-
-				<p>
-					<md>i(t) = \frac{v(\infty)-v(0^+)}{R} \textrm{e}^{-\frac{t}{\tau}} u(t)</md>
 				</p>
 			</proof>
 
-			<p>All of the equations in this section of the text have discussed calculating the voltage drop over the capacitor. It is also possible to derive a first-order equation to calculate voltage over or current through any arbitrary component in a circuit. It is important to note that the initial conditions may be discontinuous. This is because while the voltage dropped over a capacitor is continuous for all time, that is not necessarily true for other circuit elements such as resistors, particularly if they are not connected in parallel with a capacitor.</p>
+			<p>All of the equations in this section of the text have discussed calculating the voltage drop over a capacitor. It is also possible to derive a first-order equation to calculate voltage over or current through any arbitrary component in a circuit. It is important to note that the initial conditions may be discontinuous. This is because while the voltage dropped over a capacitor is continuous for all time, that is not necessarily true for other circuit elements such as resistors, particularly if they are not connected in parallel with a capacitor.</p>
 
 			<p>To calculate the transient <alert>voltage</alert> response over a circuit element with a discontinuous voltage, <xref ref="ch5-generaltransientvoltage" /> can still be used. Analyze the circuit in the initial steady-state to calculate <m>v(0^-)</m>. Analyze the circuit in the final steady-state to calculate <m>v(\infty)</m>. Analyze the circuit at the exact moment the conditions change to calculate <m>v(0^+)</m>, using the voltage continuity of the capacitor to help calculate any necessary quantities.</p>
 
@@ -1553,10 +1529,10 @@
 				<title>General transient response</title>
 				
 				<statement>
-					<p>Calculate <m>v(t)</m> and <m>i(t)</m> for the circuit shown in <xref ref="generalrcexample1" />. The switch is open for a very long time before closing at a time of 0<nbsp />seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> for the circuit shown below. The switch is open for a very long time before closing at a time of 0<nbsp />seconds.</p>
 
-					<figure xml:id="generalrcexample1">
-  						<caption>A non-homogeneous RC circuit.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="100%" xml:id="ch5-generalrcexample1">
 							<shortdescription>Circuit with 3 meshes and 5 nodes consisting of a 12V source, 24V source, three 1k resistors (labeled A-C), 40uF capacitor, and SPST switch. The high-potential end of the 12V source connects to 1k (A) at node a. 1k (A), 1k (B), the capacitor, and one end of the SPST switch connect at node b. The other end of the SPST switch and 1k (C) connect at node c. 1k (C) and the high-potential end of the 24V source connect at node d. The low-potential end of both sources, 1k (B), and the capacitor connect at node e. Voltage v(t) drops over the capacitor from node b to node e. Branch current i(t) flows through the capacitor from node b to node e. The SPST switch is depicted as closing.</shortdescription>
 							<latex-image>
@@ -1576,11 +1552,11 @@
   						</image>
 					</figure>
 
-					<p>Analyze the initial steady-state voltage over the capacitor.</p>
+					<p>Analyze the initial steady-state voltage over the capacitor. The capacitor can be replaced by an open. The right-hand side of the circuit is disconnected by the open switch.</p>
 
 					<figure>
   						<caption></caption>
-						<image width="100%" xml:id="ch5-generalrcexample2">
+						<image width="60%" xml:id="ch5-generalrcexample2">
 							<shortdescription>Circuit with 2 meshes and 5 nodes consisting of a 12V source, 24V source, three 1k resistors (labeled A-C), and SPST switch. The high-potential end of the 12V source connects to 1k (A) at node a. 1k (A), 1k (B), and one end of the SPST switch connect at node b. The other end of the SPST switch and 1k (C) connect at node c. 1k (C) and the high-potential end of the 24V source connect at node d. The low-potential end of both sources and 1k (B) connect at node e. Voltage v(0) drops from node b to node e. The SPST switch is depicted as open.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -1590,16 +1566,13 @@
 									\draw[]	(\H,\H) to [R, l_=1~k$\Omega$, *-*] ++(down:\H);
 									\draw[]	(\H,\H) to [short] ++(right:\H);
 									\draw[]	(2*\H,\H) to [open, v^=$v(0)$] ++(down:\H);
-									\draw[]	(2*\H,\H) to [cute open switch] ++(right:\H);
-									\draw[]	(3*\H,\H) to [R, l^=1~k$\Omega$] ++(right:\H);
-									\draw[]	(4*\H,\H) to [V, l_=24~V] ++(down:\H);
-									\draw[]	(0,0) to [short] ++(right:4*\H);
+									\draw[]	(0,0) to [short] ++(right:2*\H);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
 					</figure>
 
-					<p>The 24<nbsp />V source is disconnected from the circuit at this time. The initial voltage drop over the capacitor is equal to the voltage drop over the 1<nbsp />k&#8486; resistor that's in parallel with the capacitor, which can be calculated using the voltage divider rule.</p>
+					<p>Use the voltage divider rule to calculate <m>v(0)</m>.</p>
 
 					<p>
 						<md>
@@ -1609,11 +1582,11 @@
 						</md>
 					</p>
 
-					<p>Analyze the final steady-state voltage over the capacitor.</p>
+					<p>Analyze the circuit in its final steady-state condition. The capacitor can be replaced by an open, and the closed switch can be replaced by a short.</p>
 
 					<figure>
   						<caption></caption>
-						<image width="100%" xml:id="ch5-generalrcexample3">
+						<image width="80%" xml:id="ch5-generalrcexample3">
 							<shortdescription>Circuit with 2 meshes and 5 nodes consisting of a 12V source, 24V source, three 1k resistors (labeled A-C), and SPST switch. The high-potential end of the 12V source connects to 1k (A) at node a. 1k (A), 1k (B), and one end of the SPST switch connect at node b. The other end of the SPST switch and 1k (C) connect at node c. 1k (C) and the high-potential end of the 24V source connect at node d. The low-potential end of both sources and 1k (B) connect at node e. Voltage v(infinity) drops from node b to node e. The SPST switch is depicted as closed.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -1623,10 +1596,9 @@
 									\draw[]	(\H,\H) to [R, l_=1~k$\Omega$, *-*] ++(down:\H);
 									\draw[]	(\H,\H) to [short] ++(right:\H);
 									\draw[]	(2*\H,\H) to [open, v^=$v(\infty)$] ++(down:\H);
-									\draw[]	(2*\H,\H) to [cute closed switch] ++(right:\H);
-									\draw[]	(3*\H,\H) to [R, l^=1~k$\Omega$] ++(right:\H);
-									\draw[]	(4*\H,\H) to [V, l_=24~V] ++(down:\H);
-									\draw[]	(0,0) to [short] ++(right:4*\H);
+									\draw[]	(2*\H,\H) to [R, l^=1~k$\Omega$] ++(right:\H);
+									\draw[]	(3*\H,\H) to [V, l_=24~V] ++(down:\H);
+									\draw[]	(0,0) to [short] ++(right:3*\H);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1738,30 +1710,7 @@
 						</md>
 					</p>
 
-					<p>Analyze the circuit for time <m>t=0^+</m>. Deactivate all power sources and calculate the equivalent resistance as seen by the capacitor.</p>
-
-					<figure>
-  						<caption></caption>
-						<image width="80%" xml:id="ch5-generalrcexample8">
-							<shortdescription>Circuit with 3 meshes and 3 nodes consisting of three 1k resistors (labeled A-C), 40uF capacitor, and SPST switch. All three resistors and the capacitor connect at node a. 1k (A), 1k (B), the capacitor, and one end of the SPST switch connect at node b. The other end of the SPST switch and 1k (C) connect at node c. Voltage v(t) drops over the capacitor from node b to node a. Branch current i(t) flows through the capacitor from node b to node a. The SPST switch is depicted as closed.</shortdescription>
-							<latex-image>
-								\begin{tikzpicture}[font=\sffamily]
-									\def\H{2.5}
-									\draw[]	(0,\H) to [short] ++(down:\H);
-									\draw[]	(0,\H) to [R, l^=1~k$\Omega$] ++(right:\H);
-									\draw[]	(\H,\H) to [R, l_=1~k$\Omega$, *-*] ++(down:\H);
-									\draw[]	(\H,\H) to [short] ++(right:\H);
-									\draw[]	(2*\H,\H) to [C, l_=40~$\mu$F, v^=$v(t)$, i_=$i(t)$, *-*] ++(down:\H);
-									\draw[]	(2*\H,\H) to [cute closed switch] ++(right:\H);
-									\draw[]	(3*\H,\H) to [R, l^=1~k$\Omega$] ++(right:\H);
-									\draw[]	(4*\H,\H) to [short] ++(down:\H);
-									\draw[]	(0,0) to [short] ++(right:4*\H);
-								\end{tikzpicture}
-							</latex-image>
-  						</image>
-					</figure>
-
-					<p>The circuit is re-drawn below to make the arrangement of resistors more clear.</p>
+					<p>Analyze the circuit at <m>t=0^+</m>. Deactivate all power sources and calculate the equivalent resistance as seen by the capacitor.</p>
 
 					<figure>
   						<caption></caption>
@@ -1839,9 +1788,9 @@
 				<title>General transient response measured over a resistor</title>
 				
 				<statement>
-					<p>Calculate <m>v(t)</m> and <m>i(t)</m> for the circuit shown in <xref ref="generaltransientresistorexample1" />. The switch is open for a very long time before closing at a time of 0<nbsp />seconds. <alert>Note:</alert> because the voltage over and current through a resistor is being analyzed, the voltage current relationship relating to a resistor (Ohm's law) is used to relate voltage and current. <xref ref="ch5-ivcapequation" /> is only valid to relate current and voltage in a capacitor.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> for the circuit shown below. The switch is open for a very long time before closing at a time of 0<nbsp />seconds. <alert>Note:</alert> because the voltage over and current through a resistor is being analyzed, the voltage current relationship relating to a resistor (Ohm's law) is used to relate voltage and current. <xref ref="ch5-ivcapequation" /> is only valid to relate current and voltage in a capacitor.</p>
 
-					<figure xml:id="generaltransientresistorexample1">
+					<figure>
   						<caption></caption>
 						<image width="100%" xml:id="ch5-generaltransientresistorexample1">
 							<shortdescription>Circuit with 4 meshes and 4 nodes consisting of a 10mA source, 8V source, two 200ohm (labeled A-B) resistors, 400ohm resistor, 100uF capacitor, and SPST switch. The 10mA source, 200ohm (A), capacitor, and one end of the SPST switch connect at node a. The 10mA source flows into node a. The other end of the SPST switch, 400ohm, and 200ohm (B) connect at node b. The 200ohm (B) and high-potential end of the 8V source connect at node c. The 10mA source, 200ohm (A), capacitor, 400ohm, and low-potential end of the 8V source connect at node d. The 10mA source flows out of node d. Voltage v(t) drops over the 400ohm resistor from node b to node d. Branch current i(t) flows through the 400ohm resistor from node b to node d. The SPST switch is depicted as closing.</shortdescription>
@@ -1916,7 +1865,28 @@
   						</image>
 					</figure>
 
-					<p>Because the voltage drop over and current through the resistor will not be continuous when the switch closes, the circuit needs to be analyzed at <m>t=0^+</m>. Because the resistor will be in parallel with the capacitor, the voltage drop at that moment will be the same as the initial voltage drop over the capacitor: 2<nbsp />V. Ohm's law can be used to calculate <m>i(0^+)</m>, which is 5<nbsp />mA.</p>
+					<p>Because the voltage drop over and current through the resistor will not be continuous when the switch closes, the circuit needs to be analyzed at <m>t=0^+</m>. Treat the capacitor at this time as a voltage source providing 2<nbsp />V to the circuit.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="100%" xml:id="ch5-generaltransientresistorexample3b">
+							<shortdescription>Circuit with four meshes and three nodes consisting of a 10mA current source, 2V voltage source, 8V voltage source, 200ohm (A) resistor, 400ohm resistor, and 200ohm (B) resistor. The 10mA source, 200ohm (A), high-potential end of the 2V source, 400ohm, and 200ohm (B) connect at node a. The 10mA source flows into node a. The 200ohm (B) and high-potential end of the 8V source connect at node b. The 10mA source, 200ohm (A), low-potential end of both voltage sources, and 400ohm connect at node c. Voltage v(0+) drops from node a to node c. Branch current i(0+) flows through the 400ohm resistor from node a to node c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) to [I, l^=10~mA] 										(0,2.5);
+									\draw[]	(0,2.5) to [short] 											(7.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=200~$\Omega$, *-*]						(2.5,0);
+									\draw[]	(5,2.5) to [V, l_=2~V, *-*]								(5,0);
+									\draw[]	(7.5,2.5) to [R, l_=400~$\Omega$, *-*, v^=$v(0^+)$, i_=$i(0^+)$]	(7.5,0);
+									\draw[]	(7.5,2.5) to [R, l^=200~$\Omega$]							(10,2.5);
+									\draw[]	(10,2.5) to [V, l_=8~V]										(10,0);
+									\draw[]	(0,0) to [short]											(10,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+						
+					<p>Because the 400<nbsp />&#8486; resistor is now in parallel with the capacitor, <m>v(0^+</m>) will be equal to the initial voltage drop over the capacitor: 2<nbsp />V. Ohm's law can be used to calculate <m>i(0^+)</m>, which is 5<nbsp />mA.</p>
 
 					<p>Next, the steady-state conditions of the circuit should be analyzed to calculate <m>v(\infty)</m> and <m>i(\infty)</m>. The capacitor can be replaced by an open.</p>
 
@@ -1994,7 +1964,7 @@
 						</md>
 					</p>
 
-					<p>Analyze the circuit for time <m>t \geq 0</m> and deactivate all power sources to determine the equivalent resistance as seen by the capacitor. This is to find the RC time constant <m>\tau</m>. The circuit is re-drawn below. (Why are we using the equivalent resistance as seen by the capacitor when measuring the time constant for a circuit analyzed over a resistor? Because the capacitor is what dictates the transient response! The time constant will be the same for all elements in that circuit.)</p>
+					<p>Analyze the circuit at <m>t = 0^+</m> and deactivate all power sources to calculate the equivalent resistance as seen by the capacitor. This is to find the RC time constant <m>\tau</m>. The circuit is re-drawn below. (Why are we using the equivalent resistance as seen by the capacitor when measuring the time constant for a circuit analyzed over a resistor? Because the capacitor is what dictates the transient response! The time constant will be the same for all elements in that circuit.)</p>
 
 					<figure>
   						<caption></caption>
@@ -2088,7 +2058,7 @@
 
 					<figure xml:id="equivalentcapacitance-examplequestion1">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-equivcapacitance-ex1" />.</caption>
-  						<image width="60%" xml:id="ch5-equivalentcapacitance-examplequestion1">
+  						<image width="70%" xml:id="ch5-equivalentcapacitance-examplequestion1">
     						<shortdescription>Circuit with 1 mesh and 4 nodes consisting of four capacitors. A 240pF cap connects at node a. The 240pF cap and 120pF cap connect at node c. The 120pF, 100pF, and 320pF caps connect at node d. The 100pF and 320pF caps connect at node b.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -2126,13 +2096,11 @@
   							</image>
 					</figure>
 
-					<p>The three remaining capacitors are in parallel. Use the reciprocal sum to calculate the equivalent resistance.</p>
+					<p>The three remaining capacitors are in parallel. Use <xref ref="ch5-seriescapequation" /> to calculate the equivalent capacitance.</p>
 
 					<p>
 						<md>
 							<mrow>C_{EQ} \amp= \frac{1}{\frac{1}{240~\textrm{pF}} + \frac{1}{120~\textrm{pF}} + \frac{1}{420~\textrm{pF}}}</mrow>
-							<mrow>\amp= \frac{1}{\frac{25}{1680~\textrm{pF}}}</mrow>
-							<mrow>\amp= \frac{1680~\textrm{pF}}{25}</mrow>
 							<mrow>\amp= 67.2~\textrm{pF}</mrow>
 						</md>
 					</p>
@@ -2151,13 +2119,13 @@
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,2.5) node[left] {a} to [C, l^=10~nF, o-]	(2.5,2.5);
-									\draw[]	(2.5,2.5) to [C, l_=47~nF, *-*]			(2.5,0);
-									\draw[]	(2.5,2.5) to [short]					(5,2.5);
-									\draw[]	(5,2.5) to [C, l_=33~nF, *-*]			(5,0);
-									\draw[]	(5,2.5) to [C, l^=10~nF]				(7.5,2.5);
-									\draw[]	(7.5,2.5) to [C, l_=33~nF]				(7.5,0);
+									\draw[]	(2.5,2.5) to [C, l_=47~nF, *-*]				(2.5,0);
+									\draw[]	(2.5,2.5) to [short]						(5,2.5);
+									\draw[]	(5,2.5) to [C, l_=33~nF, *-*]				(5,0);
+									\draw[]	(5,2.5) to [C, l^=10~nF]					(7.5,2.5);
+									\draw[]	(7.5,2.5) to [C, l_=33~nF]					(7.5,0);
 									\draw[]	(0,0) node[left] {b} to [C, l_=22~nF, o-]	(2.5,0);
-									\draw[]	(2.5,0) to [short]					(7.5,0);
+									\draw[]	(2.5,0) to [short]							(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -2174,8 +2142,7 @@
 					<p>
 						<md>
 							<mrow>\amp= \frac{(10~\textrm{nF})(33~\textrm{nF})}{10~\textrm{nF} + 33~\textrm{nF}}</mrow>
-							<mrow>\amp= \frac{330~\textrm{nF}^2}{43~\textrm{nF}}</mrow>
-							<mrow>\amp= 7.674~\textrm{nF}.</mrow>
+							<mrow>\amp= 7.6744~\textrm{nF}.</mrow>
 						</md>
 					</p>
 
@@ -2189,7 +2156,7 @@
 										\draw[]	(2.5,2.5) to [C, l_=47~nF, *-*]			(2.5,0);
 										\draw[]	(2.5,2.5) to [short]					(7.5,2.5);
 										\draw[]	(5,2.5) to [C, l_=33~nF, *-*]			(5,0);
-										\draw[]	(7.5,2.5) to [C, l_=7.674~nF]				(7.5,0);
+										\draw[]	(7.5,2.5) to [C, l_=7.67~nF]				(7.5,0);
 										\draw[]	(0,0) node[left] {b} to [C, l_=22~nF, o-]	(2.5,0);
 										\draw[]	(2.5,0) to [short]					(7.5,0);
 									\end{tikzpicture}
@@ -2197,7 +2164,7 @@
   							</image>
 					</figure>
 
-					<p>Now, combine the 47<nbsp />nF, 33<nbsp />nF, and 7.674<nbsp />nF capacitors, which are in parallel. The capacitances sum to 87.674<nbsp />nF.</p>
+					<p>Now, combine the 47<nbsp />nF, 33<nbsp />nF, and 7.67<nbsp />nF capacitors, which are in parallel. The capacitances sum to 87.7<nbsp />nF.</p>
 
 					<figure>
 						<caption></caption>
@@ -2206,20 +2173,18 @@
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
 										\draw[]	(0,2.5) node[left] {a} to [C, l^=10~nF, o-]	(2.5,2.5);
-										\draw[]	(2.5,2.5) to [C, l_=87.674~nF]			(2.5,0);
+										\draw[]	(2.5,2.5) to [C, l_=87.7~nF]			(2.5,0);
 										\draw[]	(0,0) node[left] {b} to [C, l_=22~nF, o-]	(2.5,0);
 									\end{tikzpicture}
 								</latex-image>
   							</image>
 					</figure>
 
-					<p>These three capacitors are in parallel. Use the reciprocal sum formula to calculate the total equivalent capacitance. (The 87.674<nbsp />nF capacitance is represented as a fraction in the calculation below.)</p>
+					<p>These three capacitors are in parallel. Use <xref ref="ch5-seriescapequation" /> to calculate the total equivalent capacitance.</p>
 
 					<p>
 						<md>
-							<mrow>C_{EQ} \amp= \frac{1}{\frac{1}{10~\textrm{nF}} + \frac{1}{22~\textrm{nF}} + \frac{43}{3770~\textrm{nF}}}</mrow>
-							<mrow>\amp= \frac{1}{\frac{6505}{41470~\textrm{nF}}}</mrow>
-							<mrow>\amp= \frac{41470~\textrm{nF}}{6505}</mrow>
+							<mrow>C_{EQ} \amp= \frac{1}{\frac{1}{10~\textrm{nF}} + \frac{1}{22~\textrm{nF}} + \frac{1}{87.6744~\textrm{nF}}}</mrow>
 							<mrow>\amp= 6.38~\textrm{nF}</mrow>
 						</md>
 					</p>
@@ -2330,7 +2295,7 @@
 
 					<figure>
 						<caption></caption>
-							<image width="60%" xml:id="ch5-equivcapexample4solution2">
+							<image width="55%" xml:id="ch5-equivcapexample4solution2">
 								<shortdescription>Circuit with 2 meshes and 4 nodes consisting of an SPDT switch, 50uF cap, 10k, 6k, and 8k resistors. The input of the SPDT switch and 10k connect at node c. The 10k, 50uF, and 6k connect at node d. The 6k and 8k connect at node e. Output b of the SPDT switch, 50uF, and 8k connect at node b. The SPDT switch is in position b.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -2350,7 +2315,7 @@
 
 					<figure>
 						<caption></caption>
-							<image width="60%" xml:id="ch5-equivcapexample4solution3">
+							<image width="45%" xml:id="ch5-equivcapexample4solution3">
 								<shortdescription>Circuit with 2 meshes and 2 nodes consisting of a 10k resistor, 14k resistor, and 50uF capacitor. All circuit elements are connected in parallel.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -2386,7 +2351,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ,ab} \amp= \frac{(10~\textrm{k}\Omega)(14~\textrm{k}\Omega)}{10~\textrm{k}\Omega+14~\textrm{k}\Omega}</mrow>
-							<mrow>\amp= \frac{140~\textrm{k}\Omega^2}{24~\textrm{k}\Omega}</mrow>
 							<mrow>\amp= 5.83~\textrm{k}\Omega.</mrow>
 						</md>
 					</p>
@@ -2416,7 +2380,7 @@
 
 					<figure>
 						<caption></caption>
-							<image width="80%" xml:id="ch5-equivcapexample4solution6">
+							<image width="70%" xml:id="ch5-equivcapexample4solution6">
 								<shortdescription>Circuit with 2 meshes and 4 nodes consisting of a 50uF capacitor, 5k, 10k, 6k, and 8k resistors. The 5k and 10k connect at node a. The 10k, 6k, and 50uF connect at node b. The 6k and 8k connect at node c. The 5k, 50uF, and 8k connect at node d.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -2435,7 +2399,7 @@
 
 					<figure>
 						<caption></caption>
-							<image width="60%" xml:id="ch5-equivcapexample4solution7">
+							<image width="50%" xml:id="ch5-equivcapexample4solution7">
 								<shortdescription>Circuit with 2 meshes and 2 nodes consisting of a 15k resistor, 14k resistor, and 50uF capacitor. All circuit elements are connected in parallel.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -2471,7 +2435,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ,ab} \amp= \frac{(15~\textrm{k}\Omega)(14~\textrm{k}\Omega)}{15~\textrm{k}\Omega+14~\textrm{k}\Omega}</mrow>
-							<mrow>\amp= \frac{210~\textrm{k}\Omega^2}{25~\textrm{k}\Omega}</mrow>
 							<mrow>\amp= 7.24~\textrm{k}\Omega.</mrow>
 						</md>
 					</p>
@@ -2517,7 +2480,7 @@
 				</answer>
 
 				<solution>
-					<p>The 4<nbsp />mF and 2<nbsp />mF capacitors are connected in series. Use the reciprocal sum formula to calculate their equivalent capacitance.</p>
+					<p>The 4<nbsp />mF and 2<nbsp />mF capacitors are connected in series. Use <xref ref="ch5-eqtwocapacitorsseries" /> to calculate their equivalent capacitance.</p>
 
 					<p>
 						<md>\frac{(4~\textrm{mF})(2~\textrm{mF})}{4~\textrm{mF}+2~\textrm{mF}} = 1.33~\textrm{mF}</md>
@@ -2672,7 +2635,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ,ab} \amp= \frac{(30~\Omega)(20~\Omega)}{30~\Omega+20~\Omega}</mrow>
-							<mrow>\amp= \frac{600~\Omega^2}{50~\Omega}</mrow>
 							<mrow>\amp= 12~\Omega.</mrow>
 						</md>
 					</p>
@@ -2739,8 +2701,7 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{-v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
-							<mrow>\amp= \frac{-20~\textrm{V}}{100~\Omega}\textrm{e}^{-200t}~u(t)</mrow>
+							<mrow>i(t) \amp= \frac{-20~\textrm{V}}{100~\Omega}\textrm{e}^{-200t}~u(t)</mrow>
 							<mrow>\amp= -0.2~\textrm{A}~\textrm{e}^{-200t}~u(t)</mrow>
 						</md>
 					</p>
@@ -2762,15 +2723,14 @@
 				</answer>
 
 				<solution>
-					<p>Use <xref ref="ch5-voltcapequation" /> to calculate the voltage drop. Use base units for all quantities (amp instead of milliamp, farad instead of nanofarad, etc.) This will ensure the unit of the voltage is V after doing the math. (Units will not be shown in each step of the math below, but will be expressed in the final form of the solution.)</p>
+					<p>Use <xref ref="ch5-voltcapequation" /> to calculate the voltage drop. Use base units for all quantities (amp instead of milliamp, farad instead of nanofarad, etc.) to ensure the unit of the voltage is V. (Units will not be shown in each step of the math below, but will be expressed in the final form of the solution.)</p>
 
-					<p>Note that the step function <m>u(t)</m> changes the lower limit of integration from <m>-\infty</m> to 0.</p>
+					<p>Note that the step function <m>u(t)</m> changes the lower limit of integration from <m>-\infty</m> to 0, as discussed in <xref ref="ch1-stepfunction" />.</p>
 
 					<p>
 						<md>
-							<mrow>v(t) \amp= \frac{1}{C}\int_{-\infty}^t i(t)\,dt</mrow>
-							<mrow>\amp= \frac{1}{25\times10^{-9}}\int_{-\infty}^t \frac{1}{1000}\textrm{e}^{-500\tau}u(\tau)\,d\tau</mrow>
-							<mrow>\amp= \frac{1}{25\times10^{-6}}\int_{0}^t \textrm{e}^{-500\tau}\,d\tau</mrow>
+							<mrow>v(t) \amp= \frac{1}{25\times10^{-9}}\int_{-\infty}^t \frac{1}{1000}\textrm{e}^{-500\tau}u(\tau)\,d\tau</mrow>
+							<mrow>\amp= \frac{1}{25\times10^{-6}}\int_{0}^t \textrm{e}^{-500\tau}\,d\tau ~u(t)</mrow>
 							<mrow>\amp= -\frac{1}{0.0125}\textrm{e}^{-500\tau} \Big|^t_0 u(t)</mrow>
 							<mrow>\amp= -80\left[\textrm{e}^{-500(t)} -\textrm{e}^{-500(0)} \right] u(t)</mrow>
 							<mrow>\amp= 80~\textrm{V}\left[1 - \textrm{e}^{-500t}\right]u(t)</mrow>
@@ -2781,8 +2741,7 @@
 						
 					<p>
 						<md>
-							<mrow>p(t) \amp= i(t)v(t)</mrow>
-							<mrow>\amp= \left(\textrm{e}^{-500t}u(t)\right)\left(80\left[1 - \textrm{e}^{-500t}\right]u(t)\right)</mrow>
+							<mrow>p(t) \amp= \left(\textrm{e}^{-500t}u(t)\right)\left(80\left[1 - \textrm{e}^{-500t}\right]u(t)\right)</mrow>
 							<mrow>\amp= 80~\textrm{mW}\left[\textrm{e}^{-500t} - \textrm{e}^{-1000t}\right]u(t)</mrow>
 						</md>
 					</p>
@@ -2808,8 +2767,7 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= C\frac{d}{dt}v(t)</mrow>
-							<mrow>\amp= \left(330\times10^{-6}\right)\frac{d}{dt}\left(100t~u(t)\right)</mrow>
+							<mrow>i(t) \amp= \left(330\times10^{-6}\right)\frac{d}{dt}\left(100t~u(t)\right)</mrow>
 							<mrow>\amp= \left(330\times10^{-6}\right)\left(100~u(t)\right)</mrow><mrow>\amp= 0.033~\textrm{A}~u(t)</mrow>
 						</md>
 					</p>
@@ -2818,8 +2776,7 @@
 
 					<p>
 						<md>
-							<mrow>p(t) \amp= i(t)v(t)</mrow>
-							<mrow>\amp= \left(0.033~\textrm{A}~u(t)\right)\left(100~\textrm{V/s}~t~u(t)\right)</mrow>
+							<mrow>p(t) \amp= \left(0.033~\textrm{A}~u(t)\right)\left(100~\textrm{V/s}~t~u(t)\right)</mrow>
 							<mrow>\amp= 3.3~\textrm{W/s}~t~u(t)</mrow>
 						</md>
 					</p>
@@ -2869,8 +2826,7 @@
 
 					<p>
 						<md>
-							<mrow>v(t) \amp= v(\infty)\left[1-\textrm{e}^{-\frac{t}{\tau}}\right]</mrow>
-							<mrow>15~\textrm{V} \amp= 18~\textrm{V}\left[1-\textrm{e}^{-\frac{3}{\tau}}\right]</mrow>
+							<mrow>v(t) \amp= 15~\textrm{V} \amp= 18~\textrm{V}\left[1-\textrm{e}^{-\frac{3}{\tau}}\right]</mrow>
 							<mrow>\frac{15~\textrm{V}}{18~\textrm{V}} \amp= 1-\textrm{e}^{-\frac{3}{\tau}}</mrow>
 							<mrow>0.83 \amp= 1-\textrm{e}^{-\frac{3}{\tau}}</mrow>
 							<mrow>-0.167 \amp= -\textrm{e}^{-\frac{3}{\tau}}</mrow>
@@ -2898,8 +2854,7 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{v(\infty)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)</mrow>
-							<mrow>\amp= \frac{18~\textrm{V}}{837~\Omega}\textrm{e}^{-597t}~u(t)</mrow>
+							<mrow>i(t) \amp= \frac{18~\textrm{V}}{837~\Omega}\textrm{e}^{-597t}~u(t)</mrow>
 							<mrow>\amp= \frac{18~\textrm{V}}{0.837~\textrm{k}\Omega}\textrm{e}^{-597t}~u(t)</mrow>
 							<mrow>\amp= 21.5~\textrm{mA}~\textrm{e}^{-597t}~u(t)</mrow>
 						</md>
@@ -2915,7 +2870,7 @@
 		
 			<exercise xml:id="ch5-homogeneousrccircuits-ex1">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> and <m>i(t)</m> for the circuit shown in <xref ref="rchomogeneousexample1" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> for the circuit shown in <xref ref="rchomogeneousexample1" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds.</p>
 
 					<figure xml:id="rchomogeneousexample1">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-homogeneousrccircuits-ex1" />.</caption>
@@ -2950,31 +2905,7 @@
 				</answer>
 
 				<solution>
-					<p>Draw the circuit in the initial steady-state condition. The capacitor can be represented as an open.</p>
-
-					<figure>
-						<caption></caption>
-							<image width="100%" xml:id="ch5-homogeneousrcexample1solution1">
-								<shortdescription>Circuit with 6 nodes consisting of a 10mA source, SPDT switch, 20k, 10k (A), 20k (B), 50k, and 75k resistors. The 10mA source, 20k, and 10k (A) are connected at node c. The 10mA source flows into node c. Output a of the SPDT switch and 10k (A) connect at node a. Output b of the SPDT switch and 10k (B) connect at node b. The input of the SPDT switch connects at node d. The 10k (B), 50k, and 75k connect at node e. The 10mA source, 20k, 50k, and 75k connect at node f. The 10mA source flows out of node f. Voltage v(0) drops from node d to node f. The SPDT switch is in position a.</shortdescription>
-								<latex-image>
-									\begin{tikzpicture}[font=\sffamily]
-										\draw[]	(0,0) to [I, l^=10~mA]								(0,2.5);
-										\draw[]	(0,2.5) to [short]									(2.5,2.5);
-										\draw[]	(2.5,2.5) to [R, l_=20~k$\Omega$, *-*]				(2.5,0);
-										\draw[]	(5.25,1.5) node[cute spdt down, rotate=90, yscale=-1, anchor=in] (switch) {};
-										\draw[]	(2.5,2.5) to [R, l^=10~k$\Omega$] ++(2.25,0) -| (switch.out 2) node[left] {a};
-										\draw[]	(switch.in) to [open, v^=$v(0)$, -*]				(5.25,0);
-										\draw[]	(8,2.5) to [R, l_=10~k$\Omega$] ++(-2.25,0) -| (switch.out 1) node[right] {b};
-										\draw[]	(8,2.5) to [R, l_=50~k$\Omega$, *-*]				(8,0);
-										\draw[]	(8,2.5) to [short]									(10.5,2.5);
-										\draw[]	(10.5,2.5) to [R, l_=75~k$\Omega$]					(10.5,0);
-										\draw[]	(0,0) to [short]									(10.5,0);
-									\end{tikzpicture}
-								</latex-image>
-  							</image>
-					</figure>
-
-					<p>The circuit is redrawn below to eliminate the circuit elements that are disconnected from the capacitor in the initial steady-state conditions.</p>
+					<p>Draw the circuit in the initial steady-state condition. The capacitor can be represented as an open. Remove any circuit elements that are disconnected from the capacitor by the switch.</p>
 
 					<figure>
 						<caption></caption>
@@ -3002,31 +2933,7 @@
 						</md>
 					</p>
 
-					<p>Analyze the circuit at <m>t=0^+</m> to calculate the equivalent resistance seen by the capacitor. The circuit is shown in this condition below.</p>
-
-					<figure>
-						<caption></caption>
-							<image width="100%" xml:id="ch5-homogeneousrcexample1solution3">
-								<shortdescription>Circuit with 6 nodes consisting of a 10mA source, SPDT switch, 20k, 10k (A), 20k (B), 50k, and 75k resistors and 400nF capacitor. The 10mA source, 20k, and 10k (A) are connected at node c. The 10mA source flows into node c. Output a of the SPDT switch and 10k (A) connect at node a. Output b of the SPDT switch and 10k (B) connect at node b. The input of the SPDT switch and 400nF cap connect at node d. The 10k (B), 50k, and 75k connect at node e. The 10mA source, 20k, 400nF, 50k, and 75k connect at node f. The 10mA source flows out of node f. Voltage v(t) drops over the capacitor from node d to node f. Branch current i(t) flows through the capacitor from node d to node f. The SPDT switch is in position b.</shortdescription>
-								<latex-image>
-									\begin{tikzpicture}[font=\sffamily]
-										\draw[]	(0,0) to [I, l^=10~mA]								(0,2.5);
-										\draw[]	(0,2.5) to [short]								(2.5,2.5);
-										\draw[]	(2.5,2.5) to [R, l_=20~k$\Omega$, *-*]				(2.5,0);
-										\draw[]	(5.25,1.5) node[cute spdt up, rotate=90, yscale=-1, anchor=in] 	(switch) {};
-										\draw[]	(2.5,2.5) to [R, l^=10~k$\Omega$] ++(2.25,0) -| (switch.out 2) node[left] {a};
-										\draw[]	(switch.in) to [C, l_=400~nF, v^=$v(t)$, i_=$i(t)$, -*]	(5.25,0);
-										\draw[]	(8,2.5) to [R, l_=10~k$\Omega$] ++(-2.25,0) -| (switch.out 1) node[right] {b};
-										\draw[]	(8,2.5) to [R, l_=50~k$\Omega$, *-*]					(8,0);
-										\draw[]	(8,2.5) to [short]								(10.5,2.5);
-										\draw[]	(10.5,2.5) to [R, l_=75~k$\Omega$]					(10.5,0);
-										\draw[]	(0,0) to [short]									(10.5,0);
-									\end{tikzpicture}
-								</latex-image>
-  							</image>
-					</figure>
-
-					<p>The circuit is redrawn below to eliminate the circuit elements that are disconnected from the capacitor after the switch moves to position b.</p>
+					<p>Analyze the circuit at <m>t=0^+</m> to calculate the equivalent resistance seen by the capacitor. The circuit is shown in this condition below. Remove any circuit elements that are disconnected from the capacitor by the switch.</p>
 
 					<figure>
 						<caption></caption>
@@ -3059,19 +2966,18 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (40000~\Omega)(400\times10^{-9}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (40000~\Omega)(400\times10^{-9}~\textrm{F})</mrow>
 							<mrow>\amp= 0.016~\textrm{s}</mrow>
 						</md>
 					</p>
 
-					<p>Plug these values into <xref ref="ch5-homogeneousrctransient" /> to derive an expression for <m>v(t)</m>.</p>
+					<p>Plug these values into <xref ref="ch5-homogeneousrctransient" /> to derive an equation for <m>v(t)</m>.</p>
 
 					<p>
 						<md>v(t) = 200~\textrm{V}~\textrm{e}^{-62.5t}~u(t) + 200~\textrm{V}~u(-t)</md>
 					</p>
 
-					<p>Use <xref ref="ch5-homogeneousrccurrent" /> to calculate the current.</p>
+					<p>Use <xref ref="ch5-homogeneousrccurrent" /> to derive an equation for the current.</p>
 
 					<p>
 						<md>i(t) = -5~\textrm{mA}~\textrm{e}^{-62.5t}~u(t)</md>
@@ -3081,7 +2987,7 @@
 
 			<exercise xml:id="ch5-homogeneousrccircuits-ex2">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="homogeneousrcexample1diagram" />. The switch is closed for a very long time before opening at a time of zero seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="homogeneousrcexample1diagram" />. The switch is closed for a very long time before opening at a time of zero seconds.</p>
 
 					<figure xml:id="homogeneousrcexample1diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-homogeneousrccircuits-ex2" />.</caption>
@@ -3114,7 +3020,7 @@
 				</answer>
 
 				<solution>
-					<p>Draw the circuit in the initial steady-state condition. The capacitor can be replaced as an open.</p>
+					<p>Draw the circuit in the initial steady-state condition. The capacitor can be replaced by an open.</p>
 
 					<figure>
 						<caption></caption>
@@ -3179,19 +3085,18 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (18888.89~\Omega)(9~\mu\textrm{F})</mrow>
+							<mrow>\tau \amp= (18888.89~\Omega)(9~\mu\textrm{F})</mrow>
 							<mrow>\amp= 0.17~\textrm{s}</mrow>
 						</md>
 					</p>
 
-					<p>Plug these values into <xref ref="ch5-homogeneousrctransient" /> to derive an expression for <m>v(t)</m>.</p>
+					<p>Plug these values into <xref ref="ch5-homogeneousrctransient" /> to derive an equation for <m>v(t)</m>.</p>
 
 					<p>
 						<md>v(t) = 8~\textrm{V}~\textrm{e}^{-5.88t}~u(t) + 8~\textrm{V}~u(-t)</md>
 					</p>
 
-					<p>Use <xref ref="ch5-homogeneousrccurrent" /> to calculate the current.</p>
+					<p>Use <xref ref="ch5-homogeneousrccurrent" /> to derive an equation for the current.</p>
 
 					<p>
 						<md>i(t) = -0.42~\textrm{mA}~\textrm{e}^{-5.88t}~u(t)</md>
@@ -3202,22 +3107,20 @@
 
 			<exercise xml:id="ch5-homogeneousrccircuits-ex3">
 				<statement>
-					<p>Based on the circuit shown in <xref ref="rchomogeneousdischargecircuit3" />, calculate the value of <m>R_X</m> needed to cause the capacitor to discharge to <m>1/e</m> of its initial voltage value at a time of 5<nbsp />s. Then, derive equations for <m>v(t)</m> and <m>i(t)</m> based on that resistor value. The switch is in the upper position for a very long time before moving to the lower position at a time of zero seconds.</p>
+					<p>Based on the circuit shown in <xref ref="rchomogeneousdischargecircuit3" />, calculate the value of <m>R_X</m> needed to cause the capacitor to discharge to <m>1/e</m> of its initial voltage value at a time of 5<nbsp />s. Then, derive equations for <m>v(t)</m> and <m>i(t)</m> based on that resistor value. The switch is closed for a very long time before opening at a time of zero seconds.</p>
 
 					<figure xml:id="rchomogeneousdischargecircuit3">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-homogeneousrccircuits-ex3" />.</caption>
   						<image width="80%" xml:id="ch5-rchomogeneousdischargecircuit3">
-    						<shortdescription>Circuit with 4 nodes consisting of an 8V source, SPDT switch, 20ohm resistor, 40mF capacitor, and variable resistor Rx. The high-potential end of the 8V source and 20ohm connect at node a. The 20ohm and upper position of the SPDT switch connect at node b. The low-potential end of the 8V source, lower position of the SPDT switch, 40mF, and Rx connect at node c. The input of the SPDT switch, 40mF, and Rx connect at node d.</shortdescription>
+    						<shortdescription>Circuit with 4 nodes consisting of a 9V source, SPST switch, 25ohm resistor, 40mF capacitor, and variable resistor Rx. The high-potential end of the 9V source and 25ohm connect at node a. The 25ohm and SPST switch connect at node b. The input of the SPST switch, 40mF, and Rx connect at node c. The low-potential end of the 9V source, 40mF, and Rx connect at node d. Voltage v(t) drops from node c to d.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [V, l_=8~V]								(0,0);
-									\draw[]	(0,2.5) to [R, l^=20~$\Omega$]						(2.5,2.5);
-									\node[cute spdt down arrow, anchor=out 2, rotate=180] at	(2.5,2.5) (sw) {};
-									\draw[]	(sw.out 1) to [short, -*]							(2.5,0);
-									\draw[]	(sw.in) to [short]									++(5,0);
-									\draw[]	($(sw.in)+(2.5,0)$) to [C, l_=40~mF, *-*]			++(0,-2.08);
-									\draw[]	($(sw.in)+(5,0)$) to [vR, l_=$R_X$]					++(0,-2.08);
-									\draw[]	(0,0) to [short] 									($(sw.in)+(5,-2.08)$);
+									\draw[]	(0,2.5) to [V, l_=9~V]								(0,0);
+									\draw[]	(0,2.5) to [R, l^=25~$\Omega$]						(2.5,2.5);
+									\draw[]	(2.5,2.5) to [cute opening switch]					(5,2.5) --++ (right:2.5);
+									\draw[]	(5,2.5) to [C, l_=40~mF, *-*, v^=$v(t)$]			++(0,-2.5);
+									\draw[]	(7.5,2.5) to [vR, l_=$R_X$]							++(0,-2.5);
+									\draw[]	(0,0) to [short] 									(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -3229,8 +3132,8 @@
 					<p>
 						<md>
 							<mrow>R_X \amp= 125~\Omega</mrow>
-							<mrow>v(t) \amp= 8~\textrm{V}~\textrm{e}^{-0.2t}~u(t)</mrow>
-							<mrow>i(t) \amp= -64~\textrm{mA}~\textrm{e}^{-0.2t}~u(t)</mrow>
+							<mrow>v(t) \amp= 7.5~\textrm{V}~\textrm{e}^{-0.2t}~u(t) + 7.5~\textrm{V}~u(-t)</mrow>
+							<mrow>i(t) \amp= -60~\textrm{mA}~\textrm{e}^{-0.2t}~u(t)</mrow>
 						</md>
 					</p>
 				</answer>
@@ -3249,7 +3152,7 @@
 						</md>
 					</p>
 
-					<p>Now, use <xref ref="ch5-taurcequation" /> to calculate <m>R_X</m> to achieve this time constant value.</p>
+					<p>Now, use <xref ref="ch5-taurcequation" /> to calculate <m>R_X</m> to achieve this time constant value. This is the only resistor seen by the capacitor after the switch moves to the lower position.</p>
 
 					<p>
 						<md>
@@ -3260,19 +3163,46 @@
 						</md>
 					</p>
 
+					<p>Analyze the circuit in its initial steady-state configuration to calculate <m>v(0)</m>. The capacitor can be replaced by an open.</p>
+					
+					<figure>
+  						<caption></caption>
+  						<image width="60%" xml:id="ch5-rchomogeneous-discharge-example3-figure1">
+    						<shortdescription>Circuit with 1 mesh and 3 nodes consisting of a 9V source, 25ohm resistor, and 125ohm resistor. The high-potential end of the 9V source and 25ohm connect at node a. The 25ohm and 125ohm connect at node b. The low-potential end of the 9V source and 125ohm connect at node c. Voltage v(0) drops from node b to c.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=9~V]									(0,0);
+									\draw[]	(0,2.5) to [R, l^=25~$\Omega$]							(2.5,2.5) --++ (right:2.5);
+									\draw[]	(2.5,2.5) to [open, v^=$v(0)$]							++(0,-2.5);
+									\draw[]	(5,2.5) to [vR, l_=125~$\Omega$]						++(0,-2.5);
+									\draw[]	(0,0) to [short] 										(5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
+					<p>Use the voltage divider rule.</p>
+					
+					<p>
+						<md>
+							<mrow>v(0) \amp= 9~\textrm{V}\left(\frac{125~\Omega}{25~\Omega+125~\Omega}\right)</mrow>
+							<mrow>\amp= 7.5~\textrm{V}</mrow>
+						</md>
+						
+					</p>
+
 					<p>Plug values into <xref ref="ch5-homogeneousrctransient" /> to derive an equation for <m>v(t)</m>.</p>
 
 					<p>
-						<md>v(t) = 8~\textrm{V}~\textrm{e}^{-0.2t}~u(t)+8~\textrm{V}~u(-t)</md>
+						<md>v(t) = 7.5~\textrm{V}~\textrm{e}^{-0.2t}~u(t)+7.5~\textrm{V}~u(-t)</md>
 					</p>
 
 					<p>Use <xref ref="ch5-homogeneousrccurrent" /> to derive an equation for <m>i(t)</m>.</p>
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{-v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
-							<mrow>\amp= \frac{-8~\textrm{V}}{0.125~\textrm{k}\Omega}\textrm{e}^{-\frac{t}{5}}~u(t)</mrow>
-							<mrow>\amp= 64~\textrm{mA}~\textrm{e}^{-0.2t}~u(t)</mrow>
+							<mrow>i(t) \amp= \frac{-7.5~\textrm{V}}{0.125~\textrm{k}\Omega}\textrm{e}^{-\frac{t}{5}}~u(t)</mrow>
+							<mrow>\amp= -60~\textrm{mA}~\textrm{e}^{-0.2t}~u(t)</mrow>
 						</md>
 					</p>
 				</solution>
@@ -3280,22 +3210,20 @@
 
 			<exercise xml:id="ch5-homogeneousrccircuits-ex4">
 				<statement>
-					<p>The capacitor circuit shown in <xref ref="homogeneouscircuitexamplequestion4" /> has a discharging equation of <m>v(t) = 3.5~\textrm{V}~\textrm{e}^{-1000t}~u(t)+3.5~\textrm{V}~u(-t)</m>. Derive the values of <m>R_1</m> and <m>R_2</m>. (To derive the discharging equation, the switch was in the upper position for a very long time before moving to the lower position at a time of zero seconds.)</p>
+					<p>The capacitor circuit shown in <xref ref="homogeneouscircuitexamplequestion4" /> has a discharging equation of <m>v(t) = 3.5~\textrm{V}~\textrm{e}^{-1000t}~u(t)+3.5~\textrm{V}~u(-t)</m>. Derive the values of <m>R_1</m> and <m>R_2</m>. (To derive the discharging equation, the switch was closed for a very long time before opening at a time of zero seconds.)</p>
 
 					<figure xml:id="homogeneouscircuitexamplequestion4">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-homogeneousrccircuits-ex4" />.</caption>
   						<image width="80%" xml:id="ch5-homogeneouscircuitexamplequestion4">
-    						<shortdescription>Circuit with 4 nodes consisting of a 10.5V source, SPDT switch, resistor R1, resistor R2, and 1uF capacitor. The high-potential end of the 10.5V source and R1 connect at node a. R1 and the upper position of the SPDT switch connect at node b. The low-potential end of the 10.5V source, lower position of the SPDT switch, 1uF, and R2 connect at node c. The input of the SPDT switch, 1uF, and R2 connect at node d. Voltage v(t) drops over the capacitor from node d to node c.</shortdescription>
+    						<shortdescription>Circuit with 4 nodes consisting of a 10.5V source, SPST switch, resistor R1, resistor R2, and 1uF capacitor. The high-potential end of the 10.5V source and R1 connect at node a. R1 and SPST switch connect at node b. The SPST switch, 1uF, and R2 connect at node c. The low-potential end of the 10.5V source, 1uF, and R2 connect at node d. Voltage v(t) drops from node c to node d. The SPST switch is depicted as opening.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,2.5) to [V, l_=10.5~V]								(0,0);
 									\draw[]	(0,2.5) to [R, l^=$R_1$]								(2.5,2.5);
-									\node[cute spdt down arrow, anchor=out 2, rotate=180] at		(2.5,2.5) (sw) {};
-									\draw[]	(sw.out 1) to [short, -*]								(2.5,0);
-									\draw[]	(sw.in) to [short]										++(5,0);
-									\draw[]	($(sw.in)+(2.5,0)$) to [C, l_=1~$\mu$F, *-*, v^=$v(t)$]	++(0,-2.08);
-									\draw[]	($(sw.in)+(5,0)$) to [R, l_=$R_2$]						++(0,-2.08);
-									\draw[]	(0,0) to [short] 										($(sw.in)+(5,-2.08)$);
+									\draw[]	(2.5,2.5) to [cute opening switch]						(5,2.5) --++ (right:2.5);
+									\draw[]	(5,2.5) to [C, l_=1~$\mu$F, *-*, v^=$v(t)$]					++(0,-2.5);
+									\draw[]	(7.5,2.5) to [R, l_=$R_2$]								++(0,-2.5);
+									\draw[]	(0,0) to [short] 										(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -3385,15 +3313,16 @@
 				<answer>
 					<p>
 						<md>
-							<mrow>v(t) \amp= 30~\textrm{V}~u(-t) + 30~\textrm{V}~\textrm{e}^{-667t}~u(t) - 15.4~\textrm{V}~\textrm{e}^{-667(t-0.001)}~u(t-0.001)+ 15.4~\textrm{V}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001) </mrow>
-							<mrow>i(t) \amp= -1~\textrm{A}~\textrm{e}^{-667t}~u(t) + 0.513~\textrm{A}~\textrm{e}^{-667(t-0.001)}~u(t-0.001) - 0.513~\textrm{A}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001)</mrow>
+							<mrow>v(t) \amp= 30~\textrm{V}~u(-t) + 30~\textrm{V}~\textrm{e}^{-667t}~u(t) - 15.4~\textrm{V}~\textrm{e}^{-667(t-0.001)}~u(t-0.001)</mrow>
+							<mrow>\amp+ 15.4~\textrm{V}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001) </mrow>
+							<mrow>i(t) \amp= -1~\textrm{A}~\textrm{e}^{-667t}~u(t) + 0.513~\textrm{A}~\textrm{e}^{-667(t-0.001)}~u(t-0.001)</mrow>
+							<mrow>\amp- 0.513~\textrm{A}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001)</mrow>
 						</md>
-						
 					</p>
 				</answer>
 
 				<solution>
-					<p>First, analyze the circuit in its initial condition. Switch <m>S_1</m> is closed and switch <m>S_2</m> is open. The circuit diagram is shown below.</p>
+					<p>First, analyze the circuit in its initial steady-state condition. Switch <m>S_1</m> is closed and switch <m>S_2</m> is open. The circuit diagram is shown below.</p>
 
 					<figure>
 						<caption></caption>
@@ -3417,7 +3346,6 @@
 					<p>
 						<md>
 							<mrow>v(0) \amp= 40~\textrm{V}\left(\frac{30~\Omega}{10~\Omega+30~\Omega}\right)</mrow>
-							<mrow>\amp= 40~\textrm{V}\left(\frac{30~\Omega}{40~\Omega}\right)</mrow>
 							<mrow>\amp= 30~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -3459,8 +3387,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (30~\Omega)(50 \times 10^{-6}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (30~\Omega)(50 \times 10^{-6}~\textrm{F})</mrow>
 							<mrow>\amp= 0.0015~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -3535,7 +3462,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ} \amp= \frac{(30~\Omega)(20~\Omega)}{30~\Omega + 20~\Omega}</mrow>
-							<mrow>\amp= \frac{600~\Omega^2}{50~\Omega}</mrow>
 							<mrow>\amp= 12~\Omega</mrow>
 						</md>
 					</p>
@@ -3544,8 +3470,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (12~\Omega)(50 \times 10^{-6}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (12~\Omega)(50 \times 10^{-6}~\textrm{F})</mrow>
 							<mrow>\amp= 0.0006~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -3572,10 +3497,11 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= -\frac{30~\textrm{V}}{30~\Omega}~\textrm{e}^{-667t}~u(t) + \frac{15.4~\textrm{V}}{30~\Omega}~\textrm{e}^{-667(t-0.001)}~u(t-0.001) - \frac{15.4~\textrm{V}}{12~\Omega}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001)</mrow>
-							<mrow>\amp= -1~\textrm{A}~\textrm{e}^{-667t}~u(t) + 0.513~\textrm{A}~\textrm{e}^{-667(t-0.001)}~u(t-0.001) - 0.513~\textrm{A}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001)</mrow>
+							<mrow>i(t) \amp= -\frac{30~\textrm{V}}{30~\Omega}~\textrm{e}^{-667t}~u(t) + \frac{15.4~\textrm{V}}{30~\Omega}~\textrm{e}^{-667(t-0.001)}~u(t-0.001)</mrow>
+							<mrow>\amp- \frac{15.4~\textrm{V}}{12~\Omega}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001)</mrow>
+							<mrow>\amp= -1~\textrm{A}~\textrm{e}^{-667t}~u(t) + 0.513~\textrm{A}~\textrm{e}^{-667(t-0.001)}~u(t-0.001)</mrow>
+							<mrow>\amp- 0.513~\textrm{A}~\textrm{e}^{-1667(t-0.001)}~u(t-0.001)</mrow>
 						</md>
-						
 					</p>
 
 				</solution>
@@ -3613,7 +3539,7 @@
 		
 			<exercise xml:id="ch5-chargingrccircuits-ex1">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter1" />. The switch is open for a very long time before closing at a time of zero seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter1" />. The switch is open for a very long time before closing at a time of zero seconds.</p>
 
 					<figure xml:id="chargingfromzeroendofchapter1">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-chargingrccircuits-ex1" />.</caption>
@@ -3646,7 +3572,7 @@
 				</answer>
 
 				<solution>
-					<p>In the initial steady-state, the capacitor will be fully discharged and have an initial voltage of zero. Draw the circuit in the final steady-state. The capacitor can be replaced as an open.</p>
+					<p>In the initial steady-state, the capacitor will be fully discharged and have an initial voltage of zero. Draw the circuit in the final steady-state. The capacitor can be replaced by an open.</p>
 
 					<figure>
 						<caption></caption>
@@ -3739,7 +3665,7 @@
 
 			<exercise xml:id="ch5-chargingrccircuits-ex3">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter3" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are: <m>R_1 = 100~\Omega</m>, <m>R_2 = 400~\Omega</m>, <m>C = 20~\textrm{mF}</m>, and <m>V_S = 2~\textrm{V}</m>. Assume that the op-amp is sufficiently sourced such that the output never saturates.</p>
+					<p>Derive an equation for <m>v(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter3" />. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are: <m>R_1 = 100~\Omega</m>, <m>R_2 = 400~\Omega</m>, <m>C = 20~\textrm{mF}</m>, and <m>V_S = 2~\textrm{V}</m>. Assume that the op-amp is sufficiently sourced such that the output never saturates.</p>
 
 					<figure xml:id="chargingfromzeroendofchapter3">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-chargingrccircuits-ex3" />.</caption>
@@ -3769,7 +3695,7 @@
 				</answer>
 
 				<solution>
-					<p>In the initial steady-state, the capacitor will be fully discharged and have an initial voltage of zero. Draw the circuit in the final steady-state. The capacitor can be replaced as an open.</p>
+					<p>In the initial steady-state, the capacitor will be fully discharged and have an initial voltage of zero. Draw the circuit in the final steady-state. The capacitor can be replaced by an open.</p>
 
 					<figure>
 						<caption></caption>
@@ -3792,8 +3718,7 @@
 
 					<p>
 						<md>
-							<mrow>v(\infty) \amp= -V_S\frac{R_2}{R_1}</mrow>
-							<mrow>\amp= -(2~\textrm{V})\frac{400~\Omega}{100~\Omega}</mrow>
+							<mrow>v(\infty) \amp= -(2~\textrm{V})\frac{400~\Omega}{100~\Omega}</mrow>
 							<mrow>\amp= -8~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -3844,8 +3769,7 @@
 
 					<p>
 						<md>
-							<mrow>v(t) \amp= v(\infty)\left[1-\textrm{e}^{-\frac{t}{\tau}}\right]~u(t)</mrow>
-							<mrow>\amp= -8~\textrm{V}~\left[1-\textrm{e}^{-0.125t}\right]~u(t)</mrow>
+							<mrow>v(t) \amp= -8~\textrm{V}~\left[1-\textrm{e}^{-0.125t}\right]~u(t)</mrow>
 						</md>
 					</p>
 
@@ -3854,7 +3778,7 @@
 
 			<exercise xml:id="ch5-generalrccircuits-ex3-actuallycharging4">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter4" />. The switch is open for a very long time before closing at a time of zero seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter4" />. The switch is open for a very long time before closing at a time of zero seconds.</p>
 
 					<figure xml:id="chargingfromzeroendofchapter4">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-generalrccircuits-ex3-actuallycharging4" />.</caption>
@@ -3981,7 +3905,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ} \amp= \frac{(50~\Omega)(140~\Omega)}{50~\Omega + 140~\Omega}</mrow>
-							<mrow>\amp= \frac{7000~\Omega^2}{190~\Omega}</mrow>
 							<mrow>\amp= 36.8~\Omega</mrow>
 						</md>
 					</p>
@@ -3990,8 +3913,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (36.8~\Omega)(600 \times 10^{-6}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (36.8~\Omega)(600 \times 10^{-6}~\textrm{F})</mrow>
 							<mrow>\amp= 0.022~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -4000,8 +3922,7 @@
 
 					<p>
 						<md>
-							<mrow>v(t) \amp= v(\infty)\left[1-\textrm{e}^{-\frac{t}{\tau}}\right]u(t)</mrow>
-							<mrow>\amp= 34.2~\textrm{V}~\left[1-\textrm{e}^{-45.2t}\right]~u(t)</mrow>
+							<mrow>v(t) \amp= 34.2~\textrm{V}~\left[1-\textrm{e}^{-45.2t}\right]~u(t)</mrow>
 						</md>
 					</p>
 
@@ -4009,8 +3930,7 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{v(t)}{R}</mrow>
-							<mrow>\amp= \frac{4.2~\textrm{V}~\left[1-\textrm{e}^{-45.2t}\right]~u(t)}{0.1~\textrm{k}\Omega}</mrow>
+							<mrow>i(t) \amp= \frac{4.2~\textrm{V}~\left[1-\textrm{e}^{-45.2t}\right]~u(t)}{0.1~\textrm{k}\Omega}</mrow>
 							<mrow>\amp= 42~\textrm{mA}~\left[1-\textrm{e}^{-45.2t}\right]~u(t)</mrow>
 						</md>
 					</p>
@@ -4020,7 +3940,7 @@
 
 			<exercise xml:id="ch5-chargingrccircuits-ex5">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter5" />. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are: <m>I_S = 360~\mu\textrm{A}</m>, <m>C = 14~\mu\textrm{F}</m>, <m>k = 2</m>, <m>R_1 = 5~\textrm{k}\Omega</m>, <m>R_2 = 10~\textrm{k}\Omega</m>, <m>R_3 = 2~\textrm{k}\Omega</m>, and <m>R_4 = 3~\textrm{k}\Omega</m>.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="chargingfromzeroendofchapter5" />. The switch is open for a very long time before closing at a time of zero seconds. The circuit parameters are: <m>I_S = 360~\mu\textrm{A}</m>, <m>C = 14~\mu\textrm{F}</m>, <m>k = 2</m>, <m>R_1 = 5~\textrm{k}\Omega</m>, <m>R_2 = 10~\textrm{k}\Omega</m>, <m>R_3 = 2~\textrm{k}\Omega</m>, and <m>R_4 = 3~\textrm{k}\Omega</m>.</p>
 
 					<figure xml:id="chargingfromzeroendofchapter5">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-chargingrccircuits-ex5" />.</caption>
@@ -4063,14 +3983,14 @@
 								<shortdescription>Circuit with 3 meshes and 4 nodes consisting of current source Is, VCVS k*Vx, and resistors R1, R2, R3, and R4. Is, R1, and the high-potential end of k*Vx connect at node a. Is flows into node a. The low-potential end of k*Vx, R3, and R4 connect at node b. R2, R3, and R4 connect at node c. Is, R1, and R2 connect at node d. Is flows out of node d. Vx drops over R1 from node a to node d. Voltage v(infinity) drops from node b to node c.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
-										\draw[]	(0,0) to [I, l^=$I_S$]	++(up:2.5);
-										\draw[]	(0,2.5) to [short]	++(right:2.5);
+										\draw[]	(0,0) to [I, l^=$I_S$]						++(up:2.5);
+										\draw[]	(0,2.5) to [short]							++(right:2.5);
 										\draw[]	(2.5,2.5) to [R, l_=$R_1$, *-*, v^=$V_X$]	++(down:2.5);
-										\draw[]	(2.5,2.5) to [cV, l^=$kV_X$]	++(right:2.5);
-										\draw[]	(5,2.5) to [R, l_=$R_3$, *-*]	++(down:2.5);
-										\draw[]	(5,2.5) to [short]			++(right:5);
-										\draw[]	(7.5,2.5) to [open, v^=$v(\infty)$, *-*]	++(down:2.5);
-										\draw[]	(10,2.5) to [R, l_=$R_4$]		++(down:2.5);
+										\draw[]	(2.5,2.5) to [cV, l^=$kV_X$]				++(right:2.5);
+										\draw[]	(5,2.5) to [R, l_=$R_3$, *-*]				++(down:2.5);
+										\draw[]	(5,2.5) to [short]							++(right:5);
+										\draw[]	(7.5,2.5) to [open, v^=$v(\infty)$]			++(down:2.5);
+										\draw[]	(10,2.5) to [R, l_=$R_4$]					++(down:2.5);
 										\draw[]	(0,0) to [short] ++(right:2.5) to [R, l^=$R_2$] ++(right:2.5) to [short]	++(right:5);
 									\end{tikzpicture}
 								</latex-image>
@@ -4246,8 +4166,7 @@
 
 					<p>
 						<md>
-							<mrow>R_{TH} \amp= \frac{V_{TH}}{I_{SC}}</mrow>
-							<mrow>\amp= \frac{-0.348~\textrm{V}}{-0.36~\textrm{mA}}</mrow>
+							<mrow>R_{TH} \amp= \frac{-0.348~\textrm{V}}{-0.36~\textrm{mA}}</mrow>
 							<mrow>\amp= 0.967~\textrm{k}\Omega</mrow>
 						</md>
 					</p>
@@ -4256,8 +4175,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (967~\Omega)(14 \times 10^{-6}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (967~\Omega)(14 \times 10^{-6}~\textrm{F})</mrow>
 							<mrow>\amp= 0.014~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -4293,17 +4211,16 @@
 						</md>
 					</p>
 
-					<p>Use Ohm's law on each branch to derive the differential equation in terms of <m>v(t)</m>.</p>
+					<p>Use Ohm's law on each branch to derive the differential equation in terms of <m>v(t)</m>. Use <xref ref="ch5-ivcapequation" /> to relate the voltage over and current through the capacitor.</p>
 
 					<p>
 						<md number="yes">
 							<mrow xml:id="ch5-lastchargingfromzerokvl1">I_1 \amp= \frac{V_X}{R_1}</mrow>
 							<mrow xml:id="ch5-lastchargingfromzerokvl2">I_3 \amp= \frac{v(t)}{R_X}</mrow>
-							<mrow xml:id="ch5-lastchargingfromzerokvl3">i(t) \amp= C \frac{dv(t)}{dt}</mrow>
 						</md>
 					</p>
 
-					<p>Plug <xref ref="ch5-lastchargingfromzerokvl1" />, <xref ref="ch5-lastchargingfromzerokvl2" />, and <xref ref="ch5-lastchargingfromzerokvl3" /> into <xref ref="ch5-lastchargingfromzerokcl" />.</p>
+					<p>Plug <xref ref="ch5-lastchargingfromzerokvl1" />, <xref ref="ch5-lastchargingfromzerokvl2" />, and <xref ref="ch5-ivcapequation" /> into <xref ref="ch5-lastchargingfromzerokcl" />.</p>
 
 					<p>
 						<md number="yes" xml:id="ch5-lastchargingfromzeroalmostdiffeq">
@@ -4324,7 +4241,7 @@
 					<p>
 						<md number="yes">
 							<mrow>V_X \amp= kV_X + v(t) + R_2(I_3 + i(t))</mrow>
-							<mrow>\amp= kV_X + v(t) + R_2(\frac{v(t)}{R_X} + C \frac{dv(t)}{dt})</mrow>
+							<mrow>\amp= kV_X + v(t) + R_2\left(\frac{v(t)}{R_X} + C \frac{dv(t)}{dt}\right)</mrow>
 							<mrow>(1-k)V_X \amp= v(t) + \frac{R_2}{R_X}v(t) + R_2C\frac{dv(t)}{dt}</mrow>
 							<mrow xml:id="ch5-lastcharginfromzerovxsolved">V_X \amp= \left(\frac{1+\frac{R_2}{R_x}}{1-k}\right)v(t) + \left(\frac{R_2C}{1-k}\right)\frac{dv(t)}{dt}</mrow>
 						</md>
@@ -4334,10 +4251,14 @@
 
 					<p>
 						<md>
-							<mrow>I_S \amp= \frac{1}{R_1}\left[v(t)\left(\frac{1+\frac{R_2}{R_x}}{1-k}\right) + \frac{CR_2}{1-k}\frac{dv(t)}{dt}\right] + \frac{v(t)}{R_X} + C\frac{dv(t)}{dt}</mrow>
-							<mrow>\amp= v(t)\left[\frac{1+\frac{R_2}{R_X}}{R_1(1-k)} + \frac{1}{R_X}\right] + \frac{dv(t)}{dt}\left[C + \frac{CR_2}{R_1(1-k)}\right]</mrow>
-							<mrow>\amp= v(t)\left[\frac{1+\frac{R_2}{R_X}}{R_1(1-k)} + \frac{1}{R_X}\right] + \frac{dv(t)}{dt}\left[\frac{C(R_1(1-k)+R_2)}{R_1(1-k)}\right]</mrow>
-							<mrow>\frac{I_SR_1(1-k)}{C(R_1(1-k)+R_2)} \amp= \frac{dv(t)}{dt} + \left[\frac{1+\frac{R_2}{R_X}}{C(R_1(1-k)+R_2)} + \frac{R_1(1-k)}{R_XC(R_1(1-k)+R_2)}\right]v(t)</mrow>
+							<mrow>I_S \amp= \frac{1}{R_1}\left[v(t)\left(\frac{1+\frac{R_2}{R_x}}{1-k}\right) + \frac{CR_2}{1-k}\frac{dv(t)}{dt}\right]</mrow>
+							<mrow>\amp+ \frac{v(t)}{R_X} + C\frac{dv(t)}{dt}</mrow>
+							<mrow>\amp= v(t)\left[\frac{1+\frac{R_2}{R_X}}{R_1(1-k)} + \frac{1}{R_X}\right]</mrow>
+							<mrow>\amp+ \frac{dv(t)}{dt}\left[C + \frac{CR_2}{R_1(1-k)}\right]</mrow>
+							<mrow>\amp= v(t)\left[\frac{1+\frac{R_2}{R_X}}{R_1(1-k)} + \frac{1}{R_X}\right]</mrow>
+							<mrow>\amp+ \frac{dv(t)}{dt}\left[\frac{C(R_1(1-k)+R_2)}{R_1(1-k)}\right]</mrow>
+							<mrow>\frac{I_SR_1(1-k)}{C(R_1(1-k)+R_2)} \amp= \frac{dv(t)}{dt} + \biggl[\frac{1+\frac{R_2}{R_X}}{C(R_1(1-k)+R_2)}</mrow>
+							<mrow>\amp+ \frac{R_1(1-k)}{R_XC(R_1(1-k)+R_2)}\biggr]v(t)</mrow>
 							<mrow>-25.71 \amp= \frac{dv(t)}{dt} + 73.8v(t)</mrow>
 						</md>
 					</p>
@@ -4356,18 +4277,14 @@
 					<p>Use <xref ref="ch5-eqrcchargingvoltage" /> to derive an equation for <m>v(t)</m>.</p>
 
 					<p>
-						<md>
-							<mrow>v(t) \amp= v(\infty)\left[1-\textrm{e}^{-\frac{t}{\tau}}\right]u(t)</mrow>
-							<mrow>\amp= -0.348~\textrm{V}~\left[1-\textrm{e}^{-73.8t}\right]~u(t)</mrow>
-						</md>
+						<md>v(t) = -0.348~\textrm{V}~\left[1-\textrm{e}^{-73.8t}\right]~u(t)</md>
 					</p>
 
 					<p>Use <xref ref="ch5-rctransientchargingcurrentequation" /> to derive an equation for <m>i(t)</m>. Recall that the equivalent resistance as seen by the capacitor is 0.967<nbsp />k&#8486;. (If you did not solve for <m>\tau</m> using the Th&#233;venin equivalence method, use <xref ref="ch5-taurcequation" /> with the value of <m>\tau</m> derived from the differential equation and solve for <m>R</m>.)</p>
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{v(\infty)}{R}~\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
-							<mrow>\amp= \frac{-0.348~\textrm{V}}{0.967~\textrm{k}\Omega}~\textrm{e}^{-73.8t}~u(t)</mrow>
+							<mrow>i(t) \amp= \frac{-0.348~\textrm{V}}{0.967~\textrm{k}\Omega}~\textrm{e}^{-73.8t}~u(t)</mrow>
 							<mrow>\amp= -0.36~\textrm{mA}~\textrm{e}^{-73.8t}~u(t)</mrow>
 						</md>
 					</p>
@@ -4382,7 +4299,7 @@
 		
 			<exercise xml:id="ch5-generalrccircuits-ex1">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="generaltransient-endofchapter1" />. The switch is open for a very long time before closing at a time of zero seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="generaltransient-endofchapter1" />. The switch is open for a very long time before closing at a time of zero seconds.</p>
 
 					<figure xml:id="generaltransient-endofchapter1">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-generalrccircuits-ex1" />.</caption>
@@ -4542,7 +4459,7 @@
 
 					<figure>
 						<caption></caption>
-							<image width="40%" xml:id="ch5generalrcexample1solution6">
+							<image width="50%" xml:id="ch5generalrcexample1solution6">
 								<shortdescription>Circuit with 1 mesh and 2 nodes consisting of a 7.5mA source and 2.25k resistor. Both circuit elements are connected in parallel. The 7.5mA source flows out of node b into node a. Voltage v(infinity) drops over the 2.25k resistor from node a to node b.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -4601,8 +4518,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (3650~\Omega)(40\times10^{-6}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (3650~\Omega)(40\times10^{-6}~\textrm{F})</mrow>
 							<mrow>\amp= 0.146~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -4625,7 +4541,7 @@
 
 			<exercise xml:id="ch5-generalrccircuits-ex2">
 				<statement>
-					<p>Calculate an expression for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="generalrcendofchatperexamplecircuitquestion2" />. The switch is closed for a very long time before opening at a time of zero seconds.</p>
+					<p>Derive equations for <m>v(t)</m> and <m>i(t)</m> given the circuit shown in <xref ref="generalrcendofchatperexamplecircuitquestion2" />. The switch is closed for a very long time before opening at a time of zero seconds.</p>
 
 					<figure xml:id="generalrcendofchatperexamplecircuitquestion2">
   						<caption>Circuit diagram corresponding to <xref ref="ch5-generalrccircuits-ex2" />.</caption>
@@ -4902,8 +4818,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (25000~\Omega)(40\times10^{-9}\textrm{F})</mrow>
+							<mrow>\tau \amp= (25000~\Omega)(40\times10^{-9}\textrm{F})</mrow>
 							<mrow>\amp= 0.001~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -4984,7 +4899,7 @@
 
 					<figure>
 						<caption></caption>
-							<image width="30%" xml:id="ch5-chargingfromzerorcexample4solution2">
+							<image width="25%" xml:id="ch5-chargingfromzerorcexample4solution2">
 								<shortdescription>Circuit with 2 meshes and 2 nodes consisting of a 120nF capacitor, 2ohm resistor, and 4ohm resistor. All three circuit elements are connected in parallel.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -5003,7 +4918,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ} \amp= \frac{(2~\Omega)(4~\Omega)}{2~\Omega + 4~\Omega}</mrow>
-							<mrow>\amp= \frac{8~\Omega^2}{6~\Omega}</mrow>
 							<mrow>\amp= 1.33~\Omega</mrow>
 						</md>
 					</p>
@@ -5012,8 +4926,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (1.33~\Omega)(120 \times 10^{-9}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (1.33~\Omega)(120 \times 10^{-9}~\textrm{F})</mrow>
 							<mrow>\amp= 1.6 \times 10^{-7}~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -5050,19 +4963,14 @@
 					<p>Use <xref ref="ch5-generaltransientvoltage" /> to derive an equation for <m>v(t)</m>.</p>
 
 					<p>
-						<md>
-							<mrow>v(t) \amp= \left[v(\infty) + \left( v(0^+) - v(\infty) \right) \textrm{e}^{-\frac{t}{\tau}} \right] u(t) + v(0^-)u(-t)</mrow>
-							<mrow>\amp= \left[26.7~\textrm{mV} + 13.3~\textrm{mV}~\textrm{e}^{-6250000t} \right] u(t)</mrow>
-						</md>
-						
+						<md>v(t) = \left[26.7~\textrm{mV} + 13.3~\textrm{mV}~\textrm{e}^{-6250000t} \right] u(t)</md>
 					</p>
 
 					<p>Because the voltage and current are measured over a resistor, Ohm's law will be used to calculate <m>i(t)</m>.</p>
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{v(t)}{R}</mrow>
-							<mrow>\amp = \frac{\left[26.7~\textrm{mV} + 13.3~\textrm{mV}~\textrm{e}^{-6250000t} \right] u(t)}{4~\Omega}</mrow>
+							<mrow>i(t) \amp = \frac{\left[26.7~\textrm{mV} + 13.3~\textrm{mV}~\textrm{e}^{-6250000t} \right] u(t)}{4~\Omega}</mrow>
 							<mrow>\amp= \left[6.67~\textrm{mA} + 3.33~\textrm{mA}~\textrm{e}^{-6250000t} \right] u(t)</mrow>
 						</md>
 					</p>
@@ -5101,14 +5009,18 @@
 				<answer>
 					<p>
 						<md>
-							<mrow>v(t) \amp= -10~\textrm{V} + \left[-4~\textrm{V}-6~\textrm{V}~\textrm{e}^{-50t}\right]~u(t) - \left[-4~\textrm{V} - 2.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015) + \left[-2~\textrm{V} - 4.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
-							<mrow>i(t) \amp= -0.1~\textrm{mA} + \left[-0.04~\textrm{mA}-0.06~\textrm{mA}~\textrm{e}^{-50t}\right]~u(t) - \left[-0.04~\textrm{mA} - 0.0283~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015) + \left[-0.02~\textrm{mA} - 0.0483~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
+							<mrow>v(t) \amp= -10~\textrm{V} + \left[-4~\textrm{V}-6~\textrm{V}~\textrm{e}^{-50t}\right]~u(t)</mrow>
+							<mrow>\amp- \left[-4~\textrm{V} - 2.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
+							<mrow>\amp+ \left[-2~\textrm{V} - 4.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
+							<mrow>i(t) \amp= -0.1~\textrm{mA} + \left[-0.04~\textrm{mA}-0.06~\textrm{mA}~\textrm{e}^{-50t}\right]~u(t)</mrow>
+							<mrow>\amp- \left[-0.04~\textrm{mA} - 0.0283~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
+							<mrow>\amp+ \left[-0.02~\textrm{mA} - 0.0483~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
 						</md>
 					</p>
 				</answer>
 
 				<solution>
-					<p>First, analyze the circuit in its initial condition to calculate <m>v(0)</m>. The switch is in position a and the capacitor acts as an open circuit. Only the 5<nbsp />V source is connected in this configuration.</p>
+					<p>First, analyze the circuit in its initial steady-state condition to calculate <m>v(0)</m>. The switch is in position a and the capacitor acts as an open circuit. Only the 5<nbsp />V source is connected in this configuration.</p>
 
 					<figure>
 						<caption></caption>
@@ -5323,7 +5235,9 @@
 
 					<p>
 						<md>
-							v(t) = -10~\textrm{V} + \left[-4~\textrm{V}-6~\textrm{V}~\textrm{e}^{-50t}\right]~u(t) - \left[-4~\textrm{V} - 2.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015) + \left[-2~\textrm{V} - 4.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)
+							<mrow>v(t) \amp= -10~\textrm{V} + \left[-4~\textrm{V}-6~\textrm{V}~\textrm{e}^{-50t}\right]~u(t)</mrow>
+							<mrow>\amp- \left[-4~\textrm{V} - 2.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
+							<mrow>\amp+ \left[-2~\textrm{V} - 4.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
 						</md>
 					</p>
 
@@ -5331,11 +5245,13 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{v(t)}{R}</mrow>
-							<mrow>\amp= \frac{-10~\textrm{V} + \left[-4~\textrm{V}-6~\textrm{V}~\textrm{e}^{-50t}\right]~u(t) - \left[-4~\textrm{V} - 2.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015) + \left[-2~\textrm{V} - 4.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)}{100~\textrm{k}\Omega}</mrow>
-							<mrow>\amp= -0.1~\textrm{mA} + \left[-0.04~\textrm{mA}-0.06~\textrm{mA}~\textrm{e}^{-50t}\right]~u(t) - \left[-0.04~\textrm{mA} - 0.0283~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015) + \left[-0.02~\textrm{mA} - 0.0483~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
+							<mrow>i(t) \amp= \frac{-10~\textrm{V} + \left[-4~\textrm{V}-6~\textrm{V}~\textrm{e}^{-50t}\right]~u(t)}{100~\textrm{k}\Omega}</mrow>
+							<mrow>\amp- \frac{\left[-4~\textrm{V} - 2.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)}{100~\textrm{k}\Omega}</mrow>
+							<mrow>\amp+ \frac{\left[-2~\textrm{V} - 4.83~\textrm{V}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)}{100~\textrm{k}\Omega}</mrow>
+							<mrow>\amp= -0.1~\textrm{mA} + \left[-0.04~\textrm{mA}-0.06~\textrm{mA}~\textrm{e}^{-50t}\right]~u(t)</mrow>
+							<mrow>\amp - \left[-0.04~\textrm{mA} - 0.0283~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
+							<mrow>\amp+ \left[-0.02~\textrm{mA} - 0.0483~\textrm{mA}~\textrm{e}^{-50(t-0.015)}\right]~u(t-0.015)</mrow>
 						</md>
-						
 					</p>
 
 
@@ -5374,8 +5290,8 @@
 				<answer>
 					<p>
 						<md>
-							<mrow>v(t) \amp= \left[5.68~\textrm{V} - 2.68~\textrm{V}~\textrm{e}^{-79.16t} \right]~u(t) + 3~\textrm{V}~u(-t)</mrow>
-							<mrow>i(t) \amp= 0.425~\textrm{A}~\textrm{e}^{-79.16t}~u(t)</mrow>
+							<mrow>v(t) \amp= \left[5.68~\textrm{V} - 2.68~\textrm{V}~\textrm{e}^{-79.2t} \right]~u(t) + 3~\textrm{V}~u(-t)</mrow>
+							<mrow>i(t) \amp= 0.425~\textrm{A}~\textrm{e}^{-79.2t}~u(t)</mrow>
 						</md>
 						
 					</p>
@@ -5403,71 +5319,21 @@
   							</image>
 					</figure>
 
-					<p>Source transformation will not meaningfully reduce the difficulty of solving this circuit (this is because branch current <m>I_X</m> through resistor <m>R_2</m> can't be eliminated, so resistor <m>R_2</m> could not be combined in parallel with <m>R_1</m> after a source transformation). Superposition cannot be used because there is only one independent source. Use mesh analysis. The mesh currents are drawn below.</p>
-
-					<figure>
-						<caption></caption>
-							<image width="85%" xml:id="ch5-tgeneralrcexample5solution2">
-								<shortdescription>Circuit with 2 meshes and 3 nodes consisting of voltage source Vs1, resistors R1 and R2, and CCCS ki*Ix. The high-potential end of Vs1 connects to R1 at node a. R1, R2, and the CCCS connect at node b. The CCCS flows out of node b. The low-potential end of Vs1, R2, and CCCS connect at node c. The CCCS flows into node c. Branch current Ix flows through R2 from node b to node c. Voltage v(0) drops from node b to node c. Mesh current IA flows through Vs1, R1, and R2 from node c to node a to node b back to node c. Mesh current IB flows through R2 and the CCCS from node c to node b back to node c.</shortdescription>
-								<latex-image>
-									\begin{tikzpicture}[font=\sffamily]
-										\def\H{3}
-										\draw[]	(0,\H) to [V, l_=$V_{S1}$]				++(down:\H);
-										\draw[]	(0,\H) to [R, l^=$R_1$]					++(right:\H);
-										\draw[]	(\H,\H) to [R, l_=$R_2$, *-*, i_=$I_X$]	++(down:\H);
-										\draw[]	(\H,\H) to [short]						++(right:2*\H);
-										\draw[]	(2*\H,\H) to [cI, l^=$k_iI_X$, *-*]		++(down:\H);
-										\draw[]	(3*\H,\H) to [open, v^=$v(0)$]			++(down:\H);
-										\draw[]	(0,0) to [short] 						++(right:3*\H);
-										\draw[Stealth-] (1.5,1.5)node{$I_A$}  ++(-60:0.5) arc (-60:170:0.5);
-										\draw[Stealth-] (4.5,1.5)node{$I_{B}$}  ++(-60:0.5) arc (-60:170:0.5);	
-									\end{tikzpicture}
-								</latex-image>
-  							</image>
-					</figure>
-
-					<p>Use KVL around the left-hand loop to derive one equation. Equate the right-hand mesh current to the dependent source current. Then, use an equation to relate the two mesh currents to the controlling current <m>I_X</m>. The units used in the equations below are V, A, and &#8486;.</p>
-
+					<p>KCL will be used at the node connecting <m>R_1</m>, <m>R_2</m>, and the CCCS. Source transformation will not meaningfully reduce the difficulty of solving this circuit (this is because branch current <m>I_X</m> through resistor <m>R_2</m> can't be eliminated, so resistor <m>R_2</m> could not be combined in parallel with <m>R_1</m> after a source transformation). Superposition cannot be used because there is only one independent source. Mesh analysis could be used, but requires more steps to solve.</p>
+					
+					<p>The KCL equation is solved below for <m>v(0)</m>. Note that due to Ohm's law, <m>I_X = v(0) / R_2</m>.</p>
+					
 					<p>
 						<md>
-							<mrow>-8 + 20I_A + 60(I_A - I_B) \amp= 0</mrow>
-							<mrow>I_B \amp= 4I_X</mrow>
-							<mrow>I_A - I_B \amp= I_X</mrow>
-						</md>
-					</p>
-
-					<p>The three equations can be expressed in a matrix. The left column contains coefficients of <m>I_A</m>, the middle-left column contains coefficients of <m>I_B</m>, the middle-right column contains coefficients of <m>I_X</m>, and the right column contains constants.</p>
-
-					<p>
-						<md>
-							\begin{bmatrix} 
-								80 	\amp -60	\amp 0	 	\amp 8\\
-								0 	\amp 1		\amp -4		\amp 0\\
-								1	\amp -1		\amp -1		\amp 0
-							\end{bmatrix}
-						</md>
-					</p>
-
-					<p>The matrix is shown in reduced row echelon form below.</p>
-
-					<p>
-						<md>
-							\begin{bmatrix} 
-								1 	\amp 0 	\amp 0 		\amp 0.25\\
-								0 	\amp 1 	\amp 0		\amp 0.2\\
-								0	\amp 0	\amp 1		\amp 0.05
-							\end{bmatrix}
-						</md>
-					</p>
-
-					<p>Voltage <m>v(0)</m> is in parallel with resistor <m>R_2</m>. Therefore, use Ohm's law with resistor <m>R_2</m> to calculate <m>v(0)</m>.</p>
-
-					<p>
-						<md>
-							<mrow>v(0) \amp= I_XR-2</mrow>
-							<mrow>\amp= (0.05~\textrm{A})(60~\Omega)</mrow>
+							<mrow>\frac{V_{S1} - v(0)}{R_1} \amp= \frac{v(0)}{R_2} + k_iI_X</mrow>
+							<mrow>\amp= \frac{v(0)}{R_2} + k_i\frac{v(0)}{R_2}</mrow>
+							<mrow>\frac{V_{S1}}{R_1} \amp= \frac{v(0)}{R_1} + \frac{(1+k_i)v(0)}{R_2}</mrow>
+							<mrow>\frac{R_2V_{S1}}{R_1R_2} \amp= \frac{R_2v(0)}{R_1R_2} + \frac{R_1(1+k_i)v(0)}{R_1R_2}</mrow>
+							<mrow>R_2V_{S1} \amp= R_2v(0) + R_1(1+k_i)v(0)</mrow>
+							<mrow>\amp= v(0) \left(R_2 + R_1(1+k_i)\right)</mrow>
+							<mrow>v(0) \amp= \frac{V_{S1}R_2}{R_2+(1+k_i)R_1}</mrow>
 							<mrow>\amp= 3~\textrm{V}</mrow>
-						</md>	
+						</md>
 					</p>
 
 					<p>Next, analyze the circuit in the final steady-state condition. The capacitor will be treated as an open.</p>
@@ -5484,7 +5350,7 @@
 										\draw[]	(\H,\H) to [R, l_=$R_2$, *-*, i_=$I_X$]		++(down:\H);
 										\draw[]	(\H,\H) to [short]							++(right:2*\H);
 										\draw[]	(2*\H,\H) to [cI, l^=$k_iI_X$, *-*]			++(down:\H);
-										\draw[]	(3*\H,\H) to [open, v^=$v(\infty)$, *-*]	++(down:\H);
+										\draw[]	(3*\H,\H) to [open, v^=$v(\infty)$]			++(down:\H);
 										\draw[]	(3*\H,\H) to [R, l^=$R_3$]					++(right:\H);
 										\draw[]	(4*\H,\H) to [V, l_=$V_{S2}$]				++(down:\H);
 										\draw[]	(0,0) to [short] 							++(right:4*\H);
@@ -5493,77 +5359,21 @@
   							</image>
 					</figure>
 
-					<p>Mesh analysis will still be the easiest way to solve this circuit, for much the same reason as provided above. The mesh currents are depicted below.</p>
-
-					<figure>
-						<caption></caption>
-							<image width="100%" xml:id="ch5-tgeneralrcexample5solution4">
-								<shortdescription>Circuit with 3 meshes and 4 nodes consisting of two voltage sources Vs1 and Vs2, resistors R1, R2, and R3, and CCCS ki*Ix. The high-potential end of Vs1 connects to R1 at node a. R1, R2, R3, and the CCCS connect at node b. The CCCS flows out of node b. R3 and the high-potential end of Vs2 connect at node c. The low-potential end of both voltage sources connect to R2 and the CCCS at node d. The CCCS flows into node c. Branch current Ix flows through R2 from node b to node d. Voltage v(infinity) drops from node b to node d. Mesh current IA flows through Vs1, R1, and R2 from node d to node a and node b back to node d. Mesh current IB flows through R2 and the CCCS from node d to node b back to node d. Mesh current IC flows through the CCCS, R3, and Vs2 from node d to node c back to node d.</shortdescription>
-								<latex-image>
-									\begin{tikzpicture}[font=\sffamily]
-										\def\H{3}
-										\draw[]	(0,\H) to [V, l_=$V_{S1}$]					++(down:\H);
-										\draw[]	(0,\H) to [R, l^=$R_1$]						++(right:\H);
-										\draw[]	(\H,\H) to [R, l_=$R_2$, *-*, i_=$I_X$]		++(down:\H);
-										\draw[]	(\H,\H) to [short]							++(right:2*\H);
-										\draw[]	(2*\H,\H) to [cI, l^=$k_iI_X$, *-*]			++(down:\H);
-										\draw[]	(3*\H,\H) to [open, v^=$v(\infty)$, *-*]	++(down:\H);
-										\draw[]	(3*\H,\H) to [R, l^=$R_3$]					++(right:\H);
-										\draw[]	(4*\H,\H) to [V, l_=$V_{S2}$]				++(down:\H);
-										\draw[]	(0,0) to [short] 							++(right:4*\H);
-										\draw[Stealth-] (1.5,1.5)node{$I_A$}  ++(-60:0.5) arc (-60:170:0.5);
-										\draw[Stealth-] (4.5,1.5)node{$I_{B}$}  ++(-60:0.5) arc (-60:170:0.5);	
-										\draw[Stealth-] (10,1.5)node{$I_C$}  ++(-60:0.5) arc (-60:170:0.5);	
-									\end{tikzpicture}
-								</latex-image>
-  							</image>
-					</figure>
-
-					<p>Use KVL around the left-hand loop to derive the first equation. The two right-hand loops comprise a supermesh, as a current source is shared by both of the meshes. Use KVL around the supermesh to derive the second equation. Then, use the relationship between the current source and the mesh currents to derive the third equation. Finally, use the relationship between the controlling current and mesh currents to derive the fourth equation. The units used below are V, A, and &#8486;.</p>
-
+					<p>KCL is still the simplest method for solving this circuit. The KCL equation is solved below for <m>v(\infty)</m>. From Ohm's law, we know that <m>I_X = v(\infty)/R_2</m>.</p>
+					
 					<p>
 						<md>
-							<mrow>-8 + 20I_A + 60(I_A - I_B) \amp= 0</mrow>
-							<mrow>60(I_B-I_A) + 40I_C + 20 \amp= 0</mrow>
-							<mrow>4I_X \amp= I_B - I_C</mrow>
-							<mrow>I_A - I_B \amp= I_X</mrow>
+							<mrow>\frac{V_{S1} - v(\infty)}{R_1} \amp= \frac{v(\infty)}{R_2} + k_iI_X + \frac{v(\infty) - V_{S2}}{R_3}</mrow>
+							<mrow>\amp= \frac{v(\infty)}{R_2} + k_i \frac{v(\infty)}{R_2} + \frac{v(\infty) - V_{S2}}{R_3}</mrow>
+							<mrow>\frac{V_{S1}}{R_1} + \frac{V_{S2}}{R_3} \amp= \frac{v(\infty)}{R_1} + \frac{(1+k_1)v(\infty)}{R_2} + \frac{v(\infty)}{R_3}</mrow>
+							<mrow>\frac{R_2R_3V_{S1}}{R_1R_2R_3} + \frac{R_1R_2V_{S2}}{R_1R_2R_3} \amp= \frac{R_2R_3v(\infty)}{R_1R_2R_3} + \frac{R_1R_3(1+k_1)v(\infty)}{R_1R_2R_3}</mrow>
+							<mrow>\amp+ \frac{R_1R_2v(\infty)}{R_1R_2R_3}</mrow>
+							<mrow>R_2R_3V_{S1} + R_1R_2V_{S2} \amp= R_2R_3v(\infty) + R_1R_3(1+k_1)v(\infty)</mrow>
+							<mrow>\amp+ R_1R_2v(\infty)</mrow>
+							<mrow>\amp= v(\infty)\left(R_2R_3 + R_1R_3(1+k_1) + R_1R_2\right)</mrow>
+							<mrow>v(\infty) \amp= \frac{R_2R_3V_{S1} + R_1R_2V_{S2}}{R_2R_3 + R_1R_3(1+k_1) + R_1R_2}</mrow>
+							<mrow>\amp= 5.6842~\textrm{V}</mrow>
 						</md>
-					</p>
-
-					<p>The four equations can be expressed in a matrix. The left column contains coefficients of <m>I_A</m>, the next column contains coefficients of <m>I_B</m>, the next column contains coefficients of <m>I_C</m>, the next column contains coefficients of <m>I_X</m>, and the right column contains constants.</p>
-
-					<p>
-						<md>
-							\begin{bmatrix} 
-								80 	\amp -60	\amp 0	 	\amp 0		\amp 8\\
-								-60	\amp 60		\amp 40		\amp 0		\amp -20\\
-								0 	\amp 1		\amp -1		\amp -4		\amp 0\\
-								1	\amp -1		\amp 0		\amp -1		\amp 0
-							\end{bmatrix}
-						</md>
-					</p>
-
-					<p>The matrix is shown in reduced row echelon form below.</p>
-
-					<p>
-						<md>
-							\begin{bmatrix} 
-								1 	\amp 0 	\amp 0 	\amp 0		\amp 0.116\\
-								0 	\amp 1 	\amp 0	\amp 0		\amp 0.021\\
-								0	\amp 0	\amp 1	\amp 0		\amp -0.357\\
-								0	\amp 0	\amp 0	\amp 1		\amp 0.0947
-							\end{bmatrix}
-						</md>
-					</p>
-
-					<p>Voltage <m>v(\infty)</m> is in parallel with resistor <m>R_2</m>. Therefore, use Ohm's law with resistor <m>R_2</m> to calculate <m>v(0)</m>.</p>
-
-					<p>
-						<md>
-							<mrow>v(\infty) \amp= I_XR-2</mrow>
-							<mrow>\amp= (0.0947~\textrm{A})(60~\Omega)</mrow>
-							<mrow>\amp= 5.68~\textrm{V}</mrow>
-						</md>	
 					</p>
 
 					<p>The first possible way to calculate <m>\tau</m> is to derive a Th&#233;venin equivalent circuit as seen by the capacitor.</p>
@@ -5590,7 +5400,7 @@
   							</image>
 					</figure>
 
-					<p>The open-circuit voltage is equal to <m>v(\infty)</m>. Short nodes a and b to obtain a short-circuit current.</p>
+					<p>The open-circuit voltage is equal to <m>v(\infty)</m>. Short nodes a and b to calculate the short-circuit current.</p>
 
 					<figure>
 						<caption></caption>
@@ -5688,9 +5498,8 @@
 
 					<p>
 						<md>
-							<mrow>R_{TH} \amp= \frac{V_{TH}}{I_{SC}}</mrow>
-							<mrow>\amp= \frac{5.68~\textrm{V}}{0.9~\textrm{A}}</mrow>
-							<mrow>\amp= 6.31~\Omega</mrow>
+							<mrow>R_{TH} \amp= \frac{5.6842~\textrm{V}}{0.9~\textrm{A}}</mrow>
+							<mrow>\amp= 6.3158~\Omega</mrow>
 						</md>
 					</p>
 
@@ -5698,8 +5507,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= RC</mrow>
-							<mrow>\amp= (6.31~\Omega)(2 \times 10^{-3}~\textrm{F})</mrow>
+							<mrow>\tau \amp= (6.31~\Omega)(2 \times 10^{-3}~\textrm{F})</mrow>
 							<mrow>\amp= 0.0126~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -5813,8 +5621,7 @@
 
 					<p>
 						<md>
-							<mrow>v(t) \amp= \left[v(\infty) + \left( v(0^+) - v(\infty) \right) \textrm{e}^{-\frac{t}{\tau}} \right] u(t) + v(0^-)u(-t)</mrow>
-							<mrow>\amp= \left[5.68~\textrm{V} - 2.68~\textrm{V}~\textrm{e}^{-79.16t} \right]~u(t) + 3~\textrm{V}~u(-t)</mrow>
+							v(t) = \left[5.68~\textrm{V} - 2.68~\textrm{V}~\textrm{e}^{-79.2t} \right]~u(t) + 3~\textrm{V}~u(-t)
 						</md>
 					</p>
 
@@ -5822,9 +5629,8 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{v(\infty)-v(0^+)}{R} \textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
-							<mrow>\amp= \frac{2.68~\textrm{V}}{6.31~\Omega} \textrm{e}^{-79.16t}~u(t)</mrow>
-							<mrow>\amp= 0.425~\textrm{A}~\textrm{e}^{-79.16t}~u(t)</mrow>
+							<mrow>i(t) \amp= \frac{2.68~\textrm{V}}{6.31~\Omega} \textrm{e}^{-79.2t}~u(t)</mrow>
+							<mrow>\amp= 0.425~\textrm{A}~\textrm{e}^{-79.2t}~u(t)</mrow>
 						</md>
 					</p>
 				</solution>

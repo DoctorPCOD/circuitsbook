@@ -59,7 +59,7 @@
 
 		<p>In the top graph, the voltage arrives at the load before current. In other words: the current <term>lags</term> the voltage. This is called a lagging circuit, and is caused by an inductive load. In the bottom graph, the voltage arrives at the load after current. In other words: the current <term>leads</term> the voltage. This is called a leading circuit, and is caused by a capacitive load.</p>
 
-		<p>So far, the amplitude of a wave (<m>V_m</m> for voltage and <m>I_m</m> for current) has been used to quantify sinusoidal signals. The amplitude defines the maximum displacement from equilibrium. The average value also provides useful information. However, a sinusoidal wave with no DC offset has an average of zero. This means that a normal average does not provide any useful information about a sine or cosine wave. The concept of <term>root mean square</term> (RMS) value is used in AC circuits instead.</p>
+		<p>So far, the amplitude of a wave (<m>V_m</m> for voltage and <m>I_m</m> for current) has been used to quantify sinusoidal signals. The amplitude defines the maximum displacement from equilibrium. The average of a quantity is also typically useful to know. However, a sinusoidal wave with no DC offset has an average of zero; which means that that the average does not provide any useful information about a sine or cosine wave. The concept of <term>root mean square</term> (RMS) value is used in AC circuits instead.</p>
 
 		<p>The root mean square definition for a periodic waveform (<m>f(t)</m>) is defined in <xref ref="ch10-eq-rms-periodic" />, where <m>T</m> is equal to the period of the waveform.</p>
 		
@@ -67,7 +67,7 @@
 			<md number="yes" xml:id="ch10-eq-rms-periodic">f_{RMS} = \sqrt{\frac{1}{T}\int_0^T f^2(t)\,dt}</md>
 		</p>
 
-		<p>The RMS value for a sinusoidal wave is equal to the amplitude divided by the square root of two, shown in <xref ref="ch10-eq-rms-of-sinusoid" />. (This equation will not be derived in this textbook.) All of the voltage terms can be replaced with current terms to find the RMS value of a sinusoidal current.</p>
+		<p>The RMS value for a sinusoidal wave is equal to the amplitude divided by the square root of two, shown in <xref ref="ch10-eq-rms-of-sinusoid" />. (This equation will not be derived in this textbook.) All voltage terms can be replaced with current terms to calculate the RMS value of a sinusoidal current.</p>
 		
 		<p>
 			<md number="yes" xml:id="ch10-eq-rms-of-sinusoid">V_{RMS} = \frac{V_m}{\sqrt{2}}</md>
@@ -79,7 +79,7 @@
 			<md number="yes" xml:id="ch10-eq-rms-of-triangle">V_{RMS} = \frac{V_m}{\sqrt{3}}</md>
 		</p>
 
-		<p>As will be seen in the remainder of this chapter, RMS values will be used in calculations of complex power in AC circuits. These values will be noted with a subscript on the variable names, and with the term RMS used in conjunction with the unit. In other words, <m>V_{RMS} = 10~\textrm{VRMS}</m> will be used to define an RMS voltage of 10<nbsp />V.</p>
+		<p>As will be seen in the remainder of this chapter, RMS values will be used in calculations of complex power in AC circuits. These values will include the term RMS in the unit. They may also be noted with a subscript on the variable name. In other words, <m>V_{RMS} = 10~\textrm{VRMS}</m> would be used to define an RMS voltage of 10<nbsp />V.</p>
 
 	</section>
 
@@ -95,7 +95,7 @@
 		<subsection xml:id="ch10-instantaneous">
 			<title>Instantaneous Power</title>
 	
-			<p>Instantaneous power is defined in <xref ref="ohmspower1" />. Instantaneous power in a circuit can be calculated using the time-varying forms of voltage and current and multiplying them together. The instantaneous power equation, rewritten in terms of cosine form for voltage and current, is shown in <xref ref="ch10-eq-instantaneous-power-ac" /> and derived in <xref ref="ch10-instantaneous-power-derivation" />. (Note, the derivation uses a product-to-sum trigonometric identity to derive the result.)</p>
+			<p>Instantaneous power is defined in <xref ref="ohmspower1" />. Instantaneous power in a circuit can be calculated using the time-varying forms of voltage and current and multiplying them together. The instantaneous power equation, rewritten in terms of cosine for voltage and current, is shown in <xref ref="ch10-eq-instantaneous-power-ac" /> and derived in <xref ref="ch10-instantaneous-power-derivation" />. (Note that the derivation uses a product-to-sum trigonometric identity to derive the result.)</p>
 			
 			<p>
 				<md number="yes" xml:id="ch10-eq-instantaneous-power-ac">p(t) = V_{RMS}I_{RMS} \left[ \cos{\theta} + \cos{(2\omega t + \phi_v + \phi_i)} \right]</md>
@@ -280,7 +280,7 @@
   				</image>
 			</figure>
 
-			<p>As previously mentioned, the unit for each of the quantities is different (W for <m>P</m>, VAR for <m>Q</m>, VA for <m>\vec{S}</m> and <m>|\vec{S}|</m>). The unit for power (regardless of the type of power) is the watt. However, to clearly differentiate reactive power from average power from complex and apparent power, a different unit is used. VA (the unit for complex and apparent power) stands for volt-amp. VAR (the unit for reactive power) stands for volt-amp reactive. This means that you can look at a number and know exactly what type of power it corresponds to. 28<nbsp />VAR would be a measure of complex power, whereas 28<nbsp />W would be a measure of average power.</p>
+			<p>As previously mentioned, the unit for each of the quantities is different (W for <m>P</m>, VAR for <m>Q</m>, VA for <m>\vec{S}</m> and <m>|\vec{S}|</m>). The unit for power (regardless of the type of power) is the watt. However, to clearly differentiate reactive power from average power from complex and apparent power, a different unit is used. VA (the unit for complex and apparent power) stands for volt-amp. VAR (the unit for reactive power) stands for volt-amp reactive. This means that you can look at a number and know exactly what type of power it corresponds to. 28<nbsp />VAR would be a measure of complex power whereas 28<nbsp />W would be a measure of average power.</p>
 			
 			<p>The angle of the complex power (measured in relation to the positive real axis, as described in <xref ref="ch8-phasorarithmetic" />) can be used to quantify how much of the power is real vs. reactive. The quantity used to describe this is called the <term>power factor</term> and is defined in <xref ref="ch10-eq-power-factor" />. Note that <m>\theta</m> is the same angle that was calculated in <xref ref="ch10-eq-power-phase" />.</p>
 			
@@ -414,7 +414,7 @@
 				<title>Calculating complex power from average power and power factor</title>
 				
 				<statement>
-					<p>Calculate the complex power consumed by a load characterized by an average power consumption of 1630<nbsp />W and a lagging power factor of 0.862.</p>
+					<p>Calculate the complex power consumed by a load characterized by an average power consumption of 1630<nbsp />W and a lagging (inductive load) power factor of 0.862.</p>
 					
 					<p>Use <xref ref="ch10-eq-power-factor" /> to calculate the apparent power.</p>
 					
@@ -425,7 +425,7 @@
 						</md>
 					</p>
 
-					<p>Use <xref ref="ch10-eq-power-factor-reactive-power" /> to calculate the reactive power. It must be positive because the power factor is lagging.</p>
+					<p>Use <xref ref="ch10-eq-power-factor-reactive-power" /> to calculate the reactive power. It must be positive because the power factor is lagging (the load is inductive).</p>
 					
 					<p>
 						<md>
@@ -447,7 +447,7 @@
 				<title>Calculating complex power from a circuit diagram</title>
 				
 				<statement>
-					<p>Calculate the complex power consumed by the following circuit. The source voltage is equal to <m>20~\textrm{VRMS}~\cos(2\pi 500t - 30\pi / 180)</m>.</p>
+					<p>Calculate the complex power consumed by the following circuit. The source is equal to <m>v_{AC}(t) = 20~\textrm{VRMS}~\cos(2\pi 500t - 30\pi / 180)</m>.</p>
 					
 					<figure>
   						<caption></caption>
@@ -570,7 +570,7 @@
 			<title>Deriving a load for maximum power transfer</title>
 			
 			<statement>
-				<p>Calculate the value of <m>\vec{Z_LOAD}</m> (including individual component values) that will lead to maximum power transfer in the circuit shown below. Then, calculate the power transferred to that load. The voltage source has a value of <m>v_{AC}(t) = 200~\textrm{VRMS}~\cos(2\pi100t + 60\pi/180)</m>.</p>
+				<p>Calculate the value of <m>\vec{Z_{LOAD}}</m> (including individual component values) that will lead to maximum power transfer in the circuit shown below. Then, calculate the average power transferred to that load. The voltage source has a value of <m>v_{AC}(t) = 200~\textrm{VRMS}~\cos(2\pi100t + 60\pi/180)</m>.</p>
 
 				<figure>
   					<caption></caption>
@@ -1558,8 +1558,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_S} \amp= \frac{60+j103.92~\textrm{VRMS}}{5~\Omega}</mrow>
-							<mrow>\amp= 12+j20.78~\textrm{ARMS}</mrow>
+							\frac{60+j103.92~\textrm{VRMS}}{5~\Omega} = 12+j20.78~\textrm{ARMS}
 						</md>
 					</p>
 
@@ -1567,8 +1566,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= (5~\Omega)//(j7.54~\Omega)</mrow>
-							<mrow>\amp= 3.47+j2.30~\Omega</mrow>
+							(5~\Omega)//(j7.54~\Omega) = 3.47+j2.30~\Omega
 						</md>
 					</p>
 
@@ -2080,12 +2078,11 @@
 						</md>
 					</p>
 
-					<p>Convert the current source to a voltage source.</p>
+					<p>Transform the current source into a voltage source.</p>
 
 					<p>
 						<md>
-							<mrow>\vec{V_S} \amp= (14.14+j14.14~\textrm{ARMS})(5~\Omega)</mrow>
-							<mrow>\amp= 70.71+j70.71~\textrm{VRMS}</mrow>
+							(14.14+j14.14~\textrm{ARMS})(5~\Omega) = 70.71+j70.71~\textrm{VRMS}
 						</md>
 					</p>
 
@@ -2215,12 +2212,11 @@
 						</md>
 					</p>
 
-					<p>Convert the current source to a voltage source.</p>
+					<p>Transform the current source into a voltage source.</p>
 
 					<p>
 						<md>
-							<mrow>\vec{V_S} \amp= (28~\textrm{ARMS})(-j6.63~\Omega)</mrow>
-							<mrow>\amp= -j185.68~\textrm{VRMS}</mrow>
+							(28~\textrm{ARMS})(-j6.63~\Omega) = -j185.68~\textrm{VRMS}
 						</md>
 					</p>
 

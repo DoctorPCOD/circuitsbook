@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch7-secondorderresponses">
@@ -556,7 +579,7 @@ eBookConfig.enable_chatcodes =  false;
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Overdamped Solution</span>
 </h2>
-<div class="para" id="ch7-homogeneous-overdamped-solutions-2">The solution to a homogeneous overdamped circuit is described in <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a>, with the equation coefficients <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> defined in <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.2">(7.5.2)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.3">(7.5.3)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-overdamped-solutions-2">The solution to a homogeneous overdamped circuit is described in <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a>, with coefficients <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> defined in <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.2">(7.5.2)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.3">(7.5.3)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-overdamped-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch7-homogeneous-overdamped-solutions-3">
 <div class="displaymath process-math" id="ch7-homogeneous-overdamped-solutions-3-1">
@@ -622,7 +645,7 @@ A_1 \amp= \frac{v(0^+)s_2 - v'(0^+)}{s_2-s_1}
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Underdamped Solution</span>
 </h2>
-<div class="para" id="ch7-homogeneous-underdamped-solutions-2">The solution to a homogeneous underdamped circuit is described in <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.4">(7.5.4)</a>, with the equation coefficients <span class="process-math">\(B_1\)</span> and <span class="process-math">\(B_2\)</span> defined in <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under-B1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.5">(7.5.5)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under-B2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.6">(7.5.6)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-underdamped-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-underdamped-solutions-2">The solution to a homogeneous underdamped circuit is described in <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.4">(7.5.4)</a>, with coefficients <span class="process-math">\(B_1\)</span> and <span class="process-math">\(B_2\)</span> defined in <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under-B1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.5">(7.5.5)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-underdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-under-B2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.6">(7.5.6)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-underdamped-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch7-homogeneous-underdamped-solutions-3">
 <div class="displaymath process-math" id="ch7-homogeneous-underdamped-solutions-3-1">
@@ -682,7 +705,7 @@ B_2 \amp= \frac{v'(0^+) + \alpha v(0^+)}{\beta}
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Critically Damped Solution</span>
 </h2>
-<div class="para" id="ch7-homogeneous-critically-solutions-2">The solution to a homogeneous critically damped circuit is described in <a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-critical.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.7">(7.5.7)</a>, with the equation coefficients <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> defined in <a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-critical-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.8">(7.5.8)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-critical-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.9">(7.5.9)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-critically-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-critically-solutions-2">The solution to a homogeneous critically damped circuit is described in <a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-critical.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.7">(7.5.7)</a>, with coefficients <span class="process-math">\(A_1\)</span> and <span class="process-math">\(A_2\)</span> defined in <a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-critical-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.8">(7.5.8)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-critically-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-critical-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.9">(7.5.9)</a>, respectively. Note that this equation is defined with voltage terms. If calculating current, all <span class="process-math">\(v(t)\)</span> terms can be replaced by <span class="process-math">\(i(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-critically-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch7-homogeneous-critically-solutions-3">
 <div class="displaymath process-math" id="ch7-homogeneous-critically-solutions-3-1">
@@ -744,7 +767,7 @@ A_2 \amp= v'(0^+) + \alpha v(0^+)
 <article class="example example-like" id="ch7-homogeneous-examples-2"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous RLC series circuit.</span>
 </h3>
-<div class="para" id="ch7-homogeneous-examples-2-2-1">Derive an equation for <span class="process-math">\(v(t)\)</span> for the circuit shown below. The circuit is closed for a very long time before opening at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-2-2-1">Derive an equation for <span class="process-math">\(v(t)\)</span> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-examples-2-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-homogeneous-seriesrlc-example-fig1.svg" role="img" class="contained" alt="Circuit with 6 nodes consisting of a 20V source, SPST switch, three resistors (100ohm, 220ohm, and 47ohm), inductor (50mH), and two capacitors (both 470nF). The high-potential end of the 20V source connects to the 100ohm resistor at node a. The 100ohm resistor connects to one end of the SPST switch at node b. The SPST switch, 50mH inductor, and 47ohm resistor connect at node c. The 50mH inductor and 220ohm resistor connect at node d. The 47ohm resistor and both 470nF capacitors connect at node e. The low-potential end of the 20V source, 220ohm resistor, and both 470nF capacitors connect at node f. Branch current iL(t) flows through the inductor from node c to node d. Voltage v(t) drops from node e to node f. The SPST switch is depicted as opening."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.2"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-2" title="Copy heading and permalink for Figure 7.5.2" aria-label="Copy heading and permalink for Figure 7.5.2">🔗</a></div></figcaption>
@@ -793,7 +816,7 @@ v(0) \amp= 20~\textrm{V}\left(\frac{220~\Omega}{320~\Omega}\right)\\
 </figure> 
 <div class="para" id="ch7-homogeneous-examples-2-2-15">Because the capacitor and inductor are in series in this circuit configuration, the current through the capacitor at <span class="process-math">\(t=0^+\)</span> will be equal to the negative value of the current through the inductor at <span class="process-math">\(t=0\text{.}\)</span> (The value is negative because the current directions are opposing. Current through the capacitor is defined as flowing from high to low potential.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-examples-2-2-16">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.8">(7.3.8)</a> to calculate the initial first derivative of the voltage. Use base units (farads and amps) to ensure that the result has a unit of V/s.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-2-2-16">Use <a href="ch7-the-series-rlc-circuit.html#ch7-eq-seriesrlc-vpzero" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.5">(7.3.5)</a> to calculate the initial first derivative of the voltage. Use base units (farads and amps) to ensure that the result has a unit of V/s.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-2-2-17">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-2-2-17-1">
@@ -804,7 +827,7 @@ v'(0^+) \amp= \frac{-0.0625~\textrm{A}}{940\times10^{-9}~\textrm{F}}\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-examples-2-2-18">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.5">(7.3.5)</a> to calculate the damping parameter. Use base units (henrys, ohms) to ensure that the result has a unit of Np/s.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-2-2-18">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-12-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.3">(7.3.3)</a> to calculate the damping parameter. Use base units (henrys, ohms) to ensure that the result has a unit of Np/s.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-2-2-19">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-2-2-19-1">
@@ -815,7 +838,7 @@ v'(0^+) \amp= \frac{-0.0625~\textrm{A}}{940\times10^{-9}~\textrm{F}}\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-examples-2-2-20">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.6">(7.3.6)</a> to calculate the resonant frequency. Use base units (henrys, farads) to ensure that the result has a unit of rad/s.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-2-2-20">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-12-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.4">(7.3.4)</a> to calculate the resonant frequency. Use base units (henrys, farads) to ensure that the result has a unit of rad/s.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-2-2-21">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-2-2-21-1">
@@ -853,9 +876,10 @@ B_2 \amp= \frac{-66489.36+(2670)(13.75)}{3761.35}\\
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-2-2-27">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-2-2-27-1">
-\begin{equation*}
-v(t) = \textrm{e}^{-2670 t} \left[13.75~\textrm{V}~\cos(3761.35 t) -7.92~\textrm{V}~\sin(3761.35 t)	\right]~u(t) + 13.75~\textrm{V}~u(-t)
-\end{equation*}
+\begin{align*}
+v(t) \amp= \textrm{e}^{-2670 t} \left[13.75~\textrm{V}~\cos(3761.35 t) -7.92~\textrm{V}~\sin(3761.35 t) \right]~u(t)\\
+\amp+ 13.75~\textrm{V}~u(-t)
+\end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-2-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -868,7 +892,7 @@ v(t) = \textrm{e}^{-2670 t} \left[13.75~\textrm{V}~\cos(3761.35 t) -7.92~\textrm
 <article class="example example-like" id="ch7-homogeneous-examples-3"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous parallel RLC circuit.</span>
 </h3>
-<div class="para" id="ch7-homogeneous-examples-3-2-1">Calculate <span class="process-math">\(i(t)\)</span> for the circuit below. The switch is closed for a very long time before opening at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-3-2-1">Derive an equation for <span class="process-math">\(i(t)\)</span> for the circuit below. The switch is closed for a very long time before opening at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-examples-3-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-homogeneous-parallelrlc-example-fig1.svg" role="img" class="contained" alt="Circuit with four nodes consisting of a 6V source, 10ohm resistor, SPST switch, 30mH inductor, 300uF capacitor, and 5ohm resistor. The high-potential end of the 6V source connects to the 10ohm resistor at node a. The 10ohm resistor and SPST switch connect at node b. The SPST switch, 30mH inductor, 330uF capacitor, and 5ohm resistor connect at node c. The low-potential end of the 6V source, 30mH inductor, 300uF capacitor, and 5ohm resistor connect at node d. Branch current i(t) flows through the inductor from node c to node d. Voltage v(t) drops over the 5ohm resistor from node c to node d. The SPST switch is depicted as opening."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.9"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-2" title="Copy heading and permalink for Figure 7.5.9" aria-label="Copy heading and permalink for Figure 7.5.9">🔗</a></div></figcaption>
@@ -901,7 +925,7 @@ i(0) \amp= \frac{6\textrm{V}}{10~\Omega}\\
 <figure class="figure figure-like" id="ch7-homogeneous-examples-3-2-11"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-homogeneous-parallelrlc-example-fig4.svg" role="img" class="contained" alt="Circuit consisting of a 30mH inductor, 300uF capacitor, and 5ohm resistor all connected in parallel. Voltage v(t) drops over all three circuit elements. Branch current i(t) flows through the inductor."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.12"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-11" title="Copy heading and permalink for Figure 7.5.12" aria-label="Copy heading and permalink for Figure 7.5.12">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch7-homogeneous-examples-3-2-12">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-homoparallelrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.5">(7.4.5)</a> to calculate the damping parameter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-3-2-12">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-homoparallelrlc-12-1" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.3">(7.4.3)</a> to calculate the damping parameter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-3-2-13">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-3-2-13-1">
@@ -912,7 +936,7 @@ i(0) \amp= \frac{6\textrm{V}}{10~\Omega}\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-examples-3-2-14">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.6">(7.3.6)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-3-2-14">Use <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-12-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.4">(7.3.4)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-3-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-3-2-15">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-3-2-15-1">
@@ -954,7 +978,7 @@ i(t) = \left(0.6~\textrm{A}~~\textrm{e}^{-333t} + 200~\textrm{A/s}~t~\textrm{e}^
 <article class="example example-like" id="ch7-homogeneous-examples-4"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.14</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous parallel RLC circuit with parasitic resistance.</span>
 </h3>
-<div class="para" id="ch7-homogeneous-examples-4-2-1">Calculate <span class="process-math">\(i(t)\)</span> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The inductor has a parasitic resistance of 60 Ω, which is not explicitly shown on the circuit diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-4-2-1">Derive an equation for <span class="process-math">\(i(t)\)</span> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The inductor has a parasitic resistance of 60 Ω, which is not explicitly shown on the circuit diagram.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-examples-4-2-2"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-homogeneous-parallelrlc-parasitic-example-fig1.svg" role="img" class="contained" alt="Circuit with three nodes consisting of a 200mA current source, SPST switch, 100mH inductor, 22nF capacitor, and 47ohm resistor. The 200mA source connects to the SPST switch at node a. The 200mA source flows into node a. The SPST switch, inductor, capacitor, and resistor connect at node b. The source, resistor, capacitor, and inductor connect at node c. Branch current i(t) flows through the inductor from node b to node c. Voltage v(t) drops over the resistor from node b to node c. The SPST switch is depicted as opening."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.15"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-2" title="Copy heading and permalink for Figure 7.5.15" aria-label="Copy heading and permalink for Figure 7.5.15">🔗</a></div></figcaption>
@@ -986,7 +1010,7 @@ v(0) \amp= (0.2~\textrm{A})(60~\Omega//47~\Omega)\\
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-examples-4-2-9">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance-15-1" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-parasitic-ipzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.19">(7.4.19)</a> to calculate the initial first derivative of the current.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-4-2-9">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-eq-parallelrlc-parasitic-ipzero" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-parasitic-ipzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.12">(7.4.12)</a> to calculate the initial first derivative of the current.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-4-2-10">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-4-2-10-1">
@@ -997,7 +1021,7 @@ i'(0) \amp= \frac{5.27~\textrm{V} - (0.08785~\textrm{A})(60~\Omega)}{0.1~\textrm
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-examples-4-2-11">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-parasitic-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.15">(7.4.15)</a> to calculate the damping parameter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-4-2-11">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-parasitic-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.10">(7.4.10)</a> to calculate the damping parameter.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-4-2-12">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-4-2-12-1">
@@ -1008,7 +1032,7 @@ i'(0) \amp= \frac{5.27~\textrm{V} - (0.08785~\textrm{A})(60~\Omega)}{0.1~\textrm
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-examples-4-2-13">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-parasitic-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.16">(7.4.16)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-examples-4-2-13">Use <a href="ch7-the-parallel-rlc-circuit.html#ch7-parallel-rlc-parasitic-resistance-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-parallelrlc-parasitic-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.4.11">(7.4.11)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-4-2-14">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-4-2-14-1">
@@ -1049,9 +1073,10 @@ A_2 \amp= \frac{-(87.85)(-1070.52)}{-966647.46+1070.52}\\
 </div> 
 <div class="para logical" id="ch7-homogeneous-examples-4-2-20">
 <div class="displaymath process-math" id="ch7-homogeneous-examples-4-2-20-1">
-\begin{equation*}
-i(t) = \left(87.95~\textrm{mA}~\textrm{e}^{-1070.52t} - 0.10~\textrm{mA}~\textrm{e}^{-966647.46t}\right)~u(t) + 87.85~\textrm{mA}~u(-t)
-\end{equation*}
+\begin{align*}
+i(t) \amp= \left(87.95~\textrm{mA}~\textrm{e}^{-1070.52t} - 0.10~\textrm{mA}~\textrm{e}^{-966647.46t}\right)~u(t)\\
+\amp+ 87.85~\textrm{mA}~u(-t)
+\end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1061,119 +1086,23 @@ i(t) = \left(87.95~\textrm{mA}~\textrm{e}^{-1070.52t} - 0.10~\textrm{mA}~\textrm
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.17"><a tabindex="-1" href="#ch7-homogeneous-examples-4-2-22" title="Copy heading and permalink for Figure 7.5.17" aria-label="Copy heading and permalink for Figure 7.5.17">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Example 7.5.14: Homogeneous parallel RLC circuit with parasitic resistance"><a tabindex="-1" href="#ch7-homogeneous-examples-4" title="Copy heading and permalink for Example 7.5.14: Homogeneous parallel RLC circuit with parasitic resistance" aria-label="Copy heading and permalink for Example 7.5.14: Homogeneous parallel RLC circuit with parasitic resistance">🔗</a></div>
 </article>
-<article class="example example-like" id="ch7-homogeneous-examples-5"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous general second-order circuit in symbolic form.</span>
-</h3>
-<div class="para" id="ch7-homogeneous-examples-5-2-1">Derive a second order differential equation in terms of <span class="process-math">\(v(t)\)</span> (in standard form) for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<figure class="figure figure-like" id="ch7-homogeneous-examples-5-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-homogeneous-general-symbolic-example-fig1.svg" role="img" class="contained" alt="Circuit with 5 nodes consisting of a voltage source Vs, resistor Rs, SPST switch, capacitor C, resistor R1, resistor R2, and inductor L. The high-potential end of Vs and Rs connect at node a. Rs and the SPST switch connect at node b. The SPST switch, C, R1, and L connect at node c. L and R2 connect at node d. The low-potential end of Vs, C, R1, and R2 connect at node e. Voltage v(t) drops over R2 from node d to node e. The SPST switch is depicted as opening."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.19"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-2" title="Copy heading and permalink for Figure 7.5.19" aria-label="Copy heading and permalink for Figure 7.5.19">🔗</a></div></figcaption>
-</figure> 
-<div class="para" id="ch7-homogeneous-examples-5-2-3">First, analyze the initial conditions of the circuit. The inductor can be replaced by a short and the capacitor can be replaced by an open.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<figure class="figure figure-like" id="ch7-homogeneous-examples-5-2-4"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-homogeneous-general-symbolic-example-fig2.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of voltage source Vs and resistors Rs, R1, and R2. The high-potential end of Vs and Rs connect at node a. Rs, R1, and R2 connect at node b. The low-potential end of Vs, R1, and R2 connect at node c. Voltage v(0) drops over R2 from node b to node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.20"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-4" title="Copy heading and permalink for Figure 7.5.20" aria-label="Copy heading and permalink for Figure 7.5.20">🔗</a></div></figcaption>
-</figure> 
-<div class="para" id="ch7-homogeneous-examples-5-2-5">Use a voltage divider to calculate the initial voltage. This value will be continuous with time. This is because resistor <span class="process-math">\(R_2\)</span> is in series with the inductor, and the current through the inductor is continuous with time. Therefore, <span class="process-math">\(R_2i(t)\text{,}\)</span> which is equal to <span class="process-math">\(v(t)\text{,}\)</span> will be continuous with time. There will be no need to analyze the circuit at <span class="process-math">\(t=0^+\)</span> to check for discontinuities.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch7-homogeneous-examples-5-2-6">
-<div class="displaymath process-math" id="ch7-homogeneous-examples-5-2-6-1">
-\begin{equation*}
-v(0) = V_S\left(\frac{R_2//R_1}{R_S+R_2//R_1}\right)
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch7-homogeneous-examples-5-2-7">Analyze the circuit at <span class="process-math">\(t=0^+\)</span> to derive the second-order equation. Two terms (<span class="process-math">\(i(t)\)</span> and <span class="process-math">\(v_X(t)\)</span>) are introduced to assist in the analysis.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<figure class="figure figure-like" id="ch7-homogeneous-examples-5-2-8"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-homogeneous-general-symbolic-example-fig3.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of capacitor C, inductor L, and resistors R1 and R2. C, R1, and L connect at node a. L and R2 connect at node b. C, R1, and R2 connect at node c. Voltage vx(t) drops over C from node a to node c. Branch current i(t) flows through L from node a to node b. Voltage v(t) drops over R2 from node b to node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.21"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-8" title="Copy heading and permalink for Figure 7.5.21" aria-label="Copy heading and permalink for Figure 7.5.21">🔗</a></div></figcaption>
-</figure> 
-<div class="para" id="ch7-homogeneous-examples-5-2-9">Perform KVL around the loop consisting of the capacitor, inductor, and <span class="process-math">\(R_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch7-homogeneous-examples-5-2-10">
-<div class="displaymath process-math" id="ch7-homogeneous-general-symbolic-ex-kvl">
-\begin{equation}
-v_X(t) = L\frac{di(t)}{dt} + v(t)\tag{7.5.10}
-\end{equation}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch7-homogeneous-examples-5-2-11">The inductor is in series with resistor <span class="process-math">\(R_2\text{.}\)</span> This means that the current through the inductor can be calculated using Ohm’s law with <span class="process-math">\(R_2\text{.}\)</span> This current is equal to <span class="process-math">\(v(t)/R_2\text{.}\)</span> Plug this quantity into <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-symbolic-ex-kvl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-symbolic-ex-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.10">(7.5.10)</a> to eliminate the <span class="process-math">\(i(t)\)</span> term from the equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch7-homogeneous-examples-5-2-12">
-<div class="displaymath process-math" id="ch7-homogeneous-general-symbolic-vx">
-\begin{equation}
-v_X(t) = \frac{L}{R_2}\frac{dv(t)}{dt} + v(t)\tag{7.5.11}
-\end{equation}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch7-homogeneous-examples-5-2-13">Perform KCL at the node connecting the capacitor, <span class="process-math">\(R_1\text{,}\)</span> and the inductor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch7-homogeneous-examples-5-2-14">
-<div class="displaymath process-math" id="ch7-homogeneous-general-symbolic-kcl">
-\begin{equation}
-\frac{v(t)}{R_2} + C\frac{dv_X(t)}{dt} + \frac{v_X(t)}{R_1} = 0\tag{7.5.12}
-\end{equation}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch7-homogeneous-examples-5-2-15">Plug <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-symbolic-vx" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-symbolic-vx.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.11">(7.5.11)</a> into <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-symbolic-kcl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-symbolic-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.12">(7.5.12)</a> and reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch7-homogeneous-examples-5-2-16">
-<div class="displaymath process-math" id="ch7-homogeneous-examples-5-2-16-1">
-\begin{align*}
-0 \amp= \frac{v(t)}{R_2} + C\frac{d}{dt}\left(\frac{L}{R_2}\frac{dv(t)}{dt} + v(t)\right) + \frac{1}{R_1}\left(\frac{L}{R_2}\frac{dv(t)}{dt} + v(t)\right)\\
-\amp= \frac{1}{R_2}v(t) + \frac{CL}{R_2}\frac{d^2v(t)}{dt^2} + C\frac{dv(t)}{dt} + \frac{L}{R_1R_2}\frac{dv(t)}{dt} + \frac{1}{R_1}v(t)\\
-\amp= \frac{CL}{R_2}\frac{d^2v(t)}{dt^2} + \left(C + \frac{L}{R_1R_2}\right)\frac{dv(t)}{dt} + \left(\frac{1}{R_2} + \frac{1}{R_1}\right)v(t)\\
-\amp= \frac{d^2v(t)}{dt^2} + \left(\frac{R_2}{L} + \frac{1}{R_1C}\right)\frac{dv(t)}{dt} + \left(\frac{1}{LC} + \frac{R_2}{R_1LC}\right)v(t)
-\end{align*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch7-homogeneous-examples-5-2-17">Derive equations for alpha and omega.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch7-homogeneous-examples-5-2-18">
-<div class="displaymath process-math" id="ch7-homogeneous-examples-5-2-18-1">
-\begin{align*}
-\alpha \amp= \frac{R_2}{2L} + \frac{1}{2CR_1}\\
-\omega_0 \amp= \sqrt{\frac{R_2}{R_1LC}+\frac{1}{LC}}
-\end{align*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch7-homogeneous-examples-5-2-19">Derive an equation for the initial derivative of the voltage drop. (Note: this comes from <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-symbolic-vx" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-symbolic-vx.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.11">(7.5.11)</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch7-homogeneous-examples-5-2-20">
-<div class="displaymath process-math" id="ch7-homogeneous-examples-5-2-20-1">
-\begin{equation*}
-v'(0^+) = \frac{R_2}{L}\left(v_X(0^+)-v(0^+)\right)
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para" id="ch7-homogeneous-examples-5-2-21">This circuit can now be solved given any numerical values of <span class="process-math">\(V_S\text{,}\)</span> <span class="process-math">\(R_S\text{,}\)</span> <span class="process-math">\(L\text{,}\)</span> <span class="process-math">\(C\text{,}\)</span> <span class="process-math">\(R_1\)</span> and <span class="process-math">\(R_2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-examples-5-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 7.5.18: Homogeneous general second-order circuit in symbolic form"><a tabindex="-1" href="#ch7-homogeneous-examples-5" title="Copy heading and permalink for Example 7.5.18: Homogeneous general second-order circuit in symbolic form" aria-label="Copy heading and permalink for Example 7.5.18: Homogeneous general second-order circuit in symbolic form">🔗</a></div>
-</article>
 <article class="example example-like" id="ch7-homogeneous-numerical-diffeq-example"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.22</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous general second-order circuit in numeric form.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Homogeneous general second-order circuit.</span>
 </h3>
-<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-1">Calculate <span class="process-math">\(i(t)\)</span> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The circuit parameters are <span class="process-math">\(R_1 = 20~\Omega\text{,}\)</span> <span class="process-math">\(R_2 = 30~\Omega\text{,}\)</span> <span class="process-math">\(R_3 = 30~\Omega\text{,}\)</span> <span class="process-math">\(L_1 = 500~\textrm{mH}\text{,}\)</span> and <span class="process-math">\(L_2 = 400~\textrm{mH}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-1">Derive an equation for <span class="process-math">\(i(t)\)</span> for the circuit shown below. The switch is closed for a very long time before opening at a time of zero seconds. The circuit parameters are: <span class="process-math">\(R_1 = 20~\Omega\text{,}\)</span> <span class="process-math">\(R_2 = 30~\Omega\text{,}\)</span> <span class="process-math">\(R_3 = 30~\Omega\text{,}\)</span> <span class="process-math">\(L_1 = 500~\textrm{mH}\text{,}\)</span> and <span class="process-math">\(L_2 = 400~\textrm{mH}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-numerical-diffeq-example-2-2"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-homogeneous-general-numeric-example-fig1.svg" role="img" class="contained" alt="Circuit with six nodes consisting of a 10V source, 20ohm resistor, SPST switch, tow inductors (L1 and L2) and three resistors (R1, R2, and R3). The high-potential end of the 10V source connects to the 20ohm resistor at node a. The 20ohm resistor and SPST switch connect at node b. The SPST switch, R1, and L1 connect at node c. L1, R2, and R3 connect at node d. R3 and L2 connect at node e. The low-potential end of the 10V source, R1, R2, and L2 connect at node f. Branch current iX(t) flows through L1 from node c to node d. Branch current i(t) flows through L2 from node e to node f. Voltage vX(t) drops over R2 from node d to node f. The SPST switch is depicted as opening."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.23"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-2" title="Copy heading and permalink for Figure 7.5.23" aria-label="Copy heading and permalink for Figure 7.5.23">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.19<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.19"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-2" title="Copy heading and permalink for Figure 7.5.19" aria-label="Copy heading and permalink for Figure 7.5.19">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-3">Analyze the circuit in its initial steady-state configuration Both inductors can be replaced by shorts.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-numerical-diffeq-example-2-4"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch7-homogeneous-general-numeric-example-fig2.svg" role="img" class="contained" alt="Circuit with three meshes and five nodes consisting of a 10V source, 20ohm resistor, resistors R1, R2, and R3, and two shorts (SH1 and SH2). The high-potential end of the 10V source connects to the 20ohm resistor at node a. The 20ohm resistor, R1, and SH1 connect at node b. SH1, R2, and R3 connect at node c. R3 and SH2 connect at node d. The low-potential end of the 10V source, R1, R2, and SH2 connect at node e. Branch current iX(0) flows through SH1 from node b to node c. Branch current i(0) flows through SH2 from node d to node e. Voltage vX(0-) drops over R2 from node c to node e."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.24"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-4" title="Copy heading and permalink for Figure 7.5.24" aria-label="Copy heading and permalink for Figure 7.5.24">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.20"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-4" title="Copy heading and permalink for Figure 7.5.20" aria-label="Copy heading and permalink for Figure 7.5.20">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-5">Transform the voltage source into a current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-numerical-diffeq-example-2-6"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-homogeneous-general-numeric-example-fig3.svg" role="img" class="contained" alt="Circuit with four meshes and two nodes consisting of a 0.5A source, 20ohm resistor, and resistors R1, R2, and R3. All five circuit elements are connected in parallel between nodes a and b. The 0.5A source flows out of node b into node a. Branch current iX(0) flows in the short between R1 and R2. Branch current i(0) flows through R3 from node a to node b. Voltage vX(0-) drops over R2 from node a to node b."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.25<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.25"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-6" title="Copy heading and permalink for Figure 7.5.25" aria-label="Copy heading and permalink for Figure 7.5.25">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.21"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-6" title="Copy heading and permalink for Figure 7.5.21" aria-label="Copy heading and permalink for Figure 7.5.21">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-7">Calculate the equivalent resistance of the circuit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -1224,21 +1153,21 @@ v_X(0^-) \amp= (0.1~\textrm{A})(30~\Omega)\\
 <span class="process-math">\(v_X(t)\)</span> may not be continuous with time. Analyze the circuit at <span class="process-math">\(t=0^+\)</span> to calculate <span class="process-math">\(v_X(0^+)\text{.}\)</span> Replace <span class="process-math">\(L_1\)</span> with a 0.2 A current source. Replace <span class="process-math">\(L_2\)</span> with a 0.1 A current source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-numerical-diffeq-example-2-16"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-homogeneous-general-numeric-example-fig4.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of resistors R1, R2, and R3, and two current sources of 0.2A and 0.1A. R1 and the 0.2A source connect at node a. The 0.2A source flows out of node a. The 0.2A source, R2, and R3 connect at node b. The 0.2A source flows into node b. R3 and the 0.1A source connect at node c. The 0.1A source flows out of node c. R1, R2, and the 0.1A source connect at node d. The 0.1A source flows into node d. vX(0+) drops over R2 from node b to node d."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.26<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.26"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-16" title="Copy heading and permalink for Figure 7.5.26" aria-label="Copy heading and permalink for Figure 7.5.26">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.22"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-16" title="Copy heading and permalink for Figure 7.5.22" aria-label="Copy heading and permalink for Figure 7.5.22">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-17">From KCL, we can see that the current through <span class="process-math">\(R_2\)</span> will be equal to 0.1 A. Therefore, <span class="process-math">\(v_X(0^+) = 3~\textrm{V}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-18">Analyze the circuit at <span class="process-math">\(t=0^+\)</span> to derive the second-order differential equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-numerical-diffeq-example-2-19"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-homogeneous-general-numeric-example-fig5.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of two inductors (L1 and L2) and three resistors (R1, R2, and R3). R1 and L1 connect at node a. L1, R2, and R3 connect at node b. R3 and L2 connect at node c. R1, R2, and L2 connect at node d. Branch current iX(t) flows through L1 from node a to node b. Branch current i(t) flows through L2 from node c to node d. Voltage vX(t) drops over R2 from node b to node d."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.27<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.27"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-19" title="Copy heading and permalink for Figure 7.5.27" aria-label="Copy heading and permalink for Figure 7.5.27">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.23<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.23"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-19" title="Copy heading and permalink for Figure 7.5.23" aria-label="Copy heading and permalink for Figure 7.5.23">🔗</a></div></figcaption>
 </figure> 
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-20">Perform KCL at the node connecting <span class="process-math">\(L_1\text{,}\)</span> <span class="process-math">\(R_2\text{,}\)</span> and <span class="process-math">\(R_3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-numerical-diffeq-example-2-21">
 <div class="displaymath process-math" id="ch7-homogeneous-general-numeric-kcl">
 \begin{equation}
-i_X(t) = \frac{v_X(t)}{R_2} + i(t)\tag{7.5.13}
+i_X(t) = \frac{v_X(t)}{R_2} + i(t)\tag{7.5.10}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1248,20 +1177,20 @@ i_X(t) = \frac{v_X(t)}{R_2} + i(t)\tag{7.5.13}
 <div class="para logical" id="ch7-homogeneous-numerical-diffeq-example-2-23">
 <div class="displaymath process-math" id="ch7-homogeneous-general-numeric-kvl-lhs">
 \begin{equation}
-v_X(t) = -L_1\frac{di_X(t)}{dt} - R_1i_X(t)\tag{7.5.14}
+v_X(t) = -L_1\frac{di_X(t)}{dt} - R_1i_X(t)\tag{7.5.11}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-24">Plug <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kcl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.13">(7.5.13)</a> into <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kvl-lhs" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kvl-lhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.14">(7.5.14)</a> to remove <span class="process-math">\(i_X(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-24">Plug <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kcl" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kcl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.10">(7.5.10)</a> into <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kvl-lhs" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kvl-lhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.11">(7.5.11)</a> to remove <span class="process-math">\(i_X(t)\)</span> terms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-numerical-diffeq-example-2-25">
 <div class="displaymath process-math" id="ch7-homogeneous-numerical-diffeq-example-2-25-1">
 \begin{align}
-v_X(t) \amp= -L_1\frac{d}{dt}\left(\frac{v_X(t)}{R_2} + i(t)\right) - R_1\left(\frac{v_X(t)}{R_2} + i(t)\right)\tag{7.5.15}\\
-\amp= -\frac{L_1}{R_2}\frac{dv_X(t)}{dt} - L_1\frac{di(t)}{dt} - \frac{R_1}{R_2}v_X(t) - R_1i(t)\tag{7.5.16}\\
-0 \amp= v_X(t) + \frac{R_1}{R_2}v_X(t) + \frac{L_1}{R_2}\frac{dv_X(t)}{dt} + L_1\frac{di(t)}{dt} + R_1i(t)\tag{7.5.17}\\
-\amp= \left(1 + \frac{R_1}{R_2}\right)v_X(t) + \frac{L_1}{R_2}\frac{dv_X(t)}{dt} + L_1\frac{di(t)}{dt} + R_1i(t)\tag{7.5.18}
+v_X(t) \amp= -L_1\frac{d}{dt}\left(\frac{v_X(t)}{R_2} + i(t)\right) - R_1\left(\frac{v_X(t)}{R_2} + i(t)\right)\tag{7.5.12}\\
+\amp= -\frac{L_1}{R_2}\frac{dv_X(t)}{dt} - L_1\frac{di(t)}{dt} - \frac{R_1}{R_2}v_X(t) - R_1i(t)\tag{7.5.13}\\
+0 \amp= v_X(t) + \frac{R_1}{R_2}v_X(t) + \frac{L_1}{R_2}\frac{dv_X(t)}{dt} + L_1\frac{di(t)}{dt} + R_1i(t)\tag{7.5.14}\\
+\amp= \left(1 + \frac{R_1}{R_2}\right)v_X(t) + \frac{L_1}{R_2}\frac{dv_X(t)}{dt} + L_1\frac{di(t)}{dt} + R_1i(t)\tag{7.5.15}
 \end{align}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1271,20 +1200,24 @@ v_X(t) \amp= -L_1\frac{d}{dt}\left(\frac{v_X(t)}{R_2} + i(t)\right) - R_1\left(\
 <div class="para logical" id="ch7-homogeneous-numerical-diffeq-example-2-27">
 <div class="displaymath process-math" id="ch7-homogeneous-general-numeric-kvl-rhs">
 \begin{equation}
-v_X(t) = R_3i(t) + L_2\frac{di(t)}{dt}\tag{7.5.19}
+v_X(t) = R_3i(t) + L_2\frac{di(t)}{dt}\tag{7.5.16}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-28">Plug <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kvl-rhs" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kvl-rhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.19">(7.5.19)</a> into <a href="ch7-secondorderresponses.html#ch7-homogeneous-numerical-diffeq-example-2-25-1" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-nueric-almost.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.18">(7.5.18)</a> and reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-28">Plug <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kvl-rhs" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kvl-rhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.16">(7.5.16)</a> into <a href="ch7-secondorderresponses.html#ch7-homogeneous-numerical-diffeq-example-2-25-1" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-nueric-almost.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.15">(7.5.15)</a> and reduce to standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-numerical-diffeq-example-2-29">
 <div class="displaymath process-math" id="ch7-homogeneous-numerical-diffeq-example-2-29-1">
 \begin{align*}
-\amp= \left(1 + \frac{R_1}{R_2}\right)\left(R_3i(t) + L_2\frac{di(t)}{dt}\right) + \frac{L_1}{R_2}\frac{d}{dt}\left(R_3i(t) + L_2\frac{di(t)}{dt}\right) + L_1\frac{di(t)}{dt} + R_1i(t)\\
-\amp= R_3i(t) + L_2\frac{di(t)}{dt} + \frac{R_1R_3}{R_2}i(t) + \frac{L_2R_1}{R_2}\frac{di(t)}{dt} + \frac{L_1R_3}{R_2}\frac{di(t)}{dt} + \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + L_1\frac{di(t)}{dt} + R_1i(t)\\
-\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left(L_2 + \frac{L_2R_1}{R_2} + \frac{L_1R_3}{R_2} + L_1\right)\frac{di(t)}{dt} + \left(R_3 + \frac{R_1R_3}{R_2} + R_1\right)i(t)\\
-\amp= \frac{d^2i(t)}{dt^2} + \left(\frac{R_2}{L_1} + \frac{R_1}{L_1} + \frac{R_3}{L_2} + \frac{R_2}{L_2}\right)\frac{di(t)}{dt} + \left(\frac{R_2R_3}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_1R_2}{L_1L_2}\right)i(t)
+0 \amp= \left(1 + \frac{R_1}{R_2}\right)\left(R_3i(t) + L_2\frac{di(t)}{dt}\right) + \frac{L_1}{R_2}\frac{d}{dt}\left(R_3i(t) + L_2\frac{di(t)}{dt}\right)\\
+\amp+ L_1\frac{di(t)}{dt} + R_1i(t)\\
+\amp= R_3i(t) + L_2\frac{di(t)}{dt} + \frac{R_1R_3}{R_2}i(t) + \frac{L_2R_1}{R_2}\frac{di(t)}{dt} + \frac{L_1R_3}{R_2}\frac{di(t)}{dt}\\
+\amp+ \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + L_1\frac{di(t)}{dt} + R_1i(t)\\
+\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left(L_2 + \frac{L_2R_1}{R_2} + \frac{L_1R_3}{R_2} + L_1\right)\frac{di(t)}{dt}\\
+\amp+ \left(R_3 + \frac{R_1R_3}{R_2} + R_1\right)i(t)\\
+\amp= \frac{d^2i(t)}{dt^2} + \left(\frac{R_2}{L_1} + \frac{R_1}{L_1} + \frac{R_3}{L_2} + \frac{R_2}{L_2}\right)\frac{di(t)}{dt}\\
+\amp+ \left(\frac{R_2R_3}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_1R_2}{L_1L_2}\right)i(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -1314,7 +1247,7 @@ v_X(t) = R_3i(t) + L_2\frac{di(t)}{dt}\tag{7.5.19}
 </div> 
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-34">This circuit is overdamped.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-35">Use <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kvl-rhs" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kvl-rhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.19">(7.5.19)</a> to calculate the value of <span class="process-math">\(i'(0^+)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-35">Use <a href="ch7-secondorderresponses.html#ch7-homogeneous-general-numeric-kvl-rhs" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-general-numeric-kvl-rhs.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.16">(7.5.16)</a> to calculate the value of <span class="process-math">\(i'(0^+)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch7-homogeneous-numerical-diffeq-example-2-36">
 <div class="displaymath process-math" id="ch7-homogeneous-numerical-diffeq-example-2-36-1">
@@ -1365,8 +1298,8 @@ i(t) = \left(0.14~\textrm{A}~\textrm{e}^{-53.41t} - 0.04~\textrm{A}~\textrm{e}^{
 <div class="para" id="ch7-homogeneous-numerical-diffeq-example-2-43">The current is plotted below as a function of time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch7-homogeneous-numerical-diffeq-example-2-44"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch7-homogeneous-general-numeric-example-fig6.svg" role="img" class="contained" alt="Graph of the equation defined above."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.28"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-44" title="Copy heading and permalink for Figure 7.5.28" aria-label="Copy heading and permalink for Figure 7.5.28">🔗</a></div></figcaption>
-</figure><div class="autopermalink" aria-hidden="true" data-description="Example 7.5.22: Homogeneous general second-order circuit in numeric form"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example" title="Copy heading and permalink for Example 7.5.22: Homogeneous general second-order circuit in numeric form" aria-label="Copy heading and permalink for Example 7.5.22: Homogeneous general second-order circuit in numeric form">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 7.5.24"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example-2-44" title="Copy heading and permalink for Figure 7.5.24" aria-label="Copy heading and permalink for Figure 7.5.24">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Example 7.5.18: Homogeneous general second-order circuit"><a tabindex="-1" href="#ch7-homogeneous-numerical-diffeq-example" title="Copy heading and permalink for Example 7.5.18: Homogeneous general second-order circuit" aria-label="Copy heading and permalink for Example 7.5.18: Homogeneous general second-order circuit">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.5.4: Examples"><a tabindex="-1" href="#ch7-homogeneous-examples" title="Copy heading and permalink for Subsection 7.5.4: Examples" aria-label="Copy heading and permalink for Subsection 7.5.4: Examples">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 7.5: Homogeneous Second-Order Circuits"><a tabindex="-1" href="#ch7-secondorderresponses" title="Copy heading and permalink for Section 7.5: Homogeneous Second-Order Circuits" aria-label="Copy heading and permalink for Section 7.5: Homogeneous Second-Order Circuits">🔗</a></div>
 </section>

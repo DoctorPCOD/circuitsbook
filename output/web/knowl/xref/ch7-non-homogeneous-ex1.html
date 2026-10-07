@@ -99,25 +99,20 @@ v_X(t) = R_2C_2\frac{dv(t)}{dt} + v(t)\tag{7.8.18}
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
-\frac{I_SR_S}{R_S+R_1} \amp= \frac{1}{R_S+R_1}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_1\frac{d}{dt}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_2\frac{dv(t)}{dt}\\
-\amp= \frac{R_2C_2}{R_S+R_1}\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t) + C_1C_2R_2\frac{d^2v(t)}{dt^2} + C_1\frac{dv(t)}{dt} + C_2\frac{dv(t)}{dt}\\
-\amp= C_1C_2R_2\frac{d^2v(t)}{dt^2} + \left(\frac{R_2C_2}{R_S+R_1} + C_1 + C_2\right)\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t)\\
-\frac{I_SR_S}{C_1C_2(R_S+R_1)R_2} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{(R_S+R_1)C_1} + \frac{1}{R_2C_2} + \frac{1}{R_2C_1}\right)\frac{dv(t)}{dt} + \frac{1}{C_1C_2(R_S+R_1)R_2}v(t)
+\frac{I_SR_S}{R_S+R_1} \amp= \frac{1}{R_S+R_1}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right)\\
+\amp+ C_1\frac{d}{dt}\left(R_2C_2\frac{dv(t)}{dt} + v(t)\right) + C_2\frac{dv(t)}{dt}\\
+\amp= \frac{R_2C_2}{R_S+R_1}\frac{dv(t)}{dt} + \frac{1}{R_S+R_1}v(t) + C_1C_2R_2\frac{d^2v(t)}{dt^2}\\
+\amp+ C_1\frac{dv(t)}{dt} + C_2\frac{dv(t)}{dt}\\
+\amp= C_1C_2R_2\frac{d^2v(t)}{dt^2} + \left(\frac{R_2C_2}{R_S+R_1} + C_1 + C_2\right)\frac{dv(t)}{dt}\\
+\amp+ \frac{1}{R_S+R_1}v(t)\\
+\frac{I_SR_S}{C_1C_2(R_S+R_1)R_2} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{(R_S+R_1)C_1} + \frac{1}{R_2C_2} + \frac{1}{R_2C_1}\right)\frac{dv(t)}{dt}\\
+\amp+ \frac{1}{C_1C_2(R_S+R_1)R_2}v(t)\\
+41.667 \amp= \frac{d^2v(t)}{dt^2} + 7.9167\frac{dv(t)}{dt} + 2.0833
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug in component values, using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-41.667 = \frac{d^2v(t)}{dt^2} + 7.9167\frac{dv(t)}{dt} + 2.0833
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> to calculate the damping parameter and use <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> to calculate the damping parameter and use <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -126,12 +121,12 @@ v_X(t) = R_2C_2\frac{dv(t)}{dt} + v(t)\tag{7.8.18}
 \omega_0 \amp= 1.4434~\textrm{rad/s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para">
-<a href="ch7-secondorder-10.html#ch7-non-homogeneous-ex1-eq-kvl" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-ex1-eq-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.18">(7.8.18)</a> can be used to calculate <span class="process-math">\(v'(0^+)\text{.}\)</span> Because both <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v_X(0^+)\)</span> are zero, <span class="process-math">\(v'(0^+)\)</span> will also be zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<a href="ch7-secondorder-10.html#ch7-non-homogeneous-ex1-eq-kvl" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-ex1-eq-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.18">(7.8.18)</a> can be used to calculate <span class="process-math">\(v'(0^+)\text{.}\)</span> Because both <span class="process-math">\(v(0^+)\)</span> and <span class="process-math">\(v_X(0^+)\)</span> are zero, <span class="process-math">\(v'(0^+)\)</span> will also be zero.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The circuit is overdamped. Use <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.3">(7.2.3)</a> and <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.4">(7.2.4)</a> to calculate the roots of the characteristic equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The circuit is overdamped. Use <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.3">(7.2.3)</a> and <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.4">(7.2.4)</a> to calculate the roots of the characteristic equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -142,9 +137,9 @@ s_2	\amp= -3.9583 - \sqrt{3.9583^2 - 1.4434^2}\\
 \amp= -7.6441
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.4">(7.6.4)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.5">(7.6.5)</a> to calculate the coefficients of the equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.4">(7.6.4)</a> and <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.5">(7.6.5)</a> to calculate the coefficients of the equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -155,9 +150,9 @@ A_2 \amp= \frac{- (0-20)(-0.2725)}{-7.6441-(-0.2725)}\\
 \amp= 0.7394~\textrm{V}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug these values into <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a> to derive the equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Plug these values into <a href="ch7-nonhomocircuits.html#ch7-non-homogeneous-overdamped-solution-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.6.3">(7.6.3)</a> to derive the equation for <span class="process-math">\(v(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -165,7 +160,7 @@ A_2 \amp= \frac{- (0-20)(-0.2725)}{-7.6441-(-0.2725)}\\
 v(t) = \left[20~\textrm{V} -20.7~\textrm{V}~\textrm{e}^{-0.273t} + 0.739~\textrm{V}~\textrm{e}^{-7.64t}\right]~u(t)
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.11.1"><a tabindex="-1" href="#ch7-non-homogeneous-ex1-3" title="Copy heading and permalink for Solution 7.8.11.1" aria-label="Copy heading and permalink for Solution 7.8.11.1">🔗</a></div>
 </div></details>

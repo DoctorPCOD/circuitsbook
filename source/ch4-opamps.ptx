@@ -5,9 +5,9 @@
 
 	<introduction>
 
-		<p>An operational amplifier (henceforth referred to as an op-amp) is a voltage amplifier that typically uses divided negative feedback to generate a particular gain value. There are a lot of technical details to unpack in that sentence, so this chapter will start with the premise that the reader has no knowledge of amplifiers at all, and move slowly up from the concept of amplification to the functioning of op-amps. In addition, op-amps are the first active circuit element to be discussed in this book. The implications of that quality will be noted in this chapter.</p>
+		<p>An <term>operational amplifier</term> (henceforth referred to as an <term>op-amp</term>) is a type of circuit that modifies any input(s) to a circuit by a <term>gain</term> value. This chapter will start with the premise that the reader has no knowledge of amplifiers at all, and move slowly up from the concept of amplification to the functioning of op-amps. Op-amps are the first active circuit element to be discussed in this book. The implications of that quality will be noted in this chapter.</p>
 
-		<p>Commercially available op-amps are integrated circuits that contain all of the transistors and resistive components needed to create the device. Op-amps will be treated as a whole monolithic entity; as this textbook does not explore non-linear elements such as transistors, the inner workings of op-amps will not be discussed.</p>
+		<p>Commercially available op-amps are integrated circuits that contain all of the transistors and resistive components needed to create them. Op-amps will be treated as a whole monolithic entity; as this textbook does not explore non-linear elements such as transistors, the inner workings of op-amps will not be discussed.</p>
 
 		<p>Note: in this chapter of the textbook, voltages will be noted at single nodes. However, voltage is always relative. There is no such thing as a voltage at one point. When discussing voltage at a node in this chapter, it is implied that that voltage is being measured with respect to ground. This will make the circuit diagrams and discussions of voltage much simpler in this chapter.</p>
 
@@ -77,6 +77,7 @@
 				<li><p>An amplifier is <term>inverting</term> if the gain is negative (<m>A \lt 0</m>).</p></li>
 				<li><p>An amplifier is <term>attenuating</term> if the absolute value of the gain is less than one (<m>|A| \lt 1</m>).</p></li>
 				<li><p>An amplifier is <term>amplifying</term> (or non-attenuating) if the value of the gain is greater than or equal to one (<m>|A| \geq 1</m>).</p></li>
+				<li><p>An amplifier has <term>unity gain</term> if the value of the gain is equal to one (<m>A = 1</m>).</p></li>
 				<li><p>An amplifier is <term>saturated</term> when the output voltage is equal to the supply voltage (<m>V_{OUT} = V^+</m> or <m>V_{OUT} = V^-</m>).</p></li>
 			</ul>
 		</p>
@@ -86,16 +87,16 @@
 	<section xml:id="ch4-differentialamps">
 		<title>Differential Amplifiers</title>
 
-		<p>A differential amplifier has two inputs. The output is scaled to the difference of the two inputs (hence the term differential), multiplied by the gain. This relationship is expressed in <xref ref="ch4-differentialamplifiereq" />, where <m>A</m> is the gain of the amplifier, <m>V_N</m> is the voltage at the inverting input of the amplifier, and <m>V_P</m> is the voltage at the non-inverting input of the amplifier.</p>
+		<p>A <term>differential amplifier</term> has two inputs. The two inputs are known as the <term>inverting input</term> (depicted on the circuit symbol by the <minus /> sign) and the <term>non-inverting input</term> (depicted on the circuit symbol by the + sign). The relationship between the two inputs and the output of the amplifier is expressed in <xref ref="ch4-differentialamplifiereq" />, where <m>A</m> is the amplifier gain, <m>V_N</m> is the voltage at the inverting input, and <m>V_P</m> is the voltage at the non-inverting input. A differential amplifier gets its name from the fact that the difference (subtraction) between the two inputs is performed.</p>
 
 		<p>
 			<md number="yes" xml:id="ch4-differentialamplifiereq">V_{OUT} = A(V_P-V_N)</md>
 		</p>
 
-		<p>The schematic of a differential amplifier is shown in <xref ref="differentialamplifierfigure" />.</p>
+		<p>The circuit symbol of a differential amplifier is shown in <xref ref="differentialamplifierfigure" />.</p>
 
 		<figure xml:id="differentialamplifierfigure">
-  			<caption>Circuit schematic for a differential amplifier.</caption>
+  			<caption>Circuit symbol for a differential amplifier.</caption>
   			<image width="40%" xml:id="ch4-differentialamplifierfigure">
     			<shortdescription>Op-amp with inverting input voltage Vn, non-inverting input voltage Vp, output voltage Vout, positive supply voltage V+, and negative supply voltage V-.</shortdescription>
 				<latex-image>
@@ -113,7 +114,7 @@
 
 		<p>As the voltage at the inverting input increases, the output voltage becomes more negative. As the voltage at the non-inverting input increases, the output voltage becomes more positive. Regardless, the output voltage cannot exceed the supply in either direction. (In other words: <m>V_{OUT} \ngtr V^+</m> and <m>V_{OUT} \nless V^-</m>.)</p>
 
-		<p>A circuit model that can be used to describe a differential amplifier is shown in <xref ref="opampcircuitmodel" />. This circuit model uses linear circuit elements (notably: resistors and a dependent source) that have previously been discussed in this book. The model does a good job of representing the functionality of a differential amplifier without going into the actual circuit elements used to build an amplifier (which are complicated and nonlinear circuit elements that are beyond the scope of this textbook).</p>
+		<p>A circuit model that can be used to describe a differential amplifier is shown in <xref ref="opampcircuitmodel" />. This circuit model uses linear circuit elements that have previously been discussed in this book (notably: resistors and a dependent source). The model does a good job of representing the functionality of a differential amplifier without going into the actual circuit elements used to build an amplifier (which are complicated and include nonlinear circuit elements that are beyond the scope of this textbook).</p>
 
 		<figure xml:id="opampcircuitmodel">
   			<caption>Circuit model of a differential amplifier.</caption>
@@ -137,11 +138,28 @@
 
 	</section>
 
+	<section xml:id="ch4-nonidealcomparators">
+		<title>Non-Idealities in Amplifiers</title>
+
+		<p>It is important to note what happens to the functioning of an amplifier if all three characteristics of an op-amp are not met. (Recall that an op-amp is defined by having a large gain, very high input resistance, and very low output resistance.) Non-idealities in each of these three characteristics are discussed in the context of a positive saturation value (i.e. <m>V_{OUT} = V^+</m>), but the principles still apply for negative saturation (<m>V_{OUT} = V^-</m>).</p>
+
+		<p>An amplifier with a sufficiently small gain will limit the circuit gain of the amplifier. (Circuit gain will be introduced in <xref ref="ch4-dividedfeedback" />). In comparator circuits (introduced in <xref ref="ch4-comparator" />), a small amplifier gain will lead to a non-trivial threshold of difference between the two inputs that must be met before the output will saturate in either direction.</p>
+
+		<p>An amplifier with a large output resistance will limit the current that flows through the output. This will reduce the maximum voltage drop of the output to less than the value of the positive supply voltage. The maximum output voltage (<m>V_{OUT,MAX}</m>) that can be achieved over a load resistor (<m>R_{LOAD}</m>) given a non-zero output resistance (<m>R_{OUT}</m>) is defined in <xref ref="ch4-comparatorrouteq" />. As the output resistance increases, the maximum output voltage decreases. (This equation makes the assumption that there is no current leakage from other parts of the amplifier (such as from the input terminals), which would complicate matters.)</p>
+
+		<p>
+			<md number="yes" xml:id="ch4-comparatorrouteq">V_{OUT,MAX} = V^+\left(	\frac{R_{LOAD}}{R_{OUT}+R_{LOAD}}	\right)</md>
+		</p>
+
+		<p>An amplifier with a small input resistance will lead to a small amount of current entering into the amplifier through the non-inverting and inverting inputs. This current will lead to an error voltage between the two input voltages <m>V_P</m> and <m>V_N</m>. This would greatly complicate the analysis of divided feedback op-amp circuits, which are introduced in <xref ref="ch4-feedback" />.</p>
+
+	</section>
+
 	<section xml:id="ch4-comparator">
 		<title>Comparator Circuits</title>
 		<introduction>
 
-			<p>A comparator is an op-amp that is built to exploit the high gain and subsequent quick saturation of output voltage upon any difference between the inverting and non-inverting inputs. To demonstrate this quality, consider a differential amplifier (shown in <xref ref="comparatorfig" />) with a gain of 200,000. (This gain is typical for commercial comparators such as the LM339.) The supply voltage is limited to &#177;15<nbsp />V.</p>
+			<p>A <term>comparator</term> is an op-amp that is built to exploit the high gain and subsequent quick saturation of output voltage upon any difference between the inverting and non-inverting inputs. To demonstrate this quality, consider a differential amplifier (shown in <xref ref="comparatorfig" />) with a gain of 200,000. (This gain is typical for commercial comparators such as the LM339.) The supply voltage is limited to &#177;15<nbsp />V.</p>
 
 			<figure xml:id="comparatorfig">
   				<caption>Schematic of a comparator circuit.</caption>
@@ -189,16 +207,7 @@
 
 			<p>The slope of the line centered at <m>V_{IN} = 0</m> in <xref ref="comparatorgraphfig" /> is equal to the gain of the amplifier. Because this gain is so large, it appears to be vertical in the graph.</p>
 
-			<p>There is a useful practical application of an amplifier whose output constantly saturates at differences between the two inputs. As the name implies, a comparator is used to compare two voltages. If the voltage at the non-inverting input is greater than the voltage at the inverting input, then the output will saturate positive. If the voltage at the non-inverting input is less than the voltage at the inverting input, then the output will saturate negative. By itself, this is a useful circuit element that can be used to compare the magnitude of two electrical signals. Two other important applications of comparators are discussed in <xref ref="ch4-adc" /> and <xref ref="ch4-pwm" />.</p>
-
-		</introduction>
-
-		<subsection xml:id="ch4-nonidealcomparators">
-			<title>Non-Idealities in Comparators</title>
-
-			<p>It is important to note what happens to the functioning of a comparator if all three characteristics of an op-amp are not met. (Recall that an op-amp is defined by having a large gain, very high input resistance, and very low output resistance.) Non-idealities in each of these three characteristics are discussed in the context of a positive saturation value (i.e. <m>V_{OUT} = V^+</m>), but the principles still apply for negative saturation (<m>V_{OUT} = V^-</m>).</p>
-
-			<p>First: a comparator with a small gain will create a non-trivial threshold voltage (<m>V_{THR}</m>) that must be achieved on the non-inverting input before the output saturates. With a gain of 200,000 (as we assumed in our example comparator above) the threshold voltage is 75<nbsp />&#181;V (assuming a supply of 15<nbsp />V), which is, from a practical standpoint, within a rounding error of zero. However, if the gain was much smaller, this threshold voltage would become much larger.</p>
+			<p>A comparator with a sufficiently small gain will create a non-trivial threshold voltage (<m>V_{THR}</m>) that must be achieved on the non-inverting input before the output saturates. (This was introduced in <xref ref="ch4-nonidealcomparators" />.) With a gain of 200,000 and supply voltage of 15<nbsp />V (as we assumed in the previous example) the threshold voltage is 75<nbsp />&#181;V. This is, from a practical standpoint, within a rounding error of zero. However, if the gain was much smaller, this threshold voltage would become much larger.</p>
 
 			<p>The relationship between threshold voltage (<m>V_{THR}</m>), positive supply voltage (<m>V^+</m>) and gain (<m>A</m>) is given in <xref ref="ch4-comparatorthresholdgaineq" />. It is clear to see that as the gain decreases, the threshold voltage increases. The larger the threshold voltage, the less the comparator is able to compare the two input voltage magnitudes, especially when the magnitude difference is small.</p>
 
@@ -206,15 +215,11 @@
 				<md number="yes" xml:id="ch4-comparatorthresholdgaineq">V_{THR} = \frac{V^+}{A}</md>
 			</p>
 
-			<p>Second: a comparator with a large output resistance will limit the current that flows through the output. This will reduce the maximum voltage drop of the output to less than the value of the positive supply voltage. The maximum output voltage (<m>V_{OUT,MAX}</m>) that can be achieved over a load resistor (<m>R_{LOAD}</m>) given a non-zero output resistance (<m>R_{OUT}</m>) is defined in <xref ref="ch4-comparatorrouteq" />. As the output resistance increases, the maximum output voltage decreases. (This equation makes the assumption that there is no current leakage from other parts of the comparator (such as from the input terminals), which would complicate matters.)</p>
+			<p>There is a useful practical application of an amplifier whose output constantly saturates at differences between the two inputs. As the name implies, a comparator is used to compare two voltages. If the voltage at the non-inverting input is greater than the voltage at the inverting input, then the output will saturate positive. If the voltage at the non-inverting input is less than the voltage at the inverting input, then the output will saturate negative. By itself, this is a useful circuit element that can be used to compare the magnitude of two electrical signals. Two other important applications of comparators are discussed in <xref ref="ch4-adc" /> and <xref ref="ch4-pwm" />.</p>
 
-			<p>
-				<md number="yes" xml:id="ch4-comparatorrouteq">V_{OUT,MAX} = V^+\left(	\frac{R_{LOAD}}{R_{OUT}+R_{LOAD}}	\right)</md>
-			</p>
+		</introduction>
 
-			<p>Third: a comparator with a small input resistance will lead to a small amount of current entering into the amplifier internals through the non-inverting and inverting inputs. This current will lead to an error voltage between the two input voltages <m>V_P</m> and <m>V_N</m>. This is not a huge issue for comparators, but will become an important factor in divided feedback op-amp circuits, discussed in <xref ref="ch4-feedback" />.</p>
-
-		</subsection>
+		
 
 		<subsection xml:id="ch4-compvsopamp">
 			<title>Comparators vs. <q>Op-Amps</q></title>
@@ -234,7 +239,7 @@
 
 			<p>Without getting into the proverbial weeds, it is sufficient to note that an ADC will translate an analog voltage (capable of representing any value between 0<nbsp />V and 5<nbsp />V) into a digital signal (one or more values that are either HIGH or LOW). There are many types of ADCs that can be designed, most of which contain one or more comparators. For simplicities sake, only the <term>flash-type</term> ADC will be explored in this textbook.</p>
 
-			<p>A flash-type ADC is capable of directly converting an analog voltage into a digital signal (other types of ADCs may require a finite sampling time followed by some time period to complete the conversion before the next sample can be taken). It also uses a relatively simple to understand architecture. Of course, these benefits must indicate a major drawback. Indeed, a flash-type ADC requires <m>2^n-1</m> comparators to create an <m>n</m>-bit ADC (which is capable of generating binary numbers between 0 and <m>2^n-1</m>).</p>
+			<p>A flash-type ADC is capable of directly converting an analog voltage into a digital signal (other types of ADCs may require a finite sampling time followed by some time period to complete the conversion before the next sample can be taken). It also uses a relatively straightforward architecture. Of course, these benefits must indicate a major drawback. Indeed, a flash-type ADC requires <m>2^n-1</m> comparators to create an <m>n</m>-bit ADC (which is capable of generating binary numbers between 0 and <m>2^n-1</m>).</p>
 
 			<p>The schematic of a 3-bit flash-type ADC is given in <xref ref="flashadcfigure" />. Note that the individual supply connections are not shown for any of the comparators. The positive supplies are connected to <m>V^+</m> while the negative supplies are connected to ground.</p>
 
@@ -295,11 +300,11 @@
 			<p>The input voltage (<m>V_{IN}</m>) can be any analog voltage between zero and <m>V^+</m>. The supply voltage (<m>V^+</m>) will typically be 5<nbsp />V (logic HIGH) and is connected to one end of a large resistor ladder. The resistor ladder divides the source voltage into <m>2^n</m> (in this example, eight) steps. (Therefore, each of the resistors needs to have an identical value, denoted on the circuit diagram as <m>R</m>.) As the input voltage exceeds each one of these voltage steps, the corresponding comparator output will saturate at <m>V^+</m>. While the output does not correspond to a binary number (which would require a digital logic device called an encoder), it does result in a digital number (values that only use logic LOW and logic HIGH voltage levels).</p>
 
 			<remark>
-				<p>Play around with a simulation of a 3-bit flash-type ADC in <xref ref="flashtypeadcontinkercad" />. (To access this simulation in a new tab, use this link: <url href="https://www.tinkercad.com/things/76pYQH5lgQu" visual="3-bit flash-type ADC" />.)</p>
+				<p>Play around with a simulation of a 3-bit flash-type ADC in <xref ref="flashtypeadcontinkercad" />. (To access this simulation in a new tab, use this link: <url href="https://www.tinkercad.com/things/lQ1DpKvVyIf" visual="3-bit flash-type ADC" />.)</p>
 
 				<figure xml:id="flashtypeadcontinkercad">
 					<caption>3-bit flash-type ADC (TinkerCAD)</caption>
-					<interactive iframe="https://www.tinkercad.com/embed/76pYQH5lgQu?editbtn=1" width="90%" aspect="3:2" />
+					<interactive iframe="https://www.tinkercad.com/embed/lQ1DpKvVyIf?editbtn=1" width="90%" aspect="3:2" />
 				</figure>
 			</remark>
 
@@ -308,9 +313,9 @@
 		<subsection xml:id="ch4-pwm">
 			<title>Pulse-Width Modulation (PWM)</title>
 
-			<p>Pulse-width modulation (PWM) is a means of changing the average voltage of a signal without changing the minimum or maximum voltage levels that are used. In this manner, a digital electronic system (which, as mentioned, only uses two voltage levels) can vary the amount of time the signal is HIGH with respect to the amount of time the signal is LOW to modify the average voltage of the signal. PWM isn't just used in digital electronics. It is also an effective way of decreasing the average power supplied to a load while delivering a large maximum power by sending short pulses instead of a continuous signal. (This method is used in laser optics when a continuous laser beam would burn a hole in a sample, but repeated short pulses will not.) In addition, there are devices that specifically require a PWM signal to function properly (such as some servomotors).</p>
+			<p>Pulse-width modulation (PWM) is a means of changing the average voltage of a signal without changing the minimum or maximum voltage levels that are used. In this manner, a digital electronic system (which, as mentioned, only uses two voltage levels) can vary the amount of time a signal is HIGH with respect to the amount of time the signal is LOW to modify the average voltage of the signal. PWM isn't just used in digital electronics. It is also an effective way of decreasing the average power supplied to a load while delivering a large maximum power by sending short pulses instead of a continuous signal. (This method is used in laser optics when a continuous laser beam would burn a hole in a sample, but repeated short pulses will not.) In addition, there are devices that specifically require a PWM signal to function properly (such as some servomotors).</p>
 
-			<p>PWM signals have multiple properties. The <term>frequency</term> of the pulses corresponds to the number of pulses sent per unit of time. The concept of frequency was introduced in <xref ref="ch1-acsources" />. <xref ref="ch1-periodfrequency" /> was used to relate the frequency and period of a periodic waveform. That same equation applies to a PWM waveform.</p>
+			<p>PWM signals have multiple properties. The <term>frequency</term> of the pulses corresponds to the number of pulses sent per unit of time. The concept of frequency was introduced in <xref ref="ch1-acsources" />. <xref ref="ch1-periodfrequency" /> describes the frequency and period of a periodic waveform. That same equation applies to a PWM waveform.</p>
 
 			<p>The <term>duty cycle</term> of a PWM signal corresponds to the amount of time the signal is HIGH (<m>T_{HIGH}</m>) divided by the period of the waveform (<m>T</m>). This is essentially describing the fraction of time that the signal is HIGH every cycle. The equation for duty cycle (<m>D</m>) is defined in <xref ref="ch4-eqdutycycle" />, where <m>T_{HIGH}</m> is the amount of time the waveform is held HIGH every cycle and <m>T_{LOW}</m> is the amount of time the waveform is held LOW every cycle. (The period of the wave is therefore equal to <m>T_{HIGH}+T_{LOW}</m>.)</p>
 
@@ -373,11 +378,11 @@
 			<p>In this example, the frequency of the PWM waveform is set by the frequency of <m>V_{IN}</m>. This makes a flexible PWM circuit where the minimum and maximum voltage values of the output are set by the comparator supply pins (<m>V^+</m> and <m>V^-</m>), the frequency is set by the input waveform, and the duty cycle is set by the reference voltage.</p>
 
 			<remark>
-				<p>Play around with a simulation of a pulse-width modulation circuit in <xref ref="pwmcircuittinkercad" />. (To access this simulation in a new tab, use this link: <url href="https://www.tinkercad.com/things/0G4jvHX5J7g" visual="Pulse-width modulation circuit" />.)</p>
+				<p>Play around with a simulation of a pulse-width modulation circuit in <xref ref="pwmcircuittinkercad" />. (To access this simulation in a new tab, use this link: <url href="https://www.tinkercad.com/things/92cCkA1ZeA7" visual="Pulse-width modulation circuit" />.)</p>
 
 				<figure xml:id="pwmcircuittinkercad">
 					<caption>Pulse-width modulation circuit (TinkerCAD)</caption>
-					<interactive iframe="https://www.tinkercad.com/embed/0G4jvHX5J7g?editbtn=1" width="90%" aspect="3:2" />
+					<interactive iframe="https://www.tinkercad.com/embed/92cCkA1ZeA7" width="90%" aspect="3:2" />
 				</figure>
 			</remark>
 
@@ -392,7 +397,7 @@
 
 			<p>Feedback is a mechanism used to regulate, or control, the output of an electronic device.  Feedback systems have values or variables that affect each other. In closed-loop feedback, the variables or values affect each other directly (no intermediary is required to make changes). Closed-loop feedback operates with a <term>setpoint</term> variable that describes the desired output of a system (e.g. the temperature of a room or the speed of a car), a <term>process variable</term> that describes the current output value of the system, and an <term>output</term> that affects the process variable (e.g. the home furnace or gas control to the engine of a car).</p>
 
-			<p>There are two types of feedback: positive and negative. In a system with <term>positive feedback</term>, an increase to the process variable causes a corresponding increase to the output, which causes the process variable to increase more, which causes the output to increase even more, and so on. Alternatively, a decrease to the process variable would generate a decrease to the output, and so on. Positive feedback is inherently unstable as the process variable either increases or decreases out of bounds without ever settling to the setpoint level. Without a physical limitations to this process, energy could theoretically be amplified infinitely. This is undesirable.</p>
+			<p>There are two types of feedback: positive and negative. In a system with <term>positive feedback</term>, an increase to the process variable causes a corresponding increase to the output, which causes the process variable to increase more, which causes the output to increase even more, and so on. Alternatively, a decrease to the process variable would generate a decrease to the output, and so on. Positive feedback is inherently unstable as the process variable either increases or decreases out of bounds without ever settling to the setpoint level. Without a physical limitation to this process, energy could theoretically be amplified infinitely. This is undesirable.</p>
 
 			<example>
 				<title>Positive feedback: speaker and microphone</title>
@@ -400,7 +405,7 @@
 				<statement>
 					<p>Positive feedback occurs when a speaker and microphone come in close proximity to each other. As sound goes into the microphone, it emits from the speaker. When the speaker is close to the microphone, the microphone will pick up that sound emission from the speaker and amplify it, which gets picked up by the microphone, and so on, until a loud squeal is emitted when the maximum amplification setting (saturation) is reached.</p>
 
-					<p>In this scenario, the setpoint (desired volume setting of the speakers) cannot be maintained, as the output (change in speaker volume) continues to increase with corresponding increases to the process variable (current volume emitted by the speaker).</p>
+					<p>In this scenario, the setpoint (desired volume setting of the speakers) cannot be maintained, as the output (change in speaker volume) continues to increase with corresponding increases to the process variable (volume emitted by the speaker).</p>
 				</statement>
 			</example>
 
@@ -464,10 +469,10 @@
 				<statement>
 					<p>Let's say that a 9<nbsp />V battery needs to be used to create a stable output voltage of 5<nbsp />V, over which a resistive load will be placed (but the exact resistance of the load is unknown and might be variable).</p>
 
-					<p>One way that a circuit designer could reduce a 9<nbsp />V source to 5<nbsp />V would be to create a voltage divider. This voltage divider is shown in <xref ref="voltagediv9to5" />.</p>
+					<p>One way that a circuit designer could reduce a 9<nbsp />V source to 5<nbsp />V would be to create a voltage divider. This voltage divider is shown below.</p>
 
-					<figure xml:id="voltagediv9to5">
-  						<caption>Voltage divider to convert a 9<nbsp />V input into a 5<nbsp />V output.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="40%" xml:id="ch4-voltagediv9to5">
 							<shortdescription>Circuit with one mesh and three nodes consisting of a 9V battery, 4k resistor, and 5k resistor. The high-potential end of the 9V battery connects to the 4k resistor at node A. The 4k and 5k resistors connect at node B. The 5k resistor connects to the low-potential end of the 9V battery at node c. Voltage Vout is measured over the 5k resistor from node B to node C.</shortdescription>
 							<latex-image>
@@ -483,16 +488,16 @@
 
 					<p>Once a load is connected to the output of the voltage divider, however, the equivalent resistance of the voltage divider circuit changes. This is because the load would be in parallel with the 5<nbsp />k&#8486; resistor, creating an equivalent resistance smaller than 5<nbsp />k&#8486;.</p>
 					
-					<p>The output voltage of the circuit will never be equal to the desired 5<nbsp />V value unless the resistance of the load is infinite! The output voltage relationship, for this specific circuit, is described in <xref ref="voltagediv9to5eq" />. Because the load resistance can be variable, it is not possible to engineer a voltage divider to account for the load resistance.</p>
+					<p>The output voltage of the circuit will never be equal to the desired 5<nbsp />V value unless the resistance of the load is infinite! The output voltage relationship, for this specific circuit, is described below. Because the load resistance can be variable, it is not possible to engineer a voltage divider to account for the load resistance.</p>
 
 					<p>
-						<md number="yes" xml:id="voltagediv9to5eq">V_{OUT} = 9~\textrm{V} \left(\frac{5R_{LOAD}}{9R_{LOAD}+20}\right)</md>
+						<md>V_{OUT} = 9~\textrm{V} \left(\frac{5R_{LOAD}}{9R_{LOAD}+20}\right)</md>
 					</p>
 
-					<p>There needs to be another way to solve this problem. Fortunately, the voltage follower is the solution. Because of the negative feedback driving the output to be equal to the input, a load resistor will not affect the output voltage in any way. The circuit diagram for this solution is shown in <xref ref="voltagedivfollowerexamplefig" />.</p>
+					<p>There needs to be another way to solve this problem. Fortunately, the voltage follower is the solution. Because of the negative feedback driving the output to be equal to the input, a load resistor will not affect the output voltage in any way. The circuit diagram for this solution is shown below.</p>
 
-					<figure xml:id="voltagedivfollowerexamplefig">
-  						<caption>A voltage divider followed by a voltage follower will convert a 9<nbsp />V input into a 5<nbsp />V output regardless of the load resistance.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="80%" xml:id="ch4-voltagedivfollowerexamplefig">
 							<shortdescription>Circuit consisting of a 9V battery, 4k resistor, 5k resistor, unknown resistor Rload, and an op-amp. The circuit has 4 nodes. The high-potential end of the 9V battery connects to the 4k resistor at node a. The 4k resistor, 5k resistor, and non-inverting input of the op-amp connect at node b. The inverting input of the op-amp, output of the op-amp, and one end of Rload connect at node c. The low-potential end of the 9V battery, the 5k resistor, and Rload connect at node D. A voltage of 5V is measured over Rload from node C to node D.</shortdescription>
 							<latex-image>
@@ -512,7 +517,7 @@
   						</image>
 					</figure>
 
-					<p>When connected as shown in <xref ref="voltagedivfollowerexamplefig" />, there will be a 5<nbsp />V drop over the load resistor. Ohm's law states that current will flow through the resistor. That current does not come from the battery, as the input resistance of an op-amp is very high (ideally infinite). Where does the current come from? It comes from the internal circuitry of the op-amp, which draws from the supply voltage. Remember: the op-amp is an active circuit element. (Refer to <xref ref="ch4-opampcurrent" /> for more information on op-amp output current. The load resistor will be ultimately limited by the amount of current the op-amp can source.)</p>
+					<p>When connected as shown above, there will always be a 5<nbsp />V drop over the load resistor. Ohm's law states that current will flow through the resistor. That current does not come from the battery, as the input resistance of an op-amp is very high (ideally infinite). Where does the current come from? It comes from the internal circuitry of the op-amp, which draws from the supply voltage. Remember: the op-amp is an active circuit element. (Refer to <xref ref="ch4-opampcurrent" /> for more information on op-amp output current. The load resistor will be ultimately limited by the amount of current the op-amp can source.)</p>
 
 				</statement>
 
@@ -526,7 +531,7 @@
 		<title>Divided Feedback Op-Amp Circuits</title>
 
 		<introduction>
-			<p>The voltage follower has a gain of one. An op-amp without negative feedback has an extremely large gain. To exploit the shades of gray in between one and infinity, <term>divided feedback</term> can be used. In divided feedback, the output is not directly connected to the input. There is now one or more resistor present in the feedback loop. A schematic of a generic divided feedback circuit is shown in <xref ref="dividedfeedbackfig" />.</p>
+			<p>The voltage follower has a gain of one. An op-amp without negative feedback has an extremely large gain. To exploit the shades of gray in between one and infinity, <term>divided feedback</term> can be used. In a divided feedback circuit, the output is not directly connected to the input. There is now one or more resistor present in the feedback loop. A schematic of a generic divided feedback circuit is shown in <xref ref="dividedfeedbackfig" />.</p>
 
 			<figure xml:id="dividedfeedbackfig">
   				<caption>An op-amp connected with divided feedback.</caption>
@@ -622,10 +627,10 @@
 				<title>Inverting op-amp circuit</title>
 
 				<statement>
-					<p>Calculate the gain and output voltage of the op-amp circuit shown in <xref ref="invertingopampexamplefig" />. Assume that the supply pins are connected to a sufficiently high voltage not to saturate the output.</p>
+					<p>Calculate the gain and output voltage of the op-amp circuit shown below. Assume that the supply pins are connected to a sufficiently high voltage not to saturate the output.</p>
 
-					<figure xml:id="invertingopampexamplefig">
-  						<caption>Inverting op-amp circuit.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="70%" xml:id="ch4-invertingopampexamplefig">
 							<shortdescription>Inverting op-amp with voltage source of 0.5V, input resistor of 500ohms, and feedback resistor of 2kohms.</shortdescription>
 							<latex-image>
@@ -714,7 +719,7 @@
 		<subsection xml:id="ch4-cascaded">
 			<title>Cascaded Op-Amps</title>
 
-			<p>It is possible to cascade op-amps; the output of one op-amp is fed into the input of a second op-amp, and so on. Each individual op-amp circuit is called a stage. <xref ref="cascadedblockfigure" /> depicts a diagram of <m>n</m> cascaded op-amp circuits.</p>
+			<p>It is possible to cascade op-amps; the output of the first op-amp is fed into the input of the second op-amp, and so on. Each individual op-amp circuit is called a <term>stage</term>. <xref ref="cascadedblockfigure" /> depicts a diagram of <m>n</m> cascaded op-amp circuits.</p>
 
 			<figure xml:id="cascadedblockfigure">
   				<caption>Block diagram of <m>n</m> cascaded op-amp circuits.</caption>
@@ -740,7 +745,7 @@
   				</image>
 			</figure>
 
-			<p>In general, assuming that saturation does not occur at any stage, <m>n</m> op-amps cascaded as shown in the <xref ref="cascadedblockfigure" />, with individual gains of <m>GA_1</m> through <m>G_n</m> will have a gain equal to the product of all of the individual gains, as expressed in <xref ref="ch4-cascadedtotaleq" />.</p>
+			<p>In general, assuming that saturation does not occur at any stage, <m>n</m> op-amps cascaded as shown in the <xref ref="cascadedblockfigure" />, with individual gains of <m>G_1</m> through <m>G_n</m> will have a gain equal to the product of all of the individual gains, as expressed in <xref ref="ch4-cascadedtotaleq" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch4-cascadedtotaleq">G_{TOTAL} = \prod_{i=1}^{n} G_{i}</md>
@@ -752,10 +757,10 @@
 				<title>Cascaded op-amp circuit</title>
 
 				<statement>
-					<p>Calculate the total circuit gain of the op-amp circuit shown in <xref ref="cascadedinvertingexamplefig" />.</p>
+					<p>Calculate the total circuit gain of the op-amp circuit shown below.</p>
 
-					<figure xml:id="cascadedinvertingexamplefig">
-  						<caption>Two cascaded inverting op-amps.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="100%" xml:id="ch4-cascadedinvertingexamplefig">
 							<shortdescription>Two inverting op-amp circuits. The left op-amp has input voltage of Vin, input resistor R1, and feedback resistor R2. The output of that acts as the input voltage of the right op-amp. The right op-amp has input resistor R3 and feedback resistor R4.</shortdescription>
 							<latex-image>
@@ -867,10 +872,10 @@
 				<title>Non-inverting summing op-amp circuit</title>
 
 				<statement>
-					<p>Calculate the output voltage of the op-amp circuit shown in <xref ref="noninvertingsummingopampcircuitdiagram" />.</p>
+					<p>Calculate the output voltage of the op-amp circuit shown below.</p>
 
-					<figure xml:id="noninvertingsummingopampcircuitdiagram">
-  						<caption>Non-inverting summing op-amp circuit.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="60%" xml:id="ch4-noninvertingsummingopampcircuitdiagram">
 							<shortdescription>Op-amp circuit with one op-amp, two voltage sources (V1 and V2) and four resistors (R1, R2, Ri, and Rf). The circuit has 6 nodes. The high-potential end of V1 connects to R1 at node A. The high-potential end of V2 connects to R2 at node B. R1, R2, and the non-inverting input of the op-amp connect at node C. Ri, Rf, and the inverting input of the op-amp connect at node D. Rf and the output of the op-amp connect at node E, labeled Vout. Ri and the low-potential end of both voltage sources connect to GND at node F.</shortdescription>
 							<latex-image>
@@ -891,29 +896,30 @@
   						</image>
 					</figure>
 
-					<p>Use KCL at the inverting node to calculate a relationship between that node voltage (which will be referred to as <m>V_X</m> in this example) and the output voltage.</p>
+					<p>Use KCL at the inverting node to calculate a relationship between that node voltage (which will be referred to as <m>V_N</m> in this example) and the output voltage.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{0-V_X}{R_I} \amp= \frac{V_X-V_{OUT}}{R_F}</mrow>
-							<mrow>-\frac{V_X}{R_I}-\frac{V_X}{R_F} \amp= -\frac{V_{OUT}}{R_F}</mrow>
-							<mrow>\frac{R_FV_X + R_IV_X}{R_IR_F} \amp= \frac{V_{OUT}}{R_F}</mrow>
-							<mrow>(R_F+R_I)V_X \amp= R_I V_{OUT}</mrow>
-							<mrow>V_X \amp= V_{OUT}\left(\frac{R_I}{R_F+R_I}\right)</mrow>
+							<mrow>\frac{0-V_N}{R_I} \amp= \frac{V_N-V_{OUT}}{R_F}</mrow>
+							<mrow>-\frac{V_N}{R_I}-\frac{V_N}{R_F} \amp= -\frac{V_{OUT}}{R_F}</mrow>
+							<mrow>\frac{R_FV_N + R_IV_N}{R_IR_F} \amp= \frac{V_{OUT}}{R_F}</mrow>
+							<mrow>(R_F+R_I)V_N \amp= R_I V_{OUT}</mrow>
+							<mrow>V_N \amp= V_{OUT}\left(\frac{R_I}{R_F+R_I}\right)</mrow>
 						</md>						
 					</p>
 					
-					<p>Use KCL at the non-inverting node to calculate a relationship between <m>V_X</m> and the two source voltages. (Recall that the voltage at the non-inverting node is equal to the voltage at the inverting node due to the virtual node property of an op-amp circuit).</p>
+					<p>Use KCL at the non-inverting node to calculate a relationship between <m>V_N</m> and the two source voltages. (Recall that the voltage at the non-inverting node is equal to the voltage at the inverting node due to the virtual node property of an op-amp circuit).</p>
 
 					<p>
 						<md>
-							<mrow>\frac{V_1-V_X}{R_1} + \frac{V_2-V_X}{R_2} \amp= 0</mrow>
-							<mrow>\frac{R_2(V_1-V_X)}{R_1R_2} + \frac{R_1(V_2-V_X)}{R_1R_2} \amp= 0</mrow>
-							<mrow>R_2V_1 - R_2V_X + R_1V_2 - R_1V_X \amp= 0</mrow>
-							<mrow>R_2V_1 + R_1V_2 \amp= (R_1+R_2)V_X</mrow>
-							<mrow>V_1\left(\frac{R_2}{R_1+R_2}\right) + V_2\left(\frac{R_1}{R_1+R_2}\right) \amp= V_X</mrow>
-							<mrow>V_1\left(\frac{R_2}{R_1+R_2}\right) + V_2\left(\frac{R_1}{R_1+R_2}\right) \amp= V_{OUT}\left(\frac{R_I}{R_F+R_I}\right)</mrow>
-							<mrow>V_1\left(\frac{R_F+R_I}{R_I}\right)\left(\frac{R_2}{R_1+R_2}\right) + V_2\left(\frac{R_F+R_I}{R_I}\right)\left(\frac{R_1}{R_1+R_2}\right) \amp= V_{OUT}</mrow>
+							<mrow>0 \amp= \frac{V_1-V_N}{R_1} + \frac{V_2-V_N}{R_2}</mrow>
+							<mrow>\amp= \frac{R_2(V_1-V_N)}{R_1R_2} + \frac{R_1(V_2-V_N)}{R_1R_2}</mrow>
+							<mrow>\amp= R_2V_1 - R_2V_N + R_1V_2 - R_1V_N</mrow>
+							<mrow>(R_1+R_2)V_N \amp= R_2V_1 + R_1V_2</mrow>
+							<mrow>V_N \amp= V_1\left(\frac{R_2}{R_1+R_2}\right) + V_2\left(\frac{R_1}{R_1+R_2}\right)</mrow>
+							<mrow>V_{OUT}\left(\frac{R_I}{R_F+R_I}\right) \amp= V_1\left(\frac{R_2}{R_1+R_2}\right) + V_2\left(\frac{R_1}{R_1+R_2}\right)</mrow>
+							<mrow>V_{OUT} \amp= V_1\left(\frac{R_F+R_I}{R_I}\right)\left(\frac{R_2}{R_1+R_2}\right)</mrow>
+							<mrow>\amp+ V_2\left(\frac{R_F+R_I}{R_I}\right)\left(\frac{R_1}{R_1+R_2}\right)</mrow>
 						</md>						
 					</p>
 
@@ -960,20 +966,20 @@
 			</p>
 
 				<proof xml:id="ch4-differenceopampproof">
-					<p>Use a voltage divider at the non-inverting node to calculate the node voltage, which will be called <m>V_X</m>.</p>
+					<p>Use a voltage divider at the non-inverting node to calculate the node voltage, which will be called <m>V_P</m>.</p>
 
 					<p>
-						<md>V_X = \left(\frac{R_I}{R_2+R_I}\right)V_2</md>
+						<md>V_P = \left(\frac{R_I}{R_2+R_I}\right)V_2</md>
 					</p>
 
 					<p>Use KCL at the inverting node to calculate the output voltage.</p>
 				<p>
 					<md>
-						<mrow>\frac{V_1-V_X}{R_1} \amp= \frac{V_X-V_{OUT}}{R_F}</mrow>
-						<mrow>\frac{V_1}{R_1} - \frac{V_X}{R_1} - \frac{V_X}{R_F} \amp= -\frac{V_{OUT}}{R_F}</mrow>
-						<mrow>\frac{V_1}{R_1} - \frac{(R_F+R_1)V_X}{R_1R_F} \amp= -\frac{V_{OUT}}{R_F}</mrow>
-						<mrow>\frac{V_1}{R_1} - \left(\frac{R_F+R_1}{R_1R_F}\right)\left(\frac{R_I}{R_2+R_I}\right) \amp= -\frac{V_{OUT}}{R_F}</mrow>
-						<mrow>-\left(\frac{R_F}{R_1}\right)V_1 + \left(\frac{R_F+R_1}{R_1}\right)\left(\frac{R_I}{R_2+R_I}\right)V_2 \amp= V_{OUT}</mrow>
+						<mrow>\frac{V_1-V_P}{R_1} \amp= \frac{V_P-V_{OUT}}{R_F}</mrow>
+						<mrow>-\frac{V_{OUT}}{R_F} \amp= \frac{V_1}{R_1} - \frac{V_P}{R_1} - \frac{V_P}{R_F}</mrow>
+						<mrow>\amp= \frac{V_1}{R_1} - \frac{(R_F+R_1)V_P}{R_1R_F}</mrow>
+						<mrow>\amp= \frac{V_1}{R_1} - \left(\frac{R_F+R_1}{R_1R_F}\right)\left(\frac{R_I}{R_2+R_I}\right)</mrow>
+						<mrow>V_{OUT} \amp= -\left(\frac{R_F}{R_1}\right)V_1 + \left(\frac{R_F+R_1}{R_1}\right)\left(\frac{R_I}{R_2+R_I}\right)V_2</mrow>
 					</md>
 				</p>
 			</proof>
@@ -998,10 +1004,10 @@
 				<title>Current-sensing circuit</title>
 
 				<statement>
-					<p>A photodiode is a circuit device that converts light to electric current. It is used as the input to an op-amp circuit, as shown in <xref ref="currentsensingcircuit" />. Calculate the output voltage and its relationship to <m>I</m>, the current generated by the photodiode.</p>
+					<p>A photodiode is a circuit device that converts light to electric current. It is used as the input to an op-amp circuit, as shown below. Calculate the output voltage and its relationship to <m>I</m>, the current generated by the photodiode.</p>
 
-					<figure xml:id="currentsensingcircuit">
-  						<caption>Current-sensing op-amp circuit.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="50%" xml:id="ch4-currentsensingcircuit">
 							<shortdescription>Op-amp with one photodiode and one resistor. The circuit has 3 nodes. The anode of the photodiode, the resistor, and the inverting input of the op-amp connect at node A. The resistor and output of the op-amp connect at node B, labeled Vout. The anode of the photodiode and non-inverting input of the op-amp connect to GND at node C. Current I flows from the anode to to cathode of the photodiode.</shortdescription>
 							<latex-image>
@@ -1036,10 +1042,10 @@
 				<statement>
 					<p>In order to generate a large value of circuit gain in an inverting amplifier, either the feedback resistor must be very large, the input resistor must be very small, or both. A T-network is used to generate a large circuit gain without this constraint on resistor values.</p>
 					
-					<p>Calculate the output voltage and circuit gain of the T-network op-amp circuit shown in <xref ref="tnetworkcircuit" />.</p>
+					<p>Calculate the output voltage and circuit gain of the T-network op-amp circuit shown below.</p>
 
-					<figure xml:id="tnetworkcircuit">
-  						<caption>T-network op-amp circuit.</caption>
+					<figure>
+  						<caption></caption>
 						<image width="70%" xml:id="ch4-tnetworkcircuit">
 							<shortdescription>Op-amp circuit with 0.1V source and 4 resistors (1k-a, 5k, 1k-b, and 3k). The circuit has five nodes. The high-potential end of the 0.1V source connects to the 1k-a resistor at node A. The 1k-a resistor, 5k resistor, and inverting input of the op-amp connect at node B. The 5k resistor, 1k-b resistor, and 3k resistor connect at node C. The 3k resistor connects to the output of the op-amp at node D, labeled Vout. The low-potential end of the 0.1V source, 1k-b resistor, and non-inverting input of the op-amp connect to GND at node E.</shortdescription>
 							<latex-image>
@@ -1121,7 +1127,7 @@
 
 			<p>Op-amps can be used to implement many different mathematical functions. Addition and subtraction can be accomplished using summing and difference amplifiers, as discussed in <xref ref="ch4-summingdifference" />. Simultaneous sets of addition and subtraction can be solved by using more than one op-amp, as discussed in <xref ref="ch4-linearequations" />.</p>
 
-			<p>Multiplication by a constant is accomplished by configuring an inverting (or non-inverting) amplifier circuit to have an amplifying gain. Division by a constant is accomplished by configuring an amplifier circuit to have an attenuating gain. (Note: it is very difficult computationally to multiply two variable values together. This is a constraint not limited to analog computation; it is also difficult in digital computers.)</p>
+			<p>Multiplication by a constant is accomplished by configuring an inverting (or non-inverting) amplifier circuit to have a gain equal to that constant. Division by a constant is accomplished by configuring an amplifier circuit to have a gain equal to one divided by that constant. (Note: it is very difficult computationally to multiply two variable values together. This is a constraint not limited to analog computation; it is also difficult in digital computers.)</p>
 
 			<p>Differentiation and integration can be implemented by using capacitors in the amplifier circuit, either in the feedback or input path. These two circuits will be discussed in <xref ref="ch5-differentiatorintegrator" />.</p>
 			
@@ -1176,8 +1182,8 @@
 
 			<p>
 				<md number="yes">
-					<mrow xml:id="ch4-eqtwolineareqs1">0 \amp= a_1x+a_2y+b_0</mrow>
-					<mrow xml:id="ch4-eqtwolineareqs2">0 \amp= a_3x+a_4y+b_1</mrow>
+					<mrow xml:id="ch4-eqtwolineareqs1">0 \amp= a_0x+a_1y+b_0</mrow>
+					<mrow xml:id="ch4-eqtwolineareqs2">0 \amp= a_2x+a_3y+b_1</mrow>
 				</md>
 			</p>
 
@@ -1204,7 +1210,7 @@
 				<p>Additionally, a non-simulated version of this circuit was built and described in <xref ref="pasqualeanalogcomp" />.</p>
 			</remark>
 
-			<p>It is also possible to solve differential equations using this method. This would require an op-amp building block that can take the integral of a voltage. Non-linear equations can be solved by designing op-amp building blocks that are capable of computing the desired function (say, using a diode to calculate natural logarithms).</p>
+			<p>It is also possible to solve differential equations using this method. This would require one or more op-amp stage that can output the integral of a voltage input. Non-linear equations can be solved by designing one or more op-amp stage that can compute the desired function (say, using a diode to calculate natural logarithms).</p>
 
 		</subsection>
 
@@ -1262,7 +1268,7 @@
   			</image>
 		</figure>
 
-		<p>No current flows into the op-amp inputs. Now that the input voltage source is not electrically isolated from the output (as it was in the voltage follower circuit), the source is able to generate current. The op-amp will now have to accept current through its output node. This is known as <term>sinking current</term>. The amount of current the op-amp must sink can be calculated by using KCL at the output node, shown in <xref ref="ch4-opampsinkcurrenteq" /> and derived in <xref ref="ch4-opampsinkderivation" />. (Note that <m>V_{OUT}</m> is defined in the opposite direction as in <xref ref="ch4-inverting" />, which is why the output voltage is expressed as a positive value in the derivation.)</p>
+		<p>No current flows into the op-amp inputs. The op-amp will have to accept current through its output node. This is known as <term>sinking current</term>. The amount of current the op-amp must sink can be calculated by using KCL at the output node, shown in <xref ref="ch4-opampsinkcurrenteq" /> and derived in <xref ref="ch4-opampsinkderivation" />. (Note that <m>V_{OUT}</m> is defined in the opposite direction as in <xref ref="ch4-inverting" />, which is why the output voltage is expressed as a positive value in the derivation.)</p>
 
 		<p>
 			<md number="yes" xml:id="ch4-opampsinkcurrenteq">I_{SINK} = \frac{V_{IN}}{R_1}\left(1+\frac{R_2}{R_{LOAD}}\right)</md>
@@ -1279,7 +1285,7 @@
 			</p>
 		</proof>
 
-		<p>The amount of current that an op-amp can sink is listed on the datasheet of the device. <xref ref="ch4-lm324datasheet" /> shows an example excerpt of the electrical characteristics section of the datasheet for the LM324 op-amp. It shows the minimum and typical values of output current that can be sourced or sunk under certain test settings. This particular op-amp is capable of sourcing much more current than it can sink. Paying attention to these characteristics is very important if particular current sourcing or sinking requirements must be met.</p>
+		<p>The amount of current that an op-amp can sink is listed on the <term>datasheet</term> of the device. <xref ref="ch4-lm324datasheet" /> shows an example excerpt of the electrical characteristics section of the datasheet for the LM324 op-amp. It shows the minimum and typical values of output current that can be sourced or sunk under certain test settings. This particular op-amp is capable of sourcing much more current than it can sink. Paying attention to these characteristics is very important if particular current sourcing or sinking requirements must be met.</p>
 
 
 
@@ -1336,9 +1342,9 @@
 
 		<biblio type="raw" xml:id="analogcomputerkorn">Korn, G. A., and Korn, T. M. (1972). Electronic Analog and Hybrid Computers. McGraw-Hill Companies.</biblio>
 			
-		<biblio type="raw" xml:id="ampsascomparators">Moghimi, Reza. (2003, April). <title>Ask The Applications Engineer<mdash />31: Amplifiers as Comparators?</title> <url href="https://www.analog.com/en/analog-dialogue/articles/amplifiers-as-comparators.html">https://www.analog.com/en/analog-dialogue/articles/amplifiers-as-comparators.html</url></biblio>
+		<biblio type="raw" xml:id="ampsascomparators">Moghimi, R. (2003, April). <title>Ask The Applications Engineer<mdash />31: Amplifiers as Comparators?</title> <url href="https://www.analog.com/en/analog-dialogue/articles/amplifiers-as-comparators.html">https://www.analog.com/en/analog-dialogue/articles/amplifiers-as-comparators.html</url></biblio>
 
-		<biblio type="raw" xml:id="howtoreadopampdatasheet">O'Donnell, Bill. <title>How to Read an Op-Amp Data Sheet.</title> <url href="www.physics.unlv.edu/~bill/PHYS483/op_amp_datasheet.pdf">www.physics.unlv.edu/~bill/PHYS483/op_amp_datasheet.pdf</url></biblio>
+		<biblio type="raw" xml:id="howtoreadopampdatasheet">O'Donnell, B. <title>How to Read an Op-Amp Data Sheet.</title> <url href="www.physics.unlv.edu/~bill/PHYS483/op_amp_datasheet.pdf">www.physics.unlv.edu/~bill/PHYS483/op_amp_datasheet.pdf</url></biblio>
 
 		<biblio type="raw" xml:id="pasqualedigitalbook">Pasquale, A. (2020). Digital Systems. <url href="https://doctor-pasquale.com/wp-content/uploads/2020/11/DigitalSystemsBook.pdf">https://doctor-pasquale.com/wp-content/uploads/2020/11/DigitalSystemsBook.pdf</url></biblio>
 
@@ -1350,7 +1356,7 @@
 
 		<biblio type="raw" xml:id="understandingidealopamps">Texas Instruments. (1999, July). <title>Understanding Basic Analog<mdash />Ideal Op Amps.</title> <url href="https://www.ti.com/lit/an/slaa068b/slaa068b.pdf">https://www.ti.com/lit/an/slaa068b/slaa068b.pdf</url></biblio>
 
-		<biblio type="raw" xml:id="analogcomputerulmann">Bernd Ulmann. (2022). Analog Computing. Walter de Gruyter GmbH and Co KG.</biblio>
+		<biblio type="raw" xml:id="analogcomputerulmann">Ulmann, B. (2022). Analog Computing. Walter de Gruyter GmbH and Co KG.</biblio>
 
 		<biblio type="raw" xml:id="analogcomputerweyrick">Weyrick, R. C. (1969). Fundamentals of Analog Computers. Prentice Hall.</biblio>
 	
@@ -1413,8 +1419,7 @@
 
 					<p>
 						<md>
-							<mrow>V_{OUT} \amp= GV_{IN}</mrow>
-							<mrow>\amp= (-6)(0.5~\textrm{V})</mrow>
+							<mrow>V_{OUT} \amp= (-6)(0.5~\textrm{V})</mrow>
 							<mrow>\amp= -3~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -1479,8 +1484,7 @@
 
 					<p>
 						<md>
-							<mrow>V_{OUT} \amp= GV_P</mrow>
-							<mrow>\amp= (1.6)(5~\textrm{V})</mrow>
+							<mrow>V_{OUT} \amp= (1.6)(5~\textrm{V})</mrow>
 							<mrow>\amp= 8~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -1489,7 +1493,7 @@
 
 			<exercise xml:id="ch4dividedfeedbackex3">
 				<statement>
-					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit43" />.</p>
+					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit43" />. The circuit parameters are <m>V_1 = 10~\textrm{mV}</m> and <m>V_2 = 300~\textrm{mV}</m>.</p>
 
 					<figure xml:id="examplecircuit43">
   						<caption>Circuit diagram corresponding to <xref ref="ch4dividedfeedbackex3" />.</caption>
@@ -1501,9 +1505,9 @@
 									\draw[]	(opamp.out) to [short] ++ (right:0.5) node[right] {$V_{OUT}$};
 									\draw[]	(opamp.+) node[ground] {};
 									\draw[]	(opamp.-) to [short, *-] ($(opamp.-)+(0,1.25)$);
-									\draw[]	($(opamp.-)-(2.5,0)$) to [V, l_={10~mV~(V1)}] ++(down:2) node[tlground] {};
+									\draw[]	($(opamp.-)-(2.5,0)$) to [V, l_=$V_1$] ++(down:2) node[tlground] {};
 									\draw[]	($(opamp.-)-(2.5,0)$) to [R, l^=2~k$\Omega$] ++(right:2);
-									\draw[]	($(opamp.-)-(0.5,2)$) to [V, l_={300~mV~(V2)}] ++(down:1.5) node[tlground] {};
+									\draw[]	($(opamp.-)-(0.5,2)$) to [V, l_=$V_2$] ++(down:1.5) node[tlground] {};
 									\draw[]	($(opamp.-)-(0.5,0)$) to [R, l_=5~k$\Omega$, *-] ++(down:2);
 									\draw[]	(opamp.-) to [short] ++(left:0.5);
 									\draw[]	($(opamp.-)+(0,1.25)$) to [R, l^=10~k$\Omega$] ($(opamp.-)+(2.38,1.25)$);
@@ -1530,7 +1534,8 @@
 
 					<p>
 						<md>
-							<mrow>V_{OUT} \amp= -\left(\frac{10~\textrm{k}\Omega}{2~\textrm{k}\Omega}\right)0.01~\textrm{V}-\left(\frac{10~\textrm{k}\Omega}{5~\textrm{k}\Omega}\right)0.3~\textrm{V}</mrow>
+							<mrow>V_{OUT} \amp= -\left(\frac{10~\textrm{k}\Omega}{2~\textrm{k}\Omega}\right)V_1 -\left(\frac{10~\textrm{k}\Omega}{5~\textrm{k}\Omega}\right)V_2</mrow>
+							<mrow>\amp= -(5)(0.01~\textrm{V})-(2)(0.3~\textrm{V})</mrow>
 							<mrow>\amp= -0.05~\textrm{V} - 0.6~\textrm{V}</mrow>
 							<mrow>\amp= -0.65~\textrm{V}</mrow>
 							<mrow>G_1 \amp= -\frac{10~\textrm{k}\Omega}{2~\textrm{k}\Omega}</mrow>
@@ -1599,8 +1604,7 @@
 
 					<p>
 						<md>
-							<mrow>G_{min} \amp = 1 + \frac{500~\Omega - 0~\Omega}{100~\Omega + 0~\Omega}</mrow>
-							<mrow>\amp= 1 + 5</mrow>
+							<mrow>G_{max} \amp = 1 + \frac{500~\Omega - 0~\Omega}{100~\Omega + 0~\Omega}</mrow>
 							<mrow>\amp= 6</mrow>
 						</md>
 					</p>
@@ -1609,7 +1613,7 @@
 
 			<exercise xml:id="ch4dividedfeedbackex5">
 				<statement>
-					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit45" />.</p>
+					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit45" />. The circuit parameters are <m>V_1 = 3~\textrm{V}</m> and <m>V_2 = 5~\textrm{V}</m>.</p>
 
 					<figure xml:id="examplecircuit45">
   						<caption>Circuit diagram corresponding to <xref ref="ch4dividedfeedbackex5" />.</caption>
@@ -1619,12 +1623,12 @@
 								\begin{tikzpicture}[font=\sffamily]
 									\draw	(3.5,1) node[op amp] (opamp) {};
 									\draw[]	(opamp.out) to [short] ++ (right:0.5) node[right] {$V_{OUT}$};
-									\draw[]	($(opamp.+)-(2,0)$) to [V, l_=5~V~(V2)] ($(opamp.+)-(2,1.5)$) node[tlground] {};
+									\draw[]	($(opamp.+)-(2,0)$) to [V, l_=$V_2$] ++(down:2.5) node[tlground] {};
 									\draw[]	($(opamp.+)-(2,0)$) to [R, l^=5~k$\Omega$] (opamp.+);
-									\draw[]	(opamp.+) to [R, l_=10~k$\Omega$, *-] ++(down:2) node[tlground] {};
+									\draw[]	(opamp.+) to [R, l_=10~k$\Omega$, *-] ++(down:2.5) node[tlground] {};
 									\draw[]	(opamp.-) to [short, *-] ($(opamp.-)+(0,1.25)$);
-									\draw[]	($(opamp.-)-(4.25,0)$) to [V, l_=3~V~(V1)] ($(opamp.-)-(4.25,1.5)$) node[tlground] {};
-									\draw[]	($(opamp.-)-(4.25,0)$) to [R, l^=1~k$\Omega$] (opamp.-);
+									\draw[]	($(opamp.-)-(3.5,0)$) to [V, l_=$V_1$] ++(down:2.5) node[tlground] {};
+									\draw[]	($(opamp.-)-(3.5,0)$) to [R, l^=1~k$\Omega$] (opamp.-);
 									\draw[]	($(opamp.-)+(0,1.25)$) to [R, l^=2~k$\Omega$] ($(opamp.-)+(2.38,1.25)$);
 									\draw[]	($(opamp.-)+(2.38,1.25)$) to [short, -*] ($(opamp.out)+(0,0)$);
 								\end{tikzpicture}
@@ -1649,9 +1653,7 @@
 
 					<p>
 						<md>
-							<mrow>V_{OUT} \amp= -\frac{2~\textrm{k}\Omega}{1~\textrm{k}\Omega}3~\textrm{V} + \left(\frac{2~\textrm{k}\Omega+1~\textrm{k}\Omega}{1~\textrm{k}\Omega}\right)\left(\frac{10~\textrm{k}\Omega}{5~\textrm{k}\Omega+10~\textrm{k}\Omega}\right)5~\textrm{V}</mrow>
-							<mrow>\amp= -6~\textrm{V} + (3)(0.67)(5~\textrm{V})</mrow>
-							<mrow>\amp= -6~\textrm{V} + 10~\textrm{V}</mrow>
+							<mrow>V_{OUT} \amp= -\left(\frac{2~\textrm{k}\Omega}{1~\textrm{k}\Omega}\right)3~\textrm{V} + \left(\frac{2~\textrm{k}\Omega+1~\textrm{k}\Omega}{1~\textrm{k}\Omega}\right)\left(\frac{10~\textrm{k}\Omega}{5~\textrm{k}\Omega+10~\textrm{k}\Omega}\right)5~\textrm{V}</mrow>
 							<mrow>\amp= 4~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -1670,7 +1672,6 @@
 					<p>
 						<md>
 							<mrow>G_2 \amp= \left(\frac{2~\textrm{k}\Omega+1~\textrm{k}\Omega}{1~\textrm{k}\Omega}\right)\left(\frac{10~\textrm{k}\Omega}{5~\textrm{k}\Omega+10~\textrm{k}\Omega}\right)</mrow>
-							<mrow>\amp= (3)(0.67)</mrow>
 							<mrow>\amp= 2</mrow>
 						</md>
 					</p>
@@ -1718,27 +1719,27 @@
 				<solution>
 					<p>This circuit doesn't fit any of the standard op-amp circuit templates (inverting, non-inverting, summing, or difference amplifier). Therefore, the assumptions of an op-amp circuit (no input current, virtual node) can be applied with any useful circuit laws and theorems to calculate these parameters.</p>
 
-					<p>Apply KCL at the inverting input. The voltage at the inverting input will be referred to as <m>V_X</m>.</p>
+					<p>Apply KCL at the inverting input. The voltage at the inverting input will be referred to as <m>V_N</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{0-V_X}{1~\textrm{k}\Omega} \amp= \frac{V_X-V_{OUT}}{2~\textrm{k}\Omega}</mrow>
-							<mrow>-V_X \amp= 0.5V_X - 0.5V_{OUT}</mrow>
-							<mrow>0 \amp= 1.5V_X - 0.5V_{OUT}</mrow>
+							<mrow>\frac{0-V_N}{1~\textrm{k}\Omega} \amp= \frac{V_N-V_{OUT}}{2~\textrm{k}\Omega}</mrow>
+							<mrow>-V_N \amp= 0.5V_N - 0.5V_{OUT}</mrow>
+							<mrow>0 \amp= 1.5V_N - 0.5V_{OUT}</mrow>
 						</md>
 					</p>
 
-					<p>Apply KCL at the non-inverting input. The voltage at the non-inverting will be equal to <m>V_X</m> due to the virtual node.</p>
+					<p>Apply KCL at the non-inverting input. The voltage at the non-inverting will be equal to <m>V_N</m> due to the virtual node.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{0.5~\textrm{V} - V_X}{5~\textrm{k}\Omega} \amp= \frac{V_X}{2~\textrm{k}\Omega} + \frac{V_X-V_{OUT}}{4~\textrm{k}\Omega}</mrow>
-							<mrow>0.1~\textrm{V} - 0.2V_X \amp= 0.5V_X + 0.25V_X - 0.25V_{OUT}</mrow>
-							<mrow>0.1~\textrm{V} \amp= 0.95V_X - 0.25V_{OUT}</mrow>
+							<mrow>\frac{0.5~\textrm{V} - V_N}{5~\textrm{k}\Omega} \amp= \frac{V_N}{2~\textrm{k}\Omega} + \frac{V_N-V_{OUT}}{4~\textrm{k}\Omega}</mrow>
+							<mrow>0.1~\textrm{V} - 0.2V_N \amp= 0.5V_N + 0.25V_N - 0.25V_{OUT}</mrow>
+							<mrow>0.1~\textrm{V} \amp= 0.95V_N - 0.25V_{OUT}</mrow>
 						</md>						
 					</p>
 
-					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_X</m>, the middle column contains coefficients of <m>V_{OUT}</m>, and the right column contains constants.</p>
+					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_N</m>, the middle column contains coefficients of <m>V_{OUT}</m>, and the right column contains constants.</p>
 
 					<p>
 						<md>
@@ -1773,7 +1774,7 @@
 
 			<exercise xml:id="ch4dividedfeedbackex7">
 				<statement>
-					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit47" />.</p>
+					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit47" />. The circuit parameters are <m>V_1 = 4~\textrm{V}</m> and <m>I_2 = 25~\textrm{mA}</m>.</p>
 
 					<figure xml:id="examplecircuit47">
   						<caption>Circuit diagram corresponding to <xref ref="ch4dividedfeedbackex7" />.</caption>
@@ -1783,15 +1784,15 @@
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(3.5,1) node[op amp] (opamp) {};
 									\draw[]	(opamp.out) to [short] ++ (right:0.5) node[right] {$V_{OUT}$};
-									\draw[]	(opamp.+) to [V, l_=4~V~(V1)] ++(down:2) node[tlground] {};
+									\draw[]	(opamp.+) to [V, l_=$V_1$] ++(down:2.5) node[tlground] {};
 									\draw[]	(opamp.-) to [R, l_=1~k$\Omega$, *-*] ++(up:2);
 									\draw[]	(opamp.out) to [short, *-] ++(up:0.5) |- ($(opamp.-)+(0,2)$);		
 									\draw[]	($(opamp.-)+(-2.25,2)$) to [R, l^=500~$\Omega$] ++(right:2.25);
 									\draw[]	($(opamp.-)-(2.25,0)$) to [R, l^=600~$\Omega$] (opamp.-);
 									\draw[]	($(opamp.-)-(2.25,0)$) to [short] ++(up:2);
-									\draw[]	($(opamp.-)-(2.25,0)$) to [R, l_=200~$\Omega$, *-*] ++(down:2) node[ground] {};
-									\draw[]	($(opamp.-)-(4.25,2)$) to [I, l^=25~mA~(I2)] ++(up:2) --++ (right:2);
-									\draw[]	($(opamp.-)-(4.25,2)$) --++ (right:2);
+									\draw[]	($(opamp.-)-(2.25,0)$) to [R, l_=200~$\Omega$, *-*] ++(down:2.5) node[ground] {};
+									\draw[]	($(opamp.-)-(4.25,2.5)$) to [I, l^=$I_2$] ++(up:2.5) --++ (right:2);
+									\draw[]	($(opamp.-)-(4.25,2.5)$) --++ (right:2);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1811,15 +1812,22 @@
 				<solution>
 					<p>Perform a source transformation on the current source to obtain a circuit with two voltage sources. The feedback resistors have also been re-drawn in a manner that might make the circuit analysis more intuitive to solve.</p>
 
-					<figure xml:id="examplecircuit47sol1">
-  						<caption>Circuit diagram after source transformation.</caption>
+					<p>
+						<md>
+							<mrow>V_2 \amp= (25~\textrm{mA})(0.2~\textrm{k}\Omega)</mrow>
+							<mrow>\amp= 5~\textrm{V}</mrow>
+						</md>
+					</p>
+
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch4-examplecircuit47sol1">
     						<shortdescription>Op-amp circuit with 4V source (V1), 5V source (V2), 200ohm resistor, 500ohm resistor, 600ohm resistor, and 1k resistor. The circuit has 6 nodes. The high-potential end of V2 connects to the 200ohm resistor at node A. The 200ohm resistor, 500ohm resistor, and 600ohm resistor connect at node B. The 600ohm resistor, 1k resistor, and inverting input of the op-amp connect at node C. The 500ohm resistor, 1k resistor, and output of the op-amp connect at node D, labeled Vout. The high-potential end of V2 connects to the non-inverting input of the op-amp at node E. The low-potential end of both sources connect to GND at node F.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(3.5,1) node[op amp] (opamp) {};
 									\draw[]	(opamp.out) to [short] ++ (right:0.5) node[right] {$V_{OUT}$};
-									\draw[]	(opamp.+) to [V, l_=4~V~(V1)] ++(down:2) node[tlground] {};
+									\draw[]	(opamp.+) to [V, l_=$V_1$] ++(down:2.5) node[tlground] {};
 									\draw[]	(opamp.-) to [short, *-] ++(up:1);
 									\draw[]	($(opamp.-)+(0,1)$) to [R, l^=1~k$\Omega$, -*] ++(right:2.38);
 									\draw[]	(opamp.out) to [short, *-] ++(up:0.5) |- ($(opamp.-)+(0,2)$);		
@@ -1827,7 +1835,7 @@
 									\draw[]	($(opamp.-)-(2.25,0)$) to [R, l^=600~$\Omega$] (opamp.-);
 									\draw[]	($(opamp.-)-(2.25,0)$) to [short] ++(up:2);
 									\draw[]	($(opamp.-)-(4.25,0)$) to [R, l^=200~$\Omega$, -*] ++(right:2);
-									\draw[]	($(opamp.-)-(4.25,0)$) to [V, l_=5~V~(V2)] ++(down:2) node[tlground] {};
+									\draw[]	($(opamp.-)-(4.25,0)$) to [V, l_=$V_2$] ++(down:2.5) node[tlground] {};
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1835,13 +1843,13 @@
 
 					<p>This circuit doesn't fit any of the standard op-amp circuit templates (inverting, non-inverting, summing, or difference amplifier). Therefore, the assumptions of an op-amp circuit (no input current, virtual node) can be applied with any useful circuit laws and theorems to calculate these parameters.</p>
 
-					<p>Perform KCL at the inverting input of the op-amp. The voltage at the node at the intersection between the 200<nbsp />&#8486;, 500<nbsp />&#8486;, and 600<nbsp />&#8486; resistors will be referred to as <m>V_X</m>. All resistor units will be expressed in k&#8486;.</p>
+					<p>Perform KCL at the inverting input of the op-amp. The voltage at the node at the intersection between the 200<nbsp />&#8486;, 500<nbsp />&#8486;, and 600<nbsp />&#8486; resistors will be referred to as <m>V_N</m>. All resistor units will be expressed in k&#8486;.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{V_X - 4~\textrm{V}}{0.6~\textrm{k}\Omega} \amp= \frac{4~\textrm{V} - V_{OUT}}{1~\textrm{k}\Omega}</mrow>
-							<mrow>1.67V_X - 6.67~\textrm{V} \amp= 4~\textrm{V} - V_{OUT}</mrow>
-							<mrow>1.67V_X + V_{OUT} \amp= 10.67~\textrm{V}</mrow>
+							<mrow>\frac{V_N - 4~\textrm{V}}{0.6~\textrm{k}\Omega} \amp= \frac{4~\textrm{V} - V_{OUT}}{1~\textrm{k}\Omega}</mrow>
+							<mrow>1.67V_N - 6.67~\textrm{V} \amp= 4~\textrm{V} - V_{OUT}</mrow>
+							<mrow>1.67V_N + V_{OUT} \amp= 10.67~\textrm{V}</mrow>
 						</md>
 					</p>
 
@@ -1849,13 +1857,13 @@
 
 					<p>
 						<md>
-							<mrow>\frac{5~\textrm{V}-V_X}{0.2~\textrm{k}\Omega} \amp= \frac{V_X - 4~\textrm{V}}{0.6~\textrm{k}\Omega} + \frac{V_X - V_{OUT}}{0.5~\textrm{k}\Omega}</mrow>
-							<mrow>25~\textrm{V} - 5V_X \amp= 1.67V_X - 6.67~\textrm{V} + 2V_X - 2V_{OUT}</mrow>
-							<mrow>8.67V_X - 2V_{OUT} \amp= 31.67~\textrm{V}</mrow>
+							<mrow>\frac{5~\textrm{V}-V_N}{0.2~\textrm{k}\Omega} \amp= \frac{V_N - 4~\textrm{V}}{0.6~\textrm{k}\Omega} + \frac{V_N - V_{OUT}}{0.5~\textrm{k}\Omega}</mrow>
+							<mrow>25~\textrm{V} - 5V_N \amp= 1.67V_N - 6.67~\textrm{V} + 2V_N - 2V_{OUT}</mrow>
+							<mrow>8.67V_N - 2V_{OUT} \amp= 31.67~\textrm{V}</mrow>
 						</md>
 					</p>
 
-					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_X</m>, the middle column contains coefficients of <m>V_{OUT}</m>, and the right column contains constants.</p>
+					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_N</m>, the middle column contains coefficients of <m>V_{OUT}</m>, and the right column contains constants.</p>
 
 					<p>
 						<md>
@@ -1885,9 +1893,9 @@
 
 					<p>
 						<md>
-							<mrow>\frac{V_X - 4~\textrm{V}}{0.6~\textrm{k}\Omega} \amp= \frac{4~\textrm{V} - V_{OUT,1}}{1~\textrm{k}\Omega}</mrow>
-							<mrow>1.67V_X - 6.67~\textrm{V} \amp= 4~\textrm{V} - V_{OUT,1}</mrow>
-							<mrow>1.67V_X + V_{OUT,1} \amp= 10.67~\textrm{V}</mrow>
+							<mrow>\frac{V_N - 4~\textrm{V}}{0.6~\textrm{k}\Omega} \amp= \frac{4~\textrm{V} - V_{OUT,1}}{1~\textrm{k}\Omega}</mrow>
+							<mrow>1.67V_N - 6.67~\textrm{V} \amp= 4~\textrm{V} - V_{OUT,1}</mrow>
+							<mrow>1.67V_N + V_{OUT,1} \amp= 10.67~\textrm{V}</mrow>
 						</md>
 					</p>
 
@@ -1895,13 +1903,13 @@
 
 					<p>
 						<md>
-							<mrow>\frac{-V_X}{0.2~\textrm{k}\Omega} \amp= \frac{V_X - 4~\textrm{V}}{0.6~\textrm{k}\Omega} + \frac{V_X - V_{OUT,1}}{0.5~\textrm{k}\Omega}</mrow>
-							<mrow>- 5V_X \amp= 1.67V_X - 6.67~\textrm{V} + 2V_X - 2V_{OUT,1}</mrow>
-							<mrow>8.67V_X - 2V_{OUT,1} \amp= 6.67~\textrm{V}</mrow>
+							<mrow>\frac{-V_N}{0.2~\textrm{k}\Omega} \amp= \frac{V_N - 4~\textrm{V}}{0.6~\textrm{k}\Omega} + \frac{V_N - V_{OUT,1}}{0.5~\textrm{k}\Omega}</mrow>
+							<mrow>- 5V_N \amp= 1.67V_N - 6.67~\textrm{V} + 2V_N - 2V_{OUT,1}</mrow>
+							<mrow>8.67V_N - 2V_{OUT,1} \amp= 6.67~\textrm{V}</mrow>
 						</md>
 					</p>
 
-					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_X</m>, the middle column contains coefficients of <m>V_{OUT,1}</m>, and the right column contains constants.</p>
+					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_N</m>, the middle column contains coefficients of <m>V_{OUT,1}</m>, and the right column contains constants.</p>
 
 					<p>
 						<md>
@@ -1938,9 +1946,9 @@
 
 					<p>
 						<md>
-							<mrow>\frac{V_X}{0.6~\textrm{k}\Omega} \amp= \frac{-V_{OUT,2}}{1~\textrm{k}\Omega}</mrow>
-							<mrow>1.67V_X \amp= - V_{OUT,2}</mrow>
-							<mrow>1.67V_X + V_{OUT,2} \amp= 0</mrow>
+							<mrow>\frac{V_N}{0.6~\textrm{k}\Omega} \amp= \frac{-V_{OUT,2}}{1~\textrm{k}\Omega}</mrow>
+							<mrow>1.67V_N \amp= - V_{OUT,2}</mrow>
+							<mrow>1.67V_N + V_{OUT,2} \amp= 0</mrow>
 						</md>
 					</p>
 
@@ -1948,13 +1956,13 @@
 
 					<p>
 						<md>
-							<mrow>\frac{5~\textrm{V}-V_X}{0.2~\textrm{k}\Omega} \amp= \frac{V_X}{0.6~\textrm{k}\Omega} + \frac{V_X - V_{OUT,2}}{0.5~\textrm{k}\Omega}</mrow>
-							<mrow>25~\textrm{V} - 5V_X \amp= 1.67V_X + 2V_X - 2V_{OUT,2}</mrow>
-							<mrow>8.67V_X - 2V_{OUT,2} \amp= 25~\textrm{V}</mrow>
+							<mrow>\frac{5~\textrm{V}-V_N}{0.2~\textrm{k}\Omega} \amp= \frac{V_N}{0.6~\textrm{k}\Omega} + \frac{V_N - V_{OUT,2}}{0.5~\textrm{k}\Omega}</mrow>
+							<mrow>25~\textrm{V} - 5V_N \amp= 1.67V_N + 2V_N - 2V_{OUT,2}</mrow>
+							<mrow>8.67V_N - 2V_{OUT,2} \amp= 25~\textrm{V}</mrow>
 						</md>
 					</p>
 
-					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_X</m>, the middle column contains coefficients of <m>V_{OUT,2}</m>, and the right column contains constants.</p>
+					<p>The two equations can be expressed in a matrix. The left column contains coefficients of <m>V_N</m>, the middle column contains coefficients of <m>V_{OUT,2}</m>, and the right column contains constants.</p>
 
 					<p>
 						<md>
@@ -2123,14 +2131,14 @@
 				<solution>
 					<p>This circuit doesn't fit any of the standard op-amp circuit templates (inverting, non-inverting, summing, or difference amplifier). Therefore, the assumptions of an op-amp circuit (no input current, virtual node) can be applied with any useful circuit laws and theorems to calculate these parameters.</p>
 
-					<p>Perform KCL at the non-inverting node of the left op-amp. The voltage at the non-inverting node will be referred to as <m>V_X</m>.</p>
+					<p>Perform KCL at the non-inverting node of the left op-amp. The voltage at the non-inverting node will be referred to as <m>V_P</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{0-V_X}{3~\textrm{k}\Omega} \amp= \frac{V_X-V_{OUT}}{6~\textrm{k}\Omega}</mrow>
-							<mrow>-V_X \amp= 0.5V_X - 0.5V_{OUT}</mrow>
-							<mrow>-1.5V_X \amp= -0.5V_{OUT}</mrow>
-							<mrow>V_X \amp= \frac{1}{3}V_{OUT}</mrow>
+							<mrow>\frac{0-V_P}{3~\textrm{k}\Omega} \amp= \frac{V_P-V_{OUT}}{6~\textrm{k}\Omega}</mrow>
+							<mrow>-V_P \amp= 0.5V_P - 0.5V_{OUT}</mrow>
+							<mrow>-1.5V_P \amp= -0.5V_{OUT}</mrow>
+							<mrow>V_P \amp= \frac{1}{3}V_{OUT}</mrow>
 						</md>
 					</p>
 
@@ -2143,12 +2151,12 @@
 						</md>
 					</p>
 
-					<p>Perform KCL at the inverting node of the left op-amp. Then, plug in the values of <m>V_X</m> and <m>V_Y</m> defined above, and solve for <m>V_{OUT}/V_S</m>, which is equal to <m>G</m>.</p>
+					<p>Perform KCL at the inverting node of the left op-amp. Then, plug in the values of <m>V_P</m> and <m>V_Y</m> defined above, and solve for <m>V_{OUT}/V_S</m>, which is equal to <m>G</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{V_S-V_X}{1~\textrm{k}\Omega} \amp= \frac{V_X-V_Y}{2~\textrm{k}\Omega}</mrow>
-							<mrow>V_S - V_X	 \amp= 0.5V_X - 0.5V_Y</mrow>
+							<mrow>\frac{V_S-V_P}{1~\textrm{k}\Omega} \amp= \frac{V_P-V_Y}{2~\textrm{k}\Omega}</mrow>
+							<mrow>V_S - V_P	 \amp= 0.5V_P - 0.5V_Y</mrow>
 							<mrow>V_S - \frac{1}{3}V_{OUT} \amp= 0.5(\frac{1}{3}V_{OUT}) - 0.5(-\frac{1}{3}V_{OUT})</mrow>
 							<mrow>V_S \amp= \frac{1}{3}V_{OUT} + \frac{1}{6}V_{OUT} + \frac{1}{6}V_{OUT}</mrow>
 							<mrow>V_S \amp= \frac{4}{6}V_{OUT}</mrow>
@@ -2161,7 +2169,7 @@
 
 			<exercise xml:id="ch4dividedfeedbackex10">
 				<statement>
-					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit410" />.</p>
+					<p>Calculate the output voltage and source gains of the circuit shown in <xref ref="examplecircuit410" />. The circuit parameters are <m>V_1 = 0.5~\textrm{V}</m> and <m>V_2 = 1~\textrm{V}</m>.</p>
 
 					<figure xml:id="examplecircuit410">
   						<caption>Circuit diagram corresponding to <xref ref="ch4dividedfeedbackex10" />.</caption>
@@ -2171,7 +2179,7 @@
 								\begin{tikzpicture}[font=\sffamily]
 									\draw	(3.5,1) node[op amp] (opamp) {};
 									\draw[]	(opamp.-) to [short, *-] ($(opamp.-)+(0,2.25)$);
-									\draw[]	($(opamp.-)-(2,0)$) to [V, l_=0.5~V~(V1)] ++(down:2) node[tlground] {};
+									\draw[]	($(opamp.-)-(2,0)$) to [V, l_=$V_1$] ++(down:2) node[tlground] {};
 									\draw[]	($(opamp.-)-(2,0)$) to [R, l^=2~k$\Omega$] (opamp.-);
 									\draw[]	($(opamp.-)+(0,1.25)$) to [R, l^=4~k$\Omega$, *-] ($(opamp.-)+(2.38,1.25)$);
 									\draw[]	($(opamp.-)+(2.38,1.25)$) to [short, -*] (opamp.out);
@@ -2183,7 +2191,7 @@
 									\draw[]	($(opamp2.out)-(0,2.25)$) to [short, -*] (opamp2.out);
 									\draw[]	(opamp.out) to [R, l^=2~k$\Omega$] (opamp2.-);
 									\draw[]	(opamp2.out) to [short] ++(right:1) node[right] {$V_{OUT}$};
-									\draw[]	(opamp2.+) to [V, l^=1~V~(V2)] ++(left:3.75) node[ground] {};
+									\draw[]	(opamp2.+) to [V, l^=$V_2$] ++(left:3.75) node[ground] {};
 									\draw[]	(opamp2.-) to [short, *-] ($(opamp2.-)+(0,1.25)$);
 									\draw[]	($(opamp2.-)+(0,1.25)$) to [R, l^=3~k$\Omega$, -*] ($(opamp2.-)+(2.88,1.25)$);
 									\draw[]	($(opamp2.-)+(2.88,2.75)$) to [short, -*] ($(opamp2.out)+(0.5,0)$);
@@ -2211,15 +2219,15 @@
 
 					<p>Deactivate source <m>V_2</m> and draw the circuit diagram to calculate <m>G_1</m> and <m>V_{OUT,1}</m>.</p>
 
-					<figure xml:id="examplecircuit410sol1">
-  						<caption>Circuit diagram with <m>V_2</m> deactivated.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch4-examplecircuit410sol1">
     						<shortdescription>Op-amp circuit with 2 op-amps, a 0.5V source (V1), four 2k resistors, two 3k resistors, and 4k resistor. The circuit has 7 nodes. The high-potential end of V1 connects to the 2k-a resistor at node A. The 2k-a resistor, 2k-b resistor, 4k resistor, and inverting input of op-amp 1 connect at node B. The 4k resistor, 2k-d resistor, and output of op-amp 1 connect at node C. The 2k-d resistor, 3k-a resistor, and inverting input of op-amp 2 connect at node D. The 2k-b resistor, 3k-a resistor, 3k-b resistor, and output of op-amp 2 connect at node E, labeled Vout,1. The 2k-c resistor, 3k-b resistor, and non-inverting input to op-amp 1 connect at node F. The low-potential end of V1, 2k-c resistor, and non-inverting input of op-amp 2 connect to GND at node G.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw	(3.5,1) node[op amp] (opamp) {};
 									\draw[]	(opamp.-) to [short, *-] ($(opamp.-)+(0,2.25)$);
-									\draw[]	($(opamp.-)-(2,0)$) to [V, l_=0.5~V~(V1)] ++(down:2) node[tlground] {};
+									\draw[]	($(opamp.-)-(2,0)$) to [V, l_=$V_1$] ++(down:2) node[tlground] {};
 									\draw[]	($(opamp.-)-(2,0)$) to [R, l^=2~k$\Omega$] (opamp.-);
 									\draw[]	($(opamp.-)+(0,1.25)$) to [R, l^=4~k$\Omega$, *-] ($(opamp.-)+(2.38,1.25)$);
 									\draw[]	($(opamp.-)+(2.38,1.25)$) to [short, -*] (opamp.out);
@@ -2240,13 +2248,13 @@
   						</image>
 					</figure>
 
-					<p>Perform KCL at the inverting input of the left op-amp. This node voltage will be referred to as <m>V_X</m>. The left op-amp's output voltage will be referred to as <m>V_Y</m>.</p>
+					<p>Perform KCL at the inverting input of the left op-amp. This node voltage will be referred to as <m>V_N</m>. The left op-amp's output voltage will be referred to as <m>V_Y</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{0.5~\textrm{V}-V_X}{2~\textrm{k}\Omega} \amp= \frac{V_X-V_Y}{4~\textrm{k}\Omega} + \frac{V_X-V_{OUT,1}}{2~\textrm{k}\Omega}</mrow>
-							<mrow>0.25~\textrm{V} - 0.5V_X \amp= 0.25V_X - 0.25V_Y + 0.5V_X - 0.5V_{OUT,1}</mrow>
-							<mrow>0.25~\textrm{V} \amp= 1.25V_X - 0.25V_Y - 0.5V_{OUT,1}</mrow>
+							<mrow>\frac{0.5~\textrm{V}-V_N}{2~\textrm{k}\Omega} \amp= \frac{V_N-V_Y}{4~\textrm{k}\Omega} + \frac{V_N-V_{OUT,1}}{2~\textrm{k}\Omega}</mrow>
+							<mrow>0.25~\textrm{V} - 0.5V_N \amp= 0.25V_N - 0.25V_Y + 0.5V_N - 0.5V_{OUT,1}</mrow>
+							<mrow>0.25~\textrm{V} \amp= 1.25V_N - 0.25V_Y - 0.5V_{OUT,1}</mrow>
 						</md>
 					</p>
 
@@ -2254,9 +2262,9 @@
 
 					<p>
 						<md>
-							<mrow>\frac{0-V_X}{2~\textrm{k}\Omega} \amp= \frac{V_X-V_{OUT,1}}{3~\textrm{k}\Omega}</mrow>
-							<mrow>-0.5V_X \amp= 0.33V_X - 0.33V_{OUT,1}</mrow>
-							<mrow>0 \amp= 0.83V_X - 0.33V_{OUT,1}</mrow>
+							<mrow>\frac{0-V_N}{2~\textrm{k}\Omega} \amp= \frac{V_N-V_{OUT,1}}{3~\textrm{k}\Omega}</mrow>
+							<mrow>-0.5V_N \amp= 0.33V_N - 0.33V_{OUT,1}</mrow>
+							<mrow>0 \amp= 0.83V_N - 0.33V_{OUT,1}</mrow>
 						</md>
 					</p>
 
@@ -2270,7 +2278,7 @@
 						</md>
 					</p>
 
-					<p>The three equations can be expressed in a matrix. The left column contains coefficients of <m>V_X</m>, the middle-left column contains coefficients of <m>V_Y</m>, the middle-right column contains coefficients of <m>V_{OUT,1}</m>, and the right column contains constants.</p>
+					<p>The three equations can be expressed in a matrix. The left column contains coefficients of <m>V_N</m>, the middle-left column contains coefficients of <m>V_Y</m>, the middle-right column contains coefficients of <m>V_{OUT,1}</m>, and the right column contains constants.</p>
 
 					<p>
 						<md>
@@ -2305,8 +2313,8 @@
 
 					<p>Deactivate source <m>V_1</m> and draw the circuit diagram to calculate <m>G_2</m> and <m>V_{OUT,2}</m>.</p>
 
-					<figure xml:id="examplecircuit410sol2">
-  						<caption>Circuit diagram with <m>V_1</m> deactivated.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch4-examplecircuit410sol2">
     						<shortdescription>Op-amp circuit with 2 op-amps, 1V source (V2), four 2k resistors, two 3k resistors, and 4k resistor. The circuit has 7 nodes. The 2k-a resistor, 2k-b resistor, 4k resistor, and inverting input to op-amp 1 connect at node A. The 4k resistor, 2k-d resistor, and output of op-amp 2 connect at node B. The 2k-d resistor, 3k-a resistor, and inverting input of op-amp 2 connect at node C. The 2k-b resistor, 3k-a resistor, 3k-b resistor, and output of op-amp 2 connect at node D, labeled Vout,2. The high-potential end of V2 connects to the non-inverting input of op-amp 2 at node E. The 2k-c resistor, 3k-b resistor, and non-inverting input to op-amp 1 connect at node F. The 2k-a resistor, 2k-c resistor, and low-potential end of V2 connect to GND at node G.</shortdescription>
 							<latex-image>
@@ -2324,7 +2332,7 @@
 									\draw[]	($(opamp2.out)-(0,2.25)$) to [short, -*] (opamp2.out);
 									\draw[]	(opamp.out) to [R, l^=2~k$\Omega$] (opamp2.-);
 									\draw[]	(opamp2.out) to [short] ++(right:1) node[right] {$V_{OUT,2}$};
-									\draw[]	(opamp2.+) to [V, l^=1~V~(V2)] ++(left:3.75) node[ground] {};
+									\draw[]	(opamp2.+) to [V, l^=$V_2$] ++(left:3.75) node[ground] {};
 									\draw[]	(opamp2.-) to [short, *-] ($(opamp2.-)+(0,1.25)$);
 									\draw[]	($(opamp2.-)+(0,1.25)$) to [R, l^=3~k$\Omega$, -*] ($(opamp2.-)+(2.88,1.25)$);
 									\draw[]	($(opamp2.-)+(2.88,2.75)$) to [short, -*] ($(opamp2.out)+(0.5,0)$);
@@ -2333,13 +2341,13 @@
   						</image>
 					</figure>
 
-					<p>Perform KCL at the inverting input of the left op-amp. This node voltage will be referred to as <m>V_X</m>. The left op-amp's output voltage will be referred to as <m>V_Y</m>.</p>
+					<p>Perform KCL at the inverting input of the left op-amp. This node voltage will be referred to as <m>V_N</m>. The left op-amp's output voltage will be referred to as <m>V_Y</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{0-V_X}{2~\textrm{k}\Omega} \amp= \frac{V_X-V_Y}{4~\textrm{k}\Omega} + \frac{V_X-V_{OUT}}{2~\textrm{k}\Omega}</mrow>
-							<mrow>-0.5V_X \amp= 0.25V_X - 0.25V_Y + 0.5V_X - 0.5V_{OUT,2}</mrow>
-							<mrow>0 \amp= 1.25V_X - 0.25V_Y - 0.5V_{OUT,2}</mrow>
+							<mrow>\frac{0-V_N}{2~\textrm{k}\Omega} \amp= \frac{V_N-V_Y}{4~\textrm{k}\Omega} + \frac{V_N-V_{OUT}}{2~\textrm{k}\Omega}</mrow>
+							<mrow>-0.5V_N \amp= 0.25V_N - 0.25V_Y + 0.5V_N - 0.5V_{OUT,2}</mrow>
+							<mrow>0 \amp= 1.25V_N - 0.25V_Y - 0.5V_{OUT,2}</mrow>
 						</md>
 					</p>
 
@@ -2347,9 +2355,9 @@
 
 					<p>
 						<md>
-							<mrow>\frac{0-V_X}{2~\textrm{k}\Omega} \amp= \frac{V_X-V_{OUT,2}}{3~\textrm{k}\Omega}</mrow>
-							<mrow>-0.5V_X \amp= 0.33V_X - 0.33V_{OUT,2}</mrow>
-							<mrow>0 \amp= 0.83V_X - 0.33V_{OUT,2}</mrow>
+							<mrow>\frac{0-V_N}{2~\textrm{k}\Omega} \amp= \frac{V_N-V_{OUT,2}}{3~\textrm{k}\Omega}</mrow>
+							<mrow>-0.5V_N \amp= 0.33V_N - 0.33V_{OUT,2}</mrow>
+							<mrow>0 \amp= 0.83V_N - 0.33V_{OUT,2}</mrow>
 						</md>
 					</p>
 
@@ -2363,7 +2371,7 @@
 						</md>
 					</p>
 
-					<p>The three equations can be expressed in a matrix. The left column contains coefficients of <m>V_X</m>, the middle-left column contains coefficients of <m>V_Y</m>, the middle-right column contains coefficients of <m>V_{OUT,2}</m>, and the right column contains constants.</p>
+					<p>The three equations can be expressed in a matrix. The left column contains coefficients of <m>V_N</m>, the middle-left column contains coefficients of <m>V_Y</m>, the middle-right column contains coefficients of <m>V_{OUT,2}</m>, and the right column contains constants.</p>
 
 					<p>
 						<md>
@@ -2536,8 +2544,8 @@
 
 					<p>The circuit diagram below is drawn with current directions.</p>
 					
-					<figure xml:id="examplecircuit412sol1">
-  						<caption>Circuit diagram with currents contributing to the op-amp output current shown.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch4-examplecircuit412sol1">
     						<shortdescription>Op-amp circuit with 1V source, 10ohm resistor, 20ohm resistor, and 50ohm resistor. The circuit has 4 nodes. The high-potential end of the 1V source connects to the 10ohm resistor at node A. The 10ohm resistor, 20ohm resistor, and inverting input of the op-amp connect at node B. The 20ohm resistor, 50ohm resistor, and output of the op-amp connect at node C, labeled Vout. The low-potential end of the 1V source, non-inverting input of the op-amp, and 50ohm resistor connect to GND at node D. Current Ix flows through the 20ohm resistor from node C to node B. -40mA flows through the 50ohm resistor from node C to node D. Isource flows out of the output of the op-amp into node C.</shortdescription>
 							<latex-image>
@@ -2636,8 +2644,8 @@
 
 					<p>The circuit diagram below is drawn with current directions.</p>
 					
-					<figure xml:id="examplecircuit413sol1">
-  						<caption>Circuit diagram with currents contributing to the op-amp output current shown.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="70%" xml:id="ch4-examplecircuit413sol1">
     						<shortdescription>Op-amp circuit containing a 0.6V source, 30ohm resistor, 40ohm resistor, and 220ohm resistor. The circuit has 4 nodes. The 30ohm resistor, 40ohm resistor, and inverting input of the op-amp connect at node A. The 40ohm resistor, 220ohm resistor, and output of the op-amp connect at node B, labeled Vout. The high-potential end of the 0.6V source connects to the non-inverting input of the op-amp at node C. The low-potential end of the 0.6V source and 220ohm resistor connect to GND at node D. Ix flows through the 40ohm resistor from node B to node A. 6.36mA of current flows through the 220ohm resistor from node B to node D. Isource flows out of the output of the op-amp into node B.</shortdescription>
 							<latex-image>

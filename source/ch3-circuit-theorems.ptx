@@ -167,10 +167,10 @@
 			<title>Superposition in symbolic form</title>
 
 			<statement>
-				<p>Use superposition to calculate <m>I</m> given the circuit shown in <xref ref="superpositionExampleFigure" />.</p>
+				<p>Use superposition to calculate <m>I</m> given the circuit shown below.</p>
 
-				<figure xml:id="superpositionExampleFigure">
-  					<caption>Circuit schematic used to demonstrate the superposition theorem.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-superpositionExampleFigure">
     					<shortdescription>Circuit with 2 meshes and 3 nodes containing a current source Is, voltage source Vs, resistors R1 and R2. Is, R1, and R2 connect at node A. Is flows into node A. R2 and the low-potential end of Vs connect at node B. Is, R1, and the high-potential end of Vs connect at node C. Is flows out of node C. Branch current I is defined through R1 and flows out of node A into node C.</shortdescription>
 						<latex-image>
@@ -186,10 +186,10 @@
   					</image>
 				</figure>
 
-				<p>As there are two independent sources, two subcircuits can be created. The first, shown in <xref ref="superpositionSubcircuitFigure1" /> contains only the current source. The voltage source is deactivated (replaced with a short circuit).</p>
+				<p>As there are two independent sources, two subcircuits can be created. The first, shown below, contains only the current source. The voltage source is deactivated (replaced with a short circuit).</p>
 
-				<figure xml:id="superpositionSubcircuitFigure1">
-  					<caption>A subcircuit of <xref ref="superpositionExampleFigure" /> with the voltage source deactivated.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-superpositionSubcircuitFigure1">
     					<shortdescription>Same circuit as above with the voltage source shorted out.</shortdescription>
 						<latex-image>
@@ -211,10 +211,10 @@
 					<md>I_1 = I_S	\left(	\frac{R_1//R_2}{R_1}\right)</md>
 				</p>
 
-				<p>The second subcircuit, shown in <xref ref="superpositionSubcircuitFigure2" />, contains the voltage source. The current source has been deactivated by replacing it with an open circuit.</p>
+				<p>The second subcircuit, shown below, contains the voltage source. The current source has been deactivated by replacing it with an open circuit.</p>
 
-				<figure xml:id="superpositionSubcircuitFigure2">
-  					<caption>A subcircuit of <xref ref="superpositionExampleFigure" /> with the current source deactivated.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-superpositionSubcircuitFigure2">
     					<shortdescription>Same circuit as above with the current source replaced with an open circuit.</shortdescription>
 						<latex-image>
@@ -236,7 +236,7 @@
 					<md>I_2 = -\frac{V_S}{R_1+R_2}</md>
 				</p>
 
-				<p>The total current, <m>I</m>, through the original circuit shown in <xref ref="superpositionExampleFigure" /> is equal to the sum of both of the subcircuit currents.</p>
+				<p>The total current through the original circuit (<m>I</m>) is equal to the sum of both of the subcircuit currents.</p>
 
 				<p>
 					<md>
@@ -251,10 +251,10 @@
 			<title>Superposition in numeric form</title>
 
 			<statement>
-				<p>Use superposition to calculate <m>V_{OUT}</m> in the circuit shown in <xref ref="superpositionNumericSubcircuitFigure1" />.</p>
+				<p>Use superposition to calculate <m>V_{OUT}</m> in the circuit shown below.</p>
 
-				<figure xml:id="superpositionNumericSubcircuitFigure1">
-  					<caption>A circuit with two independent sources used to demonstrate superposition.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-superpositionNumericSubcircuitFigure1">
     					<shortdescription>Circuit with 3 meshes and 5 nodes containing a 5V source, 10mA source, 1.8k resistor, 2.4k resistor, 5.1k resistor, 3.3k resistor, and 5.6k resistor. The 1.8k and 2.4k resistors are connected at node a. The 2.4k resistor, 10mA source, 5.1k resistor, and 3.3k resistors are connected at node b. The 10mA source flows out of node b. The 5.1k resistor and high-potential end of the 5V source are connected at node c. The 10mA source, 3.3k resistor, and 5.6k resistor are connected at node d. The 10mA source flows into node d. The 1.8k resistor, low-potential end of the 5V source, and 5.6k resistors are connected at node e. Voltage "Vout" drops over the 5.6k resistor between nodes d and e.</shortdescription>
 						<latex-image>
@@ -277,7 +277,7 @@
 				<p>First, deactivate the current source (replace it with an open circuit) and calculate <m>V_{OUT,1}</m>, the contribution to <m>V_{OUT}</m> from the voltage source. This circuit is shown in <xref ref="superpositionNumericSubcircuitFigure2" />.</p>
 
 				<figure xml:id="superpositionNumericSubcircuitFigure2">
-  					<caption>The subcircuit of <xref ref="superpositionNumericSubcircuitFigure1" /> with the current source deactivated.</caption>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-superpositionNumericSubcircuitFigure2">
     					<shortdescription>Circuit with 2 meshes and 5 nodes containing a 5V source, 1.8k resistor, 2.4k resistor, 5.1k resistor, 3.3k resistor, and 5.6k resistor. The 1.8k and 2.4k resistors are connected at node a. The 2.4k resistor, 5.1k resistor, and 3.3k resistors are connected at node b. The 5.1k resistor and high-potential end of the 5V source are connected at node c. The 3.3k resistor and 5.6k resistor are connected at node d. The 1.8k resistor, low-potential end of the 5V source, and 5.6k resistors are connected at node e. Voltage "Vout,1" drops over the 5.6k resistor between nodes d and e.</shortdescription>
 						<latex-image>
@@ -297,7 +297,7 @@
 				<p>Simplify the circuit by combining the 1.8<nbsp />k&#8486; and 2.4<nbsp />k&#8486; resistors in series. This is shown in <xref ref="superpositionNumericSubcircuitFigure3" />.</p>
 
 				<figure xml:id="superpositionNumericSubcircuitFigure3">
-  					<caption>The reduced subcircuit of <xref ref="superpositionNumericSubcircuitFigure1" /> with the current source deactivated.</caption>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-superpositionNumericSubcircuitFigure3">
     					<shortdescription>Circuit with 2 meshes and 4 nodes containing a 5V source, 4.2k resistor, 5.1k resistor, 3.3k resistor, and 5.6k resistor. The 4.2k resistor, 5.1k resistor, and 3.3k resistors are connected at node b. The 5.1k resistor and high-potential end of the 5V source are connected at node c. The 3.3k resistor and 5.6k resistor are connected at node d. The 1.8k resistor, low-potential end of the 5V source, and 5.6k resistors are connected at node e. Voltage "Vout,1" drops over the 5.6k resistor between nodes d and e.</shortdescription>
 						<latex-image>
@@ -349,7 +349,7 @@
 				<p>Deactivate the voltage source (replace with a short) to determine the contribution to the output voltage due to the current source (<m>V_{OUT,2}</m>). This circuit is shown in <xref ref="superpositionNumericSubcircuitFigure5" />.</p>
 
 				<figure xml:id="superpositionNumericSubcircuitFigure5">
-  					<caption>The subcircuit of <xref ref="superpositionNumericSubcircuitFigure1" /> with the voltage source deactivated.</caption>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-superpositionNumericSubcircuitFigure5">
     					<shortdescription>Circuit with 3 meshes and 4 nodes containing a 10mA source, 1.8k resistor, 2.4k resistor, 5.1k resistor, 3.3k resistor, and 5.6k resistor. The 1.8k and 2.4k resistors are connected at node a. The 2.4k resistor, 10mA source, 5.1k resistor, and 3.3k resistors are connected at node b. The 10mA source flows out of node b. The 10mA source, 3.3k resistor, and 5.6k resistor are connected at node d. The 10mA source flows into node d. The 1.8k resistor, and 5.6k resistors are connected at node e. Voltage "Vout,2" drops over the 5.6k resistor between nodes d and e.</shortdescription>
 						<latex-image>
@@ -371,7 +371,7 @@
 				<p>The 1.8<nbsp />k&#8486; and 2.4<nbsp />k&#8486; resistors are in series. That combination is in parallel with the 5.1<nbsp />k&#8486; resistor. The reduced circuit diagram is shown in <xref ref="superpositionNumericSubcircuitFigure6" />.</p>
 
 				<figure xml:id="superpositionNumericSubcircuitFigure6">
-  					<caption>The reduced subcircuit of <xref ref="superpositionNumericSubcircuitFigure1" /> with the voltage source deactivated.</caption>
+  					<caption></caption>
   					<image width="40%" xml:id="ch3-superpositionNumericSubcircuitFigure6">
     					<shortdescription>Circuit with 2 meshes and 3 nodes containing a 10mA source, 2.3k resistor, 3.3k resistor, and 5.6k resistor. The 2.3k resistor, 10mA source, and 3.3k resistors are connected at node b. The 10mA source flows out of node b. The 10mA source, 3.3k resistor, and 5.6k resistor are connected at node d. The 10mA source flows into node d. The 2.3k resistor and 5.6k resistors are connected at node e. Voltage "Vout,2" drops over the 5.6k resistor between nodes d and e.</shortdescription>
 						<latex-image>
@@ -501,7 +501,7 @@
 				<p>Calculate <m>V_X</m> for the circuit shown in <xref ref="sourceTransformationFigure1" /> using source transformation. The unit of the proportionality constant of the dependent source is A/V.</p>
 
 				<figure xml:id="sourceTransformationFigure1">
-  					<caption>Circuit to be solved with source transformation.</caption>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-sourceTransformationFigure1">
     					<shortdescription>Circuit with three meshes and three nodes containing a 3mA source, 0.005Vx VCCS, 2k resistor, 3k resistor, and 1k resistor. The 3mA source, 2k resistor, and 3k resistor connect at node A. The 3mA source flows into node A. The 3k resistor, 1k resistor, and 0.005Vx source connect at node B. The 0.005Vx source flows out of node B. The 3mA source, 2k resistor, 1k resistor, and 0.005Vx source connect at node C. The 3mA source flows out of node C. The 0.005Vx source flows into node C. Vx is measured over the 2k resistor with high-potential at node A and low potential at node C.</shortdescription>
 						<latex-image>
@@ -522,7 +522,7 @@
 				<p>While it's possible to transform the independent source, it does not yield the most intuitive calculation of <m>V_X</m>. This is because the 2<nbsp />k&#8486; resistor placement would change, which means that <m>V_X</m> would no longer be dropped over the 2<nbsp />k&#8486; resistor. To make this more clear, <xref ref="superpositionExampleIndependentSource" /> shows how the placement of <m>V_X</m> would not be changed, while the placement of the resistor does change, if the independent source is transformed to a voltage source.</p>
 
 				<figure xml:id="superpositionExampleIndependentSource">
-  					<caption>The placement of <m>V_X</m> does not change if the resistor is moved after transforming the independent source.</caption>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-superpositionExampleIndependentSource">
     					<shortdescription>Circuit with two meshes and four nodes containing a 6V source, 2k resistor, 3k resistor, 1k resistor, and 0.005Vx VCCS. The high-potential end of the 6V source and 2k connect at node A. The 2k and 3k connect at node B. The 3k, 1k, and 0.005Vx VCCS connect at node C. The VCCS flows out of node C. The low-potential end of the 6V source, 0.005VX VCCS, and 1k resistor connect at node D. The VCCS flows into node C. Vx is measured from node B to node D.</shortdescription>
 						<latex-image>
@@ -552,7 +552,7 @@
 				<p>The updated circuit is shown in <xref ref="sourceTransformationFigure2" />.</p>
 
 				<figure xml:id="sourceTransformationFigure2">
-  					<caption>Circuit after the dependent source is transformed.</caption>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-sourceTransformationFigure2">
     					<shortdescription>Circuit with two meshes and four nodes containing a 3mA source, 2k resistor, 3k resistor, 1k resistor, and 5Vx VCVS. The 3mA source, 2k resistor, and 3k resistor connect at node A. The 3mA source flows into node A. The 3k resistor and 1k resistor connect at node B. The 1k resistor and low-potential end of the 5Vx source connect at node C. The 3mA source, 2k resistor, and high-potential end of the 5Vx source connect at node D. Vx is measured over the 2k resistor with high-potential at node A and low-potential at node D.</shortdescription>
 						<latex-image>
@@ -572,7 +572,7 @@
 				<p>The 3<nbsp />k&#8486; and 1<nbsp />k&#8486; resistors can be combined in series. This is shown in <xref ref="sourceTransformationFigure3" />.</p>
 
 				<figure xml:id="sourceTransformationFigure3">
-  					<caption>Reduced circuit after the dependent source is transformed.</caption>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-sourceTransformationFigure3">
     					<shortdescription>Circuit with two meshes and three nodes containing a 3mA source, 2k resistor, 4k resistor, and 5Vx VCVS. The 3mA source, 2k resistor, and 4k resistor connect at node A. The 3mA source flows into node A. The 4k resistor and low-potential end of the 5Vx VCVS connect at node B. The 3mA source, 2k resistor, and high-potential end of the 5Vx VCVS connect at node C. Vx is measured over the 2k resistor with high-potential at node A and low-potential at node C.</shortdescription>
 						<latex-image>
@@ -620,7 +620,7 @@
 				<p>The re-drawn circuit is shown in <xref ref="sourceTransformationFigure4" />.</p>
 
 				<figure xml:id="sourceTransformationFigure4">
-  					<caption>Circuit after the dependent source is transformed a second time.</caption>
+  					<caption></caption>
   					<image width="90%" xml:id="ch3-sourceTransformationFigure4">
     					<shortdescription>Circuit with three meshes and two nodes containing a 3mA source, 2k resistor, 4k resistor, and 0.00125Vx VCCS. The 3mA source, 2k, 4k, and VCCS connect at node A. The 3mA source flows into node A. The VCCS flows out of node A. The 3mA source, 2k, 4k, and VCCS connect at node B. The 3mA source flows out of node B. The VCCS flows into node B. Vx is measured over the 2k resistor with high-potential at node A and low-potential at node B.</shortdescription>
 						<latex-image>
@@ -639,7 +639,7 @@
 				<p>All circuit elements are in parallel. The equivalent resistance consists of the parallel combination of the two resistors. The equivalent source consists of the sum of the two current sources. Note that the unit of the dependent source will have to be converted to mA/V before summing it with the independent source. The equivalent circuit is shown in <xref ref="sourceTransformationFigure5" />.</p>
 
 				<figure xml:id="sourceTransformationFigure5">
-  					<caption>Equivalent circuit after the dependent source is transformed a second time.</caption>
+  					<caption></caption>
   					<image width="50%" xml:id="ch3-sourceTransformationFigure5">
     					<shortdescription>Circuit with one mesh and two nodes containing a (3-1.25Vx) current source and 1.33k resistor. Both elements connect one end at node A and the other at node B. The current source flows into node A and out of node B. Vx is measured over the 1.33k resistor with high-potential at node A and low-potential at node B.</shortdescription>
 						<latex-image>
@@ -776,10 +776,10 @@
 				<title>Calculating open-circuit voltage</title>
 
 				<statement>
-					<p>Calculate <m>V_{OC}</m> for the circuit shown in <xref ref="openCircuitVoltageFigure1" />.</p>
+					<p>Calculate <m>V_{OC}</m> for the circuit shown below.</p>
 
-					<figure xml:id="openCircuitVoltageFigure1">
-  						<caption>Circuit used to calculate open-circuit voltage.</caption>
+					<figure>
+  						<caption>C</caption>
   						<image width="80%" xml:id="ch3-openCircuitVoltageFigure1">
     						<shortdescription>Circuit with two meshes and four nodes containing a 5V source, 3k resistor, 4k resistor, 2k resistor, and 0.8Vx VCVS. The high-potential end of the 5V source and 3k resistor connect at node A. The 3k resistor, 4k resistor, and 2k resistor connect at node B. The 2k resistor and high-potential end of the 0.8Vx VCVS connect at node C. The low-potential end of the 5V source, 4k resistor, and low-potential end of the 0.8Vx VCVS connect at node D. Voltage Vx drops over the 4k resistor from node B to node D. Voltage Voc is measured from node B to node D.</shortdescription>
 							<latex-image>
@@ -808,10 +808,10 @@
 						</md>
 					</p>
 
-					<p>The transformed circuit is shown in <xref ref="openCircuitVoltageFigure2" />.</p>
+					<p>The transformed circuit is shown below.</p>
 
-					<figure xml:id="openCircuitVoltageFigure2">
-  						<caption>Equivalent circuit after both sources are transformed.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-openCircuitVoltageFigure2">
     						<shortdescription>Circuit with 4 meshes and two nodes containing a 5/3mA source, 3k resistor, 4k resistor, 2k resistor, and 0.4Vx VCCS. All circuit elements are in parallel with each other. Both current sources flow into node A and out of node B. Voltage Vx drops over the 4k resistor from node A to node B. Voltage Voc is measured from node A to node B.</shortdescription>
 							<latex-image>
@@ -829,10 +829,10 @@
   						</image>
 					</figure>
 
-					<p>Because all circuit elements are in parallel, a reduced equivalent circuit can be derived. All three resistors can be combined in parallel. The two current sources can be summed to find an equivalent source. The equivalent circuit is shown in <xref ref="openCircuitVoltageFigure3" />.</p>
+					<p>Because all circuit elements are in parallel, a reduced equivalent circuit can be derived. All three resistors can be combined in parallel. The two current sources can be summed to find an equivalent source. The equivalent circuit is shown below.</p>
 
-					<figure xml:id="openCircuitVoltageFigure3">
-  						<caption>Reduced equivalent circuit after both sources are transformed.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="70%" xml:id="ch3-openCircuitVoltageFigure3">
     						<shortdescription>Circuit with one mesh and two nodes containing a (3/2+0.4Vx)mA source and a 0.92k resistor. Both circuit elements are in parallel with each other. The source flows into node A and out of node B. Voltage Vx drops over the 0.92k resistor from node A to node B. Voltage Voc is measured from node A to node B.</shortdescription>
 							<latex-image>
@@ -967,10 +967,10 @@
 				<title>Calculating short-circuit current</title>
 
 				<statement>
-					<p>Calculate <m>I_{SC}</m> as depicted in <xref ref="shortCircuitCurrentExample1" />.</p>
+					<p>Calculate <m>I_{SC}</m> as depicted below.</p>
 
-					<figure xml:id="shortCircuitCurrentExample1">
-  						<caption>Circuit used to calculate short-circuit current.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="50%" xml:id="ch3-shortCircuitCurrentExample1">
     						<shortdescription>Circuit with two meshes and three nodes containing a 20V source, 5k resistor, 2k resistor, and 5V source. The high-potential end of the 20V source and the 5k resistor connect at node A. The 5k resistor, 2k resistor, and low-potential end of both sources connect at node B. The 2k resistor and high-potential end of the 5V source connect at node C. Current ISC is defined as flowing through node B, from the intersection of the 5k and 2k resistors to the low-potential ends of the two sources.</shortdescription>
 							<latex-image>
@@ -1042,10 +1042,10 @@
 			<title>Th&#233;venin equivalent circuit</title>
 
 			<statement>
-				<p>Derive the Th&#233;venin equivalent circuit between nodes a and b for the circuit shown in <xref ref="theveninExample1" />.</p>
+				<p>Derive the Th&#233;venin equivalent circuit between nodes a and b for the circuit shown below.</p>
 
-				<figure xml:id="theveninExample1">
-  					<caption>Circuit to be converted to a Th&#233;venin equivalent circuit.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="70%" xml:id="ch3-theveninExample1">
     					<shortdescription>Circuit with 3 meshes and 4 nodes containing a 12V source, 21k resistor, 20k resistor, 28k resistor, 8k resistor, and 15k resistor. The 20k, 8k, and 15k resistors connect at node A. The 15k, 28k, and low-potential end of the 12V source connect at node B. The high-potential end of the 12V source, 20k, and 21k resistors connect at node C. The 21k, 8k, and 28k resistors connect at node D.</shortdescription>
 						<latex-image>
@@ -1067,10 +1067,10 @@
 
 				<p>While it's possible to perform an analysis method such as KCL/KVL or mesh analysis to calculate the Th&#233;venin equivalent voltage, it's easiest to reduce the circuit using a wye-delta transform. This will make calculating both <m>V_{TH}</m> and <m>R_{TH}</m> easier.</p>
 
-				<p>The equivalent circuit is shown in <xref ref="theveninExample2" />.</p>
+				<p>The equivalent circuit is shown below.</p>
 
-				<figure xml:id="theveninExample2">
-  					<caption>Circuit after a wye-delta transform.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="70%" xml:id="ch3-theveninExample2">
     					<shortdescription>Circuit with 4 meshes and 3 nodes containing a 12V source, 20k, 25k, 122.5k, 46.67k, and 15k resistors. The 20k, 35k, 46.67k, and 15k resistors connect at node A. The 15k, 46.67k, 122.5k resistors and the low-potential end of the 12V source connect at node B. The high-potential end of the 12V source, 20k, 35k, and 122.5k resistors connect at node C.</shortdescription>
 						<latex-image>
@@ -1090,10 +1090,10 @@
   					</image>
 				</figure>
 
-				<p>Because the 122.5<nbsp />k&#8486; resistor is in parallel with the voltage source, its contribution to the circuit can be ignored. The 20<nbsp />k&#8486; and 35<nbsp />k&#8486; resistors can be combined in parallel. The 46.67<nbsp />k&#8486; and 15<nbsp />k&#8486; resistors can also be combined in parallel. The reduced circuit is shown in <xref ref="theveninExample3" />.</p>
+				<p>Because the 122.5<nbsp />k&#8486; resistor is in parallel with the voltage source, its contribution to the circuit can be ignored. The 20<nbsp />k&#8486; and 35<nbsp />k&#8486; resistors can be combined in parallel. The 46.67<nbsp />k&#8486; and 15<nbsp />k&#8486; resistors can also be combined in parallel. The reduced circuit is shown below.</p>
 
-				<figure xml:id="theveninExample3">
-  					<caption>Reduced circuit after a wye-delta transform.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="50%" xml:id="ch3-theveninExample3">
     					<shortdescription>Circuit with one mesh and three nodes containing a 12V source, 12.73k, and 11.35k resistors. The 12.73k and 11.35k resistors connect at node A. The low-potential end of the 12V source and 11.35k resistors connect at node B. The high-potential end of the 12V source and the 12.73k resistor connect at node C.</shortdescription>
 						<latex-image>
@@ -1126,10 +1126,10 @@
 					</md>
 				</p>
 
-				<p>The Th&#233;venin equivalent circuit is shown in <xref ref="theveninExample4" />.</p>
+				<p>The Th&#233;venin equivalent circuit is shown below.</p>
 
-				<figure xml:id="theveninExample4">
-  					<caption>Th&#233;venin equivalent circuit.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="40%" xml:id="ch3-theveninExample4">
     					<shortdescription>Circuit with zero meshes and three nodes containing a 5.66V source and 6k resistor. The 6k resistor connects at node A. The low-potential end of the 5.66V source connects at node B. The high-potential end of the 5.66V source connects to the 6k resistor at node C.</shortdescription>
 						<latex-image>
@@ -1149,10 +1149,10 @@
 			<title>Th&#233;venin equivalent circuit using the test source method</title>
 
 			<statement>
-				<p>Derive the Th&#233;venin equivalent circuit between nodes a and b for the circuit shown in <xref ref="theveninExampleDependent1" />.</p>
+				<p>Derive the Th&#233;venin equivalent circuit between nodes a and b for the circuit shown below.</p>
 
-				<figure xml:id="theveninExampleDependent1">
-  					<caption>Circuit with a dependent source to be converted to a Th&#233;venin equivalent circuit.</caption>
+				<figure>
+  					<caption></caption>
 					<image width="50%" xml:id="ch3-theveninExampleDependent1">
 						<shortdescription>Circuit with one mesh and three nodes consisting of a CCVS, resistor R, and unknown circuit element. The magnitude of the CCVS is rm*Ix. The low-potential end of the CCVS connects to R at node C. R connects to one end of the unknown circuit element at node A (node a of the Thevenin circuit). The other end of the unknown circuit element connects to the high-potential end of the CCVS at node B (node b of the Thevenin circuit.) Branch current Ix flows through the unknown circuit element from node A to node B.</shortdescription>
 						<latex-image>
@@ -1265,10 +1265,10 @@
 			<title>Norton equivalent circuit</title>
 
 			<statement>
-				<p>Derive the Norton equivalent circuit between nodes a and b for the circuit shown in <xref ref="nortonExampleFigure1" />.</p>
+				<p>Derive the Norton equivalent circuit between nodes a and b for the circuit shown below.</p>
 
-				<figure xml:id="nortonExampleFigure1">
-  					<caption>Circuit to be converted to a Norton equivalent circuit.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-nortonExampleFigure1">
     					<shortdescription>Circuit with 2 meshes and 5 nodes containing a 16V source, 4Ix CCCS, 4ohm, 12ohm, 5ohm, and 2ohm resistor. The 4ohm and 12ohm resistors connect at node A. The 5ohm resistor connects at node B. The high-potential end of the 16V source connects to the 4ohm resistor at node C. The 5ohm, 2ohm, and 4Ix CCCS connect at node D. The CCCS flows into node D. The low-potential end of the 16V source, 12ohm, 2ohm, and CCCS connect at node E. The CCCS flows out of node E. Ix is defined through the 12ohm resistor and flows out of node A and into node E.</shortdescription>
 						<latex-image>
@@ -1332,10 +1332,10 @@
 					</md>
 				</p>
 
-				<p>Now we must short terminals a and b to calculate the Norton equivalent current. The circuit diagram is shown in <xref ref="nortonExampleFigure2" />.</p>
+				<p>Now we must short terminals a and b to calculate the Norton equivalent current. The circuit diagram is shown below.</p>
 
-				<figure xml:id="nortonExampleFigure2">
-  					<caption>Circuit with terminals a and b shorted to calculate <m>I_N</m>.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-nortonExampleFigure2">
     					<shortdescription>Circuit with 3 meshes and 5 nodes containing a 16V source, 4Ix CCCS, 4ohm, 12ohm, 5ohm, and 2ohm resistor. The 4ohm, 12ohm, and 5ohm resistors connect at node A. The high-potential end of the 16V source connects to the 4ohm resistor at node C. The 5ohm, 2ohm, and 4Ix CCCS connect at node D. The CCCS flows into node D. The low-potential end of the 16V source, 12ohm, 2ohm, and CCCS connect at node E. The CCCS flows out of node E. Ix is defined through the 12ohm resistor and flows out of node A and into node E. In is defined through the 5ohm resistor and flows out of node A and into node D.</shortdescription>
 						<latex-image>
@@ -1403,10 +1403,10 @@
 					</md>
 				</p>
 
-				<p>The Norton equivalent circuit is shown in <xref ref="nortonExampleFigure3" />.</p>
+				<p>The Norton equivalent circuit is shown below.</p>
 
-				<figure xml:id="nortonExampleFigure3">
-  					<caption>Norton equivalent circuit.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="50%" xml:id="ch3-nortonExampleFigure3">
     					<shortdescription>Circuit with one mesh and two nodes containing a 0.5A source and 8ohm resistor. The source and resistor connect at node A. The source flows into node A. The source and resistor connect at node B. The source flows into node B.</shortdescription>
 						<latex-image>
@@ -1490,10 +1490,10 @@
 			<title>Maximum power transfer</title>
 
 			<statement>
-				<p>Calculate the value of the load resistor (<m>R_{LOAD}</m>) that is required for maximum power transfer given the circuit shown in <xref ref="maxPowerFigure1" />. Then, calculate the maximum power transferred to that load.</p>
+				<p>Calculate the value of the load resistor (<m>R_{LOAD}</m>) that is required for maximum power transfer given the circuit shown below. Then, calculate the maximum power transferred to that load.</p>
 
-				<figure xml:id="maxPowerFigure1">
-  					<caption>Circuit for calculating maximum power transfer.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-maxPowerFigure1">
     					<shortdescription>Circuit with 3 meshes and 4 nodes containing a 24V source, 4k resistor, 2Ix CCCS, 8k resistor, 2k resistor, and Rload resistor. The high-potential end of the 24V source connects to the 4k resistor at node A. The 4k resistor, 2Ix CCCS, and 8k resistor connect at node B. The CCCS flows into node B. The 8k, 2k, and Rload resistors connect at node C. The low-potential end of the 24V source, 2Ix CCCS, 2k, and Rload resistors connect at node D. The CCCS flows out of node D. Current Ix is defined through the 2k resistor and flows out of node C and into node D.</shortdescription>
 						<latex-image>
@@ -1513,10 +1513,10 @@
   					</image>
 				</figure>
 
-				<p>Convert the circuit to a Th&#233;venin equivalent circuit. Use source transformation on the 24<nbsp />V voltage source to convert it to a 6<nbsp />mA current source. The source transformed circuit is shown in <xref ref="maxPowerFigure2" />.</p>
+				<p>Convert the circuit to a Th&#233;venin equivalent circuit. Use source transformation on the 24<nbsp />V voltage source to convert it to a 6<nbsp />mA current source. The source transformed circuit is shown below.</p>
 
-				<figure xml:id="maxPowerFigure2">
-  					<caption>Source transformed circuit.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-maxPowerFigure2">
     					<shortdescription>Circuit with 3 meshes and 3 nodes containing a 6mA source, 4k resistor, 2Ix CCCS, 8k resistor, and 2k resistor. The 6mA source, 4k resistor, 2Ix CCCS, and 8k resistor connect at node A. Both current sources flow into node A. The 8k and 2k resistors connect at node B. The 6mA source, 4k resistor, 2Ix CCCS, and 2k resistor connect at node C. Both current sources flow out of node C. </shortdescription>
 						<latex-image>
@@ -1533,10 +1533,10 @@
   					</image>
 				</figure>
 
-				<p>Because the two current sources are in parallel, they can be combined into an equivalent source. The updated circuit is shown in <xref ref="maxPowerFigure3" />.</p>
+				<p>Because the two current sources are in parallel, they can be combined into an equivalent source. The updated circuit is shown below.</p>
 
-				<figure xml:id="maxPowerFigure3">
-  					<caption>Reduced source transformed circuit.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-maxPowerFigure3">
     					<shortdescription>Circuit with 2 meshes and 3 nodes containing a (6mA + 2Ix) current source, 4k resistor, 8k resistor, and 2k resistor. The current source, 4k resistor, and 8k resistor connect at node A. The current source flows into node A. The 8k and 2k resistors connect at node B. The current source, 4k, and 2k resistors connect at node C. The current source flows out of node C. Ix is defined through Ix and flows from node B to node C. Vth drops over the 2k resistor and drops from node B to node C.</shortdescription>
 						<latex-image>
@@ -1582,10 +1582,10 @@
 					</md>
 				</p>
 
-				<p>Calculate the short circuit current. Because the resistor with the controlling current is shorted, the controlling current is 0<nbsp />mA (no current will flow through the 2<nbsp />k&#8486; resistor when it can travel through a zero-resistance short instead), and the dependent source is effectively deactivated. The circuit diagram depicting this is shown in <xref ref="maxPowerFigure4" />.</p>
+				<p>Calculate the short circuit current. Because the resistor with the controlling current is shorted, the controlling current is 0<nbsp />mA (no current will flow through the 2<nbsp />k&#8486; resistor when it can travel through a zero-resistance short instead), and the dependent source is effectively deactivated. The circuit diagram depicting this is shown below.</p>
 
-				<figure xml:id="maxPowerFigure4">
-  					<caption>Circuit with load short-circuited.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="80%" xml:id="ch3-maxPowerFigure4">
     					<shortdescription>Circuit with 3 meshes and 2 nodes containing a 6mA source, 4k resistor, 0mA CCCS, and 8k resistor. The 6mA source, 4k resistor, CCCS, and 8k resistor connect at node A. Both current sources flow into node A. All circuit elements also connect at node B. Both current sources flow out of node B. Current Isc is defined through the 8k resistor and flows from node A to node B.</shortdescription>
 						<latex-image>
@@ -1602,10 +1602,10 @@
   					</image>
 				</figure>
 
-				<p>This circuit reduces to the one shown in <xref ref="maxPowerFigure5" />.</p>
+				<p>This circuit reduces to the one shown below.</p>
 
-				<figure xml:id="maxPowerFigure5">
-  					<caption>Reduced circuit with load short-circuited.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="60%" xml:id="ch3-maxPowerFigure5">
     					<shortdescription>Circuit with 2 meshes and 2 nodes containing a 6mA source, 4k resistor, and 8k resistor. The 6mA source, 4k resistor, and 8k resistor connect at node A. The current source flows into node A. All circuit elements also connect at node B. The current source flows out of node B. Current Isc is defined through the 8k resistor and flows from node A to node B.</shortdescription>
 						<latex-image>
@@ -1742,10 +1742,10 @@
 				</answer>
 
 				<solution>
-					<p>Draw the circuit with only the voltage source activated.</p>
+					<p>Draw the circuit with only the voltage source activated. Deactivate the current source by replacing it with an open.</p>
 
 					<figure>
-  						<caption>Circuit with only the voltage source activated.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit31figans1">
     						<shortdescription>Circuit with 1 mesh and 3 nodes containing a 13V source, 390ohm resistor, and 560ohm resistor. The high-potential end of the 13V source and 390ohm resistor connect at node A. The 390ohm and 560ohm resistors connect at node B. The low-potential end of the 13V source and 560ohm resistors connect at node C. Voltage Vx1 is defined over the 560ohm resistor and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -1768,10 +1768,10 @@
 						</md>
 					</p>
 
-					<p>Draw the circuit with only the current source activated.</p>
+					<p>Draw the circuit with only the current source activated. Deactivate the voltage source by replacing it with a short.</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch3-circuit31figans2">
     						<shortdescription>Circuit with 2 meshes and 2 nodes containing a 390ohm resistor, 560ohm resistor, and 22mA source. The 390ohm, 560ohm, and 22mA source connect at node A. The 22mA source flows into node A. The 390ohm, 560ohm, and 22mA source connect at node B. The 22mA source flows out of node B. Voltage Vx2 is defined over the 560ohm resistor and drops from node B to node A.</shortdescription>
 							<latex-image>
@@ -1842,10 +1842,10 @@
 				</answer>
 
 				<solution>
-					<p>Draw the circuit with only the voltage source activated.</p>
+					<p>Draw the circuit with only the voltage source activated. Deactivate the current source by replacing it with an open.</p>
 
 					<figure>
-  						<caption>Circuit with only the voltage source activated.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit32figans1">
     						<shortdescription>Circuit with 1 mesh and 6 nodes containing a 20V source, 100ohm resistor, 400ohm resistor, 200ohm resistor, 600ohm resistor, and 700ohm resistor. The high-potential end of the 20V source and 100ohm resistor connect at node A. The 100ohm and 400ohm resistors connect at node B. The 400ohm and 200ohm resistors connect at node C. The 200ohm and 600ohm resistors connect at node D. The 600ohm and 700ohm resistors connect at node E. The 700ohm resistor and low-potential end of the 20V source connect at node F. Vx1 is defined over the 700ohm resistor and drops from node F to node E.</shortdescription>
 							<latex-image>
@@ -1864,7 +1864,7 @@
 					<p>Combine all resistors <em>except for the one that drops <m>V_X</m></em> in series and re-draw (this step can be skipped if you note that all resistors are in series and the voltage divider rule can be applied without combining any resistors).</p>
 
 					<figure>
-  						<caption>Reduced circuit with only the voltage source activated.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit32figans2">
     						<shortdescription>Circuit with 1 mesh and 3 nodes containing a 20V source, 1300ohm resistor, and 700ohm resistor. The high-potential end of the 20V source and 1300ohm resistor connect at node A. The 1300ohm resistor and 700ohm resistor connect at node B. The 700ohm resistor and low-potential end of the 20V source connect at node C. Voltage Vx1 is defined over the 700ohm resistor and drops from node C to node B.</shortdescription>
 							<latex-image>
@@ -1887,10 +1887,10 @@
 						</md>
 					</p>
 
-					<p>Draw the circuit with only the current source activated.</p>
+					<p>Draw the circuit with only the current source activated. Deactivate the voltage source by replacing it with a short.</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit32figans3">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing a 100ohm resistor, 400ohm resistor, 24mA source, 200ohm resistor, 600ohm resistor, and 700ohm resistor. The 100ohm resistor and 700ohm resistor connect at node A. The 100ohm, 400ohm, and 24mA source connect at node B. The 24mA source flows into node B. The 400ohm, 24mA source, and 200ohm connect at node C. The 24mA source flows out of node C. The 200ohm and 600ohm resistors connect at node D. The 600ohm and 700ohm resistors connect at node E. Voltage Vx is defined over the 700ohm resistor and drops from node A to node E.</shortdescription>
 							<latex-image>
@@ -1912,7 +1912,7 @@
 					<p>Combine resistors in series <em>except for the one that drops <m>V_X</m></em> and re-draw. (This means the 100<nbsp />&#8486;, 200<nbsp />&#8486;, and 600<nbsp />&#8486; resistors will be combined into a single equivalent resistance of 900<nbsp />&#8486;.)</p>
 
 					<figure>
-  						<caption>Reduced circuit with only the current source activated.</caption>
+  						<caption></caption>
   						<image width="30%" xml:id="ch3-circuit32figans4">
     						<shortdescription>Circuit with 2 meshes and 3 nodes containing a 900ohm resistor, 400ohm resistor, 24mA source, and 700ohm resistor. The 400ohm resistor, 700ohm resistor, and 24mA source connect at node A. The 24mA source flows into node A. The 400ohm, 24mA source, and 900ohm connect at node B. The 24mA source flows out of node B. The 900ohm and 700ohm resistors connect at node C. Voltage Vx is defined over the 700ohm resistor and drops from node A to node C.</shortdescription>
 							<latex-image>
@@ -1993,10 +1993,10 @@
 				</answer>
 
 				<solution>
-					<p>Draw the circuit with only the current source activated.</p>
+					<p>Draw the circuit with only the current source activated. Deactivate the voltage sources by replacing them with shorts.</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit33figans1">
     						<shortdescription>Circuit with 3 meshes and 3 nodes containing a 6mA source, 18k resistor, 12k resistor, 1k resistor, and 10k resistor. The 6mA source, 18k resistor, 12k resistor, and 1k resistor connect at node A. The 6mA source flows into node A. The 1k resistor and 10k resistor connect at node B. The 10k resistor, 12k resistor, 18k resistor, and 6mA source connect at node C. The 6mA source flows out of node C. Current Ix1 is defined through the 10k resistor and flows out of node B and into node C.</shortdescription>
 							<latex-image>
@@ -2024,10 +2024,10 @@
 						</md>
 					</p>
 
-					<p>Draw the circuit with only the 24<nbsp />V source activated.</p>
+					<p>Draw the circuit with only the 24<nbsp />V source activated. Deactivate the current source by replacing it with an open. Deactivate the voltage source by replacing it with a short.</p>
 
 					<figure>
-  						<caption>Circuit with only the 24<nbsp />V source activated.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch3-circuit33figans2">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing an 18k resistor, 12k resistor, 24V source, 1k resistor, and 10k resistor. The 18k resistor, 12k resistor, and l1k resistor connect at node A. The 12k resistor and high-potential end of the 24V source connect at node B. The 1k resistor and 10k resistor connect at node C. The 10k resistor, low-potential end of the 24V source, and 18k resistor connect at node D. Current Ix2 is defined through the 10k resistor and flows out of node C and into node D.</shortdescription>
 							<latex-image>
@@ -2047,7 +2047,7 @@
 					<p>Use the voltage divider rule for a two-mesh circuit, as demonstrated in <xref ref="ch2-voltagedivider-twomesh-example" />, to calculate the voltage dropped over the 10<nbsp />k&#8486; resistor. (It's also possible to perform a source transformation and then use the current divider rule to calculate <m>I_{X2}</m>.) The circuit is re-drawn below to make it more clear how the circuit corresponds to the one shown in <xref ref="ch2-voltagedivider-twomesh-example" />.</p>
 
 					<figure>
-  						<caption>Rearranged circuit with only the 24<nbsp />V source activated.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch3-circuit33figans2re">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing an 18k resistor, 12k resistor, 24V source, 1k resistor, and 10k resistor. The 12k resistor and high-potential end of the 24V source connect at node A. The 18k resistor, 12k resistor, and 1k resistor connect at node B. The 1k resistor and 10k resistor connect at node C. The 10k resistor, low-potential end of the 24V source, and 18k resistor connect at node D. Current Ix2 is defined through the 10k resistor and flows out of node C and into node D. Voltage V18 is defined over the 18k resistor and drops from node B to node D.</shortdescription>
 							<latex-image>
@@ -2083,10 +2083,10 @@
 						</md>
 					</p>
 
-					<p>Draw the circuit with only the 5<nbsp />V source activated.</p>
+					<p>Draw the circuit with only the 5<nbsp />V source activated. Deactivate the current source by replacing it with an open. Deactivate the voltage source by replacing it with a short.</p>
 
 					<figure>
-  						<caption>Circuit with only the 5<nbsp />V source activated.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit33figans3">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing an 18k resistor, 12k resistor, 5V source, 1k resistor, and 10k resistor. The 18k resistor, 12k resistor, and low-potential end of the 5V source connect at node A. The high-potential end of the 5V source and 1k resistor connect at node B. The 1k resistor and 10k resistor connect at node C. The 10k resistor, 12k resistor, and 18k resistor connect at node D. Current Ix3 is defined through the 10k resistor and flows out of node C and into node D.</shortdescription>
 							<latex-image>
@@ -2106,7 +2106,7 @@
 					<p>The 12<nbsp />k&#8486; resistor is in parallel with the 18<nbsp />k&#8486; resistor, so they can be combined. That equivalent resistance of 7.2<nbsp />k&#8486; can be combined in series with the 1<nbsp />k&#8486; resistor and the 10<nbsp />k&#8486; resistor. Re-draw the reduced circuit.</p>
 
 					<figure>
-  						<caption>Reduced circuit with only the 5<nbsp />V source activated.</caption>
+  						<caption></caption>
   						<image width="30%" xml:id="ch3-circuit33figans4">
     						<shortdescription>Circuit with 1 mesh and 2 nodes containing an 18.2k resistor and 5V source. The 18.2k resistor and low-potential end of the 5V source connect at node A. The high-potential end of the 5V source and 18.2k resistor connect at node B. Current Ix3 is defined through the 18.2k resistor and flows out of node B and into node A.</shortdescription>
 							<latex-image>
@@ -2173,10 +2173,10 @@
 				</answer>
 
 				<solution>
-					<p>Draw the circuit with only the voltage source activated.</p>
+					<p>Draw the circuit with only the voltage source activated. Deactivate the current source by replacing it with an open. The dependent source cannot be removed from the circuit.</p>
 
 					<figure>
-  						<caption>Circuit with only the voltage source activated.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit34figans1">
     						<shortdescription>Circuit with 4 meshes and 4 nodes containing a 40V source, 10ohm resistor (10A), 0.3Vx1 VCCS, 10ohm resistor (10B), 10ohm resistor (10C), and 10ohm resistor (10D). The high-potential end of the 40V source and 10ohm resistor (10A) connect at node A. The 10ohm resistor (10A), 0.3Vx1 VCCS, 10ohm resistor (10B), and 10ohm resistor (10C) connect at node B. The VCCS flows into node B. The 10ohm resistor (10C) and 10ohm resistor (10D) connect at node C. The low-potential end of the 40V source, 0.3Vx1 VCCS, 10ohm resistor (10B), and 10ohm resistor (10D) connect at node D. The VCCS flows out of node D. Voltage Vx1 is defined as dropping over the 10ohm resistor (10D) and drops from node C to node D.</shortdescription>
 							<latex-image>
@@ -2199,7 +2199,7 @@
 					<p>Convert the voltage source to a current source and re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit with only the voltage source activated after a source transformation.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit34figans2">
     						<shortdescription>Circuit with 4 meshes and 3 nodes containing a 4A source, 10ohm resistor (10A), 0.3Vx1 VCCS, 10ohm resistor (10B), 10ohm resistor (10C), and 10ohm resistor (10D). The 4A source, 10ohm resistor (10A), 0.3Vx1 VCCS, 10ohm resistor (10B), and 10ohm resistor (10C) connect at node A. The 4A source and VCCS flow into node A. The 10ohm resistor (10C) and 10ohm resistor (10D) connect at node B. The 4A source, 10ohm resistor (10A), 0.3Vx1 VCCS, 10ohm resistor (10B), and 10ohm resistor (10D) connect at node C. The 4A source and VCCS flow out of node C. Voltage Vx1 is defined as dropping over the 10ohm resistor (10D) and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -2220,7 +2220,7 @@
 					<p>The two current sources are in parallel and can be combined. Two of the 10<nbsp />&#8486; resistors are in parallel and can be combined. The circuit is re-drawn below.</p>
 
 					<figure>
-  						<caption>Reduced circuit with only the voltage source activated after a source transformation.</caption>
+  						<caption></caption>
   						<image width="70%" xml:id="ch3-circuit34figans3">
     						<shortdescription>Circuit with 2 meshes and 3 nodes containing a (4 + 0.3Vx1)A current source, 5ohm resistor, 10ohm resistor (10C), and 10ohm resistor (10D). The current source, 5ohm resistor, and 10ohm resistor (10C) connect at node A. The current source flows into node A. The 10ohm resistor (10C) and 10ohm resistor (10D) connect at node B. The current source, 5ohm resistor, and 10ohm resistor (10D) connect at node C. The current source flows out of node C. Voltage Vx1 is defined as dropping over the 10ohm resistor (10D) and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -2246,7 +2246,7 @@
 					</p>
 
 					<figure>
-  						<caption>Circuit with only the voltage source activated after the second source transformation.</caption>
+  						<caption></caption>
   						<image width="70%" xml:id="ch3-circuit34figans4">
     						<shortdescription>Circuit with 1 mesh and 4 nodes containing a (20 + 1.5Vx1)V voltage source, 5ohm resistor, 10ohm resistor (10C), and 10ohm resistor (10D). The high-potential end of the voltage source and 5ohm resistor connect at node A. The 5ohm resistor and 10ohm resistor (10C) connect at node B. The 10ohm resistor (10C) and 10ohm resistor (10D) connect at node C. The low-potential end of the voltage source and 10ohm resistor (10D) connect at node D. Voltage Vx1 is defined as dropping over the 10ohm resistor (10D) and drops from node C to node D.</shortdescription>
 							<latex-image>
@@ -2274,10 +2274,10 @@
 						</md>
 					</p>
 
-					<p>Draw the circuit with only the current source activated.</p>
+					<p>Draw the circuit with only the current source activated. Deactivate the voltage source by replacing it with a short. The dependent source cannot be removed from the circuit.</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit34figans5">
     						<shortdescription>Circuit with 4 meshes and 3 nodes containing a 10ohm resistor (10A), 0.3Vx2 VCCS, 10ohm resistor (10B), 10ohm resistor (10C), 10ohm resistor (10D), and 2A source. The 10ohm resistor (10A), 0.3Vx2 VCCS, 10ohm resistor (10B), 10ohm resistor (10D), and 2A source connect at node A. Both current sources flow out of node A. The 10ohm resistor (10A), 0.3Vx2 VCCS, 10ohm resistor (10B), and 10ohm resistor (10C) connect at node B. The VCCS flows into node B. The 10ohm resistor (10C), 10ohm resistor (10D), and 2A source connect at node C. The 2A source flows into node C.  Voltage Vx2 is defined as dropping over the 10ohm resistor (10D) and drops from node C to node A.</shortdescription>
 							<latex-image>
@@ -2300,7 +2300,7 @@
 					<p>Combine the two 10<nbsp />&#8486; resistors that are in parallel.</p>
 
 					<figure>
-  						<caption>Reduced circuit with only the current source activated.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit34figans6">
     						<shortdescription>Circuit with 3 meshes and 3 nodes containing a 0.3Vx2 VCCS, 5ohm resistor, 10ohm resistor (10C), 10ohm resistor (10D), and 2A source. The 0.3Vx2 VCCS, 5ohm resistor, and 10ohm resistor (10C) connect at node A. The VCCS flows into node A. The 10ohm resistor (10C), 10ohm resistor (10D), and 2A source connect at node B. The 2A source flows into node B. The VCCS, 5ohm resistor, 10ohm resistor (10D), and 2A source connect at node C. Both current sources flow out of node C. Voltage Vx2 is defined as dropping over the 10ohm resistor (10D) and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -2321,7 +2321,7 @@
 					<p>Source transformation of the dependent source will be a useful method to solve this circuit, for the same reason that was explained above. (Source transformation on the independent source would not be helpful because it would modify the position of the resistor in parallel with the source while not modifying the placement of <m>V_{X2}</m>.) The source transformed circuit is shown below.</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated after a source transformation.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit34figans7">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing a 1.5Vx2 VCVS, 5ohm resistor, 10ohm resistor (10C), 10ohm resistor (10D), and 2A source. The high-potential end of the 1.5Vx2 VCVS and 5ohm resistor connect at node A. The 5ohm resistor and 10ohm resistor (10C) connect at node B. The 10ohm resistor (10C), 10ohm resistor (10D), and 2A source connect at node C. The 2A source flows into node C. The low-potential end of the VCVS, 10ohm resistor (10D), and 2A source connect at node D. The 2A source flows out of node D. Voltage Vx2 is defined as dropping over the 10ohm resistor (10D) and drops from node C to node D.</shortdescription>
 							<latex-image>
@@ -2341,7 +2341,7 @@
 					<p>Combine the two series resistors.</p>
 
 					<figure>
-  						<caption>Reduced circuit with only the current source activated after a source transformation.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch3-circuit34figans8">
     						<shortdescription>Circuit with 2 meshes and 3 nodes containing a 1.5Vx2 VCVS, 15ohm resistor, 10ohm resistor (10D), and 2A source. The high-potential end of the 1.5Vx2 VCVS and 15ohm resistor connect at node A. The 15ohm resistor, 10ohm resistor (10D), and 2A source connect at node B. The 2A source flows into node B. The low-potential end of the VCVS, 10ohm resistor (10D), and 2A source connect at node C. The 2A source flows out of node C. Voltage Vx2 is defined as dropping over the 10ohm resistor (10D) and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -2360,7 +2360,7 @@
 					<p>Perform another source transformation on the dependent source.</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated after the second source transformation.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit34figans9">
     						<shortdescription>Circuit with 3 meshes and 2 nodes containing a 0.1Vx2 VCCS, 15ohm resistor, 10ohm resistor (10D), and 2A source. The VCCS, 15ohm resistor, 10ohm resistor (10D), and 2A source connect at node A. Both current sources flow into node A. The VCCS, 15ohm resistor, 10ohm resistor (10D), and 2A source connect at node B. Both current sources flow out of node B. Voltage Vx2 is defined as dropping over the 10ohm resistor (10D) and drops from node A to node B.</shortdescription>
 							<latex-image>
@@ -2379,7 +2379,7 @@
 					<p>Because the two current sources are in parallel, they can be combined into an equivalent source. The two resistors can also be combined in parallel.</p>
 
 					<figure>
-  						<caption>Reduced circuit with only the current source activated after the second source transformation.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch3-circuit34figans10">
     						<shortdescription>Circuit with 1 mesh and 2 nodes containing a (2+0.1Vx2)A VCCS and 6ohm resistor. The VCCS and 6ohm resistor connect at node A. The VCCS flows into node A. The VCCS and 6ohm resistor connect at node B. The VCCS flows out of node B. Voltage Vx2 is defined as dropping over the 6ohm resistor and drops from node A to node B.</shortdescription>
 							<latex-image>
@@ -2449,10 +2449,10 @@
 				</answer>
 
 				<solution>
-					<p>Draw the circuit with only the current source activated.</p>
+					<p>Draw the circuit with only the current source activated. Deactivate the voltage source by replacing it with a short. The dependent source cannot be removed from the circuit.</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit35figans1">
     						<shortdescription>Circuit with 4 meshes and 4 nodes containing a 12mA source, 1k resistor (1A), 1k resistor (1B), 1k resistor (1C), 1k resistor (1D), 1k resistor (1E), and 0.4Ix1 CCCS. The 12mA source, 1k resistor (1A), and 1k resistor (1B) connect at node A. The 12mA source flows into node A. The 1k resistor (1B), 1k resistor (1C), and 1k resistor (1D) connect at node B. The 1k resistor (1D), 1k resistor (1E), and CCCS connect at node C. The CCCS flows into node C. The 12mA source, 1k resistor (1A), 1k resistor (1C), 1k resistor (1E), and CCCS connect at node D. Both current sources flow out of node D. Current Ix1 is defined through the 1k resistor (1A) and flows from node A to node D. Voltage Vx1 is defined over the 1k resistor (1D) and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -2475,7 +2475,7 @@
 					<p>Because resistors adjacent to each source contain either a voltage drop or current of interest, source transformation is not a useful tool to solve this circuit. Instead, mesh analysis will be used. The circuit is re-drawn with each mesh current defined. (Note that some component values have been hidden so that the mesh labels can be read.)</p>
 
 					<figure>
-  						<caption>Circuit with only the current source activated, with each mesh current defined.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit35figans2">
     						<shortdescription>Same figure as previous. counter-clockwise mesh currents are defined. Mesh current 12mA flows through the 12mA source and 1k resistor (1A) through nodes D, A, and D. Mesh current Ia flows through the 1k resistor (1A), 1k resistor (1B), and 1k resistor (1C) through nodes D, A, B, and D. Mesh current Ib flows through the 1k resistor (1C), 1k resistor (1D), and 1k resistor (1E) through nodes D, B, C, and D. Mesh current -0.4Ix1 flows through the 1k resistor (1E) and 0.4Ix1 CCCS through nodes D, C, and D.</shortdescription>
 							<latex-image>
@@ -2542,15 +2542,15 @@
 
 					<p>
 						<md>
-							<mrow>V_X \amp= (0.315~\textrm{mA})(1~\textrm{k}\Omega)</mrow>
+							<mrow>V_{X1} \amp= (0.315~\textrm{mA})(1~\textrm{k}\Omega)</mrow>
 							<mrow>\amp= 0.315~\textrm{V}</mrow>
 						</md>
 					</p>
 
-					<p>Draw the circuit with only the voltage source activated.</p>
+					<p>Draw the circuit with only the voltage source activated. Deactivate the current source by replacing it with an open. The dependent source cannot be removed from the circuit.</p>
 
 					<figure>
-  						<caption>Circuit with only the voltage source activated.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit35figans3">
     						<shortdescription>Circuit with 3 meshes and 5 nodes containing a 1k resistor (1A), 1k resistor (1B), 1k resistor (1C), 18V source, 1k resistor (1D), 1k resistor (1E), and 0.4Ix2 CCCS. The 1k resistor (1A) and 1k resistor (1B) connect at node A. The 1k resistor (1B), 1k resistor (1C), and 1k resistor (1D) connect at node B. The 1k resistor (1C) and high-potential end of the 18V source connect at node C. The 1k resistor (1D), 1k resistor (1E), and 0.4Ix2 CCCS connect at node D. The CCCS flows into node D. The 1k resistor (1A), low-potential end of the 18V source, 1k resistor (1E), and CCCS connect at node E. The CCCS flows out of node E. Current Ix2 is defined through 1k resistor (1A) and flows from node A to node E. Voltage Vx2 is defined over the 1k resistor (1D) and drops from node B to node D.</shortdescription>
 							<latex-image>
@@ -2572,7 +2572,7 @@
 					<p>For the same reason as above, mesh analysis will be used to calculate <m>V_{X2}</m>. The circuit is re-drawn below to define the mesh currents. (Note that some component values have been hidden so that the mesh labels can be read.)</p>
 
 					<figure>
-  						<caption>Circuit with only the voltage source activated, with each mesh current defined.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit35figans4">
     						<shortdescription>Same figure as previous. Mesh current Ia flows through the 1k resistor (1A), 1k resistor (1B), 1k resistor (1C), and 18V source through nodes E, A, B, C, and E. Mesh current Ib flows through the 18V source, 1k resistor (1C), 1k resistor (1D), and 1k resistor (1E) through nodes E, C, B, D, and E. Mesh current -0.4Ix2 flows through the 1k resistor (1E) and 0.4Ix2 CCCS through nodes E, D, and E.</shortdescription>
 							<latex-image>
@@ -2637,7 +2637,7 @@
 
 					<p>
 						<md>
-							<mrow>V_X \amp= (3.789~\textrm{mA})(1~\textrm{k}\Omega)</mrow>
+							<mrow>V_{X2} \amp= (3.789~\textrm{mA})(1~\textrm{k}\Omega)</mrow>
 							<mrow>\amp= 3.789~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -2675,20 +2675,19 @@
 
 					<p>
 						<md>
-							<mrow>I_S \amp= \frac{13~\textrm{V}}{0.39~k\Omega}</mrow>
-							<mrow>\amp= 33.33~\textrm{mA}</mrow>
+							\frac{13~\textrm{V}}{0.39~k\Omega} = 33.3333~\textrm{mA}
 						</md>
 					</p>
 
 					<p>Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit with the voltage source transformed into a current source.</caption>
-  						<image width="80%" xml:id="ch3-circuit36figans1">
-    						<shortdescription>Circuit with 3 meshes and 2 nodes containing a 33.33mA source, 390ohm resistor, 560ohm resistor, and 22mA source. All circuit elements are wired in parallel. Both current sources flow into node A and out of node B. Voltage Vx is defined as dropping over the 560ohm resistor and drops from node A to node B.</shortdescription>
+  						<caption></caption>
+  						<image width="90%" xml:id="ch3-circuit36figans1">
+    						<shortdescription>Circuit with 3 meshes and 2 nodes containing a 33.3mA source, 390ohm resistor, 560ohm resistor, and 22mA source. All circuit elements are wired in parallel. Both current sources flow into node A and out of node B. Voltage Vx is defined as dropping over the 560ohm resistor and drops from node A to node B.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(-2.5,0) to [I, l^=33.33~mA]						(-2.5,2.5);
+									\draw[]	(-2.5,0) to [I, l^=33.3~mA]							(-2.5,2.5);
 									\draw[]	(0,2.5) to [R, l_=390~$\Omega$, *-*]				(0,0);
 									\draw[]	(2.5,2.5) to [R, l_=560~$\Omega$, *-*, v^=$V_X$]	(2.5,0);
 									\draw[]	(-2.5,2.5) to [short]								(5,2.5);
@@ -2699,16 +2698,16 @@
   						</image>
 					</figure>
 
-					<p>The two current sources are in parallel and can be combined into an equivalent source of 55.33<nbsp />mA. The two resistors are also in parallel and can be combined into an equivalent resistance of 229.89<nbsp />&#8486;. The reduced circuit is shown below.</p>
+					<p>The two current sources are in parallel and can be combined into an equivalent source of 55.3<nbsp />mA. The two resistors are also in parallel and can be combined into an equivalent resistance of 230<nbsp />&#8486;. The reduced circuit is shown below.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit36figans2">
     						<shortdescription>Circuit with 1 mesh and 2 nodes containing a 55.33mA source and 229.89ohm resistor. The circuit elements are wired in parallel. The current source flows into node A and out of node B. Voltage Vx is defined as dropping over the 229.89ohm resistor from node A to node B.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,0) to [I, l^=55.33~mA]						(0,2.5);
-									\draw[]	(2.5,2.5) to [R, l_=229.89~$\Omega$, v^=$V_X$]	(2.5,0);
+									\draw[]	(0,0) to [I, l^=55.3~mA]						(0,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=230~$\Omega$, v^=$V_X$]		(2.5,0);
 									\draw[]	(0,2.5) to [short]								(2.5,2.5);
 									\draw[]	(0,0) to [short]								(2.5,0);
 								\end{tikzpicture}
@@ -2720,7 +2719,7 @@
 
 					<p>
 						<md>
-							<mrow>V_X \amp= (55.33~\textrm{mA})(0.2299~\textrm{k}\Omega)</mrow>
+							<mrow>V_X \amp= (55.3333~\textrm{mA})(0.2298947~\textrm{k}\Omega)</mrow>
 							<mrow>\amp= 12.7~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -2742,7 +2741,7 @@
 					<p>It is not useful to convert the 20<nbsp />V source into a current source. This is because the two current sources would not be in parallel and would not be able to be reduced to an equivalent source. This is shown in the circuit diagram below.</p>
 
 					<figure>
-  						<caption>Circuit diagram after converting the voltage source to a current source.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit37figansnothelpful">
     						<shortdescription>Circuit with 3 meshes and 5 nodes containing a 20mA source, 100ohm resistor, 400ohm resistor, 24mA source, 200ohm resistor, 600ohm resistor, and 700ohm resistor. The 200mA source, 100ohm resistor, 400ohm resistor, and 24mA source connect at node A. Both current sources flow into node A. The 400ohm resistor, 24mA source, and 200ohm resistor connect at node B. The 24mA source flows out of node B. The 200ohm and 600ohm resistors connect at node C. The 600ohm and 700ohm resistors connect at node D. The 200mA source, 100ohm, and 700ohm resistors connect at node E. The 200mA source flows out of node E. Voltage Vx is defined as dropping over the 700ohm resistor from node E to node D.</shortdescription>
 							<latex-image>
@@ -2767,15 +2766,14 @@
 
 					<p>
 						<md>
-							<mrow>V_S	\amp= (24~\textrm{mA})(0.4~\textrm{k}\Omega)</mrow>
-							<mrow>\amp= 9.6~\textrm{V}</mrow>
+							(24~\textrm{mA})(0.4~\textrm{k}\Omega) = 9.6~\textrm{V}
 						</md>
 					</p>
 
 					<p>The circuit is re-drawn below.</p>
 
 					<figure>
-  						<caption>Circuit diagram after converting the current source to a voltage source.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit37figans1">
     						<shortdescription>Circuit with 1 mesh and 7 nodes containing a 20V source, 100ohm resistor, 9.6V source, 400ohm resistor, 200ohm resistor, 600ohm resistor, and 700ohm resistor. All elements are wired in series. The high-potential end of the 20V source and the 100ohm resistor connect at node A. The 100ohm resistor and high-potential end of the 9.6V source connect at node B. The low-potential end of the 9.6V source and the 400ohm resistor connect at node C. The 400ohm and 200ohm resistors connect at node D. The 200ohm and 600ohm resistors connect at node E. The 600ohm and 700ohm resistors connect at node F. The 700ohm resistor and low-potential end of the 20V source connect at node G. Voltage Vx is defined as dropping over the 700ohm resistor and drops from node G to node F.</shortdescription>
 							<latex-image>
@@ -2795,7 +2793,7 @@
 					<p>The two voltage sources are in series and can be combined into an equivalent source. (Because the 9.6<nbsp />V source is in the opposite direction as the 20<nbsp />V source, it will be subtracted.) All of the resistors are also in series and can be combined into an equivalent resistance. (The 700<nbsp />&#8486; resistor will not be combined, because the voltage drop over that resistor needs to be calculated.) The reduced circuit is shown below.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit37figans2">
     						<shortdescription>Circuit with 1 mesh and 3 nodes containing a 10.4V source, 1300ohm resistor, and 700ohm resistor. All elements are wired in series. The high-potential end of the 10.4V source and 1300ohm resistor connect at node A. The 1300ohm and 700ohm resistors connect at node B. The 700ohm resistor and low-potential end of the 10.4V source connect at node C. Voltage Vx is defined as dropping over the 700ohm resistor from node C to node B.</shortdescription>
 							<latex-image>
@@ -2835,7 +2833,7 @@
 					<p>It doesn't make sense to convert the 6<nbsp />mA source into a voltage source, as that voltage source would not be in series with any other voltage source, precluding the possibility of combining sources together to reduce the circuit. This is shown in the circuit diagram below.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the 6<nbsp />mA source transformed into a voltage source.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit38figansnothelpful2">
     						<shortdescription>Circuit with 2 meshes and 6 nodes containing a 108V source, 18k resistor, 12k resistor, 24V source, 5V source, 1k resistor, and 10k resistor. The high-potential end of the 108V source and 18k resistor are connected at node A. The 18k resistor, 12k resistor, and low-potential end of the 5V source connect at node B. The 12k resistor and high-potential end of the 24V source connect at node C. The high-potential end of the 5V source and 1k resistor connect at node D. The 1k and 10k resistors connect at node E. The low-potential end of the 108V source, low-potential end of the 24V source, and 10k resistor connect at node F. Current Ix is defined as flowing through the 10k resistor from node E to node F.</shortdescription>
 							<latex-image>
@@ -2856,7 +2854,7 @@
 					<p>Converting the 5<nbsp />V source into a current source would similarly be unhelpful. This is shown in the circuit diagram below.</p>
 					
 					<figure>
-  						<caption>Circuit diagram with the 5<nbsp />V source transformed into a current source.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit38figansnothelpful1">
     						<shortdescription>Circuit with 4 meshes and 4 nodes containing a 6mA source, 18k resistor, 12k resistor, 24V source, 1k resistor, 5mA source, and 10k resistor. The 6mA source, 18k resistor, 12k resistor, 1k resistor, and 5mA source connect at node A. The 6mA source flows into node A and the 5mA source flows out of node A. The 12k resistor and high-potential end of the 24V source connect at node B. The 1k resistor, 10k resistor, and 5mA source connect at node C. The 5mA source flows into node C. The 6mA source, 18k resistor, low-potential end of the 24V source, and 10k resistor connect at node D. The 6mA source flows out of node D. Current Ix is defined as flowing through the 10k resistor from node C to node D.</shortdescription>
 							<latex-image>
@@ -2881,15 +2879,14 @@
 
 					<p>
 						<md>
-							<mrow>I_S \amp= \frac{24~\textrm{V}}{12~\textrm{k}\Omega}</mrow>
-							<mrow>\amp= 2~\textrm{mA}</mrow>
+							\frac{24~\textrm{V}}{12~\textrm{k}\Omega} = 2~\textrm{mA}
 						</md>
 					</p>
 
 					<p>Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the 24<nbsp />V source transformed into a current source.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit38figans1">
     						<shortdescription>Circuit with 4 meshes and 4 nodes containing a 6mA source, 18k resistor, 2mA source, 12k resistor, 5V source, 1k resistor, and 10k resistor. The 6mA source, 18k resistor, 2mA source, 12k resistor, and low-potential end of the 5V source connect at node A. The high-potential end of the 5V source and the 1k resistor connect at node B. The 1k and 10k resistors connect at node C. The 6mA source, 18k resistor, 2mA source, 12k resistor, and 10k resistor connect at node D. Both current sources flow out of node D. Current Ix is defined as flowing through the 10k resistor from node C to node D.</shortdescription>
 							<latex-image>
@@ -2911,7 +2908,7 @@
 					<p>The two current sources are in parallel and can be combined into an equivalent source of 8<nbsp />mA. Furthermore, the 18<nbsp />k&#8486; and 12<nbsp />k&#8486; resistors are in parallel and can be combined into an equivalent resistance of 7.2<nbsp />k&#8486;. The reduced circuit is shown below.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram with the 24<nbsp />V source transformed into a current source.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit38figans2">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing an 8mA source, 7.2k resistor, 5V source, 1k resistor, and 10k resistor. The 8mA source, 7.2k resistor, and low-potential end of the 5V source connect at node A. The 8mA source flows into node A. The high-potential end of the 5V source and 1k resistor connect at node B. The 1k and 10k resistors connect at node C. The 8mA source, 7.2k resistor, and 10k resistor connect at node D. The 8mA source flows out of node D. Current Ix is defined as flowing through the 10k resistor from node C to node D.</shortdescription>
 							<latex-image>
@@ -2932,15 +2929,14 @@
 
 					<p>
 						<md>
-							<mrow>V_S \amp= (8~\textrm{mA})(7.2~\textrm{k}\Omega)</mrow>
-							<mrow>\amp= 57.6~\textrm{V}</mrow>
+							(8~\textrm{mA})(7.2~\textrm{k}\Omega) = 57.6~\textrm{V}
 						</md>
 					</p>
 
 					<p>The circuit is shown below.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the 8<nbsp />mA source transformed into a voltage source.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit38figans3">
     						<shortdescription>Circuit with 1 mesh and 5 nodes containing a 57.6V source. 7.2k resistor, 5V source, 1k resistor, and 10k resistor. All circuit elements are wired in series. The high-potential end of the 57.6V source and 7.2k resistor connect at node A. The 7.2k resistor and low-potential end of the 5V source connect at node B. The high-potential end of the 5V source and 1k resistor connect at node C. The 1k resistor and 10k resistor connect at node D. The 10k resistor and low-potential end of the 57.6V source connect at node E. Current Ix is defined as flowing through the 10k resistor from node D to node E.</shortdescription>
 							<latex-image>
@@ -2959,7 +2955,7 @@
 					<p>The two voltage sources are in series and can be combined into an equivalent voltage source. The three resistors are in series and can be combined into a single equivalent resistance.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit38figans4">
     						<shortdescription>Circuit with 1 mesh and 2 nodes containing a 62.6V source and 18.2k resistor. The high-potential end of the 62.6V source and 18.2k resistor connect at node A. The low-potential end of the 62.6V source and 18.2k resistor connect at node B. Current Ix flows through the 18.2k resistor from node A to node B.</shortdescription>
 							<latex-image>
@@ -3001,15 +2997,14 @@
 
 					<p>
 						<md>
-							<mrow>I_S \amp= \frac{40~\textrm{V}}{10~\Omega}</mrow>
-							<mrow>\amp= 4~\textrm{A}</mrow>
+							\frac{40~\textrm{V}}{10~\Omega} = 4~\textrm{A}
 						</md>
 					</p>
 
 					<p>Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the 40<nbsp />V source converted into a current source.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit39figans1">
     						<shortdescription>Circuit with 5 meshes and 3 nodes containing a 4A source, 10ohm resistor (10A), 0.3Vx VCCS, 10ohm resistor (10B), 10ohm resistor (10C), 10ohm resistor (10D), and 2A source. The 4A source, 10ohm resistor (10A), VCCS, 10ohm resistor (10B), and 10ohm resistor (10C) connect at node A. The 4A source and VCCS flow into node A. The 10ohm resistor (10C), 10ohm resistor (10D) and 2A source connect at node B. The 2A source flows into node B. The 4A source, 10ohm resistor (10A), VCCS, 10ohm resistor (10B), 10ohm resistor (10D), and 2A source connect at node C. All current sources flow out of node C. Voltage Vx is defined over the 10ohm resistor (10D) and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -3033,7 +3028,7 @@
 					<p>The 4<nbsp />A source is in parallel with the <m>0.3V_X</m> source and can be combined into an equivalent source. Two of the 10<nbsp />&#8486; resistors are in parallel and can be combined into an equivalent resistance of 5<nbsp />&#8486;.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram.</caption>
+  						<caption></caption>
   						<image width="90%" xml:id="ch3-circuit39figans2">
     						<shortdescription>Circuit with 3 meshes and 3 nodes containing a (4+0.3Vx)A current source, 5ohm resistor, 10ohm resistor (10C), 10ohm resistor (10D), and 2A source. The (4+0.3Vx) source, 5ohm resistor, and 10ohm resistor (10C) connect at node A. The current source flows into node A. The 10ohm resistor (10C), 10ohm resistor (10D), and 2A source connect at node B. The 2A source flows into node B. The (4+0.3Vx) source, 5ohm, 10ohm resistor (10D), and 2A source connect at node C. Both current sources flow out of node C. Voltage Vx is defined as dropping over the 10ohm resistor (10D) from node B to node C.</shortdescription>
 							<latex-image>
@@ -3055,15 +3050,14 @@
 
 					<p>
 						<md>
-							<mrow>V_S \amp= (4~\textrm{A}+(0.3~\textrm{A/V})V_X)(5~\Omega)</mrow>
-							<mrow>\amp= 20~\textrm{V} + 1.5V_X</mrow>
+							(4~\textrm{A}+(0.3~\textrm{A/V})V_X)(5~\Omega) = 20~\textrm{V} + 1.5V_X
 						</md>
 					</p>
 
 					<p>The circuit is re-drawn below.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the current source transformed into a voltage source.</caption>
+  						<caption></caption>
   						<image width="90%" xml:id="ch3-circuit39figans3">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing a (20+1.5Vx)V source, 5ohm resistor, 10ohm resistor (10C), 10ohm resistor (10D), and 2A source. The high-potential end of the voltage source and 5ohm resistor connect at node A. The 5ohm resistor and 10ohm resistor (10C) connect at node B. The 10ohm resistor (10C), 10ohm resistor (10D), and 2A source connect at node C. The 2A source flows into node C. The low-potential end of the voltage source, the 10ohm resistor (10D), and 2A source connect at node D. The 2A source flows out of node D. Voltage Vx is defined as dropping over the 10ohm resistor (10D) from node C to node D.</shortdescription>
 							<latex-image>
@@ -3083,7 +3077,7 @@
 					<p>Combine the two resistors in series and re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram with the current source transformed into a voltage source.</caption>
+  						<caption></caption>
   						<image width="70%" xml:id="ch3-circuit39figans4">
     						<shortdescription>Circuit with 2 meshes and 3 nodes containing a (20+1.5Vx)V source, 15ohm resistor, 10ohm resistor (10D), and 2A source. The high-potential end of the voltage source and 15ohm resistor connect at node A. The 15ohm resistor, 10ohm resistor (10D), and 2A source connect at node B. The 2A source flows into node B. The low-potential end of the voltage source, 10ohm resistor (10D), and 2A source connect at node C. The 2A source flows out of node C. Voltage Vx is defined as dropping over the 10ohm resistor (10D) and drops from node B to node C.</shortdescription>
 							<latex-image>
@@ -3103,15 +3097,14 @@
 
 					<p>
 						<md>
-							<mrow>I_S \amp= \frac{20~\textrm{V}+1.5V_X}{15~\Omega}</mrow>
-							<mrow>\amp= 1.33~\textrm{A} + (0.1~\textrm{A/V})V_X</mrow>
+							\frac{20~\textrm{V}+1.5V_X}{15~\Omega} = 1.33~\textrm{A} + (0.1~\textrm{A/V})V_X
 						</md>
 					</p>
 
 					<p>Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the voltage source transformed into a current source.</caption>
+  						<caption></caption>
   						<image width="90%" xml:id="ch3-circuit39figans5">
     						<shortdescription>Circuit with 3 meshes and 2 nodes containing a (1.33+0.1Vx)A source, 15ohm resistor, 10ohm resistor (10D), and 2A source. All circuit elements are wired in parallel with each other. Both current sources flow into node A and out of node B. Voltage Vx is defined as dropping over the 10ohm resistor (10D) from node A to node B.</shortdescription>
 							<latex-image>
@@ -3130,7 +3123,7 @@
 					<p>The two current sources are in parallel and can be combined into an equivalent source. The two resistors are in parallel and can be combined into an equivalent resistance. The reduced circuit diagram is shown below.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch3-circuit39figans6">
     						<shortdescription>Circuit with 1 mesh and 2 nodes containing a (3.33+0.1Vx)A source and 6ohm resistor. The two circuit elements are wired in parallel. The current source flows into node A and out of node B. Voltage Vx is defined as dropping over the 6ohm resistor from node A to node B.</shortdescription>
 							<latex-image>
@@ -3200,7 +3193,7 @@
 					<p>It does not make sense to transform the current source, as the voltage source would not be in series with any other source, leading to a circuit that cannot be reduced. This is shown in the circuit diagram below.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the current source transformed into a voltage source.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit310fignothelpful">
     						<shortdescription>Circuit with 2 meshes and 6 nodes containing a 2Vx VCVS, 20ohm resistor, 10ohm resistor, 5V source, 3Vy VCVS, 40ohm resistor, and 50ohm resistor. The high-potential end of the 2Vx VCVS and 20ohm resistor connect at node A. The 20ohm resistor, 10ohm resistor, and low-potential end of the 3Vy VCVS connect at node B. The high-potential end of the 3Vy VCVS and 40ohm resistor connect at node C. The 40ohm and 50ohm resistors connect at node D. The 10ohm resistor and high-potential end of the 5V source connect at node E. The low-potential end of the 2Vx VCVS, low-potential end of the 5V source, and 50ohm resistor connect at node F. Voltage Vy is defined as dropping over the 40ohm resistor from node C to node D. Voltage Vx is defined as dropping over the 50ohm resistor from node D to node F.</shortdescription>
 							<latex-image>
@@ -3222,15 +3215,14 @@
 
 					<p>
 						<md>
-							<mrow>I_S \amp= \frac{2V_X}{20~\Omega}</mrow>
-							<mrow>\amp= 0.1V_X</mrow>
+							\frac{2V_X}{20~\Omega} = 0.1V_X
 						</md>
 					</p>
 
 					<p>Re-draw the circuit diagram.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the <m>2V_X</m> source transformed into a current source.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit310figans1">
     						<shortdescription>Circuit with 4 meshes and 4 nodes containing a 0.1Vx VCCS, 20ohm resistor, 10ohm resistor, 0.5A source, 3Vy VCVS, 40ohm resistor, and 50ohm resistor. The 0.1Vx VCCS, 20ohm resistor, 10ohm resistor, 0.5A source, and low-potential end of the 3Vy VCVS connect at node A. Both current sources flow into node A. The high-potential end of the 3Vy VCVS and 40ohm resistor connect at node B. The 40ohm and 50ohm resistors connect at node C. The 0.1Vx VCCS, 20ohm resistor, 10ohm resistor, 0.5A source, and 50ohm resistor connect at node D. Voltage Vy is defined as dropping over the 40ohm resistor between node B and node C. Voltage Vx is defined as dropping over the 50ohm resistor between node C and node D.</shortdescription>
 							<latex-image>
@@ -3252,7 +3244,7 @@
 					<p>The two current sources are in parallel and can be combined into a single equivalent source. The 10<nbsp />&#8486; and 20<nbsp />&#8486; resistors are in parallel and can be combined into a single equivalent resistance. Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram with the <m>2V_X</m> source transformed into a current source.</caption>
+  						<caption></caption>
   						<image width="90%" xml:id="ch3-circuit310figans2">
     						<shortdescription>Circuit with 2 meshes and 4 nodes containing a (0.5A+0.1Vx) current source, 6.67ohm resistor, 3Vy VCVS, 40ohm resistor, and 50ohm resistor. The current source, 6.67ohm resistor, and low-potential end of the VCVS connect at node A. The current source flows into node A. The high-potential end of the 3Vy VCVS and 40ohm resistor connect at node B. The 40ohm and 50ohm resistors connect at node C. The current source, 6.67ohm resistor, and 50ohm resistor connect at node D. The current source flows out of node D. Voltage Vy is defined as dropping over the 40ohm resistor from node B to node C. Voltage Vx is defined as dropping over the 50ohm resistor between node C and node D.</shortdescription>
 							<latex-image>
@@ -3273,15 +3265,14 @@
 
 					<p>
 						<md>
-							<mrow>V_S \amp= (0.5~\textrm{A}+(0.1~\textrm{A/V})V_X)(6.67~\Omega)</mrow>
-							<mrow>\amp= 3.33~\textrm{V} + 0.67V_X</mrow>
+							(0.5~\textrm{A}+(0.1~\textrm{A/V})V_X)(6.67~\Omega) = 3.33~\textrm{V} + 0.67V_X
 						</md>
 					</p>
 
 					<p>Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit diagram with the current source transformed into a voltage source.</caption>
+  						<caption></caption>
   						<image width="90%" xml:id="ch3-circuit310figans3">
     						<shortdescription>Circuit with 1 mesh and 5 nodes containing a (3.33V + 0.067Vx) voltage source, 6.67ohm resistor, 3Vy VCVS, 40ohm resistor, and 50ohm resistor. All circuit elements are connected in series. The high-potential end of the voltage source and 6.67ohm resistor connect at node A. The 6.67ohm resistor and low-potential end of the 3Vy VCVS connect at node B. The high-potential end of the 3Vy VCVS and 40ohm resistor connect at node C. The 40ohm and 50ohm resistors connect at node D. The low-potential end of the voltage source and 50ohm resistor connect at node E. Voltage Vy is defined as dropping over the 40ohm resistor from node C to node D. Voltage Vx is defined as dropping over the 50ohm resistor from node D to node E.</shortdescription>
 							<latex-image>
@@ -3300,7 +3291,7 @@
 					<p>The two voltage sources are in series and can be combined. While the resistors are also all in series, it doesn't make sense to combine them into an equivalent resistance because the voltage drops over two of the three resistors need to be calculated. Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Reduced circuit diagram.</caption>
+  						<caption></caption>
   						<image width="70%" xml:id="ch3-circuit310figans4">
     						<shortdescription>Circuit with 1 mesh and 4 nodes containing a (3.33V + 0.67Vx + 3Vy) voltage source, 6.67ohm resistor, 40ohm resistor, and 50ohm resistor. All circuit elements are connected in series. The high-potential end of the source and the 6.67ohm resistor connect at node A. The 6.67ohm and 40ohm resistors connect at node B. The 40ohm and 50ohm resistors connect at node C. The low-potential end of the voltage source and 50ohm resistor connect at node D. Voltage Vy is defined as dropping over the 40ohm resistor from node B to node C. Voltage Vx is defined as dropping over the 50ohm resistor from node C to node D.</shortdescription>
 							<latex-image>
@@ -3394,7 +3385,7 @@
 
 				<answer>
 					<figure xml:id="circuit311figans">
-  						<caption>Answer to <xref ref="ch3theveninex1" />.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit311figans">
     						<shortdescription>Circuit with 0 meshes and 3 nodes consisting of a 3V source and 21ohm resistor. All circuit elements are connected in series. One end of the 21ohm resistor connects to node A. The other end of the 21ohm resistor connects to the low-potential end of the 3V source at node C. The high-potential end of the 3V source connects at node B.</shortdescription>
 							<latex-image>
@@ -3413,9 +3404,9 @@
 
 					<p>
 						<md>
-							<mrow>V_{TH}	\amp=	-10~\textrm{V}\left(\frac{30~\Omega}{60~\Omega + 10~\Omega + 30~\Omega}\right)</mrow>
-							<mrow>			\amp=	-10~\textrm{V}\left(\frac{30~\Omega}{100~\Omega}\right)</mrow>
-							<mrow>			\amp=	-3~\textrm{V}</mrow>
+							<mrow>V_{TH} \amp= -10~\textrm{V}\left(\frac{30~\Omega}{60~\Omega + 10~\Omega + 30~\Omega}\right)</mrow>
+							<mrow>\amp= -10~\textrm{V}\left(\frac{30~\Omega}{100~\Omega}\right)</mrow>
+							<mrow>\amp= -3~\textrm{V}</mrow>
 						</md>
 						
 					</p>
@@ -3423,12 +3414,12 @@
 					<p>Second, calculate the Th&#233;venin equivalent resistance. Deactivate the voltage source and calculate the equivalent resistance as seen between nodes a and b. The circuit diagram with the voltage source deactivated is shown below.</p>
 
 					<figure xml:id="circuit311figans1">
-  						<caption>Circuit diagram with the voltage source deactivated.</caption>
+  						<caption></caption>
   						<image width="30%" xml:id="ch3-circuit311figans1">
     						<shortdescription>Circuit with 1 mesh and 3 nodes consisting of a 60ohm resistor, 10ohm resistor, and 30ohm resistor. All circuit elements are connected in series. The 30ohm and 60ohm resistors connect at node A. The 30ohm and 10ohm resistors connect at node B. The 60ohm and 10ohm resistors connect at node C.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [short]							(0,0);
+									\draw[]	(0,2.5) to [short]								(0,0);
 									\draw[]	(0,2.5) to [R, l^=60~$\Omega$]					(2.5,2.5);
 									\draw[]	(2.5,2.5) to [R, l_=10~$\Omega$]				(2.5,0);
 									\draw[]	(0,0) to [R, l^=30~$\Omega$, *-*]				(2.5,0);
@@ -3441,15 +3432,15 @@
 
 					<p>Combine the 60<nbsp />&#8486; resistor in series with the 10<nbsp />&#8486; resistor and re-draw the circuit diagram.</p>
 
-					<figure xml:id="circuit311figans2">
-  						<caption>Circuit diagram with the voltage source deactivated and the 10<nbsp />&#8486; and 60<nbsp />&#8486; resistors combined in series.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="30%" xml:id="ch3-circuit311figans2">
     						<shortdescription>Circuit with 1 mesh and 2 nodes consisting of a 30ohm resistor and 70ohm resistor. The 70ohm resistor and 30ohm resistor connect at node A. The 70ohm resistor and 30ohm resistor connect at node B.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [short]							(0,0);
+									\draw[]	(0,2.5) to [short]								(0,0);
 									\draw[]	(0,2.5) to [R, l^=70~$\Omega$]					(2.5,2.5);
-									\draw[]	(2.5,2.5) to [short]				(2.5,0);
+									\draw[]	(2.5,2.5) to [short]							(2.5,0);
 									\draw[]	(0,0) to [R, l^=30~$\Omega$, *-*]				(2.5,0);
 									\draw[]	(0,0) to [short, -o] ++ (down:0.5) node[below] {a};
 									\draw[]	(2.5,0) to [short, -o] ++ (down:0.5) node[below] {b};	
@@ -3462,8 +3453,8 @@
 
 					<p>
 						<md>
-							<mrow>R_{TH}	\amp=	30~\Omega//70~\Omega</mrow>
-							<mrow>			\amp=	21~\Omega</mrow>
+							<mrow>R_{TH} \amp= 30~\Omega//70~\Omega</mrow>
+							<mrow>\amp= 21~\Omega</mrow>
 						</md>
 					</p>
 				</solution>
@@ -3495,8 +3486,8 @@
 				</statement>
 
 				<answer>
-					<figure xml:id="circuit312figans">
-  						<caption>Answer to <xref ref="ch3theveninex2" />.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="50%" xml:id="ch3-circuit312figans">
     						<shortdescription>Circuit containing 1 mesh and 2 nodes consisting of a 28mA source and 892ohm resistor. Both elements are wired in parallel between nodes A and B. The 28mA source flows out of node B and into node A.</shortdescription>
 							<latex-image>
@@ -3518,15 +3509,14 @@
 
 					<p>
 						<md>
-							<mrow>I_S	\amp=	\frac{3~\textrm{V}}{1.5~\textrm{k}\Omega}</mrow>
-							<mrow>		\amp=	2~\textrm{mA}</mrow>
+							\frac{3~\textrm{V}}{1.5~\textrm{k}\Omega} = 2~\textrm{mA}
 						</md>
 					</p>
 
 					<p>The circuit is re-drawn below.</p>
 
-					<figure xml:id="circuit312figans1">
-  						<caption>Circuit diagram with the voltage source transformed into a current source.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="70%" xml:id="ch3-circuit312figans1">
     						<shortdescription>Circuit containing 3 meshes and 2 nodes consisting of a 2mA source, 1.5k resistor, 2.2k resistor, and 26mA source. All circuit elements are wired in parallel between nodes A and B. Both current sources flow out of node B and into node A.</shortdescription>
 							<latex-image>
@@ -3549,7 +3539,7 @@
 					<p>
 						<md>
 							<mrow>I_N \amp= 2~\textrm{mA} + 26~\textrm{mA}</mrow>
-							<mrow> \amp= 28~\textrm{mA}</mrow>
+							<mrow>\amp= 28~\textrm{mA}</mrow>
 						</md>
 					</p>
 
@@ -3565,8 +3555,8 @@
 
 					<p>To use superposition to derive the Norton equivalent circuit, first analyze the circuit with the current source deactivated. This circuit is shown below.</p>
 
-					<figure xml:id="circuit312figans2">
-  						<caption>Circuit diagram with the current source deactivated.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit312figans2">
     						<shortdescription>Circuit containing 1 mesh and 3 nodes consisting of a 3V source, 1.5k resistor, and 2.2k resistor. All circuit elements are connected in series. The 1.5k and 2.2k resistors connect at node A. The 2.2k resistor connects to the low-potential end of the 3V source at node B. The high-potential end of the 3V source and 1.5k resistor connect at node C.</shortdescription>
 							<latex-image>
@@ -3585,8 +3575,8 @@
 
 					<p>The Norton equivalent current through this subcircuit is equal to the current through nodes a and b when those two nodes are shorted. Shorting those nodes effectively removes the 2.2<nbsp />k&#8486; resistor from the circuit. This is shown below.</p>
 
-					<figure xml:id="circuit312figans3">
-  						<caption>Circuit diagram with the current source deactivated and a short placed between nodes a and b.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit312figans3">
     						<shortdescription>Circuit with 1 mesh and 2 nodes consisting of a 3V source and 1.5k resistor. Both circuit elements are wired in series. The high-potential end of the 3V source connects to the 1.5k resistor at node C. The 1.5k resistor connects to the low-potential end of the 3V source at node A/B (A is shorted to B). Current In1 is defined as flowing through the 1.5k resistor from node C to node A/B.</shortdescription>
 							<latex-image>
@@ -3614,9 +3604,9 @@
 
 					<p>Next, analyze the circuit with the voltage source deactivated. This circuit is shown below.</p>
 
-					<figure xml:id="circuit312figans4">
-  						<caption>Circuit diagram with the voltage source deactivated.</caption>
-  						<image width="70%" xml:id="ch3-circuit312figans4">
+					<figure>
+  						<caption></caption>
+  						<image width="60%" xml:id="ch3-circuit312figans4">
     						<shortdescription>Circuit with 2 meshes and 2 nodes consisting of a 1.5k resistor, 2.2k resistor, and 26mA source. All circuit elements are wired in parallel between nodes A and B. The 26mA source flows from node B to node A.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -3635,8 +3625,8 @@
 
 					<p>The Norton equivalent current through this subcircuit is equal to the current through nodes a and b when those two nodes are shorted. Shorting those nodes effectively removes both resistors from the circuit. (This is because both resistors are in parallel with the short.) This is shown below.</p>
 
-					<figure xml:id="circuit312figans5">
-  						<caption>Circuit diagram with the voltage source deactivated and a short placed between nodes a and b.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit312figans5">
     						<shortdescription>Circuit with 1 mesh and 1 node consisting of a 26mA source. Both ends of the 26mA source are shorted together, representing node A/B. Current In2 is defined as flowing in the same direction as the 26mA source.</shortdescription>
 							<latex-image>
@@ -3664,9 +3654,9 @@
 
 					<p>To calculate the Norton equivalent resistance, deactivate both sources and calculate the equivalent resistance as seen through nodes a and b. The circuit with both independent sources deactivated is shown below.</p>
 
-					<figure xml:id="circuit312figans6">
-  						<caption>Circuit diagram with the both sources deactivated.</caption>
-  						<image width="40%" xml:id="ch3-circuit312figans6">
+					<figure>
+  						<caption></caption>
+  						<image width="30%" xml:id="ch3-circuit312figans6">
     						<shortdescription>Circuit with 1 mesh and 2 nodes consisting of a 1.5k resistor and 2.2k resistor. The 1.5k and 2.2k resistors connect at node A. The 1.5k and 2.2k resistors connect at node B.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -3721,8 +3711,8 @@
 				</statement>
 
 				<answer>
-					<figure xml:id="circuit313figans">
-  						<caption>Answer to <xref ref="ch3theveninex3" />.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit313figans">
     						<shortdescription>Circuit with 0 meshes and 3 nodes consisting of a 6.75V source and 375ohm resistor. One end of the 375ohm resistor connects to node A. The other end of the 375ohm resistor and the high-potential end of the 6.75V source connect at node C. The low-potential end of the 6.75V source connects at node B.</shortdescription>
 							<latex-image>
@@ -3741,8 +3731,8 @@
 
 					<p>The circuit is drawn below with the quantities <m>V_a</m> and <m>V_b</m> explicitly labeled.</p>
 
-					<figure xml:id="circuit313figans1">
-  						<caption>Circuit diagram with <m>V_a</m> and <m>V_b</m> explicitly labeled.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit313figans1">
     						<shortdescription>Circuit is identical to figure in the question text. Voltage Va is defined as dropping over the 5k resistor from node A to node D. Voltage Vb is defined as dropping over the 1k resistor from node B to node D.</shortdescription>
 							<latex-image>
@@ -3802,8 +3792,8 @@
 
 					<p>Because this circuit contains a dependent source, the short-circuit current needs to be calculated to calculate the Th&#233;venin equivalent resistance. This circuit contains only one independent source, which means that superposition cannot be used. There are no reductions in the circuit that can be done without eliminating important quantities we need to know. (We cannot combine the two resistors in parallel without eliminating the branch through which we need to measure <m>I_{SC}</m>.) Mesh analysis is therefore the easiest method to use to solve for <m>I_{SC}</m>. The circuit is drawn below. (Note: some of the component labels have been hidden so that the mesh current labels can be read.)</p>
 
-					<figure xml:id="circuit313figans2">
-  						<caption>Circuit diagram with nodes a and b shorted, and with mesh currents labeled.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit313figans2">
     						<shortdescription>Circuit with 3 meshes and 3 nodes consisting of a 6V source, 3k resistor, 5k resistor, 1k resistor, and 4Ix CCCS. The high-potential end of the 6V source and 3k resistor connect at node C. The 3k resistor, 5k resistor,1k resistor, and CCCS connect at node A/B (nodes A and B are shorted). The CCCS flows out of node A/B. The low-potential end of the 6V source, 5k resistor, 1k resistor, and 4Ix CCCS connect at node D. The CCCS flows into node D. Mesh current Ia flows through the 6V source, 3k resistor, and 5k resistor through nodes D, C, A/B, and D. Mesh current Ib flows through the 5k and 1k resistors through nodes D, A/B, and D. Mesh current Ic flows through the 1k resistor and CCCS through nodes D, A/B, and D.</shortdescription>
 							<latex-image>
@@ -3911,8 +3901,8 @@
 				</statement>
 
 				<answer>
-					<figure xml:id="circuit314figans">
-  						<caption>Answer to <xref ref="ch3theveninex4" />.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit314figans">
     						<shortdescription>Circuit with 0 meshes and 3 nodes consisting of a 6.2V source and 260ohm resistor. One end of the 260ohm resistor connects to node A. The other end of the 260ohm resistor connects to the high-potential end of the 6.2V source at node C. The low-potential end of the 6.2V source connects to node B.</shortdescription>
 							<latex-image>
@@ -3931,15 +3921,14 @@
 
 					<p>
 						<md>
-							<mrow>V_D \amp= (800~\Omega)(4I_X)</mrow>
-							<mrow>\amp= (3200~\textrm{V/A})I_X</mrow>
+							(800~\Omega)(4I_X) = (3200~\textrm{V/A})I_X
 						</md>
 					</p>
 
 					<p>The circuit is re-drawn below.</p>
 
-					<figure xml:id="circuit314figans1">
-  						<caption>Circuit diagram with the dependent current source converted to a dependent voltage source.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit314figans1">
     						<shortdescription>Circuit with 2 meshes and 6 nodes consisting of a 2V source, 200ohm resistor (200A), 100ohm resistor, 400ohm resistor, 800ohm resistor, (3200A/V)Ix CCVS, and 200ohm resistor (200B). The high-potential end of the 2V source is connected to the 200ohm resistor (200A) at node C. The 200ohm resistor (200A), 100ohm resistor, and 400ohm resistor connect at node D. The 400ohm and 800ohm resistors connect at node E. The 800ohm resistor connects to the high-potential end of the CCVS at node F. The 200ohm resistor (200B) connects to the low-potential end of the CCVS at node A. The low-potential end of the 2V source, 100ohm resistor, and 200ohm resistor (200B) connect at node B. Current Ix is defined as flowing through the 100ohm resistor from node D to node B.</shortdescription>
 							<latex-image>
@@ -3962,8 +3951,8 @@
 
 					<p>The 400<nbsp />&#8486; resistor can be combined in series with the 800<nbsp />&#8486; resistor. The reduced circuit is shown below.</p>
 
-					<figure xml:id="circuit314figans2">
-  						<caption>Reduced circuit diagram with the dependent current source converted to a dependent voltage source.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit314figans2">
     						<shortdescription>Circuit with 2 meshes and 5 nodes consisting of a 2V source, 200ohm resistor (200A), 100ohm resistor, 1200ohm resistor, (3200A/V)Ix CCVS, and 200ohm resistor (200B). The high-potential end of the 2V source and 200ohm resistor (200A) connect at node C. The 200ohm (200A), 100ohm, and 1200ohm resistors connect at node D. The 1200ohm resistor connects to the high-potential end of the CCVS at node E. The low-potential end of the CCVS and 200ohm resistor (200B) connect at node A. The low-potential end of the 2V source, 100ohm resistor, and 200ohm resistor (200B) connect at node B. Current Ix is defined as flowing through the 100ohm resistor from node D to node B.</shortdescription>
 							<latex-image>
@@ -3984,8 +3973,8 @@
 
 					<p>The circuit is depicted below with the two mesh currents defined. Note that some component labels may be hidden to make the mesh current labels easier to read.</p>
 
-					<figure xml:id="circuit314figans3">
-  						<caption>Reduced circuit diagram with the dependent current source converted to a dependent voltage source with mesh currents defined.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit314figans3">
     						<shortdescription>Same circuit diagram as preceding diagram. Mesh current Ia flows through the 2V source, 200ohm resistor (200A) and 100ohm resistor through nodes B, C, D, and B. Mesh current Ib flows through the 100ohm resistor, 1200ohm resistor, CCVS, and 200ohm resistor (200B) through nodes B, D, E, A, and B.</shortdescription>
 							<latex-image>
@@ -4060,8 +4049,8 @@
 
 					<p>Short nodes a and b to calculate <m>I_{SC}</m>. This is shown below.</p>
 
-					<figure xml:id="circuit314figans4">
-  						<caption>Circuit diagram used to calculate <m>I_{SC}</m>.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="80%" xml:id="ch3-circuit314figans4">
     						<shortdescription>Circuit with 2 meshes and 4 nodes consisting of a 2V source, 200ohm resistor (200A), 100ohm resistor, 1200ohm resistor, and (3200 A/V)Ix CCVS. The high-potential end of the 2V source and 200ohm resistor (200A) connect at node C. The 200ohm (200A), 100ohm, and 1200ohm resistors connect at node D. The 1200ohm resistor connects to the high-potential end of the CCVS at node E. The low-potential end of both voltage sources connect to the 100ohm resistor at node A/B (nodes A and B are shorted). Ix is defined as flowing through the 100ohm resistor from node D to node A/B. Isc is defined as flowing through the A/B short in the direction from the low-potential end of the CCVS to the connection between the 100ohm resistor and low-potential end of the 2V source. Mesh current Ia flows through the 2V source, 200ohm resistor (200A), and 100ohm resistor through nodes A/B, C, D, and A/B. Mesh current Ib flows through the 100ohm resistor, 1200ohm resistor, and CCVS through nodes A/B, D, E, and A/B.</shortdescription>
 							<latex-image>
@@ -4165,8 +4154,8 @@
 				</statement>
 
 				<answer>
-					<figure xml:id="circuit315figans">
-  						<caption>Answer to <xref ref="ch3theveninex5" />.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="40%" xml:id="ch3-circuit315figans">
     						<shortdescription>Circuit with 1 mesh and 2 nodes consisting of a 0.04A source and 33ohm resistor. Both circuit elements are connected in parallel between nodes A and B. The current source flows out of node B and into node A.</shortdescription>
 							<latex-image>
@@ -4184,8 +4173,8 @@
 				<solution>
 					<p>First, reduce the circuit as much as possible. The two resistors in the left mesh of the circuit are in series and can be combined. The two voltage sources are also in series and can be combined. The reduced circuit is shown below.</p>
 
-					<figure xml:id="circuit315figans1">
-  						<caption>Reduced circuit diagram.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch3-circuit315figans1">
     						<shortdescription>Circuit with 2 meshes and 3 nodes consisting of a (20V - 10Vx) voltage source, 250ohm resistor, 0.5Ix CCCS, and 100ohm resistor. The high-potential end of the voltage source and 250ohm resistor connect at node C. The 0.5Ix CCCS and 100ohm resistor connect at node A. The CCCS flows into node A. The low-potential end of the voltage source, 0.5Ix CCCS, and 100ohm resistor connect at node B. The CCCS flows out of node B. Current Ix is defined as flowing through the 250ohm resistor from node C to node B. Voltage Vx is defined as dropping over the 100ohm resistor from node A to node B.</shortdescription>
 							<latex-image>
@@ -4227,8 +4216,8 @@
 
 					<p>Short the nodes between a and b and re-draw the circuit. <m>V_X</m> is now equal to zero. This is because <m>V_X</m> is measured over the 100<nbsp />&#8486; resistor, which is now shorted out, and by definition has a voltage drop of zero. This causes the VCVS in the left mesh to contribute no voltage to the circuit. The reduced circuit is shown below.</p>
 
-					<figure xml:id="circuit315figans2">
-  						<caption>Reduced circuit diagram with nodes a and b shorted.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="90%" xml:id="ch3-circuit315figans2">
     						<shortdescription>Circuit with 2 meshes and 2 nodes consisting of a 20V source, 250ohm resistor, and 0.5Ix CCCS. The high-potential end of the 20V source connects to the 250ohm resistor at node C. The 250ohm resistor, low-potential end of the voltage source, and 0.5Ix current source flow into node A/B (nodes A and B are shorted). Current Ix is defined as flowing through the 250ohm resistor from node C to node A/B. Current In is defined as flowing from nodes A to B (which are now shorted). The CCCS flows out of node B into node A (which are shorted).</shortdescription>
 							<latex-image>
@@ -4251,8 +4240,8 @@
 
 					<p>
 						<md>
-							<mrow>I_X	\amp=	\frac{20~\textrm{V}}{250~\Omega}</mrow>
-							<mrow> 		\amp=	0.08~\textrm{A}</mrow>
+							<mrow>I_X \amp= \frac{20~\textrm{V}}{250~\Omega}</mrow>
+							<mrow>\amp= 0.08~\textrm{A}</mrow>
 						</md>
 					</p>
 
@@ -4260,7 +4249,7 @@
 
 					<p>
 						<md>
-							<mrow>I_N	\amp=	0.5I_X</mrow>
+							<mrow>I_N \amp= 0.5I_X</mrow>
 							<mrow>\amp=	0.5(0.08~\textrm{A})</mrow>
 							<mrow>\amp=	0.04~\textrm{A}</mrow>
 						</md>

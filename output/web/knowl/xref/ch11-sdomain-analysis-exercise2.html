@@ -40,7 +40,7 @@ V(s) = \frac{\left[\frac{V_{DC}R_2}{R_1+R_2}\right]s}{s^2+\left[\frac{L+CR_1R_2}
 </div></details>
 <details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="solution solution-like knowl__content">
-<div class="para">The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch11-sdomain-analysis-exercise2-figure1.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of voltage source Vdc, resistors R1 and R2, capacitor (1/(sC)), and inductor sL. The high-potential end of Vdc connects to R1 at node a. R1, sL, and the capacitor connect at node b. The capacitor and R2 connect at node c. R2, sL, and the low-potential end of Vdc connect at node d. Voltage V(s) drops from node c to node d."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 11.4.5"><a tabindex="-1" href="#ch11-sdomain-analysis-exercise2-3-2" title="Copy heading and permalink for Figure 11.4.5" aria-label="Copy heading and permalink for Figure 11.4.5">🔗</a></div></figcaption>
@@ -55,8 +55,10 @@ V(s) = \frac{\left[\frac{V_{DC}R_2}{R_1+R_2}\right]s}{s^2+\left[\frac{L+CR_1R_2}
 V_X \amp= \frac{V(s)}{sCR_2} + V(s)\\
 \frac{V_{DC}}{R_1s} \amp= \left[\frac{1}{R_1} + \frac{1}{sL}\right]\left[\frac{V(s)}{sCR_2} + V(s)\right]+ \frac{V(s)}{R_2}\\
 \amp= \frac{V(s)}{sCR_1R_2} + \frac{V(s)}{R_1} + \frac{V(s)}{s^2LCR_2} + \frac{V(s)}{sL} + \frac{V(s)}{R_2}\\
-\frac{sV_{DC}}{R_1} \amp= \left[\frac{1}{R_1} + \frac{1}{R_2}\right]s^2V(s) + \left[\frac{1}{CR_1R_2} + \frac{1}{L}\right]sV(s) + \left[\frac{1}{LCR_2}\right]V(s)\\
-\frac{sR_2V_{DC}}{R_1+R_2} \amp= s^2V(s) + \left[\frac{L+CR_1R_2}{R_1+R_2}\right]sV(s) + \left[\frac{R_1}{LC(R_1+R_2)}\right]V(s)\\
+\frac{sV_{DC}}{R_1} \amp= \left[\frac{1}{R_1} + \frac{1}{R_2}\right]s^2V(s) + \left[\frac{1}{CR_1R_2} + \frac{1}{L}\right]sV(s)\\
+\amp+ \left[\frac{1}{LCR_2}\right]V(s)\\
+\frac{sR_2V_{DC}}{R_1+R_2} \amp= s^2V(s) + \left[\frac{L+CR_1R_2}{R_1+R_2}\right]sV(s)\\
+\amp+ \left[\frac{R_1}{LC(R_1+R_2)}\right]V(s)\\
 V(s) \amp= \frac{\left[\frac{V_{DC}R_2}{R_1+R_2}\right]s}{s^2+\left[\frac{L+CR_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{R_1}{LC(R_1+R_2)}\right]}
 \end{align*}
 </div>

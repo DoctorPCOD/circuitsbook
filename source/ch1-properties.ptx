@@ -326,11 +326,11 @@
 
 				<statement>
 
-					<p>For each circuit element in <xref ref="powerdeliverorabsorb" />, determine if it delivers or absorbs power.</p>
+					<p>For each circuit element in the circuit shown below, determine if it delivers or absorbs power.</p>
 
-					<figure xml:id="powerdeliverorabsorb">
-  						<caption>A circuit composed of four unknown circuit elements all connected in series.</caption>
-  						<image width="50%" xml:id="ch1-powerdeliverorabsorb">
+					<figure>
+  						<caption></caption>
+  						<image width="40%" xml:id="ch1-powerdeliverorabsorb">
     						<shortdescription>One circuit element is labeled A and has a voltage of VA measured from top to bottom. The + end of element A is connected to the - end of element B, labeled with a voltage of VB measured from left to right. The current I is depicted as flowing left to right through this element. The - end of element B is connected to the - end of element C, labeled with a voltage of VC measured from top to bottom. The + end of element C is connected to the + end of element D, labeled with a voltage of VD measured from right to left. The - end of element D is connected to the - end of element A.</shortdescription>
 							<latex-image >
 								\begin{tikzpicture}[font=\sffamily]
@@ -487,6 +487,8 @@
 				</md>
 			</p>
 
+			<p><alert>The argument of a sinusoid must not contain any unit.</alert> Therefore, any angles used in the argument of a sine or cosine function must be expressed in radians. The variable <m>t</m> used in the argument has an implied unit of seconds. Therefore, angular frequencies must be expressed with a unit of radians per second.</p>
+
 		</subsection>
 
 		<subsection xml:id="ch1-dependentsources">
@@ -568,10 +570,10 @@
 
 				<statement>
 
-					<p>Reduce the circuit shown in <xref ref="exampletwoseriesvoltages" /> to a circuit with a single voltage source.</p>
+					<p>Reduce the circuit shown below to a circuit with a single voltage source.</p>
 
-					<figure xml:id="exampletwoseriesvoltages">
-  						<caption>A circuit consisting of two independent DC voltage sources.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="30%" xml:id="ch1-exampletwoseriesvoltages">
     						<shortdescription>A node labeled a is connected to the low-potential end of a DC voltage source labeled 2 V. The high-potential end of that source is connected to the high-potential end of a second DC voltage source labeled 5 V. The low-potential end of the 5 V source is labeled node b.</shortdescription>
 							<latex-image >
@@ -583,10 +585,10 @@
   						</image>
 					</figure>
 
-					<p>The two voltage sources can be combined because they are in series with each other. The total voltage drop between nodes a and b is <m>-2~\textrm{V} + 5~\textrm{V} = 3~\textrm{V}</m>. The two voltage sources can therefore be combined into a single voltage source with the equivalent voltage of 3<nbsp />V. This is depicted in <xref ref="exampletwoseriesvoltagesafter" />.</p>
+					<p>The two voltage sources can be combined because they are in series with each other. The total voltage drop between nodes a and b is <m>-2~\textrm{V} + 5~\textrm{V} = 3~\textrm{V}</m>. The two voltage sources can therefore be combined into a single voltage source with the equivalent voltage of 3<nbsp />V. This is depicted below.</p>
 
-					<figure xml:id="exampletwoseriesvoltagesafter">
-  						<caption>A circuit consisting of a single independent DC voltage source.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="15%" xml:id="ch1-exampletwoseriesvoltagesafter">
     						<shortdescription>A node labeled a is connected to the high-potential end of a DC voltage source labeled 3 V. The low-potential end of this source is labeled node b.</shortdescription>
 							<latex-image >
@@ -606,10 +608,10 @@
 
 				<statement>
 
-					<p>Reduce the circuit shown in <xref ref="exampletwoseriesvoltagesother" /> to a circuit with a single voltage source.</p>
+					<p>Reduce the circuit shown below to a circuit with a single voltage source.</p>
 
-					<figure xml:id="exampletwoseriesvoltagesother">
-  						<caption>A circuit consisting of two independent DC voltage sources in series with a resistor.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="50%" xml:id="ch1-exampletwoseriesvoltagesother">
     						<shortdescription>A node labeled a is connected to the high-potential end of a DC voltage source labeled 5 V. The low-potential end of that source is connected to one end of a resistor with the node labeled "y." The other end of the resistor is labeled "x" and is connected to the high-potential end of a second DC voltage source labeled 1 V. The low-potential end of the 1 V source is labeled node b.</shortdescription>
 							<latex-image >
@@ -698,10 +700,10 @@
 
 				<statement>
 
-					<p>Reduce the circuit shown in <xref ref="exampletwoseriescurrents" /> to a circuit with a single current source.</p>
+					<p>Reduce the circuit shown below to a circuit with a single current source.</p>
 
-					<figure xml:id="exampletwoseriescurrents">
-  						<caption>A circuit consisting of two independent DC current sources.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="40%" xml:id="ch1-exampletwoseriescurrents">
     						<shortdescription>Node a is connected to two current sources and node b is connected to the other lead of both current sources. One current source is labeled 2 mA and the arrow points from b to a. The other current source is labeled 1 mA and the arrow points from a to b.</shortdescription>
 							<latex-image >
@@ -717,10 +719,10 @@
   						</image>
 					</figure>
 
-					<p>The two current sources can be combined because they are in parallel with each other. The current from b to a is <m>2~\textrm{mA} - 1~\textrm{mA} = 1~\textrm{mA}</m>. The two sources can therefore be combined into a single source with the equivalent current of 1<nbsp />mA. This is depicted in <xref ref="exampletwoseriescurrentsafter" />.</p>
+					<p>The two current sources can be combined because they are in parallel with each other. The current from b to a is <m>2~\textrm{mA} - 1~\textrm{mA} = 1~\textrm{mA}</m>. The two sources can therefore be combined into a single source with the equivalent current of 1<nbsp />mA. This is depicted below.</p>
 
-					<figure xml:id="exampletwoseriescurrentsafter">
-  						<caption>A circuit consisting of a single independent DC current source.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="15%" xml:id="ch1-exampletwoseriescurrentsafter">
     						<shortdescription>Node a is connected to a single current source and node b is connected to the other lead of the current source. The current source is labeled 1 mA and the arrow points from b to a.</shortdescription>
 							<latex-image >
@@ -740,11 +742,11 @@
 
 				<statement>
 
-					<p>Reduce the circuit shown in <xref ref="exampletwoparallelcurrentsother" /> to a circuit with a single current source.</p>
+					<p>Reduce the circuit shown below to a circuit with a single current source.</p>
 
-					<figure xml:id="exampletwoparallelcurrentsother">
-  						<caption>A circuit consisting of two independent DC current sources in parallel with two resistors.</caption>
-  						<image width="50%" xml:id="ch1-exampletwoparallelcurrentsother">
+					<figure>
+  						<caption></caption>
+  						<image width="40%" xml:id="ch1-exampletwoparallelcurrentsother">
     						<shortdescription>Node a is connected to two current sources and two resistors and node b is connected to the other lead of both current sources and both resistors. One current source is labeled 6 mA and the arrow points from a to b. The other current source is labeled 5 mA and the arrow points from a to b.</shortdescription>
 							<latex-image >
 								\begin{tikzpicture}[font=\sffamily]
@@ -761,11 +763,11 @@
   						</image>
 					</figure>
 
-					<p>The two current sources can be combined because they are in parallel with each other. The presence of the two resistors does not change anything about the configuration of the circuit. The total current from a to b is <m>6~\textrm{mA} + 5~\textrm{mA} = 11~\textrm{mA}</m>. The reduced circuit is shown in <xref ref="exampletwoparallelcurrentsotherafter" />.</p>
+					<p>The two current sources can be combined because they are in parallel with each other. The presence of the two resistors does not change anything about the configuration of the circuit. The total current from a to b is <m>6~\textrm{mA} + 5~\textrm{mA} = 11~\textrm{mA}</m>. The reduced circuit is shown below.</p>
 
-					<figure xml:id="exampletwoparallelcurrentsotherafter">
-  						<caption>A circuit consisting of a single independent DC current source in parallel with two resistors.</caption>
-  						<image width="50%" xml:id="ch1-exampletwoparallelcurrentsotherafter">
+					<figure>
+  						<caption></caption>
+  						<image width="40%" xml:id="ch1-exampletwoparallelcurrentsotherafter">
     						<shortdescription>Node a is connected to one current sources and two resistors and node b is connected to the other lead of the current source and both resistors. The current source is labeled 11 mA and the arrow points from a to b.</shortdescription>
 							<latex-image >
 								\begin{tikzpicture}[font=\sffamily]
@@ -883,10 +885,10 @@
 
 				<statement>
 
-					<p>Plot <m>f(t) = 4\delta(t-1) - 2\delta(t+3)</m>. The first term has an amplitude of <m>A = 4</m> and is located at <m>t = 1~\textrm{s}</m>. The second term has an amplitude of <m>A = -2</m> and is located at <m>t = -3~\textrm{s}</m>. The graph is shown in <xref ref="diracdeltafunctionexample" />.</p>
+					<p>Plot <m>f(t) = 4\delta(t-1) - 2\delta(t+3)</m>. The first term has an amplitude of <m>A = 4</m> and is located at <m>t = 1~\textrm{s}</m>. The second term has an amplitude of <m>A = -2</m> and is located at <m>t = -3~\textrm{s}</m>. The graph is shown below.</p>
 
-					<figure xml:id="diracdeltafunctionexample">
-  						<caption>The graph of <m>f(t) = 4\delta(t-1) - 2\delta(t+3)</m>.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch1-diracdeltafunctionexample">
     						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). One delta function with amplitude -2 is positioned at time -3. A second delta function with amplitude 4 is positioned at time 1.</shortdescription>
 							<latex-image >
@@ -968,10 +970,10 @@
 
 				<statement>
 
-					<p>Derive an equation corresponding to the graph shown in <xref ref="stepfunctionexamplegraph" />.</p>
+					<p>Derive an equation corresponding to the graph shown below.</p>
 
-					<figure xml:id="stepfunctionexamplegraph">
-  						<caption>A function composed of multiple step functions.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch1-stepfunctionexamplegraph">
     						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). Graph starts at f(t) = 0 at time 0. At t = -2 the graph abruptly increases to a value of 1. At t = 0 the graph abruptly increases to a value of 3. At t = 2 the graph abruptly decreases to a value of -2. At t = 5 the graph abruptly increases toa  value of 0 and remains at that value for the remainder of the graph.</shortdescription>
 							<latex-image >
@@ -1017,7 +1019,7 @@
 					<p>This function is graphed in <xref ref="differentiatingstepfunctiongraph" />.</p>
 
 					<figure xml:id="differentiatingstepfunctiongraph">
-  						<caption>Graph depicting <xref ref="ch1-differentiatestepfunctionexample" />.</caption>
+  						<caption></caption>
 						<image width="100%" xml:id="ch1-differentiatingstepfunctiongraph">
 							<shortdescription>Graph of the function defined above.</shortdescription>
 							<latex-image>
@@ -1079,7 +1081,7 @@
 					<p>This function is graphed in <xref ref="integratingstepfunctiongraph" />.</p>
 
 					<figure xml:id="integratingstepfunctiongraph">
-  						<caption>Graph depicting <xref ref="ch1-integratingstepfunctionexampleeq" />.</caption>
+  						<caption></caption>
 						<image width="100%" xml:id="ch1-integratingstepfunctiongraph">
 							<shortdescription>Graph of the function defined above.</shortdescription>
 							<latex-image>
@@ -1168,10 +1170,10 @@
 
 				<statement>
 
-					<p>The charge entering a circuit element is shown in <xref ref="rampfunctionexamplegraph" />. Use it to calculate the current.</p>
+					<p>The charge entering a circuit element is shown below. Use it to calculate the current.</p>
 
-					<figure xml:id="rampfunctionexamplegraph">
-  						<caption>A function representing charge that's composed of multiple ramp functions.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch1-rampfunctionexamplegraph">
     						<shortdescription>X-axis represents time with a unit of s. Y-axis represents charge with a unit of mC. Piecewise description of graph with all components linear: (0,0) to (2,1) to (4,-1) to (7,0) to (8,0).</shortdescription>
 							<latex-image >
@@ -1184,10 +1186,10 @@
   						</image>
 					</figure>
 
-					<p>Current is equal to the time derivative of charge. The time derivative is plotted in <xref ref="rampfunctionexamplegraphderiv" />.</p>
+					<p>Current is equal to the time derivative of charge. The time derivative is plotted below.</p>
 
-					<figure xml:id="rampfunctionexamplegraphderiv">
-  						<caption>A function representing current that's composed of multiple step functions.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch1-rampfunctionexamplegraphderiv">
     						<shortdescription>X-axis represents time with a unit of s. Y-axis represents current with a unit of mA. Piecewise description of graph with all components linear: (0,0.5) to (2,0.5) to (2,-1) to (4,1/3) to (7,1/3) to (7,0) to (8,0).</shortdescription>
 							<latex-image >
@@ -1248,10 +1250,10 @@
 
 					<p>Plot <m>f(t) = -3\textrm{rect}((t+5)/2) + 2\textrm{rect}((t-5)/4)</m>. The first term has an amplitude of <m>A = -3</m>, a width of <m>\tau = 2~\textrm{s}</m>, and is centered at <m>\lambda = -5~\textrm{s}</m>. The second term has an amplitude of <m>A = 2</m>, a width of <m>\tau = 4~\textrm{s}</m>, and is centered at <m>\lambda = 5~\textrm{s}.</m></p>
 
-					<p>The graph is shown in <xref ref="rectpulseexamplegraph" />.</p>
+					<p>The graph is shown below.</p>
 
-					<figure xml:id="rectpulseexamplegraph">
-  						<caption>The graph of <m>f(t) = -3\textrm{rect}((t+5)/2) + 2\textrm{rect}((t-5)/4)</m>.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch1-rectpulseexamplegraph">
     						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). Piecewise description of graph with all components linear: (-10,0) to (-6,0) to (-6,-3) to (-4,-3) to (-4,0) to (3,0) to (3,2) to (7,2) to (7,0) to (10,0).</shortdescription>
 							<latex-image >
@@ -1302,10 +1304,10 @@
 
 				<statement>
 
-					<p>Derive the equation corresponding to <m>f(t)</m>, as graphed in <xref ref="triangularpulseexamplegraph" />.</p>
+					<p>Derive the equation corresponding to <m>f(t)</m>, as shown below.</p>
 
-					<figure xml:id="triangularpulseexamplegraph">
-  						<caption>Graph of a function composed of rectangular and triangular pulses.</caption>
+					<figure>
+  						<caption></caption>
   						<image width="100%" xml:id="ch1-triangularpulseexamplegraph">
     						<shortdescription>X-axis represents time with a unit of s. Y-axis represents f(t). Piecewise description of graph with all components linear: (-5,0) to (-3,0) to (-3,2) to (0,5) to (3,2) to (3,0) to (5,0).</shortdescription>
 							<latex-image >
@@ -1702,7 +1704,7 @@
 
 				<answer>
 					<figure>
-  						<caption>Waveform corresponding to <xref ref="sinusoidwave19exercise" />.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch1-sinusoidwave19exercise">
     						<shortdescription>Graph of time (x-axis, unit: ms) and current (y-axis: unit: mA). The graph depicts the function defined in the problem statement.</shortdescription>
 							<latex-image >
@@ -1933,7 +1935,7 @@
 
 				<answer>
 					<figure>
-  						<caption>Circuit diagram corresponding to the reduced circuit from <xref ref="sources14exercise" />.</caption>
+  						<caption></caption>
   						<image width="40%">
     						<shortdescription>The + end of a DC voltage source labeled 7V is connected to an unknown circuit element. The other end of the unknown circuit element connects to the - end of that same DC voltage source.</shortdescription>
 							<latex-image >
@@ -1985,7 +1987,7 @@
 
 				<answer>
 					<figure>
-  						<caption>Circuit diagram corresponding to the reduced circuit from <xref ref="sources15exercise" />.</caption>
+  						<caption></caption>
   						<image width="90%">
     						<shortdescription>The + end of a voltage source labeled "10V - 0.4*Ix" is connected to the first unknown circuit element. The other end of this first unknown circuit element connects to two other circuit elements: one end of a second unknown circuit element, and one end of a third unknown circuit element. The other end of the second unknown circuit element connects to the - end of the two DC voltage sources. The other end of the third unknown circuit element connects to the + end of a DC voltage source labeled 8V.</shortdescription>
 							<latex-image >
@@ -2092,12 +2094,12 @@
 					
 					<p>At <m>t = 4~\textrm{s}</m> a step function with amplitude of <m>A = 1</m> is added. This is equal to <m>u(t-4)</m>. The total amplitude of the function becomes zero at this point (this is equal to the sum of the amplitudes of this and the previous three step functions). After that point, the signal remains constant at zero.</p>
 
-					<p>Option two is to use the rectangular pulse function to create this signal. A rectangular pulse can be used to define each individual rectangular area of the graph. The first is highlighted in yellow below.</p>
+					<p>Option two is to use the rectangular pulse function to create this signal. A rectangular pulse can be used to define each individual rectangular area of the graph. The first is highlighted below.</p>
 
 					<figure>
-						<caption>The first rectangular area in <xref ref="circuit117exercise" /> is highlighted in yellow.</caption>
+						<caption></caption>
   						<image width="100%">
-    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (-4,0) (-4,1) (-1,1) (-1,0) is highlighted in yellow.</shortdescription>
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (-4,0) (-4,1) (-1,1) (-1,0) is highlighted.</shortdescription>
 							<latex-image >
 								\begin{tikzpicture}[font=\sffamily]
 									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2.02, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
@@ -2113,12 +2115,12 @@
 						
 					<p>This pulse spans between <m>t = -4~\textrm{s}</m> and <m>t = -1~\textrm{s}</m>, which means it's centered at <m>\lambda = -2.5~\textrm{s}</m> and has a width of <m>\tau = 3~\textrm{s}</m>. The amplitude of this rectangle is <m>A = 1</m>. This is equal to <m>\textrm{rect}\left(\frac{t + 2.5}{3}\right)</m>.</p>
 					
-					<p>The second rectangular area is highlighted in yellow below.</p>
+					<p>The second rectangular area is highlighted below.</p>
 
 					<figure>
-						<caption>The second rectangular area in <xref ref="circuit117exercise" /> is highlighted in yellow.</caption>
+						<caption></caption>
   						<image width="100%">
-    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (-1,0) (-1,2) (1,2) (1,0) is highlighted in yellow.</shortdescription>
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (-1,0) (-1,2) (1,2) (1,0) is highlighted.</shortdescription>
 							<latex-image >
 								\begin{tikzpicture}[font=\sffamily]
 									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2.02, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
@@ -2134,12 +2136,12 @@
 					
 					<p>This pulse spans between <m>t = -1~\textrm{s}</m> and <m>t = 1~\textrm{s}</m>, which means it's centered at <m>\lambda = 0~\textrm{s}</m> and has a width of <m>\tau = 2~\textrm{s}</m>. The amplitude of this rectangle is <m>A = 2</m>. This is equal to <m>2\textrm{rect}\left(\frac{t}{2}\right)</m>.</p>
 
-					<p>The third and last rectangular area is highlighted in yellow below.</p>
+					<p>The third and last rectangular area is highlighted below.</p>
 
 					<figure>
-						<caption>The third rectangular area in <xref ref="circuit117exercise" /> is highlighted in yellow.</caption>
+						<caption></caption>
   						<image width="100%">
-    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (1,-1) (1,0) (4,0) (4,-1) is highlighted in yellow.</shortdescription>
+    						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-4,0) (-4,1) (-1,1) (-1,2) (1,2) (1,-1) (4,-1) (4,0) (6,0). The area between the four points (1,-1) (1,0) (4,0) (4,-1) is highlighted.</shortdescription>
 							<latex-image >
 								\begin{tikzpicture}[font=\sffamily]
 									\begin{axis}[xlabel=$t$~(s), ylabel=$f(t)$, xmin=-6, xmax=6, ymin=-2, ymax=2.02, width=\linewidth, height=5cm, axis x line=bottom, axis y line = left, ymajorgrids]
@@ -2164,7 +2166,7 @@
 
 				<answer>
 					<figure>
-  						<caption>Waveform corresponding to <xref ref="elementarysignals118exercise" />.</caption>
+  						<caption></caption>
   						<image width="100%">
     						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-4,0) (-3,0) (-2,3) (-1,0) (0,0) (5,-2) (10,0) (12,0).</shortdescription>
 							<latex-image >
@@ -2192,7 +2194,7 @@
 
 				<answer>
 					<figure>
-  						<caption>Waveform corresponding to <xref ref="elementarysignals119exercise" />.</caption>
+  						<caption></caption>
   						<image width="100%">
     						<shortdescription>A graph with time (s) on the x-axis and f(t) (no unit) on the y-axis. The function is linear and piecewise moves through the following points: (-6,0) (-5,0) (-5,3) (0,3) (6,6).</shortdescription>
 							<latex-image >
@@ -2218,7 +2220,7 @@
 
 				<answer>
 					<figure>
-  						<caption>Waveform corresponding to <xref ref="elementarysignals120exercise" />.</caption>
+  						<caption></caption>
   						<image width="100%">
     						<shortdescription>A graph with time (s) on the x-axis and i(t) (A) on the y-axis. The function is linear and piecewise moves through the following points: (-15,0) (-8,0) (-8,1) (-6,1) (-6,-1) (-4,-1) (-4,0) (0,0) (0,0.5) (4,0.5) (4,-1) (8,-1) (8,0.5) (12,0.5) (12,0) (15,0).</shortdescription>
 							<latex-image >
@@ -2236,7 +2238,7 @@
 					<p>Current is equal to the derivative of charge. Charge is plotted below to make it easier to visualize.</p>
 
 					<figure>
-						<caption>The waveform corresponding to the charge equation given in <xref ref="elementarysignals120exercise" />.</caption>
+						<caption></caption>
   						<image width="100%">
     						<shortdescription>A graph with time (s) on the x-axis and q(t) (C) on the y-axis. The function is linear and piecewise moves through the following points: (-15,0) (-8,0) (-6,2) (-4,0) (0,0) (4,2) (8,-2) (12,0) (14,0).</shortdescription>
 							<latex-image >

@@ -30,9 +30,10 @@
 <div class="answer solution-like knowl__content">
 <div class="para logical">
 <div class="displaymath process-math">
-\begin{equation*}
--\frac{1}{R_1C_2}\frac{dv_{in}}{dt} = \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt} + \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)
-\end{equation*}
+\begin{align*}
+-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt}\\
+\amp+ \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)
+\end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -45,7 +46,7 @@
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{equation}
-\frac{v_{in}(t) - v_X(t)}{R_1} = \frac{v_X(t)}{R_2} + C_2 \frac{d}{dt}\left(v_X(t) - v(t)\right) + C_1\frac{dv_X(t)}{dt}\tag{7.8.45}
+\frac{v_{in}(t) - v_X(t)}{R_1} = \frac{v_X(t)}{R_2} + C_2 \frac{d}{dt}\left(v_X(t) - v(t)\right) + C_1\frac{dv_X(t)}{dt}\tag{7.8.49}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -55,21 +56,24 @@
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align}
-C_1\frac{dv_X(t)}{dt} \amp= \frac{-v(t)}{R_F}\tag{7.8.46}\\
-\frac{dv_X(t)}{dt} \amp= \frac{-v(t)}{C_1R_F}\tag{7.8.47}\\
-v_X(t) \amp= -\frac{1}{C_1R_F}\int v(t) \,dt\tag{7.8.48}
+C_1\frac{dv_X(t)}{dt} \amp= \frac{-v(t)}{R_F}\tag{7.8.50}\\
+\frac{dv_X(t)}{dt} \amp= \frac{-v(t)}{C_1R_F}\tag{7.8.51}\\
+v_X(t) \amp= -\frac{1}{C_1R_F}\int v(t) \,dt\tag{7.8.52}
 \end{align}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug <a href="ch7-secondorder-10.html#ch7-challenge-ex4-3-4-1" class="xref" data-knowl="./knowl/xref/ch7-challenge4-opamp-kcl2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.48">(7.8.48)</a> into <a href="ch7-secondorder-10.html#ch7-challenge4-opamp-kcl1" class="xref" data-knowl="./knowl/xref/ch7-challenge4-opamp-kcl1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.45">(7.8.45)</a> and reduce until the differential equation is in standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Plug <a href="ch7-secondorder-10.html#ch7-challenge-ex4-3-4-1" class="xref" data-knowl="./knowl/xref/ch7-challenge4-opamp-kcl2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.52">(7.8.52)</a> into <a href="ch7-secondorder-10.html#ch7-challenge4-opamp-kcl1" class="xref" data-knowl="./knowl/xref/ch7-challenge4-opamp-kcl1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.8.49">(7.8.49)</a> and reduce until the differential equation is in standard form.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
--\frac{v_{in}(t)}{R_1} \amp= \frac{1}{R_1C_1R_F}\int v(t) \,dt + \frac{1}{R_2C_1R_F}\int v(t) \,dt + \frac{C_2}{C_1R_F}v(t) + C_2 \frac{dv(t)}{dt} + \frac{C_1}{C_1R_F}v(t)\\
--\frac{1}{R_1}\frac{dv_{in}}{dt} \amp= \frac{1}{C_1R_1R_F}v(t) + \frac{1}{C_1R_2R_F}v(t) + \frac{C_2}{C_1R_F}\frac{dv(t)}{dt} + C_2\frac{d^2v(t)}{dt^2} + \frac{1}{R_F}\frac{dv(t)}{dt}\\
--\frac{1}{R_1C_2}\frac{dv_{in}}{dt} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt} + \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)
+-\frac{v_{in}(t)}{R_1} \amp= \frac{1}{R_1C_1R_F}\int v(t) \,dt + \frac{1}{R_2C_1R_F}\int v(t) \,dt + \frac{C_2}{C_1R_F}v(t)\\
+\amp+ C_2 \frac{dv(t)}{dt} + \frac{C_1}{C_1R_F}v(t)\\
+-\frac{1}{R_1}\frac{dv_{in}}{dt} \amp= \frac{1}{C_1R_1R_F}v(t) + \frac{1}{C_1R_2R_F}v(t) + \frac{C_2}{C_1R_F}\frac{dv(t)}{dt}\\
+\amp+ C_2\frac{d^2v(t)}{dt^2} + \frac{1}{R_F}\frac{dv(t)}{dt}\\
+-\frac{1}{R_1C_2}\frac{dv_{in}}{dt} \amp= \frac{d^2v(t)}{dt^2} + \left(\frac{1}{C_1R_F}+\frac{1}{C_2R_F}\right)\frac{dv(t)}{dt}\\
+\amp+ \left(\frac{1}{C_1C_2R_1R_F}+\frac{1}{C_1C_2R_2R_F}\right)v(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-challenge-ex4-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

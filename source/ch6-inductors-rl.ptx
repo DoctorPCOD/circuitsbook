@@ -5,7 +5,7 @@
 
 	<introduction>
 
-		<p>Inductors are circuit elements that are capable of storing and releasing energy in the form of a magnetic field. Most inductors are composed of a coil of wire, possibly coiled around a ferrite core. (Even a straight wire can create a magnetic field, but the effect is very small when compared to coiled wire inductors.) As current flows through the inductor, a magnetic field is generated.</p>
+		<p><term>Inductors</term> are circuit elements that are capable of storing and releasing (but not consuming) energy. This energy is stored in the form of a magnetic field. Most inductors are composed of a coil of wire, possibly coiled around a ferrite core. (Even a straight wire can create a magnetic field, but the effect is very small when compared to coiled-wire inductors.) As current flows through the inductor, a magnetic field is generated.</p>
 
 		<p>The property of an inductor that relates to its ability to store magnetic field energy is known as inductance (<m>L</m>) which is measured with a unit of H (henry). </p>
 
@@ -61,7 +61,7 @@
   	<section xml:id="ch6-parasitic">
 		<title>Parasitic Effects</title>
 
-		<p>Inductors are made of coils of wire. To create a high inductance device, a lot of wire is required. This generates parasitic side-effects. Wire contains resistance which, while it can be safely ignored when small amounts are used, can no longer be ignored when large amounts are used. To create physically small inductors, wire with a smaller surface area (high gauge) are used, which increases the resistance of the wire. The resistance of an inductor is known as <term>parasitic resistance.</term> In addition, there can be <term>parasitic capacitance</term> in an inductor due to the presence of charge in many parallel wires. These parasitic effects may vary with the frequency of the applied signal. A model of an inductor, including parasitic resistance and capacitance, is shown in <xref ref="parasiticinductor" />.</p>
+		<p>Inductors are made of coils of wire. To create a high inductance device, a lot of wire is required. This generates parasitic side effects. Wire contains resistance which, while it can be safely ignored when small amounts are used, can no longer be ignored when large amounts are used. To create physically small inductors, wire with a smaller surface area (high gauge) are used, which increases the resistance of the wire. The resistance of an inductor is known as <term>parasitic resistance.</term> In addition, there can be <term>parasitic capacitance</term> in an inductor due to the presence of charge in many parallel wires. These parasitic effects may vary with the frequency of the applied signal. A model of an inductor, including parasitic resistance (<m>R_P</m>) and parasitic capacitance (<m>C_P</m>), is shown in <xref ref="parasiticinductor" />.</p>
 
 		<figure xml:id="parasiticinductor">
   			<caption>An inductor model including parasitic resistance (<m>R_P</m>) and parasitic capacitance (<m>C_P</m>).</caption>
@@ -135,7 +135,7 @@
 		
 		<introduction>
 
-			<p>Just as it was possible to combine resistors together to find an equivalent resistance, and capacitors to find an equivalent capacitance, it is possible to combine inductors together to find an equivalent inductance. The rules (and mathematical relationships) for calculating series and parallel combinations of inductors are explained below.</p>
+			<p>Just as it was possible to combine resistors together to calculate an equivalent resistance, and capacitors to calculate an equivalent capacitance, it is possible to combine inductors together to calculate an equivalent inductance. The rules (and mathematical relationships) for calculating series and parallel combinations of inductors are explained below.</p>
 
 		</introduction>
 
@@ -216,7 +216,8 @@
 				<p>
 					<md>
 						<mrow>i(t) \amp= i_1(t) + i_2(t) + i_3(t) + ... + i_n(t)</mrow>
-						<mrow>\frac{1}{L_{EQ}}\int_{-\infty}^{t} v(\tau)\,d\tau \amp= \frac{1}{L_1}\int_{-\infty}^{t} v(\tau)\,d\tau + \frac{1}{L_2}\int_{-\infty}^{t} v(\tau)\,d\tau + \frac{1}{L_3}\int_{-\infty}^{t} v(\tau)\,d\tau + ... + \frac{1}{L_n}\int_{-\infty}^{t} v(\tau)\,d\tau</mrow>
+						<mrow>\frac{1}{L_{EQ}}\int_{-\infty}^{t} v(\tau)\,d\tau \amp= \frac{1}{L_1}\int_{-\infty}^{t} v(\tau)\,d\tau + \frac{1}{L_2}\int_{-\infty}^{t} v(\tau)\,d\tau</mrow>
+						<mrow>\amp+ \frac{1}{L_3}\int_{-\infty}^{t} v(\tau)\,d\tau + ... + \frac{1}{L_n}\int_{-\infty}^{t} v(\tau)\,d\tau</mrow>
 						<mrow>\frac{1}{L_{EQ}} \amp= \frac{1}{L_1} + \frac{1}{L_2} + \frac{1}{L_3} + ... + \frac{1}{L_n}</mrow>
 					</md>
 				</p>
@@ -255,8 +256,7 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(10~\textrm{mH})(40~\textrm{mH})}{10~\textrm{mH} + 40~\textrm{mH}} \amp= \frac{400~\textrm{mH}^2}{50~\textrm{mH}}</mrow>
-							<mrow>\amp= 8~\textrm{mH}</mrow>
+							\frac{(10~\textrm{mH})(40~\textrm{mH})}{10~\textrm{mH} + 40~\textrm{mH}} = 8~\textrm{mH}
 						</md>
 					</p>
 
@@ -264,8 +264,7 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(20~\textrm{mH})(30~\textrm{mH})}{20~\textrm{mH} + 30~\textrm{mH}} \amp= \frac{600~\textrm{mH}^2}{50~\textrm{mH}}</mrow>
-							<mrow>\amp= 12~\textrm{mH}</mrow>
+							\frac{(20~\textrm{mH})(30~\textrm{mH})}{20~\textrm{mH} + 30~\textrm{mH}} = 12~\textrm{mH}
 						</md>
 					</p>
 
@@ -333,7 +332,7 @@
 		<subsection xml:id="ch6-discharging">
 			<title>Discharging to Zero (Homogeneous) Transient Response</title>
 
-			<p>The discharging to zero response is a special case of the transient response that specifically looks at what happens when an inductor is initially connected to a DC current that is suddenly removed from a circuit. In other words: the inductor, after being disconnected from a power supply, discharges its stored energy through the resistive element(s) of the circuit. The circuit diagram shown in <xref ref="rldischarging" /> will be used to analyze this discharging response. The switch is in position a for a long time before suddenly moving to position b at time <m>t=0</m>.</p>
+			<p>The discharging to zero response is a special case of the transient response that specifically looks at what happens when an inductor is initially connected to one or more sources that are suddenly removed from a circuit at a particular time. In other words: the inductor, after being disconnected from the power supply, discharges its stored energy through the resistive element(s) of the circuit. The circuit diagram shown in <xref ref="rldischarging" /> will be used to analyze this discharging response. The switch is in position a for a long time before suddenly moving to position b at time <m>t=0</m>.</p>
 
 			<figure xml:id="rldischarging">
   				<caption>An RL circuit used to analyze the discharging to zero (homogeneous) transient response.</caption>
@@ -343,16 +342,45 @@
 						\begin{tikzpicture}[font=\sffamily]
 							\draw[]	(2,1) node[cute spdt up arrow, rotate=90, anchor=in] (switch) {};
 							\draw[]	(switch.in) to [L, l_=$L$, v^=$v(t)$, i_=$i(t)$, -*] ++(down:2.5) node[ground] {};
-							\draw[]	(switch.out 2) node[above] {b} to [short] ++(right:2.5) to [R, l_=$R$] ++(down:3) |- ($(switch.in)-(0,2.5)$);
+							\draw[]	(switch.out 2) node[above] {b} to [short] ++(right:2.5) to [R, l_=$R$, i^=$i_R(t)$] ++(down:3) |- ($(switch.in)-(0,2.5)$);
 							\draw[]	($(switch.in)-(0,2.5)$) to [short] ++(left:2.5) to [I, l^=$I_{IN}$] ++(up:3) |- (switch.out 1) node[above] {a};
 						\end{tikzpicture}
 					</latex-image>
   				</image>
 			</figure>
 
-			<p>Kirchhoff's laws can be used to analyze the circuit in the initial condition. Because the only two elements are the current source and the inductor, and they are in series, the initial current through the inductor must be equal to the source current. In other words: <m>i(0) = I_{IN}</m>.</p>
+			<p>The differential equation for the circuit will be derived at the instant the switch changes position at <m>t = 0^+</m>. The circuit diagram in this condition is shown in <xref ref="rldischargingpositionb" />.</p>
+			
+			<figure xml:id="rldischargingpositionb">
+  				<caption>The RL circuit from <xref ref="rldischarging" /> drawn at <m>t = 0^+</m>.</caption>
+				<image width="50%" xml:id="ch6-rldischargingpositionb">
+					<shortdescription>Circuit with four nodes consisting of a current source Iin, inductor L, resistor R, and SPDT switch. Iin is connected to one output of the SPDT switch at node a. The current source Iin flows into node a. The resistor connects to the other output of the SPDT switch at node b. The input of the SPDT switch connects to the inductor at node c. The current source Iin, the inductor, and the resistor all connect to ground at node d. The current source Iin flows out of node d. Branch current i(t) is defined through the inductor from node c to node d. Voltage drop v(t) is defined over the inductor from node c to node d. The SPDT switch is depicted as being in position b.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(2,1) node[cute spdt down, rotate=90, anchor=in] (switch) {};
+							\draw[]	(switch.in) to [L, l_=$L$, v^=$v(t)$, i_=$i(t)$, -*] ++(down:2.5) node[ground] {};
+							\draw[]	(switch.out 2) node[above] {b} to [short] ++(right:2.5) to [R, l_=$R$, i^=$i_R(t)$] ++(down:3) |- ($(switch.in)-(0,2.5)$);
+							\draw[]	($(switch.in)-(0,2.5)$) to [short] ++(left:2.5) to [I, l^=$I_{IN}$] ++(up:3) |- (switch.out 1) node[above] {a};
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
 
-			<p>Kirchhoff's laws are also used to analyze the circuit in the discharging condition, once the switch has been flipped to position b. The voltage drop over the inductor (<m>v(t)</m>, defined in <xref ref="ch6-voltageinductor" />) is equal to the voltage drop over the resistor. Because the two components are in series they share a current of <m>i(t)</m>. The discharging transient response is derived from these properties in <xref ref="ch6-eqdischargingrl" /> and derived in <xref ref="ch6-eqdischargingrlproof" />.</p>
+			<p>Kirchhoff's laws can be used to derive the differential equation describing this circuit. The inductor and resistor are in series with each other. Therefore, the current through both elements must be equal. Because the direction of <m>i_R(t)</m> opposes the direction of <m>i(t)</m>, a negative sign is used in this relationship, defined in <xref ref="ch6-dischargingrl-irit" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch6-dischargingrl-irit">i_R(t) = -i(t)</md>
+			</p>
+
+			<p>The current-voltage relationship in an inductor, <xref ref="ch6-voltageinductor" />, can be used to define the voltage over the inductor.</p>
+
+			<p>Ohm's law can be used to relate the current through the resistor and the voltage dropped over the resistor. Because the resistor and inductor are in parallel, both share an equivalent voltage drop of <m>v(t)</m>. This relationship is defined in <xref ref="ch6-dischargingrl-voltage" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch6-dischargingrl-voltage">v(t) = Ri_R(t)</md>
+			</p>
+
+			<p>Equate <xref ref="ch6-voltageinductor" /> with <xref ref="ch6-dischargingrl-voltage" />. Use <xref ref="ch6-dischargingrl-irit" /> to obtain an equation in terms of only <m>i(t)</m>. Then, reduce the equation into standard form as described in <xref ref="ch5-first-order-linear-ODEs" />. This differential equation is given in <xref ref="ch6-eqdischargingrl" />. The derivation is shown in <xref ref="ch6-eqdischargingrlproof" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch6-eqdischargingrl">0 = \frac{di(t)}{dt} + \frac{R}{L}i(t)</md>
@@ -361,47 +389,53 @@
 			<proof xml:id="ch6-eqdischargingrlproof">
 				<p>
 					<md>
-						<mrow>0 \amp= \frac{v(t)}{R} + i(t)</mrow>
-						<mrow>\amp= \frac{L}{R}\frac{di(t)}{dt} + i(t)</mrow>
+						<mrow>L\frac{di(t)}{dt} \amp= Ri_R(t)</mrow>
+						<mrow>\amp= -Ri(t)</mrow>
+						<mrow>0 \amp= L\frac{di(t)}{dt} + Ri(t)</mrow>
 						<mrow>\amp= \frac{di(t)}{dt} + \frac{R}{L}i(t)</mrow>
 					</md>
 				</p>
 			</proof>
 
-			<p>The equation for the current in this transient discharging analysis is a first-order, linear, ordinary differential equation. This is consistent with the fact that the circuit itself is a first-order, linear circuit! The solution to the differential equation will not be derived in this book but is given in <xref ref="ch6-homogeneousrlcurrent" />. Note the similarities with the RC homogeneous solution.</p>
+			<p>As expected, this is a homogeneous, first-order, linear, ordinary differential equation. The solution to this differential equation will not be derived in this book but is given in <xref ref="ch6-homogeneousrlcurrent" />. Note the similarities with the homogeneous RC transient response solution, defined in <xref ref="ch5-homogeneousrctransient" />.</p>
 
 			<p>
-				<md number="yes" xml:id="ch6-homogeneousrlcurrent">i(t) = i(0^+)~\textrm{e}^{-\frac{t}{L/R}}~u(t) + i(0^-)~u(-t)</md>
+				<md number="yes" xml:id="ch6-homogeneousrlcurrent">i(t) = i(0^+)~\textrm{e}^{-\frac{t}{\tau}}~u(t) + i(0^-)~u(-t)</md>
 			</p>
 
-			<p>Using <xref ref="ch6-voltageinductor" />, the transient response of the voltage drop over the discharging circuit can also be calculated. This is shown in <xref ref="ch6-homogeneousrlvoltage" /> and derived in <xref ref="ch6-homogeneousrlvoltageproof" />.</p>
-
-			<p>
-				<md number="yes" xml:id="ch6-homogeneousrlvoltage">v(t) = -Ri(0^+)\textrm{e}^{-\frac{t}{L/R}}~u(t)</md>
-			</p>
-
-			<proof xml:id="ch6-homogeneousrlvoltageproof">
-				<p>
-					<md>
-						<mrow>v(t) \amp= L\frac{d}{dt}\left[i(0^+)~\textrm{e}^{-\frac{t}{L/R}}~u(t) + i(0^-)~u(-t)\right]</mrow>
-						<mrow>\amp= L\frac{d}{dt}\left[i(0^+) \textrm{e}^{-\frac{t}{L/R}}\right]~u(t) + L\frac{d}{dt}\left[i(0^-)\right]~u(-t)</mrow>
-						<mrow>\amp= L\left(-\frac{R}{L}\right)i(0^+) \textrm{e}^{-\frac{t}{L/R}}~u(t)</mrow>
-						<mrow>\amp= -Ri(0^+)\textrm{e}^{-\frac{t}{L/R}}~u(t)</mrow>
-					</md>
-				</p>
-			</proof>
-
-			<p>The quantity <m>\tau</m> is the time constant of the circuit. It defines how quickly the current and voltage change at any point in the circuit. Larger <m>\tau</m> values imply that the inductor will take a longer time to discharge. When comparing the homogeneous transient response given in <xref ref="ch6-eqdischargingrl" /> with the standard form of a differential equation shown in <xref ref="ch5-firstorderlinearode-standard" />, we can find the value of <m>\tau</m>, given in <xref ref="ch6-taurlequation" />, where <m>R</m> is the equivalent resistance as seen by the inductor (assuming there are no dependent sources or op-amps present in the circuit). If there are dependent sources or op-amps in the circuit, the Th&#233;venin equivalent circuit seen by the inductor can be used to determine this equivalent resistance. (Alternatively, the differential equation can be derived from the circuit without doing a Th&#233;venin equivalence, and <m>\tau</m> can be determined by analyzing the coefficient <m>a_0</m> of the equation in standard form.)</p>
+			<p>The quantity <m>\tau</m> is the time constant of the circuit. It defines how quickly the current and voltage change at any point in the circuit. Larger <m>\tau</m> values imply that the inductor will take a longer time to discharge.</p>
+			
+			<p>When comparing the homogeneous transient response given in <xref ref="ch6-eqdischargingrl" /> with the standard form of a differential equation shown in <xref ref="ch5-firstorderlinearode-standard" />, we can find the value of <m>\tau</m>, given in <xref ref="ch6-taurlequation" />, where <m>R</m> is the equivalent resistance as seen by the inductor (assuming there are no dependent sources or op-amps present in the circuit). If there are dependent sources or op-amps in the circuit, the Th&#233;venin equivalent circuit seen by the inductor can be used to determine this equivalent resistance. (Alternatively, the differential equation can be derived from the circuit without doing a Th&#233;venin equivalence, and <m>\tau</m> can be determined by analyzing the coefficient <m>a_0</m> of the equation in standard form.)</p>
 
 			<p>
 				<md number="yes" xml:id="ch6-taurlequation">\tau = \frac{L}{R}</md>
 			</p>
 
+			<p>Using <xref ref="ch6-voltageinductor" />, the transient response of the voltage over the discharging inductor can also be calculated. This is shown in <xref ref="ch6-homogeneousrlvoltage" /> and derived in <xref ref="ch6-homogeneousrlvoltageproof" />.</p>
+
+			<p>
+				<md number="yes" xml:id="ch6-homogeneousrlvoltage">v(t) = -Ri(0^+)\textrm{e}^{-\frac{t}{\tau}}~u(t)</md>
+			</p>
+
+			<proof xml:id="ch6-homogeneousrlvoltageproof">
+				<p>
+					<md>
+						<mrow>v(t) \amp= L\frac{d}{dt}\left[i(0^+)~\textrm{e}^{-\frac{t}{\tau}}~u(t) + i(0^-)~u(-t)\right]</mrow>
+						<mrow>\amp= L\frac{d}{dt}\left[i(0^+) \textrm{e}^{-\frac{t}{\tau}}\right]~u(t) + L\frac{d}{dt}\left[i(0^-)\right]~u(-t)</mrow>
+						<mrow>\amp= -\frac{Li(0^+)}{\tau} \textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
+						<mrow>\amp= -\frac{RLi(0^+)}{L} \textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
+						<mrow>\amp= -Ri(0^+)\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
+					</md>
+				</p>
+			</proof>
+
+			
+
 			<example>
 				<title>Homogeneous transient response of an RL circuit</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> and <m>v(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of 0<nbsp />seconds.</p>
+					<p>Derive equations for <m>i(t)</m> and <m>v(t)</m> for the circuit shown below. The switch is closed for a very long time before opening at a time of 0<nbsp />seconds.</p>
 
 					<figure>
   						<caption></caption>
@@ -430,19 +464,19 @@
 							<shortdescription>Circuit with 3 nodes and 2 meshes consisting of an 8V source, 2.4k resistor, 6k resistor, and 9k resistor. The high-potential end of the 8V source connects to the 2.4k resistor at node a. The 2.4k, 6k, and 9k resistors connect at node b. The low-potential end of the 8V source connects to the 6k and 9k resistors at node c. Branch current i(0) is defined through the 6k resistor from node b to node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,5) to [V, l_=8~V]							(0,0);
-									\draw[]	(0,5) to [R, l^=2.4~k$\Omega$]					(2.5,5);
-									\draw[]	(2.5,5) to [R, l_=6~k$\Omega$, *-]				(2.5,2.5);
-									\draw[]	(2.5,2.5) to [short, v^=$v(0)$, i_=$i(0)$, -*]	(2.5,0);
-									\draw[]	(2.5,5) to [short]								(5,5);
-									\draw[]	(5,5) to [R, l^=9~k$\Omega$]					(5,0);
-									\draw[] 	(0,0) to [short]							(5,0);
+									\draw[]	(0,4) to [V, l_=8~V]						(0,0);
+									\draw[]	(0,4) to [R, l^=2.4~k$\Omega$]				(2.5,4);
+									\draw[]	(2.5,4) to [R, l_=6~k$\Omega$, *-]			(2.5,1.5);
+									\draw[]	(2.5,1.5) to [short, i_=$i(0)$, -*]			(2.5,0);
+									\draw[]	(2.5,4) to [short]							(5,4);
+									\draw[]	(5,4) to [R, l^=9~k$\Omega$]				(5,0);
+									\draw[] 	(0,0) to [short]						(5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
 					</figure>
 
-					<p>The initial voltage drop over the inductor will be zero. Source transformation can be used to calculate the initial current through the inductor. The current source will have a value of</p>
+					<p>Source transformation can be used to calculate the initial current through the inductor. The current source will have a value of</p>
 
 					<p>
 						<md>\frac{8~\textrm{V}}{2.4~\textrm{k}\Omega} = 3.33~\textrm{mA}.</md>
@@ -474,7 +508,7 @@
 						</md>
 					</p>
 
-					<p>Analyze the discharging circuit. Re-draw for time <m>t \geq ~0</m> (when the switch is open and the current source is disconnected from the circuit).</p>
+					<p>Analyze the discharging circuit. Re-draw at <m>t = 0^+</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -541,7 +575,7 @@
 		<subsection xml:id="ch6-charging">
 			<title>Charging from Zero Transient Response</title>
 
-			<p>The charging from zero transient response of a circuit corresponds to how the voltage and/or current changes with respect to a sudden application of power to the circuit components. This is another specific case of the general RC transient response, which will be discussed in <xref ref="ch6-generaltransient" />. This section specifically corresponds to scenarios where a fully discharged inductor is suddenly connected to a circuit containing at least one resistive element and a power supply. The circuit diagram shown in <xref ref="nonhomogeneousrlcircuitfigure" /> will be used to analyze the charging response. The switch is in position b for a long time before suddenly moving to position a at time <m>t=0</m>.</p>
+			<p>The charging from zero transient response of a circuit corresponds to how the voltage and/or current changes with respect to a sudden application of DC power to previously discharged circuit components. This is another specific case of the general RL transient response, which will be discussed in <xref ref="ch6-generaltransient" />. This section specifically corresponds to scenarios where a fully discharged inductor is suddenly connected to a circuit containing at least one resistive element and a power supply. The circuit diagram shown in <xref ref="nonhomogeneousrlcircuitfigure" /> will be used to analyze the charging response. The switch is in position b for a long time before suddenly moving to position a at time <m>t=0</m>.</p>
 
 			<figure xml:id="nonhomogeneousrlcircuitfigure">
   				<caption>An RL circuit used to analyze the charging from zero transient response.</caption>
@@ -561,8 +595,33 @@
 			</figure>
 
 			<p>In the initial state of the circuit, all of the energy that may have been stored in the inductor has completely discharged through the discharging resistor (<m>R_D</m>) resulting in an initial current of 0<nbsp />mA.</p>
+			
+			<p>At time <m>t=0^+</m>, the circuit can be analyzed to derive the differential equation defining the circuit. THe circuit diagram is shown in <xref ref="nonhomogeneousrlcircuitfigurepositionb" />.</p>
+			
+			<figure xml:id="nonhomogeneousrlcircuitfigurepositionb">
+  				<caption>An RL circuit used to analyze the charging from zero transient response.</caption>
+				<image width="80%" xml:id="ch6-nonhomogeneousrlcircuitfigurepositionb">
+					<shortdescription>Circuit with two meshes and four nodes consisting of a current source Iin, inductor L, resistor R, resistor RD, and SPDT switch. Iin is connected to R and output a of the SPDT switch at node a. Iin flows into node a. RD connects to the other output of the SPDT switch at node b. The input of the SPDT switch connects to the inductor at node c. Iin, the inductor, and RD all connect to ground at node d. Iin flows out of node d. Branch current i(t) is defined through the inductor from node c to node d. Voltage drop v(t) is defined over the inductor from node c to node d. The SPDT switch is depicted as being in position a.</shortdescription>
+					<latex-image>
+						\begin{tikzpicture}[font=\sffamily]
+							\draw[]	(2,1) node[cute spdt up, rotate=90, anchor=in] (switch) {};
+							\draw[]	($(switch.out 1)-(2.5,0)$) to [R, l_=$R$, *-*] ++(down:3.2) -- ($(switch.in)-(2.5,2.5)$);
+							\draw[]	(switch.in) to [L, l_=$L$, v^=$v(t)$, i_=$i(t)$, -*] ++(down:2.5) node[ground] {};
+							\draw[]	(switch.out 1) node[above] {a} to [short] ++(left:2.5);
+							\draw[]	(switch.out 2) node[above] {b} to [short] ++(right:2.5) to [R, l_=$R_D$] ++(down:3) |- ($(switch.in)-(0,2.5)$);
+							\draw[]	($(switch.in)-(0,2.5)$) to [short]	++(left:5) to [I, l^=$I_{IN}$] ++(up:3) |- ($(switch.out 1)-(2.5,0)$);
+						\end{tikzpicture}
+					</latex-image>
+  				</image>
+			</figure>
 
-			<p>In the charging condition (when the switch has been moved to position a), Kirchhoff's current law can be used to analyze the current through each circuit element. From this, the differential equation for <m>i(t)</m> can be derived. This solution is expressed in <xref ref="ch6-chargingrldiffeq" />, and the derivation is shown in <xref ref="ch6-chargingrldiffeqproof" />.</p>
+			<p>Use KCL to relate the current through each branch of the circuit. Because the resistor and inductor are in parallel, they share a common voltage <m>v(t)</m>. This relationship is defined in <xref ref="ch6-rlchargingzero-kcleq" />.</p>
+			
+			<p>
+				<md number="yes" xml:id="ch6-rlchargingzero-kcleq">I_{IN} = \frac{v(t)}{R} + i(t)</md>
+			</p>
+			
+			<p>The charging response can be calculated by plugging <xref ref="ch6-voltageinductor" /> into <xref ref="ch6-rlchargingzero-kcleq" /> and reducing to standard form. This equation is defined in <xref ref="ch6-chargingrldiffeq" /> and the derivation is shown in <xref ref="ch6-chargingrldiffeqproof" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch6-chargingrldiffeq">\frac{R}{L}I_{IN} = \frac{di(t)}{dt} + \frac{R}{L}i(t)</md>
@@ -572,17 +631,16 @@
 				<p>
 					<md>
 						<mrow>I_{IN} \amp= \frac{v(t)}{R} + i(t)</mrow>
-						<mrow>v(t) \amp= L\frac{di(t)}{dt}</mrow>
 						<mrow>I_{IN} \amp= \frac{L}{R}\frac{di(t)}{dt} + i(t)</mrow>
 						<mrow>\frac{R}{L}I_{IN} \amp= \frac{di(t)}{dt} + \frac{R}{L}i(t)</mrow>
 					</md>
 				</p>
 			</proof>
 
-			<p>The solution to this differential equation (assuming that the initial current through the inductor is 0<nbsp />mA) is given in <xref ref="ch6-chargingrlcurrent" />. Again, note the similarities with the RC circuit charging transient response.</p>
+			<p>The solution to this differential equation (assuming that the initial current through the inductor is 0<nbsp />mA) is given in <xref ref="ch6-chargingrlcurrent" />, where <m>i(\infty)</m> is the final steady-state current through the inductor after it has fully charged. Again, note the similarities with the RC circuit charging transient response defined in <xref ref="ch5-eqrcchargingvoltage" />.</p>
 
 			<p>
-				<md number="yes" xml:id="ch6-chargingrlcurrent">i(t) = i(\infty)~\left[1-\textrm{e}^{-\frac{t}{L/R}}\right]~u(t)</md>
+				<md number="yes" xml:id="ch6-chargingrlcurrent">i(t) = i(\infty)~\left[1-\textrm{e}^{-\frac{t}{\tau}}\right]~u(t)</md>
 			</p>
 
 			<p>Similar to the homogeneous RL circuit, the time constant <m>\tau</m> defines how quickly (or slowly) the inductor responds to changes in current. The equation for the time constant continues to be defined by <xref ref="ch6-taurlequation" /> and is calculated in the same manner as with homogeneous RL circuits.</p>
@@ -590,17 +648,18 @@
 			<p><xref ref="ch6-voltageinductor" /> can be used to calculate the voltage drop over the inductor during the transient charging process. The result is expressed in <xref ref="ch6-chargingrlvoltage" /> and derived in <xref ref="ch6-chargingrlvoltageproof" />.</p>
 
 			<p>
-				<md number="yes" xml:id="ch6-chargingrlvoltage">Ri(\infty)~\textrm{e}^{-\frac{t}{L/R}}~u(t)</md>
+				<md number="yes" xml:id="ch6-chargingrlvoltage">Ri(\infty)~\textrm{e}^{-\frac{t}{\tau}}~u(t)</md>
 			</p>
 
 			<proof xml:id="ch6-chargingrlvoltageproof">
 				<p>
 					<md>
-						<mrow>v(t) \amp= L\frac{d}{dt}\left[i(\infty)~\left(1-\textrm{e}^{-\frac{t}{L/R}}\right)~u(t)\right]</mrow>
-						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)~u(t)-i(\infty)~\textrm{e}^{-\frac{t}{L/R}}~u(t)\right]</mrow>
-						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)\right]~u(t) - L\frac{d}{dt}\left[i(\infty)~\textrm{e}^{-\frac{t}{L/R}}\right]~u(t)</mrow>
-						<mrow>\amp= -L\left(-\frac{R}{L}\right)i(\infty)\textrm{e}^{-\frac{t}{L/R}}~u(t)</mrow>
-						<mrow>\amp= Ri(\infty)~\textrm{e}^{-\frac{t}{L/R}}~u(t)</mrow>
+						<mrow>v(t) \amp= L\frac{d}{dt}\left[i(\infty)~\left(1-\textrm{e}^{-\frac{t}{\tau}}\right)~u(t)\right]</mrow>
+						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)~u(t)-i(\infty)~\textrm{e}^{-\frac{t}{\tau}}~u(t)\right]</mrow>
+						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)\right]~u(t) - L\frac{d}{dt}\left[i(\infty)~\textrm{e}^{-\frac{t}{\tau}}\right]~u(t)</mrow>
+						<mrow>\amp= -\frac{Li(\infty)}{-\tau}\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
+						<mrow>\amp= \frac{LRi(\infty)}{L}\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
+						<mrow>\amp= Ri(\infty)~\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
 					</md>
 				</p>
 			</proof>
@@ -609,7 +668,7 @@
 				<title>Charging from zero transient response</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> and <m>v(t)</m> for the circuit below. The switch is open for a very long time before closing at a time of 0<nbsp />seconds.</p>
+					<p>Derive equations for <m>i(t)</m> and <m>v(t)</m> for the circuit below. The switch is open for a very long time before closing at a time of 0<nbsp />seconds.</p>
 
 					<figure>
   						<caption></caption>
@@ -631,7 +690,7 @@
 
 					<p>The initial voltage and current properties of the inductor are zero. This is because the inductor is disconnected from the source in the initial steady-state, and any current has long since discharged through the 12<nbsp />&#8486; resistor.</p>
 
-					<p>Calculate the final (steady-state) conditions of the circuit. Re-draw the circuit to represent the time well after the switch closes. Because the circuit is under DC conditions, the inductor can be represented as a short.</p>
+					<p>Calculate the final steady-state conditions of the circuit. Because the circuit is under DC conditions, the inductor can be represented as a short.</p>
 
 					<figure>
   						<caption></caption>
@@ -642,7 +701,7 @@
 									\draw[]	(0,0) to [I, l^=6~mA]							(0,2.5) to [short] ++(right:2.5);
 									\draw[]	(2.5,2.5) to [R, l_=10~$\Omega$, *-*]			(2.5,0);
 									\draw[]	(2.5,2.5) to [R, l^=10~$\Omega$]				(5,2.5) to [short] ++(right:2.5);
-									\draw[]	(5,2.5) to [short, *-*, v^=$v(\infty)$, i_=$i(\infty)$]	(5,0);
+									\draw[]	(5,2.5) to [short, *-*, i_=$i(\infty)$]			(5,0);
 									\draw[]	(7.5,2.5) to [R, l^=12~$\Omega$]				(7.5,0);
 									\draw[]	(0,0) to [short]								(7.5,0);
 								\end{tikzpicture}
@@ -661,7 +720,7 @@
 									\draw[]	(0,0) to [I, l^=6~mA]							(0,2.5) to [short] ++(right:2.5);
 									\draw[]	(2.5,2.5) to [R, l_=10~$\Omega$, *-*]			(2.5,0);
 									\draw[]	(2.5,2.5) to [R, l^=10~$\Omega$]				(5,2.5);
-									\draw[]	(5,2.5) to [short, v^=$v(\infty)$, i_=$i(\infty)$]		(5,0);
+									\draw[]	(5,2.5) to [short, i_=$i(\infty)$]				(5,0);
 									\draw[]	(0,0) to [short]								(5,0);
 								\end{tikzpicture}
 							</latex-image>
@@ -677,7 +736,7 @@
 						</md>
 					</p>
 
-					<p>Analyze the charging circuit. Re-draw for time <m>t \geq 0</m>, which is when the switch is closed. Deactivate the current source by replacing it with an open to calculate the equivalent resistance as seen by the inductor.</p>
+					<p>Analyze the charging circuit. Re-draw at <m>t = 0^+</m>. Deactivate the current source by replacing it with an open to calculate the equivalent resistance as seen by the inductor.</p>
 
 					<figure>
   						<caption></caption>
@@ -753,7 +812,7 @@
 				<title>Charging from zero transient response with a dependent source</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> and <m>v(t)</m> for the circuit shown below. Assume that the inductor is completely discharged in the initial steady-state condition. The switch has been open for a very long time before closing at a time of 0<nbsp />seconds. The parameter values are <m>I_S = 2~\textrm{A}</m>, <m>R_1 = 2~\Omega</m>, <m>R_2 = 3~\Omega</m>, <m>L = 25~\textrm{mH}</m>, and <m>k = 0.1</m>.</p>
+					<p>Derive equations for <m>i(t)</m> and <m>v(t)</m> for the circuit shown below. Assume that the inductor is completely discharged in the initial steady-state condition. The switch has been open for a very long time before closing at a time of 0<nbsp />seconds. The parameter values are <m>I_S = 2~\textrm{A}</m>, <m>R_1 = 2~\Omega</m>, <m>R_2 = 3~\Omega</m>, <m>L = 25~\textrm{mH}</m>, and <m>k = 0.1</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -781,12 +840,12 @@
 							<shortdescription>Circuit with 2A source, 2ohm resistor, 3ohm resistor, and 0.1*Vx VCVS. The 2A source, 2ohm, and high-potential end of the VCVS connect at node a. The 2A source flows into node a. The low-potential end of the VCVS connects to the 3ohm at node b. The 3ohm, 2ohm, and 2A source connect at node c. The 2A source flows out of node c. Vx drops over the 2ohm resistor from node a to node c. Branch current i(infinity) flows through the 3ohm resistor from node b to node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,0) to [I, l^=2~A]		(0,2.5);
-									\draw[]	(0,2.5) to [short]			(2.5,2.5) to [R, l_=2~$\Omega$, v^=$V_X$, *-*] ++(down:2.5);
-									\draw[]	(2.5,2.5) to [cV, l^=$0.1V_X$]	(5,2.5);
-									\draw[]	(5,2.5) to [R, l^=3~$\Omega$]	(7.5,2.5);
-									\draw[]	(7.5,2.5) to [short, v^=$v(\infty)$, i_=$i(\infty)$]	(7.5,0);
-									\draw[]	(0,0) to [short]				(7.5,0);
+									\draw[]	(0,0) to [I, l^=2~A]					(0,2.5);
+									\draw[]	(0,2.5) to [short]		(2.5,2.5) to [R, l_=2~$\Omega$, v^=$V_X$, *-*] ++(down:2.5);
+									\draw[]	(2.5,2.5) to [cV, l^=$0.1V_X$]			(5,2.5);
+									\draw[]	(5,2.5) to [R, l^=3~$\Omega$]			(7.5,2.5);
+									\draw[]	(7.5,2.5) to [short, i_=$i(\infty)$]	(7.5,0);
+									\draw[]	(0,0) to [short]						(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -812,10 +871,6 @@
 						</md>
 					</p>
 
-					<p>
-						<alert>Method 1: Th&#233;venin equivalent circuit</alert>
-					</p>
-
 					<p>There are two equations and two unknowns. These two equations can be expressed in a matrix. The left column contains coefficients of <m>V_X</m>, the middle column contains coefficients of <m>i(\infty)</m>, and the right column contains constants. The units of V, A, and &#8486; are used.</p>
 					
 					<p>
@@ -839,8 +894,12 @@
 					</p>
 
 					<p>This means that <m>i(\infty) = 0.75~\textrm{A}</m>.</p>
+					
+					<p>
+						<alert>Method 1: Th&#233;venin equivalent circuit</alert>
+					</p>
 
-					<p>There are two methods that can be used to calculate <m>\tau</m>. In either case, the circuit should be analyzed at <m>t = 0^+</m>, so the switch will be closed. The first method that will be used in this example is to calculate the Th&#233;venin equivalent circuit as seen by the inductor and use that Th&#233;venin equivalent resistance in <xref ref="ch6-taurlequation" />.</p>
+					<p>There are two methods that can be used to calculate <m>\tau</m>. In either case, the circuit should be analyzed at <m>t = 0^+</m>, so the switch will be closed. The first method that will be used in this example is to calculate the Th&#233;venin equivalent circuit as seen by the inductor and use the Th&#233;venin equivalent resistance in <xref ref="ch6-taurlequation" />.</p>
 
 					<p>The Th&#233;venin equivalent circuit is shown below.</p>
 
@@ -972,28 +1031,11 @@
 							<mrow>(1-k)R_1I_S \amp= (1-k)R_1i(t) + R_2i(t) + L\frac{di(t)}{dt}</mrow>
 							<mrow>(1-k)R_1I_S \amp= \left((1-k)R_1 + R_2\right)i(t) + L\frac{di(t)}{dt}</mrow>
 							<mrow>\frac{(1-k)R_1I_S}{L} \amp= \frac{di(t)}{dt} + \frac{(1-k)R_1+R_2}{L}i(t)</mrow>
-						</md>
-					</p>
-
-					<p>Numeric quantities for each parameter can now be plugged in to calculate the differential equation. Units are not included in the equation, but base units of A, &#8486;, and H are used.</p>
-
-					<p>
-						<md>
-							<mrow>\frac{(1-0.1)(2)(2)}{25 \times 10^{-3}} \amp= \frac{di(t)}{dt} + \frac{(1-0.1)(2)+3}{25 \times 10^{-3}}i(t)</mrow>
 							<mrow>3.6 \amp= \frac{di(t)}{dt} + 192 i(t)</mrow>
 						</md>
 					</p>
 
 					<p>This yields the same result as the Th&#233;venin equivalent circuit method, as expected. If we had not already derived the equivalent resistance as seen by the inductor, we could use <xref ref="ch6-taurlequation" /> to solve for <m>R</m>.</p>
-
-					<p>
-						<md>
-							<mrow>\tau \amp= \frac{L}{R}</mrow>
-							<mrow>\frac{1}{192}~\textrm{s} \amp= \frac{25 \times 10^{-3}~\textrm{H}}{R}</mrow>
-							<mrow>R \amp= (25 \times 10^{-3}~\textrm{H})(192~\textrm{s}^{-1})</mrow>
-							<mrow>\amp= 4.8~\Omega</mrow>
-						</md>
-					</p>
 
 					<p>Use <xref ref="ch6-chargingrlcurrent" /> to derive an equation for <m>i(t)</m> and <xref ref="ch6-chargingrlvoltage" /> to derive an equation for <m>v(t)</m>.</p>
 					
@@ -1015,7 +1057,7 @@
 			<p>Two special cases of the RL transient response have been analyzed: the homogeneous response (<m>i(\infty)=0</m>) and the charging from zero response (<m>i(0)=0</m>). In general, the initial and final currents through an inductor can be any arbitrary values. The most general form of the equation for the transient response of an RL circuit is therefore given in <xref ref="ch6-generalrlcurrent" />.</p>
 
 			<p>
-				<md number="yes" xml:id="ch6-generalrlcurrent">i(t) = \left[i(\infty) + \left( i(0^+) - i(\infty) \right) \textrm{e}^{-\frac{t}{L/R}} \right]~u(t) + i(0^-)~u(-t)</md>
+				<md number="yes" xml:id="ch6-generalrlcurrent">i(t) = \left[i(\infty) + \left( i(0^+) - i(\infty) \right) \textrm{e}^{-\frac{t}{\tau}} \right]~u(t) + i(0^-)~u(-t)</md>
 			</p>
 
 			<p>The time constant <m>\tau</m> defines how quickly (or slowly) the inductor responds to changes in current. The equation for the time constant continues to be defined by <xref ref="ch6-taurlequation" /> and is calculated in the same manner as with previously defined RL circuits.</p>
@@ -1023,17 +1065,19 @@
 			<p>Voltage dropped over the inductor can be calculated by using <xref ref="ch6-voltageinductor" />. The solution is shown in <xref ref="ch6-generalrlvoltage" /> and derived in <xref ref="ch6-generalrlvoltageproof" />.</p>
 
 			<p>
-				<md number="yes" xml:id="ch6-generalrlvoltage">v(t) = R \left[i(\infty) - i(0^+)\right] \textrm{e}^{-\frac{t}{L/R}}~u(t)</md>
+				<md number="yes" xml:id="ch6-generalrlvoltage">v(t) = R \left[i(\infty) - i(0^+)\right] \textrm{e}^{-\frac{t}{\tau}}~u(t)</md>
 			</p>
 
 			<proof xml:id="ch6-generalrlvoltageproof">
 				<p>
 					<md>
-						<mrow>v(t) \amp= L\frac{d}{dt}\left[\left[i(\infty) + \left( i(0^+) - i(\infty) \right) \textrm{e}^{-\frac{t}{L/R}} \right]~u(t) + i(0^-)~u(-t)\right]</mrow>
-						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)~u(t) + i(0^+)\textrm{e}^{-\frac{t}{L/R}}~u(t) - i(\infty)\textrm{e}^{-\frac{t}{L/R}}~u(t) + i(0^-)u(-t)\right]</mrow>
-						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)\right]~u(t) + L\frac{d}{dt}\left[i(0^+)\textrm{e}^{-\frac{t}{L/R}}\right]~u(t) - L\frac{d}{dt}\left[i(\infty)\textrm{e}^{-\frac{t}{L/R}}\right]~u(t) + L\frac{d}{dt}\left[i(0^-)\right]~u(-t)</mrow>
-						<mrow>\amp= L\left(-\frac{R}{L}\right)i(0^+)\textrm{e}^{-\frac{t}{L/R}}~u(t) - L\left(-\frac{R}{L}\right)i(\infty)\textrm{e}^{-\frac{t}{L/R}}~u(t)</mrow>
-						<mrow>\amp= R\left[i(\infty)-i(0^+)\right]~\textrm{e}^{-\frac{t}{L/R}}~u(t)</mrow>
+						<mrow>v(t) \amp= L\frac{d}{dt}\left[\left[i(\infty) + \left( i(0^+) - i(\infty) \right) \textrm{e}^{-\frac{t}{\tau}} \right]~u(t) + i(0^-)~u(-t)\right]</mrow>
+						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)~u(t) + i(0^+)\textrm{e}^{-\frac{t}{\tau}}~u(t) - i(\infty)\textrm{e}^{-\frac{t}{\tau}}~u(t) + i(0^-)u(-t)\right]</mrow>
+						<mrow>\amp= L\frac{d}{dt}\left[i(\infty)\right]~u(t) + L\frac{d}{dt}\left[i(0^+)\textrm{e}^{-\frac{t}{\tau}}\right]~u(t) - L\frac{d}{dt}\left[i(\infty)\textrm{e}^{-\frac{t}{\tau}}\right]~u(t)</mrow>
+						<mrow>\amp+ L\frac{d}{dt}\left[i(0^-)\right]~u(-t)</mrow>
+						<mrow>\amp= \frac{Li(0^+)}{-\tau}\textrm{e}^{-\frac{t}{\tau}}~u(t) - \frac{Li(\infty)}{-\tau}\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
+						<mrow>\amp= -\frac{RLi(0^+)}{L}\textrm{e}^{-\frac{t}{\tau}}~u(t) + \frac{RLi(\infty)}{L}\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
+						<mrow>\amp= R\left[i(\infty)-i(0^+)\right]~\textrm{e}^{-\frac{t}{\tau}}~u(t)</mrow>
 					</md>
 				</p>
 			</proof>
@@ -1050,7 +1094,7 @@
 				<title>General transient response of an inductor</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> for the circuit below. Switch S1 is closed for a very long time before opening at a time of 0<nbsp />seconds. Switch S2 is open for a very long time before closing at a time of 0.005<nbsp />seconds.</p>
+					<p>Derive an equation for <m>i(t)</m> for the circuit below. Switch S1 is closed for a very long time before opening at a time of 0<nbsp />seconds. Switch S2 is open for a very long time before closing at a time of 0.005<nbsp />seconds.</p>
 
 					<figure>
   						<caption></caption>
@@ -1311,7 +1355,11 @@
 					<p>The overall equation for <m>i(t)</m> is expressed below.</p>
 
 					<p>
-						<md>i(t) = 667~\textrm{mA}~u(-t) + 667~\textrm{mA}~\textrm{e}^{-600t}~u(t) - 33.2~\textrm{mA}~\textrm{e}^{-600(t-0.005)}~u(t-0.005) + \left[1000~\textrm{mA} - 966.8~\textrm{mA}~\textrm{e}^{-200(t-0.005)}\right]~u(t)</md>
+						<md>
+							<mrow>i(t) \amp= 667~\textrm{mA}~u(-t) + 667~\textrm{mA}~\textrm{e}^{-600t}~u(t)</mrow>
+							<mrow>\amp- 33.2~\textrm{mA}~\textrm{e}^{-600(t-0.005)}~u(t-0.005)</mrow>
+							<mrow>\amp+ \left[1000~\textrm{mA} - 966.8~\textrm{mA}~\textrm{e}^{-200(t-0.005)}\right]~u(t)</mrow>
+						</md>
 					</p>
 					
 				</statement>
@@ -1321,7 +1369,7 @@
 				<title>General transient response of a resistor in an RL circuit</title>
 				
 				<statement>
-					<p>Calculate <m>i(t)</m> and <m>v(t)</m> for the circuit below. The switch is open for a very long time before closing at a time of 0<nbsp />seconds. The switch then re-opens at a time of 0.01<nbsp />seconds.</p>
+					<p>Derive equations for <m>i(t)</m> and <m>v(t)</m> for the circuit below. The switch is open for a very long time before closing at a time of 0<nbsp />seconds. The switch then re-opens at a time of 0.01<nbsp />seconds.</p>
 
 					<figure>
   						<caption></caption>
@@ -1776,7 +1824,7 @@
   						</image>
 					</figure>
 
-					<p>Before analyzing the circuit when the switch re-opens, calculate the value of <m>i(t)</m> at a time of 0.01^-<nbsp />s. This will act as the value to subtract out of the equation for the second time interval.</p>
+					<p>Before analyzing the circuit when the switch re-opens, calculate the value of <m>i(t)</m> at a time of <m>0.01^-~\textrm{s}</m>. This will act as the value to subtract out of the equation for the second time interval.</p>
 
 					<p>
 						<md>
@@ -1854,7 +1902,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ} \amp= \frac{(42~\Omega)(30~\Omega)}{42~\Omega + 30~\Omega}</mrow>
-							<mrow>\amp= \frac{1260~\Omega^2}{72~\Omega}</mrow>
 							<mrow>\amp= 17.5~\Omega</mrow>
 						</md>
 					</p>
@@ -1976,16 +2023,23 @@
 					<p>The overall equation for current is described below.</p>
 
 					<p>
-						<md>i(t) = \left[0.167~\textrm{A} + 0.333~\textrm{A}~\textrm{e}^{-150t}\right]~u(t) + \left[-0.167~\textrm{A}-0.074~\textrm{e}^{-150(t-0.01)}\right]~u(t-0.01)-0.583~\textrm{A}~\textrm{e}^{-225(t-0.01)}~u(t-0.01)</md>
+						<md>
+							<mrow>i(t) \amp= \left[0.167~\textrm{A} + 0.333~\textrm{A}~\textrm{e}^{-150t}\right]~u(t)</mrow>
+							<mrow>\amp+ \left[-0.167~\textrm{A}-0.074~\textrm{e}^{-150(t-0.01)}\right]~u(t-0.01)</mrow>
+							<mrow>\amp- 0.583~\textrm{A}~\textrm{e}^{-225(t-0.01)}~u(t-0.01)</mrow>
+						</md>
 					</p>
 
 					<p>Use Ohm's law to calculate <m>v(t).</m></p>
 
 					<p>
 						<md>
-							<mrow>v(t) \amp= Ri(t)</mrow>
-							<mrow>\amp= (30~\Omega)\left(\left[0.167~\textrm{A} + 0.333~\textrm{A}~\textrm{e}^{-150t}\right]~u(t) + \left[-0.167~\textrm{A}-0.074~\textrm{e}^{-150(t-0.01)}\right]~u(t-0.01)-0.583~\textrm{A}~\textrm{e}^{-225(t-0.01)}~u(t-0.01)\right)</mrow>
-							<mrow>\amp= \left[5~\textrm{V} + 10~\textrm{V}~\textrm{e}^{-150t}\right]~u(t) + \left[-5~\textrm{V} - 2.23~\textrm{V}~\textrm{e}^{-150(t-0.01)}\right]~u(t-0.01) - 17.5~\textrm{V}~\textrm{e}^{-225(t-0.01)}~u(t-0.01)</mrow>
+							<mrow>v(t) \amp= (30~\Omega)\biggl(\left[0.167~\textrm{A} + 0.333~\textrm{A}~\textrm{e}^{-150t}\right]~u(t)</mrow>
+							<mrow>\amp+ \left[-0.167~\textrm{A}-0.074~\textrm{e}^{-150(t-0.01)}\right]~u(t-0.01)</mrow>
+							<mrow>\amp- 0.583~\textrm{A}~\textrm{e}^{-225(t-0.01)}~u(t-0.01)\biggr)</mrow>
+							<mrow>\amp= \left[5~\textrm{V} + 10~\textrm{V}~\textrm{e}^{-150t}\right]~u(t)</mrow>
+							<mrow>\amp+ \left[-5~\textrm{V} - 2.23~\textrm{V}~\textrm{e}^{-150(t-0.01)}\right]~u(t-0.01)</mrow>
+							<mrow>\amp- 17.5~\textrm{V}~\textrm{e}^{-225(t-0.01)}~u(t-0.01)</mrow>
 						</md>
 					</p>
 
@@ -2082,7 +2136,7 @@
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,2.5) to [L, l^=10~mH, o-]	(2.5,2.5);
-									\draw[]	(2.5,2.5) to [L, l_=24.375~mH]	(2.5,0);
+									\draw[]	(2.5,2.5) to [L, l_=24.4~mH]	(2.5,0);
 									\draw[]	(0,0) to [L, l_=40~mH, o-]		(2.5,0);
 								\end{tikzpicture}
 							</latex-image>
@@ -2251,7 +2305,7 @@
 
 					<p>
 						<md>
-							<mrow>L_EQ \amp= 250</mrow>
+							<mrow>L_{EQ} \amp= 250</mrow>
 							<mrow>250 \amp= (300+L_X)//200+100</mrow>
 							<mrow>150 \amp= \frac{200(300+L_X)}{200+300+L_X}</mrow>
 							<mrow>\amp= \frac{60000 + 200L_X}{500+L_X}</mrow>
@@ -2435,13 +2489,13 @@
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\node[cute spdt down, rotate=180, anchor=in] at 					(2.5,2.5) (switch) {};
-									\draw[]	($(switch.out 2)-(2.5,0)$) to [R, l_=330~$\Omega$, *-*]		++(down:5.4) |- (7.5,-2.5);
+									\draw[]	($(switch.out 2)-(2.5,0)$) to [R, l_=330~$\Omega$, *-*]		++(down:2.9) |- (7.5,0);
 									\draw[]	(switch.out 2) node[above] {a} to [short]					++(left:5);
-									\draw[]	($(switch.out 2)-(5,0)$) to [I, l_=16~mA]				++(down:5.4) --++ (right:2.5);
+									\draw[]	($(switch.out 2)-(5,0)$) to [I, l_=16~mA]				++(down:2.9) --++ (right:2.5);
 									\draw[]	(2.5,2.5) to [short]										++(2.5,0);
 									\draw[]	(5,2.5) to [R, l^=560~$\Omega$]								++(2.5,0);
-									\draw[]	(5,2.5) to [R, l_=180~$\Omega$, *-*]						++(down:5);
-									\draw[]	(7.5,2.5) to [L, l_=2.89~mH]								++(down:5);
+									\draw[]	(5,2.5) to [R, l_=180~$\Omega$, *-*]						++(down:2.5);
+									\draw[]	(7.5,2.5) to [L, l_=2.89~mH]								++(down:2.5);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -2533,11 +2587,7 @@
 				</answer>
 
 				<solution>
-					<p>Start by combining the two series inductors. The equivalent inductance of the two series inductors is</p>
-					
-					<p>
-						<md>680~\mu\textrm{H} + 120~\mu\textrm{H} = 800~\mu\textrm{H}</md>.
-					</p>
+					<p>Start by combining the two series inductors by adding the two inductances together.</p>
 
 					<figure>
 						<caption></caption>
@@ -2635,21 +2685,21 @@
 					<figure>
 						<caption></caption>
 						<image width="100%" xml:id="ch6-equivalentinductance-example5-solution6">
-							<shortdescription>Circuit with 4 nodes and 4 meshes consisting of a 20V source, 40mA source, three resistors, one inductor, and an SPST switch. The 1.5kohm, 234uH, 3.3kohm, and one end of the SPST switch connect at node a. The other end of the SPST switch connects to the 2.2kohm and 40mA source at node b. The 40mA source flows into node b. The 3.3kohm connects to the high-potential end of the 20V source at node c. The 1.5kohm, 234uH, low-potential end of the 20V source, 2.2kohm, and 40mA source connect at node d. The 40mA source flows out of node d. The SPST switch is depicted as being closed.</shortdescription>
+							<shortdescription>Circuit with 3 nodes and 4 meshes consisting of a 20V source, 40mA source, three resistors, and one inductor. The 1.5kohm, 234uH, 3.3kohm, 2.2kohm, and 40mA source at node a. The 40mA source flows into node a. The 3.3kohm connects to the high-potential end of the 20V source at node b. The 1.5kohm, 234uH, low-potential end of the 20V source, 2.2kohm, and 40mA source connect at node c. The 40mA source flows out of node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-										\draw[]	(0,5)	to [R, l_=1.5~k$\Omega$]	(0,0);
-										\draw[]	(0,5) to [short]	(5,5) to [cute closed switch]	++(right:2.5) to [short] ++(right:2.5);
-										\draw[]	(2.5,5) to [L, l_=234~$\mu$H, *-*]	++(down:5);
-										\draw[]	(5,5) to [R, l_=3.3~k$\Omega$, *-]	++(down:2.5) to [V, l_=20~V, -*]	++(down:2.5);
-										\draw[]	(7.5,5) to [R, l_=2.2~k$\Omega$, *-*]	++(down:5);
-										\draw[]	(0,0) to [short]	++(right:10) to [I, l^=40~mA]	++(up:5);
-									\end{tikzpicture}
+									\draw[]	(0,5)	to [R, l_=1.5~k$\Omega$]	(0,0);
+									\draw[]	(0,5) to [short]	(10,5);
+									\draw[]	(2.5,5) to [L, l_=234~$\mu$H, *-*]	++(down:5);
+									\draw[]	(5,5) to [R, l_=3.3~k$\Omega$, *-]	++(down:2.5) to [V, l_=20~V, -*]	++(down:2.5);
+									\draw[]	(7.5,5) to [R, l_=2.2~k$\Omega$, *-*]	++(down:5);
+									\draw[]	(0,0) to [short]	++(right:10) to [I, l^=40~mA]	++(up:5);
+								\end{tikzpicture}
 							</latex-image>
   						</image>
 					</figure>
 
-					<p>Both sources should be deactivated. The switch will be replaced by a short.</p>
+					<p>Both sources should be deactivated.</p>
 
 					<figure>
 						<caption></caption>
@@ -2710,8 +2760,7 @@
 					
 					<p>
 						<md>
-							<mrow>v(t) \amp= L\frac{di(t)}{dt}</mrow>
-							<mrow>\amp= 0.02\frac{d}{dt}\left[0.05t~u(t)\right]</mrow>
+							<mrow>v(t) \amp= 0.02\frac{d}{dt}\left[0.05t~u(t)\right]</mrow>
 							<mrow>\amp= 0.02\frac{d}{dt}\left[0.05t\right]~u(t)</mrow>
 							<mrow>\amp= 0.02(0.05)~u(t)</mrow>
 							<mrow>\amp= 0.001~\textrm{V}~u(t)</mrow>
@@ -2722,8 +2771,7 @@
 					
 					<p>
 						<md>
-							<mrow>p(t) \amp= i(t)v(t)</mrow>
-							<mrow>\amp= (0.05~t~u(t))(0.001~u(t))</mrow>
+							<mrow>p(t) \amp= (0.05~t~u(t))(0.001~u(t))</mrow>
 							<mrow>\amp= 5\times10^{-5}~\textrm{W}~u(t)</mrow>
 						</md>
 					</p>
@@ -2749,8 +2797,7 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{1}{L}\int_{-\infty}^t v(\tau)\, d\tau</mrow>
-							<mrow>\amp= \frac{1}{15\times10^{-6}}\int_{-\infty}^t \cos(5000\tau)~u(\tau)\, d\tau</mrow>
+							<mrow>i(t) \amp= \frac{1}{15\times10^{-6}}\int_{-\infty}^t \cos(5000\tau)~u(\tau)\, d\tau</mrow>
 							<mrow>\amp= \frac{1}{15\times10^{-6}}\int_{0}^t \cos(5000\tau)\, d\tau~u(t)</mrow>
 							<mrow>\amp= \frac{1}{(15\times10^{-6})(5000)} \sin(5000\tau) \Big|^t_0~u(t)</mrow>
 							<mrow>\amp= \frac{1}{0.075} \sin(5000\tau) \Big|^t_0~u(t)</mrow>
@@ -2763,8 +2810,7 @@
 
 					<p>
 						<md>
-							<mrow>p(t) \amp= i(t)v(t)</mrow>
-							<mrow>\amp= (13.33~\sin(5000t)~u(t))(1~\cos(5000t)~u(t))</mrow>
+							p(t) = (13.33~\sin(5000t)~u(t))(1~\cos(5000t)~u(t))
 						</md>
 					</p>
 
@@ -2795,8 +2841,7 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= \frac{1}{L}\int_{-\infty}^t v(\tau)\, d\tau</mrow>
-							<mrow>\amp= \frac{1}{0.01}\int_{-\infty}^t 10~\textrm{e}^{-2500\tau}~u(\tau)\, d\tau</mrow>
+							<mrow>i(t) \amp= \frac{1}{0.01}\int_{-\infty}^t 10~\textrm{e}^{-2500\tau}~u(\tau)\, d\tau</mrow>
 							<mrow>\amp= \frac{1}{0.01}\int_{0}^t 10~\textrm{e}^{-2500\tau}\, d\tau~u(t)</mrow>
 							<mrow>\amp= \frac{1}{(0.01)(-2500)}\left(10~\textrm{e}^{-2500\tau}\right)\Big|^t_0~u(t)</mrow>
 							<mrow>\amp= \frac{1}{(0.01)(-2500)}\left(10~\textrm{e}^{-2500t}-10\right)~u(t)</mrow>
@@ -3032,11 +3077,11 @@
     						<shortdescription>Circuit with 3 nodes and 1 mesh consisting of a 6V source, 300ohm resistor, and 900ohm resistor. All three circuit elements are wired in series. Branch current i(0) is defined as flowing through the resistors from the high-potential end of the source to the low-potential end of the source.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) to [V, l_=6~V]						(0,0);
-									\draw[]	(0,2.5) to [R, l^=300~$\Omega$]				(2.5,2.5);
-									\draw[]	(2.5,2.5) to [R, l^=900~$\Omega$]			(5,2.5);
-									\draw[]	(5,2.5) to [short, v^=$v(0)$, i_=$i(0)$]	(5,0);
-									\draw[]	(0,0) to [short]							(5,0);
+									\draw[]	(0,2.5) to [V, l_=6~V]					(0,0);
+									\draw[]	(0,2.5) to [R, l^=300~$\Omega$]			(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l^=900~$\Omega$]		(5,2.5);
+									\draw[]	(5,2.5) to [short, i_=$i(0)$]			(5,0);
+									\draw[]	(0,0) to [short]						(5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -3082,8 +3127,7 @@
 					
 					<p>
 						<md>
-							<mrow>\tau \amp= \frac{L}{R}</mrow>
-							<mrow>\amp= \frac{0.32~\textrm{H}}{1600~\Omega}</mrow>
+							<mrow>\tau \amp= \frac{0.32~\textrm{H}}{1600~\Omega}</mrow>
 							<mrow>\amp= 2\times10^{-4}~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -3154,7 +3198,7 @@
 										\draw[]	(0,2.5) to [R, l^=200~$\Omega$]					(2.5,2.5);
 										\draw[]	(2.5,2.5) to [R, l_=750~$\Omega$, *-*]			(2.5,0);
 										\draw[]	(2.5,2.5) to [R, l^=500~$\Omega$]				(5,2.5);
-										\draw[]	(5,2.5) to [short, v^=$v(0)$, i_=$i(0)$, *-*]	(5,0);
+										\draw[]	(5,2.5) to [short, i_=$i(0)$, *-*]				(5,0);
 										\draw[]	(5,2.5) to [R, l^=30~$\Omega$]					(7.5,2.5);
 										\draw[]	(7.5,2.5) to [R, l_=600~$\Omega$, *-*]			(7.5,0);
 										\draw[]	(7.5,2.5) to [short]							(10,2.5);
@@ -3177,7 +3221,7 @@
 										\draw[]	(0,2.5) to [R, l^=200~$\Omega$]				(2.5,2.5);
 										\draw[]	(2.5,2.5) to [R, l_=750~$\Omega$, *-*]		(2.5,0);
 										\draw[]	(2.5,2.5) to [R, l^=500~$\Omega$]			(5,2.5);
-										\draw[]	(5,2.5) to [short, v^=$v(0)$, i_=$i(0)$]	(5,0);
+										\draw[]	(5,2.5) to [short, i_=$i(0)$]				(5,0);
 										\draw[]	(0,0) to [short]							(5,0);
 									\end{tikzpicture}
 								</latex-image>
@@ -3200,7 +3244,7 @@
 										\draw[]	(0,2.5) to [R, l_=200~$\Omega$, *-*]		(0,0);
 										\draw[]	(2.5,2.5) to [R, l_=750~$\Omega$, *-*]		(2.5,0);
 										\draw[]	(2.5,2.5) to [R, l^=500~$\Omega$]			(5,2.5);
-										\draw[]	(5,2.5) to [short, v^=$v(0)$, i_=$i(0)$]	(5,0);
+										\draw[]	(5,2.5) to [short, i_=$i(0)$]				(5,0);
 										\draw[]	(-2.5,0) to [short]							(5,0);
 									\end{tikzpicture}
 								</latex-image>
@@ -3259,8 +3303,7 @@
 
 					<p>
 						<md>
-							<mrow>\tau \amp= \frac{L}{R}</mrow>
-							<mrow>\amp= \frac{0.02~\textrm{H}}{150~\Omega}</mrow>
+							<mrow>\tau \amp= \frac{0.02~\textrm{H}}{150~\Omega}</mrow>
 							<mrow>\amp= 1.33\times10^{-4}~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -3711,7 +3754,7 @@
 
 					<figure>
 						<caption></caption>
-							<image width="60%" xml:id="ch6-homogeneousrl-example5-solution5">
+							<image width="55%" xml:id="ch6-homogeneousrl-example5-solution5">
 								<shortdescription>Circuit with 3 nodes and 1 mesh consisting of a CCVS (rm*iX(t)), and resistors R1 and R2. The high-potential end of the CCVS connects at node a. The low-potential end of the CCVS connects to R1 and R2 at node c. R1 and R2 connect at node b. Branch current iX(t) flows through R1 from node c to node b. The Thevenin equivalent circuit is defined between nodes a and b.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -3769,15 +3812,6 @@
 							<mrow>R_{TH} \amp= \frac{V_{TEST}}{I_{TEST}}</mrow>
 							<mrow>\amp= \frac{(r_m + R_1)i_X(t)}{\left(1 + \frac{R_1}{R_2}\right)i_X(t)}</mrow>
 							<mrow>\amp= \frac{r_m + R_1}{1 + \frac{R_1}{R_2}}</mrow>
-						</md>
-					</p>
-					
-					<p>Plug in numerical quantities to derive this value.</p>
-					
-					<p>
-						<md>
-							<mrow>R_{TH} \amp= \frac{8~\textrm{V/A} + 1~\Omega}{1 + \frac{1~\Omega}{4~\Omega}}</mrow>
-							<mrow>\amp= \frac{9~\Omega}{1 + 0.25}</mrow>
 							<mrow>\amp= 7.2~\Omega</mrow>
 						</md>
 					</p>
@@ -3839,19 +3873,9 @@
 					<p>
 						<md>
 							<mrow>L\frac{di(t)}{dt} \amp= -(r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)i(t)</mrow>
-							<mrow>L\frac{di(t)}{dt} + (r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)i(t) \amp= 0</mrow>
-							<mrow>\frac{di(t)}{dt} + \frac{(r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)}{L}i(t) \amp= 0</mrow>
-						</md>
-					</p>
-					
-					<p>Plug in numerical quantities to obtain the differential equation.</p>
-					
-					<p>
-						<md>
-							<mrow>\frac{di(t)}{dt} + \frac{(8 + 1)\left(\frac{4}{1+4}\right)}{6}i(t) \amp= 0</mrow>
-							<mrow>\frac{di(t)}{dt} + \frac{(9)(0.8)}{6}i(t) \amp= 0</mrow>
-							<mrow>\frac{di(t)}{dt} + \frac{7.2}{6}i(t) \amp= 0</mrow>
-							<mrow>\frac{di(t)}{dt} + 1.2i(t) \amp= 0</mrow>
+							<mrow>0 \amp= L\frac{di(t)}{dt} + (r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)i(t)</mrow>
+							<mrow>\amp= \frac{di(t)}{dt} + \frac{(r_m + R_1)\left(\frac{R_2}{R_1+R_2}\right)}{L}i(t)</mrow>
+							<mrow>\amp= \frac{di(t)}{dt} + 1.2i(t)</mrow>
 						</md>
 					</p>
 					
@@ -3915,21 +3939,41 @@
 				</answer>
 
 				<solution>
+					<p>First, simplify the circuit by combining the two parallel resistors.</p>
+					
+					<figure>
+						<caption></caption>
+							<image width="70%" xml:id="ch6-chargingrl-example1-solution0">
+								<shortdescription>Circuit with 5 nodes consisting of an 8V source, three resistors, one inductor, and an SPST switch. The high-potential end of the 8V source connects to the 4k(A) resistor at node a. The 4k(A) resistor connects to one end of the SPST switch at node b. The other end of the SPST switch connects to the 4k(B) and 6k resistors at node c. The 6k resistor connects to the 100mH inductor at node d. The low-potential end of the 8V source connects to the 4k(B) resistor and 100mH inductor at node e. Voltage v(t) drops over the inductor from node d to node e. Branch current i(t) flows through the inductor from node d to node e. The SPST switch is depicted as closing.</shortdescription>
+								<latex-image>
+									\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,5) to [V, l_=8~V]									(0,0);
+									\draw[]	(0,5) to [R, l^=4~k$\Omega$]							(2.5,5);
+									\draw[]	(2.5,5) to [cute closing switch]						(4,5);
+									\draw[]	(4,5) to [R, l_=4~k$\Omega$, *-*]						(4,0);
+									\draw[]	(4,5) to [short]										(6.5,5);
+									\draw[]	(6.5,5) to [R, l_=6~k$\Omega$]						(6.5,2.5);
+									\draw[]	(6.5,2.5) to [L, l_=100~mH, v^=$v(t)$, i_=$i(t)$]	(6.5,0);
+									\draw[]	(0,0) to [short]										(6.5,0);
+								\end{tikzpicture}
+								</latex-image>
+  							</image>
+					</figure>
+
 					<p>Analyze the circuit in the final steady-state condition. The inductor can be replaced by a short.</p>
 					
 					<figure>
 						<caption></caption>
-							<image width="80%" xml:id="ch6-chargingrl-example1-solution1">
-								<shortdescription>Circuit with 3 nodes and 3 meshes consisting of an 8V source and four resistors. The high-potential end of the 8V source connects to the 4k resistor at node a. The 4k, 5k, 6k, and 20k resistors connect at node b. The low-potential end of the 8V source connects to the 5k, 6k, and 20k resistors at node c. Branch current i(infinity) flows through the 6k resistor from node b to node c.</shortdescription>
+							<image width="60%" xml:id="ch6-chargingrl-example1-solution1">
+								<shortdescription>Circuit with 3 nodes and 2 meshes consisting of an 8V source and three resistors. The high-potential end of the 8V source connects to the 4k(A) resistor at node a. The 4k(A), 4k(B), and 6k resistors connect at node b. The low-potential end of the 8V source connects to the 4k(B) and 6k resistors at node c. Branch current i(infinity) flows through the 6k resistor from node b to node c.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
 										\draw[]	(0,2.5) to [V, l_=8~V]								(0,0);
 										\draw[]	(0,2.5) to [R, l^=4~k$\Omega$]						(2.5,2.5);
-										\draw[]	(2.5,2.5) to [R, l_=5~k$\Omega$, *-*]				(2.5,0);
-										\draw[]	(2.5,2.5) to [short]								(7.5,2.5);
-										\draw[]	(5,2.5) to [R, l_=6~k$\Omega$, *-*, i_=$i(\infty)$]	(5,0);
-										\draw[]	(7.5,2.5) to [R, l_=20~k$\Omega$]					(7.5,0);
-										\draw[]	(0,0) to [short]									(7.5,0);
+										\draw[]	(2.5,2.5) to [R, l_=4~k$\Omega$, *-*]				(2.5,0);
+										\draw[]	(2.5,2.5) to [short]								(5,2.5);
+										\draw[]	(5,2.5) to [R, l_=6~k$\Omega$, i_=$i(\infty)$]	(5,0);
+										\draw[]	(0,0) to [short]									(5,0);
 									\end{tikzpicture}
 								</latex-image>
   							</image>
@@ -3943,17 +3987,16 @@
 
 					<figure>
 						<caption></caption>
-							<image width="100%" xml:id="ch6-chargingrl-example1-solution2">
-								<shortdescription>Circuit with 2 nodes and 4 meshes consisting of a 2mA source, 4k resistor, 5k resistor, 6k resistor, and 20k resistor. All five circuit elements are connected in parallel between nodes a and b. The 2mA source flows out of node b into node a. Branch current i(infinity) flows through the 6k resistor from node a to node b.</shortdescription>
+							<image width="80%" xml:id="ch6-chargingrl-example1-solution2">
+								<shortdescription>Circuit with 2 nodes and 3 meshes consisting of a 2mA source, 4k(A) resistor, 4k(B) resistor, and 6k resistor. All circuit elements are connected in parallel between nodes a and b. The 2mA source flows out of node b into node a. Branch current i(infinity) flows through the 6k resistor from node a to node b.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
 										\draw[]	(-2.5,0) to [I, l^=2~mA]							(-2.5,2.5);
 										\draw[]	(0,2.5) to [R, l_=4~k$\Omega$, *-*]					(0,0);
-										\draw[]	(2.5,2.5) to [R, l_=5~k$\Omega$, *-*]				(2.5,0);
-										\draw[]	(-2.5,2.5) to [short]								(7.5,2.5);
-										\draw[]	(5,2.5) to [R, l_=6~k$\Omega$, *-*, i_=$i(\infty)$]	(5,0);
-										\draw[]	(7.5,2.5) to [R, l_=20~k$\Omega$]					(7.5,0);
-										\draw[]	(-2.5,0) to [short]									(7.5,0);
+										\draw[]	(2.5,2.5) to [R, l_=4~k$\Omega$, *-*]				(2.5,0);
+										\draw[]	(-2.5,2.5) to [short]								(5,2.5);
+										\draw[]	(5,2.5) to [R, l_=6~k$\Omega$, i_=$i(\infty)$]	(5,0);
+										\draw[]	(-2.5,0) to [short]									(5,0);
 									\end{tikzpicture}
 								</latex-image>
   							</image>
@@ -3963,7 +4006,7 @@
 					
 					<p>
 						<md>
-							<mrow>R_{EQ} \amp= \frac{1}{\frac{1}{4~\textrm{k}\Omega} + \frac{1}{5~\textrm{k}\Omega} + \frac{1}{6~\textrm{k}\Omega} + \frac{1}{20~\textrm{k}\Omega}}</mrow>
+							<mrow>R_{EQ} \amp= \frac{1}{\frac{1}{4~\textrm{k}\Omega} + \frac{1}{4~\textrm{k}\Omega} + \frac{1}{6~\textrm{k}\Omega}}</mrow>
 							<mrow>\amp= 1.5~\textrm{k}\Omega</mrow>
 						</md>
 					</p>
@@ -3981,18 +4024,17 @@
 
 					<figure>
 						<caption></caption>
-							<image width="60%" xml:id="ch6-chargingrl-example1-solution3">
-								<shortdescription>Circuit with 3 nodes and 3 meshes consisting of four resistors and an inductor. The 4k, 5k, 6k, and 20k resistors connect at node a. The 6k resistor connects to the 100mH inductor at node b. The 4k, 5k, 20k resistors and 100mH inductor are connected at node c. Voltage v(t) drops over the inductor from node b to node c. Branch current i(t) flows through the inductor from node b to node c.</shortdescription>
+							<image width="50%" xml:id="ch6-chargingrl-example1-solution3">
+								<shortdescription>Circuit with 3 nodes and 2 meshes consisting of three resistors and an inductor. The 4k(A), 4k(B), and 6k resistors connect at node a. The 6k resistor connects to the 100mH inductor at node b. The 4k(A) and 4k (B) resistors and 100mH inductor are connected at node c. Voltage v(t) drops over the inductor from node b to node c. Branch current i(t) flows through the inductor from node b to node c.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
 										\draw[]	(0,5) to [short]									(0,0);
 										\draw[]	(0,5) to [R, l^=4~k$\Omega$]						(2.5,5);
-										\draw[]	(2.5,5) to [R, l_=5~k$\Omega$, *-*]					(2.5,0);
-										\draw[]	(2.5,5) to [short]									(7.5,5);
-										\draw[]	(5,5) to [R, l_=6~k$\Omega$, *-]					(5,2.5);
-										\draw[]	(5,2.5) to [L, l_=100~mH, v^=$v(t)$, i_=$i(t)$, -*]	(5,0);
-										\draw[]	(7.5,5) to [R, l_=20~k$\Omega$]						(7.5,0);
-										\draw[]	(0,0) to [short]									(7.5,0);
+										\draw[]	(2.5,5) to [R, l_=4~k$\Omega$, *-*]					(2.5,0);
+										\draw[]	(2.5,5) to [short]									(5,5);
+										\draw[]	(5,5) to [R, l_=6~k$\Omega$]					(5,2.5);
+										\draw[]	(5,2.5) to [L, l_=100~mH, v^=$v(t)$, i_=$i(t)$]	(5,0);
+										\draw[]	(0,0) to [short]									(5,0);
 									\end{tikzpicture}
 								</latex-image>
   							</image>
@@ -4002,7 +4044,7 @@
 					
 					<p>
 						<md>
-							<mrow>R_{EQ} \amp= 4~\textrm{k}\Omega//5~\textrm{k}\Omega//20~\textrm{k}\Omega+6~\textrm{k}\Omega</mrow>
+							<mrow>R_{EQ} \amp= 4~\textrm{k}\Omega//4~\textrm{k}\Omega+6~\textrm{k}\Omega</mrow>
 							<mrow>\amp= 2~\textrm{k}\Omega+6~\textrm{k}\Omega</mrow>
 							<mrow>\amp= 8~\textrm{k}\Omega</mrow>
 						</md>
@@ -4012,8 +4054,7 @@
 					
 					<p>
 						<md>
-							<mrow>\tau \amp= \frac{L}{R}</mrow>
-							<mrow>\amp= \frac{0.1~\textrm{H}}{8000~\Omega}</mrow>
+							<mrow>\tau \amp= \frac{0.1~\textrm{H}}{8000~\Omega}</mrow>
 							<mrow>\amp= 1.25\times10^{-5}~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -4152,7 +4193,7 @@
 
 					<figure xml:id="rl-charging-example3-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch6-charging-ex3" />.</caption>
-  						<image width="60%" xml:id="ch6-rl-charging-example3-diagram">
+  						<image width="80%" xml:id="ch6-rl-charging-example3-diagram">
     						<shortdescription>Circuit with 6 nodes consisting of a 10V source, four resistors, inductor, and SPST switch. The high-potential end of the 10V source connects to the 200ohm resistor at node a. The 200ohm resistor connects to one end of the SPST switch at node b. The other end of the SPST switch connects to the 250mH inductor and 500ohm (A) resistor at node c. The 500ohm (A) and 500ohm (B) resistors connect at node d. The 250mH inductor connects to the 250ohm resistor at node e. The low-potential end of the 10V source connects to the 250ohm resistor and 500ohm (B) resistor at node f. Voltage v(t) drops over the 250ohm resistor from node e to node f. Branch current i(t) flows through the 250ohm resistor from node e to node f. The SPST switch is depicted as closing.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -4184,7 +4225,7 @@
 
 					<figure>
 						<caption></caption>
-						<image width="60%" xml:id="ch6-chargingrl-example3-solution1">
+						<image width="80%" xml:id="ch6-chargingrl-example3-solution1">
 							<shortdescription>Circuit with 5 nodes consisting of a 10V source, three resistors, inductor, and SPST switch. The high-potential end of the 10V source connects to the 200ohm resistor at node a. The 200ohm resistor connects to one end of the SPST switch at node b. The other end of the SPST switch connects to the 250mH inductor and 1000ohm resistor at node c. The 250mH inductor connects to the 250ohm resistor at node d. The low-potential end of the 10V source connects to the 250ohm resistor and 1000ohm resistor at node e. Voltage v(t) drops over the 250ohm resistor from node d to node e. Branch current i(t) flows through the 250ohm resistor from node d to node e. The SPST switch is depicted as closing.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -4455,10 +4496,10 @@
 							<mrow>\amp= \frac{R_P}{R_F}V_S - \frac{R_P}{R_F}v(t) - L\frac{d}{dt}\left(\frac{v(t)}{R_F}\right)</mrow>
 							<mrow>-V_S - \frac{R_P}{R_F}V_S \amp= - \frac{R_P}{R_F}v(t) - L\frac{d}{dt}\left(\frac{v(t)}{R_F}\right)</mrow>
 							<mrow>V_S + \frac{R_P}{R_F}V_S \amp= \frac{R_P}{R_F}v(t) + L\frac{d}{dt}\left(\frac{v(t)}{R_F}\right)</mrow>
-							<mrow>V_S + \frac{R_P}{R_F}V_S \amp= \frac{R_P}{R_F}v(t) + \frac{L}{R_F}\frac{dv(t)}{dt}</mrow>
-							<mrow>\left(\frac{R_F}{L}\right)V_S + \left(\frac{R_F}{L}\right)\frac{R_P}{R_F}V_S \amp= \left(\frac{R_F}{L}\right)\frac{R_P}{R_F}v(t) + \left(\frac{R_F}{L}\right)\frac{L}{R_F}\frac{dv(t)}{dt}</mrow>
-							<mrow>\frac{R_F}{L} V_S + \frac{R_P}{L}V_S \amp= \frac{dv(t)}{dt} + \frac{R_P}{L}v(t)</mrow>
+							<mrow>V_S \left(1 + \frac{R_P}{R_F}\right) \amp= \frac{R_P}{R_F}v(t) + \frac{L}{R_F}\frac{dv(t)}{dt}</mrow>
+							<mrow>\left(\frac{R_F}{L}\right)V_S \left(1 + \frac{R_P}{R_F}\right) \amp= \left(\frac{R_F}{L}\right)\frac{R_P}{R_F}v(t) + \left(\frac{R_F}{L}\right)\frac{L}{R_F}\frac{dv(t)}{dt}</mrow>
 							<mrow>\left(\frac{R_F + R_P}{L}\right)V_S \amp= \frac{dv(t)}{dt} + \frac{R_P}{L}v(t)</mrow>
+							<mrow>\amp= \frac{dv(t)}{dt} + \frac{R_P}{L}v(t)</mrow>
 							<mrow>3200 \amp= \frac{dv(t)}{dt} + 700 v(t)</mrow>
 						</md>
 					</p>
@@ -4473,7 +4514,7 @@
 
 			<exercise xml:id="ch6-charging-ex5">
 				<statement>
-					<p>Derive equations for <m>i(t)</m> and <m>v(t)</m> given the circuit shown in <xref ref="rl-charging-example5-diagram" />. The switch has been open for a very long time before closing at a time of zero seconds. The circuit parameters are <m>V_S = 9.7~\textrm{V}</m>, <m>R_1 = 8~\textrm{k}\Omega</m>, <m>R_2 = 60~\textrm{k}\Omega</m>, <m>L = 8.2~\textrm{H}</m>, and <m>k_i = 0.22</m>.</p>
+					<p>Derive equations for <m>i(t)</m> and <m>v(t)</m> given the circuit shown in <xref ref="rl-charging-example5-diagram" />. The switch has been open for a very long time before closing at a time of zero seconds. The circuit parameters are: <m>V_S = 9.7~\textrm{V}</m>, <m>R_1 = 8~\textrm{k}\Omega</m>, <m>R_2 = 60~\textrm{k}\Omega</m>, <m>L = 8.2~\textrm{H}</m>, and <m>k_i = 0.22</m>.</p>
 
 					<figure xml:id="rl-charging-example5-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch6-charging-ex5" />.</caption>
@@ -4498,8 +4539,8 @@
 				<answer>
 					<p>
 						<md>
-							<mrow>i(t) \amp= 1.48~\textrm{mA}~\left[1-\textrm{e}^{-0.7209t}\right]~u(t)</mrow>
-							<mrow>v(t) \amp= 8.7~\textrm{V}~\textrm{e}^{-0.7209t}~u(t)</mrow>
+							<mrow>i(t) \amp= 1.48~\textrm{mA}~\left[1-\textrm{e}^{-721t}\right]~u(t)</mrow>
+							<mrow>v(t) \amp= 8.7~\textrm{V}~\textrm{e}^{-721t}~u(t)</mrow>
 						</md>
 					</p>
 				</answer>
@@ -4785,7 +4826,7 @@
 							<mrow>\amp= \left(\frac{R_1L}{R_2(1+k_i)}+L\right) \frac{di(t)}{dt} + \left(\frac{R_1}{1+k_i}\right)i(t)</mrow>
 							<mrow>\amp= \left(\frac{L(R_1+R_2(1+k_i))}{R_2(1+k_i)}\right) \frac{di(t)}{dt} + \left(\frac{R_1}{1+k_i}\right)i(t)</mrow>
 							<mrow>\frac{V_SR_2(1+k_i)}{L(R_1+R_2(1+k_i))} \amp= \frac{di(t)}{dt} + \frac{R_2R_1}{L(R_1+R_2(1+k_i))}i(t)</mrow>
-							<mrow>1.066 \amp= \frac{di(t)}{dt} + 0.7209i(t)</mrow>
+							<mrow>1.0664 \amp= \frac{di(t)}{dt} + 720.8939i(t)</mrow>
 						</md>
 					</p>
 
@@ -4794,15 +4835,15 @@
 					<p>Use <xref ref="ch6-chargingrlcurrent" /> to derive an equation for <m>i(t)</m>.</p>
 					
 					<p>
-						<md>i(t) = 1.48~\textrm{mA}~\left[1-\textrm{e}^{-0.7209t}\right]~u(t)</md>
+						<md>i(t) = 1.48~\textrm{mA}~\left[1-\textrm{e}^{-721t}\right]~u(t)</md>
 					</p>
 
 					<p>Use <xref ref="ch6-chargingrlvoltage" /> to derive an equation for <m>v(t)</m>.</p>
 					
 					<p>
 						<md>
-							<mrow>v(t) \amp= (5.91~\textrm{k}\Omega)(1.48~\textrm{mA}~\textrm{e}^{-0.7209t}~u(t))</mrow>
-							<mrow>\amp= 8.7~\textrm{V}~\textrm{e}^{-0.7209t}~u(t)</mrow>
+							<mrow>v(t) \amp= (5.91~\textrm{k}\Omega)(1.48~\textrm{mA}~\textrm{e}^{-721t}~u(t))</mrow>
+							<mrow>\amp= 8.7~\textrm{V}~\textrm{e}^{-721t}~u(t)</mrow>
 						</md>
 					</p>
 					
@@ -4821,7 +4862,7 @@
 
 					<figure xml:id="general-rl-example1-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch6-general-ex1" />.</caption>
-  						<image width="80%" xml:id="ch6-general-rl-example1-diagram">
+  						<image width="90%" xml:id="ch6-general-rl-example1-diagram">
     						<shortdescription>Circuit with 6 nodes consisting of a 15mA source, 24V source, four resistors, inductor, and SPST switch. The 15mA source, 2kohm and 4kohm (A) resistors connect at node a. The 15mA source flows into node a. The 4kohm (A), 6kohm, and one end of the SPST switch connect at node b. The other end of the SPST switch and 4kohm (B) connect at node c. The 4kohm (B) connects to the high-potential end of the 24V source at node d. The 6kohm resistor and 240mH inductor connect at node e. The 15mA source, 2kohm resistor, 240mH inductor, and low-potential end of the 24V source connect at node f. The 15mA source flows out of node f. Voltage v(t) drops over the inductor from node e to node f. Branch current i(t) flows through the inductor from node e to node f. The SPST switch is depicted as closing.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -4893,7 +4934,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ} \amp= \frac{(2~\textrm{k}\Omega)(10~\textrm{k}\Omega)}{2~\textrm{k}\Omega+10~\textrm{k}\Omega}</mrow>
-							<mrow>\amp= \frac{20~\textrm{k}\Omega^2}{12~\textrm{k}\Omega}</mrow>
 							<mrow>\amp= 1.67~\textrm{k}\Omega</mrow>
 						</md>
 					</p>
@@ -5077,8 +5117,7 @@
 					
 					<p>
 						<md>
-							<mrow>\tau \amp= \frac{L}{R}</mrow>
-							<mrow>\amp= \frac{.24~\textrm{H}}{8400~\Omega}</mrow>
+							<mrow>\tau \amp= \frac{.24~\textrm{H}}{8400~\Omega}</mrow>
 							<mrow>\amp= 2.86\times10^{-5}~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -5137,31 +5176,52 @@
 				</answer>
 
 				<solution>
+					<p>First, simplify the circuit by combining the 5<nbsp />k&#8486; and 20<nbsp />k&#8486; resistors in parallel.</p>
+					
+					<figure>
+  						<caption></caption>
+  						<image width="100%" xml:id="ch6-generalrl-example2-solution0">
+    						<shortdescription>Circuit with 6 nodes consisting of an 8V source, 20V source, three 4kohm resistors, one inductor and two SPST switches (S1 and S2). The high-potential end of the 8V source connects to the 4kohm (A) resistor at node a. The 4kohm (A) resistor connects to S1 at node b. S1, the 4kohm (B) resistor, 100mH inductor, and S2 connect at node c. S2 and 4kohm (C) resistor connect at node e. The 4kohm (C) resistor connects to the high-potential end of the 20V source at node e. The low-potential ends of both sources, 4kohm (B) resistor, and 100mH inductor connect at node f. Voltage v(t) drops over the inductor from node c to node f. Branch current i(t) flows through the inductor from node c to node f. Switch S1 is depicted as opening. Switch S2 is depicted as closing.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,2.5) to [V, l_=8~V]									(0,0);
+									\draw[]	(0,2.5) to [R, l^=4~k$\Omega$]							(2.5,2.5);
+									\draw[]	(2.5,2.5) to [cute opening switch, l_=S1]				(5,2.5) --++ (right:2.5);
+									\draw[]	(5,2.5) to [R, l_=4~k$\Omega$, *-*]						(5,0);
+									\draw[]	(7.5,2.5) to [L, l_=100~mH, v^=$v(t)$, i_=$i(t)$, *-*]	(7.5,0);
+									\draw[]	(7.5,2.5) to [cute closing switch, l_=S2]				(10,2.5);
+									\draw[]	(10,2.5) to [R, l^=4~k$\Omega$]							(12.5,2.5);
+									\draw[]	(12.5,2.5) to [V, l_=20~V]								(12.5,0);
+									\draw[]	(0,0) to [short]										(12.5,0);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
+
 					<p>Draw the circuit in the initial steady-state condition. The inductor can be replaced by a short. Switch S1 is closed and switch S2 is open.</p>
 
 					<figure>
 						<caption></caption>
-							<image width="80%" xml:id="ch6-generalrl-example2-solution1">
-								<shortdescription>Circuit with 3 nodes and 3 meshes consisting of an 8V source, 4k resistor, 5k resistor, 20k resistor, and a short. The high-potential end of the 8V source connects to the 4k resistor at node a. The 4k, 5k, and 20k resistors connect to the short at node b. The low-potential end of the 8V source, 5k and 20k resistors, and short connect at node c. Branch current i(0) flows through the short from node b to node c.</shortdescription>
+							<image width="55%" xml:id="ch6-generalrl-example2-solution1">
+								<shortdescription>Circuit with 3 nodes and 2 meshes consisting of an 8V source, 4kohm (A) resistor, 4kohm (B) resistor, and a short. The high-potential end of the 8V source connects to the 4kohm (A) resistor at node a. The 4kohm (A) and 4kohm (B) resistors connect to the short at node b. The low-potential end of the 8V source, 4kohm (B) resistor, and short connect at node c. Branch current i(0) flows through the short from node b to node c.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
 										\draw[]	(0,2.5) to [V, l_=8~V]					(0,0);
 										\draw[]	(0,2.5) to [R, l^=4~k$\Omega$]			(2.5,2.5);
-										\draw[]	(2.5,2.5) to [R, l_=5~k$\Omega$, *-*]	(2.5,0);
-										\draw[]	(2.5,2.5) to [short]					(7.5,2.5);
-										\draw[]	(5,2.5) to [short, i_=$i(0)$, *-*]		(5,0);
-										\draw[]	(7.5,2.5) to [R, l_=20~k$\Omega$]		(7.5,0);
-										\draw[]	(0,0) to [short]						(7.5,0);
+										\draw[]	(2.5,2.5) to [R, l_=4~k$\Omega$, *-*]	(2.5,0);
+										\draw[]	(2.5,2.5) to [short]					(5,2.5);
+										\draw[]	(5,2.5) to [short, i_=$i(0)$]			(5,0);
+										\draw[]	(0,0) to [short]						(5,0);
 									\end{tikzpicture}
 								</latex-image>
   							</image>
 					</figure>
 
-					<p>The 5<nbsp />k&#8486; and 20<nbsp />k&#8486; resistors are shorted by the inductor and can be removed from the circuit.</p>
+					<p>The 4<nbsp />k&#8486; resistor is shorted by the inductor and can be removed from the circuit.</p>
 
 					<figure>
 						<caption></caption>
-							<image width="30%" xml:id="ch6-generalrl-example2-solution2">
+							<image width="35%" xml:id="ch6-generalrl-example2-solution2">
 								<shortdescription>Circuit with 2 nodes and 1 mesh consisting of an 8V source and 4kohm resistor wired in series. Branch current i(0) flows through the circuit from the high-potential end of the source to the low-potential end of the source.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
@@ -5187,17 +5247,16 @@
 
 					<figure>
 						<caption></caption>
-							<image width="80%" xml:id="ch6-generalrl-example2-solution3">
-								<shortdescription>Circuit with 3 nodes and 3 meshes consisting of a 20V source, short, and three resistors. The 5kohm, 20kohm, and 4kohm resistors connect to the short at node a. The 4kohm resistor connects to the high-potential end of the 20V source at node b. The 5kohm and 20kohm resistors, short, and low-potential end of the 20V source connect at node c. Branch current i(infinity) flows through the short from node a to node c.</shortdescription>
+							<image width="60%" xml:id="ch6-generalrl-example2-solution3">
+								<shortdescription>Circuit with 3 nodes and 2 meshes consisting of a 20V source, short, and two 4kohm resistors. The Both 4kohm resistors connect to the short at node a. The 4kohm (A) resistor connects to the high-potential end of the 20V source at node b. The 4kohm (B) resistor, short, and low-potential end of the 20V source connect at node c. Branch current i(infinity) flows through the short from node a to node c.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
-										\draw[]	(0,2.5) to [R, l_=5~k$\Omega$]					(0,0);
-										\draw[]	(0,2.5) to [short]								(5,2.5);
-										\draw[]	(2.5,2.5) to [short, i_=$i(\infty)$, *-*]		(2.5,0);
-										\draw[]	(5,2.5) to [R, l_=20~k$\Omega$, *-*]			(5,0);
+										\draw[]	(2.5,2.5) to [short]								(5,2.5);
+										\draw[]	(2.5,2.5) to [short, i_=$i(\infty)$]		(2.5,0);
+										\draw[]	(5,2.5) to [R, l_=4~k$\Omega$, *-*]			(5,0);
 										\draw[]	(5,2.5) to [R, l^=4~k$\Omega$]					(7.5,2.5);
 										\draw[]	(7.5,2.5) to [V, l_=20~V]						(7.5,0);
-										\draw[]	(0,0) to [short]								(7.5,0);
+										\draw[]	(2.5,0) to [short]								(7.5,0);
 									\end{tikzpicture}
 								</latex-image>
   							</image>
@@ -5233,17 +5292,16 @@
 
 					<figure>
 						<caption></caption>
-							<image width="80%" xml:id="ch6-generalrl-example2-solution5">
-								<shortdescription>Circuit with 2 nodes and 3 meshes consisting of a 5kohm resistor, 20kohm resistor, 4kohm resistor, and 100mH inductor. All four circuit elements are connected in parallel.</shortdescription>
+							<image width="60%" xml:id="ch6-generalrl-example2-solution5">
+								<shortdescription>Circuit with 2 nodes and 2 meshes consisting of two 4kohm resistors and 100mH inductor. All three circuit elements are connected in parallel.</shortdescription>
 								<latex-image>
 									\begin{tikzpicture}[font=\sffamily]
-										\draw[]	(0,2.5) to [R, l_=5~k$\Omega$]							(0,0);
-										\draw[]	(0,2.5) to [short]										(5,2.5);
+										\draw[]	(0,2.5) to [R, l_=4~k$\Omega$]							(0,0);
+										\draw[]	(0,2.5) to [short]										(2.5,2.5);
 										\draw[]	(2.5,2.5) to [L, l_=100~mH, v^=$v(t)$, i_=$i(t)$, *-*]	(2.5,0);
-										\draw[]	(5,2.5) to [R, l_=20~k$\Omega$, *-*]					(5,0);
-										\draw[]	(5,2.5) to [R, l^=4~k$\Omega$]							(7.5,2.5);
-										\draw[]	(7.5,2.5) to [short]									(7.5,0);
-										\draw[]	(0,0) to [short]										(7.5,0);
+										\draw[]	(2.5,2.5) to [R, l^=4~k$\Omega$]							(5,2.5);
+										\draw[]	(5,2.5) to [short]									(5,0);
+										\draw[]	(0,0) to [short]										(5,0);
 									\end{tikzpicture}
 								</latex-image>
   							</image>
@@ -5253,7 +5311,7 @@
 					
 					<p>
 						<md>
-							<mrow>R_{EQ} \amp= 5~\textrm{k}\Omega//20~\textrm{k}\Omega//4~\textrm{k}\Omega</mrow>
+							<mrow>R_{EQ} \amp= 4~\textrm{k}\Omega//4~\textrm{k}\Omega</mrow>
 							<mrow>\amp=	2~\textrm{k}\Omega</mrow>
 						</md>
 					</p>
@@ -5262,8 +5320,7 @@
 					
 					<p>
 						<md>
-							<mrow>\tau \amp= \frac{L}{R}</mrow>
-							<mrow>\amp= \frac{.1~\textrm{H}}{2000~\Omega}</mrow>
+							<mrow>\tau \amp= \frac{0.1~\textrm{H}}{2000~\Omega}</mrow>
 							<mrow>\amp= 5\times10^{-5}~\textrm{s}</mrow>
 						</md>
 					</p>
@@ -5292,7 +5349,7 @@
 					
 					<figure xml:id="rl-general-example3-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch6-general-ex3" />.</caption>
-  						<image width="80%" xml:id="ch6-rl-general-example3-diagram">
+  						<image width="90%" xml:id="ch6-rl-general-example3-diagram">
     						<shortdescription>Circuit with 4 nodes consisting of an 18A source, three resistors, one inductor, and an SPST switch. The 18A source, 400ohm resistor, and SPST switch connect at node a. The 18A source flows into node a. The SPST switch and 500ohm resistor connect at node b. The 500ohm and 600ohm resistors connect to the 9mH inductor at node c. The 18A source, 400ohm resistor, 600ohm resistor, and 9mH inductor connect at node d. Voltage v(t) drops over the 600ohm resistor from node c to node d. Branch current i(t) flows through the 600ohm resistor from node c to node d. Branch current iL(t) flows through the inductor from node c to node d. The SPST switch is depicted as closing.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -5367,7 +5424,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ} \amp= \frac{(1100~\Omega)(400~\Omega)}{1100~\Omega + 400~\Omega}</mrow>
-							<mrow>\amp= \frac{440000~\Omega^2}{1500~\Omega}</mrow>
 							<mrow>\amp= 293.3333~\Omega</mrow>
 						</md>
 					</p>
@@ -5500,7 +5556,7 @@
 					
 					<figure xml:id="rl-general-example4-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch6-general-ex4" />.</caption>
-  						<image width="60%" xml:id="ch6-rl-general-example4-diagram">
+  						<image width="70%" xml:id="ch6-rl-general-example4-diagram">
     						<shortdescription>Circuit with 6 nodes consisting of two voltage sources (Vs1 and Vs2), a VCCS (gm*vX(t)), three resistors (R1, R2, and R3), and inductor (L), and an SPST switch. R1 and L connect at node a. L, the VCCS, and R2 connect at node b. The VCCS flows out of node b. R2, R3, and the SPST connect at node c. R3 and the high-potential end of Vs2 connect at node d. The SPST and the high-potential end of Vs1 connect at node e. R1, the VCCS, and low-potential end of both voltage sources connect at node f. The VCCS flows into node f. Voltage v(t) drops over L from node b to node a. Branch current i(t) flows through L from node b to node a. Voltage vX(t) drops over R2 from node b to node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -5534,7 +5590,7 @@
 
 					<figure>
 						<caption></caption>
-						<image width="60%" xml:id="ch6-general-rl-example4-solution1">
+						<image width="70%" xml:id="ch6-general-rl-example4-solution1">
 							<shortdescription>Circuit with 4 nodes and 2 meshes consisting of three resistors (R1, R2, and R3), a VCCS (gm*vX(0)), and voltage source (Vs2). R1, the VCCS, and R2 connect at node a. The VCCS flows out of node a. R2 and R3 connect at node b. R3 and the high-potential end of Vs2 connect at node c. R1, the low-potential end of Vs2, and the VCCS connect at node d. The VCCS flows into node e. Branch current i(0) flows through R1 from node a to node d. Voltage vX(0) drops over R2 from node a to node b.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -5665,7 +5721,7 @@
 
 					<figure>
 						<caption></caption>
-						<image width="60%" xml:id="ch6-general-rl-example4-solution3">
+						<image width="70%" xml:id="ch6-general-rl-example4-solution3">
 							<shortdescription>Circuit with 5 nodes and 2 meshes consisting of three resistors (R1, R2, and R3), two voltage sources (Vs1 and Vs2) and a VCCS (gm*vX(t)). R2 and the VCCS connect at node a. The VCCS flows out of node a. R2, R3, and the high-potential end of Vs1 connect at node c. R3 and the high-potential end of Vs2 connect at node d. R1, the VCCS, and the low-potential end of both voltage sources connect at node e. The VCCS flows into node e. R1 connects at node b. Voltage vX(t) drops over R2 from node a to node c. The Thevenin equivalent circuit is defined between nodes a and b.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -5936,17 +5992,13 @@
 					
 					<p>
 						<md>
-							<mrow>\left(\frac{1}{R_2}+g_m\right)\left(L\frac{di(t)}{dt} + R_1i(t) - V_{S1}\right) + i(t) \amp= 0</mrow>
-							<mrow>\left(\frac{L}{R_2} + Lg_m\right)\frac{di(t)}{dt} + \left(\frac{R_1}{R_2} + R_1g_m + 1\right) i(t) - \left(\frac{V_{S1}}{R_2} + V_{S1}g_m\right) \amp= 0</mrow>
-							<mrow>\left(\frac{L}{R_2} + Lg_m\right)\frac{di(t)}{dt} + \left(\frac{R_1}{R_2} + R_1g_m + 1\right) i(t) \amp= \left(\frac{V_{S1}}{R_2} + V_{S1}g_m\right)</mrow>
-							<mrow>\frac{di(t)}{dt} + \frac{\left(\frac{R_1}{R_2} + R_1g_m + 1\right)}{\left(\frac{L}{R_2} + Lg_m\right)} i(t) \amp= \frac{\left(\frac{V_{S1}}{R_2} + V_{S1}g_m\right)}{\left(\frac{L}{R_2} + Lg_m\right)}</mrow>
+							<mrow>0 \amp= \left(\frac{1}{R_2}+g_m\right)\left(L\frac{di(t)}{dt} + R_1i(t) - V_{S1}\right) + i(t)</mrow>
+							<mrow>\amp= \left(\frac{L}{R_2} + Lg_m\right)\frac{di(t)}{dt} + \left(\frac{R_1}{R_2} + R_1g_m + 1\right) i(t)</mrow>
+							<mrow>\amp- \left(\frac{V_{S1}}{R_2} + V_{S1}g_m\right)</mrow>
+							<mrow>\left(\frac{V_{S1}}{R_2} + V_{S1}g_m\right) \amp= \left(\frac{L}{R_2} + Lg_m\right)\frac{di(t)}{dt} + \left(\frac{R_1}{R_2} + R_1g_m + 1\right) i(t)</mrow>
+							<mrow>\frac{\left(\frac{V_{S1}}{R_2} + V_{S1}g_m\right)}{\left(\frac{L}{R_2} + Lg_m\right)} \amp= \frac{di(t)}{dt} + \frac{\left(\frac{R_1}{R_2} + R_1g_m + 1\right)}{\left(\frac{L}{R_2} + Lg_m\right)} i(t)</mrow>
+							<mrow>10 \amp= \frac{di(t)}{dt} + 43.64i(t)</mrow>
 						</md>
-					</p>
-
-					<p>Plug in numerical quantities, using base units for each value.</p>
-					
-					<p>
-						<md>\frac{di(t)}{dt} + 43.64i(t) = 10</md>
 					</p>
 
 					<p>This value agrees with the value calculated using the Th&#233;venin equivalence method, as expected.</p>
@@ -5957,7 +6009,7 @@
 						<md>i(t) = \left(0.229~\textrm{A} + 0.194~\textrm{A}~\textrm{e}^{-43.6t}\right)~u(t) + 0.423~\textrm{A}~u(-t)</md>
 					</p>
 
-					<p>Use <xref ref="ch6-generalrlvoltage" /> to derive an equation for <m>v(t)</m>. Recall that the equivalent resistance as seen by the capacitor is 21.8182<nbsp />&#8486;. (If you did not solve for <m>\tau</m> using the Th&#233;venin equivalence method, use <xref ref="ch6-taurlequation" /> with the value of <m>\tau</m> derived from the differential equation and solve for <m>R</m>.)</p>
+					<p>Use <xref ref="ch6-generalrlvoltage" /> to derive an equation for <m>v(t)</m>. Recall that the equivalent resistance as seen by the capacitor is 21.8182<nbsp />&#8486;. (If you did not solve for <m>R_{EQ}</m> using the Th&#233;venin equivalence method, use <xref ref="ch6-taurlequation" /> with the value of <m>\tau</m> derived from the differential equation and solve for <m>R</m>.)</p>
 
 					<p>
 						<md>v(t) = -4.23~\textrm{V}~\textrm{e}^{-43.6t}~u(t)</md>
@@ -6026,7 +6078,6 @@
 					<p>
 						<md>
 							<mrow>R_{EQ} \amp= \frac{(68~\Omega)(20~\Omega)}{68~\Omega + 20~\Omega}</mrow>
-							<mrow>\amp= \frac{1360~\Omega^2}{88~\Omega}</mrow>
 							<mrow>\amp= 15.4545~\Omega</mrow>
 						</md>
 					</p>
@@ -6168,10 +6219,9 @@
 						<md>
 							<mrow>\frac{R_1I_{S1}}{R_1 + R_2} \amp= i(\infty) - \frac{I_{S2}}{1+k_i}</mrow>
 							<mrow>i(\infty) \amp= \frac{R_1I_{S1}}{R_1 + R_2} + \frac{I_{S2}}{1+k_i}</mrow>
+							<mrow>\amp= 6.4167~\textrm{mA}</mrow>
 						</md>
 					</p>
-
-					<p>Plug in numerical quantities to calculate that <m>i(\infty) = 6.4167~\textrm{mA}</m>.</p>
 
 					<p>There are two methods that can be used to calculate the equivalent resistance as seen by the inductor. The first method that will be used is to derive the Th&#233;venin equivalent circuit as seen by the inductor.</p>
 
@@ -6269,13 +6319,6 @@
 						<md>
 							<mrow>\frac{R_1I_{S1}}{R_1+R_2} \amp= \frac{V_{OC}}{R_1+R_2} - \frac{I_{S2}}{1+k_i} + \frac{V_{OC}}{R_3(1+k_i)}</mrow>
 							<mrow>\frac{R_1I_{S1}}{R_1+R_2} + \frac{I_{S2}}{1+k_i} \amp= \frac{V_{OC}}{R_1+R_2} + \frac{V_{OC}}{R_3(1+k_i)}</mrow>
-						</md>
-					</p>
-
-					<p>Plug numerical values into the equation and solve for <m>V_{OC}</m>. Units, which are not explicitly shown, are mV, mA, and &#8486;.</p>
-
-					<p>
-						<md>
 							<mrow>4.25 + 2.1667 \amp= \frac{V_{OC}}{88} + \frac{V_{OC}}{16.8}</mrow>
 							<mrow>16.4167 \amp= \frac{16.8V_{OC} + 88V_{OC}}{1478.4}</mrow>
 							<mrow>9486.4 \amp= 104.8V_{OC}</mrow>
@@ -6347,14 +6390,6 @@
 						<md>
 							<mrow>\frac{R_1I_{S1}}{R_1+R_2} \amp= I_{SC} - \frac{I_{S2}}{1+k_i}</mrow>
 							<mrow>I_{SC} \amp= \frac{R_1I_{S1}}{R_1+R_2} + \frac{I_{S2}}{1+k_i}</mrow>
-						</md>
-					</p>
-
-					<p>Plug in numerical quantities to solve for <m>I_SC</m>.</p>
-					
-					<p>
-						<md>
-							<mrow>I_{SC} \amp= 4.25~\textrm{mA} + 2.1667~\textrm{mA}</mrow>
 							<mrow>\amp= 6.4167~\textrm{mA}</mrow>
 						</md>
 					</p>
@@ -6432,13 +6467,8 @@
 						<md>
 							<mrow>\frac{R_1I_{S1}}{R_1+R_2} + \frac{I_{S2}}{1+k_i} \amp= \left(\frac{1}{R_1+R_2} + \frac{1}{R_3(1+k_i)}\right)L\frac{di(t)}{dt} + i(t)</mrow>
 							<mrow>\frac{\frac{R_1I_{S1}}{R_1+R_2} + \frac{I_{S2}}{1+k_i}}{L\left(\frac{1}{R_1+R_2} + \frac{1}{R_3(1+k_i)}\right)} \amp= \frac{di(t)}{dt} + \left(\frac{1}{L\left(\frac{1}{R_1+R_2} + \frac{1}{R_3(1+k_i)}\right)}\right) i(t)</mrow>
+							<mrow>5028.8 \amp= \frac{di(t)}{dt} + 783.715i(t)</mrow>
 						</md>
-					</p>
-
-					<p>Plug in numerical values, using base units for each quantity.</p>
-					
-					<p>
-						<md>5028.8 = \frac{di(t)}{dt} + 783.715i(t)</md>
 					</p>
 
 					<p>This value agrees with the value calculated using the Th&#233;venin equivalence method, as expected.</p>

@@ -22,10 +22,11 @@
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
-v(t) \amp= L\frac{d}{dt}\left[i(0^+)~\textrm{e}^{-\frac{t}{L/R}}~u(t) + i(0^-)~u(-t)\right]\\
-\amp= L\frac{d}{dt}\left[i(0^+) \textrm{e}^{-\frac{t}{L/R}}\right]~u(t) + L\frac{d}{dt}\left[i(0^-)\right]~u(-t)\\
-\amp= L\left(-\frac{R}{L}\right)i(0^+) \textrm{e}^{-\frac{t}{L/R}}~u(t)\\
-\amp= -Ri(0^+)\textrm{e}^{-\frac{t}{L/R}}~u(t)
+v(t) \amp= L\frac{d}{dt}\left[i(0^+)~\textrm{e}^{-\frac{t}{\tau}}~u(t) + i(0^-)~u(-t)\right]\\
+\amp= L\frac{d}{dt}\left[i(0^+) \textrm{e}^{-\frac{t}{\tau}}\right]~u(t) + L\frac{d}{dt}\left[i(0^-)\right]~u(-t)\\
+\amp= -\frac{Li(0^+)}{\tau} \textrm{e}^{-\frac{t}{\tau}}~u(t)\\
+\amp= -\frac{RLi(0^+)}{L} \textrm{e}^{-\frac{t}{\tau}}~u(t)\\
+\amp= -Ri(0^+)\textrm{e}^{-\frac{t}{\tau}}~u(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-homogeneousrlvoltageproof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

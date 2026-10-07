@@ -5,7 +5,7 @@
 
 	<introduction>
 
-		<p>A phasor is a mathematical construct that uses complex numbers (and Euler's equation) to analyze the AC steady-state behavior of circuits. (The word phasor is a portmanteau of the words phase and vector.) Phasors and vectors will be represented as bold variables (e.g. <m>\vec{Z}</m>) in this textbook. (While it might initially seem scary to use complex numbers to analyze circuits, it removes all of the calculus from the analysis and replaces it with addition, subtraction, multiplication, and division.)</p>
+		<p>A <term>phasor</term> is a mathematical construct that uses complex numbers (and Euler's equation) to analyze the AC steady-state behavior of circuits. (The word phasor is a portmanteau of the words phase and vector.) Phasors and vectors will be represented as bold variables (e.g. <m>\vec{Z}</m>) in this textbook. (While it might initially seem scary to use complex numbers to analyze circuits, it removes all of the calculus from the analysis and replaces it with addition, subtraction, multiplication, and division.)</p>
 		
 		<p>The real part of Euler's equation, <xref ref="ch8-eulers-equation" />, provides a relationship between the argument of a cosine wave and exponent of <m>\textrm{e}</m>, the base of the natural logarithm. The variables in Euler's equation correspond to the amplitude, phase, and angular frequency of the cosine wave (<m>A</m>, <m>\phi</m>, and <m>\omega</m>, respectively) and the square root of negative one (<m>j</m>). The review of sinusoidal waves in <xref ref="ch1-acsources" /> should be consulted if there is any question about what is meant by the amplitude or phase of a wave.</p>
 		
@@ -17,13 +17,13 @@
 			<p>Why is the square root of negative one represented as <m>j</m>? In electrical engineering, the variable <m>i</m> is used to represent current. Therefore, it is extremely common in electrical engineering for <m>j</m> to be used to represent complex numbers.</p>
 		</remark>
 
-		<p>When a circuit contains a sinusoidal source, all of the voltages and currents of the circuit will have a sinusoidal behavior. None of the circuit elements discussed in this book are capable of changing the frequency of the response. Therefore, the only truly important properties of each sinusoid are the amplitude and phase. (The frequency is important, but does not need to be included in calculations because it is constant throughout a circuit, and because the amplitude and phase of sinusoidal quantities will not be affected by the frequency in any calculations.)</p>
+		<p>When a linear circuit contains a sinusoidal source, all of the voltages and currents of the circuit will have a sinusoidal behavior. None of the circuit elements discussed in this book are capable of changing the frequency of the response. Therefore, the only truly important properties of each sinusoid are the amplitude and phase. (The frequency is important, but does not need to be included in calculations because it is constant throughout a circuit, and because the amplitude and phase of sinusoidal quantities will not be affected by frequency in any calculations.)</p>
 		
 		<p>Euler's equation reduces to <m>\textrm{e}^{j\phi}</m> when angular frequency is omitted. This phasor quantity can be expressed in either Cartesian form (expressed with real and imaginary components) or polar form (expressed with magnitude and phase). These two phasor forms (and how to convert between the two) are discussed in <xref ref="ch8-cartesianpolar" /> and <xref ref="ch8-polarcartesian" />.</p>
 		
-		<p>All of the phasors that are constructed in circuit analysis take the form of a cosine wave with positive amplitude. Any waveforms that are described in terms of a sine wave or that contain a negative amplitude will require conversion before analysis can take place. The angular argument of the phasor is usually expressed in degrees between <minus />180&#176; and +180&#176;.</p>
+		<p>All of the phasors that are constructed in circuit analysis take the form of a cosine wave with positive amplitude. Any waveforms that are described in terms of a sine wave or that contain a negative amplitude will require conversion before analysis can take place. The angular argument of the phasor is usually expressed in degrees between <minus />180<nbsp />&#176; and +180<nbsp />&#176;.</p>
 
-		<p>Waveforms with a negative amplitude can be converted to a waveform with a positive amplitude by phase-shifting the wave by either positive or negative 180&#176;. A sine wave can be converted into a positive-amplitude cosine wave by subtracting 90&#176; from the phase. Conversions from non-standard to standard form are defined in <xref ref="ch8-eq-negative-cosine" />, <xref ref="ch8-eq-positive-sine" />, and <xref ref="ch8-negative-sine" />.</p>
+		<p>Waveforms with a negative amplitude can be converted to a waveform with a positive amplitude by phase-shifting the wave by either positive or negative 180<nbsp />&#176;. A sine wave can be converted into a positive-amplitude cosine wave by subtracting 90<nbsp />&#176; from the phase. Conversions from non-standard to standard form are defined in <xref ref="ch8-eq-negative-cosine" />, <xref ref="ch8-eq-positive-sine" />, and <xref ref="ch8-negative-sine" />.</p>
 		
 		<p>
 			<md number="yes">
@@ -32,6 +32,8 @@
 				<mrow xml:id="ch8-negative-sine">-\sin(\omega t+\phi) \amp= \cos(\omega t + \phi + 90\pi/180)</mrow>
 			</md>
 		</p>
+
+		<p>Recall from <xref ref="ch1-acsources" /> that the argument of a cosine must not include a unit. All angles must be expressed in radians.</p>
 
 		<example>
 			<title>Converting negative amplitude cosine to standard form</title>
@@ -43,7 +45,7 @@
 					<md>v(t) = -110~\textrm{V}~\cos(2\pi60t + 210\pi/180)</md>
 				</p>
 
-				<p>Use <xref ref="ch8-eq-negative-cosine" /> to convert to standard phasor form. It is desirable to keep the value of the angular component between &#177;180&#176;, so it is best to subtract 180&#176; rather than add 180&#176;.</p>
+				<p>Use <xref ref="ch8-eq-negative-cosine" /> to convert to standard phasor form. It is desirable to keep the value of the angular component between &#177;180<nbsp />&#176;, so it is best to subtract 180<nbsp />&#176; rather than add 180<nbsp />&#176;.</p>
 
 				<p>
 					<md>
@@ -65,7 +67,7 @@
 					<md>i(t) = -20~\textrm{A}~\sin(2\pi60t + 120\pi/180)</md>
 				</p>
 
-				<p>Use <xref ref="ch8-negative-sine" /> to convert to standard phasor form. Then, subtract 360&#176; to keep the angle within &#177;180&#176;.</p>
+				<p>Use <xref ref="ch8-negative-sine" /> to convert to standard phasor form. Then, subtract 360<nbsp />&#176; to keep the angle within &#177;180<nbsp />&#176;.</p>
 				
 				<p>
 					<md>
@@ -175,7 +177,11 @@
 			<p>Phasor addition and subtraction is simplest to complete when the phasors are in Cartesian form. To add two phasors together, simply add the real parts together to find the real part of the sum and add the imaginary parts together to find the imaginary part of the sum. The solution to <m>\vec{Z_1} + \vec{Z_2}</m> is shown in <xref ref="ch8-phasor-addition-example" />.</p>
 			
 			<p>
-				<md number="yes" xml:id="ch8-phasor-addition-example">\vec{Z_1} + \vec{Z_2} = (x_1+x_2) + j(y_1+y_2)</md>
+				<md number="yes">
+					<mrow>\vec{Z_1} \amp= x_1 + jy_1</mrow>
+					<mrow>\vec{Z_2} \amp= x_2 + jy_2</mrow>
+					<mrow xml:id="ch8-phasor-addition-example">\vec{Z_1} + \vec{Z_2} \amp= (x_1+x_2) + j(y_1+y_2)</mrow>
+				</md>
 			</p>
 
 			<example>
@@ -233,7 +239,11 @@
 			<p>Subtraction is very similar to addition. <alert>However, it is important to note that subtraction, unlike addition, is not commutative.</alert> The solution to <m>\vec{Z_1} - \vec{Z_2}</m> is shown in <xref ref="ch8-phasor-subtraction-example" />.</p>
 			
 			<p>
-				<md number="yes" xml:id="ch8-phasor-subtraction-example">\vec{Z_1} - \vec{Z_2} = (x_1-x_2) + j(y_1-y_2)</md>
+				<md number="yes">
+					<mrow>\vec{Z_1} \amp= x_1 + jy_1</mrow>
+					<mrow>\vec{Z_2} \amp= x_2 + jy_2</mrow>
+					<mrow xml:id="ch8-phasor-subtraction-example">\vec{Z_1} - \vec{Z_2} \amp= (x_1-x_2) + j(y_1-y_2)</mrow>
+				</md>
 			</p>
 
 			<example>
@@ -291,7 +301,11 @@
 			<p>Two phasors <m>\vec{Z_1}</m> and <m>\vec{Z_2}</m> are multiplied together in <xref ref="ch8-phasor-multiplication-example" />.</p>
 			
 			<p>
-				<md number="yes" xml:id="ch8-phasor-multiplication-example">\vec{Z_1}\vec{Z_2} = r_1r_2\angle(\phi_1+\phi_2)</md>
+				<md number="yes">
+					<mrow>\vec{Z_1} \amp= r_1 \angle \phi_1</mrow>
+					<mrow>\vec{Z_2} \amp= r_2 \angle \phi_2</mrow>
+					<mrow xml:id="ch8-phasor-multiplication-example">\vec{Z_1}\vec{Z_2} \amp= r_1r_2\angle(\phi_1+\phi_2)</mrow>
+				</md>
 			</p>
 
 			<example>
@@ -320,7 +334,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I}\vec{Z} \amp= (4~\textrm{mA})(20~\textrm{k}\Omega)~\textrm{e}^{(120^\circ + (-90^\circ))}</mrow>
+							<mrow>\vec{I}\vec{Z} \amp= (4~\textrm{mA})(20~\textrm{k}\Omega)~\textrm{e}^{j(120^\circ + (-90^\circ))}</mrow>
+							<mrow>\amp= 80~\textrm{V}~\textrm{e}^{j30^\circ}</mrow>
 							<mrow>\amp= 80~\textrm{V} \angle 30^\circ</mrow>
 						</md>
 					</p>
@@ -336,7 +351,11 @@
 			<p>Two phasors in polar form are divided in <xref ref="ch8-phasor-division-example" />. <alert>It is important to note that division, unlike multiplication, is not commutative.</alert></p>
 			
 			<p>
-				<md number="yes" xml:id="ch8-phasor-division-example">\frac{\vec{Z_1}}{\vec{Z_2}} = \frac{r_1}{r_2}\angle(\phi_1-\phi_2)</md>
+				<md number="yes">
+					<mrow>\vec{Z_1} \amp= r_1 \angle \phi_1</mrow>
+					<mrow>\vec{Z_2} \amp= r_2 \angle \phi_2</mrow>
+					<mrow xml:id="ch8-phasor-division-example">\frac{\vec{Z_1}}{\vec{Z_2}} \amp= \frac{r_1}{r_2}\angle(\phi_1-\phi_2)</mrow>
+				</md>
 			</p>
 
 			<example>
@@ -365,7 +384,8 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{\vec{V}}{\vec{I}} \amp= \frac{110~\textrm{V}}{5~\textrm{mA}}~\textrm{e}^{(60^\circ - 30^\circ)}</mrow>
+							<mrow>\frac{\vec{V}}{\vec{I}} \amp= \frac{110~\textrm{V}}{5~\textrm{mA}}~\textrm{e}^{j(60^\circ - 30^\circ)}</mrow>
+							<mrow>\amp= 22~\textrm{k}\Omega~\textrm{e}^{j30^\circ}</mrow>
 							<mrow>\amp= 22~\textrm{k}\Omega \angle 30^\circ</mrow>
 						</md>
 					</p>
@@ -396,7 +416,9 @@
 					<md>
 						<mrow>z(t) \amp= Z_m \cos{(\omega t + \phi)}</mrow>
 						<mrow>\vec{Z} \amp= Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
-						<mrow>\frac{d}{dt}\vec{Z} \amp= j\omega Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
+						<mrow>\frac{d}{dt}\vec{Z} \amp= \frac{d}{dt} \left(Z_m~\textrm{e}^{j(\omega t + \phi)}\right)</mrow>
+						<mrow>\amp= Z_m \frac{d}{dt} \left(\textrm{e}^{j(\omega t + \phi)}\right)</mrow>
+						<mrow>\amp= j\omega Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
 						<mrow>\amp= j\omega \vec{Z}</mrow>
 					</md>
 				</p>
@@ -413,7 +435,9 @@
 					<md>
 						<mrow>z(t) \amp= Z_m \cos{(\omega t + \phi)}</mrow>
 						<mrow>\vec{Z} \amp= Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
-						<mrow>\int \vec{Z} \,dt \amp= \frac{1}{j\omega} Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
+						<mrow>\int \vec{Z} \,dt \amp= \int \left(Z_m~\textrm{e}^{j(\omega t + \phi)}\right)\,dt </mrow>
+						<mrow>\amp= Z_m \int \left(\textrm{e}^{j(\omega t + \phi)}\right)\,dt </mrow>
+						<mrow>\amp= \frac{1}{j\omega} Z_m~\textrm{e}^{j(\omega t + \phi)}</mrow>
 						<mrow>\amp= \frac{1}{j\omega} \vec{Z}</mrow>
 					</md>
 				</p>
@@ -596,8 +620,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{70\mu F}} \amp= \frac{1}{j 2\pi100 (70\times10^{-6})}</mrow>
-							<mrow>\amp= -j22.74~\Omega</mrow>
+							\frac{1}{j 2\pi100 (70\times10^{-6})} = -j22.74~\Omega
 						</md>
 					</p>
 
@@ -605,8 +628,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{65\mu F}} \amp= \frac{1}{j 2\pi100 (65\times10^{-6})}</mrow>
-							<mrow>\amp= -j24.49~\Omega</mrow>
+							\frac{1}{j 2\pi100 (65\times10^{-6})} = -j24.49~\Omega
 						</md>
 					</p>
 
@@ -614,8 +636,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{65mH}} \amp= j2\pi100(0.065)</mrow>
-							<mrow>\amp= j40.94~\Omega</mrow>
+							j2\pi100(0.065) = j40.84~\Omega
 						</md>
 					</p>
 
@@ -624,12 +645,12 @@
 					<figure>
 						<caption></caption>
 						<image width="80%" xml:id="ch8-equiv-impedance-example-fig2">
-							<shortdescription>Circuit with one mesh and five nodes consisting of five impedances (20ohm, 50ohm, -j22.7ohm, -j24.5ohm, and j40.9ohm). The 20ohm resistor floats at node a. The 20ohm and -j22.7ohm connect at node b. The -j22.7ohm, j40.9ohm, and 50ohm connect at node c. The 50ohm and -j24.5ohm connect at node d. he j40.9ohm and -j24.5ohm connect at node e. The equivalent impedance is measured between nodes a and e.</shortdescription>
+							<shortdescription>Circuit with one mesh and five nodes consisting of five impedances (20ohm, 50ohm, -j22.7ohm, -j24.5ohm, and j40.9ohm). The 20ohm resistor floats at node a. The 20ohm and -j22.7ohm connect at node b. The -j22.7ohm, j40.8ohm, and 50ohm connect at node c. The 50ohm and -j24.5ohm connect at node d. he j40.9ohm and -j24.5ohm connect at node e. The equivalent impedance is measured between nodes a and e.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,5) to [R, l^=20~$\Omega$, o-]				(2.5,5);
 									\draw[]	(2.5,5) to [C, l^=$-$j22.7~$\Omega$]			(5,5) --++ (right:2.5);
-									\draw[]	(5,5) to [L, l_=j40.94~$\Omega$, *-*]			(5,0);
+									\draw[]	(5,5) to [L, l_=j40.8~$\Omega$, *-*]			(5,0);
 									\draw[]	(7.5,5) to [R, l_=50~$\Omega$]					(7.5,2.5);
 									\draw[]	(7.5,2.5) to [C, l_=$-$j24.5~$\Omega$]			(7.5,0);
 									\draw[]	(0,0) to [short, o-]							(7.5,0);
@@ -658,7 +679,14 @@
   						</image>
 					</figure>
 
-					<p>Two of the impedances (j40.84<nbsp />&#8486; and 50<minus />j24.49<nbsp />&#8486;) are connected in parallel and can be reduced to an equivalent impedance of 30.13+j30.98<nbsp />&#8486;.</p>
+					<p>Two of the impedances (j40.84<nbsp />&#8486; and 50<minus />j24.49<nbsp />&#8486;) are connected in parallel.</p>
+					
+					<p>
+						<md>
+							\frac{(j40.84~\Omega)(50-j24.49~\Omega)}{(j40.84~\Omega)+(50-j24.49~\Omega)} = 30.13+j30.98~\Omega
+						</md>
+						
+					</p>
 					
 					<figure>
 						<caption></caption>
@@ -667,7 +695,7 @@
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,2.5) to [generic, l^=20$-$j22.7~$\Omega$, o-] (3,2.5);
-									\draw[]	(3,2.5) to [generic, l_=3.13+j31~$\Omega$] (3,0);
+									\draw[]	(3,2.5) to [generic, l_=30.1+j31~$\Omega$] (3,0);
 									\draw[]	(0,0) to [short, o-] (3,0);
 									\node[align=right, anchor=east] at (0,1.25) {$\vec{Z_{EQ}}\rightarrow$};
 								\end{tikzpicture}
@@ -688,7 +716,7 @@
 					
 					<figure>
 						<caption></caption>
-						<image width="40%" xml:id="ch8-equiv-impedance-example-fig5">
+						<image width="25%" xml:id="ch8-equiv-impedance-example-fig5">
 							<shortdescription>Circuit consisting of a 50.1ohm resistor in series with a 13.1mH inductor.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -708,7 +736,7 @@
 	<section xml:id="ch8-deltawye">
 		<title>Delta-Wye and Wye-Delta Transforms</title>
 
-		<p>The concept of delta-wye and wye-delta transforms was discussed in <xref ref="ch2-deltawye-wyedelta" />. Just as we could do delta-wye and wye-delta transforms for resistive circuits, so we can do them with circuits containing resistors, capacitors, and inductors. These transforms can be used to find the equivalent impedance of circuit elements that are neither in parallel nor in series with each other.</p>
+		<p>The concept of delta-wye and wye-delta transforms was discussed in <xref ref="ch2-deltawye-wyedelta" />. Just as we could perform delta-wye and wye-delta transforms for resistive circuits, so we can perform them with circuits containing resistors, capacitors, and inductors. These transforms can be used to find the equivalent impedance of circuit elements that are neither in parallel nor in series with each other.</p>
 		
 		<p>A delta circuit arrangement of impedances is shown in <xref ref="delta-wye-impedances-delta" />.</p>
 
@@ -803,8 +831,7 @@
 				
 				<p>
 					<md>
-						<mrow>\vec{Z_C} \amp= \frac{1}{j 2\pi1000(500\times10^{-9})}</mrow>
-						<mrow>\amp= -j318.31~\Omega</mrow>
+						\frac{1}{j 2\pi1000(500\times10^{-9})} = -j318.31~\Omega
 					</md>
 				</p>
 
@@ -812,12 +839,11 @@
 				
 				<p>
 					<md>
-						<mrow>\vec{Z_L} \amp= j2\pi1000 (0.02)</mrow>
-						<mrow>\amp= j125.66~\Omega</mrow>
+						j2\pi1000 (0.02) = j125.66~\Omega
 					</md>
 				</p>
 
-				<p>None of the circuit elements shares a branch, therefore none are in series. None of the circuit elements share two nodes, therefore none are in parallel. A delta-wye transform is required. (Note that a wye-delta transform could be accomplished as well.)</p>
+				<p>None of the circuit elements shares a branch, therefore none are in series. None of the circuit elements share two nodes, therefore none are in parallel. A delta-wye transform is required. (Note that a wye-delta transform could be performed as well.)</p>
 				
 				<p>The circuit has been re-drawn. The impedances in the delta configuration are highlighted in red, with each of the three nodes labeled.</p>
 
@@ -898,8 +924,7 @@
 				
 				<p>
 					<md>
-						<mrow>\vec{Z} \amp= \frac{(403.48+j41.60~\Omega)(331.01-j27.73~\Omega)}{(403.48+j41.60~\Omega)+(331.01-j27.73~\Omega)}</mrow>
-						<mrow>\amp= 113.98-j176.68~\Omega</mrow>
+						\frac{(403.48+j41.60~\Omega)(331.01-j27.73~\Omega)}{(403.48+j41.60~\Omega)+(331.01-j27.73~\Omega)} = 113.98-j176.68~\Omega
 					</md>
 				</p>
 
@@ -920,7 +945,7 @@
 
 				<figure>
   					<caption></caption>
-					<image width="40%" xml:id="ch8-delta-wye-impedance-example-figure5">
+					<image width="25%" xml:id="ch8-delta-wye-impedance-example-figure5">
 						<shortdescription>Circuit consisting of a 445ohm resistor in series with a 779nF capacitor.</shortdescription>
 						<latex-image>
 							\begin{tikzpicture}[font=\sffamily]
@@ -977,8 +1002,7 @@
 				
 				<p>
 					<md>
-						<mrow>\vec{Z_C} \amp= \frac{1}{j2\pi200(2\times10^{-6})}</mrow>
-						<mrow>\amp= -j397.89~\Omega</mrow>
+						\frac{1}{j2\pi200(2\times10^{-6})} = -j397.89~\Omega
 					</md>
 				</p>
 
@@ -986,8 +1010,7 @@
 				
 				<p>
 					<md>
-						<mrow>\vec{Z_L} \amp= j2\pi200 (0.2)</mrow>
-						<mrow>\amp=j251.33~\Omega</mrow>
+						j2\pi200 (0.2) =j251.33~\Omega
 					</md>
 				</p>
 
@@ -1052,21 +1075,19 @@
   					</image>
 				</figure>
 
-				<p>Calculate the equivalent impedance of the 600<nbsp />&#8486; resistor in parallel with the 147.34+j251.33<nbsp />&#8486; impedance.</p>
+				<p>Calculate the equivalent impedance of the 600<nbsp />&#8486; resistor in parallel with the 147+j251<nbsp />&#8486; impedance.</p>
 				
 				<p>
 					<md>
-						<mrow>\vec{Z} \amp= \frac{(600~\Omega)(147.34+j251.33~\Omega)}{(600~\Omega)+(147.34+j251.33~\Omega)}</mrow>
-						<mrow>\amp= 167.23 + j145.54~\Omega</mrow>
+						\frac{(600~\Omega)(147.34+j251.33~\Omega)}{(600~\Omega)+(147.34+j251.33~\Omega)} = 167.23 + j145.54~\Omega
 					</md>
 				</p>
 
-				<p>Calculate the equivalent impedance of the 800<nbsp />&#8486; resistor in parallel with the 250<minus />j146.56<nbsp />&#8486; impedance.</p>
+				<p>Calculate the equivalent impedance of the 800<nbsp />&#8486; resistor in parallel with the 250<minus />j147<nbsp />&#8486; impedance.</p>
 				
 				<p>
 					<md>
-						<mrow>\vec{Z} \amp= \frac{(800~\Omega)(250-j146.56~\Omega)}{(800~\Omega)+(250-j146.56~\Omega)}</mrow>
-						<mrow>\amp= 202.12 -j83.45~\Omega</mrow>
+						\frac{(800~\Omega)(250-j146.56~\Omega)}{(800~\Omega)+(250-j146.56~\Omega)} = 202.12 -j83.45~\Omega
 					</md>
 				</p>
 
@@ -1098,7 +1119,7 @@
 					</md>
 				</p>
 
-				<p>This impedance is equivalent to a resistor in series with a capacitor. (We know it must be a capacitor because the reactance is negative.) Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the value of the capacitor.</p>
+				<p>This impedance is equivalent to a 349<nbsp />&#8486; resistor in series with a capacitor. (We know it must be a capacitor because the reactance is negative.) Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the value of the capacitor.</p>
 				
 				<p>
 					<md>
@@ -1110,7 +1131,7 @@
 
 				<figure>
   					<caption></caption>
-					<image width="40%" xml:id="ch8-wye-delta-impedance-figure5">
+					<image width="25%" xml:id="ch8-wye-delta-impedance-figure5">
 						<shortdescription>Circuit with a 349ohm resistor in series with a 2.45uF capacitor.</shortdescription>
 						<latex-image>
 							\begin{tikzpicture}[font=\sffamily]
@@ -1148,7 +1169,7 @@
 					
 					<p>
 						<md>
-							<mrow>r \amp= \sqrt{200^2+100^2}</mrow>
+							<mrow>r \amp= \sqrt{(-200)^2+(-100)^2}</mrow>
 							<mrow>\amp= 224</mrow>
 						</md>
 					</p>
@@ -1222,7 +1243,7 @@
 						</md>
 					</p>
 
-					<p>Second, add the result of the multiplication with <m>\vec{Z_3}</m>.</p>
+					<p>Second, add the result to <m>\vec{Z_3}</m>.</p>
 					
 					<p>
 						<md>
@@ -1236,7 +1257,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z} \amp= \sqrt{1315^2 + 140^2} \angle \atantwo(-140,-1315)</mrow>
+							<mrow>\vec{Z} \amp= \sqrt{(-1315)^2 + (-140)^2} \angle \atantwo(-140,-1315)</mrow>
 							<mrow>\amp= 1320 \angle -174^\circ</mrow>
 						</md>
 					</p>
@@ -1278,7 +1299,7 @@
 						</md>
 					</p>
 
-					<p>Second, multiply the result of the subtraction with <m>\vec{Z_3}</m>.</p>
+					<p>Second, multiply the result with <m>\vec{Z_3}</m>.</p>
 					
 					<p>
 						<md>
@@ -1366,7 +1387,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z} \amp= \sqrt{79.133^2 + 1027.5^2} \angle \atantwo(-1027.5,79.133)</mrow>
+							<mrow>\vec{Z} \amp= \sqrt{79.133^2 + (-1027.5)^2} \angle \atantwo(-1027.5,79.133)</mrow>
 							<mrow>\amp= 1030.5 \angle -85.5960^\circ</mrow>
 						</md>
 					</p>
@@ -1395,8 +1416,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi 60)(0.025)</mrow>
-							<mrow>\amp= j9.42~\Omega</mrow>
+							j(2\pi 60)(0.025) = j9.42~\Omega
 						</md>
 					</p>
 				</solution>
@@ -1418,8 +1438,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi 2000)(470\times10^{-9})}</mrow>
-							<mrow>\amp= -j169.34~\Omega</mrow>
+							\frac{1}{j(2\pi 2000)(470\times10^{-9})} = -j169.34~\Omega
 						</md>
 					</p>
 				</solution>
@@ -1457,8 +1476,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi 200)(0.085)</mrow>
-							<mrow>\amp= j106.81~\Omega</mrow>
+							j(2\pi 200)(0.085) = j106.81~\Omega
 						</md>
 					</p>
 
@@ -1482,8 +1500,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{LR}} \amp= \frac{(45~\Omega)(j106.81~\Omega)}{45~\Omega + j106.81~\Omega}</mrow>
-							<mrow>\amp= 38.2170 + j16.1005~\Omega</mrow>
+							\frac{(45~\Omega)(j106.81~\Omega)}{45~\Omega + j106.81~\Omega} = 38.2170 + j16.1005~\Omega
 						</md>
 					</p>
 
@@ -1545,8 +1562,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi450)(330\times10^{-9})}</mrow>
-							<mrow>\amp= -j1071.75~\Omega</mrow>
+							\frac{1}{j(2\pi450)(330\times10^{-9})} = -j1071.75~\Omega
 						</md>
 					</p>
 
@@ -1554,10 +1570,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{L100}} \amp= j(2\pi 450)(0.1)</mrow>
-							<mrow>\amp= j282.74~\Omega</mrow>
-							<mrow>\vec{Z_{L460}} \amp= j(2\pi 450)(0.46)</mrow>
-							<mrow>\amp= j1300.62~\Omega</mrow>
+							<mrow>j(2\pi 450)(0.1) \amp= j282.74~\Omega</mrow>
+							<mrow>j(2\pi 450)(0.46) \amp= j1300.62~\Omega</mrow>
 						</md>
 					</p>
 
@@ -1568,55 +1582,39 @@
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,2.5) node[left] {a} to [L, l^=j283~$\Omega$, o-]	(2.5,2.5) --++ (right:2.5);
-									\draw[]	(2.5,2.5) to [C, l_=$-$j1070~$\Omega$, *-*]				(2.5,0);
-									\draw[]	(5,2.5) to [R, l_=24~$\Omega$, *-*]				(5,0);
-									\draw[]	(5,2.5) to [L, l^=j1300~$\Omega$]						(7.5,2.5);
-									\draw[]	(7.5,2.5) to [R, l_=86~$\Omega$]				(7.5,0);
-									\draw[]	(0,0) node[left] {b} to [short, o-]				(7.5,0);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j1070~$\Omega$, *-*]			(2.5,0);
+									\draw[]	(5,2.5) to [R, l_=24~$\Omega$, *-*]					(5,0);
+									\draw[]	(5,2.5) to [L, l^=j1300~$\Omega$]					(7.5,2.5);
+									\draw[]	(7.5,2.5) to [R, l_=86~$\Omega$]					(7.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
 					</figure>
 
-					<p>The capacitor (<minus />j1071.75<nbsp />&#8486; impedance) and 24<nbsp />&#8486; resistor are connected in parallel.</p>
-
-					<p>
-						<md>
-							<mrow>\vec{Z_{RC}} \amp= \frac{(24~\Omega)(-j1071.75~\Omega)}{24~\Omega + (-j1071.75~\Omega)}</mrow>
-							<mrow>\amp= 23.9880 - j0.5372</mrow>
-						</md>
-					</p>
-
-					<p>The 460<nbsp />mH inductor (j1300.62<nbsp />&#8486; impedance) and 86<nbsp />&#8486; resistor are connected in series.</p>
+					<p>The j1300<nbsp />&#8486; impedance is connected in series with the 86<nbsp />&#8486; resistor.</p>
 					
-					<p>
-						<md>
-							<mrow>\vec{Z_{LR}} \amp= 86~\Omega + j1300.62~\Omega</mrow>
-							<mrow>\amp= 86 + j1300.62~\Omega</mrow>
-						</md>
-					</p>
-
 					<figure>
 						<caption></caption>
-						<image width="50%" xml:id="ch8-equivimpedance-ex4-figure2">
-							<shortdescription>Circuit with one mesh and three nodes consisting of three impedances (j283ohm, 24-j0.537ohm, and 86+j1300ohm). The j283ohm floats at node a. All three impedances connect at node c. The 24-j0.573ohm and 86+j1300ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
+						<image width="70%" xml:id="ch8-equivimpedance-ex4-figure1b">
+							<shortdescription>Circuit with two meshes and three nodes consisting of four impedances (24ohm,  j283ohm, 86+j1300ohm, and -j1070ohm). The j283ohm floats at node a. The j283ohm, -j1070ohm, 24ohm, and 86+j1300ohm connect at node c. The -j1070ohm, 24ohm, and 86+j1300ohm connect at node b. The equivalent impedance is measured between nodes a and b.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) node[left] {a} to [L, l^=j283~$\Omega$, o-]		(3,2.5) --++ (right:3);
-									\draw[]	(3,2.5) to [generic, l_=24$-$j0.537~$\Omega$, *-*]		(3,0);
-									\draw[]	(6,2.5) to [generic, l_=86+j1300$\Omega$]				(6,0);
-									\draw[]	(0,0) node[left] {b} to [short, o-]						(6,0);
+									\draw[]	(0,2.5) node[left] {a} to [L, l^=j283~$\Omega$, o-]	(2.5,2.5) --++ (right:5);
+									\draw[]	(2.5,2.5) to [C, l_=$-$j1070~$\Omega$, *-*]			(2.5,0);
+									\draw[]	(5,2.5) to [R, l_=24~$\Omega$, *-*]					(5,0);
+									\draw[]	(7.5,2.5) to [generic, l_=86+j1300~$\Omega$]		(7.5,0);
+									\draw[]	(0,0) node[left] {b} to [short, o-]					(7.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
 					</figure>
 
-					<p>The 23.988<minus />j0.5372<nbsp />&#8486; impedance is in parallel with the 86+j1300.62<nbsp />&#8486; impedance.</p>
+					<p>Combine the three parallel impedances.</p>
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(23.9880 - j0.5372)(86 + j1300.62~\Omega)}{(23.9880 - j0.5372)+(86 + j1300.62~\Omega)}</mrow>
-							<mrow>\amp= 23.9705 - j0.0963</mrow>
+							\frac{1}{\frac{1}{-j1070~\Omega} + \frac{1}{24~\Omega} + \frac{1}{86+j1300~\Omega}} = 23.9705 - j0.0963~\Omega
 						</md>
 					</p>
 
@@ -1680,8 +1678,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi6000)(33\times10^{-6})</mrow>
-							<mrow>\amp= j1.24~\Omega</mrow>
+							j(2\pi6000)(33\times10^{-6}) = j1.24~\Omega
 						</md>
 					</p>
 
@@ -1689,10 +1686,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C50}} \amp= \frac{1}{j(2\pi 6000)(50\times10^{-6})}</mrow>
-							<mrow>\amp= -j0.53~\Omega</mrow>
-							<mrow>\vec{Z_{C68}} \amp= \frac{1}{j(2\pi 6000)(68\times10^{-6})}</mrow>
-							<mrow>\amp= -j0.39~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 6000)(50\times10^{-6})} \amp= -j0.53~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 6000)(68\times10^{-6})} \amp= -j0.39~\Omega</mrow>
 						</md>
 					</p>
 
@@ -1719,8 +1714,7 @@
 					
 					<p>
 						<md>
-							<mrow>Z_{LR} \amp= (5~\Omega) + (j1.24~\Omega)</mrow>
-							<mrow>\amp= 5 + j1.24~\Omega</mrow>
+							(5~\Omega) + (j1.24~\Omega) = 5 + j1.24~\Omega
 						</md>
 					</p>
 
@@ -1728,8 +1722,7 @@
 					
 					<p>
 						<md>
-							<mrow>Z_{RC} \amp= (6~\Omega) + (-j0.39~\Omega)</mrow>
-							<mrow>\amp= 6 - j0.39~\Omega</mrow>
+							(6~\Omega) + (-j0.39~\Omega) = 6 - j0.39~\Omega
 						</md>
 					</p>
 
@@ -1754,8 +1747,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(5 + j1.24~\Omega)(6 - j0.39~\Omega)}{(5 + j1.24~\Omega)+(6 - j0.39~\Omega)}</mrow>
-							<mrow>\amp= 2.7935 + j0.2844</mrow>
+							\frac{(5 + j1.24~\Omega)(6 - j0.39~\Omega)}{(5 + j1.24~\Omega)+(6 - j0.39~\Omega)} = 2.7935 + j0.2844
 						</md>
 					</p>
 
@@ -1779,8 +1771,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= 2~\Omega + (2.7935 + j0.2844)</mrow>
-							<mrow>\amp= 4.7935 + j0.2844</mrow>
+							2~\Omega + (2.7935 + j0.2844) = 4.7935 + j0.2844
 						</md>
 					</p>
 
@@ -2006,8 +1997,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(9~\Omega)(3.75 + j2~\Omega)}{(9~\Omega)+(3.75 + j2~\Omega)}</mrow>
-							<mrow>\amp= 2.7996 + j0.9726~\Omega</mrow>
+							\frac{(9~\Omega)(3.75 + j2~\Omega)}{(9~\Omega)+(3.75 + j2~\Omega)} = 2.7996 + j0.9726~\Omega
 						</md>
 					</p>
 
@@ -2015,8 +2005,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= \frac{(6~\Omega)(-2.6667 + j5~\Omega)}{(6~\Omega)+(-2.6667 + j5~\Omega)}</mrow>
-							<mrow>\amp= 2.6769 + j4.9846~\Omega</mrow>
+							\frac{(6~\Omega)(-2.6667 + j5~\Omega)}{(6~\Omega)+(-2.6667 + j5~\Omega)} = 2.6769 + j4.9846~\Omega
 						</md>
 					</p>
 
@@ -2040,8 +2029,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'''} \amp= (2.7996 + j0.9726~\Omega) + (2.6769 + j4.9846~\Omega)</mrow>
-							<mrow>\amp= 5.4765 + j5.9572~\Omega</mrow>
+							(2.7996 + j0.9726~\Omega) + (2.6769 + j4.9846~\Omega) = 5.4765 + j5.9572~\Omega
 						</md>
 					</p>
 
@@ -2106,8 +2094,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi 10000)(100 \times 10^{-9})}</mrow>
-							<mrow>\amp= -j159.15~\Omega</mrow>
+							\frac{1}{j(2\pi 10000)(100 \times 10^{-9})} = -j159.15~\Omega
 						</md>
 					</p>
 
@@ -2115,8 +2102,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi 1000)(0.005)</mrow>
-							<mrow>\amp= j314.16~\Omega</mrow>
+							j(2\pi 1000)(0.005) = j314.16~\Omega
 						</md>
 					</p>
 
@@ -2195,8 +2181,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(220~\Omega)(333.33 + j155~\Omega)}{(220~\Omega)+(333.33 + j155~\Omega)}</mrow>
-							<mrow>\amp= 138.89 + j22.720~\Omega</mrow>
+							\frac{(220~\Omega)(333.33 + j155~\Omega)}{(220~\Omega)+(333.33 + j155~\Omega)} = 138.89 + j22.720~\Omega
 						</md>
 					</p>
 
@@ -2204,8 +2189,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= \frac{(470~\Omega)(-146.09 + j314.16~\Omega)}{(470~\Omega)+(-146.09 + j314.16~\Omega)}</mrow>
-							<mrow>\amp= 118.59 + j340.83~\Omega</mrow>
+							\frac{(470~\Omega)(-146.09 + j314.16~\Omega)}{(470~\Omega)+(-146.09 + j314.16~\Omega)} = 118.59 + j340.83~\Omega
 						</md>
 					</p>
 
@@ -2229,8 +2213,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'''} \amp= (138.89 + j22.720~\Omega) + (118.59 + j340.83~\Omega)</mrow>
-							<mrow>\amp= 257.49 + j363.55~\Omega</mrow>
+							(138.89 + j22.720~\Omega) + (118.59 + j340.83~\Omega) = 257.49 + j363.55~\Omega
 						</md>
 					</p>
 
@@ -2296,10 +2279,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C60}} \amp= \frac{1}{j(2\pi 50)(60 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j53.0516~\Omega</mrow>
-							<mrow>\vec{Z_{C50}} \amp= \frac{1}{j(2\pi 50)(50 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j63.6620~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 50)(60 \times 10^{-6})} \amp= -j53.0516~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 50)(50 \times 10^{-6})} \amp= -j63.6620~\Omega</mrow>
 						</md>
 					</p>
 
@@ -2307,10 +2288,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{L60}} \amp= j(2\pi 50)(0.06)</mrow>
-							<mrow>\amp= j18.8496~\Omega</mrow>
-							<mrow>\vec{Z_{L80}} \amp= j(2\pi 50)(0.08)</mrow>
-							<mrow>\amp= j25.1327~\Omega</mrow>
+							<mrow>j(2\pi 50)(0.06) \amp= j18.8496~\Omega</mrow>
+							<mrow>j(2\pi 50)(0.08) \amp= j25.1327~\Omega</mrow>
 						</md>
 					</p>
 
@@ -2338,8 +2317,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{RC}} \amp= (10~\Omega) + (-j53.0516~\Omega)</mrow>
-							<mrow>\amp= 10 -j53.0516~\Omega</mrow>
+							(10~\Omega) + (-j53.0516~\Omega) = 10 -j53.0516~\Omega
 						</md>
 					</p>
 
@@ -2387,7 +2365,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_1} \amp= \frac{(j18.8496~\Omega)(j25.1327~\Omega)+(j18.8496~\Omega)(-j63.6620~\Omega)+(j25.1327~\Omega)(-j63.6620~\Omega)}{j18.8496~\Omega}</mrow>
+							<mrow>\vec{Z_1} \amp= \frac{(j18.8~\Omega)(j25.1~\Omega)+(j18.8~\Omega)(-j63.7~\Omega)+(j25.1~\Omega)(-j63.7~\Omega)}{j18.8496~\Omega}</mrow>
 							<mrow>\amp= \frac{2326.3~\Omega}{j18.8496~\Omega}</mrow>
 							<mrow>\amp= -j123.41~\Omega</mrow>
 							<mrow>\vec{Z_2} \amp= \frac{2326.3~\Omega}{-j63.6620~\Omega}</mrow>
@@ -2396,7 +2374,6 @@
 							<mrow>\amp= -j92.5589~\Omega</mrow>
 						</md>
 					</p>
-
 
 					<figure>
 						<caption></caption>
@@ -2421,8 +2398,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(10 -j53.0516~\Omega)(-j92.5589~\Omega)}{(10 -j53.0516~\Omega)+(-j92.5589~\Omega)}</mrow>
-							<mrow>\amp= 4.0217 -j33.9990~\Omega</mrow>
+							\frac{(10 -j53.0516~\Omega)(-j92.5589~\Omega)}{(10 -j53.0516~\Omega)+(-j92.5589~\Omega)} = 4.0217 -j33.9990~\Omega
 						</md>
 					</p>
 
@@ -2430,8 +2406,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= \frac{(20~\Omega)(j36.5408~\Omega)}{(20~\Omega)+(j36.5408~\Omega)}</mrow>
-							<mrow>\amp= 15.3897 + j8.4233~\Omega</mrow>
+							\frac{(20~\Omega)(j36.5408~\Omega)}{(20~\Omega)+(j36.5408~\Omega)} = 15.3897 + j8.4233~\Omega
 						</md>
 					</p>
 
@@ -2456,8 +2431,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'''} \amp= (4.0217 -j33.9990~\Omega) + (15.3897 + j8.4233~\Omega)</mrow>
-							<mrow>\amp= 19.4113 - j25.5758~\Omega</mrow>
+							(4.0217 -j33.9990~\Omega) + (15.3897 + j8.4233~\Omega) = 19.4113 - j25.5758~\Omega
 						</md>
 					</p>
 
@@ -2481,8 +2455,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''''} \amp= \frac{(19.4113 - j25.5758~\Omega)(-j123.41~\Omega)}{(19.4113 - j25.5758~\Omega)+(-j123.41~\Omega)}</mrow>
-							<mrow>\amp= 13.0966 - j22.8917~\Omega</mrow>
+							\frac{(19.4113 - j25.5758~\Omega)(-j123.41~\Omega)}{(19.4113 - j25.5758~\Omega)+(-j123.41~\Omega)} = 13.0966 - j22.8917~\Omega
 						</md>
 					</p>
 

@@ -27,6 +27,5 @@
     <!-- Include backmatter -->
     <!---->
     <xi:include href="./backmatter.ptx" />
-    <xi:include href="./end_appendixA_units.ptx" />
   </book>
 </pretext>

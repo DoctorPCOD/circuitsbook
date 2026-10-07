@@ -21,7 +21,7 @@
 <article class="exercise exercise-like"><h2 class="heading">
 <span class="type">Exercise</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span>
 </h2>
-<div class="para">Derive an equation for <span class="process-math">\(i(t)\)</span> given the circuit shown in <a href="ch7-secondorder-10.html#homogeneous-second-example5-diagram" class="xref" data-knowl="./knowl/xref/homogeneous-second-example5-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.32">Figure 7.8.32</a>. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are <span class="process-math">\(R_D = 180~\Omega\text{,}\)</span> <span class="process-math">\(R = 380~\Omega\text{,}\)</span> <span class="process-math">\(C = 12~\mu\textrm{F}\text{,}\)</span> and <span class="process-math">\(L = 22~\textrm{mH}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Derive an equation for <span class="process-math">\(i(t)\)</span> given the circuit shown in <a href="ch7-secondorder-10.html#homogeneous-second-example5-diagram" class="xref" data-knowl="./knowl/xref/homogeneous-second-example5-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.8.32">Figure 7.8.32</a>. The switch is in position a for a very long time before moving to position b at a time of zero seconds. The circuit parameters are: <span class="process-math">\(R_D = 180~\Omega\text{,}\)</span> <span class="process-math">\(R = 380~\Omega\text{,}\)</span> <span class="process-math">\(C = 12~\mu\textrm{F}\text{,}\)</span> and <span class="process-math">\(L = 22~\textrm{mH}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch7-homogeneous-second-example5-diagram.svg" role="img" class="contained" alt="Circuit with six nodes consisting of an 8.1V source, 2.7kohm resistor, resistors Rd and R, SPDT switch, inductor L, and capacitor C. The high-potential end of the 8.1V source connects to the 2.7kohm resistor at node c. The 2.7kohm resistor connects to position a of the SPDT switch at node a. Rd and position b of the SPDT switch connect at node b. The input of the SPDT switch, L, and R connect at node d. R and C connect at node e. The low-potential end of the 8.1V source, Rd, L, and C connect at node f. Voltage v(t) drops from node d to node f. Branch current i(t) flows through L from node d to node f. The SPDT switch is depicted as switching from position a to position b."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8.32<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Circuit diagram corresponding to <a href="ch7-secondorder-10.html#ch7-homogeneous-ex5" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-ex5.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 7.8.10">Exercise 7.8.10</a>.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.8.32"><a tabindex="-1" href="#homogeneous-second-example5-diagram" title="Copy heading and permalink for Figure 7.8.32" aria-label="Copy heading and permalink for Figure 7.8.32">🔗</a></div></figcaption>
@@ -154,22 +154,13 @@ v(t) = Ri_C(t) + \frac{1}{C} \int i_C(t) \,dt
 0 \amp= \frac{d}{dt}\left[L\frac{di(t)}{dt}\right] + \frac{R}{R_D}\frac{d}{dt}\left[L\frac{di(t)}{dt}\right] + R\frac{di(t)}{dt} + \frac{1}{CR_D}\left[L\frac{di(t)}{dt}\right] + \frac{1}{C}i(t)\\
 \amp= L\frac{d^2i(t)}{dt^2} + \frac{LR}{R_D}\frac{d^2i(t)}{dt^2} + R\frac{di(t)}{dt} + \frac{L}{CR_D}\frac{di(t)}{dt} + \frac{1}{C}i(t)\\
 \amp= \left[L+\frac{LR}{R_D}\right]\frac{d^2i(t)}{dt^2} + \left[R+\frac{L}{CR_D}\right]\frac{di(t)}{dt} + \left[\frac{1}{C}\right]i(t)\\
-\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{RR_D}{L(R_D+R)} + \frac{1}{C(R_D+R)}\right]\frac{di(t)}{dt} + \left[\frac{R_D}{LC(R_D+R)}\right]i(t)
+\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{RR_D}{L(R_D+R)} + \frac{1}{C(R_D+R)}\right]\frac{di(t)}{dt} + \left[\frac{R_D}{LC(R_D+R)}\right]i(t)\\
+\amp= \frac{d^2i(t)}{dt^2} + 5744\frac{di(t)}{dt} +1196200i(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug in component values, using base units.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-0 = \frac{d^2i(t)}{dt^2} + 5744\frac{di(t)}{dt} +1196200i(t)
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Calculate the damping parameter and resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch7-damping-types.html#ch7-eq-damping-parameter" class="xref" data-knowl="./knowl/xref/ch7-eq-damping-parameter.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.1">(7.2.1)</a> and <a href="ch7-damping-types.html#ch7-eq-resonant-frequency" class="xref" data-knowl="./knowl/xref/ch7-eq-resonant-frequency.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.2">(7.2.2)</a> to calculate the damping parameter and resonant frequency.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -178,9 +169,9 @@ v(t) = Ri_C(t) + \frac{1}{C} \int i_C(t) \,dt
 \omega_0 \amp= 1093.7~\textrm{rad/s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">The circuit is overdamped. Use <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.3">(7.2.3)</a> and <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.4">(7.2.4)</a> to calculate the roots of the characteristic equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">The circuit is overdamped. Use <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.3">(7.2.3)</a> and <a href="ch7-damping-types.html#ch7-damping-types-2-9-1" class="xref" data-knowl="./knowl/xref/ch7-eq-roots2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.2.4">(7.2.4)</a> to calculate the roots of the characteristic equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -191,21 +182,20 @@ s_2 \amp= -2872~\textrm{Np/s} - \sqrt{(2872~\textrm{Np/s})^2 - (1093.7~\textrm{r
 \amp= -5528
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a> to calculate the initial condition of the first derivative of the current.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a> to calculate the initial condition of the first derivative of the current.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
-i'(0^+) \amp= \frac{v(0^+)}{L}\\
-\amp= \frac{-0.3695~\textrm{V}}{0.022~\textrm{H}}\\
+i'(0^+) \frac{-0.3695~\textrm{V}}{0.022~\textrm{H}}\\
 \amp= -16.79~\textrm{A/s}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Use <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.2">(7.5.2)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.3">(7.5.3)</a> to calculate the coefficients of the equation. Use base units to ensure the coefficients each have a unit of A.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Use <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A1.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.2">(7.5.2)</a> and <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over-A2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.3">(7.5.3)</a> to calculate the coefficients of the equation. Use base units to ensure the coefficients each have a unit of A.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -218,9 +208,9 @@ A_2 \amp= \frac{-16.79 - (0.003)(-216.4)}{-5528 - (-216.4)}\\
 \amp= 3.04~\textrm{mA}
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-35" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para">Plug into <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a> to derive the equation for <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para">Plug into <a href="ch7-secondorderresponses.html#ch7-homogeneous-overdamped-solutions-3-1" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-over.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.5.1">(7.5.1)</a> to derive the equation for <span class="process-math">\(i(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical">
 <div class="displaymath process-math">
@@ -228,7 +218,7 @@ A_2 \amp= \frac{-16.79 - (0.003)(-216.4)}{-5528 - (-216.4)}\\
 i(t) = \left(-0.04~\textrm{mA}~\textrm{e}^{-216t} + 3.04~\textrm{mA}~\textrm{e}^{-5530t}\right)~u(t) + 3~\textrm{mA}~u(-t)
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex5-3-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Solution 7.8.10.1"><a tabindex="-1" href="#ch7-homogeneous-ex5-3" title="Copy heading and permalink for Solution 7.8.10.1" aria-label="Copy heading and permalink for Solution 7.8.10.1">🔗</a></div>
 </div></details>

@@ -1,6 +1,6 @@
 \xpg@aux {variant=usmax}{english}
 \hypertarget {my-great-book}{}
-\contentsline {chapter}{Preface}{iv}{chapter*.1}%
+\contentsline {chapter}{Preface}{v}{chapter*.1}%
 \contentsline {chapter}{\numberline {1}Properties of Electric Circuits}{1}{chapter.3}%
 \contentsline {section}{\numberline {1.1}Charge}{1}{section.4}%
 \contentsline {section}{\numberline {1.2}Voltage}{1}{section.7}%
@@ -13,10 +13,10 @@
 \contentsline {subsection}{\numberline {1.4.1}Conservation of Power}{6}{subsection.40}%
 \contentsline {section}{\numberline {1.5}Power Sources}{7}{section.45}%
 \contentsline {subsection}{\numberline {1.5.1}Direct Current (DC) Sources}{7}{subsection.46}%
-\contentsline {subsection}{\numberline {1.5.2}Alternating Current (AC) Sources}{8}{subsection.49}%
-\contentsline {subsection}{\numberline {1.5.3}Dependent Sources}{10}{subsection.62}%
+\contentsline {subsection}{\numberline {1.5.2}Alternating Current (AC) Sources}{7}{subsection.49}%
+\contentsline {subsection}{\numberline {1.5.3}Dependent Sources}{9}{subsection.62}%
 \contentsline {subsection}{\numberline {1.5.4}Equivalent Sources}{10}{subsection.67}%
-\contentsline {section}{\numberline {1.6}Elementary Signals}{15}{section.104}%
+\contentsline {section}{\numberline {1.6}Elementary Signals}{14}{section.104}%
 \contentsline {subsection}{\numberline {1.6.1}Dirac Delta Function}{15}{subsection.105}%
 \contentsline {subsection}{\numberline {1.6.2}Step Function}{16}{subsection.114}%
 \contentsline {subsection}{\numberline {1.6.3}Ramp Function}{19}{subsection.135}%
@@ -28,7 +28,7 @@
 \contentsline {paragraph}{Power}{23}{paragraph*.173}%
 \contentsline {paragraph}{Sinusoidal Waves}{25}{paragraph*.178}%
 \contentsline {paragraph}{Sources}{28}{paragraph*.183}%
-\contentsline {paragraph}{Elementary Signals}{32}{paragraph*.198}%
+\contentsline {paragraph}{Elementary Signals}{31}{paragraph*.198}%
 \contentsline {chapter}{\numberline {2}Circuit Laws}{37}{chapter.217}%
 \contentsline {section}{\numberline {2.1}Definitions}{37}{section.218}%
 \contentsline {section}{\numberline {2.2}Resistors}{39}{section.233}%
@@ -43,9 +43,9 @@
 \contentsline {subsection}{\numberline {2.3.2}Wye-Delta Transforms}{57}{subsection.347}%
 \contentsline {section}{\numberline {2.4}Ohm's Law}{59}{section.365}%
 \contentsline {subsection}{\numberline {2.4.1}Calculating Voltage from Current and Resistance}{60}{subsection.373}%
-\contentsline {subsection}{\numberline {2.4.2}Calculating Current from Voltage and Resistance}{62}{subsection.384}%
+\contentsline {subsection}{\numberline {2.4.2}Calculating Current from Voltage and Resistance}{61}{subsection.384}%
 \contentsline {subsection}{\numberline {2.4.3}Calculating Resistance from Voltage and Current}{63}{subsection.393}%
-\contentsline {subsection}{\numberline {2.4.4}Ohm's Law and the Power Equation}{64}{subsection.398}%
+\contentsline {subsection}{\numberline {2.4.4}Ohm's Law and the Power Equation}{63}{subsection.398}%
 \contentsline {section}{\numberline {2.5}Voltage Divider}{65}{section.414}%
 \contentsline {subsection}{\numberline {2.5.1}Wheatstone Bridge}{68}{subsection.433}%
 \contentsline {section}{\numberline {2.6}Current Divider}{69}{section.437}%
@@ -56,204 +56,215 @@
 \contentsline {section}{\numberline {2.8}Mesh Analysis}{76}{section.478}%
 \contentsline {subsection}{\numberline {2.8.1}Branch vs. Mesh Currents}{76}{subsection.479}%
 \contentsline {subsection}{\numberline {2.8.2}The Mesh Analysis Method}{77}{subsection.484}%
-\contentsline {section}{\numberline {2.9}Practice Problems}{79}{section.502}%
-\contentsline {paragraph}{Equivalent Resistance}{79}{paragraph*.503}%
-\contentsline {paragraph}{Ohm's Law}{88}{paragraph*.554}%
-\contentsline {paragraph}{Voltage and Current Divider}{92}{paragraph*.565}%
-\contentsline {paragraph}{Kirchhoff's Laws}{96}{paragraph*.580}%
-\contentsline {paragraph}{Mesh Analysis}{102}{paragraph*.599}%
-\contentsline {chapter}{\numberline {3}Circuit Theorems}{106}{chapter.612}%
-\contentsline {section}{\numberline {3.1}Superposition}{108}{section.624}%
-\contentsline {section}{\numberline {3.2}Source Transformation}{113}{section.647}%
-\contentsline {section}{\numberline {3.3}Choosing an Analysis Tool}{116}{section.668}%
-\contentsline {subsection}{\numberline {3.3.1}Solving via Simplification}{117}{subsection.669}%
-\contentsline {subsection}{\numberline {3.3.2}Solving without Simplification}{117}{subsection.670}%
-\contentsline {section}{\numberline {3.4}Open-Circuit Voltages and Short-Circuit Currents}{118}{section.671}%
-\contentsline {subsection}{\numberline {3.4.1}Open-Circuit Voltage}{118}{subsection.672}%
-\contentsline {subsection}{\numberline {3.4.2}Short-Circuit Current}{120}{subsection.683}%
-\contentsline {section}{\numberline {3.5}Thévenin's Theorem}{122}{section.696}%
-\contentsline {section}{\numberline {3.6}Norton's Theorem}{126}{section.717}%
-\contentsline {section}{\numberline {3.7}Maximum Power Transfer}{129}{section.728}%
-\contentsline {section}{\numberline {3.8}Practice Problems}{133}{section.749}%
-\contentsline {paragraph}{Superposition}{133}{paragraph*.750}%
-\contentsline {paragraph}{Source Transformation}{145}{paragraph*.811}%
-\contentsline {paragraph}{Thévenin and Norton's Theorems}{154}{paragraph*.858}%
-\contentsline {paragraph}{Maximum Power Transfer}{166}{paragraph*.911}%
-\contentsline {chapter}{\numberline {4}Operational Amplifiers (Op-Amps)}{169}{chapter.912}%
-\contentsline {section}{\numberline {4.1}Amplifiers}{169}{section.913}%
-\contentsline {section}{\numberline {4.2}Differential Amplifiers}{171}{section.921}%
-\contentsline {section}{\numberline {4.3}Comparator Circuits}{172}{section.927}%
-\contentsline {subsection}{\numberline {4.3.1}Non-Idealities in Comparators}{173}{subsection.932}%
-\contentsline {subsection}{\numberline {4.3.2}Comparators vs. \textquotedblleft {}Op-Amps\textquotedblright {}}{174}{subsection.935}%
-\contentsline {subsection}{\numberline {4.3.3}Analog to Digital Conversion (ADC)}{174}{subsection.936}%
-\contentsline {subsection}{\numberline {4.3.4}Pulse-Width Modulation (PWM)}{175}{subsection.945}%
-\contentsline {section}{\numberline {4.4}Feedback Circuits}{178}{section.958}%
-\contentsline {subsection}{\numberline {4.4.1}Voltage Follower}{179}{subsection.963}%
-\contentsline {section}{\numberline {4.5}Divided Feedback Op-Amp Circuits}{180}{section.974}%
-\contentsline {subsection}{\numberline {4.5.1}Inverting Op-Amp}{181}{subsection.980}%
-\contentsline {subsection}{\numberline {4.5.2}Non-Inverting Op-Amp}{183}{subsection.988}%
-\contentsline {subsection}{\numberline {4.5.3}Cascaded Op-Amps}{184}{subsection.992}%
-\contentsline {subsection}{\numberline {4.5.4}Summing and Difference Amplifiers}{185}{subsection.1000}%
-\contentsline {subsection}{\numberline {4.5.5}General Op-Amp Circuits}{189}{subsection.1016}%
-\contentsline {subsection}{\numberline {4.5.6}Implementing Mathematical Functions with Op-Amps}{191}{subsection.1025}%
-\contentsline {subsection}{\numberline {4.5.7}Solving Linear Equations}{191}{subsection.1026}%
-\contentsline {section}{\numberline {4.6}Op-Amp Output Current}{193}{section.1038}%
-\contentsline {section}{\numberline {4.7}References}{195}{section.1046}%
-\contentsline {section}{\numberline {4.8}Practice Problems}{195}{section.1047}%
-\contentsline {paragraph}{Divided Feedback Op-Amp Circuits}{195}{paragraph*.1048}%
-\contentsline {paragraph}{Op-Amp Output Current}{209}{paragraph*.1075}%
-\contentsline {chapter}{\numberline {5}Capacitors and RC Circuits}{216}{chapter.1090}%
-\contentsline {section}{\numberline {5.1}Types of Capacitors}{217}{section.1105}%
-\contentsline {subsection}{\numberline {5.1.1}Non-Polarized Capacitors}{218}{subsection.1106}%
-\contentsline {subsection}{\numberline {5.1.2}Variable Capacitors}{218}{subsection.1109}%
-\contentsline {subsection}{\numberline {5.1.3}Polarized Capacitors}{219}{subsection.1114}%
-\contentsline {section}{\numberline {5.2}Measuring Capacitance}{220}{section.1121}%
-\contentsline {section}{\numberline {5.3}Voltage-Current Relationship in a Capacitor}{221}{section.1124}%
-\contentsline {section}{\numberline {5.4}Equivalent Capacitance}{222}{section.1127}%
-\contentsline {subsection}{\numberline {5.4.1}Series Combinations of Capacitors}{222}{subsection.1128}%
-\contentsline {subsection}{\numberline {5.4.2}Parallel Combinations of Capacitors}{222}{subsection.1132}%
-\contentsline {section}{\numberline {5.5}Differentiator and Integrator Circuits}{224}{section.1146}%
-\contentsline {section}{\numberline {5.6}Review of Important Mathematical Concepts for First-Order Circuits}{226}{section.1153}%
-\contentsline {subsection}{\numberline {5.6.1}Discontinuous Functions}{226}{subsection.1154}%
-\contentsline {subsection}{\numberline {5.6.2}First-Order, Linear, Ordinary Differential Equations}{227}{subsection.1157}%
-\contentsline {section}{\numberline {5.7}Resistor-Capacitor (RC) Circuits}{227}{section.1160}%
-\contentsline {subsection}{\numberline {5.7.1}Discharging to Zero (Homogeneous) Transient Response}{229}{subsection.1167}%
-\contentsline {subsection}{\numberline {5.7.2}Charging from Zero Transient Response}{237}{subsection.1217}%
-\contentsline {subsection}{\numberline {5.7.3}General Transient Response}{242}{subsection.1240}%
-\contentsline {section}{\numberline {5.8}Practice Problems}{250}{section.1283}%
-\contentsline {paragraph}{Equivalent Capacitance}{250}{paragraph*.1284}%
-\contentsline {paragraph}{Capacitor Current-Voltage Relationship}{258}{paragraph*.1331}%
-\contentsline {paragraph}{RC Circuits: Homogeneous}{261}{paragraph*.1334}%
-\contentsline {paragraph}{RC Circuits: Charging from Zero}{270}{paragraph*.1373}%
-\contentsline {paragraph}{RC Circuits: General Transient Response}{281}{paragraph*.1426}%
-\contentsline {chapter}{\numberline {6}Inductors and RL Circuits}{300}{chapter.1517}%
-\contentsline {section}{\numberline {6.1}Parasitic Effects}{301}{section.1525}%
-\contentsline {section}{\numberline {6.2}Measuring Inductance}{301}{section.1528}%
-\contentsline {section}{\numberline {6.3}Voltage-Current Relationship in an Inductor}{302}{section.1531}%
-\contentsline {section}{\numberline {6.4}Equivalent Inductance}{302}{section.1534}%
-\contentsline {subsection}{\numberline {6.4.1}Series Combinations of Inductors}{302}{subsection.1535}%
-\contentsline {subsection}{\numberline {6.4.2}Parallel Combinations of Inductors}{303}{subsection.1539}%
-\contentsline {section}{\numberline {6.5}Resistor-Inductor (RL) Circuits}{305}{section.1549}%
-\contentsline {subsection}{\numberline {6.5.1}Discharging to Zero (Homogeneous) Transient Response}{306}{subsection.1556}%
-\contentsline {subsection}{\numberline {6.5.2}Charging from Zero Transient Response}{309}{subsection.1575}%
-\contentsline {subsection}{\numberline {6.5.3}General Transient Response}{316}{subsection.1610}%
-\contentsline {section}{\numberline {6.6}Practice Problems}{330}{section.1687}%
-\contentsline {paragraph}{Equivalent Inductance}{330}{paragraph*.1688}%
-\contentsline {paragraph}{Inductor Current-Voltage Relationship}{338}{paragraph*.1745}%
-\contentsline {paragraph}{RL Circuits: Homogeneous}{343}{paragraph*.1750}%
-\contentsline {paragraph}{RL Circuits: Charging from Zero}{354}{paragraph*.1803}%
-\contentsline {paragraph}{RL Circuits: General Transient Response}{367}{paragraph*.1861}%
-\contentsline {chapter}{\numberline {7}Second-Order Circuits}{388}{chapter.1970}%
-\contentsline {section}{\numberline {7.1}Review of Important Mathematical Concepts for Second-Order Circuits}{389}{section.1976}%
-\contentsline {section}{\numberline {7.2}Circuit Damping}{390}{section.1979}%
-\contentsline {subsection}{\numberline {7.2.1}Overdamped}{391}{subsection.1988}%
-\contentsline {subsection}{\numberline {7.2.2}Underdamped}{391}{subsection.1991}%
-\contentsline {subsection}{\numberline {7.2.3}Critically Damped}{392}{subsection.1997}%
-\contentsline {section}{\numberline {7.3}The Series RLC Circuit}{393}{section.2000}%
-\contentsline {subsection}{\numberline {7.3.1}Homogeneous Series RLC Circuits}{393}{subsection.2003}%
-\contentsline {subsection}{\numberline {7.3.2}Non-Homogeneous Series RLC Circuits}{395}{subsection.2014}%
-\contentsline {section}{\numberline {7.4}The Parallel RLC Circuit}{395}{section.2021}%
-\contentsline {subsection}{\numberline {7.4.1}Homogeneous Parallel RLC Circuits}{396}{subsection.2024}%
-\contentsline {subsection}{\numberline {7.4.2}Non-Homogeneous Parallel RLC Circuits}{397}{subsection.2035}%
-\contentsline {subsection}{\numberline {7.4.3}Analysis with Parasitic Resistance}{398}{subsection.2042}%
-\contentsline {section}{\numberline {7.5}Homogeneous Second-Order Circuits}{400}{section.2054}%
-\contentsline {subsection}{\numberline {7.5.1}The Overdamped Solution}{400}{subsection.2055}%
-\contentsline {subsection}{\numberline {7.5.2}The Underdamped Solution}{401}{subsection.2059}%
-\contentsline {subsection}{\numberline {7.5.3}The Critically Damped Solution}{402}{subsection.2063}%
-\contentsline {subsection}{\numberline {7.5.4}Examples}{403}{subsection.2067}%
-\contentsline {section}{\numberline {7.6}Constant-Input Non-Homogeneous Second-Order Circuits}{415}{section.2134}%
-\contentsline {subsection}{\numberline {7.6.1}The Overdamped Solution}{415}{subsection.2137}%
-\contentsline {subsection}{\numberline {7.6.2}The Underdamped Solution}{416}{subsection.2141}%
-\contentsline {subsection}{\numberline {7.6.3}The Critically Damped Solution}{417}{subsection.2145}%
-\contentsline {subsection}{\numberline {7.6.4}Examples}{418}{subsection.2149}%
-\contentsline {section}{\numberline {7.7}Non-Constant Input Non-Homogeneous Second-Order Circuits}{421}{section.2169}%
-\contentsline {subsection}{\numberline {7.7.1}Examples}{422}{subsection.2177}%
-\contentsline {section}{\numberline {7.8}Practice Problems}{428}{section.2196}%
-\contentsline {paragraph}{Series and Parallel RLC Circuits}{428}{paragraph*.2197}%
-\contentsline {paragraph}{Homogeneous Second-Order Circuits}{438}{paragraph*.2236}%
-\contentsline {paragraph}{Constant-Input Non-Homogeneous Second-Order Circuits}{450}{paragraph*.2286}%
-\contentsline {paragraph}{\textquotedblleft {}Challenging\textquotedblright {} Second-Order Circuits}{464}{paragraph*.2346}%
-\contentsline {chapter}{\numberline {8}Phasors and Impedances}{476}{chapter.2389}%
-\contentsline {section}{\numberline {8.1}Phasor Arithmetic}{477}{section.2400}%
-\contentsline {subsection}{\numberline {8.1.1}Cartesian to Polar Conversion}{478}{subsection.2404}%
-\contentsline {subsection}{\numberline {8.1.2}Polar to Cartesian Conversion}{478}{subsection.2407}%
-\contentsline {subsection}{\numberline {8.1.3}Phasor Addition and Subtraction}{479}{subsection.2410}%
-\contentsline {subsection}{\numberline {8.1.4}Phasor Multiplication and Division}{480}{subsection.2417}%
-\contentsline {subsection}{\numberline {8.1.5}Phasor Time-Differentiation and Time-Integration}{481}{subsection.2424}%
-\contentsline {section}{\numberline {8.2}Impedance}{482}{section.2427}%
-\contentsline {subsection}{\numberline {8.2.1}Impedance in Resistors}{482}{subsection.2434}%
-\contentsline {subsection}{\numberline {8.2.2}Impedance in Capacitors}{483}{subsection.2436}%
-\contentsline {subsection}{\numberline {8.2.3}Impedance in Inductors}{484}{subsection.2438}%
-\contentsline {subsection}{\numberline {8.2.4}Equivalent Impedance}{484}{subsection.2440}%
-\contentsline {section}{\numberline {8.3}Delta-Wye and Wye-Delta Transforms}{487}{section.2455}%
-\contentsline {section}{\numberline {8.4}Practice Problems}{494}{section.2496}%
-\contentsline {paragraph}{Phasor Arithmetic}{494}{paragraph*.2497}%
-\contentsline {paragraph}{Impedance and Equivalent Impedance}{497}{paragraph*.2498}%
-\contentsline {paragraph}{Delta-Wye and Wye-Delta Transforms}{502}{paragraph*.2523}%
-\contentsline {chapter}{\numberline {9}Analysis of Phasor-Transformed Circuits}{514}{chapter.2570}%
-\contentsline {section}{\numberline {9.1}Complex Circuit Analysis Techniques}{514}{section.2571}%
-\contentsline {subsection}{\numberline {9.1.1}Complex Voltage Divider}{514}{subsection.2572}%
-\contentsline {subsection}{\numberline {9.1.2}Complex Current Divider}{517}{subsection.2584}%
-\contentsline {subsection}{\numberline {9.1.3}Complex KCL and KVL Analysis}{520}{subsection.2600}%
-\contentsline {subsection}{\numberline {9.1.4}Complex Mesh Analysis}{523}{subsection.2609}%
-\contentsline {subsection}{\numberline {9.1.5}Complex Superposition}{526}{subsection.2618}%
-\contentsline {subsection}{\numberline {9.1.6}Complex Source Transformation}{529}{subsection.2637}%
-\contentsline {subsection}{\numberline {9.1.7}Complex Thévenin's and Norton's Theorems}{533}{subsection.2658}%
-\contentsline {section}{\numberline {9.2}Transfer Functions}{540}{section.2693}%
-\contentsline {subsection}{\numberline {9.2.1}Relating Transfer Functions and Differential Equations}{544}{subsection.2715}%
-\contentsline {subsection}{\numberline {9.2.2}Understanding Transfer Function Poles and Zeros}{545}{subsection.2716}%
-\contentsline {section}{\numberline {9.3}Passive Filters}{549}{section.2742}%
-\contentsline {subsection}{\numberline {9.3.1}Low-Pass Filters (LPF)}{550}{subsection.2749}%
-\contentsline {subsection}{\numberline {9.3.2}High-Pass Filters (HPF)}{554}{subsection.2766}%
-\contentsline {subsection}{\numberline {9.3.3}Band-Pass and Band-Stop Filters}{557}{subsection.2783}%
-\contentsline {subsection}{\numberline {9.3.4}Band-Pass Filters (BPF)}{559}{subsection.2791}%
-\contentsline {subsection}{\numberline {9.3.5}Band-Stop Filters (BSF)}{563}{subsection.2802}%
-\contentsline {subsection}{\numberline {9.3.6}Determining Filter Type}{566}{subsection.2813}%
-\contentsline {section}{\numberline {9.4}Active Filters}{568}{section.2832}%
-\contentsline {subsection}{\numberline {9.4.1}First-Order Active Filters}{569}{subsection.2833}%
-\contentsline {subsection}{\numberline {9.4.2}Cascaded Active Filters}{571}{subsection.2850}%
-\contentsline {subsection}{\numberline {9.4.3}Other Active Filter Topologies}{573}{subsection.2859}%
-\contentsline {section}{\numberline {9.5}References}{574}{section.2863}%
-\contentsline {section}{\numberline {9.6}Practice Problems}{575}{section.2864}%
-\contentsline {paragraph}{Complex Voltage and Current Divider}{575}{paragraph*.2865}%
-\contentsline {paragraph}{Complex KCL and KVL}{580}{paragraph*.2888}%
-\contentsline {paragraph}{Complex Mesh Analysis}{588}{paragraph*.2917}%
-\contentsline {paragraph}{Complex Superposition}{596}{paragraph*.2938}%
-\contentsline {paragraph}{Complex Source Transformation}{609}{paragraph*.2999}%
-\contentsline {paragraph}{Complex Thévenin and Norton Circuits}{618}{paragraph*.3050}%
-\contentsline {paragraph}{Transfer Functions}{628}{paragraph*.3089}%
-\contentsline {paragraph}{Filters}{635}{paragraph*.3120}%
-\contentsline {chapter}{\numberline {10}AC Power}{644}{chapter.3151}%
-\contentsline {section}{\numberline {10.1}Phase and Root Mean Square (RMS)}{644}{section.3152}%
-\contentsline {section}{\numberline {10.2}AC Power}{646}{section.3160}%
-\contentsline {subsection}{\numberline {10.2.1}Instantaneous Power}{646}{subsection.3161}%
-\contentsline {subsection}{\numberline {10.2.2}Complex and Apparent Power}{646}{subsection.3163}%
-\contentsline {subsection}{\numberline {10.2.3}Average Power}{648}{subsection.3173}%
-\contentsline {subsection}{\numberline {10.2.4}Reactive Power}{648}{subsection.3177}%
-\contentsline {subsection}{\numberline {10.2.5}Power Triangle and Power Factor}{648}{subsection.3181}%
-\contentsline {section}{\numberline {10.3}Maximum Power Transfer}{652}{section.3202}%
-\contentsline {section}{\numberline {10.4}Power Factor Correction}{655}{section.3213}%
-\contentsline {subsection}{\numberline {10.4.1}Correcting an Inductive Load}{655}{subsection.3216}%
-\contentsline {subsection}{\numberline {10.4.2}Correcting a Capacitive Load}{659}{subsection.3227}%
-\contentsline {section}{\numberline {10.5}Practice Problems}{661}{section.3238}%
-\contentsline {paragraph}{Phase and Root Mean Square}{661}{paragraph*.3239}%
-\contentsline {paragraph}{Complex Power}{664}{paragraph*.3244}%
-\contentsline {paragraph}{Maximum Power Transfer}{670}{paragraph*.3265}%
-\contentsline {paragraph}{Power Factor Correction}{676}{paragraph*.3288}%
-\contentsline {chapter}{\numberline {11}Laplace Transforms and s-Domain Analysis}{686}{chapter.3309}%
-\contentsline {section}{\numberline {11.1}The Laplace Transform}{686}{section.3314}%
-\contentsline {section}{\numberline {11.2}Inverse Laplace Transform}{689}{section.3327}%
-\contentsline {subsection}{\numberline {11.2.1}Partial Fraction Expansion}{689}{subsection.3328}%
-\contentsline {section}{\numberline {11.3}\(s\)-Domain Analysis}{695}{section.3349}%
-\contentsline {subsection}{\numberline {11.3.1}Resistor}{695}{subsection.3350}%
-\contentsline {subsection}{\numberline {11.3.2}Capacitor}{695}{subsection.3354}%
-\contentsline {subsection}{\numberline {11.3.3}Inductor}{696}{subsection.3358}%
-\contentsline {subsection}{\numberline {11.3.4}Switched Sources}{697}{subsection.3362}%
-\contentsline {section}{\numberline {11.4}Practice Problems}{703}{section.3389}%
-\contentsline {paragraph}{Laplace Transforms}{703}{paragraph*.3390}%
-\contentsline {paragraph}{Inverse Laplace Transforms}{705}{paragraph*.3391}%
-\contentsline {paragraph}{\(s\)-Domain Analysis}{712}{paragraph*.3392}%
-\contentsline {chapter}{\numberline {12}Practical Application: The 555 Timer}{725}{chapter.3417}%
-\contentsline {section}{\numberline {12.1}Astable Mode}{727}{section.3422}%
-\contentsline {section}{\numberline {12.2}Monostable Mode}{729}{section.3435}%
+\contentsline {section}{\numberline {2.9}Measuring Current}{78}{section.502}%
+\contentsline {section}{\numberline {2.10}Practice Problems}{82}{section.517}%
+\contentsline {paragraph}{Equivalent Resistance}{82}{paragraph*.518}%
+\contentsline {paragraph}{Ohm's Law}{91}{paragraph*.569}%
+\contentsline {paragraph}{Voltage and Current Divider}{95}{paragraph*.580}%
+\contentsline {paragraph}{Kirchhoff's Laws}{98}{paragraph*.595}%
+\contentsline {paragraph}{Mesh Analysis}{104}{paragraph*.614}%
+\contentsline {chapter}{\numberline {3}Circuit Theorems}{109}{chapter.627}%
+\contentsline {section}{\numberline {3.1}Superposition}{111}{section.639}%
+\contentsline {section}{\numberline {3.2}Source Transformation}{116}{section.662}%
+\contentsline {section}{\numberline {3.3}Choosing an Analysis Tool}{119}{section.683}%
+\contentsline {subsection}{\numberline {3.3.1}Solving via Simplification}{120}{subsection.684}%
+\contentsline {subsection}{\numberline {3.3.2}Solving without Simplification}{120}{subsection.685}%
+\contentsline {section}{\numberline {3.4}Open-Circuit Voltages and Short-Circuit Currents}{121}{section.686}%
+\contentsline {subsection}{\numberline {3.4.1}Open-Circuit Voltage}{121}{subsection.687}%
+\contentsline {subsection}{\numberline {3.4.2}Short-Circuit Current}{123}{subsection.698}%
+\contentsline {section}{\numberline {3.5}Thévenin's Theorem}{125}{section.711}%
+\contentsline {section}{\numberline {3.6}Norton's Theorem}{129}{section.732}%
+\contentsline {section}{\numberline {3.7}Maximum Power Transfer}{132}{section.743}%
+\contentsline {section}{\numberline {3.8}Practice Problems}{136}{section.764}%
+\contentsline {paragraph}{Superposition}{136}{paragraph*.765}%
+\contentsline {paragraph}{Source Transformation}{149}{paragraph*.826}%
+\contentsline {paragraph}{Thévenin and Norton's Theorems}{157}{paragraph*.873}%
+\contentsline {paragraph}{Maximum Power Transfer}{169}{paragraph*.926}%
+\contentsline {chapter}{\numberline {4}Operational Amplifiers (Op-Amps)}{171}{chapter.927}%
+\contentsline {section}{\numberline {4.1}Amplifiers}{171}{section.928}%
+\contentsline {section}{\numberline {4.2}Differential Amplifiers}{173}{section.936}%
+\contentsline {section}{\numberline {4.3}Non-Idealities in Amplifiers}{174}{section.942}%
+\contentsline {section}{\numberline {4.4}Comparator Circuits}{174}{section.944}%
+\contentsline {subsection}{\numberline {4.4.1}Comparators vs. \textquotedblleft {}Op-Amps\textquotedblright {}}{176}{subsection.950}%
+\contentsline {subsection}{\numberline {4.4.2}Analog to Digital Conversion (ADC)}{176}{subsection.951}%
+\contentsline {subsection}{\numberline {4.4.3}Pulse-Width Modulation (PWM)}{177}{subsection.960}%
+\contentsline {section}{\numberline {4.5}Feedback Circuits}{180}{section.973}%
+\contentsline {subsection}{\numberline {4.5.1}Voltage Follower}{181}{subsection.978}%
+\contentsline {section}{\numberline {4.6}Divided Feedback Op-Amp Circuits}{182}{section.988}%
+\contentsline {subsection}{\numberline {4.6.1}Inverting Op-Amp}{183}{subsection.994}%
+\contentsline {subsection}{\numberline {4.6.2}Non-Inverting Op-Amp}{185}{subsection.1002}%
+\contentsline {subsection}{\numberline {4.6.3}Cascaded Op-Amps}{186}{subsection.1006}%
+\contentsline {subsection}{\numberline {4.6.4}Summing and Difference Amplifiers}{187}{subsection.1014}%
+\contentsline {subsection}{\numberline {4.6.5}General Op-Amp Circuits}{190}{subsection.1030}%
+\contentsline {subsection}{\numberline {4.6.6}Implementing Mathematical Functions with Op-Amps}{192}{subsection.1039}%
+\contentsline {subsection}{\numberline {4.6.7}Solving Linear Equations}{192}{subsection.1040}%
+\contentsline {section}{\numberline {4.7}Op-Amp Output Current}{194}{section.1052}%
+\contentsline {section}{\numberline {4.8}References}{196}{section.1060}%
+\contentsline {section}{\numberline {4.9}Practice Problems}{196}{section.1061}%
+\contentsline {paragraph}{Divided Feedback Op-Amp Circuits}{196}{paragraph*.1062}%
+\contentsline {paragraph}{Op-Amp Output Current}{210}{paragraph*.1089}%
+\contentsline {chapter}{\numberline {5}Capacitors and RC Circuits}{217}{chapter.1104}%
+\contentsline {section}{\numberline {5.1}Types of Capacitors}{218}{section.1119}%
+\contentsline {subsection}{\numberline {5.1.1}Non-Polarized Capacitors}{219}{subsection.1120}%
+\contentsline {subsection}{\numberline {5.1.2}Variable Capacitors}{219}{subsection.1123}%
+\contentsline {subsection}{\numberline {5.1.3}Polarized Capacitors}{220}{subsection.1128}%
+\contentsline {section}{\numberline {5.2}Measuring Capacitance}{221}{section.1135}%
+\contentsline {section}{\numberline {5.3}Voltage-Current Relationship in a Capacitor}{222}{section.1138}%
+\contentsline {section}{\numberline {5.4}Equivalent Capacitance}{223}{section.1141}%
+\contentsline {subsection}{\numberline {5.4.1}Series Combinations of Capacitors}{223}{subsection.1142}%
+\contentsline {subsection}{\numberline {5.4.2}Parallel Combinations of Capacitors}{224}{subsection.1147}%
+\contentsline {section}{\numberline {5.5}Differentiator and Integrator Circuits}{226}{section.1161}%
+\contentsline {section}{\numberline {5.6}Review of Important Mathematical Concepts for First-Order Circuits}{228}{section.1168}%
+\contentsline {subsection}{\numberline {5.6.1}Discontinuous Functions}{228}{subsection.1169}%
+\contentsline {subsection}{\numberline {5.6.2}First-Order, Linear, Ordinary Differential Equations}{229}{subsection.1172}%
+\contentsline {section}{\numberline {5.7}Resistor-Capacitor (RC) Circuits}{229}{section.1175}%
+\contentsline {subsection}{\numberline {5.7.1}Discharging to Zero (Homogeneous) Transient Response}{231}{subsection.1182}%
+\contentsline {subsection}{\numberline {5.7.2}Charging from Zero Transient Response}{238}{subsection.1226}%
+\contentsline {subsection}{\numberline {5.7.3}General Transient Response}{243}{subsection.1249}%
+\contentsline {section}{\numberline {5.8}Practice Problems}{251}{section.1292}%
+\contentsline {paragraph}{Equivalent Capacitance}{251}{paragraph*.1293}%
+\contentsline {paragraph}{Capacitor Current-Voltage Relationship}{258}{paragraph*.1340}%
+\contentsline {paragraph}{RC Circuits: Homogeneous}{261}{paragraph*.1343}%
+\contentsline {paragraph}{RC Circuits: Charging from Zero}{270}{paragraph*.1380}%
+\contentsline {paragraph}{RC Circuits: General Transient Response}{281}{paragraph*.1432}%
+\contentsline {chapter}{\numberline {6}Inductors and RL Circuits}{299}{chapter.1519}%
+\contentsline {section}{\numberline {6.1}Parasitic Effects}{300}{section.1527}%
+\contentsline {section}{\numberline {6.2}Measuring Inductance}{300}{section.1530}%
+\contentsline {section}{\numberline {6.3}Voltage-Current Relationship in an Inductor}{301}{section.1533}%
+\contentsline {section}{\numberline {6.4}Equivalent Inductance}{301}{section.1536}%
+\contentsline {subsection}{\numberline {6.4.1}Series Combinations of Inductors}{301}{subsection.1537}%
+\contentsline {subsection}{\numberline {6.4.2}Parallel Combinations of Inductors}{302}{subsection.1541}%
+\contentsline {section}{\numberline {6.5}Resistor-Inductor (RL) Circuits}{304}{section.1551}%
+\contentsline {subsection}{\numberline {6.5.1}Discharging to Zero (Homogeneous) Transient Response}{305}{subsection.1558}%
+\contentsline {subsection}{\numberline {6.5.2}Charging from Zero Transient Response}{309}{subsection.1581}%
+\contentsline {subsection}{\numberline {6.5.3}General Transient Response}{316}{subsection.1619}%
+\contentsline {section}{\numberline {6.6}Practice Problems}{330}{section.1696}%
+\contentsline {paragraph}{Equivalent Inductance}{330}{paragraph*.1697}%
+\contentsline {paragraph}{Inductor Current-Voltage Relationship}{338}{paragraph*.1754}%
+\contentsline {paragraph}{RL Circuits: Homogeneous}{342}{paragraph*.1759}%
+\contentsline {paragraph}{RL Circuits: Charging from Zero}{353}{paragraph*.1812}%
+\contentsline {paragraph}{RL Circuits: General Transient Response}{366}{paragraph*.1872}%
+\contentsline {chapter}{\numberline {7}Second-Order Circuits}{389}{chapter.1983}%
+\contentsline {section}{\numberline {7.1}Review of Important Mathematical Concepts for Second-Order Circuits}{390}{section.1989}%
+\contentsline {section}{\numberline {7.2}Circuit Damping}{391}{section.1992}%
+\contentsline {subsection}{\numberline {7.2.1}Overdamped}{392}{subsection.2001}%
+\contentsline {subsection}{\numberline {7.2.2}Underdamped}{392}{subsection.2004}%
+\contentsline {subsection}{\numberline {7.2.3}Critically Damped}{393}{subsection.2010}%
+\contentsline {section}{\numberline {7.3}The Series RLC Circuit}{394}{section.2013}%
+\contentsline {subsection}{\numberline {7.3.1}Homogeneous Series RLC Circuits}{394}{subsection.2016}%
+\contentsline {subsection}{\numberline {7.3.2}Non-Homogeneous Series RLC Circuits}{396}{subsection.2024}%
+\contentsline {section}{\numberline {7.4}The Parallel RLC Circuit}{397}{section.2029}%
+\contentsline {subsection}{\numberline {7.4.1}Homogeneous Parallel RLC Circuits}{397}{subsection.2032}%
+\contentsline {subsection}{\numberline {7.4.2}Non-Homogeneous Parallel RLC Circuits}{399}{subsection.2040}%
+\contentsline {subsection}{\numberline {7.4.3}Analysis with Parasitic Resistance}{399}{subsection.2045}%
+\contentsline {section}{\numberline {7.5}Homogeneous Second-Order Circuits}{401}{section.2055}%
+\contentsline {subsection}{\numberline {7.5.1}The Overdamped Solution}{401}{subsection.2056}%
+\contentsline {subsection}{\numberline {7.5.2}The Underdamped Solution}{403}{subsection.2060}%
+\contentsline {subsection}{\numberline {7.5.3}The Critically Damped Solution}{403}{subsection.2064}%
+\contentsline {subsection}{\numberline {7.5.4}Examples}{404}{subsection.2068}%
+\contentsline {section}{\numberline {7.6}Constant-Input Non-Homogeneous Second-Order Circuits}{415}{section.2124}%
+\contentsline {subsection}{\numberline {7.6.1}The Overdamped Solution}{415}{subsection.2127}%
+\contentsline {subsection}{\numberline {7.6.2}The Underdamped Solution}{417}{subsection.2131}%
+\contentsline {subsection}{\numberline {7.6.3}The Critically Damped Solution}{417}{subsection.2135}%
+\contentsline {subsection}{\numberline {7.6.4}Examples}{418}{subsection.2139}%
+\contentsline {section}{\numberline {7.7}Non-Constant Input Non-Homogeneous Second-Order Circuits}{422}{section.2159}%
+\contentsline {subsection}{\numberline {7.7.1}Examples}{423}{subsection.2167}%
+\contentsline {section}{\numberline {7.8}Practice Problems}{429}{section.2186}%
+\contentsline {paragraph}{Series and Parallel RLC Circuits}{429}{paragraph*.2187}%
+\contentsline {paragraph}{Homogeneous Second-Order Circuits}{438}{paragraph*.2226}%
+\contentsline {paragraph}{Constant-Input Non-Homogeneous Second-Order Circuits}{451}{paragraph*.2276}%
+\contentsline {paragraph}{\textquotedblleft {}Challenging\textquotedblright {} Second-Order Circuits}{465}{paragraph*.2340}%
+\contentsline {chapter}{\numberline {8}Phasors and Impedances}{477}{chapter.2383}%
+\contentsline {section}{\numberline {8.1}Phasor Arithmetic}{478}{section.2394}%
+\contentsline {subsection}{\numberline {8.1.1}Cartesian to Polar Conversion}{479}{subsection.2398}%
+\contentsline {subsection}{\numberline {8.1.2}Polar to Cartesian Conversion}{480}{subsection.2401}%
+\contentsline {subsection}{\numberline {8.1.3}Phasor Addition and Subtraction}{480}{subsection.2404}%
+\contentsline {subsection}{\numberline {8.1.4}Phasor Multiplication and Division}{481}{subsection.2415}%
+\contentsline {subsection}{\numberline {8.1.5}Phasor Time-Differentiation and Time-Integration}{483}{subsection.2426}%
+\contentsline {section}{\numberline {8.2}Impedance}{483}{section.2429}%
+\contentsline {subsection}{\numberline {8.2.1}Impedance in Resistors}{484}{subsection.2436}%
+\contentsline {subsection}{\numberline {8.2.2}Impedance in Capacitors}{484}{subsection.2438}%
+\contentsline {subsection}{\numberline {8.2.3}Impedance in Inductors}{485}{subsection.2440}%
+\contentsline {subsection}{\numberline {8.2.4}Equivalent Impedance}{486}{subsection.2442}%
+\contentsline {section}{\numberline {8.3}Delta-Wye and Wye-Delta Transforms}{488}{section.2457}%
+\contentsline {section}{\numberline {8.4}Practice Problems}{495}{section.2498}%
+\contentsline {paragraph}{Phasor Arithmetic}{495}{paragraph*.2499}%
+\contentsline {paragraph}{Impedance and Equivalent Impedance}{497}{paragraph*.2500}%
+\contentsline {paragraph}{Delta-Wye and Wye-Delta Transforms}{502}{paragraph*.2525}%
+\contentsline {chapter}{\numberline {9}Analysis of Phasor-Transformed Circuits}{513}{chapter.2572}%
+\contentsline {section}{\numberline {9.1}Complex Circuit Analysis Techniques}{513}{section.2573}%
+\contentsline {subsection}{\numberline {9.1.1}Complex Voltage Divider}{513}{subsection.2574}%
+\contentsline {subsection}{\numberline {9.1.2}Complex Current Divider}{515}{subsection.2586}%
+\contentsline {subsection}{\numberline {9.1.3}Complex KCL and KVL Analysis}{518}{subsection.2602}%
+\contentsline {subsection}{\numberline {9.1.4}Complex Mesh Analysis}{521}{subsection.2611}%
+\contentsline {subsection}{\numberline {9.1.5}Complex Superposition}{524}{subsection.2620}%
+\contentsline {subsection}{\numberline {9.1.6}Complex Source Transformation}{528}{subsection.2639}%
+\contentsline {subsection}{\numberline {9.1.7}Complex Thévenin's and Norton's Theorems}{531}{subsection.2660}%
+\contentsline {section}{\numberline {9.2}Transfer Functions}{538}{section.2695}%
+\contentsline {subsection}{\numberline {9.2.1}Relating Transfer Functions and Differential Equations}{543}{subsection.2721}%
+\contentsline {subsection}{\numberline {9.2.2}Understanding Transfer Function Poles and Zeros}{543}{subsection.2722}%
+\contentsline {section}{\numberline {9.3}Passive Filters}{547}{section.2748}%
+\contentsline {subsection}{\numberline {9.3.1}Low-Pass Filters (LPF)}{548}{subsection.2755}%
+\contentsline {subsection}{\numberline {9.3.2}High-Pass Filters (HPF)}{552}{subsection.2772}%
+\contentsline {subsection}{\numberline {9.3.3}Band-Pass and Band-Stop Filters}{556}{subsection.2789}%
+\contentsline {subsection}{\numberline {9.3.4}Band-Pass Filters (BPF)}{558}{subsection.2797}%
+\contentsline {subsection}{\numberline {9.3.5}Band-Stop Filters (BSF)}{561}{subsection.2808}%
+\contentsline {subsection}{\numberline {9.3.6}Determining Filter Type}{564}{subsection.2819}%
+\contentsline {section}{\numberline {9.4}Active Filters}{567}{section.2838}%
+\contentsline {subsection}{\numberline {9.4.1}First-Order Active Filters}{567}{subsection.2839}%
+\contentsline {subsection}{\numberline {9.4.2}Cascaded Active Filters}{570}{subsection.2856}%
+\contentsline {subsection}{\numberline {9.4.3}Other Active Filter Topologies}{572}{subsection.2865}%
+\contentsline {section}{\numberline {9.5}References}{574}{section.2869}%
+\contentsline {section}{\numberline {9.6}Practice Problems}{574}{section.2870}%
+\contentsline {paragraph}{Complex Voltage and Current Divider}{574}{paragraph*.2871}%
+\contentsline {paragraph}{Complex KCL and KVL}{579}{paragraph*.2894}%
+\contentsline {paragraph}{Complex Mesh Analysis}{587}{paragraph*.2923}%
+\contentsline {paragraph}{Complex Superposition}{594}{paragraph*.2944}%
+\contentsline {paragraph}{Complex Source Transformation}{607}{paragraph*.3005}%
+\contentsline {paragraph}{Complex Thévenin and Norton Circuits}{615}{paragraph*.3056}%
+\contentsline {paragraph}{Transfer Functions}{625}{paragraph*.3095}%
+\contentsline {paragraph}{Filters}{632}{paragraph*.3126}%
+\contentsline {chapter}{\numberline {10}AC Power}{641}{chapter.3157}%
+\contentsline {section}{\numberline {10.1}Phase and Root Mean Square (RMS)}{641}{section.3158}%
+\contentsline {section}{\numberline {10.2}AC Power}{643}{section.3166}%
+\contentsline {subsection}{\numberline {10.2.1}Instantaneous Power}{643}{subsection.3167}%
+\contentsline {subsection}{\numberline {10.2.2}Complex and Apparent Power}{643}{subsection.3169}%
+\contentsline {subsection}{\numberline {10.2.3}Average Power}{645}{subsection.3179}%
+\contentsline {subsection}{\numberline {10.2.4}Reactive Power}{645}{subsection.3183}%
+\contentsline {subsection}{\numberline {10.2.5}Power Triangle and Power Factor}{645}{subsection.3187}%
+\contentsline {section}{\numberline {10.3}Maximum Power Transfer}{649}{section.3208}%
+\contentsline {section}{\numberline {10.4}Power Factor Correction}{652}{section.3219}%
+\contentsline {subsection}{\numberline {10.4.1}Correcting an Inductive Load}{652}{subsection.3222}%
+\contentsline {subsection}{\numberline {10.4.2}Correcting a Capacitive Load}{656}{subsection.3233}%
+\contentsline {section}{\numberline {10.5}Practice Problems}{658}{section.3244}%
+\contentsline {paragraph}{Phase and Root Mean Square}{658}{paragraph*.3245}%
+\contentsline {paragraph}{Complex Power}{661}{paragraph*.3250}%
+\contentsline {paragraph}{Maximum Power Transfer}{667}{paragraph*.3271}%
+\contentsline {paragraph}{Power Factor Correction}{673}{paragraph*.3294}%
+\contentsline {chapter}{\numberline {11}Laplace Transforms and s-Domain Analysis}{683}{chapter.3315}%
+\contentsline {section}{\numberline {11.1}The Laplace Transform}{683}{section.3320}%
+\contentsline {section}{\numberline {11.2}Inverse Laplace Transform}{686}{section.3333}%
+\contentsline {subsection}{\numberline {11.2.1}Partial Fraction Expansion}{686}{subsection.3334}%
+\contentsline {section}{\numberline {11.3}\(s\)-Domain Analysis}{694}{section.3355}%
+\contentsline {subsection}{\numberline {11.3.1}Resistor}{694}{subsection.3356}%
+\contentsline {subsection}{\numberline {11.3.2}Capacitor}{694}{subsection.3360}%
+\contentsline {subsection}{\numberline {11.3.3}Inductor}{695}{subsection.3364}%
+\contentsline {subsection}{\numberline {11.3.4}Switched Sources}{696}{subsection.3368}%
+\contentsline {section}{\numberline {11.4}Practice Problems}{703}{section.3395}%
+\contentsline {paragraph}{Laplace Transforms}{703}{paragraph*.3396}%
+\contentsline {paragraph}{Inverse Laplace Transforms}{705}{paragraph*.3397}%
+\contentsline {paragraph}{\(s\)-Domain Analysis}{716}{paragraph*.3398}%
+\contentsline {chapter}{\numberline {12}Practical Application: The 555 Timer}{733}{chapter.3423}%
+\contentsline {section}{\numberline {12.1}Astable Mode}{735}{section.3428}%
+\contentsline {section}{\numberline {12.2}Monostable Mode}{737}{section.3441}%
+\renewcommand {\ptxappendixperiodchapter }{.}
+\contentsline {part}{Appendices}{740}{section*.3449}%
+\contentsline {chapter}{\numberline {A}Units and Unit Conversions}{741}{appendix.3450}%
+\contentsline {section}{\numberline {A.1}The International Standard of Units}{741}{section.3453}%
+\contentsline {subsection}{\numberline {A.1.1}SI Base Units}{742}{subsection.3454}%
+\contentsline {subsection}{\numberline {A.1.2}SI Derived Units}{742}{subsection.3459}%
+\contentsline {subsection}{\numberline {A.1.3}SI Prefixes}{742}{subsection.3460}%
+\contentsline {section}{\numberline {A.2}Units in This Textbook}{743}{section.3463}%
+\contentsline {subsection}{\numberline {A.2.1}Table of Properties and Units}{743}{subsection.3464}%
+\contentsline {subsection}{\numberline {A.2.2}Units for Coefficients in Differential Equations and Transfer Functions}{743}{subsection.3467}%
 \contentsfinish 

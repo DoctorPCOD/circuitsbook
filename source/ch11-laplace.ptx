@@ -5,14 +5,14 @@
 
 	<introduction>
 
-		<p>Laplace transforms and s-domain analysis allows us to solve circuit analysis problems in a new way that solves some of the difficulties experienced in earlier methods, particularly in <xref ref="ch7-variableinput" />.</p>
+		<p>Laplace transforms and <m>s</m>-domain analysis allows us to solve circuit analysis problems in a new way that solves some of the difficulties experienced in earlier methods, particularly in <xref ref="ch7-variableinput" />.</p>
 		
 		<p>The process for solving a circuit using Laplace transforms follows.</p>
 		
 		<p>
 			<ol>
 				<li><p>Convert a time-domain circuit into an <m>s</m>-domain circuit.</p></li>
-				<li><p>Solve for the output in the <m>s</m>-domain.</p></li>
+				<li><p>Solve for the output in the <m>s</m> domain.</p></li>
 				<li><p>Use partial fraction expansion to represent the output as a sum of partial fractions.</p></li>
 				<li><p>Use the inverse Laplace transform to derive the output in the time domain.</p></li>
 			</ol>
@@ -23,7 +23,7 @@
   	<section xml:id="ch11-laplacetransform">
 		<title>The Laplace Transform</title>
 
-		<p>The Laplace transform converts a time-domain function (a function that is represented by the variable <m>t</m>) into the <m>s</m>-domain. The variable <m>s</m> is a complex variable defined by <xref ref="ch11-eq-definition-of-s" />. As discussed in <xref ref="ch9-funcpolezero" /> of this book (although we did not formally use the variable <m>s</m> yet at that point), <m>s</m> relates to the location of a pole or zero on the complex axis. The real part (<m>\sigma</m>) relates to decaying exponential terms and the imaginary part (<m>\omega</m>) relates to oscillatory (sinusoidal) terms. Phasor analysis performed a similar transformation where <m>\sigma = 0</m> (the circuits were purely sinusoidal).</p>
+		<p>The Laplace transform converts a time-domain function (a function that is represented by the variable <m>t</m>) into the <m>s</m> domain. The variable <m>s</m> is a complex variable defined by <xref ref="ch11-eq-definition-of-s" />. As discussed in <xref ref="ch9-funcpolezero" /> of this book (although we did not formally use the variable <m>s</m> yet at that point), <m>s</m> relates to the location of a pole or zero on the complex axis. The real part (<m>\sigma</m>) relates to decaying exponential terms and the imaginary part (<m>\omega</m>) relates to oscillatory (sinusoidal) terms. Phasor analysis performed a similar transformation where <m>\sigma = 0</m> (the circuits were purely sinusoidal).</p>
 		
 		<p>
 			<md number="yes" xml:id="ch11-eq-definition-of-s">s = \sigma + j\omega</md>
@@ -37,7 +37,7 @@
 			<md number="yes" xml:id="ch11-eq-laplace-transform-definition">\Laplace\{f(t)\} = \int_{0^-}^\infty f(t)\textrm{e}^{-st}\,dt</md>
 		</p>
 
-		<p>This textbook will not rigorously derive Laplace transforms for various elementary functions. Instead, Laplace transforms used for several frequently-used time-varying functions are given in <xref ref="ch11-table-of-laplace-transforms" />. These transforms will be directly applied to functions in the time domain to convert them to the <m>s</m>-domain without requiring the direct use of <xref ref="ch11-eq-laplace-transform-definition" /> (which frequently necessitates the use of integration by parts). The reader is encouraged to derive the equations themselves if they would like to convince themselves of their veracity.</p>
+		<p>This textbook will not rigorously derive Laplace transforms for various elementary functions. Instead, Laplace transforms used for several frequently-used time-varying functions are given in <xref ref="ch11-table-of-laplace-transforms" />. These transforms will be directly applied to functions in the time domain to convert them to the <m>s</m> domain without requiring the direct use of <xref ref="ch11-eq-laplace-transform-definition" /> (which frequently necessitates the use of integration by parts). The reader is encouraged to derive the equations themselves.</p>
 
 		<table xml:id="ch11-table-of-laplace-transforms">
 			<title>Laplace transforms of commonly-used time-varying functions.</title>
@@ -109,7 +109,7 @@
 			</statement>
 		</example>
 
-		<p>The Laplace transform has many properties that can also be used to transform more complicated functions into the <m>s</m>-domain. These properties include multiplication, addition, and differentiation, and are included in <xref ref="ch10-table-of-laplace-properties" />. (While Laplace transforms are especially important in many applications (such as signal processing), their focus will be limited to analysis of linear circuits in this textbook. As a result, some Laplace transform properties (convolution, for example) will not be covered in this textbook.)</p>
+		<p>The Laplace transform has many properties that can also be used to transform more complicated functions into the <m>s</m> domain. These properties include multiplication, addition, and differentiation, and are included in <xref ref="ch10-table-of-laplace-properties" />. (While Laplace transforms are especially important in many applications (such as signal processing), their focus will be limited to analysis of linear circuits in this textbook. As a result, some Laplace transform properties (convolution, for example) will not be covered in this textbook.)</p>
 		
 		<table xml:id="ch10-table-of-laplace-properties">
 			<title>Properties of the Laplace transform.</title>
@@ -157,7 +157,7 @@
 
 		<p>Using <xref ref="ch11-table-of-laplace-transforms" /> and <xref ref="ch10-table-of-laplace-properties" />, Laplace transforms of every time-domain function derived in this book can be computed.</p>
 
-		<p>For the most part, the circuit analysis in this book will not use the Laplace transform directly. Instead, circuits will be analyzed in the <m>s</m>-domain, and then the inverse Laplace transform (introduced in <xref ref="ch11-inverselaplace" />) will be used to derive a time-domain function. The two examples below therefore demonstrate the reverse process to what we will mostly utilize in this book.</p>
+		<p>For the most part, the circuit analysis in this book will not use the Laplace transform directly. Instead, circuits will be analyzed in the <m>s</m> domain, and then the inverse Laplace transform (introduced in <xref ref="ch11-inverselaplace" />) will be used to derive a time-domain function. The two examples below therefore demonstrate the reverse process to what we will mostly utilize in this book.</p>
 
 		<example>
 			<title>Laplace transform</title>
@@ -211,7 +211,7 @@
 					<md>0 = \frac{d^2i(t)}{dt^2} + 250\frac{di(t)}{dt} + 10500i(t)</md>.
 				</p>
 
-				<p>The initial current <m>i(0) = 0.1~\textrm{A}</m> and the first derivative of the current is zero.</p>
+				<p>The initial current <m>i(0) = 0.1~\textrm{A}</m> and the first derivative of the current at <m>t = 0^+</m> is zero.</p>
 
 				<p>Use the addition and subtraction property to analyze each individual term.</p>
 
@@ -250,7 +250,7 @@
 
 		<introduction>
 		
-			<p>To most easily derive a time-domain function of current or voltage in a circuit, an analysis can be done in the <m>s</m>-domain (which will be introduced in <xref ref="ch11-sdomain" />) to derive an <m>s</m>-domain function such as <m>V(s)</m> or <m>I(s)</m>. That <m>s</m>-domain function can then be inverse transformed back into the time domain. That inverse transform process will be described in this section.</p>
+			<p>To most easily derive a time-domain function of current or voltage in a circuit, an analysis can be done in the <m>s</m> domain (which will be introduced in <xref ref="ch11-sdomain" />) to derive an <m>s</m>-domain function such as <m>V(s)</m> or <m>I(s)</m>. That <m>s</m>-domain function can then be inverse transformed back into the time domain. That inverse transform process will be described in this section.</p>
 
 			<p>Rather than applying a mathematical expression (such as that defined in <xref ref="ch11-eq-laplace-transform-definition" />), a Laplace transform is broken into individual components using partial fraction expansion. Then, <xref ref="ch11-table-of-laplace-transforms" /> can be used to derive the time-domain expression.</p>
 
@@ -259,7 +259,7 @@
 		<subsection xml:id="ch11-partialfraction">
 			<title>Partial Fraction Expansion</title>
 
-			<p>A function in the <m>s</m>-domain can be represented as a polynomial in the numerator and a polynomial in the denominator. The denominator can then be factored. Similar to <xref ref="ch9-eq-poles-zeros-function" />, the factored denominator contains the poles of the circuit. A generalized factored <m>s</m>-domain expression is given in <xref ref="ch11-s-domain-factored-equation" />, where <m>N(s)</m> is the numerator and <m>p</m> are the poles of the denominator.</p>
+			<p>A function in the <m>s</m> domain can be represented as a polynomial in the numerator and a polynomial in the denominator. The denominator can then be factored. Similar to <xref ref="ch9-eq-poles-zeros-function" />, the factored denominator contains the poles of the circuit. A generalized factored <m>s</m>-domain expression is given in <xref ref="ch11-s-domain-factored-equation" />, where <m>N(s)</m> is the numerator and <m>p_n</m> represent the poles of the denominator.</p>
 			
 			<p>
 				<md number="yes" xml:id="ch11-s-domain-factored-equation">F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)...(s-p_n)}</md>
@@ -267,7 +267,7 @@
 
 			<p>The circuits and equations in this textbook will have a denominator with a higher order than the numerator (i.e. there are more poles than zeros). Otherwise, the partial fraction expansion process will require a different process that will not be described in this book.</p>
 
-			<p>The partial fraction expansion process converts a factored expression (such as that given in <xref ref="ch11-s-domain-factored-equation" />) into a sum of many expressions (shown in <xref ref="ch11-s-domain-expanded-equation" />), which can then be converted to time-domain expressions using <xref ref="ch11-table-of-laplace-transforms" />.</p>
+			<p>The partial fraction expansion process converts a factored expression (such as that given in <xref ref="ch11-s-domain-factored-equation" />) into a sum of many expressions (shown in <xref ref="ch11-s-domain-expanded-equation" />), which can then be converted into the time-domain using <xref ref="ch11-table-of-laplace-transforms" />.</p>
 			
 			<p>
 				<md number="yes" xml:id="ch11-s-domain-expanded-equation">F(s) = \frac{K_1}{(s-p_1)} + \frac{K_2}{(s-p_2)} + \frac{K_3}{(s-p_3)} + ... + \frac{K_n}{(s-p_n)}</md>
@@ -358,7 +358,7 @@
 			<p>
 				<ol>
 					<li><p>To calculate coefficient <m>K_1</m>, multiply both sides of the equation by <m>(s+n)^2</m> and solve at <m>s=-n</m>.</p></li>
-					<li><p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+n)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-n</m>.</p></li>
+					<li><p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+n)^2</m>, differentiate with respect to <m>s</m>, then solve at <m>s=-n</m>.</p></li>
 				</ol>
 			</p>
 
@@ -393,7 +393,7 @@
 						</md>
 					</p>
 
-					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+5)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-5</m>.</p>
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+5)^2</m>, differentiate with respect to <m>s</m>, then solve at <m>s=-5</m>.</p>
 
 					<p>
 						<md>
@@ -419,13 +419,13 @@
 				</statement>
 			</example>
 
-			<p>The third possibility will be that the poles are complex conjugate pairs, such as those shown in <xref ref="ch11-s-domain-complex-conjugate-roots" />.</p>
+			<p>The third possibility will be that the poles are complex-conjugate pairs, such as those shown in <xref ref="ch11-s-domain-complex-conjugate-roots" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch11-s-domain-complex-conjugate-roots">F(s) = \frac{K_1}{s+\alpha+j\beta} + \frac{K_2}{s+\alpha-j\beta}</md>
 			</p>
 
-			<p>Coefficients <m>K_1</m> and <m>K_2</m> will be complex conjugate pairs that take the form of <m>X \pm jY</m>.</p>
+			<p>Coefficients <m>K_1</m> and <m>K_2</m> will be complex-conjugate pairs that take the form of <m>X \pm jY</m>.</p>
 			
 			<p>
 				<ol>
@@ -454,7 +454,7 @@
 			</proof>
 
 			<example>
-				<title>Partial fraction expansion with complex conjugate roots</title>
+				<title>Partial fraction expansion with complex-conjugate roots</title>
 				
 				<statement>
 					<p>Compute the partial fraction expansion of the following function, then convert into the time domain.</p>
@@ -476,9 +476,14 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{(-40s+5200)(s+20+j200)}{(s+20+j200)(s+20-j200)}\Big|_{s=-20-j200} \amp= \frac{K_1(s+20+j200)}{s+20+j200}\Big|_{s=-20-j200} + \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}</mrow>
-							<mrow>\frac{-40s+5200}{s+20-j200}\Big|_{s=-20-j200} \amp= K_1\Big|_{s=-20-j200} + \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}</mrow>
-							<mrow>\frac{-40(-20-j200)+5200}{(-20-j200)+20-j200} \amp= K_1 + \frac{K_2((-20-j200)+20+j200)}{(-20-j200)+20-j200}</mrow>
+							<mrow>\amp \frac{(-40s+5200)(s+20+j200)}{(s+20+j200)(s+20-j200)}\Big|_{s=-20-j200}</mrow>
+							<mrow>\amp= \frac{K_1(s+20+j200)}{s+20+j200}\Big|_{s=-20-j200}</mrow>
+							<mrow>\amp+ \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}</mrow>
+							<mrow>\amp \frac{-40s+5200}{s+20-j200}\Big|_{s=-20-j200}</mrow>
+							<mrow>\amp= K_1\Big|_{s=-20-j200}</mrow>
+							<mrow>\amp+ \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}</mrow>
+							<mrow>\amp \frac{-40(-20-j200)+5200}{(-20-j200)+20-j200}</mrow>
+							<mrow>\amp= K_1 + \frac{K_2((-20-j200)+20+j200)}{(-20-j200)+20-j200}</mrow>
 							<mrow>\frac{6000+j8000}{-j400} \amp= K_1 + \frac{K_2(0)}{-j400}</mrow>
 							<mrow>K_1 \amp= -20 + j15</mrow>
 						</md>
@@ -527,22 +532,45 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{(s+100)(s)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0} + \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0} + \frac{K_5(s)}{s+4}\Big|_{s=0}</mrow>
-							<mrow>\frac{s+100}{(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0} + \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0} + \frac{K_5(s)}{s+4}\Big|_{s=0}</mrow>
-							<mrow>\frac{0+100}{(0+j20)(0-j20)(0+2.5)(0+4)} \amp= K_1 + \frac{K_2(0)}{0+j20} + \frac{K_3(0)}{0-j20} + \frac{K_4(0)}{0+2.5} + \frac{K_5(0)}{0+4}</mrow>
-							<mrow>\frac{100}{4000} \amp= K_1 + \frac{K_2(0)}{j20} + \frac{K_3(0)}{-j20} + \frac{K_4(0)}{2.5} + \frac{K_5(0)}{4}</mrow>
+							<mrow>\frac{(s+100)(s)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_5(s)}{s+4}\Big|_{s=0}</mrow>
+							<mrow>\frac{s+100}{(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_5(s)}{s+4}\Big|_{s=0}</mrow>
+							<mrow>\frac{0+100}{(0+j20)(0-j20)(0+2.5)(0+4)} \amp= K_1 + \frac{K_2(0)}{0+j20} + \frac{K_3(0)}{0-j20}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{0+2.5} + \frac{K_5(0)}{0+4}</mrow>
+							<mrow>\frac{100}{4000} \amp= K_1 + \frac{K_2(0)}{j20} + \frac{K_3(0)}{-j20}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{2.5} + \frac{K_5(0)}{4}</mrow>
 							<mrow>K_1 \amp= 0.025</mrow>
 						</md>
 					</p>
 
-					<p><m>K_2</m> and <m>K_3</m> correspond to complex conjugate roots. To calculate <m>K_2</m>, multiply both sides of the equation by <m>(s+j20)</m> and solve at <m>s=-j20</m>. <m>K_3</m> is the complex conjugate of <m>K_2</m> and does not need to be solved for separately.</p>
+					<p><m>K_2</m> and <m>K_3</m> correspond to complex-conjugate roots. To calculate <m>K_2</m>, multiply both sides of the equation by <m>(s+j20)</m> and solve at <m>s=-j20</m>. <m>K_3</m> is the complex conjugate of <m>K_2</m> and does not need to be solved for separately.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{(s+100)(s+j20)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20} + \frac{K_2(s+j20)}{s+j20}\Big|_{s=-j20} + \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20} + \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20} + \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}</mrow>
-							<mrow>\frac{s+100}{s(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20} + K_2\Big|_{s=-j20} + \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20} + \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20} + \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}</mrow>
-							<mrow>\frac{(-j20)+100}{(-j20)((-j20)-j20)((-j20)+2.5)((-j20)+4)} \amp= \frac{K_1((-j20)+j20)}{(-j20)} + K_2 + \frac{K_3((-j20)+j20)}{(-j20)-j20} + \frac{K_4((-j20)+j20)}{(-j20)+2.5} + \frac{K_5((-j20)+j20)}{(-j20)+4}</mrow>
-							<mrow>\frac{100-j20}{312000+j104000} \amp= \frac{K_1(0)}{-j20} + K_2 + \frac{K_3(0)}{-j40} + \frac{K_4(0)}{2.5-j20} + \frac{K_5(0)}{4-j20}</mrow>
+							<mrow>\frac{(s+100)(s+j20)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j20)}{s+j20}\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}</mrow>
+							<mrow>\frac{s+100}{s(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ K_2\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20}</mrow>
+							<mrow>\amp+ \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}</mrow>
+							<mrow>\frac{(-j20)+100}{(-j20)((-j20)-j20)((-j20)+2.5)((-j20)+4)} \amp= \frac{K_1((-j20)+j20)}{(-j20)} + K_2</mrow>
+							<mrow>\amp+ \frac{K_3((-j20)+j20)}{(-j20)-j20}</mrow>
+							<mrow>\amp+ \frac{K_4((-j20)+j20)}{(-j20)+2.5}</mrow>
+							<mrow>\amp+ \frac{K_5((-j20)+j20)}{(-j20)+4}</mrow>
+							<mrow>\frac{100-j20}{312000+j104000} \amp= \frac{K_1(0)}{-j20} + K_2 + \frac{K_3(0)}{-j40}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{2.5-j20} + \frac{K_5(0)}{4-j20}</mrow>
+						</md>
+					</p>
+
+					<p>
+						<md>
 							<mrow>K_2 \amp= 2.672 \times 10^{-4} -j1.538\times 10^{-4}</mrow>
 							<mrow>K_3 \amp= 2.672 \times 10^{-4} +j1.538\times 10^{-4}</mrow>
 						</md>
@@ -552,10 +580,22 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(s+100)(s+2.5)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5} + \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5} + \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5} + \frac{K_4(s+2.5)}{s+2.5}\Big|_{s=-2.5} + \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}</mrow>
-							<mrow>\frac{s+100}{s(s+j20)(s-j20)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5} + \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5} + \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5} + K_4\Big|_{s=-2.5} + \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}</mrow>
-							<mrow>\frac{(-2.5)+100}{(-2.5)((-2.5)+j20)((-2.5)-j20)((-2.5)+4)} \amp= \frac{K_1((-2.5)+2.5)}{(-2.5)} + \frac{K_2((-2.5)+2.5)}{(-2.5)+j20} + \frac{K_3((-2.5)+2.5)}{(-2.5)-j20} + K_4 + \frac{K_5((-2.5)+2.5)}{(-2.5)+4}</mrow>
-							<mrow>\frac{97.5}{-1523.4375} \amp= \frac{K_1(0)}{-2.5} + \frac{K_2(0)}{-2.5+j20} + \frac{K_3(0)}{-2.5-j20} + K_4 + \frac{K_5(0)}{1.5}</mrow>
+							<mrow>\frac{(s+100)(s+2.5)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ \frac{K_4(s+2.5)}{s+2.5}\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}</mrow>
+							<mrow>\frac{s+100}{s(s+j20)(s-j20)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ K_4\Big|_{s=-2.5}</mrow>
+							<mrow>\amp+ \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}</mrow>
+							<mrow>\frac{(-2.5)+100}{(-2.5)((-2.5)+j20)((-2.5)-j20)((-2.5)+4)} \amp= \frac{K_1((-2.5)+2.5)}{(-2.5)}</mrow>
+							<mrow>\amp+ \frac{K_2((-2.5)+2.5)}{(-2.5)+j20}</mrow>
+							<mrow>\amp+ \frac{K_3((-2.5)+2.5)}{(-2.5)-j20} + K_4</mrow>
+							<mrow>\amp+ \frac{K_5((-2.5)+2.5)}{(-2.5)+4}</mrow>
+							<mrow>\frac{97.5}{-1523.4375} \amp= \frac{K_1(0)}{-2.5} + \frac{K_2(0)}{-2.5+j20}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{-2.5-j20} + K_4 + \frac{K_5(0)}{1.5}</mrow>
 							<mrow>K_4 \amp= -0.064</mrow>
 						</md>
 					</p>
@@ -564,10 +604,23 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(s+100)(s+4)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4} + \frac{K_2(s+4)}{s+j20}\Big|_{s=-4} + \frac{K_3(s+4)}{s-j20}\Big|_{s=-4} + \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4} + \frac{K_5(s+4)}{s+4}\Big|_{s=-4}</mrow>
-							<mrow>\frac{s+100}{s(s+j20)(s-j20)(s+2.5)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4} + \frac{K_2(s+4)}{s+j20}\Big|_{s=-4} + \frac{K_3(s+4)}{s-j20}\Big|_{s=-4} + \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4} + K_5\Big|_{s=-4}</mrow>
-							<mrow>\frac{(-4)+100}{(-4)((-4)+j20)((-4)-j20)((-4)+2.5)} \amp= \frac{K_1((-4)+4)}{(-4)} + \frac{K_2((-4)+4)}{(-4)+j20} + \frac{K_3((-4)+4)}{(-4)-j20} + \frac{K_4((-4)+4)}{(-4)+2.5} + K_5</mrow>
-							<mrow>\frac{96}{2496} \amp= \frac{K_1(0)}{-4} + \frac{K_2(0)}{-4+j20} + \frac{K_3(0)}{-4-j20} + \frac{K_4(0)}{-1.5} + K_5</mrow>
+							<mrow>\frac{(s+100)(s+4)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_2(s+4)}{s+j20}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+4)}{s-j20}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_5(s+4)}{s+4}\Big|_{s=-4}</mrow>
+							<mrow>\frac{s+100}{s(s+j20)(s-j20)(s+2.5)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_2(s+4)}{s+j20}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+4)}{s-j20}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ K_5\Big|_{s=-4}</mrow>
+							<mrow>\frac{(-4)+100}{(-4)((-4)+j20)((-4)-j20)((-4)+2.5)} \amp= \frac{K_1((-4)+4)}{(-4)}</mrow>
+							<mrow>\amp+ \frac{K_2((-4)+4)}{(-4)+j20}</mrow>
+							<mrow>\amp+ \frac{K_3((-4)+4)}{(-4)-j20}</mrow>
+							<mrow>\amp+ \frac{K_4((-4)+4)}{(-4)+2.5}</mrow>
+							<mrow>\amp+ K_5</mrow>
+							<mrow>\frac{96}{2496} \amp= \frac{K_1(0)}{-4} + \frac{K_2(0)}{-4+j20}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{-4-j20} + \frac{K_4(0)}{-1.5} + K_5</mrow>
 							<mrow>K_5 \amp= 0.0385</mrow>
 						</md>
 					</p>
@@ -575,13 +628,19 @@
 					<p>The expanded version of <m>F(s)</m> is given below.</p>
 
 					<p>
-						<md>F(s) = \frac{0.025}{s} + \frac{2.7\times10^{-4} - j1.5\times10^{-4}}{s+j20} + \frac{2.7\times10^{-4} + j1.5\times10^{-4}}{s-j20} + \frac{-0.064}{s+2.5} + \frac{0.0385}{s+4}</md>
+						<md>
+							<mrow>F(s) \amp= \frac{0.025}{s} + \frac{2.7\times10^{-4} - j1.5\times10^{-4}}{s+j20} + \frac{2.7\times10^{-4} + j1.5\times10^{-4}}{s-j20}</mrow>
+							<mrow>\amp+ \frac{-0.064}{s+2.5} + \frac{0.0385}{s+4}</mrow>
+						</md>
 					</p>
 
 					<p>Consult <xref ref="ch11-eq-partial-fraction-complex-conjugate-solution" /> and <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
 					
 					<p>
-						<md>f(t) = \left[ 0.025 + 0.000538~\cos(20t) - 0.000308~\sin(20t) -0.064~\textrm{e}^{-2.5t} + 0.038~\textrm{e}^{-4t}\right]~u(t)</md>
+						<md>
+							<mrow>f(t) \amp= \biggl[ 0.025 + 0.000538~\cos(20t) - 0.000308~\sin(20t)</mrow>
+							<mrow>\amp-0.064~\textrm{e}^{-2.5t} + 0.038~\textrm{e}^{-4t}\biggr]~u(t)</mrow>
+						</md>
 					</p>
 				</statement>
 			</example>
@@ -595,25 +654,25 @@
 
 		<introduction>
 		
-			<p>It is possible to fully analyze a circuit in the <m>s</m>-domain and use the inverse Laplace transform to derive a time-domain function. While this is not always easier than a differential equation analysis, it is frequently more convenient, especially when the equation is non-constant input non-homogeneous or when the circuit is higher than second order.</p>
+			<p>It is possible to fully analyze a circuit in the <m>s</m> domain and use the inverse Laplace transform to derive a time-domain function. While this is not always easier than a differential equation analysis, it is frequently more convenient, especially when the equation is non-constant input non-homogeneous or when the circuit is higher than second order.</p>
 			
-			<p>To perform an <m>s</m>-domain analysis, transform each individual circuit component into the s domain. This is similar to phasor analysis, with the notable difference being that <m>s</m>-domain analysis includes initial conditions in the circuit transformation. Once all circuit elements are transformed into the <m>s</m>-domain, perform any circuit analysis technique to obtain an equation for <m>V(s)</m> or <m>I(s)</m>. Then perform an inverse Laplace transform to obtain a time-domain expression.</p>
+			<p>To perform an <m>s</m>-domain analysis, transform each individual circuit component into the <m>s</m> domain. This is similar to phasor analysis, with the notable difference being that <m>s</m>-domain analysis includes initial conditions in the circuit transformation. Once all circuit elements are transformed into the <m>s</m> domain, perform any circuit analysis technique to obtain an equation for <m>V(s)</m> or <m>I(s)</m>. Then perform an inverse Laplace transform to obtain a time-domain equation.</p>
 
 		</introduction>
 
 		<subsection xml:id="ch11-resistor">
 			<title>Resistor</title>
 
-			<p>The voltage and current properties of a resistor are defined by Ohm's law: <xref ref="ohmslawveq" />. Converting to the <m>s</m>-domain, the relationship between voltage and current becomes that defined in <xref ref="ch11-eq-s-domain-resistor" />.</p>
+			<p>The voltage and current properties of a resistor are defined by Ohm's law: <xref ref="ohmslawveq" />. Converting to the <m>s</m> domain, the relationship between voltage and current becomes that defined in <xref ref="ch11-eq-s-domain-resistor" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch11-eq-s-domain-resistor">V(s) = RI(s)</md>
 			</p>
 
-			<p>Therefore, in the <m>s</m>-domain, a resistor is expressed simply as a resistor. This transform is depicted in <xref ref="fig-s-domain-resistor" />.</p>
+			<p>Therefore, in the <m>s</m> domain, a resistor is expressed simply as a resistor. This transform is depicted in <xref ref="fig-s-domain-resistor" />.</p>
 
 			<figure xml:id="fig-s-domain-resistor">
-  				<caption>Transformation of a resistor from the time domain into the <m>s</m>-domain.</caption>
+  				<caption>Transformation of a resistor from the time domain into the <m>s</m> domain.</caption>
 				<image width="50%" xml:id="ch11-fig-s-domain-resistor">
 					<shortdescription>Left: resistor R with voltage drop v(t) and current i(t). Right: resistor R with voltage drop V(s) and current I(s).</shortdescription>
 					<latex-image>
@@ -631,7 +690,7 @@
 		<subsection xml:id="ch11-capacitor">
 			<title>Capacitor</title>
 
-			<p>The voltage and current properties of a capacitor are defined in <xref ref="ch5-ivcapequation" />. In the <m>s</m>-domain, this corresponds to the relationship shown in <xref ref="ch11-eq-s-domain-capacitor" /> (where <m>v(0)</m> is equal to the initial voltage dropped over the capacitor at <m>t=0</m>) and derived in <xref ref="ch11-s-domain-capacitor-proof" />.</p>
+			<p>The voltage and current properties of a capacitor are defined in <xref ref="ch5-ivcapequation" />. In the <m>s</m> domain, this corresponds to the relationship shown in <xref ref="ch11-eq-s-domain-capacitor" /> (where <m>v(0)</m> is equal to the initial voltage dropped over the capacitor at <m>t=0</m>) and derived in <xref ref="ch11-s-domain-capacitor-proof" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch11-eq-s-domain-capacitor">V(s) = \frac{1}{sC}I(s) + \frac{v(0)}{s}</md>
@@ -648,10 +707,10 @@
 				</p>
 			</proof>
 
-			<p>Therefore, in the s domain, a capacitor is expressed as a capacitor (with impedance of <m>(sC)^{-1}</m>) in series with a voltage source corresponding to the initial voltage drop over the capacitor. This transform is depicted in <xref ref="fig-s-domain-capacitor" />.</p>
+			<p>Therefore, in the <m>s</m> domain, a capacitor is expressed as a capacitor (with impedance of <m>(sC)^{-1}</m>) in series with a voltage source corresponding to the initial voltage drop over the capacitor. This transform is depicted in <xref ref="fig-s-domain-capacitor" />.</p>
 
 			<figure xml:id="fig-s-domain-capacitor">
-  				<caption>Transformation of a capacitor from the time domain into the <m>s</m>-domain.</caption>
+  				<caption>Transformation of a capacitor from the time domain into the <m>s</m> domain.</caption>
 				<image width="60%" xml:id="ch11-fig-s-domain-capacitor">
 					<shortdescription>Left: capacitor C with voltage drop v(t) and current i(t). Right: capacitor 1/(sC) in series with voltage source v(0)/s with collective voltage drop V(s) and current I(s).</shortdescription>
 					<latex-image>
@@ -671,7 +730,7 @@
 		<subsection xml:id="ch11-inductor">
 			<title>Inductor</title>
 
-			<p>The voltage and current properties of an inductor are defined in <xref ref="ch6-voltageinductor" />. In the <m>s</m>-domain, this corresponds to the relationship shown in <xref ref="ch11-eq-s-domain-inductor" /> (where <m>i(0)</m> is equal to the initial current through the inductor at <m>t=0</m>) and derived in <xref ref="ch11-s-domain-inductor-proof" />.</p>
+			<p>The voltage and current properties of an inductor are defined in <xref ref="ch6-voltageinductor" />. In the <m>s</m> domain, this corresponds to the relationship shown in <xref ref="ch11-eq-s-domain-inductor" /> (where <m>i(0)</m> is equal to the initial current through the inductor at <m>t=0</m>) and derived in <xref ref="ch11-s-domain-inductor-proof" />.</p>
 
 			<p>
 				<md number="yes" xml:id="ch11-eq-s-domain-inductor">I(s) = \frac{1}{sL}V(s) + \frac{i(0)}{s}</md>
@@ -688,10 +747,10 @@
 				</p>
 			</proof>
 
-			<p>Therefore, in the <m>s</m>-domain, an inductor is expressed as an inductor (with impedance of <m>sL</m>) in parallel with a current source corresponding to the initial current through the inductor. This transform is depicted in <xref ref="fig-s-domain-inductor" />.</p>
+			<p>Therefore, in the <m>s</m> domain, an inductor is expressed as an inductor (with impedance of <m>sL</m>) in parallel with a current source corresponding to the initial current through the inductor. This transform is depicted in <xref ref="fig-s-domain-inductor" />.</p>
 
 			<figure xml:id="fig-s-domain-inductor">
-  				<caption>Transformation of an inductor from the time domain into the <m>s</m>-domain.</caption>
+  				<caption>Transformation of an inductor from the time domain into the <m>s</m> domain.</caption>
 				<image width="80%" xml:id="ch11-fig-s-domain-inductor">
 					<shortdescription>Left: inductor L with voltage drop v(t) and current i(t). Right: inductor sL in parallel with current source i(0)/s with collective voltage drop V(s) and current I(s).</shortdescription>
 					<latex-image>
@@ -718,10 +777,10 @@
 			
 			<p>Sources connected via an opening switch (that are disconnected from the steady-state response of the circuit) contribute to initial conditions that are included in the <m>s</m>-domain model of a capacitor (<xref ref="fig-s-domain-capacitor" />) and inductor (<xref ref="fig-s-domain-inductor" />). These need to be consulted in the initial analysis of the circuit to calculate <m>v(0)</m> and/or <m>i(0)</m>, as needed.</p>
 
-			<p>Sources that are connected via a closing switch do not contribute to the initial conditions, but do contribute to the transient and/or steady-state response. Therefore, a source connected via a closing switch can be represented as <m>v(t)~u(t)</m> or <m>i(t)~u(t)</m>. When transformed into the <m>s</m>-domain, this becomes <m>V(s)/s</m> or <m>I(s)/s</m>. This transformation is depicted in <xref ref="fig-s-domain-closing-switch" /> for a voltage source.</p>
+			<p>Sources that are connected via a closing switch do not contribute to the initial conditions, but do contribute to the transient and/or steady-state response. Therefore, a source connected via a closing switch can be represented as <m>v(t)~u(t)</m> or <m>i(t)~u(t)</m>. When transformed into the <m>s</m> domain, this becomes <m>V(s)/s</m> or <m>I(s)/s</m>. This transformation is depicted in <xref ref="fig-s-domain-closing-switch" /> for a voltage source.</p>
 
 			<figure xml:id="fig-s-domain-closing-switch">
-  				<caption>Transformation of a switched voltage source from the time domain into the <m>s</m>-domain.</caption>
+  				<caption>Transformation of a switched voltage source from the time domain into the <m>s</m> domain.</caption>
 				<image width="100%" xml:id="ch11-fig-s-domain-closing-switch">
 					<shortdescription>Left: voltage source v(t) connected in series with a closing switch. Middle: voltage source v(t)*u(t). Right: voltage source V(s)/s.</shortdescription>
 					<latex-image>
@@ -729,14 +788,14 @@
 							\draw[]	(0,2.5) to [V, l_=$v(t)$]					(0,0);
 							\draw[]	(0,2.5) to [spst]							(2.5,2.5);
 							\draw[]	(0,0) to [short]							(2.5,0);
-							\node[align=center] at (3.25,1.25) {$\Longleftrightarrow$};
-							\draw[]	(6,2.5) to [V, l_=$v(t)~u(t)$]				(6,0);
-							\draw[]	(6,2.5) to [short]						(8.5,2.5);
-							\draw[]	(6,0) to [short]							(8.5,0);
-							\node[align=center] at (9.25,1.25) {$\Longleftrightarrow$};
-							\draw[]	(11.5,2.5) to [V, l_=$\frac{V(s)}{s}$]			(11.5,0);
-							\draw[]	(11.5,2.5) to [short]						(14,2.5);
-							\draw[]	(11.5,0) to [short]						(14,0);
+							\node[align=center] at (3,1.25) {$\Longleftrightarrow$};
+							\draw[]	(5.5,2.5) to [V, l_=$v(t)~u(t)$]			(5.5,0);
+							\draw[]	(5.5,2.5) to [short]						(8,2.5);
+							\draw[]	(5.5,0) to [short]							(8,0);
+							\node[align=center] at (8.5,1.25) {$\Longleftrightarrow$};
+							\draw[]	(10.5,2.5) to [V, l_=$\frac{V(s)}{s}$]		(10.5,0);
+							\draw[]	(10.5,2.5) to [short]						(13,2.5);
+							\draw[]	(10.5,0) to [short]							(13,0);
 						\end{tikzpicture}
 					</latex-image>
   				</image>
@@ -788,7 +847,7 @@
 						<md>v(0) = V_{S2}</md>
 					</p>
 
-					<p>Transform the circuit into the <m>s</m>-domain.</p>
+					<p>Transform the circuit into the <m>s</m> domain.</p>
 
 					<figure>
   						<caption></caption>
@@ -815,7 +874,8 @@
 					<p>
 						<md>
 							<mrow>\frac{\frac{V_{S1}}{s}-V(s)}{R_1} \amp= \frac{V(s)}{R_2} + \frac{V(s) - \frac{v(0)}{s}}{\frac{1}{sC}} + \frac{V(s) - \frac{V_{S2}}{s}}{R_3}</mrow>
-							<mrow>\frac{V_{S1}}{sR_1} \amp= \frac{V(s)}{R_1} + \frac{V(s)}{R_2} + sCV(s) - \frac{sCv(0)}{s} + \frac{V(s)}{R_3} - \frac{V_{S2}}{sR_3}</mrow>
+							<mrow>\frac{V_{S1}}{sR_1} \amp= \frac{V(s)}{R_1} + \frac{V(s)}{R_2} + sCV(s)</mrow>
+							<mrow>\amp- \frac{sCv(0)}{s} + \frac{V(s)}{R_3} - \frac{V_{S2}}{sR_3}</mrow>
 							<mrow>\frac{V_{S1}}{sR_1} + \frac{V_{S2}}{sR_3} + \frac{sCv(0)}{s} \amp= sCV(s) + \left[\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\right]V(s)</mrow>
 							<mrow>\frac{1}{s}\left[sv(0) + \frac{R_3V_{S1}+R_1V_{S2}}{CR_1R_3}\right] \amp= sV(s) + \left[\frac{1}{CR_1} + \frac{1}{CR_2} + \frac{1}{CR_3}\right]V(s)</mrow>
 							<mrow>V(s) \amp= \frac{sv(0) + \frac{R_3V_{S1}+R_1V_{S2}}{CR_1R_3}}{s\left(s + \left[\frac{1}{CR_1} + \frac{1}{CR_2} + \frac{1}{CR_3}\right]\right)}</mrow>
@@ -849,7 +909,8 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(10s + 50000)(s+10000)}{s(s + 10000)}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000} + \frac{K_2(s+10000)}{s+10000}\Big|_{s=-10000}</mrow>
+							<mrow>\frac{(10s + 50000)(s+10000)}{s(s + 10000)}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000}</mrow>
+							<mrow>\amp+ \frac{K_2(s+10000)}{s+10000}\Big|_{s=-10000}</mrow>
 							<mrow>\frac{10s + 50000}{s}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000} + K_2\Big|_{s=-10000}</mrow>
 							<mrow>\frac{10(-10000) + 50000}{(-10000)} \amp= \frac{K_1((-10000)+10000)}{(-10000)} + K_2</mrow>
 							<mrow>\frac{-50000}{-10000} \amp= \frac{K_1(0)}{(-10000)} + K_2</mrow>
@@ -923,7 +984,7 @@
 						</md>
 					</p>
 
-					<p>Transform the circuit into the <m>s</m>-domain.</p>
+					<p>Transform the circuit into the <m>s</m> domain.</p>
 
 					<figure>
   						<caption></caption>
@@ -983,7 +1044,7 @@
   						</image>
 					</figure>
 
-					<p>The initial conditions are zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m>-domain.</p>
+					<p>The initial conditions are zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m> domain.</p>
 
 					<figure>
   						<caption></caption>
@@ -1010,7 +1071,7 @@
 							<mrow>\frac{\frac{V_ms}{s^2+\omega^2}-V_X}{R_1} \amp= sCV_X + I(s)</mrow>
 							<mrow>\frac{V_ms}{R_1(s^2+\omega^2)} \amp= \frac{V_X}{R_1} + sCV_X + I(s)</mrow>
 							<mrow>V_X \amp= sLI(s) + R_2I(s)</mrow>
-							<mrow>\frac{V_ms}{R_1(s^2+\omega^2)} \amp=  frac{1}{R_1}\left[sLI(s) + R_2I(s)\right] + sC\left[sLI(s) + R_2I(s)\right] + I(s)</mrow>
+							<mrow>\frac{V_ms}{R_1(s^2+\omega^2)} \amp=  \frac{1}{R_1}\left[sLI(s) + R_2I(s)\right] + sC\left[sLI(s) + R_2I(s)\right] + I(s)</mrow>
 							<mrow>\amp= LCs^2I(s) + \left[\frac{L}{R_1} + CR_2\right]sI(s) + \left[\frac{R_2}{R_1}+1\right]I(s)</mrow>
 							<mrow>\frac{V_ms}{LCR_1(s^2+\omega^2)} \amp= s^2I(s) + \left[\frac{1}{CR_1} + \frac{R_2}{L}\right]sI(s) + \left[\frac{R_1+R_2}{LCR_1}\right]I(s)</mrow>
 							<mrow>I(s) \amp= \frac{\frac{V_ms}{LCR_1}}{(s^2+\omega^2)\left(s^2+\left[\frac{1}{CR_1} + \frac{R_2}{L}\right]s+\left[\frac{R_1+R_2}{LCR_1}\right]\right)}</mrow>
@@ -1032,10 +1093,21 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(12500s)(s+j50)}{(s+j50)(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= \frac{K_1(s+j50)}{s+j50}\Big|_{s=-j50} + \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50} + \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50} + \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}</mrow>
-							<mrow>\frac{12500s}{(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= K_1\Big|_{s=-j50} + \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50} + \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50} + \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}</mrow>
-							<mrow>\frac{12500(-j50)}{((-j50)-j50)((-j50)^2+350(-j50)+5025000)} \amp= K_1 + \frac{K_2((-j50)+j50)}{(-j50)-j50} + \frac{K_3((-j50)+j50)}{(-j50)+175+j2234.8} + \frac{K_4((-j50)+j50)}{(-j50)+175-j2234.8}</mrow>
-							<mrow>\frac{-j625000}{-1750000-j502250000} \amp= K_1 + \frac{K_2(0)}{-j100} + \frac{K_3(0)}{175+j2184.8} + \frac{K_4(0)}{175-j2284.8}</mrow>
+							<mrow>\frac{(12500s)(s+j50)}{(s+j50)(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= \frac{K_1(s+j50)}{s+j50}\Big|_{s=-j50}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}</mrow>
+							<mrow>\frac{12500s}{(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= K_1\Big|_{s=-j50}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}</mrow>
+							<mrow>\frac{12500(-j50)}{((-j50)-j50)((-j50)^2+350(-j50)+5025000)} \amp= K_1</mrow>
+							<mrow>\amp+ \frac{K_2((-j50)+j50)}{(-j50)-j50}</mrow>
+							<mrow>\amp+ \frac{K_3((-j50)+j50)}{(-j50)+175+j2234.8}</mrow>
+							<mrow>\amp+ \frac{K_4((-j50)+j50)}{(-j50)+175-j2234.8}</mrow>
+							<mrow>\frac{-j625000}{-1750000-j502250000} \amp= K_1 + \frac{K_2(0)}{-j100}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{175+j2184.8}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{175-j2284.8}</mrow>
 							<mrow>K_1 \amp= 0.001244 + j0.0000043~\textrm{A}</mrow>
 							<mrow>\amp= 1.24 + j0.0043~\textrm{mA}</mrow>
 						</md>
@@ -1051,11 +1123,24 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(12500s)(s+175+j2234.8)}{(s^2+2500)(s+175+j2234.8)(s+175-j2234.8)}\Big|_{s=-175-j2234.8} \amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8} + \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8} + \frac{K_3(s+175+j2234.8)}{s+175+j2234.8}\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}</mrow>
-							<mrow>\frac{12500s}{(s^2+2500)(s+175-j2234.8)}\Big|_{s=-175-j2234.8} \amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8} + \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8} + K_3\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}</mrow>
-							<mrow>\frac{12500(-175-j2234.8)}{((-175-j2234.8)^2+2500)((-175-j2234.8)+175-j2234.8)} \amp= \frac{K_1(-175-j2234.8+175+j2234.8)}{(-175-j2234.8)+j50} + \frac{K_2((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)-j50} + K_3 + \frac{K_4((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)+175-j2234.8}</mrow>
-							<mrow>\frac{-2187500-j2.7935\times 10^7}{3.4960 \times 10^9 + j2.2175 \times 10^{10}} \amp= \frac{K_1(0)}{(-175-j2234.8)+j50} + \frac{K_2(0)}{(-175-j2234.8)-j50} + K_3 + \frac{K_4(0)}{(-175-j2234.8)+175-j2234.8}</mrow>
-							<mrow>K_3 \amp=  -0.0012 - j0.0001~\textrm{A}</mrow>
+							<mrow>\amp \frac{(12500s)(s+175+j2234.8)}{(s^2+2500)(s+175+j2234.8)(s+175-j2234.8)}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp+ \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp+ \frac{K_3(s+175+j2234.8)}{s+175+j2234.8}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp+ \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp \frac{12500s}{(s^2+2500)(s+175-j2234.8)}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp+ \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp+ K_3\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}</mrow>
+							<mrow>\amp \frac{12500(-175-j2234.8)}{((-175-j2234.8)^2+2500)((-175-j2234.8)+175-j2234.8)}</mrow>
+							<mrow>\amp= \frac{K_1(-175-j2234.8+175+j2234.8)}{(-175-j2234.8)+j50}</mrow>
+							<mrow>\amp+ \frac{K_2((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)-j50} + K_3</mrow>
+							<mrow>\amp+ \frac{K_4((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)+175-j2234.8}</mrow>
+							<mrow>\amp \frac{-2187500-j2.7935\times 10^7}{3.4960 \times 10^9 + j2.2175 \times 10^{10}}</mrow>
+							<mrow>\amp= \frac{K_1(0)}{(-175-j2234.8)+j50}</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{(-175-j2234.8)-j50} + K_3</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{(-175-j2234.8)+175-j2234.8}</mrow>
+							<mrow>K_3 \amp= -0.0012 - j0.0001~\textrm{A}</mrow>
 							<mrow>\amp= -1.2444 - j0.0975~\textrm{mA}</mrow>
 						</md>
 					</p>
@@ -1323,7 +1408,7 @@
 							<mrow>\frac{(10s^2 + 10)(s)}{s(s+5)^2}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+5)^2}\Big|_{s=0} + \frac{K_3(s)}{(s+5)(s)}\Big|_{s=0}</mrow>
 							<mrow>\frac{10s^2 + 10}{(s+5)^2}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+5)^2}\Big|_{s=0} + \frac{K_3(s)}{(s+5)(s)}\Big|_{s=0}</mrow>
 							<mrow>\frac{10(0)^2 + 10}{(0+5)^2} \amp= K_1 + \frac{K_2(0)}{(0+5)^2} + \frac{K_3(0)}{(0+5)(s)}</mrow>
-							<mrow>\frac{10}{(5)^2} \amp= K_1 + 0 + 0</mrow>
+							<mrow>\frac{10}{(5)^2} \amp= K_1</mrow>
 							<mrow>K_1 \amp= \frac{10}{25}</mrow>
 							<mrow>\amp= 0.4</mrow>
 						</md>
@@ -1333,20 +1418,24 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(10s^2 + 10)(s+5)^2}{s(s+5)^2}\Big|_{s=-5} \amp= \frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{K_2(s+5)^2}{(s+5)^2}\Big|_{s=-5} + \frac{K_3(s+5)^2}{(s+5)}\Big|_{s=-5}</mrow>
-							<mrow>\frac{10s^2 + 10}{s}\Big|_{s=-5} \amp= \frac{K_1(s+5)^2}{s}\Big|_{s=-5} + K_2\Big|_{s=-5} + K_3(s+5)\Big|_{s=-5}</mrow>
-							<mrow>\frac{10(-5)^2 + 10}{-5} \amp= \frac{K_1((-5)+5)^2}{-5} + K_2 + K_3((-5)+5)</mrow>
-							<mrow>\frac{10(25) + 10}{-5} \amp= \frac{K_1(0)}{-5} + K_2 + K_3(0)</mrow>
+							<mrow>\frac{(10s^2 + 10)(s+5)^2}{s(s+5)^2}\Big|_{s=-5} \amp= \frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{K_2(s+5)^2}{(s+5)^2}\Big|_{s=-5}</mrow>
+							<mrow>\amp+ \frac{K_3(s+5)^2}{(s+5)}\Big|_{s=-5}</mrow>
+							<mrow>\frac{10s^2 + 10}{s}\Big|_{s=-5} \amp= \frac{K_1(s+5)^2}{s}\Big|_{s=-5} + K_2\Big|_{s=-5}</mrow>
+							<mrow>\amp+ K_3(s+5)\Big|_{s=-5}</mrow>
+							<mrow>\frac{10(-5)^2 + 10}{-5} \amp= \frac{K_1(0)^2}{-5} + K_2 + K_3(0)</mrow>
+							<mrow>\frac{10(25) + 10}{-5} \amp= K_2</mrow>
 							<mrow>K_2 \amp= -52</mrow>
 						</md>
 					</p>
 
-					<p>To calculate coefficient <m>K_3</m>, multiply both sides of the equation by <m>(s+5)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-5</m>.</p>
+					<p>To calculate coefficient <m>K_3</m>, multiply both sides of the equation by <m>(s+5)^2</m>, differentiate with respect to <m>s</m>, then solve at <m>s=-5</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{d}{ds}\frac{(10s^2 + 10)(s+5)^2}{s(s+5)^2}\Big|_{s=-5} \amp= \frac{d}{ds}\frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{d}{ds}\frac{K_2(s+5)^2}{(s+5)^2}\Big|_{s=-5} + \frac{d}{ds}\frac{K_3(s+5)^2}{(s+5)}\Big|_{s=-5}</mrow>
-							<mrow>\frac{d}{ds}\frac{10s^2 + 10}{s}\Big|_{s=-5} \amp= \frac{d}{ds}\frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{d}{ds}K_2\Big|_{s=-5} + \frac{d}{ds}K_3(s+5)\Big|_{s=-5}</mrow>
+							<mrow>\frac{d}{ds}\frac{(10s^2 + 10)(s+5)^2}{s(s+5)^2}\Big|_{s=-5} \amp= \frac{d}{ds}\frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{d}{ds}\frac{K_2(s+5)^2}{(s+5)^2}\Big|_{s=-5}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_3(s+5)^2}{(s+5)}\Big|_{s=-5}</mrow>
+							<mrow>\frac{d}{ds}\frac{10s^2 + 10}{s}\Big|_{s=-5} \amp= \frac{d}{ds}\frac{K_1(s+5)^2}{s}\Big|_{s=-5} + \frac{d}{ds}K_2\Big|_{s=-5}</mrow>
+							<mrow>\amp+ \frac{d}{ds}K_3(s+5)\Big|_{s=-5}</mrow>
 							<mrow>\left(10-\frac{10}{s^2}\right)\Big|_{s=-5} \amp= \left(\frac{K_1(s^2-25)}{s^2}\right)\Big|_{s=-5} + 0\Big|_{s=-5} + K_3\Big|_{s=-5}</mrow>
 							<mrow>\left(10-\frac{10}{(-5)^2}\right) \amp= \left(\frac{K_1((-5)^2-25)}{(-5)^2}\right) + K_3</mrow>
 							<mrow>10 - \frac{10}{25} \amp= \frac{K_1(0)}{25} + K_3</mrow>
@@ -1424,10 +1513,17 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(s^2+4)(s+j4)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-j4} \amp= \frac{K_1(s+j4)}{(s+j4)}\Big|_{s=-j4} + \frac{K_2(s+j4)}{(s-j4)}\Big|_{s=-j4} + \frac{K_3(s+j4)}{(s+1)}\Big|_{s=-j4} + \frac{K_4(s+j4)}{(s+4)}\Big|_{s=-j4}</mrow>
-							<mrow>\frac{s^2+4}{(s-j4)(s+1)(s+4)}\Big|_{s=-j4} \amp= K_1\Big|_{s=-j4} + \frac{K_2(s+j4)}{(s-j4)}\Big|_{s=-j4} + \frac{K_3(s+j4)}{(s+1)}\Big|_{s=-j4} + \frac{K_4(s+j4)}{(s+4)}\Big|_{s=-j4}</mrow>
-							<mrow>\frac{(-j4)^2+4}{((-j4)-j4)((-j4)+1)((-j4)+4)} \amp= K_1 + \frac{K_2((-j4)+j4)}{((-j4)-j4)} + \frac{K_3((-j4)+j4)}{((-j4)+1)} + \frac{K_4((-j4)+j4)}{((-j4)+4)}</mrow>
-							<mrow>\frac{-12}{-160 - j96} \amp= K_1 + \frac{K_2(0)}{-j8} + \frac{K_3(0)}{1-j4} + \frac{K_4(0)}{4-j4}</mrow>
+							<mrow>\frac{(s^2+4)(s+j4)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-j4} \amp= \frac{K_1(s+j4)}{(s+j4)}\Big|_{s=-j4}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j4)}{(s-j4)}\Big|_{s=-j4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j4)}{(s+1)}\Big|_{s=-j4}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j4)}{(s+4)}\Big|_{s=-j4}</mrow>
+							<mrow>\frac{s^2+4}{(s-j4)(s+1)(s+4)}\Big|_{s=-j4} \amp= K_1\Big|_{s=-j4}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j4)}{(s-j4)}\Big|_{s=-j4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j4)}{(s+1)}\Big|_{s=-j4}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j4)}{(s+4)}\Big|_{s=-j4}</mrow>
+							<mrow>\frac{(-j4)^2+4}{((-j4)-j4)((-j4)+1)((-j4)+4)} \amp= K_1 + \frac{K_2(0)}{-j8}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{1-j4} + \frac{K_4(0)}{4-j4}</mrow>
+							<mrow>\frac{-12}{-160 - j96} \amp= K_1</mrow>
 							<mrow>K_1 \amp= 0.0551 + j0.0331</mrow>
 						</md>
 					</p>
@@ -1442,10 +1538,16 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(s^2+4)(s+1)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-1} \amp= \frac{K_1(s+1)}{(s+j4)}\Big|_{s=-1} + \frac{K_2(s+1)}{(s-j4)}\Big|_{s=-1} + \frac{K_3(s+1)}{(s+1)}\Big|_{s=-1} + \frac{K_4(s+1)}{(s+4)}\Big|_{s=-1}</mrow>
-							<mrow>\frac{s^2+4}{(s+j4)(s-j4)(s+4)}\Big|_{s=-1} \amp= \frac{K_1(s+1)}{(s+j4)}\Big|_{s=-1} + \frac{K_2(s+1)}{(s-j4)}\Big|_{s=-1} + K_3\Big|_{s=-1} + \frac{K_4(s+1)}{(s+4)}\Big|_{s=-1}</mrow>
-							<mrow>\frac{(-1)^2+4}{((-1)+j4)((-1)-j4)((-1)+4)} \amp= \frac{K_1((-1)+1)}{((-1)+j4)}+ \frac{K_2((-1)+1)}{((-1)-j4)} + K_3 + \frac{K_4((-1)+1)}{((-1)+4)}</mrow>
-							<mrow>\frac{5}{51} \amp= \frac{K_1(0)}{-1+j4}+ \frac{K_2(0)}{-1-j4} + K_3 + \frac{K_4(0)}{3}</mrow>
+							<mrow>\frac{(s^2+4)(s+1)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-1} \amp= \frac{K_1(s+1)}{(s+j4)}\Big|_{s=-1}</mrow>
+							<mrow>\amp+ \frac{K_2(s+1)}{(s-j4)}\Big|_{s=-1}</mrow>
+							<mrow>\amp+ \frac{K_3(s+1)}{(s+1)}\Big|_{s=-1}</mrow>
+							<mrow>\amp+ \frac{K_4(s+1)}{(s+4)}\Big|_{s=-1}</mrow>
+							<mrow>\frac{s^2+4}{(s+j4)(s-j4)(s+4)}\Big|_{s=-1} \amp= \frac{K_1(s+1)}{(s+j4)}\Big|_{s=-1}</mrow>
+							<mrow>\amp+ \frac{K_2(s+1)}{(s-j4)}\Big|_{s=-1}</mrow>
+							<mrow>\amp+ K_3\Big|_{s=-1} + \frac{K_4(s+1)}{(s+4)}\Big|_{s=-1}</mrow>
+							<mrow>\frac{(-1)^2+4}{((-1)+j4)((-1)-j4)((-1)+4)} \amp= \frac{K_1(0)}{-1+j4}</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{-1-j4} + K_3 + \frac{K_4(0)}{3}</mrow>
+							<mrow>\frac{5}{51} \amp= K_3</mrow>
 							<mrow>K_3 \amp= 0.0980</mrow>
 						</md>
 					</p>
@@ -1454,10 +1556,13 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{(s^2+4)(s+4)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{(s+j4)}\Big|_{s=-4} + \frac{K_2(s+4)}{(s-j4)}\Big|_{s=-4} + \frac{K_3(s+4)}{(s+1)}\Big|_{s=-4} + \frac{K_4(s+4)}{(s+4)}\Big|_{s=-4}</mrow>
-							<mrow>\frac{s^2+4}{(s+j4)(s-j4)(s+1)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{(s+j4)}\Big|_{s=-4} + \frac{K_2(s+4)}{(s-j4)}\Big|_{s=-4} + \frac{K_3(s+4)}{(s+1)}\Big|_{s=-4} + K_4\Big|_{s=-4}</mrow>
-							<mrow>\frac{(-4)^2+4}{((-4)+j4)((-4)-j4)((-4)+1)} \amp= \frac{K_1((-4)+4)}{((-4)+j4)} + \frac{K_2((-4)+4)}{((-4)-j4)} + \frac{K_3((-4)+4)}{((-4)+1)} + K_4</mrow>
-							<mrow>\frac{20}{-96} \amp= \frac{K_1(0)}{-4+j4} + \frac{K_2(0)}{-4-j4} + \frac{K_3(0)}{-3} + K_4</mrow>
+							<mrow>\frac{(s^2+4)(s+4)}{(s+j4)(s-j4)(s+1)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{(s+j4)}\Big|_{s=-4} + \frac{K_2(s+4)}{(s-j4)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+4)}{(s+1)}\Big|_{s=-4} + \frac{K_4(s+4)}{(s+4)}\Big|_{s=-4}</mrow>
+							<mrow>\frac{s^2+4}{(s+j4)(s-j4)(s+1)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{(s+j4)}\Big|_{s=-4} + \frac{K_2(s+4)}{(s-j4)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+4)}{(s+1)}\Big|_{s=-4} + K_4\Big|_{s=-4}</mrow>
+							<mrow>\frac{(-4)^2+4}{((-4)+j4)((-4)-j4)((-4)+1)} \amp= \frac{K_1(0)}{-4+j4} + \frac{K_2(0)}{-4-j4}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{-3} + K_4</mrow>
+							<mrow>\frac{20}{-96} \amp= K_4</mrow>
 							<mrow>K_4 \amp= -0.2083</mrow>
 						</md>
 					</p>
@@ -1499,7 +1604,10 @@
 
 				<answer>
 					<p>
-						<md>f(t) = \left[0.052~t~\textrm{e}^{-2t} - 0.173~\textrm{e}^{-2t} + \textrm{e}^{-2.5t}\left(0.173~\cos(7.6t) + 0.663~\sin(7.6t)\right)\right]~u(t)</md>
+						<md>
+							<mrow>f(t) \amp= \biggl[0.052~t~\textrm{e}^{-2t} - 0.173~\textrm{e}^{-2t}</mrow>
+							<mrow>\amp+ \textrm{e}^{-2.5t}\left(0.173~\cos(7.6t) + 0.663~\sin(7.6t)\right)\biggr]~u(t)</mrow>
+						</md>
 					</p>
 
 					<p>All terms in <m>f(t)</m> represent the transient response. There are no steady-state terms.</p>
@@ -1522,23 +1630,44 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{(5s^2+10s+3)(s+2)^2}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= \frac{K_1(s+2)^2}{(s+2)^2}\Big|_{s=-2} + \frac{K_2(s+2)^2}{(s+2)}\Big|_{s=-2} + \frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
-							<mrow>\frac{(5s^2+10s+3)}{(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= K_1\Big|_{s=-2} + K_2(s+2)\Big|_{s=-2} + \frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
-							<mrow>\frac{(5(-2)^2+10(-2)+3)}{((-2)+2.5+j7.6)((-2)+2.5-j7.6)} \amp= K_1 + K_2((-2)+2) + \frac{K_3((-2)+2)^2}{((-2)+2.5+j7.6)} + \frac{K_4((-2)+2)^2}{((-2)+2.5-j7.6)}</mrow>
-							<mrow>\frac{3}{58} \amp= K_1 + K_2(0) + \frac{K_3(0)}{0.5+j7.6} + \frac{K_4(0)}{0.5-j7.6}</mrow>
+							<mrow>\frac{(5s^2+10s+3)(s+2)^2}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= \frac{K_1(s+2)^2}{(s+2)^2}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{K_2(s+2)^2}{(s+2)}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\frac{(5s^2+10s+3)}{(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= K_1\Big|_{s=-2}</mrow>
+							<mrow>\amp+ K_2(s+2)\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\frac{(5(-2)^2+10(-2)+3)}{((-2)+2.5+j7.6)((-2)+2.5-j7.6)} \amp= K_1 + K_2(0)</mrow>
+							<mrow>\amp+ \frac{K_3(0)^2}{0.5+j7.6} + \frac{K_4(0)^2}{0.5-j7.6}</mrow>
+							<mrow>\frac{3}{58} \amp= K_1</mrow>
 							<mrow>K_1 \amp= 0.0517</mrow>
 						</md>
 					</p>
 
-					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+2)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-2</m>.</p>
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+2)^2</m>, differentiate with respect to <m>s</m>, then solve at <m>s=-2</m>.</p>
 					
 					<p>
 						<md>
-							<mrow>\frac{d}{ds}\frac{(5s^2+10s+3)(s+2)^2}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= \frac{d}{ds}\frac{K_1(s+2)^2}{(s+2)^2}\Big|_{s=-2} + \frac{d}{ds}\frac{K_2(s+2)^2}{(s+2)}\Big|_{s=-2} + \frac{d}{ds}\frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{d}{ds}\frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
-							<mrow>\frac{d}{ds}\frac{(5s^2+10s+3)}{(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2} \amp= \frac{d}{ds}K_1\Big|_{s=-2} + \frac{d}{ds}K_2(s+2)\Big|_{s=-2} + \frac{d}{ds}\frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2} + \frac{d}{ds}\frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
-							<mrow>\frac{15s^2 + 634s + 625}{(s^2+5s+64)^2}\Big|_{s=-2} \amp= 0\Big|_{s=-2}  + K_2\Big|_{s=-2} + \frac{K_3(s+2)(s+3+j15.2)}{(s+2.5+j7.6)^2}\Big|_{s=-2} + \frac{K_4(s+2)(s+3-j15.2)}{(s+2.5-j7.6)^2}\Big|_{s=-2}</mrow>
-							<mrow>\frac{15(-2)^2 + 634(-2) + 625}{((-2)^2+5(-2)+64)^2} \amp= K_2 + \frac{K_3((-2)+2)((-2)+3+j15.2)}{((-2)+2.5+j7.6)^2} + \frac{K_4((-2)+2)((-2)+3-j15.2)}{((-2)+2.5-j7.6)^2}</mrow>
-							<mrow>\frac{-583}{3364} \amp= K_2 + \frac{K_3(0)}{(0.5+j7.6)^2} + \frac{K_4(0)}{(0.5-j7.6)^2}</mrow>
+							<mrow>\amp\frac{d}{ds}\frac{(5s^2+10s+3)(s+2)^2}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp= \frac{d}{ds}\frac{K_1(s+2)^2}{(s+2)^2}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_2(s+2)^2}{(s+2)}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp\frac{d}{ds}\frac{(5s^2+10s+3)}{(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp= \frac{d}{ds}K_1\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{d}{ds}K_2(s+2)\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_3(s+2)^2}{(s+2.5+j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_4(s+2)^2}{(s+2.5-j7.6)}\Big|_{s=-2}</mrow>
+							<mrow>\amp\frac{15s^2 + 634s + 625}{(s^2+5s+64)^2}\Big|_{s=-2}</mrow>
+							<mrow>\amp= 0\Big|_{s=-2}</mrow>
+							<mrow>\amp+ K_2\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{K_3(s+2)(s+3+j15.2)}{(s+2.5+j7.6)^2}\Big|_{s=-2}</mrow>
+							<mrow>\amp+ \frac{K_4(s+2)(s+3-j15.2)}{(s+2.5-j7.6)^2}\Big|_{s=-2}</mrow>
+							<mrow>\amp\frac{15(-2)^2 + 634(-2) + 625}{((-2)^2+5(-2)+64)^2}</mrow>
+							<mrow>\amp= K_2 + \frac{K_3(0)}{(0.5+j7.6)^2}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{(0.5-j7.6)^2}</mrow>
+							<mrow>\frac{-583}{3364} \amp= K_2</mrow>
 							<mrow>K_2 \amp= -0.1733</mrow>
 						</md>
 					</p>
@@ -1547,10 +1676,22 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(5s^2+10s+3)(s+2.5+j7.6)}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6} \amp= \frac{K_1(s+2.5+j7.6)}{(s+2)^2}\Big|_{s=-2.5-j7.6} + \frac{K_2(s+2.5+j7.6)}{(s+2)}\Big|_{s=-2.5-j7.6} + \frac{K_3(s+2.5+j7.6)}{(s+2.5+j7.6)}\Big|_{s=-2.5-j7.6} + \frac{K_4(s+2.5+j7.6)}{(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
-							<mrow>\frac{5s^2+10s+3}{(s+2)^2(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6} \amp= \frac{K_1(s+2.5+j7.6)}{(s+2)^2}\Big|_{s=-2.5-j7.6} + \frac{K_2(s+2.5+j7.6)}{(s+2)}\Big|_{s=-2.5-j7.6} + K_3\Big|_{s=-2.5-j7.6} + \frac{K_4(s+2.5+j7.6)}{(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
-							<mrow>\frac{5(-2.5-j7.6)^2+10(-2.5-j7.6)+3}{((-2.5-j7.6)+2)^2((-2.5-j7.6)+2.5-j7.6)} \amp= \frac{K_1((-2.5-j7.6)+2.5+j7.6)}{((-2.5-j7.6)+2)^2} + \frac{K_2((-2.5-j7.6)+2.5+j7.6)}{((-2.5-j7.6)+2)} + K_3 + \frac{K_4((-2.5-j7.6)+2.5+j7.6)}{((-2.5-j7.6)+2.5-j7.6)}</mrow>
-							<mrow>\frac{-279.55 + j114.00}{115.52 + j874.15} \amp= \frac{K_1(0)}{((-2.5-j7.6)+2)^2} + \frac{K_2(0)}{((-2.5-j7.6)+2)} + K_3 + \frac{K_4(0)}{((-2.5-j7.6)+2.5-j7.6)}</mrow>
+							<mrow>\amp\frac{(5s^2+10s+3)(s+2.5+j7.6)}{(s+2)^2(s+2.5+j7.6)(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp= \frac{K_1(s+2.5+j7.6)}{(s+2)^2}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp+ \frac{K_2(s+2.5+j7.6)}{(s+2)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp+ \frac{K_3(s+2.5+j7.6)}{(s+2.5+j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp+ \frac{K_4(s+2.5+j7.6)}{(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp\frac{5s^2+10s+3}{(s+2)^2(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp= \frac{K_1(s+2.5+j7.6)}{(s+2)^2}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp+ \frac{K_2(s+2.5+j7.6)}{(s+2)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp+ K_3\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp+ \frac{K_4(s+2.5+j7.6)}{(s+2.5-j7.6)}\Big|_{s=-2.5-j7.6}</mrow>
+							<mrow>\amp\frac{5(-2.5-j7.6)^2+10(-2.5-j7.6)+3}{((-2.5-j7.6)+2)^2((-2.5-j7.6)+2.5-j7.6)}</mrow>
+							<mrow>\amp= \frac{K_1(0)}{(-0.5-j7.6)^2}</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{-0.5-j7.6}</mrow>
+							<mrow>\amp+ K_3</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{-j15.2}</mrow>
+							<mrow>\frac{-279.55 + j114.00}{115.52 + j874.15} \amp= K_3</mrow>
 							<mrow>K_3 \amp= 0.0866 + j0.3312</mrow>
 						</md>
 					</p>
@@ -1570,7 +1711,10 @@
 					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
 
 					<p>
-						<md>f(t) = \left[0.052~t~\textrm{e}^{-2t} - 0.173~\textrm{e}^{-2t} + \textrm{e}^{-2.5t}\left(0.173~\cos(7.6t) + 0.663~\sin(7.6t)\right)\right]~u(t)</md>
+						<md>
+							<mrow>f(t) \amp= \biggl[0.052~t~\textrm{e}^{-2t} - 0.173~\textrm{e}^{-2t}</mrow>
+							<mrow>\amp+ \textrm{e}^{-2.5t}\left(0.173~\cos(7.6t) + 0.663~\sin(7.6t)\right)\biggr]~u(t)</mrow>
+						</md>
 					</p>
 
 					<p>All output terms represent the transient response. There are no steady-state terms in the output, as all terms are multiplied by a decaying exponential.</p>
@@ -1588,7 +1732,10 @@
 
 				<answer>
 					<p>
-						<md>f(t) = \left[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t) + 0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\right]~u(t)</md>
+						<md>
+							<mrow>f(t) \amp= \biggl[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t)</mrow>
+							<mrow>\amp+ 0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\biggr]~u(t)</mrow>
+						</md>
 					</p>
 
 					<p>Terms representing the transient response:</p>
@@ -1621,10 +1768,15 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(-4s^2+10)(s)}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+j5)}\Big|_{s=0} + \frac{K_3(s)}{(s-j5)}\Big|_{s=0} + \frac{K_4(s)}{(s+10)^2}\Big|_{s=0} + \frac{K_5(s)}{(s+10)}\Big|_{s=0}</mrow>
-							<mrow>\frac{-4s^2+10}{(s+j5)(s-j5)(s+10)^2}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+j5)}\Big|_{s=0} + \frac{K_3(s)}{(s-j5)}\Big|_{s=0} + \frac{K_4(s)}{(s+10)^2}\Big|_{s=0} + \frac{K_5(s)}{(s+10)}\Big|_{s=0}</mrow>
-							<mrow>\frac{-4(0)^2+10}{(0+j5)(0-j5)(0+10)^2} \amp= K_1 + \frac{K_2(0)}{(0+j5)} + \frac{K_3(0)}{(0-j5)} + \frac{K_4(0)}{(0+10)^2} + \frac{K_5(0)}{(0+10)}</mrow>
-							<mrow>\frac{10}{2500} \amp= K_1 + 0 + 0 + 0 + 0</mrow>
+							<mrow>\frac{(-4s^2+10)(s)}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+j5)}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_3(s)}{(s-j5)}\Big|_{s=0} + \frac{K_4(s)}{(s+10)^2}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_5(s)}{(s+10)}\Big|_{s=0}</mrow>
+							<mrow>\frac{-4s^2+10}{(s+j5)(s-j5)(s+10)^2}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+j5)}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_3(s)}{(s-j5)}\Big|_{s=0} + \frac{K_4(s)}{(s+10)^2}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_5(s)}{(s+10)}\Big|_{s=0}</mrow>
+							<mrow>\frac{-4(0)^2+10}{(0+j5)(0-j5)(0+10)^2} \amp= K_1 + \frac{K_2(0)}{j5}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{-j5} + \frac{K_4(0)}{(10)^2}</mrow>
+							<mrow>\amp+ \frac{K_5(0)}{10}</mrow>
 							<mrow>K_1 \amp= 0.004</mrow>
 						</md>
 					</p>
@@ -1633,10 +1785,20 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(-4s^2+10)(s+j5)}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-j5} \amp= \frac{K_1(s+j5)}{s}\Big|_{s=-j5} + \frac{K_2(s+j5)}{(s+j5)}\Big|_{s=-j5} + \frac{K_3(s+j5)}{(s-j5)}\Big|_{s=-j5} + \frac{K_4(s+j5)}{(s+10)^2}\Big|_{s=-j5} + \frac{K_5(s+j5)}{(s+10)}\Big|_{s=-j5}</mrow>
-							<mrow>\frac{-4s^2+10}{s(s-j5)(s+10)^2}\Big|_{s=-j5} \amp= \frac{K_1(s+j5)}{s}\Big|_{s=-j5} + K_2\Big|_{s=-j5} + \frac{K_3(s+j5)}{(s-j5)}\Big|_{s=-j5} + \frac{K_4(s+j5)}{(s+10)^2}\Big|_{s=-j5} + \frac{K_5(s+j5)}{(s+10)}\Big|_{s=-j5}</mrow>
-							<mrow>\frac{-4(-j5)^2+10}{(-j5)((-j5)-j5)((-j5)+10)^2} \amp= \frac{K_1((-j5)+j5)}{(-j5)} + K_2 + \frac{K_3((-j5)+j5)}{((-j5)-j5)} + \frac{K_4((-j5)+j5)}{((-j5)+10)^2} + \frac{K_5((-j5)+j5)}{((-j5)+10)}</mrow>
-							<mrow>\frac{110}{-3750 + j5000} \amp= \frac{K_1(0)}{-j5} + K_2 + \frac{K_3(0)}{-j10} + \frac{K_4(0)}{((-j5)+10)^2} + \frac{K_5(0)}{10-j5}</mrow>
+							<mrow>\frac{(-4s^2+10)(s+j5)}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-j5} \amp= \frac{K_1(s+j5)}{s}\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j5)}{(s+j5)}\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j5)}{(s-j5)}\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j5)}{(s+10)^2}\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ \frac{K_5(s+j5)}{(s+10)}\Big|_{s=-j5}</mrow>
+							<mrow>\frac{-4s^2+10}{s(s-j5)(s+10)^2}\Big|_{s=-j5} \amp= \frac{K_1(s+j5)}{s}\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ K_2\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j5)}{(s-j5)}\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j5)}{(s+10)^2}\Big|_{s=-j5}</mrow>
+							<mrow>\amp+ \frac{K_5(s+j5)}{(s+10)}\Big|_{s=-j5}</mrow>
+							<mrow>\frac{-4(-j5)^2+10}{(-j5)((-j5)-j5)((-j5)+10)^2} \amp= \frac{K_1(0)}{(-j5)} + K_2</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{-j10} + \frac{K_4(0)}{(10-j5)^2}</mrow>
+							<mrow>\amp+ \frac{K_5(0)}{10-j5}</mrow>
+							<mrow>\frac{110}{-3750 + j5000} \amp= K_2</mrow>
 							<mrow>K_2 \amp= -0.0106 - j0.0141</mrow>
 						</md>
 					</p>
@@ -1651,23 +1813,47 @@
 					
 					<p>
 						<md>
-							<mrow>\frac{(-4s^2+10)(s+10)^2}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-10} \amp= \frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + \frac{K_4(s+10)^2}{(s+10)^2}\Big|_{s=-10} + \frac{K_5(s+10)^2}{(s+10)}\Big|_{s=-10}</mrow>
-							<mrow>\frac{-4s^2+10}{s(s+j5)(s-j5)}\Big|_{s=-10} \amp= \frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + K_4\Big|_{s=-10} + K_5(s+10)\Big|_{s=-10}</mrow>
-							<mrow>\frac{-4(-10)^2+10}{(-10)((-10)+j5)((-10)-j5)} \amp= \frac{K_1((-10)+10)^2}{(-10)} + \frac{K_2((-10)+10)^2}{((-10)+j5)} + \frac{K_3((-10)+10)^2}{((-10)-j5)} + K_4 + K_5((-10)+10)</mrow>
-							<mrow>\frac{-390}{-1250} \amp= \frac{K_1(0)}{-10} + \frac{K_2(0)}{-10+j5} + \frac{K_3(0)}{-10-j5} + K_4 + K_5(0)</mrow>
+							<mrow>\frac{(-4s^2+10)(s+10)^2}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-10} \amp= \frac{K_1(s+10)^2}{s}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_4(s+10)^2}{(s+10)^2}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_5(s+10)^2}{(s+10)}\Big|_{s=-10}</mrow>
+							<mrow>\frac{-4s^2+10}{s(s+j5)(s-j5)}\Big|_{s=-10} \amp= \frac{K_1(s+10)^2}{s}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ K_4\Big|_{s=-10}</mrow>
+							<mrow>\amp+ K_5(s+10)\Big|_{s=-10}</mrow>
+							<mrow>\frac{-4(-10)^2+10}{(-10)((-10)+j5)((-10)-j5)} \amp= \frac{K_1(0)^2}{-10}</mrow>
+							<mrow>\amp+ \frac{K_2(0)^2}{-10+j5}</mrow>
+							<mrow>\amp+ \frac{K_3(0)^2}{-10-j5} + K_4</mrow>
+							<mrow>\amp+ K_5(0)</mrow>
+							<mrow>\frac{-390}{-1250} \amp= K_4</mrow>
 							<mrow>K_4 \amp= 0.312</mrow>
 						</md>
 					</p>
 
-					<p>To calculate coefficient <m>K_5</m>, multiply both sides of the equation by <m>(s+10)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-10</m>.</p>
+					<p>To calculate coefficient <m>K_5</m>, multiply both sides of the equation by <m>(s+10)^2</m>, differentiate with respect to <m>s</m>, then solve at <m>s=-10</m>.</p>
 					
 					<p>
 						<md>
-							<mrow>\frac{d}{ds}\frac{(-4s^2+10)(s+10)^2}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-10} \amp= \frac{d}{ds}\frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{d}{ds}\frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{d}{ds}\frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + \frac{d}{ds}\frac{K_4(s+10)^2}{(s+10)^2}\Big|_{s=-10} + \frac{d}{ds}\frac{K_5(s+10)^2}{(s+10)}\Big|_{s=-10}</mrow>
-							<mrow>\frac{d}{ds}\frac{-4s^2+10}{s(s+j5)(s-j5)}\Big|_{s=-10} \amp= \frac{d}{ds}\frac{K_1(s+10)^2}{s}\Big|_{s=-10} + \frac{d}{ds}\frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10} + \frac{d}{ds}\frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10} + \frac{d}{ds}K_4\Big|_{s=-10} + \frac{d}{ds}K_5(s+10)\Big|_{s=-10}</mrow>
-							<mrow>\frac{2(2s^4-65s^2-125)}{s^2(s^2+25)^2}\Big|_{s=-10} \amp= \frac{K_1(s^2-100)}{s^2}\Big|_{s=-10} + \frac{K_2(s-10-j10)(s+10)}{(s+j5)^2}\Big|_{s=-10} + \frac{K_3(s-10+j10)(s+10)}{(s-j5)^2}\Big|_{s=-10} + 0\Big|_{s=-10} + K_5\Big|_{s=-10}</mrow>
-							<mrow>\frac{2(2(-10)^4-65(-10)^2-125)}{(-10)^2((-10)^2+25)^2} \amp= \frac{K_1((-10)^2-100)}{(-10)^2} + \frac{K_2((-10)-10-j10)((-10)+10)}{((-10)+j5)^2} + \frac{K_3((-10)-10+j10)((-10)+10)}{((-10)-j5)^2} + 0 + K_5</mrow>
-							<mrow>\frac{26750}{1562500} \amp= \frac{K_1(0)}{100} + \frac{K_2(0)}{((-10)+j5)^2} + \frac{K_3(0)}{((-10)-j5)^2} + K_5</mrow>
+							<mrow>\frac{d}{ds}\frac{(-4s^2+10)(s+10)^2}{s(s+j5)(s-j5)(s+10)^2}\Big|_{s=-10} \amp= \frac{d}{ds}\frac{K_1(s+10)^2}{s}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_4(s+10)^2}{(s+10)^2}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_5(s+10)^2}{(s+10)}\Big|_{s=-10}</mrow>
+							<mrow>\frac{d}{ds}\frac{-4s^2+10}{s(s+j5)(s-j5)}\Big|_{s=-10} \amp= \frac{d}{ds}\frac{K_1(s+10)^2}{s}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_2(s+10)^2}{(s+j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_3(s+10)^2}{(s-j5)}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}K_4\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{d}{ds}K_5(s+10)\Big|_{s=-10}</mrow>
+							<mrow>\frac{2(2s^4-65s^2-125)}{s^2(s^2+25)^2}\Big|_{s=-10} \amp= \frac{K_1(s^2-100)}{s^2}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_2(s-10-j10)(s+10)}{(s+j5)^2}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ \frac{K_3(s-10+j10)(s+10)}{(s-j5)^2}\Big|_{s=-10}</mrow>
+							<mrow>\amp+ 0\Big|_{s=-10} + K_5\Big|_{s=-10}</mrow>
+							<mrow>\frac{2(2(-10)^4-65(-10)^2-125)}{(-10)^2((-10)^2+25)^2} \amp= \frac{K_1((-10)^2-100)}{100}</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{(-10+j5)^2}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{(-10-j5)^2} + 0 + K_5</mrow>
+							<mrow>\frac{26750}{1562500} \amp= K_5</mrow>
 							<mrow>K_5 \amp= 0.0171</mrow>
 						</md>
 					</p>
@@ -1681,7 +1867,10 @@
 					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
 
 					<p>
-						<md>f(t) = \left[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t) + 0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\right]~u(t)</md>
+						<md>
+							<mrow>f(t) \amp= \biggl[0.004 - 0.021~\cos(5t) - 0.028~\sin(5t)</mrow>
+							<mrow>\amp+ 0.312~t~\textrm{e}^{-10t} + 0.017~\textrm{e}^{-10t}\biggr]~u(t)</mrow>
+						</md>
 					</p>
 
 					<p>The steady-state solution is described by terms without decaying exponentials.</p>
@@ -1769,7 +1958,7 @@
 						</md>
 					</p>
 
-					<p>Transform the circuit into the <m>s</m>-domain.</p>
+					<p>Transform the circuit into the <m>s</m> domain.</p>
 
 					<figure>
 						<caption></caption>
@@ -1885,7 +2074,7 @@
 				</answer>
 
 				<solution>
-					<p>The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m>-domain.</p>
+					<p>The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m> domain.</p>
 
 					<figure>
 						<caption></caption>
@@ -1913,8 +2102,10 @@
 							<mrow>V_X \amp= \frac{V(s)}{sCR_2} + V(s)</mrow>
 							<mrow>\frac{V_{DC}}{R_1s} \amp= \left[\frac{1}{R_1} + \frac{1}{sL}\right]\left[\frac{V(s)}{sCR_2} + V(s)\right]+ \frac{V(s)}{R_2}</mrow>
 							<mrow>\amp= \frac{V(s)}{sCR_1R_2} + \frac{V(s)}{R_1} + \frac{V(s)}{s^2LCR_2} + \frac{V(s)}{sL} + \frac{V(s)}{R_2}</mrow>
-							<mrow>\frac{sV_{DC}}{R_1} \amp= \left[\frac{1}{R_1} + \frac{1}{R_2}\right]s^2V(s) + \left[\frac{1}{CR_1R_2} + \frac{1}{L}\right]sV(s) + \left[\frac{1}{LCR_2}\right]V(s)</mrow>
-							<mrow>\frac{sR_2V_{DC}}{R_1+R_2} \amp= s^2V(s) + \left[\frac{L+CR_1R_2}{R_1+R_2}\right]sV(s) + \left[\frac{R_1}{LC(R_1+R_2)}\right]V(s)</mrow>
+							<mrow>\frac{sV_{DC}}{R_1} \amp= \left[\frac{1}{R_1} + \frac{1}{R_2}\right]s^2V(s) + \left[\frac{1}{CR_1R_2} + \frac{1}{L}\right]sV(s)</mrow>
+							<mrow>\amp+ \left[\frac{1}{LCR_2}\right]V(s)</mrow>
+							<mrow>\frac{sR_2V_{DC}}{R_1+R_2} \amp= s^2V(s) + \left[\frac{L+CR_1R_2}{R_1+R_2}\right]sV(s)</mrow>
+							<mrow>\amp+ \left[\frac{R_1}{LC(R_1+R_2)}\right]V(s)</mrow>
 							<mrow>V(s) \amp= \frac{\left[\frac{V_{DC}R_2}{R_1+R_2}\right]s}{s^2+\left[\frac{L+CR_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{R_1}{LC(R_1+R_2)}\right]}</mrow>
 						</md>
 					</p>
@@ -1951,7 +2142,8 @@
 					<p>
 						<md>
 							<mrow>V(s) \amp= \frac{2s^2 + 28000s + 4 \times 10^8}{s (s^2+14000s + 6 \times 10^7 )}</mrow>
-							<mrow>v(t) \amp= \left[6.67~\textrm{V} + \textrm{e}^{-7000t}\left(-4.67~\textrm{V}~\cos(3316.63t) - 9.85~\textrm{V}~\sin(3316.63t)\right)\right]</mrow>
+							<mrow>v(t) \amp= \biggl[6.67~\textrm{V}</mrow>
+							<mrow>\amp+ \textrm{e}^{-7000t}\left(-4.67~\textrm{V}~\cos(3316.63t) - 9.85~\textrm{V}~\sin(3316.63t)\right)\biggr]~u(t)</mrow>
 						</md>
 					</p>
 				</answer>
@@ -1983,7 +2175,7 @@
 						</md>
 					</p>
 
-					<p>Transform the circuit into the <m>s</m>-domain.</p>
+					<p>Transform the circuit into the <m>s</m> domain.</p>
 
 					<figure>
 						<caption></caption>
@@ -2014,19 +2206,25 @@
 						<md>
 							<mrow>\frac{\frac{V_{S2}}{s}+\frac{LV_{S1}}{R_1+R_2} - V(s)}{R_1+sL} \amp= \frac{V(s)}{R_2} + \frac{V(s)-\frac{V_{S1}R_2}{s(R_1+R_2)}}{\frac{1}{sC}}</mrow>
 							<mrow>\frac{V_{S2}}{s} + \frac{LV_{S1}}{R_1+R_2} \amp= V(s) + (R_1+sL)\left[\frac{V(s)}{R_2} + sCV(s) - \frac{CV_{S1}R_2}{R_1+R_2}\right]</mrow>
-							<mrow>\amp= V(s) + \frac{R_1}{R_2}V(s) + \frac{sL}{R_2}V(s) + sCR_1V(s) + s^2LCV(s) </mrow>
+							<mrow>\amp= V(s) + \frac{R_1}{R_2}V(s) + \frac{sL}{R_2}V(s)</mrow>
+							<mrow>\amp+ sCR_1V(s) + s^2LCV(s) </mrow>
 							<mrow>\amp- \frac{CV_{S1}R_1R_2}{R_1+R_2} - \frac{sLCV_{S1}R_2}{R_1+R_2}</mrow>
-							<mrow>\frac{V_{S2}}{s} + \frac{LV_{S1}}{R_1+R_2} + \frac{CV_{S1}R_1R_2}{R_1+R_2} + \frac{sLCV_{S1}R_2}{R_1+R_2} \amp= (LC)s^2V(s) + \left[\frac{L}{R_2} + CR_1\right]sV(s) + \left[\frac{R_1+R_2}{R_2}\right]V(s)</mrow>
-							<mrow>\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right] + \left[\frac{V_{S2}}{LC}\right]\frac{1}{s} \amp= s^2V(s) + \left[\frac{1}{CR_2} + \frac{R_1}{L}\right]sV(s) + \left[\frac{R_1+R_2}{LCR_2}\right]V(s)</mrow>
-							<mrow>\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s^2 + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{V_{S2}}{LC}\right] \amp= s\left(s^2V(s) + \left[\frac{1}{CR_2} + \frac{R_1}{L}\right]sV(s) + \left[\frac{R_1+R_2}{LCR_2}\right]V(s)\right)</mrow>
-							<mrow>V(s) \amp= \frac{\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s^2 + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{V_{S2}}{LC}\right]}{s\left(s^2+\left[\frac{1}{R_2C}+\frac{R_1}{L}\right]s + \left[\frac{R_1+R_2}{LCR_2}\right]\right)}</mrow>
 						</md>
 					</p>
 
-					<p>Plug in component values using base units.</p>
+					<p>Collect all source terms on the left and all <m>V(s)</m> terms on the right.</p>
 					
 					<p>
-						<md>V(s) = \frac{2s^2 + 28000s + 4\textrm{E}8}{s\left(s^2+14000s + 6\textrm{E}7\right)}</md>
+						<md>
+							<mrow>\amp\frac{V_{S2}}{s} + \frac{LV_{S1}}{R_1+R_2} + \frac{CV_{S1}R_1R_2}{R_1+R_2} + \frac{sLCV_{S1}R_2}{R_1+R_2}</mrow>
+							<mrow>\amp= (LC)s^2V(s) + \left[\frac{L}{R_2} + CR_1\right]sV(s) + \left[\frac{R_1+R_2}{R_2}\right]V(s)</mrow>
+							<mrow>\amp\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right] + \left[\frac{V_{S2}}{LC}\right]\frac{1}{s}</mrow>
+							<mrow>\amp= s^2V(s) + \left[\frac{1}{CR_2} + \frac{R_1}{L}\right]sV(s) + \left[\frac{R_1+R_2}{LCR_2}\right]V(s)</mrow>
+							<mrow>\amp\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s^2 + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{V_{S2}}{LC}\right]</mrow>
+							<mrow>\amp= s\left(s^2V(s) + \left[\frac{1}{CR_2} + \frac{R_1}{L}\right]sV(s) + \left[\frac{R_1+R_2}{LCR_2}\right]V(s)\right)</mrow>
+							<mrow>V(s) \amp= \frac{\left[\frac{V_{S1}R_2}{R_1+R_2}\right]s^2 + \left[\frac{LV_{S1}+CV_{S1}R_1R_2}{LC(R_1+R_2)}\right]s + \left[\frac{V_{S2}}{LC}\right]}{s\left(s^2+\left[\frac{1}{R_2C}+\frac{R_1}{L}\right]s + \left[\frac{R_1+R_2}{LCR_2}\right]\right)}</mrow>
+							<mrow>\amp= \frac{2s^2 + 28000s + 4\textrm{E}8}{s\left(s^2+14000s + 6\textrm{E}7\right)}</mrow>
+						</md>
 					</p>
 
 					<p>Factor the denominator of <m>V(s)</m>.</p>
@@ -2045,23 +2243,36 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(2s^2 + 28000s + 4\textrm{E}8)(s)}{s(s+7000+j3316.6)(s+7000-j3316.6)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{(s+7000+j3316.6)}\Big|_{s=0} + \frac{K_3(s)}{(s+7000-j3316.6)}\Big|_{s=0}</mrow>
-							<mrow>\frac{2s^2 + 28000s + 4\textrm{E}8}{(s+7000+j3316.6)(s+7000-j3316.6)}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{(s+7000+j3316.6)}\Big|_{s=0} + \frac{K_3(s)}{(s+7000-j3316.6)}\Big|_{s=0}</mrow>
-							<mrow>\frac{2(0)^2 + 28000(0) + 4\textrm{E}8}{(0+7000+j3316.6)(0+7000-j3316.6)} \amp= K_1 + \frac{K_2(0)}{(0+7000+j3316.6)} + \frac{K_3(0)}{(0+7000-j3316.6)}</mrow>
-							<mrow>\frac{400000000}{60000000} \amp= K_1 + 0 + 0</mrow>
+							<mrow>\frac{(2s^2 + 28000s + 4\textrm{E}8)(s)}{s(s+7000+j3320)(s+7000-j3320)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_2(s)}{(s+7000+j3320)}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_3(s)}{(s+7000-j3320)}\Big|_{s=0}</mrow>
+							<mrow>\frac{2s^2 + 28000s + 4\textrm{E}8}{(s+7000+j3320)(s+7000-j3320)}\Big|_{s=0} \amp= K_1\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_2(s)}{(s+7000+j3320)}\Big|_{s=0}</mrow>
+							<mrow>\amp+ \frac{K_3(s)}{(s+7000-j3320)}\Big|_{s=0}</mrow>
+							<mrow>\frac{2(0)^2 + 28000(0) + 4\textrm{E}8}{(0+7000+j3320)(0+7000-j3320)} \amp= K_1</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{7000+j3320}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{7000-j3320}</mrow>
+							<mrow>\frac{400000000}{60000000} \amp= K_1</mrow>
 							<mrow>K_1 \amp= 6.6667~\textrm{V}</mrow>
 						</md>
 					</p>
 
-					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+7000+j3316.6)</m> and solve at <m>s=-7000-j3316.6</m>.</p>
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+7000+j3320)</m> and solve at <m>s=-7000-j3320</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{(2s^2 + 28000s + 4\textrm{E}8)(s+7000+j3316.6)}{s(s+7000+j3316.6)(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6} \amp= \frac{K_1(s+7000+j3316.6)}{s}\Big|_{s=-7000-j3316.6} + \frac{K_2(s+7000+j3316.6)}{(s+7000+j3316.6)}\Big|_{s=-7000-j3316.6} + \frac{K_3(s+7000+j3316.6)}{(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6}</mrow>
-							<mrow>\frac{2s^2 + 28000s + 4\textrm{E}8}{s(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6} \amp= \frac{K_1(s+7000+j3316.6)}{s}\Big|_{s=-7000-j3316.6} + K_2\Big|_{s=-7000-j3316.6} + \frac{K_3(s+7000+j3316.6)}{(s+7000-j3316.6)}\Big|_{s=-7000-j3316.6}</mrow>
-							<mrow>\frac{2(-7000-j3316.6)^2 + 28000(-7000-j3316.6) + 4\textrm{E}8}{(-7000-j3316.6)((-7000-j3316.6)+7000-j3316.6)} \amp= \frac{K_1((-7000-j3316.6)+7000+j3316.6)}{(-7000-j3316.6)} + K_2 + \frac{K_3((-7000-j3316.6)+7000+j3316.6)}{((-7000-j3316.6)+7000-j3316.6)}</mrow>
-							<mrow>\frac{280000000}{-2.2\textrm{E}7 + j4.6433\textrm{E}7} \amp= \frac{K_1(0)}{(-7000-j3316.6)} + K_2 + \frac{K_3(0)}{((-7000-j3316.6)+7000-j3316.6)}</mrow>
-							<mrow>K_2 \amp= -2.3333 - j4.9247</mrow>
+							<mrow>\amp\frac{(2s^2 + 28000s + 4\textrm{E}8)(s+7000+j3320)}{s(s+7000+j3320)(s+7000-j3320)}\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp= \frac{K_1(s+7000+j3320)}{s}\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp+ \frac{K_2(s+7000+j3320)}{(s+7000+j3320)}\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp+ \frac{K_3(s+7000+j3320)}{(s+7000-j3320)}\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp\frac{2s^2 + 28000s + 4\textrm{E}8}{s(s+7000-j3320)}\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp= \frac{K_1(s+7000+j3320)}{s}\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp+ K_2\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp+ \frac{K_3(s+7000+j3320)}{(s+7000-j3320)}\Big|_{s=-7000-j3320}</mrow>
+							<mrow>\amp\frac{2(-7000-j3320)^2 + 28000(-7000-j3320) + 4\textrm{E}8}{(-7000-j3320)((-7000-j3320)+7000-j3320)}</mrow>
+							<mrow>\amp= \frac{K_1(0)}{-7000-j3320} + K_2 + \frac{K_3(0)}{-j6640}</mrow>
+							<mrow>K_2 \amp= \frac{280000000}{-2.2\textrm{E}7 + j4.6433\textrm{E}7}</mrow>
+							<mrow>\amp= -2.3333 - j4.9247</mrow>
 						</md>
 					</p>
 
@@ -2080,7 +2291,10 @@
 					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
 
 					<p>
-						<md>v(t) = \left[6.67~\textrm{V} + \textrm{e}^{-7000t}\left(-4.67~\textrm{V}~\cos(3316.63t) - 9.85~\textrm{V}~\sin(3316.63t)\right)\right]~u(t)</md>
+						<md>
+							<mrow>v(t) \amp= \biggl[6.67~\textrm{V}</mrow>
+							<mrow>\amp+ \textrm{e}^{-7000t}\left(-4.67~\textrm{V}~\cos(3316.63t) - 9.85~\textrm{V}~\sin(3316.63t)\right)\biggr]~u(t)</mrow>
+						</md>
 					</p>
 				</solution>
 			</exercise>
@@ -2111,13 +2325,14 @@
 					<p>
 						<md>
 							<mrow>I(s) \amp= \frac{-25s^2 -100s -400}{(s+4)^2\left(s^2 + 125s + 2.5\textrm{E}5\right)}</mrow>
-							<mrow>i(t) \amp= [-1.6~\textrm{mA/s}~t~\textrm{e}^{-4t} + 0.4~\textrm{mA}~\textrm{e}^{-4t} + \textrm{e}^{-62.5t}\left(-0.4~\textrm{mA}~\cos(496t) - 50.4~\textrm{mA}~\sin(496t)\right)]~u(t)</mrow>
+							<mrow>i(t) \amp= \biggl[-1.6~\textrm{mA/s}~t~\textrm{e}^{-4t} + 0.4~\textrm{mA}~\textrm{e}^{-4t}</mrow>
+							<mrow>\amp+ \textrm{e}^{-62.5t}\left(-0.4~\textrm{mA}~\cos(496t) - 50.4~\textrm{mA}~\sin(496t)\right)\biggr]~u(t)</mrow>
 						</md>
 					</p>
 				</answer>
 
 				<solution>
-					<p>Calculate the initial conditions of the circuit. The inductor acts like a short and the capacitor acts like an open. For this reason, <m>i(0)</m> is zero and <m>v(0)</m> is equal to <m>V_{S2}</m>. Transform the circuit into the <m>s</m>-domain.</p>
+					<p>Calculate the initial conditions of the circuit. The inductor acts like a short and the capacitor acts like an open. For this reason, <m>i(0)</m> is zero and <m>v(0)</m> is equal to <m>V_{S2}</m>. Transform the circuit into the <m>s</m> domain.</p>
 					
 					<figure>
 						<caption></caption>
@@ -2145,14 +2360,16 @@
 							<mrow>\frac{sV_{S1}}{L(s+\alpha)^2} - \frac{V_{S2}}{L} \amp= s^2I(s) + \frac{R}{L}sI(s) + \frac{1}{LC}I(s)</mrow>
 							<mrow>\frac{sV_{S1}-V_{S2}(s+\alpha)^2}{L(s+\alpha)^2} \amp= s^2I(s) + \frac{R}{L}sI(s) + \frac{1}{LC}I(s)</mrow>
 							<mrow>\frac{sV_{S1}-V_{S2}s^2 - s2\alpha V_{S2} - V_{S2}\alpha^2}{L(s+\alpha)^2} \amp= s^2I(s) + \frac{R}{L}sI(s) + \frac{1}{LC}I(s)</mrow>
-							<mrow>I(s) \amp= \frac{\left[\frac{-V_{S2}}{L}\right]s^2 + \left[\frac{V_{S1}-2\alpha V_{S2}}{L}\right]s + \left[\frac{-V_{S2}\alpha^2}{L}\right]}{(s+\alpha)^2\left(s^2+\left[\frac{R}{L}\right]s + \left[\frac{1}{LC}\right]\right)}</mrow>
 						</md>
 					</p>
 
-					<p>Plug in component values using base units.</p>
+					<p>Solve for <m>I(s)</m>.</p>
 					
 					<p>
-						<md>I(s) = \frac{-25s^2 -100s -400}{(s+4)^2\left(s^2 + 125s + 2.5\textrm{E}5\right)}</md>
+						<md>
+							<mrow>I(s) \amp= \frac{\left[\frac{-V_{S2}}{L}\right]s^2 + \left[\frac{V_{S1}-2\alpha V_{S2}}{L}\right]s + \left[\frac{-V_{S2}\alpha^2}{L}\right]}{(s+\alpha)^2\left(s^2+\left[\frac{R}{L}\right]s + \left[\frac{1}{LC}\right]\right)}</mrow>
+							<mrow>\amp= \frac{-25s^2 -100s -400}{(s+4)^2\left(s^2 + 125s + 2.5\textrm{E}5\right)}</mrow>
+						</md>
 					</p>
 
 					<p>Factor the denominator.</p>
@@ -2171,25 +2388,52 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(-25s^2 -100s -400)(s+4)^2}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= \frac{K_1(s+4)^2}{(s+4)^2}\Big|_{s=-4} + \frac{K_2(s+4)^2}{(s+4)}\Big|_{s=-4} + \frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
-							<mrow>\frac{-25s^2 -100s -400}{(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= K_1\Big|_{s=-4} + K_2(s+4)\Big|_{s=-4} + \frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
-							<mrow>\frac{-25(-4)^2 -100(-4) -400}{((-4)+62.5+j496)((-4)+62.5-j496)} \amp= K_1 + K_2((-4)+4) + \frac{K_3((-4)+4)^2}{((-4)+62.5+j496)} + \frac{K_4((-4)+4)^2}{((-4)+62.5-j496)}</mrow>
-							<mrow>\frac{-400}{249516} \amp= K_1 + K_2(0) + \frac{K_3(0)}{58.5+j496} + \frac{K_4(0)}{58.5-j496}</mrow>
-							<mrow>K_1 \amp= -0.0016~\textrm{A}</mrow>
+							<mrow>\amp\frac{(-25s^2 -100s -400)(s+4)^2}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp= \frac{K_1(s+4)^2}{(s+4)^2}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_2(s+4)^2}{(s+4)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp\frac{-25s^2 -100s -400}{(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp= K_1\Big|_{s=-4}</mrow>
+							<mrow>\amp+ K_2(s+4)\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp\frac{-25(-4)^2 -100(-4) -400}{((-4)+62.5+j496)((-4)+62.5-j496)}</mrow>
+							<mrow>\amp= K_1</mrow>
+							<mrow>\amp+ K_2(0)</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{58.5+j496}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{58.5-j496}</mrow>
+							<mrow>K_1 \amp= \frac{-400}{249516}</mrow>
+							<mrow>\amp= -0.0016~\textrm{A}</mrow>
 							<mrow>\amp= -1.6031~\textrm{mA}</mrow>
 						</md>
 					</p>
 
-					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+4)^2</m>, differentiate with respect to<m>s</m>, then solve at <m>s=-4</m>.</p>
+					<p>To calculate coefficient <m>K_2</m>, multiply both sides of the equation by <m>(s+4)^2</m>, differentiate with respect to <m>s</m>, then solve at <m>s=-4</m>.</p>
 
 					<p>
 						<md>
-							<mrow>\frac{d}{ds}\frac{(-25s^2 -100s -400)(s+4)^2}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= \frac{d}{ds}\frac{K_1(s+4)^2}{(s+4)^2}\Big|_{s=-4} + \frac{d}{ds}\frac{K_2(s+4)^2}{(s+4)}\Big|_{s=-4} + \frac{d}{ds}\frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{d}{ds}\frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
-							<mrow>\frac{d}{ds}\frac{-25s^2 -100s -400}{(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4} \amp= \frac{d}{ds}K_1\Big|_{s=-4} + \frac{d}{ds}K_2(s+4)\Big|_{s=-4} + \frac{d}{ds}\frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4} + \frac{d}{ds}\frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
-							<mrow>\frac{-3025(s^2+4131.97s+8247.93)}{(s^2+125s+2.5\textrm{E}5)^2}\Big|_{s=-4} \amp= 0\Big|_{s=-4} + K_2\Big|_{s=-4} + \frac{K_3(s+4)(s+121+j992)}{(s+62.5+j496)^2}\Big|_{s=-4} + \frac{K_4(s+4)(s+121-j992)}{(s+62.5-j496)^2}\Big|_{s=-4}</mrow>
-							<mrow>\frac{-3025((-4)^2+4131.97(-4)+8247.93)}{((-4)^2+125(-4)+2.5\textrm{E}5)^2} \amp= K_2 + \frac{K_3((-4)+4)((-4)+121+j992)}{((-4)+62.5+j496)^2} + \frac{K_4((-4)+4)((-4)+121-j992)}{((-4)+62.5-j496)^2}</mrow>
-							<mrow>\frac{2.4998\textrm{E}7}{6.2258\textrm{E}10} \amp= K_2 + \frac{K_3(0)}{(58.5+j496)^2} + \frac{K_4(0)}{(58.5-j496)^2}</mrow>
-							<mrow>K_2 \amp= 4.0153\textrm{E}-4~\textrm{A}</mrow>
+							<mrow>\amp\frac{d}{ds}\frac{(-25s^2 -100s -400)(s+4)^2}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp= \frac{d}{ds}\frac{K_1(s+4)^2}{(s+4)^2}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_2(s+4)^2}{(s+4)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp\frac{d}{ds}\frac{-25s^2 -100s -400}{(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp= \frac{d}{ds}K_1\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{d}{ds}K_2(s+4)\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_3(s+4)^2}{(s+62.5+j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{d}{ds}\frac{K_4(s+4)^2}{(s+62.5-j496)}\Big|_{s=-4}</mrow>
+							<mrow>\amp\frac{-3025(s^2+4131.97s+8247.93)}{(s^2+125s+2.5\textrm{E}5)^2}\Big|_{s=-4}</mrow>
+							<mrow>\amp= 0\Big|_{s=-4}</mrow>
+							<mrow>\amp+ K_2\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_3(s+4)(s+121+j992)}{(s+62.5+j496)^2}\Big|_{s=-4}</mrow>
+							<mrow>\amp+ \frac{K_4(s+4)(s+121-j992)}{(s+62.5-j496)^2}\Big|_{s=-4}</mrow>
+							<mrow>\amp\frac{-3025((-4)^2+4131.97(-4)+8247.93)}{((-4)^2+125(-4)+2.5\textrm{E}5)^2}</mrow>
+							<mrow>\amp= K_2</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{(58.5+j496)^2}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{(58.5-j496)^2}</mrow>
+							<mrow>K_2 \amp= \frac{2.4998\textrm{E}7}{6.2258\textrm{E}10}</mrow>
+							<mrow>\amp= 4.0153\textrm{E}-4~\textrm{A}</mrow>
 							<mrow>\amp= 0.4015~\textrm{mA}</mrow>
 						</md>
 					</p>
@@ -2198,11 +2442,22 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(-25s^2 -100s -400)(s+62.5+j496)}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-62.5-j496} \amp= \frac{K_1(s+62.5+j496)}{(s+4)^2}\Big|_{s=-62.5-j496} + \frac{K_2(s+62.5+j496)}{(s+4)}\Big|_{s=-62.5-j496} + \frac{K_3(s+62.5+j496)}{(s+62.5+j496)}\Big|_{s=-62.5-j496} + \frac{K_4(s+62.5+j496)}{(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
-							<mrow>\frac{(-25s^2 -100s -400)}{(s+4)^2(s+62.5-j496)}\Big|_{s=-62.5-j496} \amp= \frac{K_1(s+62.5+j496)}{(s+4)^2}\Big|_{s=-62.5-j496} + \frac{K_2(s+62.5+j496)}{(s+4)}\Big|_{s=-62.5-j496} + K_3\Big|_{s=-62.5-j496} + \frac{K_4(s+62.5+j496)}{(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
-							<mrow>\frac{(-25(-62.5-j496)^2 -100(-62.5-j496) -400)}{((-62.5-j496)+4)^2((-62.5-j496)+62.5-j496)} \amp= \frac{K_1((-62.5-j496)+62.5+j496)}{((-62.5-j496)+4)^2} + \frac{K_2((-62.5-j496)+62.5+j496)}{((-62.5-j496)+4)}+ K_3 + \frac{K_4((-62.5-j496)+62.5+j496)}{((-62.5-j496)+62.5-j496)}</mrow>
-							<mrow>\frac{6.0605\textrm{E}6 - j1.5006\textrm{E}6}{5.7586\textrm{E}7 + j2.4077\textrm{E}8} \amp= \frac{K_1(0)}{((-62.5-j496)+4)^2} + \frac{K_2(0)}{((-62.5-j496)+4)}+ K_3 + \frac{K_4((0)}{((-62.5-j496)+62.5-j496)}</mrow>
-							<mrow>K_3 \amp= -0.0002 - j0.0252~\textrm{A}</mrow>
+							<mrow>\amp\frac{(-25s^2 -100s -400)(s+62.5+j496)}{(s+4)^2(s+62.5+j496)(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp= \frac{K_1(s+62.5+j496)}{(s+4)^2}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp+ \frac{K_2(s+62.5+j496)}{(s+4)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp+ \frac{K_3(s+62.5+j496)}{(s+62.5+j496)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp+ \frac{K_4(s+62.5+j496)}{(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp\frac{(-25s^2 -100s -400)}{(s+4)^2(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp= \frac{K_1(s+62.5+j496)}{(s+4)^2}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp+ \frac{K_2(s+62.5+j496)}{(s+4)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp+ K_3\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp+ \frac{K_4(s+62.5+j496)}{(s+62.5-j496)}\Big|_{s=-62.5-j496}</mrow>
+							<mrow>\amp\frac{(-25(-62.5-j496)^2 -100(-62.5-j496) -400)}{((-62.5-j496)+4)^2((-62.5-j496)+62.5-j496)}</mrow>
+							<mrow>\amp= \frac{K_1(0)}{(-58.5-j496)^2}</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{-58.5-j496}</mrow>
+							<mrow>\amp+ K_3 + \frac{K_4(0)}{-j992}</mrow>
+							<mrow>K_3 \amp= \frac{6.0605\textrm{E}6 - j1.5006\textrm{E}6}{5.7586\textrm{E}7 + j2.4077\textrm{E}8} </mrow>
+							<mrow>\amp= -0.0002 - j0.0252~\textrm{A}</mrow>
 							<mrow>\amp= -0.2008 - j25.2197~\textrm{mA}</mrow>
 						</md>
 					</p>
@@ -2223,8 +2478,8 @@
 
 					<p>
 						<md>
-							<mrow>i(t) \amp= [-1.6~\textrm{mA/s}~t~\textrm{e}^{-4t} + 0.4~\textrm{mA}~\textrm{e}^{-4t}</mrow>
-							<mrow>\amp+ \textrm{e}^{-62.5t}\left(-0.4~\textrm{mA}~\cos(496t) - 50.4~\textrm{mA}~\sin(496t)\right)]~u(t)</mrow>
+							<mrow>i(t) \amp= \biggl[-1.6~\textrm{mA/s}~t~\textrm{e}^{-4t} + 0.4~\textrm{mA}~\textrm{e}^{-4t}</mrow>
+							<mrow>\amp+ \textrm{e}^{-62.5t}\left(-0.4~\textrm{mA}~\cos(496t) - 50.4~\textrm{mA}~\sin(496t)\right)\biggr]~u(t)</mrow>
 						</md>
 					</p>
 				</solution>
@@ -2259,13 +2514,14 @@
 					<p>
 						<md>
 							<mrow>I(s) \amp= \frac{9.95s^2 + 497512.44s}{(s^2+3600)\left(s^2 + 308.66s + 1004975.12\right)}</mrow>
-							<mrow>i(t) \amp= [500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t) + \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)]~u(t)</mrow>
+							<mrow>i(t) \amp= \biggl[500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t)</mrow>
+							<mrow>\amp+ \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)\biggr]~u(t)</mrow>
 						</md>
 					</p>
 				</answer>
 
 				<solution>
-					<p>The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m>-domain.</p>
+					<p>The initial current through the inductor and initial voltage drop over the capacitor are both zero, as no source is connected before the switch closes. Transform the circuit into the <m>s</m> domain.</p>
 
 					<figure>
 						<caption></caption>
@@ -2293,18 +2549,26 @@
 							<mrow>\frac{I_ms}{s^2+\omega^2} \amp= \frac{V(s)}{R_1} + I(s) + \frac{V(s)}{R_3+\frac{1}{sC}}</mrow>
 							<mrow>V(s) \amp= sLI(s) + R_2I(s)</mrow>
 							<mrow>\frac{I_ms}{s^2+\omega^2} \amp= \frac{sLI(s)}{R_1} + \frac{R_2I(s)}{R_1} + I(s) + \frac{sLI(s) + R_2I(s)}{R_3 + \frac{1}{sC}}</mrow>
-							<mrow>\left(\frac{I_ms}{s^2+\omega^2}\right)\left(R_3 + \frac{1}{sC}\right) \amp= \frac{sLI(s)}{R_1}\left(R_3 + \frac{1}{sC}\right) + \frac{R_2I(s)}{R_1}\left(R_3 + \frac{1}{sC}\right) + I(s)\left(R_3 + \frac{1}{sC}\right) + sLI(s) + R_2I(s)</mrow>
-							<mrow>\frac{I_mR_3s}{s^2+\omega^2} + \frac{I_m}{C(s^2+\omega^2)} \amp= \frac{sLR_3I(s)}{R_1} + \frac{L}{R_1C}I(s) + \frac{R_2R_3I(s)}{R_1} + \frac{R_2}{sCR_1}I(s) + R_3I(s) + \frac{1}{sC}I(s) + sLI(s) + R_2I(s)</mrow>
-							<mrow>\frac{CI_mR_3s^2 + I_ms}{C(s^2+\omega^2)} \amp= \left[\frac{LR_3}{R_1} + L\right]s^2I(s) + \left[\frac{L}{R_1C} + \frac{R_2R_3}{R_1} + R_3 + R_2\right]sI(s) + \left[\frac{R_2}{CR_1} + \frac{1}{C}\right]I(s)</mrow>
-							<mrow>\frac{CI_mR_1R_3s^2 + R_1I_ms}{LC(R_1+R_3)(s^2+\omega^2)} \amp= s^2I(s) + \left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3+R_1R_3+R_1R_2}{L(R_1+R_3)}\right]sI(s) + \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]I(s)</mrow>
-							<mrow>I(s) \amp= \frac{\left[\frac{CR_1R_3I_m}{LC(R_1+R_3)}\right]s^2 + \left[\frac{R_1I_m}{LC(R_1+R_3)}\right]s}{(s^2+\omega^2)\left(s^2+\left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3 + R_1R_3 + R_1R_2}{L(R_1+R_3)}\right]s + \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]\right)}</mrow>
+							<mrow>\left(\frac{I_ms}{s^2+\omega^2}\right)\left(R_3 + \frac{1}{sC}\right) \amp= \frac{sLI(s)}{R_1}\left(R_3 + \frac{1}{sC}\right) + \frac{R_2I(s)}{R_1}\left(R_3 + \frac{1}{sC}\right)</mrow>
+							<mrow>\amp+ I(s)\left(R_3 + \frac{1}{sC}\right) + sLI(s) + R_2I(s)</mrow>
+							<mrow>\frac{I_mR_3s}{s^2+\omega^2} + \frac{I_m}{C(s^2+\omega^2)} \amp= \frac{sLR_3I(s)}{R_1} + \frac{L}{R_1C}I(s)</mrow>
+							<mrow>\amp+ \frac{R_2R_3I(s)}{R_1} + \frac{R_2}{sCR_1}I(s)</mrow>
+							<mrow>\amp+ R_3I(s) + \frac{1}{sC}I(s)</mrow>
+							<mrow>\amp+ sLI(s) + R_2I(s)</mrow>
+							<mrow>\frac{CI_mR_3s^2 + I_ms}{C(s^2+\omega^2)} \amp= \left[\frac{LR_3}{R_1} + L\right]s^2I(s)</mrow>
+							<mrow>\amp+ \left[\frac{L}{R_1C} + \frac{R_2R_3}{R_1} + R_3 + R_2\right]sI(s)</mrow>
+							<mrow>\amp+ \left[\frac{R_2}{CR_1} + \frac{1}{C}\right]I(s)</mrow>
+							<mrow>\frac{CI_mR_1R_3s^2 + R_1I_ms}{LC(R_1+R_3)(s^2+\omega^2)} \amp= s^2I(s)</mrow>
+							<mrow>\amp+ \left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3+R_1R_3+R_1R_2}{L(R_1+R_3)}\right]sI(s)</mrow>
+							<mrow>\amp+ \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]I(s)</mrow>
 						</md>
 					</p>
 
-					<p>Plug in component values using base units.</p>
-					
 					<p>
-						<md>I(s) = \frac{9.95s^2 + 497512.44s}{(s^2+3600)\left(s^2 + 308.66s + 1004975.12\right)}</md>
+						<md>
+							<mrow>I(s) \amp= \frac{\left[\frac{CR_1R_3I_m}{LC(R_1+R_3)}\right]s^2 + \left[\frac{R_1I_m}{LC(R_1+R_3)}\right]s}{(s^2+\omega^2)\left(s^2+\left[\frac{1}{C(R_1+R_3)} + \frac{R_2R_3 + R_1R_3 + R_1R_2}{L(R_1+R_3)}\right]s + \left[\frac{R_1+R_2}{LC(R_1+R_3)}\right]\right)}</mrow>
+							<mrow>\amp= \frac{9.95s^2 + 497512.44s}{(s^2+3600)\left(s^2 + 308.66s + 1004975.12\right)}</mrow>
+						</md>
 					</p>
 
 					<p>Factor the denominator.</p>
@@ -2323,11 +2587,23 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(9.95s^2 + 497512.44s)(s+j60)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60} \amp= \frac{K_1(s+j60)}{(s+j60)}\Big|_{s=-j60} + \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60} + \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60} + \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}</mrow>
-							<mrow>\frac{9.95s^2 + 497512.44s}{(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60} \amp= K_1\Big|_{s=-j60} + \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60} + \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60} + \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}</mrow>
-							<mrow>\frac{9.95(-j60)^2 + 497512.44(-j60)}{((-j60)-j60)((-j60)+154+j991)((-j60)+154-j991)} \amp= K_1 + \frac{K_2((-j60)+j60)}{((-j60)-j60)} + \frac{K_3((-j60)+j60)}{((-j60)+154+j991)} + \frac{K_4((-j60)+j60)}{((-j60)+154-j991)}</mrow>
-							<mrow>\frac{-3.5821\textrm{E}4 - j2.9851\textrm{E}7}{-2.2223\textrm{E}6 - j1.2017\textrm{E}8} \amp= K_1 + \frac{K_2(0)}{-j120} + \frac{K_3(0)}{154+j931} + \frac{K_4(0)}{154-j1051}</mrow>
-							<mrow>K_1 \amp= 0.2483 + j0.0043~\textrm{A}</mrow>
+							<mrow>\amp\frac{(9.95s^2 + 498000s)(s+j60)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp= \frac{K_1(s+j60)}{(s+j60)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp\frac{9.95s^2 + 498000s}{(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp= K_1\Big|_{s=-j60}</mrow>
+							<mrow>\amp+ \frac{K_2(s+j60)}{(s-j60)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp+ \frac{K_3(s+j60)}{(s+154+j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp+ \frac{K_4(s+j60)}{(s+154-j991)}\Big|_{s=-j60}</mrow>
+							<mrow>\amp\frac{9.95(-j60)^2 + 498000(-j60)}{((-j60)-j60)((-j60)+154+j991)((-j60)+154-j991)}</mrow>
+							<mrow>\amp= K_1</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{-j120}</mrow>
+							<mrow>\amp+ \frac{K_3(0)}{154+j931}</mrow>
+							<mrow>\amp+ \frac{K_4(0)}{154-j1051}</mrow>
+							<mrow>K_1 \amp= \frac{-3.5821\textrm{E}4 - j2.9851\textrm{E}7}{-2.2223\textrm{E}6 - j1.2017\textrm{E}8}</mrow>
+							<mrow>\amp= 0.2483 + j0.0043~\textrm{A}</mrow>
 							<mrow>\amp= 248.34 + j4.2946~\textrm{mA}</mrow>
 						</md>
 					</p>
@@ -2342,11 +2618,22 @@
 
 					<p>
 						<md>
-							<mrow>\frac{(9.95s^2 + 497512.44s)(s+154+j991)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-154-j991} \amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991} + \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991} + \frac{K_3(s+154+j991)}{(s+154+j991)}\Big|_{s=-154-j991} + \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}</mrow>
-							<mrow>\frac{9.95s^2 + 497512.44s}{(s+j60)(s-j60)(s+154-j991)}\Big|_{s=-154-j991} \amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991} + \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991} + K_3\Big|_{s=-154-j991} + \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}</mrow>
-							<mrow>\frac{9.95(-154-j991)^2 + 497512.44(-154-j991)}{((-154-j991)+j60)((-154-j991)-j60)((-154-j991)+154-j991)} \amp= \frac{K_1((-154-j991)+154+j991)}{((-154-j991)+j60)} + \frac{K_2((-154-j991)+154+j991)}{((-154-j991)-j60)} + K_3 + \frac{K_4((-154-j991)+154+j991)}{((-154-j991)+154-j991)}</mrow>
-							<mrow>\frac{-8.6306\textrm{E}7 - j4.8976\textrm{E}8}{6.0568\textrm{E}8 + j1.8894\textrm{E}9} \amp= \frac{K_1(0)}{((-154-j991)+j60)} + \frac{K_2(0)}{((-154-j991)-j60)} + K_3 + \frac{K_4(0)}{((-154-j991)+154-j991)}</mrow>
-							<mrow>K_3 \amp= -0.2483 - j0.0339~\textrm{A}</mrow>
+							<mrow>\amp\frac{(9.95s^2 + 498000s)(s+154+j991)}{(s+j60)(s-j60)(s+154+j991)(s+154-j991)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp+ \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp+ \frac{K_3(s+154+j991)}{(s+154+j991)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp+ \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp\frac{9.95s^2 + 498000s}{(s+j60)(s-j60)(s+154-j991)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp= \frac{K_1(s+154+j991)}{(s+j60)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp+ \frac{K_2(s+154+j991)}{(s-j60)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp+ K_3\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp+ \frac{K_4(s+154+j991)}{(s+154-j991)}\Big|_{s=-154-j991}</mrow>
+							<mrow>\amp\frac{9.95(-154-j991)^2 + 498000(-154-j991)}{(-154-j931)(-154-j1051)(-j1982)}</mrow>
+							<mrow>\amp= \frac{K_1(0)}{-154-j931}</mrow>
+							<mrow>\amp+ \frac{K_2(0)}{-154-j1051}</mrow>
+							<mrow>\amp+ K_3 + \frac{K_4(0)}{-j1982}</mrow>
+							<mrow>K_3 \amp= \frac{-8.6306\textrm{E}7 - j4.8976\textrm{E}8}{6.0568\textrm{E}8 + j1.8894\textrm{E}9}</mrow>
+							<mrow>\amp= -0.2483 - j0.0339~\textrm{A}</mrow>
 							<mrow>\amp= -248.34 - j33.929~\textrm{mA}</mrow>
 						</md>
 					</p>
@@ -2360,13 +2647,19 @@
 					<p>The expanded form of <m>I(s)</m> is given below. (The unit of each numerator is mA.)</p>
 
 					<p>
-						<md>I(s) = \frac{248.34 + j4.2946}{(s+j60)} + \frac{248.34 - j4.2946}{(s-j60)} + \frac{-248.34 - j33.929}{(s+154+j991)} + \frac{-248.34 + j33.929}{(s+154-j991)}</md>
+						<md>
+							<mrow>I(s) \amp= \frac{248.34 + j4.2946}{(s+j60)} + \frac{248.34 - j4.2946}{(s-j60)}</mrow>
+							<mrow>\amp+ \frac{-248.34 - j33.929}{(s+154+j991)} + \frac{-248.34 + j33.929}{(s+154-j991)}</mrow>
+						</md>
 					</p>
 
 					<p>Consult <xref ref="ch11-table-of-laplace-transforms" /> to derive the time-domain function.</p>
 
 					<p>
-						<md>i(t) = [500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t) + \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)]~u(t)</md>
+						<md>
+							<mrow>i(t) \amp= \biggl[500~\textrm{mA}~\cos(60t) + 8.59~\textrm{mA}~\sin(60t)</mrow>
+							<mrow>\amp+ \textrm{e}^{-154t}\left(-500~\textrm{mA}~\cos(991t) - 67.9~\textrm{mA}~\sin(991t)\right)\biggr]~u(t)</mrow>
+						</md>
 					</p>
 				</solution>
 

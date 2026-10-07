@@ -19,6 +19,8 @@
 </head>
 <body class="ignore-math">
 <article class="hiddenproof"><h2 class="heading"><span class="type">Derivation</span></h2>
+<div class="para">The term <span class="process-math">\(v_a(t)\)</span> in this derivation denotes the node connecting the two resistors to capacitor <span class="process-math">\(C_1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sallen-key-derivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
@@ -26,13 +28,18 @@
 \frac{v_{in}(t)}{R_1} \amp= \left[\frac{1}{R_1}+C_1\frac{d}{dt}\right]v_a(t) + \left[C_2\frac{d}{dt}-C_1\frac{d}{dt}\right]v_{out}(t)\\
 \frac{v_a(t)-v_{out}(t)}{R_2} \amp= C_2\frac{dv_{out}(t)}{dt}\\
 v_a(t) \amp= R_2C_2\frac{dv_{out}(t)}{dt}+v_{out}(t)\\
-\frac{v_{in}(t)}{R_1} \amp= \left[\frac{1}{R_1}+C_1\frac{d}{dt}\right]\left[R_2C_2\frac{dv_{out}(t)}{dt}+v_{out}(t)\right] + \left[C_2\frac{d}{dt}-C_1\frac{d}{dt}\right]v_{out}(t)\\
-\amp= \frac{R_2C_2}{R_1}\frac{dv_{out}(t)}{dt}+\frac{1}{R_1}v_{out}(t)+C_1R_2C_2\frac{d^2v_{out}(t)}{dt^2} + C_2\frac{dv_{out}(t)}{dt}\\
-\amp= R_2C_1C_2\frac{d^2v_{out}(t)}{dt^2}+\left[\frac{R_2C_2}{R_1}+C_2\right]\frac{dv_{out}(t)}{dt} + \left[\frac{1}{R_1}\right]v_{out}(t)\\
-\frac{1}{R_1R_2C_1C_2}v_{in}(t) \amp= \frac{d^2v_{out}(t)}{dt^2} + \left[\frac{1}{R_1C_1}+\frac{1}{R_2C_1}\right]\frac{dv_{out}(t)}{dt} + \left[\frac{1}{R_1R_2C_1C_2}\right]v_{out}(t)
+\frac{v_{in}(t)}{R_1} \amp= \left[\frac{1}{R_1}+C_1\frac{d}{dt}\right]\left[R_2C_2\frac{dv_{out}(t)}{dt}+v_{out}(t)\right]\\
+\amp+ \left[C_2\frac{d}{dt}-C_1\frac{d}{dt}\right]v_{out}(t)\\
+\amp= \frac{R_2C_2}{R_1}\frac{dv_{out}(t)}{dt}+\frac{1}{R_1}v_{out}(t)+C_1R_2C_2\frac{d^2v_{out}(t)}{dt^2}\\
+\amp+ C_2\frac{dv_{out}(t)}{dt}\\
+\amp= R_2C_1C_2\frac{d^2v_{out}(t)}{dt^2}+\left[\frac{R_2C_2}{R_1}+C_2\right]\frac{dv_{out}(t)}{dt}\\
+\amp+ \left[\frac{1}{R_1}\right]v_{out}(t)\\
+\frac{1}{R_1R_2C_1C_2}v_{in}(t) \amp= \frac{d^2v_{out}(t)}{dt^2}\\
+\amp+ \left[\frac{1}{R_1C_1}+\frac{1}{R_2C_1}\right]\frac{dv_{out}(t)}{dt}\\
+\amp+ \left[\frac{1}{R_1R_2C_1C_2}\right]v_{out}(t)
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sallen-key-derivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch9-sallen-key-derivation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Derivation 9.4.3.1"><a tabindex="-1" href="#ch9-sallen-key-derivation" title="Copy heading and permalink for Derivation 9.4.3.1" aria-label="Copy heading and permalink for Derivation 9.4.3.1">🔗</a></div>
 </article><span class="incontext"><a class="internal" href="ch9-activefilters.html#ch9-sallen-key-derivation">In Context</a></span>

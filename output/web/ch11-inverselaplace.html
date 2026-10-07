@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch11-inverselaplace">
@@ -550,7 +573,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse Laplace Transform</span>
 </h1>
 <section class="introduction" id="ch11-inverselaplace-2">
-<div class="para" id="ch11-inverselaplace-2-1">To most easily derive a time-domain function of current or voltage in a circuit, an analysis can be done in the <span class="process-math">\(s\)</span>-domain (which will be introduced in <a href="ch11-sdomain.html" class="internal" title="Section 11.3: s-Domain Analysis">Section 11.3</a>) to derive an <span class="process-math">\(s\)</span>-domain function such as <span class="process-math">\(V(s)\)</span> or <span class="process-math">\(I(s)\text{.}\)</span> That <span class="process-math">\(s\)</span>-domain function can then be inverse transformed back into the time domain. That inverse transform process will be described in this section.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-inverselaplace-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-inverselaplace-2-1">To most easily derive a time-domain function of current or voltage in a circuit, an analysis can be done in the <span class="process-math">\(s\)</span> domain (which will be introduced in <a href="ch11-sdomain.html" class="internal" title="Section 11.3: s-Domain Analysis">Section 11.3</a>) to derive an <span class="process-math">\(s\)</span>-domain function such as <span class="process-math">\(V(s)\)</span> or <span class="process-math">\(I(s)\text{.}\)</span> That <span class="process-math">\(s\)</span>-domain function can then be inverse transformed back into the time domain. That inverse transform process will be described in this section.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-inverselaplace-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ch11-inverselaplace-2-2">Rather than applying a mathematical expression (such as that defined in <a href="ch11-laplacetransform.html#ch11-eq-laplace-transform-definition" class="xref" data-knowl="./knowl/xref/ch11-eq-laplace-transform-definition.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.1.2">(11.1.2)</a>), a Laplace transform is broken into individual components using partial fraction expansion. Then, <a href="ch11-laplacetransform.html#ch11-table-of-laplace-transforms" class="xref" data-knowl="./knowl/xref/ch11-table-of-laplace-transforms.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 11.1.1: Laplace transforms of commonly-used time-varying functions.">Table 11.1.1</a> can be used to derive the time-domain expression.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-inverselaplace-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
@@ -558,7 +581,7 @@ eBookConfig.enable_chatcodes =  false;
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial Fraction Expansion</span>
 </h2>
-<div class="para" id="ch11-partialfraction-2">A function in the <span class="process-math">\(s\)</span>-domain can be represented as a polynomial in the numerator and a polynomial in the denominator. The denominator can then be factored. Similar to <a href="ch9-transferfuncs.html#ch9-eq-poles-zeros-function" class="xref" data-knowl="./knowl/xref/ch9-eq-poles-zeros-function.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.2.4">(9.2.4)</a>, the factored denominator contains the poles of the circuit. A generalized factored <span class="process-math">\(s\)</span>-domain expression is given in <a href="ch11-inverselaplace.html#ch11-s-domain-factored-equation" class="xref" data-knowl="./knowl/xref/ch11-s-domain-factored-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.1">(11.2.1)</a>, where <span class="process-math">\(N(s)\)</span> is the numerator and <span class="process-math">\(p\)</span> are the poles of the denominator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-2">A function in the <span class="process-math">\(s\)</span> domain can be represented as a polynomial in the numerator and a polynomial in the denominator. The denominator can then be factored. Similar to <a href="ch9-transferfuncs.html#ch9-eq-poles-zeros-function" class="xref" data-knowl="./knowl/xref/ch9-eq-poles-zeros-function.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 9.2.4">(9.2.4)</a>, the factored denominator contains the poles of the circuit. A generalized factored <span class="process-math">\(s\)</span>-domain expression is given in <a href="ch11-inverselaplace.html#ch11-s-domain-factored-equation" class="xref" data-knowl="./knowl/xref/ch11-s-domain-factored-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.1">(11.2.1)</a>, where <span class="process-math">\(N(s)\)</span> is the numerator and <span class="process-math">\(p_n\)</span> represent the poles of the denominator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch11-partialfraction-3">
 <div class="displaymath process-math" id="ch11-s-domain-factored-equation">
@@ -570,7 +593,7 @@ F(s) = \frac{N(s)}{(s-p_1)(s-p_2)(s-p_3)...(s-p_n)}\tag{11.2.1}
 </div>
 <div class="para" id="ch11-partialfraction-4">The circuits and equations in this textbook will have a denominator with a higher order than the numerator (i.e. there are more poles than zeros). Otherwise, the partial fraction expansion process will require a different process that will not be described in this book.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch11-partialfraction-5">The partial fraction expansion process converts a factored expression (such as that given in <a href="ch11-inverselaplace.html#ch11-s-domain-factored-equation" class="xref" data-knowl="./knowl/xref/ch11-s-domain-factored-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.1">(11.2.1)</a>) into a sum of many expressions (shown in <a href="ch11-inverselaplace.html#ch11-s-domain-expanded-equation" class="xref" data-knowl="./knowl/xref/ch11-s-domain-expanded-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.2">(11.2.2)</a>), which can then be converted to time-domain expressions using <a href="ch11-laplacetransform.html#ch11-table-of-laplace-transforms" class="xref" data-knowl="./knowl/xref/ch11-table-of-laplace-transforms.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 11.1.1: Laplace transforms of commonly-used time-varying functions.">Table 11.1.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-5">The partial fraction expansion process converts a factored expression (such as that given in <a href="ch11-inverselaplace.html#ch11-s-domain-factored-equation" class="xref" data-knowl="./knowl/xref/ch11-s-domain-factored-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.1">(11.2.1)</a>) into a sum of many expressions (shown in <a href="ch11-inverselaplace.html#ch11-s-domain-expanded-equation" class="xref" data-knowl="./knowl/xref/ch11-s-domain-expanded-equation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.2">(11.2.2)</a>), which can then be converted into the time-domain using <a href="ch11-laplacetransform.html#ch11-table-of-laplace-transforms" class="xref" data-knowl="./knowl/xref/ch11-table-of-laplace-transforms.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 11.1.1: Laplace transforms of commonly-used time-varying functions.">Table 11.1.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch11-partialfraction-6">
 <div class="displaymath process-math" id="ch11-s-domain-expanded-equation">
@@ -703,7 +726,7 @@ F(s) = \frac{K_1}{(s+n)^2} + \frac{K_2}{s+n}\tag{11.2.4}
 <div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#ch11-partialfraction-15-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="ch11-partialfraction-15-1-2">
-<div class="para" id="ch11-partialfraction-15-1-2-1">To calculate coefficient <span class="process-math">\(K_2\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+n)^2\text{,}\)</span> differentiate with respect to<span class="process-math">\(s\text{,}\)</span> then solve at <span class="process-math">\(s=-n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-15-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-15-1-2-1">To calculate coefficient <span class="process-math">\(K_2\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+n)^2\text{,}\)</span> differentiate with respect to <span class="process-math">\(s\text{,}\)</span> then solve at <span class="process-math">\(s=-n\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-15-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#ch11-partialfraction-15-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
@@ -748,7 +771,7 @@ K_1 = 10
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-16-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch11-partialfraction-16-2-7">To calculate coefficient <span class="process-math">\(K_2\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+5)^2\text{,}\)</span> differentiate with respect to<span class="process-math">\(s\text{,}\)</span> then solve at <span class="process-math">\(s=-5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-16-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-16-2-7">To calculate coefficient <span class="process-math">\(K_2\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+5)^2\text{,}\)</span> differentiate with respect to <span class="process-math">\(s\text{,}\)</span> then solve at <span class="process-math">\(s=-5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-16-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch11-partialfraction-16-2-8">
 <div class="displaymath process-math" id="ch11-partialfraction-16-2-8-1">
@@ -784,7 +807,7 @@ f(t) = \left[10~t~\textrm{e}^{-5t}-2~\textrm{e}^{-5t}\right]~u(t)
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 11.2.2: Partial fraction expansion with repeated real roots"><a tabindex="-1" href="#ch11-partialfraction-16" title="Copy heading and permalink for Example 11.2.2: Partial fraction expansion with repeated real roots" aria-label="Copy heading and permalink for Example 11.2.2: Partial fraction expansion with repeated real roots">🔗</a></div>
 </article>
-<div class="para" id="ch11-partialfraction-17">The third possibility will be that the poles are complex conjugate pairs, such as those shown in <a href="ch11-inverselaplace.html#ch11-s-domain-complex-conjugate-roots" class="xref" data-knowl="./knowl/xref/ch11-s-domain-complex-conjugate-roots.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.5">(11.2.5)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-17">The third possibility will be that the poles are complex-conjugate pairs, such as those shown in <a href="ch11-inverselaplace.html#ch11-s-domain-complex-conjugate-roots" class="xref" data-knowl="./knowl/xref/ch11-s-domain-complex-conjugate-roots.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.5">(11.2.5)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch11-partialfraction-18">
 <div class="displaymath process-math" id="ch11-s-domain-complex-conjugate-roots">
@@ -794,7 +817,7 @@ F(s) = \frac{K_1}{s+\alpha+j\beta} + \frac{K_2}{s+\alpha-j\beta}\tag{11.2.5}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch11-partialfraction-19">Coefficients <span class="process-math">\(K_1\)</span> and <span class="process-math">\(K_2\)</span> will be complex conjugate pairs that take the form of <span class="process-math">\(X \pm jY\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-19">Coefficients <span class="process-math">\(K_1\)</span> and <span class="process-math">\(K_2\)</span> will be complex-conjugate pairs that take the form of <span class="process-math">\(X \pm jY\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch11-partialfraction-20">
 <ol class="decimal" id="ch11-partialfraction-20-1">
@@ -840,7 +863,7 @@ f(t) \amp= \left[(X+jY)~\textrm{e}^{(-\alpha-j\beta)t} + (X-jY)~\textrm{e}^{(-\a
 <div class="autopermalink" aria-hidden="true" data-description="Derivation 11.2.1.1"><a tabindex="-1" href="#ch11-partial-fraction-complex-proof" title="Copy heading and permalink for Derivation 11.2.1.1" aria-label="Copy heading and permalink for Derivation 11.2.1.1">🔗</a></div>
 </article></details>
 <article class="example example-like" id="ch11-partialfraction-24"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial fraction expansion with complex conjugate roots.</span>
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial fraction expansion with complex-conjugate roots.</span>
 </h3>
 <div class="para" id="ch11-partialfraction-24-2-1">Compute the partial fraction expansion of the following function, then convert into the time domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-24-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
@@ -868,9 +891,14 @@ F(s) \amp= \frac{-40s+5200}{(s+20+j200)(s+20-j200)}\\
 <div class="para logical" id="ch11-partialfraction-24-2-6">
 <div class="displaymath process-math" id="ch11-partialfraction-24-2-6-1">
 \begin{align*}
-\frac{(-40s+5200)(s+20+j200)}{(s+20+j200)(s+20-j200)}\Big|_{s=-20-j200} \amp= \frac{K_1(s+20+j200)}{s+20+j200}\Big|_{s=-20-j200} + \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}\\
-\frac{-40s+5200}{s+20-j200}\Big|_{s=-20-j200} \amp= K_1\Big|_{s=-20-j200} + \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}\\
-\frac{-40(-20-j200)+5200}{(-20-j200)+20-j200} \amp= K_1 + \frac{K_2((-20-j200)+20+j200)}{(-20-j200)+20-j200}\\
+\amp \frac{(-40s+5200)(s+20+j200)}{(s+20+j200)(s+20-j200)}\Big|_{s=-20-j200}\\
+\amp= \frac{K_1(s+20+j200)}{s+20+j200}\Big|_{s=-20-j200}\\
+\amp+ \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}\\
+\amp \frac{-40s+5200}{s+20-j200}\Big|_{s=-20-j200}\\
+\amp= K_1\Big|_{s=-20-j200}\\
+\amp+ \frac{K_2(s+20+j200)}{s+20-j200}\Big|_{s=-20-j200}\\
+\amp \frac{-40(-20-j200)+5200}{(-20-j200)+20-j200}\\
+\amp= K_1 + \frac{K_2((-20-j200)+20+j200)}{(-20-j200)+20-j200}\\
 \frac{6000+j8000}{-j400} \amp= K_1 + \frac{K_2(0)}{-j400}\\
 K_1 \amp= -20 + j15
 \end{align*}
@@ -908,7 +936,7 @@ f(t) = \textrm{e}^{-20t}\left[-40~\cos(200t)+30~\sin(200t)\right]~u(t)
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-24-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Example 11.2.3: Partial fraction expansion with complex conjugate roots"><a tabindex="-1" href="#ch11-partialfraction-24" title="Copy heading and permalink for Example 11.2.3: Partial fraction expansion with complex conjugate roots" aria-label="Copy heading and permalink for Example 11.2.3: Partial fraction expansion with complex conjugate roots">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 11.2.3: Partial fraction expansion with complex-conjugate roots"><a tabindex="-1" href="#ch11-partialfraction-24" title="Copy heading and permalink for Example 11.2.3: Partial fraction expansion with complex-conjugate roots" aria-label="Copy heading and permalink for Example 11.2.3: Partial fraction expansion with complex-conjugate roots">🔗</a></div>
 </article>
 <article class="example example-like" id="ch11-partialfraction-25"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Partial fraction expansion with mixed roots.</span>
@@ -940,79 +968,131 @@ F(s) \amp= \frac{s+100}{s(s+j20)(s-j20)(s+2.5)(s+4)}\\
 <div class="para logical" id="ch11-partialfraction-25-2-6">
 <div class="displaymath process-math" id="ch11-partialfraction-25-2-6-1">
 \begin{align*}
-\frac{(s+100)(s)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0} + \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0} + \frac{K_5(s)}{s+4}\Big|_{s=0}\\
-\frac{s+100}{(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0} + \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0} + \frac{K_5(s)}{s+4}\Big|_{s=0}\\
-\frac{0+100}{(0+j20)(0-j20)(0+2.5)(0+4)} \amp= K_1 + \frac{K_2(0)}{0+j20} + \frac{K_3(0)}{0-j20} + \frac{K_4(0)}{0+2.5} + \frac{K_5(0)}{0+4}\\
-\frac{100}{4000} \amp= K_1 + \frac{K_2(0)}{j20} + \frac{K_3(0)}{-j20} + \frac{K_4(0)}{2.5} + \frac{K_5(0)}{4}\\
+\frac{(s+100)(s)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= \frac{K_1(s)}{s}\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0}\\
+\amp+ \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0}\\
+\amp+ \frac{K_5(s)}{s+4}\Big|_{s=0}\\
+\frac{s+100}{(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=0} \amp= K_1\Big|_{s=0} + \frac{K_2(s)}{s+j20}\Big|_{s=0}\\
+\amp+ \frac{K_3(s)}{s-j20}\Big|_{s=0} + \frac{K_4(s)}{s+2.5}\Big|_{s=0}\\
+\amp+ \frac{K_5(s)}{s+4}\Big|_{s=0}\\
+\frac{0+100}{(0+j20)(0-j20)(0+2.5)(0+4)} \amp= K_1 + \frac{K_2(0)}{0+j20} + \frac{K_3(0)}{0-j20}\\
+\amp+ \frac{K_4(0)}{0+2.5} + \frac{K_5(0)}{0+4}\\
+\frac{100}{4000} \amp= K_1 + \frac{K_2(0)}{j20} + \frac{K_3(0)}{-j20}\\
+\amp+ \frac{K_4(0)}{2.5} + \frac{K_5(0)}{4}\\
 K_1 \amp= 0.025
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para" id="ch11-partialfraction-25-2-7">
-<span class="process-math">\(K_2\)</span> and <span class="process-math">\(K_3\)</span> correspond to complex conjugate roots. To calculate <span class="process-math">\(K_2\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+j20)\)</span> and solve at <span class="process-math">\(s=-j20\text{.}\)</span> <span class="process-math">\(K_3\)</span> is the complex conjugate of <span class="process-math">\(K_2\)</span> and does not need to be solved for separately.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(K_2\)</span> and <span class="process-math">\(K_3\)</span> correspond to complex-conjugate roots. To calculate <span class="process-math">\(K_2\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+j20)\)</span> and solve at <span class="process-math">\(s=-j20\text{.}\)</span> <span class="process-math">\(K_3\)</span> is the complex conjugate of <span class="process-math">\(K_2\)</span> and does not need to be solved for separately.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch11-partialfraction-25-2-8">
 <div class="displaymath process-math" id="ch11-partialfraction-25-2-8-1">
 \begin{align*}
-\frac{(s+100)(s+j20)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20} + \frac{K_2(s+j20)}{s+j20}\Big|_{s=-j20} + \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20} + \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20} + \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}\\
-\frac{s+100}{s(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20} + K_2\Big|_{s=-j20} + \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20} + \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20} + \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}\\
-\frac{(-j20)+100}{(-j20)((-j20)-j20)((-j20)+2.5)((-j20)+4)} \amp= \frac{K_1((-j20)+j20)}{(-j20)} + K_2 + \frac{K_3((-j20)+j20)}{(-j20)-j20} + \frac{K_4((-j20)+j20)}{(-j20)+2.5} + \frac{K_5((-j20)+j20)}{(-j20)+4}\\
-\frac{100-j20}{312000+j104000} \amp= \frac{K_1(0)}{-j20} + K_2 + \frac{K_3(0)}{-j40} + \frac{K_4(0)}{2.5-j20} + \frac{K_5(0)}{4-j20}\\
-K_2 \amp= 2.672 \times 10^{-4} -j1.538\times 10^{-4}\\
-K_3 \amp= 2.672 \times 10^{-4} +j1.538\times 10^{-4}
+\frac{(s+100)(s+j20)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20}\\
+\amp+ \frac{K_2(s+j20)}{s+j20}\Big|_{s=-j20}\\
+\amp+ \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20}\\
+\amp+ \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20}\\
+\amp+ \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}\\
+\frac{s+100}{s(s-j20)(s+2.5)(s+4)}\Big|_{s=-j20} \amp= \frac{K_1(s+j20)}{s}\Big|_{s=-j20}\\
+\amp+ K_2\Big|_{s=-j20}\\
+\amp+ \frac{K_3(s+j20)}{s-j20}\Big|_{s=-j20}\\
+\amp+ \frac{K_4(s+j20)}{s+2.5}\Big|_{s=-j20}\\
+\amp+ \frac{K_5(s+j20)}{s+4}\Big|_{s=-j20}\\
+\frac{(-j20)+100}{(-j20)((-j20)-j20)((-j20)+2.5)((-j20)+4)} \amp= \frac{K_1((-j20)+j20)}{(-j20)} + K_2\\
+\amp+ \frac{K_3((-j20)+j20)}{(-j20)-j20}\\
+\amp+ \frac{K_4((-j20)+j20)}{(-j20)+2.5}\\
+\amp+ \frac{K_5((-j20)+j20)}{(-j20)+4}\\
+\frac{100-j20}{312000+j104000} \amp= \frac{K_1(0)}{-j20} + K_2 + \frac{K_3(0)}{-j40}\\
+\amp+ \frac{K_4(0)}{2.5-j20} + \frac{K_5(0)}{4-j20}
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch11-partialfraction-25-2-9">
-<span class="process-math">\(K_4\)</span> and <span class="process-math">\(K_5\)</span> correspond to unique real roots. To calculate <span class="process-math">\(K_4\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+2.5)\)</span> and solve at <span class="process-math">\(s=-2.5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div> 
-<div class="para logical" id="ch11-partialfraction-25-2-10">
-<div class="displaymath process-math" id="ch11-partialfraction-25-2-10-1">
+<div class="para logical" id="ch11-partialfraction-25-2-9">
+<div class="displaymath process-math" id="ch11-partialfraction-25-2-9-1">
 \begin{align*}
-\frac{(s+100)(s+2.5)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5} + \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5} + \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5} + \frac{K_4(s+2.5)}{s+2.5}\Big|_{s=-2.5} + \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}\\
-\frac{s+100}{s(s+j20)(s-j20)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5} + \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5} + \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5} + K_4\Big|_{s=-2.5} + \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}\\
-\frac{(-2.5)+100}{(-2.5)((-2.5)+j20)((-2.5)-j20)((-2.5)+4)} \amp= \frac{K_1((-2.5)+2.5)}{(-2.5)} + \frac{K_2((-2.5)+2.5)}{(-2.5)+j20} + \frac{K_3((-2.5)+2.5)}{(-2.5)-j20} + K_4 + \frac{K_5((-2.5)+2.5)}{(-2.5)+4}\\
-\frac{97.5}{-1523.4375} \amp= \frac{K_1(0)}{-2.5} + \frac{K_2(0)}{-2.5+j20} + \frac{K_3(0)}{-2.5-j20} + K_4 + \frac{K_5(0)}{1.5}\\
+K_2 \amp= 2.672 \times 10^{-4} -j1.538\times 10^{-4}\\
+K_3 \amp= 2.672 \times 10^{-4} +j1.538\times 10^{-4}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch11-partialfraction-25-2-10">
+<span class="process-math">\(K_4\)</span> and <span class="process-math">\(K_5\)</span> correspond to unique real roots. To calculate <span class="process-math">\(K_4\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+2.5)\)</span> and solve at <span class="process-math">\(s=-2.5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch11-partialfraction-25-2-11">
+<div class="displaymath process-math" id="ch11-partialfraction-25-2-11-1">
+\begin{align*}
+\frac{(s+100)(s+2.5)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5}\\
+\amp+ \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5}\\
+\amp+ \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5}\\
+\amp+ \frac{K_4(s+2.5)}{s+2.5}\Big|_{s=-2.5}\\
+\amp+ \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}\\
+\frac{s+100}{s(s+j20)(s-j20)(s+4)}\Big|_{s=-2.5} \amp= \frac{K_1(s+2.5)}{s}\Big|_{s=-2.5}\\
+\amp+ \frac{K_2(s+2.5)}{s+j20}\Big|_{s=-2.5}\\
+\amp+ \frac{K_3(s+2.5)}{s-j20}\Big|_{s=-2.5}\\
+\amp+ K_4\Big|_{s=-2.5}\\
+\amp+ \frac{K_5(s+2.5)}{s+4}\Big|_{s=-2.5}\\
+\frac{(-2.5)+100}{(-2.5)((-2.5)+j20)((-2.5)-j20)((-2.5)+4)} \amp= \frac{K_1((-2.5)+2.5)}{(-2.5)}\\
+\amp+ \frac{K_2((-2.5)+2.5)}{(-2.5)+j20}\\
+\amp+ \frac{K_3((-2.5)+2.5)}{(-2.5)-j20} + K_4\\
+\amp+ \frac{K_5((-2.5)+2.5)}{(-2.5)+4}\\
+\frac{97.5}{-1523.4375} \amp= \frac{K_1(0)}{-2.5} + \frac{K_2(0)}{-2.5+j20}\\
+\amp+ \frac{K_3(0)}{-2.5-j20} + K_4 + \frac{K_5(0)}{1.5}\\
 K_4 \amp= -0.064
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch11-partialfraction-25-2-11">To calculate coefficient <span class="process-math">\(K_5\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+4)\)</span> and solve at <span class="process-math">\(s=-4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-25-2-12">To calculate coefficient <span class="process-math">\(K_5\text{,}\)</span> multiply both sides of the equation by <span class="process-math">\((s+4)\)</span> and solve at <span class="process-math">\(s=-4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para logical" id="ch11-partialfraction-25-2-12">
-<div class="displaymath process-math" id="ch11-partialfraction-25-2-12-1">
+<div class="para logical" id="ch11-partialfraction-25-2-13">
+<div class="displaymath process-math" id="ch11-partialfraction-25-2-13-1">
 \begin{align*}
-\frac{(s+100)(s+4)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4} + \frac{K_2(s+4)}{s+j20}\Big|_{s=-4} + \frac{K_3(s+4)}{s-j20}\Big|_{s=-4} + \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4} + \frac{K_5(s+4)}{s+4}\Big|_{s=-4}\\
-\frac{s+100}{s(s+j20)(s-j20)(s+2.5)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4} + \frac{K_2(s+4)}{s+j20}\Big|_{s=-4} + \frac{K_3(s+4)}{s-j20}\Big|_{s=-4} + \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4} + K_5\Big|_{s=-4}\\
-\frac{(-4)+100}{(-4)((-4)+j20)((-4)-j20)((-4)+2.5)} \amp= \frac{K_1((-4)+4)}{(-4)} + \frac{K_2((-4)+4)}{(-4)+j20} + \frac{K_3((-4)+4)}{(-4)-j20} + \frac{K_4((-4)+4)}{(-4)+2.5} + K_5\\
-\frac{96}{2496} \amp= \frac{K_1(0)}{-4} + \frac{K_2(0)}{-4+j20} + \frac{K_3(0)}{-4-j20} + \frac{K_4(0)}{-1.5} + K_5\\
+\frac{(s+100)(s+4)}{s(s+j20)(s-j20)(s+2.5)(s+4)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4}\\
+\amp+ \frac{K_2(s+4)}{s+j20}\Big|_{s=-4}\\
+\amp+ \frac{K_3(s+4)}{s-j20}\Big|_{s=-4}\\
+\amp+ \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4}\\
+\amp+ \frac{K_5(s+4)}{s+4}\Big|_{s=-4}\\
+\frac{s+100}{s(s+j20)(s-j20)(s+2.5)}\Big|_{s=-4} \amp= \frac{K_1(s+4)}{s}\Big|_{s=-4}\\
+\amp+ \frac{K_2(s+4)}{s+j20}\Big|_{s=-4}\\
+\amp+ \frac{K_3(s+4)}{s-j20}\Big|_{s=-4}\\
+\amp+ \frac{K_4(s+4)}{s+2.5}\Big|_{s=-4}\\
+\amp+ K_5\Big|_{s=-4}\\
+\frac{(-4)+100}{(-4)((-4)+j20)((-4)-j20)((-4)+2.5)} \amp= \frac{K_1((-4)+4)}{(-4)}\\
+\amp+ \frac{K_2((-4)+4)}{(-4)+j20}\\
+\amp+ \frac{K_3((-4)+4)}{(-4)-j20}\\
+\amp+ \frac{K_4((-4)+4)}{(-4)+2.5}\\
+\amp+ K_5\\
+\frac{96}{2496} \amp= \frac{K_1(0)}{-4} + \frac{K_2(0)}{-4+j20}\\
+\amp+ \frac{K_3(0)}{-4-j20} + \frac{K_4(0)}{-1.5} + K_5\\
 K_5 \amp= 0.0385
 \end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch11-partialfraction-25-2-13">The expanded version of <span class="process-math">\(F(s)\)</span> is given below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-25-2-14">The expanded version of <span class="process-math">\(F(s)\)</span> is given below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para logical" id="ch11-partialfraction-25-2-14">
-<div class="displaymath process-math" id="ch11-partialfraction-25-2-14-1">
-\begin{equation*}
-F(s) = \frac{0.025}{s} + \frac{2.7\times10^{-4} - j1.5\times10^{-4}}{s+j20} + \frac{2.7\times10^{-4} + j1.5\times10^{-4}}{s-j20} + \frac{-0.064}{s+2.5} + \frac{0.0385}{s+4}
-\end{equation*}
+<div class="para logical" id="ch11-partialfraction-25-2-15">
+<div class="displaymath process-math" id="ch11-partialfraction-25-2-15-1">
+\begin{align*}
+F(s) \amp= \frac{0.025}{s} + \frac{2.7\times10^{-4} - j1.5\times10^{-4}}{s+j20} + \frac{2.7\times10^{-4} + j1.5\times10^{-4}}{s-j20}\\
+\amp+ \frac{-0.064}{s+2.5} + \frac{0.0385}{s+4}
+\end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch11-partialfraction-25-2-15">Consult <a href="ch11-inverselaplace.html#ch11-eq-partial-fraction-complex-conjugate-solution" class="xref" data-knowl="./knowl/xref/ch11-eq-partial-fraction-complex-conjugate-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.6">(11.2.6)</a> and <a href="ch11-laplacetransform.html#ch11-table-of-laplace-transforms" class="xref" data-knowl="./knowl/xref/ch11-table-of-laplace-transforms.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 11.1.1: Laplace transforms of commonly-used time-varying functions.">Table 11.1.1</a> to derive the time-domain function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-partialfraction-25-2-16">Consult <a href="ch11-inverselaplace.html#ch11-eq-partial-fraction-complex-conjugate-solution" class="xref" data-knowl="./knowl/xref/ch11-eq-partial-fraction-complex-conjugate-solution.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.2.6">(11.2.6)</a> and <a href="ch11-laplacetransform.html#ch11-table-of-laplace-transforms" class="xref" data-knowl="./knowl/xref/ch11-table-of-laplace-transforms.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 11.1.1: Laplace transforms of commonly-used time-varying functions.">Table 11.1.1</a> to derive the time-domain function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para logical" id="ch11-partialfraction-25-2-16">
-<div class="displaymath process-math" id="ch11-partialfraction-25-2-16-1">
-\begin{equation*}
-f(t) = \left[ 0.025 + 0.000538~\cos(20t) - 0.000308~\sin(20t) -0.064~\textrm{e}^{-2.5t} + 0.038~\textrm{e}^{-4t}\right]~u(t)
-\end{equation*}
+<div class="para logical" id="ch11-partialfraction-25-2-17">
+<div class="displaymath process-math" id="ch11-partialfraction-25-2-17-1">
+\begin{align*}
+f(t) \amp= \biggl[ 0.025 + 0.000538~\cos(20t) - 0.000308~\sin(20t)\\
+\amp-0.064~\textrm{e}^{-2.5t} + 0.038~\textrm{e}^{-4t}\biggr]~u(t)
+\end{align*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-partialfraction-25-2-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 11.2.4: Partial fraction expansion with mixed roots"><a tabindex="-1" href="#ch11-partialfraction-25" title="Copy heading and permalink for Example 11.2.4: Partial fraction expansion with mixed roots" aria-label="Copy heading and permalink for Example 11.2.4: Partial fraction expansion with mixed roots">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Subsection 11.2.1: Partial Fraction Expansion"><a tabindex="-1" href="#ch11-partialfraction" title="Copy heading and permalink for Subsection 11.2.1: Partial Fraction Expansion" aria-label="Copy heading and permalink for Subsection 11.2.1: Partial Fraction Expansion">🔗</a></div>

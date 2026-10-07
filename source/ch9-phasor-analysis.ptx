@@ -60,8 +60,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi60)(25 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j106.10~\Omega</mrow>
+							\frac{1}{j(2\pi60)(25 \times 10^{-6})} = -j106.10~\Omega
 						</md>
 					</p>
 
@@ -69,10 +68,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{L65}} \amp= j(2\pi 60)(0.065)</mrow>
-							<mrow>\amp= j24.5044~\Omega</mrow>
-							<mrow>\vec{Z_{L210}} \amp= j(2\pi 60)(0.210)</mrow>
-							<mrow>\amp= j79.1681~\Omega</mrow>
+							<mrow>j(2\pi 60)(0.065) \amp= j24.5044~\Omega</mrow>
+							<mrow>j(2\pi 60)(0.210) \amp= j79.1681~\Omega</mrow>
 						</md>
 					</p>
 
@@ -108,8 +105,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= (55~\Omega) + (j24.5044~\Omega)</mrow>
-							<mrow>\amp= 55 + j24.5044~\Omega</mrow>
+							(55~\Omega) + (j24.5044~\Omega) = 55 + j24.5044~\Omega
 						</md>
 					</p>
 					
@@ -117,8 +113,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= (105~\Omega) + (j79.1681~\Omega)</mrow>
-							<mrow>\amp= 105 + j79.1681~\Omega</mrow>
+							(105~\Omega) + (j79.1681~\Omega) = 105 + j79.1681~\Omega
 						</md>
 					</p>
 
@@ -142,8 +137,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'''} \amp= \frac{(-j106.10~\Omega)(105 + j79.1681)}{(-j106.10~\Omega)+(105 + j79.1681)}</mrow>
-							<mrow>\amp= 100.60 -j80.297~\Omega</mrow>
+							\frac{(-j106.10~\Omega)(105 + j79.1681)}{(-j106.10~\Omega)+(105 + j79.1681)} = 100.60 -j80.297~\Omega
 						</md>
 					</p>
 
@@ -175,7 +169,7 @@
 					<p>Convert the output to a time-varying signal.</p>
 					
 					<p>
-						<md>v_{out}(t) = 116.8~\textrm{V}~\cos{(2\pi60 t+41.1\pi/180)}</md>
+						<md>v_{out}(t) = 117~\textrm{V}~\cos{(2\pi60 t+41.1\pi/180)}</md>
 					</p>
 				</statement>
 			</example>
@@ -219,14 +213,19 @@
   						</image>
 					</figure>
 
-					<p>Calculate the impedances of the inductor and the capacitor.</p>
+					<p>Use <xref ref="ch8-eq-impedance-capacitor" /> to calculate the impedance of the capacitor.</p>
+
+					<p>
+						<md>
+							\frac{1}{j(2\pi50)(470\times10^{-6})} = -j6.77~\Omega
+						</md>		
+					</p>
+
+					<p>Use <xref ref="ch8-eq-impedance-inductor" /> to calculate the impedance of the inductor.</p>
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j2\pi50(0.025)</mrow>
-							<mrow>\amp= j7.85~\Omega</mrow>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi50)(470\times10^{-6})}</mrow>
-							<mrow>\amp= -j6.77~\Omega</mrow>
+							j2\pi50(0.025) = j7.85~\Omega
 						</md>
 					</p>
 
@@ -328,8 +327,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ1}} \amp= \frac{(8~\Omega)(11.7635 - j8.6680~\Omega)}{(8~\Omega)+(11.7635 - j8.6680~\Omega)}</mrow>
-							<mrow>\amp= 5.2841 - j1.1911~\Omega</mrow>
+							\frac{(8~\Omega)(11.7635 - j8.6680~\Omega)}{(8~\Omega)+(11.7635 - j8.6680~\Omega)} = 5.2841 - j1.1911~\Omega
 						</md>
 					</p>
 
@@ -443,10 +441,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C20}} \amp= \frac{1}{j(2\pi 100)(20 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j79.5775~\Omega</mrow>
-							<mrow>\vec{Z_{C25}} \amp= \frac{1}{j(2\pi 100)(25 \times 10^{-6})}</mrow>
-							<mrow>\amp= -63.6620~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 100)(20 \times 10^{-6})} \amp= -j79.5775~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 100)(25 \times 10^{-6})} \amp= -63.6620~\Omega</mrow>
 						</md>
 					</p>
 
@@ -454,10 +450,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{L25}} \amp= j(2\pi 100)(0.025)</mrow>
-							<mrow>\amp= j15.7080~\Omega</mrow>
-							<mrow>\vec{Z_{L100}} \amp= j(2\pi 100)(0.1)</mrow>
-							<mrow>\amp= j62.8319~\Omega</mrow>
+							<mrow>j(2\pi 100)(0.025) \amp= j15.7080~\Omega</mrow>
+							<mrow>j(2\pi 100)(0.1) \amp= j62.8319~\Omega</mrow>
 						</md>
 					</p>
 
@@ -540,11 +534,11 @@
 					<p>
 						<md>
 							\begin{bmatrix} 
-							1 				\amp 1 			\amp 1 		\amp 0 			\amp 0			\amp (3.76+j1.37)\\
+							1 				\amp 1 			\amp 1 		\amp 0 			\amp 0			\amp 3.76+j1.37\\
 							0 				\amp 1 			\amp 0 		\amp 1 			\amp -1			\amp 0\\
-							-(50+j15.71)	\amp 0			\amp 20		\amp 0			\amp 0			\amp -(14.14+j14.14)\\
-							0				\amp 0			\amp 0		\amp (j62.83)	\amp (100-j63.66)	\amp (14.14+j14.14)\\
-							0				\amp (-j79.58)	\amp -20	\amp -(j62.83)	\amp 0			\amp 0
+							-(50+j15.7)		\amp 0			\amp 20		\amp 0			\amp 0			\amp -(14.1+j14.1)\\
+							0				\amp 0			\amp 0		\amp j62.8		\amp 100-j63.7	\amp 14.1+j14.1\\
+							0				\amp (-j79.6)	\amp -20	\amp -(j62.8)	\amp 0			\amp 0
 							\end{bmatrix}
 						</md>
 					</p>
@@ -621,12 +615,9 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C220}} \amp= \frac{1}{j(2\pi 250)(220 \times 10^{-9})}</mrow>
-							<mrow>\amp= -j2893.7~\Omega</mrow>
-							<mrow>\vec{Z_{C470}} \amp= \frac{1}{j(2\pi 250)(470 \times 10^{-9})}</mrow>
-							<mrow>\amp= -j1354.5~\Omega</mrow>
-							<mrow>\vec{Z_{C680}} \amp= \frac{1}{j(2\pi 250)(680 \times 10^{-9})}</mrow>
-							<mrow>\amp= -j936.21~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 250)(220 \times 10^{-9})} \amp= -j2893.7~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 250)(470 \times 10^{-9})} \amp= -j1354.5~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 250)(680 \times 10^{-9})} \amp= -j936.21~\Omega</mrow>
 						</md>
 					</p>
 
@@ -713,10 +704,10 @@
 					<p>
 						<md>
 							\begin{bmatrix} 
-							(j936.21) 		\amp -220			\amp (720-j2290.72)	\amp 0 		\amp 0\\
-							(-j936.21)	 	\amp (900-j2893.73)	\amp -(220-j936.21) \amp 0	 	\amp (212.12-j252.79)\\
-							1				\amp -1				\amp 0				\amp 2		\amp 0\\
-							(-j936.21)		\amp 0				\amp (j936.21)		\amp -1		\amp 0
+							j936 		\amp -220		\amp 720-j2290		\amp 0 		\amp 0\\
+							-j936	 	\amp 900-j2890	\amp -(220-j936)	\amp 0	 	\amp 212-j253\\
+							1			\amp -1			\amp 0				\amp 2		\amp 0\\
+							-j936		\amp 0			\amp j936			\amp -1		\amp 0
 							\end{bmatrix}
 
 						</md>
@@ -790,8 +781,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi 60)(68 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j39.0086~\Omega</mrow>
+							\frac{1}{j(2\pi 60)(68 \times 10^{-6})} = -j39.0086~\Omega
 						</md>
 					</p>
 
@@ -799,8 +789,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi 60)(0.055)</mrow>
-							<mrow>\amp= j20.7345~\Omega</mrow>
+							j(2\pi 60)(0.055) = j20.7345~\Omega
 						</md>
 					</p>
 
@@ -901,8 +890,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(27 - j18.2741~\Omega)(20~\Omega)}{(27 - j18.2741~\Omega)+(20~\Omega)}</mrow>
-							<mrow>\amp= 12.6070 - j2.8745~\Omega</mrow>
+							\frac{(27 - j18.2741~\Omega)(20~\Omega)}{(27 - j18.2741~\Omega)+(20~\Omega)} = 12.6070 - j2.8745~\Omega
 						</md>
 					</p>
 
@@ -955,8 +943,7 @@
 					
 					<p>
 						<md>
-							<mrow>R_{EQ} \amp= \frac{(16~\Omega)(20~\Omega)}{(16~\Omega)+(20~\Omega)}</mrow>
-							<mrow>\amp= 8.8889~\Omega</mrow>
+							\frac{(16~\Omega)(20~\Omega)}{(16~\Omega)+(20~\Omega)} = 8.8889~\Omega
 						</md>
 					</p>
 
@@ -981,8 +968,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{(12 + j20.7345~\Omega)((15 - j39.0086~\Omega)+8.8889~\Omega)}{(12 + j20.7345~\Omega)+((15 - j39.0086~\Omega)+8.8889~\Omega)}</mrow>
-							<mrow>\amp= 23.9332 + j12.9449~\Omega</mrow>
+							\frac{(12 + j20.7345~\Omega)((15 - j39.0086~\Omega)+8.8889~\Omega)}{(12 + j20.7345~\Omega)+((15 - j39.0086~\Omega)+8.8889~\Omega)} = 23.9332 + j12.9449~\Omega
 						</md>	
 					</p>
 
@@ -990,8 +976,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_2} \amp= (2~\textrm{A})\frac{23.9332 + j12.9449~\Omega}{23.8889 - j39.0086~\Omega}</mrow>
-							<mrow>\amp= 0.0638 + j1.1880~\textrm{A}</mrow>
+							(2~\textrm{A})\frac{23.9332 + j12.9449~\Omega}{23.8889 - j39.0086~\Omega} = 0.0638 + j1.1880~\textrm{A}
 						</md>
 					</p>
 
@@ -1125,8 +1110,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi 250)(100 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j6.3662~\Omega</mrow>
+							\frac{1}{j(2\pi 250)(100 \times 10^{-6})} = -j6.3662~\Omega
 						</md>
 					</p>
 
@@ -1134,8 +1118,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi 250)(0.003)</mrow>
-							<mrow>\amp= j4.7124~\Omega</mrow>
+							j(2\pi 250)(0.003) = j4.7124~\Omega
 						</md>
 					</p>
 
@@ -1189,8 +1172,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(8~\Omega)(-j6.37~\Omega)}{(8~\Omega)+(-j6.37~\Omega)}</mrow>
-							<mrow>\amp= 3.1018 - j3.8979~\Omega</mrow>
+							\frac{(8~\Omega)(-j6.37~\Omega)}{(8~\Omega)+(-j6.37~\Omega)} = 3.1018 - j3.8979~\Omega
 						</md>
 					</p>
 
@@ -1215,22 +1197,21 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{V'} \amp= (3~\textrm{A})(3.10-j3.90~\Omega)</mrow>
-							<mrow>\amp= 9.3054 - j11.6936~\textrm{V}</mrow>
+							(3~\textrm{A})(3.10-j3.90~\Omega) = 9.3054 - j11.6936~\textrm{V}
 						</md>
 					</p>
 
 					<figure>
   						<caption></caption>
-						<image width="60%" xml:id="ch9-cplx-source-transform-example-figure5">
+						<image width="80%" xml:id="ch9-cplx-source-transform-example-figure5">
 							<shortdescription>Circuit with one mesh and four nodes consisting of a voltage source V' and three impedances (3.1-j3.9ohm, 6ohm, and j4.71ohm). The high-potential end of V' and the 3.1-j3.9ohm connect at node a. The 3.1-j3.9ohm and j4.71ohm connect at node b. The j4.71ohm and 6ohm connect at node c. The low-potential end of V' and 6ohm connect at node d. Voltage V drops over the 6ohm resistor from node c to node d.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$\vec{V'}$]	(0,0);
-									\draw[]	(0,2.5) to [generic, l^=3.1$-$j3.9~$\Omega$]		(2.5,2.5);
-									\draw[]	(2.5,2.5) to [L, l^=j4.71~$\Omega$]					(5,2.5);
-									\draw[]	(5,2.5) to [R, l_=6~$\Omega$, v^=$\vec{V}$]			(5,0);
-									\draw[]	(0,0) to [short]									(5,0);
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=9.31$-$j11.7~V]		(0,0);
+									\draw[]	(0,2.5) to [generic, l^=3.1$-$j3.9~$\Omega$]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [L, l^=j4.71~$\Omega$]							(5,2.5);
+									\draw[]	(5,2.5) to [R, l_=6~$\Omega$, v^=$\vec{V}$]					(5,0);
+									\draw[]	(0,0) to [short]											(5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1240,14 +1221,14 @@
 
 					<figure>
   						<caption></caption>
-						<image width="40%" xml:id="ch9-cplx-source-transform-example-figure6">
+						<image width="60%" xml:id="ch9-cplx-source-transform-example-figure6">
 							<shortdescription>Circuit with one mesh and three nodes consisting of a voltage source V' and two impedances (3.1+j0.815ohm and 6ohm). The high-potential end of V' and the 3.1+j0.815ohm connect at node a. The 3.1+j0.815ohm and 6ohm connect at node b. The low-potential end of V' and 6ohm connect at node c. Voltage V drops over the 6ohm resistor from node b to node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$\vec{V'}$]		(0,0);
-									\draw[]	(0,2.5) to [generic, l^=3.1+j0.815~$\Omega$]			(2.5,2.5);
-									\draw[]	(2.5,2.5) to [R, l_=6~$\Omega$, v^=$\vec{V}$]			(2.5,0);
-									\draw[]	(0,0) to [short]										(2.5,0);
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=9.31$-$j11.7~V]		(0,0);
+									\draw[]	(0,2.5) to [generic, l^=3.1+j0.815~$\Omega$]				(2.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l_=6~$\Omega$, v^=$\vec{V}$]				(2.5,0);
+									\draw[]	(0,0) to [short]											(2.5,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -1301,7 +1282,7 @@
 				<title>Complex Th&#233;venin equivalent circuit</title>
 				
 				<statement>
-					<p>Derive a Th&#233;venin equivalent circuit for the circuit shown below. The source voltage is <m>v_{AC}(t) = 3~\textrm{V}~\cos(2\pi 100t)</m>.</p>
+					<p>Derive a Th&#233;venin equivalent circuit for the circuit shown below. The source voltage is <m>v_{AC}(t) = 3~\textrm{V}~\cos(2\pi 100t)</m>. The proportionality constant of the VCCS has a unit of A/V.</p>
 
 					<figure>
   						<caption></caption>
@@ -1326,10 +1307,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C22}} \amp= \frac{1}{j(2\pi100)(22 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j72.3432~\Omega</mrow>
-							<mrow>\vec{Z_{C47}} \amp= \frac{1}{j(2\pi100)(47 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j33.8628~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi100)(22 \times 10^{-6})} \amp= -j72.3432~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi100)(47 \times 10^{-6})} \amp= -j33.8628~\Omega</mrow>
 						</md>
 					</p>
 
@@ -1565,8 +1544,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi2000)(470\times 10^{-9})}</mrow>
-							<mrow>\amp= -j169.31~\Omega</mrow>
+							\frac{1}{j(2\pi2000)(470\times 10^{-9})} = -j169.31~\Omega
 						</md>
 						
 					</p>
@@ -1575,10 +1553,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{L10}} \amp= j(2\pi2000)(0.01)</mrow>
-							<mrow>\amp= j125.66~\Omega</mrow>
-							<mrow>\vec{Z_{L20}} \amp= j(2\pi2000)(0.02)</mrow>
-							<mrow>\amp= j251.33~\Omega</mrow>
+							<mrow>j(2\pi2000)(0.01) \amp= j125.66~\Omega</mrow>
+							<mrow>j(2\pi2000)(0.02) \amp= j251.33~\Omega</mrow>
 						</md>
 					</p>
 
@@ -1653,18 +1629,17 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I'} \amp= \frac{-15 + j25.9808~\textrm{V}}{-j169.31~\Omega}</mrow>
-							<mrow>\amp= -0.1534 - j0.0886~\textrm{A}</mrow>
+							\frac{-15 + j25.9808~\textrm{V}}{-j169.31~\Omega} = -0.1534 - j0.0886~\textrm{A}
 						</md>
 					</p>
 
 					<figure>
   						<caption></caption>
-						<image width="80%" xml:id="ch9-cplx-norton-example-figure5">
+						<image width="90%" xml:id="ch9-cplx-norton-example-figure5">
 							<shortdescription>Circuit with three meshes and three nodes consisting of current source I' and three impedances (220ohm, -j169ohm, and j251ohm). All circuit elements are connected in parallel between nodes a and b. The high-potential end of I' connects to node a. Branch current In flows through the 220ohm impedance from node a to node b.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$\vec{I'}$]	(0,0);
+									\draw[]	(0,2.5) node[below left] {+} to [sV, l_=$-$0.153$-$j0.089~A]	(0,0);
 									\draw[]	(0,2.5) to [short]									++(right:5);
 									\draw[]	(2.5,2.5) to [C, l_=$-$j169~$\Omega$, *-*]			(2.5,0);
 									\draw[]	(5,2.5) to [L, l_=j251~$\Omega$, *-*]				(5,0);
@@ -1680,8 +1655,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{1}{\frac{1}{-j169.31~\Omega}+\frac{1}{j251.33~\Omega}+\frac{1}{220~\Omega}}</mrow>
-							<mrow>\amp= 186.47 - j79.067~\Omega</mrow>
+							\frac{1}{\frac{1}{-j169.31~\Omega}+\frac{1}{j251.33~\Omega}+\frac{1}{220~\Omega}} = 186.47 - j79.067~\Omega
 						</md>
 					</p>
 
@@ -1725,8 +1699,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(-j169.31~\Omega)(j251.33~\Omega)}{(-j169.31~\Omega)+(j251.33~\Omega)}</mrow>
-							<mrow>\amp= -j518.86~\Omega</mrow>
+							\frac{(-j169.31~\Omega)(j251.33~\Omega)}{(-j169.31~\Omega)+(j251.33~\Omega)} = -j518.86~\Omega
 						</md>
 					</p>
 
@@ -1807,32 +1780,28 @@
 
 	</section>
 
-<section xml:id="ch9-transferfuncs">
+	<section xml:id="ch9-transferfuncs">
 		<title>Transfer Functions</title>
 
 		<introduction>
 
-			<p>A <term>transfer function</term> is defined as the frequency response of a system, described in <xref ref="ch9-eq-transfer-function" />, where <m>j = \sqrt{-1}</m> and <m>\omega</m> is the angular frequency.</p>
+			<p>A <term>transfer function</term> describes how the behavior of a circuit responds to varying frequencies of operation. It is defined in <xref ref="ch9-eq-transfer-function" />, where <m>j = \sqrt{-1}</m> and <m>\omega</m> is the angular frequency.</p>
 			
 			<p>
 				<md number="yes" xml:id="ch9-eq-transfer-function">H(j\omega) = \frac{v_{out}(j\omega)}{v_{in}(j\omega)}</md>
 			</p>
 
-			<p>The transfer function provides a lot of useful information about the response of a circuit across different frequencies of operation. The <term>magnitude response</term> of the circuit is calculated by taking the absolute value of the transfer function, and is defined in <xref ref="ch9-eq-transfer-function-magnitude" />, where <m>\Re H(j\omega)</m> is equal to the real part of the transfer function and <m>\Im H(j\omega)</m> is equal to the imaginary part of the transfer function. (Note that this equation describes using the Pythagorean theorem on the real and imaginary parts of the transfer function, similar to what we saw in <xref ref="ch8-pythagorean-theorem" />.)</p>
+			<p>The <term>magnitude response</term> of the transfer function dictates how the magnitude (amplitude) of the output of a circuit will vary based on the frequency of the input signal. The magnitude response is calculated by taking the absolute value of the transfer function, and is defined in <xref ref="ch9-eq-transfer-function-magnitude" />, where <m>\Re H(j\omega)</m> is equal to the real part of the transfer function and <m>\Im H(j\omega)</m> is equal to the imaginary part of the transfer function. (Note that this equation describes using the Pythagorean theorem on the real and imaginary parts of the transfer function, similar to what we saw in <xref ref="ch8-pythagorean-theorem" />.)</p>
 			
 			<p>
 				<md number="yes" xml:id="ch9-eq-transfer-function-magnitude">|H(j\omega)| = \sqrt{(\Re H(j\omega))^2 + (\Im H(j\omega))^2}</md>
 			</p>
 
-			<p>The magnitude response of the transfer function dictates how the magnitude (amplitude) of the output will vary based on the frequency of the input signal.</p>
-
-			<p>The <term>phase response</term> of the circuit is derived by calculating the angle of the transfer function, and is defined in <xref ref="ch9-eq-transfer-function-phase" />. (Note that this is similar to what we saw in <xref ref="ch8-calculating-phi" />.)</p>
+			<p>The <term>phase response</term> of the transfer function dictates how the phase (angle) of the output of a circuit will vary based on the frequency of the input signal. The phase response is derived by calculating the angle of the transfer function, and is defined in <xref ref="ch9-eq-transfer-function-phase" />. (Note that this is similar to what we saw in <xref ref="ch8-calculating-phi" />.)</p>
 			
 			<p>
 				<md number="yes" xml:id="ch9-eq-transfer-function-phase">\angle H(j\omega) = \atantwo{(\Im H(j\omega),\Re H(j\omega))}</md>
 			</p>
-
-			<p>The phase response of the transfer function dictates how the phase (angle) of the output will vary based on the frequency of the input signal.</p>
 
 			<p>When the magnitude and phase responses of a transfer function are plotted, it is called a <term>Bode plot</term>.</p>
 
@@ -1935,36 +1904,79 @@
 				</statement>
 			</example>
 
-			<example>
+			<example xml:id="ch9-transfer-function-opamp-ex1">
 				<title>Op-amp transfer function in symbolic form</title>
-				
+			
 				<statement>
-					<p>Derive the transfer function for the circuit shown in <xref ref="ch9-active-first-order-lpf-example" />. Use KCL at the inverting input of the op-amp.</p>
+					<p>Derive the transfer function for the circuit shown below. Use KCL at the inverting input of the op-amp.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="60%" xml:id="ch9-active-transferfunctionexample-lpf-diagram1">
+							<shortdescription>Circuit with four nodes consisting of an op-amp, voltage source Vin, resistors R1 and R2, and capacitor C. The high-potential end of Vin connects to R1 at node a. R1, C, and R2 connect to the inverting input of the op-amp at node b. R2, C, and the output of the op-amp connect at node c. The low-potential end of Vin and the non-inverting input of the op-amp connect to ground at node d. Voltage Vout drops from node c to node d.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) node[op amp] (opamp) {};
+									\draw[]	(opamp.out) to [short, -o]						($(opamp.out)+(1,0)$);
+									\draw[]	(opamp.+) node[ground] {};
+									\draw[]	($(opamp.out)+(1,0)$) to [open, v_=$v_{out}(t)$]	($(opamp.out)+(1,-1.99)$);
+									\draw[]	($(opamp.-)-(2.5,0)$) to [R, l^=$R_1$]		(opamp.-);
+									\draw[]	($(opamp.-)-(2.5,0)$) node[below left] {+} to [sV, l_=$v_{in}(t)$]	($(opamp.-)-(2.5,2.5)$);
+									\draw[]	($(opamp.-)-(2.5,2.5)$) to [short, -o]			($(opamp.out)+(1,-1.99)$);
+									\draw[]	(opamp.-) to [short, *-]						($(opamp.-)+(0,2.5)$);
+									\draw[]	(opamp.out) to [short, *-]						($(opamp.out)+(0,3)$);
+									\draw[]	($(opamp.-)+(0,1)$) to [C, l^=$C$, *-*]			($(opamp.out)+(0,1.5)$);
+									\draw[]	($(opamp.-)+(0,2.5)$) to [R, l^=$R_2$]			($(opamp.out)+(0,3)$);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
 
 					<p>
 						<md>
 							<mrow>\frac{v_{in}(\omega)}{R_1} \amp= -\frac{v_{out}(\omega)}{R_2} - \frac{v_{out}(\omega)}{\frac{1}{j\omega C}}</mrow>
 							<mrow>\amp= -v_{out}(\omega)\left(\frac{1}{R_2}+j\omega C\right)</mrow>
-							<mrow>H(j\omega) \amp= -\frac{1}{R_1}\left(\frac{1}{\frac{1}{R_2}+j\omega C}\right)</mrow>
-							<mrow>\amp= -\frac{R_2}{R_1}\left(\frac{1}{1+j\omega CR_2}\right)</mrow>
-							<mrow>\amp= -\frac{R_2}{R_1} \left(\frac{\frac{1}{R_2C}}{j\omega + \frac{1}{R_2C}}\right)</mrow>
+							<mrow>H(j\omega) \amp= \frac{-\frac{1}{R_1}}{j\omega C + \frac{1}{R_2}}</mrow>
+							<mrow>\amp= \frac{-\frac{1}{R_1C}}{j\omega + \frac{1}{R_2C}}</mrow>
 						</md>
 					</p>
 				</statement>
 			</example>
 
-			<example>
+			<example  xml:id="ch9-transfer-function-opamp-ex2">
 				<title>Op-amp transfer function in symbolic form</title>
 				
 				<statement>
-					<p>Derive the transfer function of the circuit shown in <xref ref="ch9-active-first-order-hpf-example" />. Use KCL at the inverting input of the op-amp.</p>
+					<p>Derive the transfer function of the circuit shown below. Use KCL at the inverting input of the op-amp.</p>
+					
+					<figure>
+  						<caption></caption>
+						<image width="80%" xml:id="ch9-active-firstorder-transferfuncexampleee-hpf-diagram1">
+							<shortdescription>Circuit with five nodes consisting of voltage source Vin, op-amp, resistors R1 and R2, and capacitor C. The high-potential end of Vin connects to R1 at node a. R1 and C connect at node b. C, R2, and the inverting input of the op-amp connect at node c. R2 and the output of the op-amp connect at node d. The low-potential end of Vin and the non-inverting input of the op-amp connect to ground at node e. Voltage Vout drops from node d to node e.</shortdescription>
+							<latex-image>
+								\begin{tikzpicture}[font=\sffamily]
+									\draw[]	(0,0) node[op amp] (opamp) {};
+									\draw[]	(opamp.out) to [short, -o]						($(opamp.out)+(1,0)$);
+									\draw[]	(opamp.+) node[ground] {};
+									\draw[]	($(opamp.out)+(1,0)$) to [open, v_=$v_{out}(t)$]	($(opamp.out)+(1,-1.99)$);
+									\draw[]	($(opamp.-)-(2,0)$) to [C, l^=$C$]				(opamp.-);
+									\draw[]	($(opamp.-)-(4,0)$) to [R, l^=$R_1$]				($(opamp.-)-(2,0)$);
+									\draw[]	($(opamp.-)-(4,0)$) node[below left] {+} to [sV, l_=$v_{in}(t)$]			($(opamp.-)-(4,2.5)$);
+									\draw[]	($(opamp.-)-(4,2.5)$) to [short, -o]				($(opamp.out)+(1,-1.99)$);
+									\draw[]	(opamp.-) to [short, *-]						($(opamp.-)+(0,1)$);
+									\draw[]	(opamp.out) to [short, *-]						($(opamp.out)+(0,1.5)$);
+									\draw[]	($(opamp.-)+(0,1)$) to [R, l^=$R_2$]				($(opamp.out)+(0,1.5)$);
+								\end{tikzpicture}
+							</latex-image>
+  						</image>
+					</figure>
 					
 					<p>
 						<md>
 							<mrow>\frac{v_{in}(\omega)}{R_1+\frac{1}{j\omega C}} \amp= -\frac{v_{out}(\omega)}{R_2}</mrow>
 							<mrow>H(j\omega) \amp= -\frac{R_2}{R_1+\frac{1}{j\omega C}}</mrow>
 							<mrow>\amp= -\frac{j\omega CR_2}{j\omega CR_1+1}</mrow>
-							<mrow>\amp= -\frac{R_2}{R_1} \left(\frac{j\omega}{j\omega + \frac{1}{R_1C}}\right)</mrow>
+							<mrow>\amp= \frac{-j\omega \frac{R_2}{R_1}}{j\omega + \frac{1}{R_1C}}</mrow>
 						</md>
 					</p>
 				</statement>
@@ -1974,7 +1986,7 @@
 				<title>Transfer function in numeric form</title>
 				
 				<statement>
-					<p>Derive a transfer function for the circuit shown below. The circuit parameters are <m>L = 20~\textrm{mH}</m>, <m>R = 800~\Omega</m>, and <m>C = 200~\textrm{nF}</m>.</p>
+					<p>Derive a transfer function for the circuit shown below. The circuit parameters are: <m>L = 20~\textrm{mH}</m>, <m>R = 800~\Omega</m>, and <m>C = 200~\textrm{nF}</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -2009,7 +2021,7 @@
 						<md>H(j\omega) = \frac{j\omega40000+2.5\times10^8}{-\omega^2+j\omega40000+2.5\times10^8}</md>
 					</p>
 
-					<p>The bode plot for this circuit is shown below.</p>
+					<p>The Bode plot for this circuit is shown below.</p>
 
 					<figure>
   						<caption></caption>
@@ -2078,9 +2090,9 @@
 
 			<p>Identifying the poles and zeros of a transfer function can provide information about the stability of a system. Stability relates to what happens after a system is disturbed from a condition of equilibrium. If, after a disturbance, a system tends to return to equilibrium, that system is said to be stable. If, after a disturbance, the system remains in the new state without changing, that system is said to be marginally stable. If, after a disturbance, the system diverges away from equilibrium, that system is said to be unstable.</p>
 			
-			<p>Resistive circuits (such as the ones described in this textbook) will be stable due to the damping property of resistors. This causes all exponential terms in output voltage equations to have negative exponents, causing them to decay over time. All poles in these circuits have negative real values. The greater the magnitude of the real part of the pole, the faster the exponential term will decay.</p>
+			<p>Resistive circuits (such as the ones described in this textbook) will be stable due to the damping property of resistors. This causes all exponential terms in output equations to have negative exponents, causing them to decay over time. All poles in these circuits have negative real values. The greater the magnitude of the real part of the pole, the faster the exponential term will decay.</p>
 			
-			<p>Homogeneous circuits will have a number of poles equal to the order of the system, and these correspond to the general solution of the circuit. (In other words, a homogeneous second-order circuit will have two poles.) Non-homogeneous circuits may have additional poles. Poles relating to the general solution of the differential equation describe the transient response of the circuit. If the two poles have real and distinct negative values, then the system will have an overdamped transient response. If the two poles have real and repeated negative values, then the system will have a critically damped transient response. If the two poles are complex conjugate pairs, then the system will have an underdamped transient response.</p>
+			<p>Homogeneous circuits will have a number of poles equal to the order of the system, and these correspond to the general solution of the circuit. (In other words, a homogeneous second-order circuit will have two poles.) Poles relating to the general solution of the differential equation describe the transient response of the circuit. If the two poles have real and distinct negative values, then the system will have an overdamped transient response. If the two poles have real and repeated negative values, then the system will have a critically damped transient response. If the two poles are complex conjugate pairs, then the system will have an underdamped transient response. Non-homogeneous circuits may have additional poles.</p>
 			
 			<example>
 				<title>Relating poles to the transient response (overdamped)</title>
@@ -2199,7 +2211,7 @@
 
 
 			<example>
-				<title></title>
+				<title>Poles and zeros of a transfer function</title>
 				
 				<statement>
 					<p>Consider the circuit analyzed in <xref ref="ch9-bpf-transient-analysis" />. The transfer function of the circuit is defined below.</p>
@@ -2504,7 +2516,7 @@
 				<title>Low-pass filter analysis</title>
 				
 				<statement>
-					<p>Analyze the following low-pass filter. Calculate the cutoff frequency and quality factor of the filter. The circuit parameters are <m>R=500~\Omega</m>, <m>L=1~\textrm{H}</m>, and <m>C=100~\mu\textrm{F}</m>.</p>
+					<p>Analyze the following low-pass filter. Calculate the cutoff frequency and quality factor of the filter. The circuit parameters are: <m>R=500~\Omega</m>, <m>L=1~\textrm{H}</m>, and <m>C=100~\mu\textrm{F}</m>.</p>
 					
 					<figure>
   						<caption></caption>
@@ -2721,7 +2733,7 @@
 				<title>High-pass filter analysis</title>
 				
 				<statement>
-					<p>Analyze the following high-pass filter. Calculate the cutoff frequency and quality factor of the filter. The circuit parameters are <m>C = 200~\textrm{nF}</m>, <m>R_1 = 500~\Omega</m>, <m>R_2 = 400~\Omega</m>, and <m>L = 10~\textrm{mH}</m>.</p>
+					<p>Analyze the following high-pass filter. Calculate the cutoff frequency and quality factor of the filter. The circuit parameters are: <m>C = 200~\textrm{nF}</m>, <m>R_1 = 500~\Omega</m>, <m>R_2 = 400~\Omega</m>, and <m>L = 10~\textrm{mH}</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -3030,7 +3042,7 @@
 				<title>Band-pass filter analysis</title>
 				
 				<statement>
-					<p>Analyze the following band-pass filter. Calculate the center frequency and the quality factor of the circuit. The circuit parameters are <m>C_1 = 40~\mu\textrm{F}</m>, <m>C_2 = 20~\mu\textrm{F}</m>, <m>R_1 = 200~\Omega</m>, and <m>R_2 = 120~\Omega</m>.</p>
+					<p>Analyze the following band-pass filter. Calculate the center frequency and the quality factor of the circuit. The circuit parameters are: <m>C_1 = 40~\mu\textrm{F}</m>, <m>C_2 = 20~\mu\textrm{F}</m>, <m>R_1 = 200~\Omega</m>, and <m>R_2 = 120~\Omega</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -3052,13 +3064,16 @@
 					<p>The second-order differential equation describing the output voltage is shown below.</p>
 					
 					<p>
-						<md>\frac{1}{R_2C_2}\frac{dv_{in}(t)}{dt} = \frac{d^2v_{out}(t)}{dt^2} + \left[\frac{1}{C_1R_1} + \frac{1}{C_2R_2} + \frac{1}{C_1R_2}\right]\frac{dv_{out}(t)}{dt} + \left[\frac{1}{C_1C_2R_1R_2}\right]v_{out}(t)</md>
+						<md>
+							<mrow>\frac{1}{R_2C_2}\frac{dv_{in}(t)}{dt} \amp= \frac{d^2v_{out}(t)}{dt^2} + \left[\frac{1}{C_1R_1} + \frac{1}{C_2R_2} + \frac{1}{C_1R_2}\right]\frac{dv_{out}(t)}{dt}</mrow>
+							<mrow>\amp+ \left[\frac{1}{C_1C_2R_1R_2}\right]v_{out}(t)</mrow>
+						</md>
 					</p>
 
-					<p>The transfer function of the circuit is therefore equal to</p>
+					<p>The transfer function of the circuit is given below.</p>
 					
 					<p>
-						<md>H(j\omega) = \frac{\frac{1}{R_2C_2} j\omega}{-\omega^2 + \left[\frac{1}{C_1R_1} + \frac{1}{C_2R_2} + \frac{1}{C_1R_2}\right]j\omega + \left[\frac{1}{C_1C_2R_1R_2}\right]}</md>.
+						<md>H(j\omega) = \frac{\frac{1}{R_2C_2} j\omega}{-\omega^2 + \left[\frac{1}{C_1R_1} + \frac{1}{C_2R_2} + \frac{1}{C_1R_2}\right]j\omega + \left[\frac{1}{C_1C_2R_1R_2}\right]}</md>
 					</p>
 
 					<p>Plug in component values using base units.</p>
@@ -3139,7 +3154,7 @@
 						</md>
 					</p>
 
-					<p>The bode plot for this circuit is shown below. The bode plots of each stages are shown in dashed lines to make it clear how the overall transfer function relates to the transfer functions of each stage.</p>
+					<p>The Bode plot for this circuit is shown below. The Bode plots of each stages are shown in dashed lines to make it clear how the overall transfer function relates to the transfer functions of each stage.</p>
 
 					<figure>
   						<caption></caption>
@@ -3217,7 +3232,7 @@
 				<title>Band-stop filter analysis</title>
 				
 				<statement>
-					<p>Analyze the following band-stop filter. Calculate the center frequency, the bandwidth, cutoff frequencies, and the quality factor of the circuit. The circuit parameters are <m>R = 10~\Omega</m>, <m>L = 200~\textrm{mH}</m>, and <m>C = 50~\mu\textrm{F}</m>.</p>
+					<p>Analyze the following band-stop filter. Calculate the center frequency, the bandwidth, cutoff frequencies, and the quality factor of the circuit. The circuit parameters are: <m>R = 10~\Omega</m>, <m>L = 200~\textrm{mH}</m>, and <m>C = 50~\mu\textrm{F}</m>.</p>
 
 					<figure>
   						<caption></caption>
@@ -3319,9 +3334,9 @@
 		<subsection xml:id="ch9-determinefilter">
 			<title>Determining Filter Type</title>
 
-			<p>To determine the type of filter a circuit corresponds to, first analyze the circuit given DC steady-state conditions (<m>\omega=0</m>). In this case, all capacitors can be replaced with opens and all inductors can be replaced with shorts. Determine the value of the output voltage (which will either be zero or non-zero).</p>
+			<p>To determine the type of filter a circuit corresponds to, first analyze the circuit in a DC steady-state condition (<m>\omega=0</m>). In this case, all capacitors can be replaced by opens and all inductors can be replaced by shorts. Determine the value of the output voltage (which will either be zero or non-zero).</p>
 			
-			<p>Second, analyze the circuit given a frequency approaching infinity (<m>\omega\rightarrow\infty</m>). In this case, all capacitors can be replaced with shorts and all inductors can be replaced with opens. Determine the value of the output voltage (which will either be zero or non-zero).</p>
+			<p>Second, analyze the circuit given a frequency approaching infinity (<m>\omega\rightarrow\infty</m>). In this case, all capacitors can be replaced by shorts and all inductors can be replaced by opens. Determine the value of the output voltage (which will either be zero or non-zero).</p>
 			
 			<p>Then, use <xref ref="ch9-filtertype-table" /> to determine the filter type based on these two calculations.</p>
 
@@ -3542,7 +3557,7 @@
 				<title>Active first-order low-pass filter</title>
 				
 				<statement>
-					<p>An active first-order low-pass filter is shown below.</p>
+					<p>An active first-order low-pass filter is shown below. Calculate the cutoff frequency of the filter. Then, confirm the filter type of the circuit.</p>
 					
 					<figure>
   						<caption></caption>
@@ -3566,16 +3581,28 @@
   						</image>
 					</figure>
 
-					<p>The first-order differential equation that describes the behavior of this low-pass filter can be derived by performing KCL at the inverting input of the op-amp.</p>
+					<p>The transfer function for this circuit was derived in <xref ref="ch9-transfer-function-opamp-ex1" /> and is given below.</p>
 					
 					<p>
-						<md>-\frac{v_{in}(t)}{R_1C} = \frac{dv_{out}(t)}{dt} + \frac{1}{R_2C}v_{out}(t)</md>
+						<md>H(j\omega) = \frac{-\frac{1}{R_1C}}{j\omega + \frac{1}{R_2C}}</md>
 					</p>
-					
-					<p>The cutoff frequency of this filter is defined below.</p>
+
+					<p>To calculate the cutoff frequency, divide the transfer function by the gain of the circuit in the pass-band. Because this is a low-pass filter, the pass-band encompasses low frequencies. At low frequencies, the capacitor can be replaced by an open, and the op-amp is an inverting op-amp with</p>
 					
 					<p>
-						<md>\omega_c = \frac{1}{R_2C}</md>
+						<md>G = -\frac{R_2}{R_1}</md>.
+					</p>
+
+					<p>The cutoff frequency can now be calculated.</p>
+					
+					<p>
+						<md>
+							<mrow>|H(j\omega)| = \frac{1}{\sqrt{2}} \amp= \frac{\frac{1}{R_2C}}{\sqrt{\left(\frac{1}{R_2C}\right)^2 + \omega_c^2}}</mrow>
+							<mrow>\frac{1}{2} \amp= \frac{\left(\frac{1}{R_2C}\right)^2}{\left(\frac{1}{R_2C}\right)^2 + \omega_c^2}</mrow>
+							<mrow>\left(\frac{1}{R_2C}\right)^2 + \omega_c^2 \amp= 2\left(\frac{1}{R_2C}\right)^2</mrow>
+							<mrow>\omega_c^2 \amp= \left(\frac{1}{R_2C}\right)^2</mrow>
+							<mrow>\omega_c \amp= \frac{1}{R_2C}</mrow>
+						</md>
 					</p>
 
 					<p>To determine the filter type, first analyze the circuit at <m>\omega=0</m> to calculate <m>v_{out}(0)</m>. The capacitor can be replaced by an open.</p>
@@ -3639,7 +3666,7 @@
 				<title>Active first-order high-pass filter</title>
 				
 				<statement>
-					<p>An active first-order high-pass filter is shown below.</p>
+					<p>An active first-order high-pass filter is shown below. Calculate the cutoff frequency of the filter. Then, confirm the filter type of the circuit.</p>
 					
 					<figure>
   						<caption></caption>
@@ -3663,16 +3690,28 @@
   						</image>
 					</figure>
 
-					<p>The first-order differential equation that describes the behavior of this high-pass filter can be derived by performing KCL at the inverting input of the op-amp.</p>
+					<p>The transfer function for this circuit was derived in <xref ref="ch9-transfer-function-opamp-ex2" /> and is given below.</p>
 					
 					<p>
-						<md>-\frac{R_2}{R_1}\frac{dv_{in}(t)}{dt} = \frac{dv_{out}(t)}{dt} + \frac{1}{R_1C}v_{out}(t)</md>
+						<md>H(j\omega) = \frac{-j\omega \frac{R_2}{R_1}}{j\omega + \frac{1}{R_1C}}</md>
 					</p>
 
-					<p>The cutoff frequency of this filter is defined below.</p>
+					<p>To calculate the cutoff frequency, divide the transfer function by the gain of the circuit in the pass-band. Because this is a high-pass filter, the pass-band encompasses high frequencies. At high frequencies, the capacitor can be replaced by a short, and the op-amp is an inverting op-amp with</p>
 					
 					<p>
-						<md>\omega_c = \frac{1}{R_1C}</md>
+						<md>G = -\frac{R_2}{R_1}</md>.
+					</p>
+
+					<p>The cutoff frequency can now be calculated.</p>
+					
+					<p>
+						<md>
+							<mrow>|H(j\omega)| = \frac{1}{\sqrt{2}} \amp= \frac{\omega_c}{\sqrt{\left(\frac{1}{R_1C}\right)^2 + \omega_c^2}}</mrow>
+							<mrow>\frac{1}{2} \amp= \frac{\omega_c^2}{\left(\frac{1}{R_1C}\right)^2 + \omega_c^2}</mrow>
+							<mrow>2\omega_c^2 \amp= \left(\frac{1}{R_1C}\right)^2 + \omega_c^2</mrow>
+							<mrow>\omega_c^2 \amp= \left(\frac{1}{R_1C}\right)^2</mrow>
+							<mrow>\omega_c \amp= \frac{1}{R_1C}</mrow>
+						</md>
 					</p>
 
 					<p>To determine the filter type, first analyze the circuit at <m>\omega=0</m> to calculate <m>v_{out}(0)</m>. The capacitor can be replaced by an open.</p>
@@ -3684,22 +3723,22 @@
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
 									\draw[]	(0,0) node[op amp] (opamp) {};
-									\draw[]	(opamp.out) to [short, -o]						($(opamp.out)+(1,0)$);
+									\draw[]	(opamp.out) to [short, -o]					($(opamp.out)+(1,0)$);
 									\draw[]	(opamp.+) node[ground] {};
 									\draw[]	($(opamp.out)+(1,0)$) to [open, v_=$v_{out}(t)$]	($(opamp.out)+(1,-1.99)$);
 									\draw[]	($(opamp.-)-(2,0)$) to [open]				(opamp.-);
-									\draw[]	($(opamp.-)-(4,0)$) to [R, l^=$R_1$]				($(opamp.-)-(2,0)$);
-									\draw[]	($(opamp.-)-(4,0)$) node[below left] {+} to [sV, l_=$v_{in}(t)$]			($(opamp.-)-(4,2.5)$);
-									\draw[]	($(opamp.-)-(4,2.5)$) to [short, -o]				($(opamp.out)+(1,-1.99)$);
-									\draw[]	(opamp.-) to [short, *-]						($(opamp.-)+(0,1)$);
-									\draw[]	(opamp.out) to [short, *-]						($(opamp.out)+(0,1.5)$);
-									\draw[]	($(opamp.-)+(0,1)$) to [R, l^=$R_2$]				($(opamp.out)+(0,1.5)$);
+									\draw[]	($(opamp.-)-(4,0)$) to [R, l^=$R_1$]		($(opamp.-)-(2,0)$);
+									\draw[]	($(opamp.-)-(4,0)$) node[below left] {+} to [sV, l_=$v_{in}(t)$]($(opamp.-)-(4,2.5)$);
+									\draw[]	($(opamp.-)-(4,2.5)$) to [short, -o]		($(opamp.out)+(1,-1.99)$);
+									\draw[]	(opamp.-) to [short, *-]					($(opamp.-)+(0,1)$);
+									\draw[]	(opamp.out) to [short, *-]					($(opamp.out)+(0,1.5)$);
+									\draw[]	($(opamp.-)+(0,1)$) to [R, l^=$R_2$]		($(opamp.out)+(0,1.5)$);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
 					</figure>
 
-					<p>The output is zero because the input is not connected to the output.</p>
+					<p>The output is zero. The circuit in this condition is a voltage follower with the non-inverting input connected to ground.</p>
 					
 					<p>Analyze the circuit at <m>\omega\rightarrow\infty</m> to calculate <m>v_{out}(\infty)</m>. The capacitor can be replaced by a short.</p>
 
@@ -3740,9 +3779,9 @@
 		<subsection xml:id="ch9-cascadedfilters">
 			<title>Cascaded Active Filters</title>
 
-			<p>As mentioned in <xref ref="ch4-cascaded" />, op-amps can be cascaded together. While <xref ref="ch4-cascaded" /> made reference to the product of each individual circuit gain, cascaded filters can be analyzed by calculating the product of each filter's transfer function (this topic will be introduced in <xref ref="ch9-transferfuncs" />). In this manner, band-pass filters, band-stop filters, and second-order (or higher) high-pass and low-pass filters can be designed.</p>
+			<p>As mentioned in <xref ref="ch4-cascaded" />, op-amps can be cascaded together. While <xref ref="ch4-cascaded" /> made reference to the product of each individual circuit gain, cascaded filters can be analyzed by calculating the product of each filter's transfer function. In this manner, band-pass filters, band-stop filters, and second-order (or higher) high-pass and low-pass filters can be designed.</p>
 
-			<p>Finally, higher-order active filters can be created by cascading together multiple low-pass filters or multiple high-pass filters (for example). Cascading together identical filters creates a sharper slope at the cutoff frequency. An inverting amplifier can be staged at the output to create an overall circuit gain.</p>
+			<p>Higher-order active filters can be created by cascading together multiple low-pass filters or multiple high-pass filters (for example). Cascading together identical filters creates a sharper slope at the cutoff frequency. An inverting amplifier can be staged at the output to create an overall circuit gain.</p>
 
 			<example>
 				<title>Cascaded active band-pass filter</title>
@@ -3884,25 +3923,36 @@
   				</image>
 			</figure>
 
-			<p>The voltage follower configuration of the circuit gives it a gain of one (known as unity gain), and ensures that the voltage at the non-inverting input of the op-amp is equal to <m>v_{out}(t)</m>. If a filter gain is desired, then the voltage follower configuration can be altered to include divided feedback instead of shorting the inverting input to the output.</p>
+			<p>The voltage follower configuration of the circuit gives it a gain of one (unity gain), and ensures that the voltage at the non-inverting input of the op-amp is equal to <m>v_{out}(t)</m>. If a filter gain is desired, then the voltage follower configuration can be altered to include divided feedback instead of shorting the inverting input to the output.</p>
 			
-			<p>The Sallen-Key filter shown in <xref ref="unity-gain-sallen-key-filter" /> has a differential equation described in <xref ref="ch9-sallen-key-diffeq" /> and is derived in <xref ref="ch9-sallen-key-derivation" />. The derivation uses KCL at the nodes connecting the two resistors to capacitor <m>C_1</m> and also at the non-inverting input of the op-amp. (The term <m>v_a(t)</m> in the derivation denotes the node connecting the two resistors to capacitor <m>C_1</m>.)</p>
+			<p>The Sallen-Key filter shown in <xref ref="unity-gain-sallen-key-filter" /> has a differential equation described in <xref ref="ch9-sallen-key-diffeq" /> and is derived in <xref ref="ch9-sallen-key-derivation" />. The derivation uses KCL at the nodes connecting the two resistors to capacitor <m>C_1</m> and also at the non-inverting input of the op-amp.</p>
 			
 			<p>
-				<md number="yes" xml:id="ch9-sallen-key-diffeq">\frac{1}{R_1R_2C_1C_2}v_{in}(t) = \frac{d^2v_{out}(t)}{dt^2} + \left[\frac{1}{R_1C_1}+\frac{1}{R_2C_1}\right]\frac{dv_{out}(t)}{dt} + \left[\frac{1}{R_1R_2C_1C_2}\right]v_{out}(t)</md>
+				<md number="yes">
+					<mrow number="yes" xml:id="ch9-sallen-key-diffeq">\frac{1}{R_1R_2C_1C_2}v_{in}(t) \amp= \frac{d^2v_{out}(t)}{dt^2}</mrow>
+					<mrow number="no">\amp+ \left[\frac{1}{R_1C_1}+\frac{1}{R_2C_1}\right]\frac{dv_{out}(t)}{dt}</mrow>
+					<mrow number="no">\amp+ \left[\frac{1}{R_1R_2C_1C_2}\right]v_{out}(t)</mrow>
+				</md>
 			</p>
 
 			<proof xml:id="ch9-sallen-key-derivation">
+				<p>The term <m>v_a(t)</m> in this derivation denotes the node connecting the two resistors to capacitor <m>C_1</m>.</p>
+
 				<p>
 					<md>
 						<mrow>\frac{v_{in}(t)-v_a(t)}{R_1} \amp= C_1\frac{d}{dt}\left[v_a(t)-v_{out}(t)\right] + C_2\frac{dv_{out}(t)}{dt}</mrow>
 						<mrow>\frac{v_{in}(t)}{R_1} \amp= \left[\frac{1}{R_1}+C_1\frac{d}{dt}\right]v_a(t) + \left[C_2\frac{d}{dt}-C_1\frac{d}{dt}\right]v_{out}(t)</mrow>
 						<mrow>\frac{v_a(t)-v_{out}(t)}{R_2} \amp= C_2\frac{dv_{out}(t)}{dt}</mrow>
 						<mrow>v_a(t) \amp= R_2C_2\frac{dv_{out}(t)}{dt}+v_{out}(t)</mrow>
-						<mrow>\frac{v_{in}(t)}{R_1} \amp= \left[\frac{1}{R_1}+C_1\frac{d}{dt}\right]\left[R_2C_2\frac{dv_{out}(t)}{dt}+v_{out}(t)\right] + \left[C_2\frac{d}{dt}-C_1\frac{d}{dt}\right]v_{out}(t)</mrow>
-						<mrow>\amp= \frac{R_2C_2}{R_1}\frac{dv_{out}(t)}{dt}+\frac{1}{R_1}v_{out}(t)+C_1R_2C_2\frac{d^2v_{out}(t)}{dt^2} + C_2\frac{dv_{out}(t)}{dt}</mrow>
-						<mrow>\amp= R_2C_1C_2\frac{d^2v_{out}(t)}{dt^2}+\left[\frac{R_2C_2}{R_1}+C_2\right]\frac{dv_{out}(t)}{dt} + \left[\frac{1}{R_1}\right]v_{out}(t)</mrow>
-						<mrow>\frac{1}{R_1R_2C_1C_2}v_{in}(t) \amp= \frac{d^2v_{out}(t)}{dt^2} + \left[\frac{1}{R_1C_1}+\frac{1}{R_2C_1}\right]\frac{dv_{out}(t)}{dt} + \left[\frac{1}{R_1R_2C_1C_2}\right]v_{out}(t)</mrow>
+						<mrow>\frac{v_{in}(t)}{R_1} \amp= \left[\frac{1}{R_1}+C_1\frac{d}{dt}\right]\left[R_2C_2\frac{dv_{out}(t)}{dt}+v_{out}(t)\right]</mrow>
+						<mrow>\amp+ \left[C_2\frac{d}{dt}-C_1\frac{d}{dt}\right]v_{out}(t)</mrow>
+						<mrow>\amp= \frac{R_2C_2}{R_1}\frac{dv_{out}(t)}{dt}+\frac{1}{R_1}v_{out}(t)+C_1R_2C_2\frac{d^2v_{out}(t)}{dt^2}</mrow>
+						<mrow>\amp+ C_2\frac{dv_{out}(t)}{dt}</mrow>
+						<mrow>\amp= R_2C_1C_2\frac{d^2v_{out}(t)}{dt^2}+\left[\frac{R_2C_2}{R_1}+C_2\right]\frac{dv_{out}(t)}{dt}</mrow>
+						<mrow>\amp+ \left[\frac{1}{R_1}\right]v_{out}(t)</mrow>
+						<mrow>\frac{1}{R_1R_2C_1C_2}v_{in}(t) \amp= \frac{d^2v_{out}(t)}{dt^2}</mrow>
+						<mrow>\amp+ \left[\frac{1}{R_1C_1}+\frac{1}{R_2C_1}\right]\frac{dv_{out}(t)}{dt}</mrow>
+						<mrow>\amp+ \left[\frac{1}{R_1R_2C_1C_2}\right]v_{out}(t)</mrow>
 					</md>
 				</p>
 			</proof>
@@ -3962,8 +4012,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi60)(35\times10^{-6})}</mrow>
-							<mrow>\amp= -j75.7881~\Omega</mrow>
+							\frac{1}{j(2\pi60)(35\times10^{-6})} = -j75.7881~\Omega
 						</md>
 					</p>
 
@@ -4042,8 +4091,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi80)(26\times10^{-6})}</mrow>
-							<mrow>\amp= -j76.5168~\Omega</mrow>
+							\frac{1}{j(2\pi80)(26\times10^{-6})} = -j76.5168~\Omega
 						</md>
 					</p>
 
@@ -4051,8 +4099,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi80)(0.053)</mrow>
-							<mrow>\amp= j26.6407~\Omega</mrow>
+							j(2\pi80)(0.053) = j26.6407~\Omega
 						</md>
 					</p>
 
@@ -4219,8 +4266,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi100)(48\times10^{-6})}</mrow>
-							<mrow>\amp= -j33.1573~\Omega</mrow>
+							\frac{1}{j(2\pi100)(48\times10^{-6})} = -j33.1573~\Omega
 						</md>
 					</p>
 
@@ -4228,8 +4274,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi100)(0.052)</mrow>
-							<mrow>\amp= j32.6726~\Omega</mrow>
+							j(2\pi100)(0.052) = j32.6726~\Omega
 						</md>
 					</p>
 
@@ -4264,8 +4309,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(30~\Omega)(-j33.1573~\Omega)}{(30~\Omega)+(-j33.1573~\Omega)}</mrow>
-							<mrow>\amp= 16.4960 - j14.9252~\Omega</mrow>
+							\frac{(30~\Omega)(-j33.1573~\Omega)}{(30~\Omega)+(-j33.1573~\Omega)} = 16.4960 - j14.9252~\Omega
 						</md>
 					</p>
 
@@ -4336,8 +4380,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi6000)(330\times10^{-9})}</mrow>
-							<mrow>\amp= -j80.3813~\Omega</mrow>
+							\frac{1}{j(2\pi6000)(330\times10^{-9})} = -j80.3813~\Omega
 						</md>
 					</p>
 
@@ -4345,8 +4388,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi6000)(0.001)</mrow>
-							<mrow>\amp= j37.6991~\Omega</mrow>
+							j(2\pi6000)(0.001) = j37.6991~\Omega
 						</md>
 					</p>
 
@@ -4380,8 +4422,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{1}{\frac{1}{40~\Omega}+\frac{1}{j37.6991~\Omega}+\frac{1}{-j80.3813~\Omega}}</mrow>
-							<mrow>\amp= 30.3623 + j17.1062~\Omega</mrow>
+							\frac{1}{\frac{1}{40~\Omega}+\frac{1}{j37.6991~\Omega}+\frac{1}{-j80.3813~\Omega}} = 30.3623 + j17.1062~\Omega
 						</md>
 					</p>
 
@@ -4435,7 +4476,7 @@
 					<p>
 						<md>
 							<mrow>v(t) \amp= 4.64~\textrm{V}~\cos(2\pi60t - 73.2\pi/180)</mrow>
-							<mrow>i(t) \amp= 58~\textrm{mA}~\cos(2\pi60t -73.2\pi/180)</mrow>
+							<mrow>i(t) \amp= 57.9~\textrm{mA}~\cos(2\pi60t -75.9\pi/180)</mrow>
 						</md>
 					</p>
 				</answer>
@@ -4445,8 +4486,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi60)(330\times 10^{-6})}</mrow>
-							<mrow>\amp= -j8.0381~\Omega</mrow>
+							\frac{1}{j(2\pi60)(330\times 10^{-6})} = -j8.0381~\Omega
 						</md>
 					</p>
 					
@@ -4454,8 +4494,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z_L}\amp= j(2\pi60)(0.01)</mrow>
-							<mrow>\amp= j3.7699~\Omega</mrow>
+							j(2\pi60)(0.01) = j3.7699~\Omega
 						</md>
 					</p>
 
@@ -4502,10 +4541,10 @@
 
 					<p>
 						<md>
-							<mrow>\vec{I} \amp= \frac{1.3435 - j4.4392~\textrm{V}}{80~\Omega}</mrow>
-							<mrow>\amp= 0.0168 - j0.0555~\textrm{A}</mrow>
-							<mrow>\amp= 16.7933 - j55.4899~\textrm{mA}</mrow>
-							<mrow>\amp= 57.9753~\textrm{mA} \angle -73.1622^\circ</mrow>
+							<mrow>\vec{I} \amp= \frac{1.3435 - j4.4392~\textrm{V}}{80+j3.7699~\Omega}</mrow>
+							<mrow>\amp= 0.0141 - j0.0562~\textrm{A}</mrow>
+							<mrow>\amp= 14.1470 - j56.1565~\textrm{mA}</mrow>
+							<mrow>\amp= 57.9111~\textrm{mA} \angle -75.8602^\circ</mrow>
 						</md>
 					</p>
 
@@ -4514,7 +4553,7 @@
 					<p>
 						<md>
 							<mrow>v(t) \amp= 4.64~\textrm{V}~\cos(2\pi60t - 73.2\pi/180)</mrow>
-							<mrow>i(t) \amp= 58~\textrm{mA}~\cos(2\pi60t -73.2\pi/180)</mrow>
+							<mrow>i(t) \amp= 57.9~\textrm{mA}~\cos(2\pi60t -75.9\pi/180)</mrow>
 						</md>
 					</p>
 				</solution>
@@ -4555,8 +4594,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(j5~\Omega)(-j6~\Omega)}{(j5~\Omega)+(-j6~\Omega)}</mrow>
-							<mrow>\amp= j30~\Omega</mrow>
+							\frac{(j5~\Omega)(-j6~\Omega)}{(j5~\Omega)+(-j6~\Omega)} = j30~\Omega
 						</md>
 					</p>
 
@@ -4919,10 +4957,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C40}} \amp= \frac{1}{j(2\pi 200)(40 \times 10^{-6})}</mrow>
-							<mrow>\amp= j19.8944~\Omega</mrow>
-							<mrow>\vec{Z_{C100}} \amp= \frac{1}{j(2\pi 200)(100 \times 10^{-6})}</mrow>
-							<mrow>\amp= j7.9577~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 200)(40 \times 10^{-6})} \amp= j19.8944~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 200)(100 \times 10^{-6})} \amp= j7.9577~\Omega</mrow>
 						</md>
 					</p>
 
@@ -4959,8 +4995,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(7~\Omega)(j7.9577~\Omega)}{(7~\Omega)+(j7.9577~\Omega)}</mrow>
-							<mrow>\amp= 3.9464 - j3.4714~\Omega</mrow>
+							\frac{(7~\Omega)(j7.9577~\Omega)}{(7~\Omega)+(j7.9577~\Omega)} = 3.9464 - j3.4714~\Omega
 						</md>
 					</p>
 
@@ -5183,10 +5218,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C160}} \amp= \frac{1}{j(2\pi 100)(160 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j9.9472~\Omega</mrow>
-							<mrow>\vec{Z_{C250}} \amp= \frac{1}{j(2\pi 100)(250 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j6.3662~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 100)(160 \times 10^{-6})} \amp= -j9.9472~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 100)(250 \times 10^{-6})} \amp= -j6.3662~\Omega</mrow>
 						</md>
 					</p>
 
@@ -5194,8 +5227,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi 100)(0.008)</mrow>
-							<mrow>\amp= j5.0265~\Omega</mrow>
+							j(2\pi 100)(0.008) = j5.0265~\Omega
 						</md>
 					</p>
 
@@ -5338,8 +5370,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi200)(5 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j31.8310~\Omega</mrow>
+							\frac{1}{j(2\pi200)(5 \times 10^{-6})} = -j31.8310~\Omega
 						</md>
 					</p>
 
@@ -5347,8 +5378,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi200)(0.095)</mrow>
-							<mrow>\amp= j119.38~\Omega</mrow>
+							j(2\pi200)(0.095) = j119.38~\Omega
 						</md>
 					</p>
 
@@ -5465,8 +5495,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi5000)(1.4 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j22.7364~\Omega</mrow>
+							\frac{1}{j(2\pi5000)(1.4 \times 10^{-6})} = -j22.7364~\Omega
 						</md>
 					</p>
 
@@ -5584,10 +5613,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C6.6}} \amp= \frac{1}{j(2\pi 600)(6.6 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j40.1906~\Omega</mrow>
-							<mrow>\vec{Z_{C5.3}} \amp= \frac{1}{j(2\pi 600)(5.3 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j50.0487~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 600)(6.6 \times 10^{-6})} \amp= -j40.1906~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 600)(5.3 \times 10^{-6})} \amp= -j50.0487~\Omega</mrow>
 						</md>
 					</p>
 					
@@ -5713,8 +5740,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{1}{\frac{1}{5~\Omega}+\frac{1}{-j20/9~\Omega}+\frac{1}{j5~\Omega}}</mrow>
-							<mrow>\amp= 1.9512 - j2.4390~\Omega</mrow>
+							\frac{1}{\frac{1}{5~\Omega}+\frac{1}{-j20/9~\Omega}+\frac{1}{j5~\Omega}} = 1.9512 - j2.4390~\Omega
 						</md>
 					</p>
 
@@ -5754,12 +5780,11 @@
   						</image>
 					</figure>
 
-					<p>Calculate the equivalent impedance of the circuit.</p>
+					<p>Calculate the equivalent impedance of the circuit as seen by the source.</p>
 					
 					<p>
 						<md>
-							<mrow>Z_{EQ1} \amp= \frac{(1.9512 - j2.4390~\Omega)(20~\Omega)}{(1.9512 - j2.4390~\Omega)+(20~\Omega)}</mrow>
-							<mrow>\amp= 2-j2~\Omega</mrow>
+							\frac{(1.9512 - j2.4390~\Omega)(20~\Omega)}{(1.9512 - j2.4390~\Omega)+(20~\Omega)} = 2-j2~\Omega
 						</md>
 					</p>
 
@@ -5869,8 +5894,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(j15~\Omega)(-j40~\Omega)}{(j15~\Omega)+(-j40~\Omega)}</mrow>
-							<mrow>\amp= j24~\Omega</mrow>
+							\frac{(j15~\Omega)(-j40~\Omega)}{(j15~\Omega)+(-j40~\Omega)} = j24~\Omega
 						</md>
 					</p>
 
@@ -5922,8 +5946,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= \frac{(j15~\Omega)(20~\Omega)}{(j15~\Omega)+(20~\Omega)}</mrow>
-							<mrow>\amp= 7.2+j9.6~\Omega</mrow>
+							\frac{(j15~\Omega)(20~\Omega)}{(j15~\Omega)+(20~\Omega)} = 7.2+j9.6~\Omega
 						</md>
 					</p>
 
@@ -6072,8 +6095,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{V'} \amp= \frac{(20~\Omega)(j5~\Omega)}{(20~\Omega)+(j5~\Omega)}</mrow>
-							<mrow>\amp= 1.1765 + j4.7059~\Omega</mrow>
+							\frac{(20~\Omega)(j5~\Omega)}{(20~\Omega)+(j5~\Omega)} = 1.1765 + j4.7059~\Omega
 						</md>
 					</p>
 
@@ -6098,8 +6120,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{((1.1765 + j4.7059~\Omega)+(12+j16~\Omega))(-j10~\Omega)}{((1.1765 + j4.7059~\Omega)+(12+j16~\Omega))+(-j10~\Omega)}</mrow>
-							<mrow>\amp= 4.5714 - j13.7143~\Omega</mrow>
+							\frac{((1.18 + j4.71~\Omega)+(12+j16~\Omega))(-j10~\Omega)}{((1.18 + j4.71~\Omega)+(12+j16~\Omega))+(-j10~\Omega)} = 4.5714 - j13.7143~\Omega
 						</md>
 					</p>
 
@@ -6107,8 +6128,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{I} \amp= (30+j20~\textrm{A})\left(\frac{4.5714 - j13.7143}{13.18+j20.71~\Omega}\right)</mrow>
-							<mrow>\amp= -2-j21.14~\textrm{A}</mrow>
+							(30+j20~\textrm{A})\left(\frac{4.5714 - j13.7143}{13.18+j20.71~\Omega}\right) = -2-j21.14~\textrm{A}
 						</md>
 					</p>
 
@@ -6176,10 +6196,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C20}} \amp= \frac{1}{j(2\pi 2000)(20 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j3.9789~\Omega</mrow>
-							<mrow>\vec{Z_{C10}} \amp= \frac{1}{j(2\pi 2000)(10 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j7.9577~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 2000)(20 \times 10^{-6})} \amp= -j3.9789~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 2000)(10 \times 10^{-6})} \amp= -j7.9577~\Omega</mrow>
 						</md>
 					</p>
 
@@ -6187,8 +6205,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi2000)(330 \times 10^{-6})</mrow>
-							<mrow>\amp= j3.8956~\Omega</mrow>
+							j(2\pi2000)(330 \times 10^{-6}) = j3.8956~\Omega
 						</md>
 					</p>
 
@@ -6266,8 +6283,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(12~\Omega)(-j11.9366~\Omega)}{(12~\Omega)+(-j11.9366~\Omega)}</mrow>
-							<mrow>\amp= 5.9682 - j6~\Omega</mrow>
+							\frac{(12~\Omega)(-j11.9366~\Omega)}{(12~\Omega)+(-j11.9366~\Omega)} = 5.9682 - j6~\Omega
 						</md>
 					</p>
 
@@ -6321,8 +6337,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= \frac{(12~\Omega)(j3.8956~\Omega)}{(12~\Omega)+(j3.8956~\Omega)}</mrow>
-							<mrow>\amp= 1.1441 + j3.5242~\Omega</mrow>
+							\frac{(12~\Omega)(j3.8956~\Omega)}{(12~\Omega)+(j3.8956~\Omega)} = 1.1441 + j3.5242~\Omega
 						</md>
 					</p>
 
@@ -6367,8 +6382,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{(1.1441 - j4.4336~\Omega)(-j3.9789~\Omega)}{(1.1441 - j4.4336~\Omega)+(-j3.9789~\Omega)}</mrow>
-							<mrow>\amp= 0.2513 - j2.1311~\Omega</mrow>
+							\frac{(1.1441 - j4.4336~\Omega)(-j3.9789~\Omega)}{(1.1441 - j4.4336~\Omega)+(-j3.9789~\Omega)} = 0.2513 - j2.1311~\Omega
 						</md>
 					</p>
 
@@ -6404,8 +6418,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ2}} \amp= \frac{(j3.8956~\Omega)(12~\Omega)}{(j3.8956~\Omega)+(12~\Omega)}</mrow>
-							<mrow>\amp= 1.1441 + j3.5242~\Omega</mrow>
+							\frac{(j3.8956~\Omega)(12~\Omega)}{(j3.8956~\Omega)+(12~\Omega)} = 1.1441 + j3.5242~\Omega
 						</md>
 					</p>
 
@@ -6497,7 +6510,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= ((((j60~\Omega)+(120~\Omega)) // 100~\Omega) + 150~\Omega) // j80~\Omega</mrow>
+							<mrow>\amp ((((j60~\Omega)+(120~\Omega)) // 100~\Omega) + 150~\Omega) // j80~\Omega</mrow>
 							<mrow>\amp= (((120+j60~\Omega) // 100~\Omega) + 150~\Omega) // j80~\Omega</mrow>
 							<mrow>\amp= ((57.6923 + j11.5385~\Omega) + (150~\Omega)) // j80~\Omega</mrow>
 							<mrow>\amp= (207.69 + j11.538~\Omega) // j80~\Omega</mrow>
@@ -6509,8 +6522,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{V'} \amp= (5~\textrm{V})\frac{25.8026 + j68.6277~\Omega}{(200~\Omega)+(25.8026 + j68.6277~\Omega)}</mrow>
-							<mrow>\amp= 0.9458 + j1.2322~\textrm{V}</mrow>
+							(5~\textrm{V})\frac{25.8026 + j68.6277~\Omega}{(200~\Omega)+(25.8026 + j68.6277~\Omega)} = 0.9458 + j1.2322~\textrm{V}
 						</md>
 					</p>
 
@@ -6593,8 +6605,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= \frac{(j80~\Omega)(200~\Omega)}{(j80~\Omega)+(200~\Omega)}</mrow>
-							<mrow>\amp= 27.5862 + j68.9655~\Omega</mrow>
+							\frac{(j80~\Omega)(200~\Omega)}{(j80~\Omega)+(200~\Omega)} = 27.5862 + j68.9655~\Omega
 						</md>
 					</p>
 
@@ -6619,7 +6630,9 @@
 
 					<p>
 						<md>
-							<mrow>\vec{V''} \amp= (10~\textrm{V} \angle 60^\circ)\left(\frac{(120+j60~\Omega) // (150~\Omega + (27.5862 + j68.9655~\Omega))}{100~\Omega + ((120+j60~\Omega) // (150~\Omega + (27.5862 + j68.9655~\Omega)))}\right)\left(\frac{(27.5862 + j68.9655~\Omega)}{150~\Omega + (27.5862 + j68.9655~\Omega)}\right)</mrow>
+							<mrow>\amp(10~\textrm{V} \angle 60^\circ)</mrow>
+							<mrow>\amp\left(\frac{(120+j60~\Omega) // (150~\Omega + (27.6 + j69.0~\Omega))}{100~\Omega + ((120+j60~\Omega) // (150~\Omega + (27.6 + j69.0~\Omega)))}\right)</mrow>
+							<mrow>\amp\left(\frac{(27.6 + j69.0~\Omega)}{150~\Omega + (27.6 + j69.0~\Omega)}\right)</mrow>
 							<mrow>\amp= -0.8951 + j1.5124~\textrm{V}</mrow>
 						</md>
 					</p>
@@ -6661,7 +6674,10 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_3} \amp= (600~\textrm{mA} \angle 45^\circ)\left(\frac{((((200~\Omega // j80~\Omega) + 150~\Omega) // 100~\Omega) + j60~\Omega) // 120~\Omega}{((((200~\Omega // j80~\Omega) + 150~\Omega) // 100~\Omega) + j60~\Omega)}\right)\left(\frac{((200~\Omega // j80~\Omega) + 150~\Omega) // 100~\Omega}{((200~\Omega // j80~\Omega) + 150~\Omega)}\right)\left(\frac{200~\Omega // j80~\Omega}{j80~\Omega}\right)</mrow>
+							<mrow>\vec{I_3} \amp= (600~\textrm{mA} \angle 45^\circ)</mrow>
+							<mrow>\amp\left(\frac{((((200~\Omega // j80~\Omega) + 150~\Omega) // 100~\Omega) + j60~\Omega) // 120~\Omega}{((((200~\Omega // j80~\Omega) + 150~\Omega) // 100~\Omega) + j60~\Omega)}\right)</mrow>
+							<mrow>\amp\left(\frac{((200~\Omega // j80~\Omega) + 150~\Omega) // 100~\Omega}{((200~\Omega // j80~\Omega) + 150~\Omega)}\right)</mrow>
+							<mrow>\amp\left(\frac{200~\Omega // j80~\Omega}{j80~\Omega}\right)</mrow>
 							<mrow>\amp= 115.75 - j22.385~\textrm{mA}</mrow>
 						</md>
 					</p>
@@ -6706,8 +6722,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{1}{\frac{1}{5~\Omega}+\frac{1}{-j20/9~\Omega}+\frac{1}{j5~\Omega}}</mrow>
-							<mrow>\amp= 1.9512 - j2.4390~\Omega</mrow>
+							\frac{1}{\frac{1}{5~\Omega}+\frac{1}{-j20/9~\Omega}+\frac{1}{j5~\Omega}} = 1.9512 - j2.4390~\Omega
 						</md>
 					</p>
 
@@ -6732,8 +6747,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_S} \amp= \frac{-j100~\textrm{V}}{20~\Omega}</mrow>
-							<mrow>\amp= -j5~\textrm{A}</mrow>
+							\frac{-j100~\textrm{V}}{20~\Omega} = -j5~\textrm{A}
 						</md>
 					</p>
 
@@ -6758,8 +6772,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{(20~\Omega)(1.95-j2.44~\Omega)}{(20~\Omega)+(1.95-j2.44~\Omega)}</mrow>
-							<mrow>\amp= 2-j2~\Omega</mrow>
+							\frac{(20~\Omega)(1.95-j2.44~\Omega)}{(20~\Omega)+(1.95-j2.44~\Omega)} = 2-j2~\Omega
 						</md>
 					</p>
 
@@ -6783,9 +6796,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_{TOTAL}} \amp= (10~\textrm{A} \angle 0^\circ) + (j5~\textrm{A})</mrow>
-							<mrow>\amp= (10~\textrm{A}) + (j5~\textrm{A})</mrow>
-							<mrow>\amp= 10+j5~\textrm{A}</mrow>
+							(10~\textrm{A} \angle 0^\circ) + (j5~\textrm{A}) = 10+j5~\textrm{A}
 						</md>
 					</p>
 
@@ -6842,10 +6853,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_{S1}} \amp= frac{5\cos(15^\circ)+j5\sin(15^\circ)~\textrm{V}}{20~\Omega}</mrow>
-							<mrow>\amp= 0.24+j0.06~\textrm{A}</mrow>
-							<mrow>\vec{I_{S2}} \amp= \frac{30~\textrm{V}}{-j40~\Omega}</mrow>
-							<mrow>\amp= j0.75~\textrm{A}</mrow>
+							<mrow>\frac{5\cos(15^\circ)+j5\sin(15^\circ)~\textrm{V}}{20~\Omega} \amp= 0.24+j0.06~\textrm{A}</mrow>
+							<mrow>\frac{30~\textrm{V}}{-j40~\Omega} \amp= j0.75~\textrm{A}</mrow>
 						</md>
 					</p>
 
@@ -6871,8 +6880,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{1}{\frac{1}{20~\Omega}+\frac{1}{j15~\Omega}+\frac{1}{-j40~\Omega}}</mrow>
-							<mrow>\amp= 11.8033 + j9.8361~\Omega</mrow>
+							\frac{1}{\frac{1}{20~\Omega}+\frac{1}{j15~\Omega}+\frac{1}{-j40~\Omega}} = 11.8033 + j9.8361~\Omega
 						</md>
 					</p>
 
@@ -6880,8 +6888,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_{TOTAL}} \amp= (0.24+j0.06~\textrm{A}) + (j0.75~\textrm{A})</mrow>
-							<mrow>\amp= 0.2415 + j0.8147~\textrm{A}</mrow>
+							(0.24+j0.06~\textrm{A}) + (j0.75~\textrm{A}) = 0.2415 + j0.8147~\textrm{A}
 						</md>
 					</p>
 
@@ -6950,10 +6957,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_1} \amp= \frac{20~\textrm{V}}{6~\Omega}</mrow>
-							<mrow>\amp= 3.33~\textrm{A}</mrow>
-							<mrow>\vec{I_2} \amp= \frac{30~\textrm{V}}{-j7~\Omega}</mrow>
-							<mrow>\amp= j4.28~\textrm{A}</mrow>
+							<mrow>\frac{20~\textrm{V}}{6~\Omega} \amp= 3.33~\textrm{A}</mrow>
+							<mrow>\frac{30~\textrm{V}}{-j7~\Omega} \amp= j4.28~\textrm{A}</mrow>
 						</md>
 					</p>
 
@@ -6982,8 +6987,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(6~\Omega)(-j5~\Omega)}{(6~\Omega)+(-j5~\Omega)}</mrow>
-							<mrow>\amp= 2.4590 - j2.9508~\Omega</mrow>
+							\frac{(6~\Omega)(-j5~\Omega)}{(6~\Omega)+(-j5~\Omega)} = 2.4590 - j2.9508~\Omega
 						</md>
 					</p>
 
@@ -7011,8 +7015,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{V_S} \amp= (3.33~\textrm{A})(2.46-j2.95~\Omega)</mrow>
-							<mrow>\amp= 8.20-j9.84~\textrm{V}</mrow>
+							(3.33~\textrm{A})(2.46-j2.95~\Omega) = 8.20-j9.84~\textrm{V}
 						</md>
 					</p>
 
@@ -7059,8 +7062,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_S} \amp= \frac{8.20-j9.84~\textrm{V}}{2.46+j1.05~\Omega}</mrow>
-							<mrow>\amp= 1.38-j4.59~\textrm{A}</mrow>
+							\frac{8.20-j9.84~\textrm{V}}{2.46+j1.05~\Omega} = 1.38-j4.59~\textrm{A}
 						</md>
 					</p>
 
@@ -7086,8 +7088,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_{TOTAL}} \amp= (1.38-j4.59~\textrm{A})+(j4.28~\textrm{A})</mrow>
-							<mrow>\amp= 1.38-j0.30~\textrm{A}</mrow>
+							(1.38-j4.59~\textrm{A})+(j4.28~\textrm{A}) = 1.38-j0.30~\textrm{A}
 						</md>
 					</p>
 
@@ -7095,8 +7096,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z''} \amp= \frac{(-j7~\Omega)(2.46+j1.05~\Omega)}{(-j7~\Omega)+(2.46+j1.05~\Omega)}</mrow>
-							<mrow>\amp= 2.91+j0.03~\Omega</mrow>
+							\frac{(-j7~\Omega)(2.46+j1.05~\Omega)}{(-j7~\Omega)+(2.46+j1.05~\Omega)} = 2.91+j0.03~\Omega
 						</md>
 					</p>
 
@@ -7116,12 +7116,11 @@
   						</image>
 					</figure>
 
-					<p>Calculate the equivalent impedance of the circuit.</p>
+					<p>Calculate the equivalent impedance of the circuit as seen by the source.</p>
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{(2.91+j0.03~\Omega)(11~\Omega)}{(2.91+j0.03~\Omega)+(11~\Omega)}</mrow>
-							<mrow>\amp= 2.2989 + j0.0208~\Omega</mrow>
+							\frac{(2.91+j0.03~\Omega)(11~\Omega)}{(2.91+j0.03~\Omega)+(11~\Omega)} = 2.2989 + j0.0208~\Omega
 						</md>
 					</p>
 
@@ -7172,8 +7171,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi50000)(500 \times 10^{-9})}</mrow>
-							<mrow>\amp= -j6.3662~\Omega</mrow>
+							\frac{1}{j(2\pi50000)(500 \times 10^{-9})} = -j6.3662~\Omega
 						</md>
 					</p>
 
@@ -7181,8 +7179,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi50000)(25 \times 10^{-6})</mrow>
-							<mrow>\amp= j7.8540~\Omega</mrow>
+							j(2\pi50000)(25 \times 10^{-6}) = j7.8540~\Omega
 						</md>
 					</p>
 
@@ -7220,10 +7217,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_S} \amp= \frac{15~\textrm{V}}{9~\Omega}</mrow>
-							<mrow>\amp= 1.67~\textrm{A}</mrow>
-							<mrow>\vec{V_S} \amp= (3~\textrm{A})(j7.8540~\Omega)~\Omega</mrow>
-							<mrow>\amp= j23.56~\textrm{V}</mrow>
+							<mrow>\frac{15~\textrm{V}}{9~\Omega} \amp= 1.67~\textrm{A}</mrow>
+							<mrow>(3~\textrm{A})(j7.8540~\Omega) \amp= j23.56~\textrm{V}</mrow>
 						</md>
 					</p>
 
@@ -7247,6 +7242,13 @@
 					</figure>
 
 					<p>The 12<nbsp />&#8486; resistor is connected in parallel with the 9<nbsp />&#8486; resistor.</p>
+					
+					<p>
+						<md>
+							\frac{(12~\Omega)(9~\Omega)}{9~\Omega + 12~\Omega} = 5.1429~\Omega
+						</md>
+						
+					</p>
 
 					<figure>
 						<caption></caption>
@@ -7270,8 +7272,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{V_{S2}} \amp= (1.67~\textrm{A})(5.14~\Omega)</mrow>
-							<mrow>\amp= 8.57~\textrm{V}</mrow>
+							(1.67~\textrm{A})(5.14~\Omega) = 8.57~\textrm{V}
 						</md>
 					</p>
 
@@ -7296,8 +7297,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{V_{TOTAL}} \amp= (j23.56~\textrm{V}) - (8.57~\textrm{V})</mrow>
-							<mrow>\amp= -8.5714 + j23.5619~\textrm{V}</mrow>
+							(j23.56~\textrm{V}) - (8.57~\textrm{V}) = -8.5714 + j23.5619~\textrm{V}
 						</md>
 					</p>
 
@@ -7369,10 +7369,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C1.6}} \amp= \frac{1}{j(2\pi100)(0.0016)}</mrow>
-							<mrow>\amp= -j0.9947~\Omega</mrow>
-							<mrow>\vec{Z_{C0.3}} \amp= \frac{1}{j(2\pi100)(0.0003)}</mrow>
-							<mrow>\amp= -j5.3052~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi100)(0.0016)} \amp= -j0.9947~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi100)(0.0003)} \amp= -j5.3052~\Omega</mrow>
 						</md>
 					</p>
 
@@ -7408,10 +7406,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_S} \amp= \frac{3~\textrm{V}}{2~\Omega}</mrow>
-							<mrow>\amp= 1.5~\textrm{A}</mrow>
-							<mrow>\vec{V_S} \amp= (-2\vec{V})(5)</mrow>
-							<mrow>\amp= -10\vec{V}</mrow>
+							<mrow>\frac{3~\textrm{V}}{2~\Omega} \amp= 1.5~\textrm{A}</mrow>
+							<mrow>(-(2~\textrm{A/V})\vec{V})(5~\Omega) \amp= -10\vec{V}</mrow>
 						</md>
 					</p>
 
@@ -7438,8 +7434,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(2~\Omega)(-j0.995~\Omega)}{(2~\Omega)+(-j0.995~\Omega)}</mrow>
-							<mrow>\amp= 0.3966 - j0.7975~\Omega</mrow>
+							\frac{(2~\Omega)(-j0.995~\Omega)}{(2~\Omega)+(-j0.995~\Omega)} = 0.3966 - j0.7975~\Omega
 						</md>
 					</p>
 
@@ -7464,8 +7459,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_S} \amp= \frac{10\vec{V}}{5-j5.31}</mrow>
-							<mrow>\amp= (0.94+j1.00)\vec{V}</mrow>
+							\frac{10\vec{V}}{5-j5.31} = (0.94+j1.00)\vec{V}
 						</md>
 					</p>
 
@@ -7490,8 +7484,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{(0.3966 - j0.7975~\Omega)(5 - j5.3052~\Omega)}{(0.3966 - j0.7975~\Omega)+(5 - j5.3052~\Omega)}</mrow>
-							<mrow>\amp= 0.3774 - j0.7020~\Omega</mrow>
+							\frac{(0.3966 - j0.7975~\Omega)(5 - j5.3052~\Omega)}{(0.3966 - j0.7975~\Omega)+(5 - j5.3052~\Omega)} = 0.3774 - j0.7020~\Omega
 						</md>
 					</p>
 
@@ -7582,8 +7575,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi50)(750 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j4.2441~\Omega</mrow>
+							\frac{1}{j(2\pi50)(750 \times 10^{-6})} = -j4.2441~\Omega
 						</md>
 					</p>
 
@@ -7591,8 +7583,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi50)(0.025)</mrow>
-							<mrow>\amp= j7.8540~\Omega</mrow>
+							j(2\pi50)(0.025) = j7.8540~\Omega
 						</md>
 					</p>
 
@@ -7698,8 +7689,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi1500)(2 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j53.0516~\Omega</mrow>
+							\frac{1}{j(2\pi1500)(2 \times 10^{-6})} = -j53.0516~\Omega
 						</md>
 					</p>
 
@@ -7707,8 +7697,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_L} \amp= j(2\pi1500)(0.01)</mrow>
-							<mrow>\amp= j94.2478~\Omega</mrow>
+							j(2\pi1500)(0.01) = j94.2478~\Omega
 						</md>
 					</p>
 
@@ -7744,8 +7733,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{EQ}} \amp= \frac{(50+j94.2~\Omega)(100-j53~\Omega)}{(50+j94.2~\Omega)+(100-j53~\Omega)}</mrow>
-							<mrow>\amp= 73.5207 + j24.9562~\Omega</mrow>
+							\frac{(50+j94.2~\Omega)(100-j53~\Omega)}{(50+j94.2~\Omega)+(100-j53~\Omega)} = 73.5207 + j24.9562~\Omega
 						</md>
 					</p>
 
@@ -7753,8 +7741,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{I_X} \amp= 60~\textrm{mA}\left(\frac{73.5207 + j24.9562~\Omega}{100-j53.05}\right)</mrow>
-							<mrow>\amp= 28.2248 + j29.9474~\textrm{mA}</mrow>
+							60~\textrm{mA}\left(\frac{73.5207 + j24.9562~\Omega}{100-j53.05}\right) = 28.2248 + j29.9474~\textrm{mA}
 						</md>
 					</p>
 
@@ -7834,8 +7821,7 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_C} \amp= \frac{1}{j(2\pi2000)(10 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j7.9577~\Omega</mrow>
+							\frac{1}{j(2\pi2000)(10 \times 10^{-6})} = -j7.9577~\Omega
 						</md>
 					</p>
 
@@ -7843,10 +7829,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{L600}} \amp= j(2\pi 2000)(600\times10^{-6})</mrow>
-							<mrow>\amp= j7.5398~\Omega</mrow>
-							<mrow>\vec{Z_{L400}} \amp= j(2\pi 2000)(400\times10^{-6})</mrow>
-							<mrow>\amp= j5.0265~\Omega</mrow>
+							<mrow>j(2\pi 2000)(600\times10^{-6}) \amp= j7.5398~\Omega</mrow>
+							<mrow>j(2\pi 2000)(400\times10^{-6}) \amp= j5.0265~\Omega</mrow>
 						</md>
 					</p>
 
@@ -7901,8 +7885,7 @@
 
 					<p>
 						<md>
-							<mrow>\vec{Z'} \amp= \frac{(-j7.9577~\Omega)(6+j5.0265~\Omega)}{(-j7.9577~\Omega)+(6+j5.0265~\Omega)}</mrow>
-							<mrow>\amp= 8.5207 - j3.7951~\Omega</mrow>
+							\frac{(-j7.9577~\Omega)(6+j5.0265~\Omega)}{(-j7.9577~\Omega)+(6+j5.0265~\Omega)} = 8.5207 - j3.7951~\Omega
 						</md>
 					</p>
 
@@ -7999,10 +7982,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C200}} \amp= \frac{1}{j(2\pi 60)(200 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j13.2629~\Omega</mrow>
-							<mrow>\vec{Z_{C500}} \amp= \frac{1}{j(2\pi 60)(500 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j5.3052~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 60)(200 \times 10^{-6})} \amp= -j13.2629~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 60)(500 \times 10^{-6})} \amp= -j5.3052~\Omega</mrow>
 						</md>
 					</p>
 
@@ -8127,11 +8108,11 @@
 
 					<p>The Norton equivalent current is equal to <minus />0.2195+j0.5158<nbsp />A.</p>
 
-					<p>Use Ohm's law to calculate the Norton equivalent resistance.</p>
+					<p>Use Ohm's law to calculate the Norton equivalent impedance.</p>
 					
 					<p>
 						<md>
-							<mrow>Z_N \amp= \frac{0.2456 + j2.5840~\textrm{V}}{-0.2195 + j0.5158~\textrm{A}}</mrow>
+							<mrow>\vec{Z_N} \amp= \frac{0.2456 + j2.5840~\textrm{V}}{-0.2195 + j0.5158~\textrm{A}}</mrow>
 							<mrow>\amp= 4.0703 - j2.2082</mrow>
 						</md>
 					</p>
@@ -8140,7 +8121,7 @@
 					
 					<p>
 						<md>
-							<mrow>C \amp= -\frac{1}{2\pi 60 (2.2082)}</mrow>
+							<mrow>C \amp= -\frac{1}{2\pi 60 (-2.2082)}</mrow>
 							<mrow>\amp= 1.2~\textrm{mF}</mrow>
 						</md>
 					</p>
@@ -8195,10 +8176,8 @@
 					
 					<p>
 						<md>
-							<mrow>\vec{Z_{C20}} \amp= \frac{1}{j(2\pi 300)(20 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j26.5258~\Omega</mrow>
-							<mrow>\vec{Z_{C100}} \amp= \frac{1}{j(2\pi 300)(100 \times 10^{-6})}</mrow>
-							<mrow>\amp= -j5.3052~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 300)(20 \times 10^{-6})} \amp= -j26.5258~\Omega</mrow>
+							<mrow>\frac{1}{j(2\pi 300)(100 \times 10^{-6})} \amp= -j5.3052~\Omega</mrow>
 						</md>
 					</p>
 
@@ -8324,11 +8303,11 @@
 
 					<p>The Norton equivalent current is equal to 0.4615<minus />j0.2494<nbsp />A.</p>
 
-					<p>Use Ohm's law to calculate the Norton equivalent resistance.</p>
+					<p>Use Ohm's law to calculate the Norton equivalent impedance.</p>
 					
 					<p>
 						<md>
-							<mrow>Z_N \amp= \frac{3.8098 - j3.7436~\textrm{V}}{0.4615 - j0.2494~\textrm{A}}</mrow>
+							<mrow>\vec{Z_N} \amp= \frac{3.8098 - j3.7436~\textrm{V}}{0.4615 - j0.2494~\textrm{A}}</mrow>
 							<mrow>\amp= 9.7815 - j2.8258</mrow>
 						</md>
 					</p>
@@ -8337,7 +8316,7 @@
 					
 					<p>
 						<md>
-							<mrow>C \amp= -\frac{1}{2\pi 300 (2.8258)}</mrow>
+							<mrow>C \amp= -\frac{1}{2\pi 300 (-2.8258)}</mrow>
 							<mrow>\amp= 187.74~\mu\textrm{F}</mrow>
 						</md>
 					</p>
@@ -8927,7 +8906,7 @@
 
 			<exercise xml:id="ch9-filters-exercise2">
 				<statement>
-					<p>Given the circuit shown in <xref ref="filters-exercse2-diagram" />, determine the filter type. Then, calculate the cutoff frequency and quality factor of the circuit. The circuit parameters are <m>L = 0.1~\textrm{H}</m>, <m>R = 100~\Omega</m>, and <m>C=40~\mu\textrm{F}</m>.</p>
+					<p>Given the circuit shown in <xref ref="filters-exercse2-diagram" />, determine the filter type. Then, calculate the cutoff frequency and quality factor of the circuit. The circuit parameters are: <m>L = 0.1~\textrm{H}</m>, <m>R = 100~\Omega</m>, and <m>C=40~\mu\textrm{F}</m>.</p>
 
 					<figure xml:id="filters-exercse2-diagram">
   						<caption>Circuit diagram corresponding to <xref ref="ch9-filters-exercise2" />.</caption>
@@ -9001,23 +8980,20 @@
 					
 					<p>This is a parallel RLC circuit with a homogeneous differential equation given by <xref ref="ch7-homogeneous-parallelrlc-diffeq" />.</p>
 					
-					<p>The transfer function of this circuit is</p>
-					
-					<p>
-						<md>H(j\omega) = \frac{-\omega^2}{-\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}</md>.
-					</p>
-
-					<p>Plug in parameter values using base units.</p>
-					
-					<p>
-						<md>H(j\omega) = \frac{-\omega^2}{-\omega^2 + 250j\omega + 250000}</md>
-					</p>
-					
-					<p>Use <xref ref="ch7-eq-parallelrlc-omega0" /> to alculate the resonant frequency of the circuit.</p>
+					<p>The transfer function of this circuit is given below.</p>
 					
 					<p>
 						<md>
-							<mrow>\omega_0 \amp= \frac{1}{\sqrt{(0.1)(40 \times 10^{-6})}}</mrow>
+							<mrow>H(j\omega) \amp= \frac{-\omega^2}{-\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}</mrow>
+							<mrow>\amp= \frac{-\omega^2}{-\omega^2 + 250j\omega + 250000}</mrow>
+						</md>
+					</p>
+					
+					<p>Use <xref ref="ch7-eq-resonant-frequency" /> to calculate the resonant frequency of the circuit.</p>
+					
+					<p>
+						<md>
+							<mrow>\omega_0 \amp= \sqrt{250000}</mrow>
 							<mrow>\amp= 500~\textrm{rad/s}</mrow>
 						</md>
 					</p>
@@ -9132,16 +9108,13 @@
 
 					<p>This circuit is a band-stop filter. (Refer to <xref ref="ch9-filtertype-table" />.)</p>
 					
-					<p>The transfer function of this circuit is</p>
+					<p>The transfer function of this circuit is given below.</p>
 					
 					<p>
-						<md>H(j\omega) = \frac{-\omega^2 + \frac{1}{LC}}{\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}</md>.
-					</p>
-
-					<p>Plug in parameter values using base units.</p>
-					
-					<p>
-						<md>H(j\omega) = \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \times 10^{10}}</md>
+						<md>
+							<mrow>H(j\omega) \amp= \frac{-\omega^2 + \frac{1}{LC}}{\omega^2 + \frac{1}{RC}j\omega + \frac{1}{LC}}</mrow>
+							<mrow>\amp= \frac{-\omega^2 + 1 \times 10^{10}}{\omega^2 + 100000j\omega + 1 \times 10^{10}}</mrow>
+						</md>
 					</p>
 
 					<p>Use <xref ref="ch9-cutoff-frequency-second-order" /> to calculate the center frequency.</p>

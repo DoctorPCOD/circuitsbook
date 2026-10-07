@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch11-sdomain">
@@ -550,15 +573,15 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title"><span class="process-math">\(s\)</span>-Domain Analysis</span>
 </h1>
 <section class="introduction" id="ch11-sdomain-2">
-<div class="para" id="ch11-sdomain-2-1">It is possible to fully analyze a circuit in the <span class="process-math">\(s\)</span>-domain and use the inverse Laplace transform to derive a time-domain function. While this is not always easier than a differential equation analysis, it is frequently more convenient, especially when the equation is non-constant input non-homogeneous or when the circuit is higher than second order.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-sdomain-2-1">It is possible to fully analyze a circuit in the <span class="process-math">\(s\)</span> domain and use the inverse Laplace transform to derive a time-domain function. While this is not always easier than a differential equation analysis, it is frequently more convenient, especially when the equation is non-constant input non-homogeneous or when the circuit is higher than second order.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch11-sdomain-2-2">To perform an <span class="process-math">\(s\)</span>-domain analysis, transform each individual circuit component into the s domain. This is similar to phasor analysis, with the notable difference being that <span class="process-math">\(s\)</span>-domain analysis includes initial conditions in the circuit transformation. Once all circuit elements are transformed into the <span class="process-math">\(s\)</span>-domain, perform any circuit analysis technique to obtain an equation for <span class="process-math">\(V(s)\)</span> or <span class="process-math">\(I(s)\text{.}\)</span> Then perform an inverse Laplace transform to obtain a time-domain expression.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-sdomain-2-2">To perform an <span class="process-math">\(s\)</span>-domain analysis, transform each individual circuit component into the <span class="process-math">\(s\)</span> domain. This is similar to phasor analysis, with the notable difference being that <span class="process-math">\(s\)</span>-domain analysis includes initial conditions in the circuit transformation. Once all circuit elements are transformed into the <span class="process-math">\(s\)</span> domain, perform any circuit analysis technique to obtain an equation for <span class="process-math">\(V(s)\)</span> or <span class="process-math">\(I(s)\text{.}\)</span> Then perform an inverse Laplace transform to obtain a time-domain equation.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sdomain-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
 <section class="subsection" id="ch11-resistor">
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Resistor</span>
 </h2>
-<div class="para" id="ch11-resistor-2">The voltage and current properties of a resistor are defined by Ohm’s law: <a href="ch2-ohmslaw.html#ch2-ohmslaw-2-2-1" class="xref" data-knowl="./knowl/xref/ohmslawveq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.1">(2.4.1)</a>. Converting to the <span class="process-math">\(s\)</span>-domain, the relationship between voltage and current becomes that defined in <a href="ch11-sdomain.html#ch11-eq-s-domain-resistor" class="xref" data-knowl="./knowl/xref/ch11-eq-s-domain-resistor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3.1">(11.3.1)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-resistor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-resistor-2">The voltage and current properties of a resistor are defined by Ohm’s law: <a href="ch2-ohmslaw.html#ch2-ohmslaw-2-2-1" class="xref" data-knowl="./knowl/xref/ohmslawveq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.4.1">(2.4.1)</a>. Converting to the <span class="process-math">\(s\)</span> domain, the relationship between voltage and current becomes that defined in <a href="ch11-sdomain.html#ch11-eq-s-domain-resistor" class="xref" data-knowl="./knowl/xref/ch11-eq-s-domain-resistor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3.1">(11.3.1)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-resistor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch11-resistor-3">
 <div class="displaymath process-math" id="ch11-eq-s-domain-resistor">
@@ -568,17 +591,17 @@ V(s) = RI(s)\tag{11.3.1}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-resistor-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch11-resistor-4">Therefore, in the <span class="process-math">\(s\)</span>-domain, a resistor is expressed simply as a resistor. This transform is depicted in <a href="ch11-sdomain.html#fig-s-domain-resistor" class="xref" data-knowl="./knowl/xref/fig-s-domain-resistor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.1">Figure 11.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-resistor-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-resistor-4">Therefore, in the <span class="process-math">\(s\)</span> domain, a resistor is expressed simply as a resistor. This transform is depicted in <a href="ch11-sdomain.html#fig-s-domain-resistor" class="xref" data-knowl="./knowl/xref/fig-s-domain-resistor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.1">Figure 11.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-resistor-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-s-domain-resistor"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/ch11-fig-s-domain-resistor.svg" role="img" class="contained" alt="Left: resistor R with voltage drop v(t) and current i(t). Right: resistor R with voltage drop V(s) and current I(s)."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of a resistor from the time domain into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.1"><a tabindex="-1" href="#fig-s-domain-resistor" title="Copy heading and permalink for Figure 11.3.1" aria-label="Copy heading and permalink for Figure 11.3.1">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of a resistor from the time domain into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.1"><a tabindex="-1" href="#fig-s-domain-resistor" title="Copy heading and permalink for Figure 11.3.1" aria-label="Copy heading and permalink for Figure 11.3.1">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Subsection 11.3.1: Resistor"><a tabindex="-1" href="#ch11-resistor" title="Copy heading and permalink for Subsection 11.3.1: Resistor" aria-label="Copy heading and permalink for Subsection 11.3.1: Resistor">🔗</a></div>
 </section>
 <section class="subsection" id="ch11-capacitor">
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Capacitor</span>
 </h2>
-<div class="para" id="ch11-capacitor-2">The voltage and current properties of a capacitor are defined in <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>. In the <span class="process-math">\(s\)</span>-domain, this corresponds to the relationship shown in <a href="ch11-sdomain.html#ch11-eq-s-domain-capacitor" class="xref" data-knowl="./knowl/xref/ch11-eq-s-domain-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3.2">(11.3.2)</a> (where <span class="process-math">\(v(0)\)</span> is equal to the initial voltage dropped over the capacitor at <span class="process-math">\(t=0\)</span>) and derived in <a href="ch11-sdomain.html#ch11-s-domain-capacitor-proof" class="xref" data-knowl="./knowl/xref/ch11-s-domain-capacitor-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 11.3.2.1">Derivation 11.3.2.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-capacitor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-capacitor-2">The voltage and current properties of a capacitor are defined in <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>. In the <span class="process-math">\(s\)</span> domain, this corresponds to the relationship shown in <a href="ch11-sdomain.html#ch11-eq-s-domain-capacitor" class="xref" data-knowl="./knowl/xref/ch11-eq-s-domain-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3.2">(11.3.2)</a> (where <span class="process-math">\(v(0)\)</span> is equal to the initial voltage dropped over the capacitor at <span class="process-math">\(t=0\)</span>) and derived in <a href="ch11-sdomain.html#ch11-s-domain-capacitor-proof" class="xref" data-knowl="./knowl/xref/ch11-s-domain-capacitor-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 11.3.2.1">Derivation 11.3.2.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-capacitor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch11-capacitor-3">
 <div class="displaymath process-math" id="ch11-eq-s-domain-capacitor">
@@ -603,17 +626,17 @@ V(s) \amp= \frac{1}{sC}I(s) + \frac{v(0)}{s}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Derivation 11.3.2.1"><a tabindex="-1" href="#ch11-s-domain-capacitor-proof" title="Copy heading and permalink for Derivation 11.3.2.1" aria-label="Copy heading and permalink for Derivation 11.3.2.1">🔗</a></div>
 </article></details>
-<div class="para" id="ch11-capacitor-5">Therefore, in the s domain, a capacitor is expressed as a capacitor (with impedance of <span class="process-math">\((sC)^{-1}\)</span>) in series with a voltage source corresponding to the initial voltage drop over the capacitor. This transform is depicted in <a href="ch11-sdomain.html#fig-s-domain-capacitor" class="xref" data-knowl="./knowl/xref/fig-s-domain-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.2">Figure 11.3.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-capacitor-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-capacitor-5">Therefore, in the <span class="process-math">\(s\)</span> domain, a capacitor is expressed as a capacitor (with impedance of <span class="process-math">\((sC)^{-1}\)</span>) in series with a voltage source corresponding to the initial voltage drop over the capacitor. This transform is depicted in <a href="ch11-sdomain.html#fig-s-domain-capacitor" class="xref" data-knowl="./knowl/xref/fig-s-domain-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.2">Figure 11.3.2</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-capacitor-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-s-domain-capacitor"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch11-fig-s-domain-capacitor.svg" role="img" class="contained" alt="Left: capacitor C with voltage drop v(t) and current i(t). Right: capacitor 1/(sC) in series with voltage source v(0)/s with collective voltage drop V(s) and current I(s)."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of a capacitor from the time domain into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.2"><a tabindex="-1" href="#fig-s-domain-capacitor" title="Copy heading and permalink for Figure 11.3.2" aria-label="Copy heading and permalink for Figure 11.3.2">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of a capacitor from the time domain into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.2"><a tabindex="-1" href="#fig-s-domain-capacitor" title="Copy heading and permalink for Figure 11.3.2" aria-label="Copy heading and permalink for Figure 11.3.2">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Subsection 11.3.2: Capacitor"><a tabindex="-1" href="#ch11-capacitor" title="Copy heading and permalink for Subsection 11.3.2: Capacitor" aria-label="Copy heading and permalink for Subsection 11.3.2: Capacitor">🔗</a></div>
 </section>
 <section class="subsection" id="ch11-inductor">
 <h2 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inductor</span>
 </h2>
-<div class="para" id="ch11-inductor-2">The voltage and current properties of an inductor are defined in <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a>. In the <span class="process-math">\(s\)</span>-domain, this corresponds to the relationship shown in <a href="ch11-sdomain.html#ch11-eq-s-domain-inductor" class="xref" data-knowl="./knowl/xref/ch11-eq-s-domain-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3.3">(11.3.3)</a> (where <span class="process-math">\(i(0)\)</span> is equal to the initial current through the inductor at <span class="process-math">\(t=0\)</span>) and derived in <a href="ch11-sdomain.html#ch11-s-domain-inductor-proof" class="xref" data-knowl="./knowl/xref/ch11-s-domain-inductor-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 11.3.3.1">Derivation 11.3.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-inductor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-inductor-2">The voltage and current properties of an inductor are defined in <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a>. In the <span class="process-math">\(s\)</span> domain, this corresponds to the relationship shown in <a href="ch11-sdomain.html#ch11-eq-s-domain-inductor" class="xref" data-knowl="./knowl/xref/ch11-eq-s-domain-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 11.3.3">(11.3.3)</a> (where <span class="process-math">\(i(0)\)</span> is equal to the initial current through the inductor at <span class="process-math">\(t=0\)</span>) and derived in <a href="ch11-sdomain.html#ch11-s-domain-inductor-proof" class="xref" data-knowl="./knowl/xref/ch11-s-domain-inductor-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 11.3.3.1">Derivation 11.3.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-inductor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch11-inductor-3">
 <div class="displaymath process-math" id="ch11-eq-s-domain-inductor">
@@ -638,10 +661,10 @@ I(s) \amp= \frac{1}{sL}V(s) + \frac{i(0)}{s}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Derivation 11.3.3.1"><a tabindex="-1" href="#ch11-s-domain-inductor-proof" title="Copy heading and permalink for Derivation 11.3.3.1" aria-label="Copy heading and permalink for Derivation 11.3.3.1">🔗</a></div>
 </article></details>
-<div class="para" id="ch11-inductor-5">Therefore, in the <span class="process-math">\(s\)</span>-domain, an inductor is expressed as an inductor (with impedance of <span class="process-math">\(sL\)</span>) in parallel with a current source corresponding to the initial current through the inductor. This transform is depicted in <a href="ch11-sdomain.html#fig-s-domain-inductor" class="xref" data-knowl="./knowl/xref/fig-s-domain-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.3">Figure 11.3.3</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-inductor-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-inductor-5">Therefore, in the <span class="process-math">\(s\)</span> domain, an inductor is expressed as an inductor (with impedance of <span class="process-math">\(sL\)</span>) in parallel with a current source corresponding to the initial current through the inductor. This transform is depicted in <a href="ch11-sdomain.html#fig-s-domain-inductor" class="xref" data-knowl="./knowl/xref/fig-s-domain-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.3">Figure 11.3.3</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-inductor-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-s-domain-inductor"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch11-fig-s-domain-inductor.svg" role="img" class="contained" alt="Left: inductor L with voltage drop v(t) and current i(t). Right: inductor sL in parallel with current source i(0)/s with collective voltage drop V(s) and current I(s)."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of an inductor from the time domain into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.3"><a tabindex="-1" href="#fig-s-domain-inductor" title="Copy heading and permalink for Figure 11.3.3" aria-label="Copy heading and permalink for Figure 11.3.3">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of an inductor from the time domain into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.3"><a tabindex="-1" href="#fig-s-domain-inductor" title="Copy heading and permalink for Figure 11.3.3" aria-label="Copy heading and permalink for Figure 11.3.3">🔗</a></div></figcaption>
 </figure><div class="autopermalink" aria-hidden="true" data-description="Subsection 11.3.3: Inductor"><a tabindex="-1" href="#ch11-inductor" title="Copy heading and permalink for Subsection 11.3.3: Inductor" aria-label="Copy heading and permalink for Subsection 11.3.3: Inductor">🔗</a></div>
 </section>
 <section class="subsection" id="ch11-sources">
@@ -652,10 +675,10 @@ I(s) \amp= \frac{1}{sL}V(s) + \frac{i(0)}{s}
 </div>
 <div class="para" id="ch11-sources-3">Sources connected via an opening switch (that are disconnected from the steady-state response of the circuit) contribute to initial conditions that are included in the <span class="process-math">\(s\)</span>-domain model of a capacitor (<a href="ch11-sdomain.html#fig-s-domain-capacitor" class="xref" data-knowl="./knowl/xref/fig-s-domain-capacitor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.2">Figure 11.3.2</a>) and inductor (<a href="ch11-sdomain.html#fig-s-domain-inductor" class="xref" data-knowl="./knowl/xref/fig-s-domain-inductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.3">Figure 11.3.3</a>). These need to be consulted in the initial analysis of the circuit to calculate <span class="process-math">\(v(0)\)</span> and/or <span class="process-math">\(i(0)\text{,}\)</span> as needed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch11-sources-4">Sources that are connected via a closing switch do not contribute to the initial conditions, but do contribute to the transient and/or steady-state response. Therefore, a source connected via a closing switch can be represented as <span class="process-math">\(v(t)~u(t)\)</span> or <span class="process-math">\(i(t)~u(t)\text{.}\)</span> When transformed into the <span class="process-math">\(s\)</span>-domain, this becomes <span class="process-math">\(V(s)/s\)</span> or <span class="process-math">\(I(s)/s\text{.}\)</span> This transformation is depicted in <a href="ch11-sdomain.html#fig-s-domain-closing-switch" class="xref" data-knowl="./knowl/xref/fig-s-domain-closing-switch.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.4">Figure 11.3.4</a> for a voltage source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-sources-4">Sources that are connected via a closing switch do not contribute to the initial conditions, but do contribute to the transient and/or steady-state response. Therefore, a source connected via a closing switch can be represented as <span class="process-math">\(v(t)~u(t)\)</span> or <span class="process-math">\(i(t)~u(t)\text{.}\)</span> When transformed into the <span class="process-math">\(s\)</span> domain, this becomes <span class="process-math">\(V(s)/s\)</span> or <span class="process-math">\(I(s)/s\text{.}\)</span> This transformation is depicted in <a href="ch11-sdomain.html#fig-s-domain-closing-switch" class="xref" data-knowl="./knowl/xref/fig-s-domain-closing-switch.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 11.3.4">Figure 11.3.4</a> for a voltage source.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="fig-s-domain-closing-switch"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/ch11-fig-s-domain-closing-switch.svg" role="img" class="contained" alt="Left: voltage source v(t) connected in series with a closing switch. Middle: voltage source v(t)*u(t). Right: voltage source V(s)/s."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of a switched voltage source from the time domain into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.4"><a tabindex="-1" href="#fig-s-domain-closing-switch" title="Copy heading and permalink for Figure 11.3.4" aria-label="Copy heading and permalink for Figure 11.3.4">🔗</a></div></figcaption>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Transformation of a switched voltage source from the time domain into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.4"><a tabindex="-1" href="#fig-s-domain-closing-switch" title="Copy heading and permalink for Figure 11.3.4" aria-label="Copy heading and permalink for Figure 11.3.4">🔗</a></div></figcaption>
 </figure>
 <article class="example example-like" id="ch11-sources-6"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">First-order circuit <span class="process-math">\(s\)</span>-domain analysis.</span>
@@ -678,7 +701,7 @@ v(0) = V_{S2}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-6-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch11-sources-6-2-6">Transform the circuit into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-6-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-sources-6-2-6">Transform the circuit into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-6-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch11-sources-6-2-7"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch11-sdomain-example1-figure3.svg" role="img" class="contained" alt="Circuit with three meshes and five nodes consisting of voltage sources Vs1/s, v(0)/s, and Vs2/s. Resistors R1, R2, and R3. And capacitor (1/(sC)). The high-potential end of Vs1/s connects to R1 at node a. R1, R2, the capacitor, and R3 connect at node b. The capacitor and the high-potential end of v(0)/s connect at node c. R3 and the high-potential end of Vs2/s connect at node d. The low-potential end of all sources and R2 connect at node e. Voltage V(s) drops from node b to node e."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.8"><a tabindex="-1" href="#ch11-sources-6-2-7" title="Copy heading and permalink for Figure 11.3.8" aria-label="Copy heading and permalink for Figure 11.3.8">🔗</a></div></figcaption>
@@ -689,7 +712,8 @@ v(0) = V_{S2}
 <div class="displaymath process-math" id="ch11-sources-6-2-9-1">
 \begin{align*}
 \frac{\frac{V_{S1}}{s}-V(s)}{R_1} \amp= \frac{V(s)}{R_2} + \frac{V(s) - \frac{v(0)}{s}}{\frac{1}{sC}} + \frac{V(s) - \frac{V_{S2}}{s}}{R_3}\\
-\frac{V_{S1}}{sR_1} \amp= \frac{V(s)}{R_1} + \frac{V(s)}{R_2} + sCV(s) - \frac{sCv(0)}{s} + \frac{V(s)}{R_3} - \frac{V_{S2}}{sR_3}\\
+\frac{V_{S1}}{sR_1} \amp= \frac{V(s)}{R_1} + \frac{V(s)}{R_2} + sCV(s)\\
+\amp- \frac{sCv(0)}{s} + \frac{V(s)}{R_3} - \frac{V_{S2}}{sR_3}\\
 \frac{V_{S1}}{sR_1} + \frac{V_{S2}}{sR_3} + \frac{sCv(0)}{s} \amp= sCV(s) + \left[\frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}\right]V(s)\\
 \frac{1}{s}\left[sv(0) + \frac{R_3V_{S1}+R_1V_{S2}}{CR_1R_3}\right] \amp= sV(s) + \left[\frac{1}{CR_1} + \frac{1}{CR_2} + \frac{1}{CR_3}\right]V(s)\\
 V(s) \amp= \frac{sv(0) + \frac{R_3V_{S1}+R_1V_{S2}}{CR_1R_3}}{s\left(s + \left[\frac{1}{CR_1} + \frac{1}{CR_2} + \frac{1}{CR_3}\right]\right)}
@@ -729,7 +753,8 @@ K_1 \amp= 5~\textrm{V}
 <div class="para logical" id="ch11-sources-6-2-16">
 <div class="displaymath process-math" id="ch11-sources-6-2-16-1">
 \begin{align*}
-\frac{(10s + 50000)(s+10000)}{s(s + 10000)}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000} + \frac{K_2(s+10000)}{s+10000}\Big|_{s=-10000}\\
+\frac{(10s + 50000)(s+10000)}{s(s + 10000)}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000}\\
+\amp+ \frac{K_2(s+10000)}{s+10000}\Big|_{s=-10000}\\
 \frac{10s + 50000}{s}\Big|_{s=-10000} \amp= \frac{K_1(s+10000)}{s}\Big|_{s=-10000} + K_2\Big|_{s=-10000}\\
 \frac{10(-10000) + 50000}{(-10000)} \amp= \frac{K_1((-10000)+10000)}{(-10000)} + K_2\\
 \frac{-50000}{-10000} \amp= \frac{K_1(0)}{(-10000)} + K_2\\
@@ -782,7 +807,7 @@ i(0) \amp= \frac{V_{DC}}{R_1}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-7-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<div class="para" id="ch11-sources-7-2-6">Transform the circuit into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-7-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-sources-7-2-6">Transform the circuit into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-7-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch11-sources-7-2-7"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch11-sdomain-example2-figure3.svg" role="img" class="contained" alt="Circuit with two meshes and three nodes consisting of current source i(0)/s, inductor sL, resistor R2, and capacitor (1/(sC)). The current source, inductor, and R2 connect at node a. The current source flows out of node a. R2 and the capacitor connect at node b. The current source, inductor, and capacitor connect at node c. The current source flows into node c. Voltage V(s) drops from node a to node c."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.12"><a tabindex="-1" href="#ch11-sources-7-2-7" title="Copy heading and permalink for Figure 11.3.12" aria-label="Copy heading and permalink for Figure 11.3.12">🔗</a></div></figcaption>
@@ -811,7 +836,7 @@ V(s) \amp= \frac{-R_2i(0)s - \frac{i(0)}{C}}{s^2 + \frac{R_2}{L}s + \frac{1}{LC}
 <figure class="figure figure-like" id="ch11-sources-8-2-2"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/ch11-sdomain-example3-figure1.svg" role="img" class="contained" alt="Circuit with five nodes consisting of voltage source Vm*cos(omega*t), resistors R1 and R2, SPST switch, capacitor C, and inductor L. The high-potential end of the voltage source connects to R1 at node a. R1 connects to the SPST switch at node b. The SPST switch, C, and L connect at node c. L and R2 connect at node d. The low-potential end of the voltage source, C, and R2 connect at node e. Branch current i(t) flows through L from node c to node d. The switch is depicted as closing."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.14"><a tabindex="-1" href="#ch11-sources-8-2-2" title="Copy heading and permalink for Figure 11.3.14" aria-label="Copy heading and permalink for Figure 11.3.14">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch11-sources-8-2-3">The initial conditions are zero, as no source is connected before the switch closes. Transform the circuit into the <span class="process-math">\(s\)</span>-domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch11-sources-8-2-3">The initial conditions are zero, as no source is connected before the switch closes. Transform the circuit into the <span class="process-math">\(s\)</span> domain.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch11-sources-8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <figure class="figure figure-like" id="ch11-sources-8-2-4"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/ch11-sdomain-example3-figure2.svg" role="img" class="contained" alt="Circuit with two meshes and four nodes consisting of s-domain transformed voltage source, resistors R1 and R2, capacitor (1/(sC)), and inductor sL. The high-potential end of the voltage source connects to R1 at node a. R1, the capacitor, and the inductor connect at node b. The inductor and R2 connect at node c. The low-potential end of the voltage source, capacitor, and R2 connect at node d. Branch current I(s) flows through the inductor from node b to node c."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.3.15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 11.3.15"><a tabindex="-1" href="#ch11-sources-8-2-4" title="Copy heading and permalink for Figure 11.3.15" aria-label="Copy heading and permalink for Figure 11.3.15">🔗</a></div></figcaption>
@@ -824,7 +849,7 @@ V(s) \amp= \frac{-R_2i(0)s - \frac{i(0)}{C}}{s^2 + \frac{R_2}{L}s + \frac{1}{LC}
 \frac{\frac{V_ms}{s^2+\omega^2}-V_X}{R_1} \amp= sCV_X + I(s)\\
 \frac{V_ms}{R_1(s^2+\omega^2)} \amp= \frac{V_X}{R_1} + sCV_X + I(s)\\
 V_X \amp= sLI(s) + R_2I(s)\\
-\frac{V_ms}{R_1(s^2+\omega^2)} \amp=  frac{1}{R_1}\left[sLI(s) + R_2I(s)\right] + sC\left[sLI(s) + R_2I(s)\right] + I(s)\\
+\frac{V_ms}{R_1(s^2+\omega^2)} \amp=  \frac{1}{R_1}\left[sLI(s) + R_2I(s)\right] + sC\left[sLI(s) + R_2I(s)\right] + I(s)\\
 \amp= LCs^2I(s) + \left[\frac{L}{R_1} + CR_2\right]sI(s) + \left[\frac{R_2}{R_1}+1\right]I(s)\\
 \frac{V_ms}{LCR_1(s^2+\omega^2)} \amp= s^2I(s) + \left[\frac{1}{CR_1} + \frac{R_2}{L}\right]sI(s) + \left[\frac{R_1+R_2}{LCR_1}\right]I(s)\\
 I(s) \amp= \frac{\frac{V_ms}{LCR_1}}{(s^2+\omega^2)\left(s^2+\left[\frac{1}{CR_1} + \frac{R_2}{L}\right]s+\left[\frac{R_1+R_2}{LCR_1}\right]\right)}
@@ -850,10 +875,21 @@ I(s) \amp= \frac{12500s}{(s^2+2500)(s^2+350s+5025000)}\\
 <div class="para logical" id="ch11-sources-8-2-11">
 <div class="displaymath process-math" id="ch11-sources-8-2-11-1">
 \begin{align*}
-\frac{(12500s)(s+j50)}{(s+j50)(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= \frac{K_1(s+j50)}{s+j50}\Big|_{s=-j50} + \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50} + \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50} + \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}\\
-\frac{12500s}{(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= K_1\Big|_{s=-j50} + \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50} + \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50} + \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}\\
-\frac{12500(-j50)}{((-j50)-j50)((-j50)^2+350(-j50)+5025000)} \amp= K_1 + \frac{K_2((-j50)+j50)}{(-j50)-j50} + \frac{K_3((-j50)+j50)}{(-j50)+175+j2234.8} + \frac{K_4((-j50)+j50)}{(-j50)+175-j2234.8}\\
-\frac{-j625000}{-1750000-j502250000} \amp= K_1 + \frac{K_2(0)}{-j100} + \frac{K_3(0)}{175+j2184.8} + \frac{K_4(0)}{175-j2284.8}\\
+\frac{(12500s)(s+j50)}{(s+j50)(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= \frac{K_1(s+j50)}{s+j50}\Big|_{s=-j50}\\
+\amp+ \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50}\\
+\amp+ \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50}\\
+\amp+ \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}\\
+\frac{12500s}{(s-j50)(s^2+350s+5025000)}\Big|_{s=-j50} \amp= K_1\Big|_{s=-j50}\\
+\amp+ \frac{K_2(s+j50)}{s-j50}\Big|_{s=-j50}\\
+\amp+ \frac{K_3(s+j50)}{s+175+j2234.8}\Big|_{s=-j50}\\
+\amp+ \frac{K_4(s+j50)}{s+175-j2234.8}\Big|_{s=-j50}\\
+\frac{12500(-j50)}{((-j50)-j50)((-j50)^2+350(-j50)+5025000)} \amp= K_1\\
+\amp+ \frac{K_2((-j50)+j50)}{(-j50)-j50}\\
+\amp+ \frac{K_3((-j50)+j50)}{(-j50)+175+j2234.8}\\
+\amp+ \frac{K_4((-j50)+j50)}{(-j50)+175-j2234.8}\\
+\frac{-j625000}{-1750000-j502250000} \amp= K_1 + \frac{K_2(0)}{-j100}\\
+\amp+ \frac{K_3(0)}{175+j2184.8}\\
+\amp+ \frac{K_4(0)}{175-j2284.8}\\
 K_1 \amp= 0.001244 + j0.0000043~\textrm{A}\\
 \amp= 1.24 + j0.0043~\textrm{mA}
 \end{align*}
@@ -876,11 +912,24 @@ K_2 = 1.24 - j0.0043~\textrm{mA}
 <div class="para logical" id="ch11-sources-8-2-15">
 <div class="displaymath process-math" id="ch11-sources-8-2-15-1">
 \begin{align*}
-\frac{(12500s)(s+175+j2234.8)}{(s^2+2500)(s+175+j2234.8)(s+175-j2234.8)}\Big|_{s=-175-j2234.8} \amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8} + \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8} + \frac{K_3(s+175+j2234.8)}{s+175+j2234.8}\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}\\
-\frac{12500s}{(s^2+2500)(s+175-j2234.8)}\Big|_{s=-175-j2234.8} \amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8} + \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8} + K_3\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}\\
-\frac{12500(-175-j2234.8)}{((-175-j2234.8)^2+2500)((-175-j2234.8)+175-j2234.8)} \amp= \frac{K_1(-175-j2234.8+175+j2234.8)}{(-175-j2234.8)+j50} + \frac{K_2((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)-j50} + K_3 + \frac{K_4((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)+175-j2234.8}\\
-\frac{-2187500-j2.7935\times 10^7}{3.4960 \times 10^9 + j2.2175 \times 10^{10}} \amp= \frac{K_1(0)}{(-175-j2234.8)+j50} + \frac{K_2(0)}{(-175-j2234.8)-j50} + K_3 + \frac{K_4(0)}{(-175-j2234.8)+175-j2234.8}\\
-K_3 \amp=  -0.0012 - j0.0001~\textrm{A}\\
+\amp \frac{(12500s)(s+175+j2234.8)}{(s^2+2500)(s+175+j2234.8)(s+175-j2234.8)}\Big|_{s=-175-j2234.8}\\
+\amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8}\\
+\amp+ \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8}\\
+\amp+ \frac{K_3(s+175+j2234.8)}{s+175+j2234.8}\Big|_{s=-175-j2234.8}\\
+\amp+ \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}\\
+\amp \frac{12500s}{(s^2+2500)(s+175-j2234.8)}\Big|_{s=-175-j2234.8}\\
+\amp= \frac{K_1(s+175+j2234.8)}{s+j50}\Big|_{s=-175-j2234.8}\\
+\amp+ \frac{K_2(s+175+j2234.8)}{s-j50}\Big|_{s=-175-j2234.8}\\
+\amp+ K_3\Big|_{s=-175-j2234.8} + \frac{K_4(s+175+j2234.8)}{s+175-j2234.8}\Big|_{s=-175-j2234.8}\\
+\amp \frac{12500(-175-j2234.8)}{((-175-j2234.8)^2+2500)((-175-j2234.8)+175-j2234.8)}\\
+\amp= \frac{K_1(-175-j2234.8+175+j2234.8)}{(-175-j2234.8)+j50}\\
+\amp+ \frac{K_2((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)-j50} + K_3\\
+\amp+ \frac{K_4((-175-j2234.8)+175+j2234.8)}{(-175-j2234.8)+175-j2234.8}\\
+\amp \frac{-2187500-j2.7935\times 10^7}{3.4960 \times 10^9 + j2.2175 \times 10^{10}}\\
+\amp= \frac{K_1(0)}{(-175-j2234.8)+j50}\\
+\amp+ \frac{K_2(0)}{(-175-j2234.8)-j50} + K_3\\
+\amp+ \frac{K_4(0)}{(-175-j2234.8)+175-j2234.8}\\
+K_3 \amp= -0.0012 - j0.0001~\textrm{A}\\
 \amp= -1.2444 - j0.0975~\textrm{mA}
 \end{align*}
 </div>

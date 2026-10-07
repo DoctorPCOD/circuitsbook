@@ -22,11 +22,12 @@
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
-v(t) \amp= L\frac{d}{dt}\left[i(\infty)~\left(1-\textrm{e}^{-\frac{t}{L/R}}\right)~u(t)\right]\\
-\amp= L\frac{d}{dt}\left[i(\infty)~u(t)-i(\infty)~\textrm{e}^{-\frac{t}{L/R}}~u(t)\right]\\
-\amp= L\frac{d}{dt}\left[i(\infty)\right]~u(t) - L\frac{d}{dt}\left[i(\infty)~\textrm{e}^{-\frac{t}{L/R}}\right]~u(t)\\
-\amp= -L\left(-\frac{R}{L}\right)i(\infty)\textrm{e}^{-\frac{t}{L/R}}~u(t)\\
-\amp= Ri(\infty)~\textrm{e}^{-\frac{t}{L/R}}~u(t)
+v(t) \amp= L\frac{d}{dt}\left[i(\infty)~\left(1-\textrm{e}^{-\frac{t}{\tau}}\right)~u(t)\right]\\
+\amp= L\frac{d}{dt}\left[i(\infty)~u(t)-i(\infty)~\textrm{e}^{-\frac{t}{\tau}}~u(t)\right]\\
+\amp= L\frac{d}{dt}\left[i(\infty)\right]~u(t) - L\frac{d}{dt}\left[i(\infty)~\textrm{e}^{-\frac{t}{\tau}}\right]~u(t)\\
+\amp= -\frac{Li(\infty)}{-\tau}\textrm{e}^{-\frac{t}{\tau}}~u(t)\\
+\amp= \frac{LRi(\infty)}{L}\textrm{e}^{-\frac{t}{\tau}}~u(t)\\
+\amp= Ri(\infty)~\textrm{e}^{-\frac{t}{\tau}}~u(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch6-chargingrlvoltageproof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

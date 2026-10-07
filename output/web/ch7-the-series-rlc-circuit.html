@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch7-the-series-rlc-circuit">
@@ -550,7 +573,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Series RLC Circuit</span>
 </h1>
 <section class="introduction" id="ch7-the-series-rlc-circuit-2">
-<div class="para" id="ch7-the-series-rlc-circuit-2-1">A common form of second-order circuit is the series RLC circuit. A series RLC circuit is configured such that, in the final configuration of the circuit after a change to the source conditions is made, the circuit components contain one or more resistor, capacitor, and inductor, all in series with each other. In this section, we’ll analyze both homogeneous and non-homogeneous series RLC circuits to derive their common properties. We’ll see that, regardless of if a circuit is homogeneous or not, properties such as the damping parameter and resonant frequency will be the same for all series RLC circuits.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-the-series-rlc-circuit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-the-series-rlc-circuit-2-1">A common form of second-order circuit is the series RLC circuit. A series RLC circuit is configured such that, in the final configuration of the circuit after a change to the source conditions is made, the circuit components include one capacitor (or equivalent capacitance), one inductor (or equivalent inductance), and one or more resistor, all in series with each other. In this section, we’ll analyze both homogeneous and non-homogeneous series RLC circuits to derive their common properties. We’ll see that, regardless of if a circuit is homogeneous or not, properties such as the damping parameter and resonant frequency will be the same for all series RLC circuits.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-the-series-rlc-circuit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ch7-the-series-rlc-circuit-2-2">An example of a series RLC circuit is shown in <a href="ch7-the-series-rlc-circuit.html#seriesrlc-diagram" class="xref" data-knowl="./knowl/xref/seriesrlc-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.3.1">Figure 7.3.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-the-series-rlc-circuit-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -582,41 +605,67 @@ Ri(t) + L\frac{di(t)}{dt} + v(t) = 0\tag{7.3.1}
 </div>
 <div class="para" id="ch7-homoseriesrlc-7">For a second equation, the voltage over and current through the capacitor must be related. Fortunately, we already have an equation that describes this relationship: <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch7-homoseriesrlc-8">Plug <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> into <a href="ch7-the-series-rlc-circuit.html#ch7-eq-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.1">(7.3.1)</a> and simplify to standard form. The result is shown in <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-9-1" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-seriesrlc-diffeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.4">(7.3.4)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homoseriesrlc-8">Plug <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> into <a href="ch7-the-series-rlc-circuit.html#ch7-eq-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.1">(7.3.1)</a> and simplify to standard form. The result is shown in <a href="ch7-the-series-rlc-circuit.html#ch7-homogeneous-seriesrlc-diffeq" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-seriesrlc-diffeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.2">(7.3.2)</a> and derived in <a href="ch7-the-series-rlc-circuit.html#ch7-homogeneous-seriesrlc-diffeq-proof" class="xref" data-knowl="./knowl/xref/ch7-homogeneous-seriesrlc-diffeq-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 7.3.1.1">Derivation 7.3.1.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch7-homoseriesrlc-9">
-<div class="displaymath process-math" id="ch7-homoseriesrlc-9-1">
-\begin{align}
-0 \amp= RC \frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)\tag{7.3.2}\\
-\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)\tag{7.3.3}\\
-\amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)\tag{7.3.4}
-\end{align}
+<div class="displaymath process-math" id="ch7-homogeneous-seriesrlc-diffeq">
+\begin{equation}
+0 = \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)\tag{7.3.2}
+\end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch7-homoseriesrlc-10">Referring to <a href="ch7-second-order-review.html#ch7-secondorderlinearode-standard" class="xref" data-knowl="./knowl/xref/ch7-secondorderlinearode-standard.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1.2">(7.1.2)</a>, we can easily derive values for the damping parameter and resonant frequency of a series RLC circuit. These are defined in <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.5">(7.3.5)</a> and <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-11-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.6">(7.3.6)</a>, respectively.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="ch7-homogeneous-seriesrlc-diffeq-proof" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="ch7-homogeneous-seriesrlc-diffeq-proof-1">
+<div class="displaymath process-math" id="ch7-homogeneous-seriesrlc-diffeq-proof-1-1">
+\begin{align*}
+0 \amp= Ri(t) + L\frac{di(t)}{dt} + v(t)\\
+\amp= R\left(C \frac{dv(t)}{dt}\right) + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)\\
+\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)\\
+\amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)
+\end{align*}
 </div>
-<div class="para logical" id="ch7-homoseriesrlc-11">
-<div class="displaymath process-math" id="ch7-homoseriesrlc-11-1">
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-seriesrlc-diffeq-proof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.3.1.1"><a tabindex="-1" href="#ch7-homogeneous-seriesrlc-diffeq-proof" title="Copy heading and permalink for Derivation 7.3.1.1" aria-label="Copy heading and permalink for Derivation 7.3.1.1">🔗</a></div>
+</article></details>
+<div class="para" id="ch7-homoseriesrlc-11">Referring to <a href="ch7-second-order-review.html#ch7-secondorderlinearode-standard" class="xref" data-knowl="./knowl/xref/ch7-secondorderlinearode-standard.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1.2">(7.1.2)</a>, we can derive values for the damping parameter and resonant frequency of a series RLC circuit. These are defined in <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-12-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-alpha.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.3">(7.3.3)</a> and <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-12-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-omega0.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.4">(7.3.4)</a>, respectively.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch7-homoseriesrlc-12">
+<div class="displaymath process-math" id="ch7-homoseriesrlc-12-1">
 \begin{align}
-\alpha \amp= \frac{R}{2L}\tag{7.3.5}\\
-\omega_0 \amp= \frac{1}{\sqrt{LC}}\tag{7.3.6}
+\alpha \amp= \frac{R}{2L}\tag{7.3.3}\\
+\omega_0 \amp= \frac{1}{\sqrt{LC}}\tag{7.3.4}
 \end{align}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch7-homoseriesrlc-12">Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <span class="process-math">\(t=0^+\text{.}\)</span> We therefore must analyze <a href="ch7-the-series-rlc-circuit.html#ch7-eq-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.1">(7.3.1)</a> and <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> to see if either one contains a first derivative of the voltage. This is defined in <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>. We can therefore solve this at <span class="process-math">\(t=0^+\)</span> to derive the first derivative initial condition value for a series RLC circuit. This value is described in <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.8">(7.3.8)</a>. (It is vitally important to point out that this first derivative initial condition is <em class="alert">only valid for series RLC circuits</em>!)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-homoseriesrlc-13">Another important quantity that must be known to solve a second-order circuit is the first derivative of the voltage or current, solved at a time of <span class="process-math">\(t=0^+\text{.}\)</span> We therefore must analyze <a href="ch7-the-series-rlc-circuit.html#ch7-eq-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.1">(7.3.1)</a> and <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> to see if either one contains a first derivative of the voltage. This is defined in <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>. We can therefore solve this at <span class="process-math">\(t=0^+\)</span> to derive the first derivative initial condition value for a series RLC circuit. This value is described in <a href="ch7-the-series-rlc-circuit.html#ch7-eq-seriesrlc-vpzero" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.5">(7.3.5)</a> and derived in <a href="ch7-the-series-rlc-circuit.html#ch7-seriesrlc-vpzero-proof" class="xref" data-knowl="./knowl/xref/ch7-seriesrlc-vpzero-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 7.3.1.2">Derivation 7.3.1.2</a>. (It is vitally important to point out that this first derivative initial condition is <em class="alert">only valid for series RLC circuits</em>!)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="ch7-homoseriesrlc-13">
-<div class="displaymath process-math" id="ch7-homoseriesrlc-13-1">
-\begin{align}
-i(0^+) \amp= Cv'(0^+)\tag{7.3.7}\\
-v'(0^+) \amp= \frac{i(0^+)}{C}\tag{7.3.8}
-\end{align}
+<div class="para logical" id="ch7-homoseriesrlc-14">
+<div class="displaymath process-math" id="ch7-eq-seriesrlc-vpzero">
+\begin{equation}
+v'(0^+) = \frac{i(0^+)}{C}\tag{7.3.5}
+\end{equation}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homoseriesrlc-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Subsection 7.3.1: Homogeneous Series RLC Circuits"><a tabindex="-1" href="#ch7-homoseriesrlc" title="Copy heading and permalink for Subsection 7.3.1: Homogeneous Series RLC Circuits" aria-label="Copy heading and permalink for Subsection 7.3.1: Homogeneous Series RLC Circuits">🔗</a></div>
+<details id="ch7-seriesrlc-vpzero-proof" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="ch7-seriesrlc-vpzero-proof-1">
+<div class="displaymath process-math" id="ch7-seriesrlc-vpzero-proof-1-1">
+\begin{align*}
+i(t) \amp= C\frac{dv(t)}{dt}\\
+\amp= Cv'(t)\\
+i(0^+) \amp= Cv'(0^+)\\
+v'(0^+) \amp= \frac{i(0^+)}{C}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-seriesrlc-vpzero-proof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.3.1.2"><a tabindex="-1" href="#ch7-seriesrlc-vpzero-proof" title="Copy heading and permalink for Derivation 7.3.1.2" aria-label="Copy heading and permalink for Derivation 7.3.1.2">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 7.3.1: Homogeneous Series RLC Circuits"><a tabindex="-1" href="#ch7-homoseriesrlc" title="Copy heading and permalink for Subsection 7.3.1: Homogeneous Series RLC Circuits" aria-label="Copy heading and permalink for Subsection 7.3.1: Homogeneous Series RLC Circuits">🔗</a></div>
 </section>
 <section class="subsection" id="ch7-non-homoseriesrlc">
 <h2 class="heading hide-type">
@@ -629,31 +678,44 @@ v'(0^+) \amp= \frac{i(0^+)}{C}\tag{7.3.8}
 <figure class="figure figure-like" id="non-homogeneous-seriesrlc-diagram-t0plus"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch7-non-homogeneous-seriesrlc-diagram-t0plus.svg" role="img" class="contained" alt="Circuit with voltage source Vin, resistor R, capacitor C, and inductor L all connected in series. Voltage v(t) drops over the capacitor and branch current i(t) flows through the capacitor."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The series RLC circuit shown in <a href="ch7-the-series-rlc-circuit.html#seriesrlc-diagram" class="xref" data-knowl="./knowl/xref/seriesrlc-diagram.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 7.3.1">Figure 7.3.1</a> after the switch has been moved to position a.<div class="autopermalink" aria-hidden="true" data-description="Figure 7.3.3"><a tabindex="-1" href="#non-homogeneous-seriesrlc-diagram-t0plus" title="Copy heading and permalink for Figure 7.3.3" aria-label="Copy heading and permalink for Figure 7.3.3">🔗</a></div></figcaption>
 </figure>
-<div class="para" id="ch7-non-homoseriesrlc-5">First, perform KVL around the loop. The voltage dropped over the resistor is defined by Ohm’s law and the voltage dropped over the inductor is defined by <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a>. Because all four circuit elements are in series, they share a common current <span class="process-math">\(i(t)\text{.}\)</span> The KVL equation is described in <a href="ch7-the-series-rlc-circuit.html#ch7-eq-non-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.9">(7.3.9)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-non-homoseriesrlc-5">First, perform KVL around the loop. The voltage dropped over the resistor is defined by Ohm’s law and the voltage dropped over the inductor is defined by <a href="ch6-viinductance.html#ch6-voltageinductor" class="xref" data-knowl="./knowl/xref/ch6-voltageinductor.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 6.3.1">(6.3.1)</a>. Because all four circuit elements are in series, they share a common current <span class="process-math">\(i(t)\text{.}\)</span> The KVL equation is described in <a href="ch7-the-series-rlc-circuit.html#ch7-eq-non-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.6">(7.3.6)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch7-non-homoseriesrlc-6">
 <div class="displaymath process-math" id="ch7-eq-non-homogeneous-seriesrlc-kvl">
 \begin{equation}
-Ri(t) + L\frac{di(t)}{dt} + v(t) = V_{IN}\tag{7.3.9}
+Ri(t) + L\frac{di(t)}{dt} + v(t) = V_{IN}\tag{7.3.6}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="ch7-non-homoseriesrlc-7">For a second equation, the voltage over and current through the capacitor must be related. Fortunately, we already have an equation that describes this relationship: <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch7-non-homoseriesrlc-8">Plug <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> into <a href="ch7-the-series-rlc-circuit.html#ch7-eq-non-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.9">(7.3.9)</a> and simplify to standard form. The result is shown in <a href="ch7-the-series-rlc-circuit.html#ch7-non-homoseriesrlc-9-1" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-seriesrlc-diffeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.12">(7.3.12)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch7-non-homoseriesrlc-8">Plug <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> into <a href="ch7-the-series-rlc-circuit.html#ch7-eq-non-homogeneous-seriesrlc-kvl" class="xref" data-knowl="./knowl/xref/ch7-eq-non-homogeneous-seriesrlc-kvl.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.6">(7.3.6)</a> and simplify to standard form. The result is shown in <a href="ch7-the-series-rlc-circuit.html#ch7-non-homogeneous-seriesrlc-diffeq" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-seriesrlc-diffeq.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.7">(7.3.7)</a> and derived in <a href="ch7-the-series-rlc-circuit.html#ch7-non-homogeneous-rlc-diffeq-proof" class="xref" data-knowl="./knowl/xref/ch7-non-homogeneous-rlc-diffeq-proof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 7.3.2.1">Derivation 7.3.2.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch7-non-homoseriesrlc-9">
-<div class="displaymath process-math" id="ch7-non-homoseriesrlc-9-1">
-\begin{align}
-V_{IN} \amp= RC \frac{dv(t)}{dt} + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)\tag{7.3.10}\\
-\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)\tag{7.3.11}\\
-\frac{V_{IN}}{LC} \amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)\tag{7.3.12}
-\end{align}
+<div class="displaymath process-math" id="ch7-non-homogeneous-seriesrlc-diffeq">
+\begin{equation}
+\frac{V_{IN}}{LC} = \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)\tag{7.3.7}
+\end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ch7-non-homoseriesrlc-10">Referring to <a href="ch7-second-order-review.html#ch7-secondorderlinearode-standard" class="xref" data-knowl="./knowl/xref/ch7-secondorderlinearode-standard.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1.2">(7.1.2)</a>, we can see that the values for the damping parameter and resonant frequency are identical to that of a homogeneous series RLC circuit. In addition, because <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> is still the equation that describes the first derivative of voltage, the initial condition of the first derivative continues to be defined by <a href="ch7-the-series-rlc-circuit.html#ch7-homoseriesrlc-13-1" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.8">(7.3.8)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<details id="ch7-non-homogeneous-rlc-diffeq-proof" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="ch7-non-homogeneous-rlc-diffeq-proof-1">
+<div class="displaymath process-math" id="ch7-non-homogeneous-rlc-diffeq-proof-1-1">
+\begin{align*}
+V_{IN} \amp= Ri(t) + L\frac{di(t)}{dt} + v(t)\\
+\amp= R\left(C \frac{dv(t)}{dt}\right) + L\frac{d}{dt}\left(C \frac{dv(t)}{dt}\right) + v(t)\\
+\amp= LC \frac{d^2v(t)}{dt^2} + RC \frac{dv(t)}{dt} + v(t)\\
+\frac{V_{IN}}{LC} \amp= \frac{d^2v(t)}{dt^2} + \frac{R}{L} \frac{dv(t)}{dt} + \frac{1}{LC}v(t)
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homogeneous-rlc-diffeq-proof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 7.3.2.1"><a tabindex="-1" href="#ch7-non-homogeneous-rlc-diffeq-proof" title="Copy heading and permalink for Derivation 7.3.2.1" aria-label="Copy heading and permalink for Derivation 7.3.2.1">🔗</a></div>
+</article></details>
+<div class="para" id="ch7-non-homoseriesrlc-11">Referring to <a href="ch7-second-order-review.html#ch7-secondorderlinearode-standard" class="xref" data-knowl="./knowl/xref/ch7-secondorderlinearode-standard.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.1.2">(7.1.2)</a>, we can see that the values for the damping parameter and resonant frequency are identical to that of a homogeneous series RLC circuit. In addition, because <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a> is still the equation that describes the first derivative of voltage, the initial condition of the first derivative continues to be defined by <a href="ch7-the-series-rlc-circuit.html#ch7-eq-seriesrlc-vpzero" class="xref" data-knowl="./knowl/xref/ch7-eq-seriesrlc-vpzero.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 7.3.5">(7.3.5)</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-non-homoseriesrlc-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Subsection 7.3.2: Non-Homogeneous Series RLC Circuits"><a tabindex="-1" href="#ch7-non-homoseriesrlc" title="Copy heading and permalink for Subsection 7.3.2: Non-Homogeneous Series RLC Circuits" aria-label="Copy heading and permalink for Subsection 7.3.2: Non-Homogeneous Series RLC Circuits">🔗</a></div>
 </section><div class="autopermalink" aria-hidden="true" data-description="Section 7.3: The Series RLC Circuit"><a tabindex="-1" href="#ch7-the-series-rlc-circuit" title="Copy heading and permalink for Section 7.3: The Series RLC Circuit" aria-label="Copy heading and permalink for Section 7.3: The Series RLC Circuit">🔗</a></div>

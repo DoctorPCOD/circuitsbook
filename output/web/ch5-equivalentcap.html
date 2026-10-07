@@ -59,15 +59,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.3.0';
+eBookConfig.runestone_version = '8.3.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.c838822d59bc26bc.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.b9fedab97dee3c2a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/prefix-runtime.7e4cb14f24eb489b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.54371ed119fe41be.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.40d828091d93b733.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -266,34 +266,34 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch4-op-amps-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-amplifiers.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Amplifiers</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-differentialamps.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Differential Amplifiers</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-nonidealcomparators.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Non-Idealities in Amplifiers</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Comparator Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-comparator.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Comparator Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-comparator" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-nonidealcomparators" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Non-Idealities in Comparators</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-compvsopamp" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Comparators vs. “Op-Amps”</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-adc" class="internal"><span class="codenumber">4.4.2</span> <span class="title">Analog to Digital Conversion (ADC)</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-comparator.html#ch4-pwm" class="internal"><span class="codenumber">4.4.3</span> <span class="title">Pulse-Width Modulation (PWM)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Feedback Circuits</span></a></div>
-<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.4.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch4-feedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Feedback Circuits</span></a></div>
+<ul id="ptx-toc-group-ch4-feedback" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-feedback.html#ch4-voltagefollower" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Voltage Follower</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
+<div class="toc-title-box"><a href="ch4-dividedfeedback.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Divided Feedback Op-Amp Circuits</span></a></div>
 <ul id="ptx-toc-group-ch4-dividedfeedback" class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.5.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.5.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.5.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.5.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.5.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.5.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.5.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-inverting" class="internal"><span class="codenumber">4.6.1</span> <span class="title">Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-noninverting" class="internal"><span class="codenumber">4.6.2</span> <span class="title">Non-Inverting Op-Amp</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-cascaded" class="internal"><span class="codenumber">4.6.3</span> <span class="title">Cascaded Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-summingdifference" class="internal"><span class="codenumber">4.6.4</span> <span class="title">Summing and Difference Amplifiers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-generalopamps" class="internal"><span class="codenumber">4.6.5</span> <span class="title">General Op-Amp Circuits</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-math" class="internal"><span class="codenumber">4.6.6</span> <span class="title">Implementing Mathematical Functions with Op-Amps</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="ch4-dividedfeedback.html#ch4-linearequations" class="internal"><span class="codenumber">4.6.7</span> <span class="title">Solving Linear Equations</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Op-Amp Output Current</span></a></div></li>
-<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-10.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Practice Problems</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="ch4-opampcurrent.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Op-Amp Output Current</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="opamp-references.html" class="internal"><span class="codenumber">4.8</span> <span class="title">References</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="ch4-op-amps-11.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Practice Problems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
@@ -542,7 +542,30 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="ch12-monostablemode.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Monostable Mode</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list"><li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="appdxa-units.html" class="internal"><span class="codenumber">A.</span> <span class="title">Units and Unit Conversions</span></a></div>
+<ul id="ptx-toc-group-appdxa-units" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="appdxa-units-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section1.html" class="internal"><span class="codenumber">A.1</span> <span class="title">The International Standard of Units</span></a></div>
+<ul id="ptx-toc-group-appdxa-section1" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-base-units" class="internal"><span class="codenumber">A.1.1</span> <span class="title">SI Base Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-derived-units" class="internal"><span class="codenumber">A.1.2</span> <span class="title">SI Derived Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section1.html#appdxa-si-prefixes" class="internal"><span class="codenumber">A.1.3</span> <span class="title">SI Prefixes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="appdxa-section2.html" class="internal"><span class="codenumber">A.2</span> <span class="title">Units in This Textbook</span></a></div>
+<ul id="ptx-toc-group-appdxa-section2" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-table-of-properties" class="internal"><span class="codenumber">A.2.1</span> <span class="title">Table of Properties and Units</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="appdxa-section2.html#appdxa-diffeq-coefficients" class="internal"><span class="codenumber">A.2.2</span> <span class="title">Units for Coefficients in Differential Equations and Transfer Functions</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li></ul>
+</li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="ch5-equivalentcap">
@@ -561,7 +584,7 @@ eBookConfig.enable_chatcodes =  false;
 <figure class="figure figure-like" id="seriescapsfig"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/ch5-seriescapsfig.svg" role="img" class="contained" alt="Each capacitor contains its own voltage drop noted v_n(t). The entire voltage drop over all caps is v(t). The current through all caps is i(t)."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Five capacitors in series in a circuit.<div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.1"><a tabindex="-1" href="#seriescapsfig" title="Copy heading and permalink for Figure 5.4.1" aria-label="Copy heading and permalink for Figure 5.4.1">🔗</a></div></figcaption>
 </figure>
-<div class="para" id="ch5-seriescaps-4">As <span class="process-math">\(v(t)\)</span> is equal to the sum of each individual voltage drop, the current-voltage relationship in capacitors (<a href="ch5-vicap.html#ch5-voltcapequation" class="xref" data-knowl="./knowl/xref/ch5-voltcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.2">(5.3.2)</a>) can be used to determine the equivalent capacitance of series combinations of capacitors. This is given in <a href="ch5-equivalentcap.html#ch5-seriescapequation" class="xref" data-knowl="./knowl/xref/ch5-seriescapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.4.1">(5.4.1)</a> and derived in <a href="ch5-equivalentcap.html#ch5-seriescapderivation" class="xref" data-knowl="./knowl/xref/ch5-seriescapderivation.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 5.4.1.1">Derivation 5.4.1.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-seriescaps-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch5-seriescaps-4">As <span class="process-math">\(v(t)\)</span> is equal to the sum of each individual voltage drop, the current-voltage relationship in capacitors, <a href="ch5-vicap.html#ch5-voltcapequation" class="xref" data-knowl="./knowl/xref/ch5-voltcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.2">(5.3.2)</a>, can be used to determine the equivalent capacitance of series combinations of capacitors. This is given in <a href="ch5-equivalentcap.html#ch5-seriescapequation" class="xref" data-knowl="./knowl/xref/ch5-seriescapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.4.1">(5.4.1)</a> and derived in <a href="ch5-equivalentcap.html#ch5-seriescapderivation" class="xref" data-knowl="./knowl/xref/ch5-seriescapderivation.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 5.4.1.1">Derivation 5.4.1.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-seriescaps-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch5-seriescaps-5">
 <div class="displaymath process-math" id="ch5-seriescapequation">
@@ -577,8 +600,8 @@ eBookConfig.enable_chatcodes =  false;
 <div class="displaymath process-math" id="ch5-seriescapderivation-1-1">
 \begin{align*}
 v(t) \amp= v_1(t) + v_2(t) + v_3(t) + ... + v_n(t)\\
-\int_{-\infty}^{t} \frac{1}{C_{EQ}} i(\tau)\,d\tau \amp= \int_{-\infty}^{t} \frac{1}{C_1} i(\tau)\,d\tau + \int_{-\infty}^{t} \frac{1}{C_2} i(\tau)\,d\tau + \int_{-\infty}^{t} \frac{1}{C_3} i(\tau)\,d\tau + ... + \int_{-\infty}^{t} \frac{1}{C_n} i(\tau)\,d\tau\\
-\frac{1}{C_{EQ}} \int_{-\infty}^{t} i(\tau)\,d\tau \amp= \frac{1}{C_1} \int_{-\infty}^{t} i(\tau)\,d\tau + \frac{1}{C_2} \int_{-\infty}^{t} i(\tau)\,d\tau + \frac{1}{C_3} \int_{-\infty}^{t} i(\tau)\,d\tau + ... + \frac{1}{C_n} \int_{-\infty}^{t} i(\tau)\,d\tau\\
+\frac{1}{C_{EQ}} \int_{-\infty}^{t} i(\tau)\,d\tau \amp= \frac{1}{C_1} \int_{-\infty}^{t} i(\tau)\,d\tau + \frac{1}{C_2} \int_{-\infty}^{t} i(\tau)\,d\tau\\
+\amp+ \frac{1}{C_3} \int_{-\infty}^{t} i(\tau)\,d\tau + ... + \frac{1}{C_n} \int_{-\infty}^{t} i(\tau)\,d\tau\\
 \frac{1}{C_{EQ}} \amp= \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + ... + \frac{1}{C_n}
 \end{align*}
 </div>
@@ -588,7 +611,31 @@ v(t) \amp= v_1(t) + v_2(t) + v_3(t) + ... + v_n(t)\\
 </article></details>
 <div class="para" id="ch5-seriescaps-7">Capacitors in series therefore combine similarly to resistors in parallel. The equivalent capacitance cannot be larger than the smallest capacitor in the series combination.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-seriescaps-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Subsection 5.4.1: Series Combinations of Capacitors"><a tabindex="-1" href="#ch5-seriescaps" title="Copy heading and permalink for Subsection 5.4.1: Series Combinations of Capacitors" aria-label="Copy heading and permalink for Subsection 5.4.1: Series Combinations of Capacitors">🔗</a></div>
+<div class="para" id="ch5-seriescaps-8">Frequently, it is necessary to combine two capacitors in series. In that case, we can solve <a href="ch5-equivalentcap.html#ch5-seriescapequation" class="xref" data-knowl="./knowl/xref/ch5-seriescapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.4.1">(5.4.1)</a> to find a handy equation to use without having to calculate the reciprocal of the sum of reciprocals. (Note: this equation will <em class="alert">only</em> work for two capacitors in series.) This solution is shown in <a href="ch5-equivalentcap.html#ch5-eqtwocapacitorsseries" class="xref" data-knowl="./knowl/xref/ch5-eqtwocapacitorsseries.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.4.2">(5.4.2)</a> and is derived in <a href="ch5-equivalentcap.html#ch5-twocapsseriesproof" class="xref" data-knowl="./knowl/xref/ch5-twocapsseriesproof.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 5.4.1.2">Derivation 5.4.1.2</a>. (Note the similarity to <a href="ch2-resistor.html#ch2-eqtworesistorsparallel" class="xref" data-knowl="./knowl/xref/ch2-eqtworesistorsparallel.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.2.4">(2.2.4)</a>.)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-seriescaps-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ch5-seriescaps-9">
+<div class="displaymath process-math" id="ch5-eqtwocapacitorsseries">
+\begin{equation}
+C_{EQ} = \frac{C_1C_2}{C_1+C_2}\tag{5.4.2}
+\end{equation}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-seriescaps-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ch5-twocapsseriesproof" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Derivation<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="ch5-twocapsseriesproof-1">
+<div class="displaymath process-math" id="ch5-twocapsseriesproof-1-1">
+\begin{align*}
+\frac{1}{C_{EQ}}	\amp = \frac{1}{C_1} + \frac{1}{C_2}\\
+\amp = \frac{C_2}{C_1C_2} + \frac{C_1}{C_1C_2}\\
+\amp = \frac{C_1+C_2}{C_1C_2}\\
+C_{EQ}			\amp = \frac{C_1C_2}{C_1+C_2}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-twocapsseriesproof-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Derivation 5.4.1.2"><a tabindex="-1" href="#ch5-twocapsseriesproof" title="Copy heading and permalink for Derivation 5.4.1.2" aria-label="Copy heading and permalink for Derivation 5.4.1.2">🔗</a></div>
+</article></details><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.4.1: Series Combinations of Capacitors"><a tabindex="-1" href="#ch5-seriescaps" title="Copy heading and permalink for Subsection 5.4.1: Series Combinations of Capacitors" aria-label="Copy heading and permalink for Subsection 5.4.1: Series Combinations of Capacitors">🔗</a></div>
 </section>
 <section class="subsection" id="ch5-parallelcaps">
 <h2 class="heading hide-type">
@@ -599,12 +646,12 @@ v(t) \amp= v_1(t) + v_2(t) + v_3(t) + ... + v_n(t)\\
 <figure class="figure figure-like" id="parallelcapdiagram"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch5-parallelcapdiagram.svg" role="img" class="contained" alt="Each capacitor contains its own current noted i_n(t). The overall current through all caps is i(t). The voltage drop over all caps is v(t)."></div>
 <figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Five capacitors in parallel in a circuit.<div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.2"><a tabindex="-1" href="#parallelcapdiagram" title="Copy heading and permalink for Figure 5.4.2" aria-label="Copy heading and permalink for Figure 5.4.2">🔗</a></div></figcaption>
 </figure>
-<div class="para" id="ch5-parallelcaps-4">As <span class="process-math">\(i(t)\)</span> is equal to the sum of each individual current, the current-voltage relationship in capacitors (<a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>) can be used to determine the equivalent capacitance of parallel combinations of capacitors. This is shown in <a href="ch5-equivalentcap.html#parallelcapequation" class="xref" data-knowl="./knowl/xref/parallelcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.4.2">(5.4.2)</a> and derived in <a href="ch5-equivalentcap.html#parallelcapderivation" class="xref" data-knowl="./knowl/xref/parallelcapderivation.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 5.4.2.1">Derivation 5.4.2.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch5-parallelcaps-4">As <span class="process-math">\(i(t)\)</span> is equal to the sum of each individual current, the current-voltage relationship in capacitors, <a href="ch5-vicap.html#ch5-ivcapequation" class="xref" data-knowl="./knowl/xref/ch5-ivcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.3.1">(5.3.1)</a>, can be used to determine the equivalent capacitance of parallel combinations of capacitors. This is shown in <a href="ch5-equivalentcap.html#parallelcapequation" class="xref" data-knowl="./knowl/xref/parallelcapequation.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 5.4.3">(5.4.3)</a> and derived in <a href="ch5-equivalentcap.html#parallelcapderivation" class="xref" data-knowl="./knowl/xref/parallelcapderivation.html" data-reveal-label="Reveal" data-close-label="Close" title="Derivation 5.4.2.1">Derivation 5.4.2.1</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="ch5-parallelcaps-5">
 <div class="displaymath process-math" id="parallelcapequation">
 \begin{equation}
-C_{EQ} = C_1 + C_2 + C_3 + ... + C_n\tag{5.4.2}
+C_{EQ} = C_1 + C_2 + C_3 + ... + C_n\tag{5.4.3}
 \end{equation}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
@@ -628,35 +675,61 @@ C_{EQ} \amp= C_1 + C_2 + C_3 + ... + C_n
 <article class="example example-like" id="ch5-parallelcaps-8"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Calculating equivalent capacitance.</span>
 </h3>
-<div class="para" id="ch5-parallelcaps-8-2-1">Calculate the equivalent capacitance between nodes a and b in the circuit shown in <a href="ch5-equivalentcap.html#equivalentcapacitanceex1" class="xref" data-knowl="./knowl/xref/equivalentcapacitanceex1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.4.4">Figure 5.4.4</a>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch5-parallelcaps-8-2-1">Calculate the equivalent capacitance between nodes a and b in the circuit shown below.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="equivalentcapacitanceex1"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch5-equivalentcapacitanceex1.svg" role="img" class="contained" alt="A circuit containing 7 caps and 6 nodes. 3uF (A) and 6uF are connected at node a. 3uF (A), 8uF, and 6uF (B) are connected at node b. 6uF (A) and 5uF are connected at node c. 5uF, 3uF (B), and 2uF are connected at node d. 2uF and 6uF (B) are connected at node e. 3uF (B) and 8uF are connected at node f."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.4"><a tabindex="-1" href="#equivalentcapacitanceex1" title="Copy heading and permalink for Figure 5.4.4" aria-label="Copy heading and permalink for Figure 5.4.4">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch5-parallelcaps-8-2-2"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch5-equivalentcapacitanceex1.svg" role="img" class="contained" alt="A circuit containing 7 caps and 6 nodes. 3uF (A) and 6uF are connected at node a. 3uF (A), 8uF, and 6uF (B) are connected at node b. 6uF (A) and 5uF are connected at node c. 5uF, 3uF (B), and 2uF are connected at node d. 2uF and 6uF (B) are connected at node e. 3uF (B) and 8uF are connected at node f."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.4"><a tabindex="-1" href="#ch5-parallelcaps-8-2-2" title="Copy heading and permalink for Figure 5.4.4" aria-label="Copy heading and permalink for Figure 5.4.4">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch5-parallelcaps-8-2-3">The 2 µF and 6 µF are in series and can be combined together. This combination is 1.5 µF. Similarly, the 3 µF is in series with the 8 µF with an equivalent capacitance of of 2.18 µF. Last, the 6 µF and 5 µF capacitors are in series with an equivalent capacitance of 2.73 µF. The circuit can now be re-drawn.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch5-parallelcaps-8-2-3">There are three sets of capacitors that are in series with each other. The equivalent capacitance of each of these three sets of series capacitors can be calculated.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch5-parallelcaps-8-2-4"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/ch5-parallelcaps-8-2-4-2.svg" role="img" class="contained" alt="A circuit containing 4 caps and 3 nodes. 3uF and 2.73uF are connected at node a. 3uF, 2.18uF, and 1.5uF are connected at node b. 2.73uF, 2.18uF, and 1.5uF are connected at node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.5"><a tabindex="-1" href="#ch5-parallelcaps-8-2-4" title="Copy heading and permalink for Figure 5.4.5" aria-label="Copy heading and permalink for Figure 5.4.5">🔗</a></div></figcaption>
-</figure> 
-<div class="para" id="ch5-parallelcaps-8-2-5">At this point the 1.5 µF and 2.18 µF capacitors can be combined in parallel to obtain. 3.68 µF. The circuit can again be re-drawn.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="ch5-parallelcaps-8-2-4">
+<div class="displaymath process-math" id="ch5-parallelcaps-8-2-4-1">
+\begin{align*}
+C_{2uF,6uF} \amp= \frac{(6~\mu\textrm{F})(2~\mu\textrm{F})}{6~\mu\textrm{F} + 2~\mu\textrm{F}}\\
+\amp= 1.5~\mu\textrm{F}\\
+C_{3uF,8uF} \amp= \frac{(3~\mu\textrm{F})(8~\mu\textrm{F})}{3~\mu\textrm{F} + 8~\mu\textrm{F}}\\
+\amp= 2.1818~\mu\textrm{F}\\
+C_{6uF,5uF} \amp= \frac{(6~\mu\textrm{F})(5~\mu\textrm{F})}{6~\mu\textrm{F} + 5~\mu\textrm{F}}\\
+\amp= 2.7273~\mu\textrm{F}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch5-parallelcaps-8-2-6"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch5-parallelcaps-8-2-6-2.svg" role="img" class="contained" alt="A circuit containing 3 caps and 3 nodes. 3uF and 2.73uF are connected at node a. 3uF and 3.68uF are connected at node b. 2.73uF and 3.68uF are connected at node c."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.6"><a tabindex="-1" href="#ch5-parallelcaps-8-2-6" title="Copy heading and permalink for Figure 5.4.6" aria-label="Copy heading and permalink for Figure 5.4.6">🔗</a></div></figcaption>
-</figure> 
-<div class="para" id="ch5-parallelcaps-8-2-7">The 2.73 µF capacitor is in series with the 3.68 µF capacitor. Combined, their equivalent capacitance is 1.57 µF. The circuit can be re-drawn again.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch5-parallelcaps-8-2-5">The circuit can now be re-drawn.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<figure class="figure figure-like" id="ch5-parallelcaps-8-2-8"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch5-parallelcaps-8-2-8-2.svg" role="img" class="contained" alt="Circuit containing two caps and two nodes. Both capacitors are connected in parallel between nodes a and b. The capacitor values are 3uF and 1.57uF."></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.7"><a tabindex="-1" href="#ch5-parallelcaps-8-2-8" title="Copy heading and permalink for Figure 5.4.7" aria-label="Copy heading and permalink for Figure 5.4.7">🔗</a></div></figcaption>
+<figure class="figure figure-like" id="ch5-parallelcaps-8-2-6"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/ch5-equivalentcapacitanceex2.svg" role="img" class="contained" alt="A circuit containing 4 caps and 3 nodes. 3uF and 2.73uF are connected at node a. 3uF, 2.18uF, and 1.5uF are connected at node b. 2.73uF, 2.18uF, and 1.5uF are connected at node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.5"><a tabindex="-1" href="#ch5-parallelcaps-8-2-6" title="Copy heading and permalink for Figure 5.4.5" aria-label="Copy heading and permalink for Figure 5.4.5">🔗</a></div></figcaption>
 </figure> 
-<div class="para" id="ch5-parallelcaps-8-2-9">The equivalent capacitance can now be calculated by summing together the two capacitances.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ch5-parallelcaps-8-2-7">At this point the 1.5 µF and 2.18 µF capacitors can be combined in parallel to obtain an equivalent capacitance 3.68 µF. The circuit can again be re-drawn.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch5-parallelcaps-8-2-8"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch5-equivalentcapacitanceex3.svg" role="img" class="contained" alt="A circuit containing 3 caps and 3 nodes. 3uF and 2.73uF are connected at node a. 3uF and 3.68uF are connected at node b. 2.73uF and 3.68uF are connected at node c."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.6"><a tabindex="-1" href="#ch5-parallelcaps-8-2-8" title="Copy heading and permalink for Figure 5.4.6" aria-label="Copy heading and permalink for Figure 5.4.6">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch5-parallelcaps-8-2-9">The 2.73 µF capacitor is in series with the 3.68 µF capacitor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
 <div class="para logical" id="ch5-parallelcaps-8-2-10">
 <div class="displaymath process-math" id="ch5-parallelcaps-8-2-10-1">
+\begin{align*}
+C_{2.73uF,3.68uF} \amp= \frac{(2.7273~\mu\textrm{F})(3.6818~\mu\textrm{F})}{2.7273~\mu\textrm{F} + 3.6818~\mu\textrm{F}}\\
+\amp= 1.5667~\mu\textrm{F}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="ch5-parallelcaps-8-2-11">The circuit can be re-drawn again.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<figure class="figure figure-like" id="ch5-parallelcaps-8-2-12"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/ch5-equivalentcapacitanceex4.svg" role="img" class="contained" alt="Circuit containing two caps and two nodes. Both capacitors are connected in parallel between nodes a and b. The capacitor values are 3uF and 1.57uF."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" aria-hidden="true" data-description="Figure 5.4.7"><a tabindex="-1" href="#ch5-parallelcaps-8-2-12" title="Copy heading and permalink for Figure 5.4.7" aria-label="Copy heading and permalink for Figure 5.4.7">🔗</a></div></figcaption>
+</figure> 
+<div class="para" id="ch5-parallelcaps-8-2-13">The equivalent capacitance can now be calculated by summing together the two remaining capacitances.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="ch5-parallelcaps-8-2-14">
+<div class="displaymath process-math" id="ch5-parallelcaps-8-2-14-1">
 \begin{equation*}
 C_{EQ} = 4.57~\mu\textrm{F}
 \end{equation*}
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-parallelcaps-8-2-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Example 5.4.3: Calculating equivalent capacitance"><a tabindex="-1" href="#ch5-parallelcaps-8" title="Copy heading and permalink for Example 5.4.3: Calculating equivalent capacitance" aria-label="Copy heading and permalink for Example 5.4.3: Calculating equivalent capacitance">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Subsection 5.4.2: Parallel Combinations of Capacitors"><a tabindex="-1" href="#ch5-parallelcaps" title="Copy heading and permalink for Subsection 5.4.2: Parallel Combinations of Capacitors" aria-label="Copy heading and permalink for Subsection 5.4.2: Parallel Combinations of Capacitors">🔗</a></div>

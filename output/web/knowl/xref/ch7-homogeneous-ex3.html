@@ -30,9 +30,11 @@
 <div class="answer solution-like knowl__content">
 <div class="para logical">
 <div class="displaymath process-math">
-\begin{equation*}
-0 = \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt} + \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)
-\end{equation*}
+\begin{align*}
+0 \amp= \frac{d^2i(t)}{dt^2}\\
+\amp+ \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt}\\
+\amp+ \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)
+\end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -101,10 +103,14 @@ v_X(t) = L_2 \frac{di(t)}{dt} + R_3i(t)\tag{7.8.9}
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{align*}
-0 \amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1}{R_2}\frac{d}{dt}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right] + R_1i(t) + \frac{R_1}{R_2}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right]\\
-\amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \frac{R_3L_1}{R_2}\frac{di(t)}{dt} + R_1i(t) + \frac{R_1L_2}{R_2}\frac{di(t)}{dt} + \frac{R_3R_1}{R_2}i(t)\\
-\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left[L_1 + L_2 + \frac{L_1R_3}{R_2} + \frac{R_1L_2}{R_2}\right]\frac{di(t)}{dt} + \left[R_1 + \frac{R_1R_3}{R_2} + R_3\right]i(t)\\
-\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt} + \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)
+0 \amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1}{R_2}\frac{d}{dt}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right]\\
+\amp+ R_1i(t) + \frac{R_1}{R_2}\left[L_2\frac{di(t)}{dt} + R_3i(t)\right]\\
+\amp= L_2\frac{di(t)}{dt} + R_3i(t) + L_1\frac{di(t)}{dt} + \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \frac{R_3L_1}{R_2}\frac{di(t)}{dt}\\
+\amp+ R_1i(t) + \frac{R_1L_2}{R_2}\frac{di(t)}{dt} + \frac{R_3R_1}{R_2}i(t)\\
+\amp= \frac{L_1L_2}{R_2}\frac{d^2i(t)}{dt^2} + \left[L_1 + L_2 + \frac{L_1R_3}{R_2} + \frac{R_1L_2}{R_2}\right]\frac{di(t)}{dt}\\
+\amp+ \left[R_1 + \frac{R_1R_3}{R_2} + R_3\right]i(t)\\
+\amp= \frac{d^2i(t)}{dt^2} + \left[\frac{R_2}{L_1} + \frac{R_2}{L_2} + \frac{R_3}{L_2} + \frac{R_1}{L_1}\right]\frac{di(t)}{dt}\\
+\amp+ \left[\frac{R_1R_2}{L_1L_2} + \frac{R_1R_3}{L_1L_2} + \frac{R_2R_3}{L_1L_2}\right]i(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch7-homogeneous-ex3-3-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>

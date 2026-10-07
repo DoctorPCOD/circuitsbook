@@ -42,10 +42,10 @@
 			<title>Identifying nodes in a circuit</title>
 
 			<statement>
-				<p>The circuit shown in <xref ref="threenodes" /> has three nodes labeled A, B, and C. Node A is a point of common potential between the power supply and element 1. Node B is a point of common potential connecting elements 1, 2, and 3. This node looks like the nodes shown in <xref ref="cktnodes" />, as it is depicted with a thick dot (indicating an electrical connection). Finally, node C is a point of common potential connecting the low potential end of the power supply, one end of element 2, and one end of element 3.</p>
+				<p>The circuit shown below has three nodes labeled A, B, and C. Node A is a point of common potential between the power supply and element 1. Node B is a point of common potential connecting elements 1, 2, and 3. This node looks like the nodes shown in <xref ref="cktnodes" />, as it is depicted with a thick dot (indicating an electrical connection). Finally, node C is a point of common potential connecting the low potential end of the power supply, one end of element 2, and one end of element 3.</p>
 
-				<figure xml:id="threenodes">
-  					<caption>Each of the three nodes in this circuit is shown with thick lines. Node A (left) connects the power supply and element 1. Node B (middle) connects elements 1, 2, and 3. Node C (right) connects the power supply to elements 2 and 3.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="100%" xml:id="ch2-threenodes">
     					<shortdescription>A circuit containing a DC voltage source and three unknown circuit elements. The circuit has three nodes. The high potential end of the voltage source and one of the unknown circuit elements connect at node a. The three unknown circuit elements connect at node b. Two of the unknown circuit elements and the low potential end of the voltage source connect node c. Left: node A is highlighted on the diagram with a thick line between the DC voltage source and the element it connects to and is labeled "node A." Middle: node B is highlighted on the diagram with a thick line between where the three unknown elements connect. It's labeled "node b." Right: node C is highlighted on the diagram with a thick line between the voltage source and the two unknown elements it connects to. It's labeled "node c."</shortdescription>
 						<latex-image >
@@ -70,7 +70,7 @@
   					</image>
 				</figure>
 
-				<p>In <xref ref="threenodes" />, we can say that elements 2 and 3 share two common nodes (nodes B and C). Later in this chapter we will learn that devices that are connected with two common nodes are said to be in parallel with each other.</p>
+				<p>We can say that elements 2 and 3 share two common nodes (nodes B and C). Later in this chapter we will learn that devices that are connected with two common nodes are said to be in parallel with each other.</p>
 			</statement>
 		</example>
 
@@ -80,10 +80,10 @@
 			<title>Identifying branches, loops, and meshes in a circuit</title>
 
 			<statement>
-				<p>The circuit diagram shown in <xref ref="cktloopmesh" /> has six branches: one containing each circuit element (sinusoidal source, DC voltage source, DC current source, resistor, capacitor, and inductor).</p>
+				<p>The circuit diagram shown below has six branches: one containing each circuit element (sinusoidal source, DC voltage source, DC current source, resistor, capacitor, and inductor).</p>
 
-				<figure xml:id="cktloopmesh">
-  					<caption>A circuit diagram consisting of four nodes, six branches, seven loops, and three meshes.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="40%" xml:id="ch2-cktloopmesh">
     					<shortdescription>A circuit has a DC voltage source, DC current source, AC source, inductor, resistor, and capacitor. The circuit has four nodes. The inductor, AC source, and capacitor connect at node a. The capacitor, high potential end of the DC voltage source, and resistor connect at node b. The resistor, AC source, and DC current source connect at node c. The DC current source flows out of node c. The inductor, low potential end of the DC voltage source, and the DC current source connect at node d.</shortdescription>
 						<latex-image >
@@ -102,10 +102,10 @@
   					</image>
 				</figure>
 
-				<p>The three meshes of the circuit in <xref ref="cktloopmesh" /> consist of loops that do not have any other loops inside of them. These are shown in red in <xref ref="circuitMeshes" />.</p>
+				<p>The three meshes of the circuit consist of loops that do not have any other loops inside of them. These are shown in red below.</p>
 
-				<figure xml:id="circuitMeshes">
-  					<caption>The three meshes (each shown in red) from the circuit in <xref ref="cktloopmesh" />.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="100%" xml:id="ch2-circuitMeshes">
     					<shortdescription>The circuit described above is drawn three times. Left: the mesh containing the inductor, capacitor, and DC voltage source is drawn in red. Middle: the mesh containing the DC voltage source, resistor, and DC current source is drawn in red. Right: the mesh containing the capacitor, resistor, and AC source is drawn in red.</shortdescription>
 						<latex-image >
@@ -127,10 +127,10 @@
   					</image>
 				</figure>
 
-				<p>The seven loops in the circuit include the three meshes shown in <xref ref="circuitMeshes" /> as well as four additional loops, each of which contain other loops inside of them. These four additional loops are shown in <xref ref="circuitLoops" />.</p>
+				<p>The seven loops in the circuit include the three meshes shown above as well as four additional loops, each of which contain other loops inside of them. These four additional loops are shown below.</p>
 
-				<figure xml:id="circuitLoops">
-  					<caption>The four additional circuit loops (each shown in red) from the circuit in <xref ref="cktloopmesh" />.</caption>
+				<figure>
+  					<caption></caption>
   					<image width="100%" xml:id="ch2-circuitLoops">
     					<shortdescription>The circuit described above is drawn four times. Top left: the loop containing the inductor, DC current source, and inductor is drawn in red. Top right: the loop containing the DC current source, inductor, capacitor, and resistor is drawn in red. Bottom left: the loop containing the inductor, AC source, resistor, and DC voltage source is drawn in red. Bottom right: the loop containing the AC source, DC current source, DC voltage source, and capacitor is drawn in red.</shortdescription>
 						<latex-image >
@@ -673,7 +673,7 @@
 					<p>Consider the circuit shown in <xref ref="eqresistanceckt" />. Note that the resistors are not connected purely in series nor are they connected purely in parallel. In addition, we cannot start combining together circuit elements until we know which nodes to use to calculate the equivalent resistance. It is possible to calculate the equivalent resistance between any two nodes in the circuit. Not all of the circuit nodes are shown; just a few have been selected to demonstrate different equivalent resistance calculations.</p>
 
 					<figure xml:id="eqresistanceckt">
-  						<caption>A circuit composed of nine resistors that are not connected totally in series or totally in parallel.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-eqresistanceckt">
     						<shortdescription>A circuit composed of three meshes and nine resistors. The left mesh contains resistors R1, R2, R3, R4, and R5. The center mesh contains resistors R4, R5, R6, and R7. The right mesh contains resistors R7, R8, and R9. Six nodes are labeled. Node a is between R1 and R3. Nodes b and f are equivalent and are at the junction of R2, R5, R7, and R9. Node c is between R4 and R5. Node d is between R6 and R7. Node e is between R8 and R9.</shortdescription>
 							<latex-image>
@@ -701,7 +701,7 @@
 					<p>Schematically, it's possible to depict equivalent resistance measured between two nodes by clearly indicating them on a circuit diagram. This is shown for the calculation of equivalent resistance between nodes a and b in <xref ref="eqresistancecktab" />.</p>
 
 					<figure xml:id="eqresistancecktab">
-  						<caption>Schematic depiction of the equivalent resistance between nodes a and b in the circuit given in <xref ref="eqresistanceckt" />.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch2-eqresistancecktab">
     						<shortdescription>The same circuit as above, with wires protruding out from nodes a and b to highlight where equivalent resistance should be calculated from.</shortdescription>
 							<latex-image>
@@ -865,7 +865,7 @@
 					<p>Next, let's consider the case of calculating the equivalent resistance between nodes e and f. This is depicted schematically in <xref ref="eqresistancecktef" />.</p>
 
 					<figure xml:id="eqresistancecktef">
-  						<caption>Schematic depiction of the equivalent resistance between nodes e and f in the circuit given in <xref ref="eqresistanceckt" />.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch2-eqresistancecktef">
     						<shortdescription>The same circuit as above, with wires protruding out from nodes e and f to highlight where equivalent resistance should be calculated from.</shortdescription>
 							<latex-image>
@@ -1004,7 +1004,7 @@
 					<p>Finally, we will consider the case of equivalent resistance between nodes a and e. This is depicted schematically in <xref ref="eqresistancecktae" />.</p>
 
 					<figure xml:id="eqresistancecktae">
-  						<caption>Schematic depiction of the equivalent resistance between nodes a and e in the circuit given in <xref ref="eqresistanceckt" />.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-eqresistancecktae">
     						<shortdescription>The same circuit as above, with wires protruding out from nodes a and e to highlight where equivalent resistance should be calculated from.</shortdescription>
 							<latex-image>
@@ -1168,7 +1168,7 @@
 					<p>Calculate the equivalent resistance of the circuit shown in <xref ref="eqresistanceckt" /> between nodes c and d, given that each of the resistors has a value of <m>R = 1~k\Omega</m>. The circuit has been re-drawn below.</p>
 
 					<figure>
-  						<caption>The circuit depicted in <xref ref="eqresistanceckt" /> shown with 1<nbsp />k&#8486; resistors and an ohmmeter between nodes c and d.</caption>
+  						<caption></caption>
   						<image width="70%" xml:id="ch2-deltawyeexample1">
     						<shortdescription>Circuit with nine 1k resistors and one ohmmeter. The circuit has four meshes. The left mesh contains five of the resistors. The middle top mesh contains two resistors and the ohmmeter. The middle bottom mesh contains two resistors and the ohmmeter. The right mesh contains four of the resistors.</shortdescription>
 							<latex-image>
@@ -1351,7 +1351,7 @@
 					<p>Calculate the equivalent resistance of the circuit shown below.</p>
 
 					<figure>
-  						<caption>The circuit to be reduced with a wye-delta transform.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-wyedeltaexample1">
     						<shortdescription>Circuit with two meshes and four nodes. One mesh contains 3k (connected nodes a to b), 2k (nodes a to c), and 2k (connected b to c) resistors. The other mesh contains 2k (connected b to c), 4k (connected b to d), and 5k resistors (connected c to d). The desired equivalent resistance is between nodes a and d.</shortdescription>
 							<latex-image>
@@ -1376,7 +1376,7 @@
 					<p>The resistors in the wye-arrangement are shown in red. Each of the nodes is labeled.</p>
 
 					<figure>
-  						<caption>The circuit to be reduced with a wye-delta transform. The wye resistors are shown in red.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-wyedeltaexample2">
     						<shortdescription>Same circuit as before. The 3k (connected a to b), 2k (connected b to c), and 4k (connected b to d) resistors are shown in red.</shortdescription>
 							<latex-image>
@@ -1584,7 +1584,7 @@
 					<p>Calculate the voltage drop <m>V_X</m> across the resistors as shown in the circuit diagram below.</p>
 
 					<figure>
-  						<caption>A circuit used to calculate an unknown voltage.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-voltagefromirex1">
     						<shortdescription>Circuit with 5mA source, 3k resistor, and 2k resistor. Circuit has two meshes and two nodes. The left mesh contains the 5 mA source and 3k resistor. Current flows "up" as defined by the diagram. The right mesh contains the 3k resistor and 2k resistor. The voltage over the 2k resistor is defined as Vx. This voltage drops from "bottom to top" as defined by the diagram.</shortdescription>
 							<latex-image>
@@ -1611,7 +1611,7 @@
 					<p>The circuit can be re-drawn.</p>
 
 					<figure>
-  						<caption>A simplified circuit used to calculate an unknown voltage.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch2-voltagefromirex2">
     						<shortdescription>Circuit with 5mA source and 1.2k resistor. Circuit has one mesh and two nodes. The mesh contains the 5 mA source and 1.2k resistor. Current flows "up" as defined by the diagram. The voltage over the 1.2k resistor is defined as Vx. This voltage drops from "bottom to top" as defined by the diagram.</shortdescription>
 							<latex-image>
@@ -1668,7 +1668,7 @@
 					<p>Calculate the current <m>I_X</m> through the resistors, as shown in the circuit diagram below.</p>
 
 					<figure>
-  						<caption>A circuit used to calculate an unknown current.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch2-currentfromvrex1">
     						<shortdescription>Circuit with one mesh. The high potential end of an 8V source connects to one end of a 2k resistor. The other end of the 2k resistor connects to one end of a 3k resistor. The other end of the 3k resistor connects to the low potential end of the 8V source. Current Ix is defined as flowing toward the low potential end of the 8V source.</shortdescription>
 							<latex-image>
@@ -1694,7 +1694,7 @@
 					<p>The circuit can be re-drawn.</p>
 
 					<figure>
-  						<caption>A reduced circuit used to calculate an unknown current.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch2-currentfromvrex2">
     						<shortdescription>Circuit with one mesh. The high potential end of an 8V source connects to one end of a 5k resistor. The other end of the 5k resistor connects to the low potential end of the 8V source. Current Ix is defined as flowing toward the low potential end of the 8V source.</shortdescription>
 							<latex-image>
@@ -1735,7 +1735,7 @@
 					<p>Calculate the value of resistor <m>R_1</m> as shown in the circuit diagram below.</p>
 
 					<figure>
-  						<caption>A circuit used to calculate an unknown resistance.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch2-resistancefromviex1">
     						<shortdescription>Circuit with one mesh. The high potential end of a 12V source connects to one end of R1. The other end of R1 connects to one end of a 100ohm resistor. The other end of the 100ohm resistor connects to the low potential end of the 12V source. A current of 30 mA is defined as flowing toward the low potential end of the 12V source.</shortdescription>
 							<latex-image>
@@ -1787,7 +1787,7 @@
 					<p>Calculate the power consumed by the resistor in the circuit shown below. Then, calculate the value of the resistor.</p>
 
 					<figure>
-  						<caption>A circuit used to calculate power and the value of an unknown resistor.</caption>
+  						<caption></caption>
   						<image width="30%" xml:id="ch2-powercalcex1">
     						<shortdescription>A resistor with high potential defined at the left and low potential defined at the right. The voltage drop in this direction is 25V. Current from left to right is defined as 10A.</shortdescription>
 							<latex-image>
@@ -1826,7 +1826,7 @@
 					<p>In the circuit shown below, the 200<nbsp />&#8486; resistor is consuming 500<nbsp />mW of power. Calculate the value of the voltage source.</p>
 
 					<figure>
-  						<caption>A circuit used to calculate an unknown voltage.</caption>
+  						<caption></caption>
   						<image width="30%" xml:id="ch2-voltagecalcex1">
     						<shortdescription>Circuit with one mesh. The high potential end of an voltage source Vs connects to one end of a 200ohm resistor. The other end of the 200ohm resistor connects to one end of a 400ohm resistor. The other end of the 400ohm resistor connects to the low potential end of the source.</shortdescription>
 							<latex-image>
@@ -1865,10 +1865,10 @@
 				<title>Calculating minimum safe resistor value</title>
 
 				<statement>
-					<p>What is the minimum resistor value that can be used in the circuit shown below if the resistor is rated for a maximum power consumption of 1/4<nbsp />W?</p>
+					<p>Calculate the minimum resistor value that can be used in the circuit shown below if the resistor is rated for a maximum power consumption of 1/4<nbsp />W.</p>
 
 					<figure>
-  						<caption>A circuit used to calculate the minimum safe resistor value.</caption>
+  						<caption></caption>
   						<image width="30%" xml:id="ch2-minimumsaferesistorex1">
     						<shortdescription>Circuit with one mesh containing a 10V source and resistor of unknown value.</shortdescription>
 							<latex-image>
@@ -1932,8 +1932,8 @@
 					<p>Calculate <m>V_{OUT}</m> in the circuit shown below.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate the voltage divider rule.</caption>
-  						<image width="60%" xml:id="ch2-voltagedividerexfig1">
+  						<caption></caption>
+  						<image width="80%" xml:id="ch2-voltagedividerexfig1">
     						<shortdescription>Circuit with 20.5V source, 28k, 20k, 32k, 38k, 27k, and 30k resistors. There are three meshes and five nodes. High potential of 20.5V, 20k, and 28k connect at node a. 20k and 32k connect at node b. 38k, 28k, and 27k connect at node c. 27k and 30k connect at node d. Low potential of 20.5V, 38k, and 30k connect at node e. Vout is defined as high potential at c and low potential at e.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -1957,8 +1957,8 @@
 					<p>Combine all resistors that are in series and re-draw the circuit.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate the voltage divider rule, with all series resistors combined.</caption>
-  						<image width="60%" xml:id="ch2-voltagedividerexfig2">
+  						<caption></caption>
+  						<image width="75%" xml:id="ch2-voltagedividerexfig2">
     						<shortdescription>Circuit with 20.5V source, 28k, 52k, 38k, and 57k resistors. Circuit has three meshes and three nodes. High potential of 20.5V, 28k, and 52k connect at node a. 52k, 28, 38, and 57k connect at node b. Low potential of 20.5V, 38k, and 57k connect at node c. Vout is defined as high potential at node b and low potential at node c.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -1979,7 +1979,7 @@
 					<p>The 28<nbsp />k&#8486; and 52<nbsp />k&#8486; resistors are in parallel with each other and have an equivalent resistance of 18.2<nbsp />k&#8486;. The 38<nbsp />k&#8486; and 57<nbsp />k&#8486; resistors are in parallel with each other and have an equivalent resistance of 22.8<nbsp />k&#8486;. The circuit can be re-drawn again.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate the voltage divider rule, with all series and parallel resistors combined.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch2-voltagedividerexfig3">
     						<shortdescription>Circuit with 20.5V, 18.2k, and 22.8k all in series. Vout is defined as dropping over 22.8k.</shortdescription>
 							<latex-image>
@@ -2010,7 +2010,7 @@
 					<p>Calculate <m>V_{OUT}</m> in the circuit shown below.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate the voltage divider rule in a two-mesh circuit.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-voltagedividerexmeshesfig1">
     						<shortdescription>Circuit with two meshes and four nodes containing one voltage source Vs and four resistors (R1, R2, R3, and R4). The high-potential end of Vs is connected to R1 at node a. R1, R2, and R3 are connected at node b. R3 and R4 are connected at node c. The low-potential end of Vs, R2, and R4 are connected at node d. Voltage Vx is measured over R2 from node b to node d. Voltage Vout is measured over R4 from node c to node d.</shortdescription>
 							<latex-image>
@@ -2043,7 +2043,7 @@
 					<p>Now that <m>V_X</m> is known, the circuit can be re-drawn to represent <m>V_X</m> as a source in series with resistors <m>R_3</m> and <m>R_4</m>.</p>
 
 					<figure>
-  						<caption>The circuit with <m>V_X</m> represented as a source.</caption>
+  						<caption></caption>
   						<image width="40%" xml:id="ch2-voltagedividerexmeshesfig2">
     						<shortdescription>Circuit with one mesh and three nodes containing a voltage source Vx and two resistors (R3 and R4). The high-potential end of Vx connects to R3 at node a. R3 and R4 connect at node b. The low-potential end of Vx connects to R4 at node c. Voltage Vout is measured over R4 from node b to node c.</shortdescription>
 							<latex-image>
@@ -2165,7 +2165,7 @@
 				<p>The current through the load resistor (<m>R_{LOAD}</m>) shown in the circuit below must be 50<nbsp />mA. Calculate the value of <m>R_{LOAD}</m> that is required to accomplish this.</p>
 
 				<figure>
-  						<caption>A circuit used to demonstrate the current divider rule.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch2-currentdividerex1">
     						<shortdescription>Circuit with 300mA source, 2k, 3k, and Rload resistors. All four circuit elements are in parallel. Node a is "up" and node b is "down." The source flows "up." The current through Rload is defined as flowing "down."</shortdescription>
 							<latex-image>
@@ -2184,7 +2184,7 @@
 					<p>Reduce the circuit by combining the 2<nbsp />k&#8486; and 3<nbsp />k&#8486; resistors in parallel. The circuit can be re-drawn.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate the current divider rule with the known resistors reduced to an equivalent resistance.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch2-currentdividerex2">
     						<shortdescription>Circuit with 300mA source, 1.2k, and Rload resistors. All three circuit elements are in parallel. Node a is "up" and node b is "down." The source flows "up." The current through Rload is defined as flowing "down."</shortdescription>
 							<latex-image>
@@ -2219,7 +2219,7 @@
 					<p>Calculate <m>I_{OUT}</m> in the circuit shown below.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate the current divider rule in a three-mesh circuit.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch2-currentdividerexmeshesfig1">
     						<shortdescription>Circuit with 3 meshes and 3 nodes consisting of a current source Is and four resistors (R1, R2, R3, and R4). Is, R1, and R2 connect at node a. Is flows into node a. R2, R3, and R4 connect at node b. Is, R1, R3, and R4 connect at node c. Is flows out of node c. Branch current Ix flows through R2 from node a to node b. Branch current Iout flows through R4 from node b to node c.</shortdescription>
 							<latex-image>
@@ -2254,7 +2254,7 @@
 					<p>Now that <m>I_X</m> is known, the circuit can be re-drawn to represent <m>I_X</m> as a source in parallel with resistors <m>R_3</m> and <m>R_4</m>.</p>
 
 					<figure>
-  						<caption>The circuit with <m>I_X</m> represented as a source.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-currentdividerexmeshesfig2">
     						<shortdescription>Circuit with two nodes and two meshes consisting of a current source Ix and resistors R3 and R4. All three circuit elements are connected in parallel between nodes a and b. Current source Ix flows out of node b into node a. Branch current Iout flows through R4 from node a to node b.</shortdescription>
 							<latex-image>
@@ -2315,7 +2315,7 @@
 					<p>Calculate the value of <m>I_2</m> in the circuit shown below.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate KCL.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch2-kclexample1">
     						<shortdescription>Circuit with 200mA source, unknown element 1, unknown element 2, unknown element 3, and 100ohm resistor. Circuit has three meshes and three nodes. 200mA, unknown 1, unknown 2, and unknown 3 all connect at node a. The current flows into node a. Unknown 3 and 100ohm connect at node b. 200mA, unknown 1, unknown 2, and 100 ohm connect at node c. Output voltage of 10 V is defined as dropping between b and c.</shortdescription>
 							<latex-image>
@@ -2367,7 +2367,7 @@
 					<p>Calculate the value of the voltage drop over each of the three labeled circuit elements in the circuit below. Indicate the correct polarity.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate KVL.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-kvlexample1">
     						<shortdescription>Circuit containing 3V source, 2V source, 5V source, element 1, element 2, and element 3. Circuit has three meshes and four nodes. High potential of 3V, element 1, and element 3 connect at a. Low potential of 2V, element 1, and element 2 connect at b. High potential of 5V, element 2, and element 3 connect at c. Low potential of 3V, high potential of 2V, and low potential of 5V connect at node d.</shortdescription>
 							<latex-image>
@@ -2416,7 +2416,7 @@
 					<p>The circuit can now be re-drawn, indicating the voltage and polarity of each circuit element.</p>
 
 					<figure>
-  						<caption>A circuit used to demonstrate KVL, with all voltages labeled.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-kvlexample2">
     						<shortdescription>Same circuit as above. Element 1 has voltage drop of 5V dropping from a to b. Element 2 has voltage drop of 7V dropping from c to b. Element 3 has voltage drop of 2V dropping from c to a.</shortdescription>
 							<latex-image>
@@ -2459,8 +2459,8 @@
 					<p>Consider the circuit shown in <xref ref="kclkvlexfig" />. There are four unknown currents, so four linearly independent equations will need to be derived to solve for each current. The direction of each current has been arbitrarily chosen.</p>
 
 					<figure xml:id="kclkvlexfig">
-  						<caption>Circuit used to demonstrate using KCL and KVL to solve for unknown currents.</caption>
-  						<image width="80%" xml:id="ch2-kclkvlexfig">
+  						<caption></caption>
+  						<image width="60%" xml:id="ch2-kclkvlexfig">
     						<shortdescription>Circuit with Vs, Is, R1, R2, R3, and R4. Circuit has three meshes and four nodes. High potential of Vs, R1, and R2 connect at a. Unknown current I1 flows out of a. Unknown current I2 flows out of a. R2, R3, and R4 connect at b. Unknown current I2 flows into b. Unknown current I3 flows out of b. Unknown current I4 flows out of b. R1, R4, and Is connect at c. Unknown current I1 flows into c. Unknown current I4 flows into c. Is flows out of c. Low potential of Vs, R3, and Is connect at d. Unknown current I3 flows into d. Is flows into d.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -2558,8 +2558,8 @@
 					<p>The circuit shown in <xref ref="meshvsbranchfig" /> has two meshes (and therefore two mesh currents: <m>I_A</m> and <m>I_B</m>). In addition, there are three branch currents defined as <m>I_1</m>, <m>I_2</m>, and <m>I_3</m>.</p>
 
 					<figure xml:id="meshvsbranchfig">
-  						<caption>This circuit contains two meshes and three defined branches.</caption>
-  						<image width="80%" xml:id="ch2-meshvsbranchfig">
+  						<caption></caption>
+  						<image width="60%" xml:id="ch2-meshvsbranchfig">
     						<shortdescription>Circuit with 2 meshes and 4 nodes consisting of Vs and resistors R1, R2, R3, and R4. The high-potential end of Vs connects to R1 at node A. Resistors R1, R2, and R3 connect at node B. Resistors R3 and R4 connect at node C. The low-potential end of Vs and resistors R2 and R4 connect at node D. Branch current I1 is defined as flowing through R1 from node A to node B. Branch current I2 is defined as flowing through R2 from node B to node C. Branch current I3 is defined as flowing through R3 from node B to node C. Mesh current Ia flows through Vs, R1, and R2 through nodes D, A, B, and D. Mesh current Ib flows through R2, R3, and R4 through nodes D, B, C, and D.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -2620,7 +2620,7 @@
 					<p>The circuit shown below will be used to demonstrate the mesh analysis procedure. It has been carefully chosen to contain both a dependent source and a supermesh. Each of the meshes have already been identified and labeled.</p>
 
 					<figure>
-  						<caption>Circuit used to demonstrate the mesh analysis method.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch2-meshanalysisex1">
     						<shortdescription>Circuit with 3 meshes and 5 nodes consisting of rm*I CCVS, current source Is, and resistors R1, R2, R3, R4, and R5. Resistors R2 and R3 connect to Is at node A. Is flows into node A. The high-potential end of the CCVS connects to resistors R1 and R2 at node B. Resistors R1, R3, and R4 connect at node C. Is connects to resistors R4 and R5 at node D. Is flows out of node D. The low-potential end of the CCVS connects to resistor R5 at node E. Mesh current I1 flows through the CCVS, resistor R2, Is, and resistor R5 through nodes E, B, A, D, and E. Mesh current I2 flows through Is, resistor R3, and resistor R4 through nodes D, A, C, and D. Mesh current I3 flows through resistors R1, R3, and R2 through nodes B, C, A, and B. Branch current I is defined as flowing through R2 from node B to node A.</shortdescription>
 							<latex-image>
@@ -2711,7 +2711,7 @@
 				
 				<figure>
   					<caption></caption>
-  					<image width="80%" xml:id="ch2-measuring-current-example-figure1">
+  					<image width="60%" xml:id="ch2-measuring-current-example-figure1">
     					<shortdescription>Circuit with two meshes and three nodes consisting of a 10V voltage source, 1.6k resistor, 4k resistor, and 6k resistor. The high-potential end of the 10V source connects to the 1.6kohm resistor at node a. The 1.6kohm, 4kohm, and 6kohm resistors connect at node b. The low-potential end of the 10V source, 4kohm, and 6kohm connect at node c. Branch current I1 flows through the 1.6kohm from node a to node b. Branch current I2 flows through the 4kohm from node b to node c. Branch current I3 flows through the 6kohm from node b to node c.</shortdescription>
 						<latex-image>
 							\begin{tikzpicture}[font=\sffamily]
@@ -2872,7 +2872,7 @@
 
 				<answer>
 					<figure>
-  						<caption>Reduced circuit diagram corresponding to the answer to <xref ref="ch2eqivresistanceq2" />.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit22figanswer">
     						<shortdescription>Circuit with 34ohm, 18ohm, 47ohm, 33ohm, 130mA source, and 2V source. Circuit has four nodes. 34ohm, 18ohm, 47ohm, and 130mA connect at node a. 130mA flows out of node a. 18ohm and high potential of 2V connect at node b. 130mA, 47ohm, and 33ohm connect at node c. 130mA flows into node c. 34ohm, low potential of 2V, and 33ohm connect at node d.</shortdescription>
 							<latex-image>
@@ -2934,7 +2934,7 @@
 					<p>Start by re-drawing the circuit to include resistor values and highlight nodes a and b for calculating the equivalent resistance. This makes it more clear which resistors can be combined in series and parallel. Note that one of the resistors has been re-drawn to be horizontal rather than vertical. This also makes series and parallel combinations stand out more clearly without modifying the circuit in any meaningful way.</p>
 
 					<figure>
-  						<caption>Re-drawn circuit with resistor values, highlighting nodes a and b.</caption>
+  						<caption></caption>
   						<image width="70%" xml:id="ch2-circuit23figans1">
     						<shortdescription>Circuit is functionally equivalent to above, changes described in text.</shortdescription>
 							<latex-image>
@@ -2957,7 +2957,7 @@
 					<p>There are two sets of series resistances. Combine all series resistors and re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Re-drawn circuit with series resistances reduced.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit23figans2">
     						<shortdescription>Circuit with 5 resistors (R1, R4, and R5 same as before and new resistor Rx=R2+R3 and Ry=R6+R7) and four nodes. Nodes are labeled same as previous. R1 and Rx connect at node a. Rx, R4, and R5 connect at node e. R1, R4, and Ry connect at node f. R5 and Ry connect at node b.</shortdescription>
 							<latex-image>
@@ -2978,7 +2978,7 @@
 					<p>Either a wye-delta transform or a delta-wye transform can be performed to solve this circuit. The following solution utilizes a wye-delta transform. The wye circuit elements are indicated in red.</p>
 
 					<figure>
-  						<caption>Circuit with wye resistances indicated in red.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit23figans3">
     						<shortdescription>Same circuit as previous. 2k resistor between a and e is red. R4 is red. R5 is red.</shortdescription>
 							<latex-image>
@@ -3000,11 +3000,11 @@
 
 					<p>
 						<md>
-							<mrow>R_1	\amp=	\frac{(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(1~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)}{1~\textrm{k}\Omega}</mrow>
+							<mrow>R_1 \amp= \frac{(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(1~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)}{1~\textrm{k}\Omega}</mrow>
 							<mrow> \amp= 5~\textrm{k}\Omega</mrow>
-							<mrow>R_2	\amp=	\frac{(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(1~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)}{2~\textrm{k}\Omega}</mrow>
+							<mrow>R_2 \amp= \frac{(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(1~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)}{2~\textrm{k}\Omega}</mrow>
 							<mrow> \amp= 2.5~\textrm{k}\Omega</mrow>
-							<mrow>R_3	\amp=	\frac{(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(1~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)}{1~\textrm{k}\Omega}</mrow>
+							<mrow>R_3 \amp= \frac{(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(1~\textrm{k}\Omega)(1~\textrm{k}\Omega)+(2~\textrm{k}\Omega)(1~\textrm{k}\Omega)}{1~\textrm{k}\Omega}</mrow>
 							<mrow> \amp= 5~\textrm{k}\Omega</mrow>
 						</md>
 					</p>
@@ -3012,7 +3012,7 @@
 					<p>Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit after the wye-delta transform.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit23figans4">
     						<shortdescription>Circuit from before now has a new label for node c. Circuit has 3 nodes. 1k (R1), one 5k, and another 5k connect at node a. The other 5k, 2.5k, 2k (Ry) connect at node b. 1k (R1), one 5k, 2.5k, and 2k (Ry) connect at node c.</shortdescription>
 							<latex-image>
@@ -3033,7 +3033,7 @@
 					<p>Between nodes A and C, the 1<nbsp />k&#8486; and 5<nbsp />k&#8486; resistors are in parallel. They have an equivalent resistance of 0.83<nbsp />k&#8486;. Between nodes B and C, the 2.5<nbsp />k&#8486; and 2<nbsp />k&#8486; resistors are in parallel. They have an equivalent resistance of 1.11<nbsp />k&#8486;. The circuit can be re-drawn again.</p>
 
 					<figure>
-  						<caption>Circuit after the wye-delta transform and reduction of parallel resistances.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit23figans5">
     						<shortdescription>Circuit with three nodes now with only three resistors. 0.833k and 5k connect at node a. 5k and 1.11k connect at node b. 0.833k and 1.11k connect at node c.</shortdescription>
 							<latex-image>
@@ -3052,7 +3052,7 @@
 					<p>Between nodes a and b, the 0.833<nbsp />k&#8486; and 1.11<nbsp />k&#8486; resistors are in series. They have an equivalent resistance of 1.943<nbsp />k&#8486;. The circuit can be re-drawn again.</p>
 
 					<figure>
-  						<caption>Circuit after the wye-delta transform and reduction of parallel and series resistances.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit23figans6">
     						<shortdescription>5k and 1.94k resistors are in parallel between nodes a and b.</shortdescription>
 							<latex-image>
@@ -3072,7 +3072,7 @@
 
 					<p>
 						<md>
-							<mrow>R_{EQ}	\amp= 1.943~\textrm{k}\Omega//5~\textrm{k}\Omega</mrow>
+							<mrow>R_{EQ} \amp= 1.943~\textrm{k}\Omega//5~\textrm{k}\Omega</mrow>
 							<mrow>\amp= \frac{(1.943~\textrm{k}\Omega)(5~\textrm{k}\Omega)}{1.943~\textrm{k}\Omega + 5~\textrm{k}\Omega}</mrow>
 							<mrow>\amp= 1.40~\textrm{k}\Omega</mrow>
 						</md>
@@ -3081,7 +3081,7 @@
 					<p>This will not be solved using delta-wye transforms. Do this as a practice exercise. The equivalent resistance calculation should be 1.40<nbsp />k&#8486; regardless of the method used to calculate it. As a hint, the following circuit diagrams show the two possible delta configurations that can be used in a delta-wye transform. The delta resistances are highlighted in red.</p>
 
 					<figure>
-  						<caption>Circuit highlighting one possible delta configuration.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit23figansdelta1">
     						<shortdescription>Circuit with 5 resistors (R1, R4, and R5 same as before and new resistor Rx=R2+R3 and Ry=R6+r7) and four nodes. Nodes are labeled same as at start of this question. R1 (red) and Rx (red) connect at node a. Rx (red), R4 (red), and R5 connect at node e. R1 (red), R4 (red), and Ry connect at node f. R5 and Ry connect at node b.</shortdescription>
 							<latex-image>
@@ -3101,7 +3101,7 @@
 					</figure>
 
 					<figure>
-  						<caption>Circuit highlighting another possible delta configuration.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit23figansdelta2">
     						<shortdescription>Circuit with 5 resistors (R1, R4, and R5 same as before and new resistor Rx=R2+R3 and Ry=R6+r7) and four nodes. Nodes are labeled same as at start of this question. R1 and Rx connect at node a. Rx, R4 (red), and R5 (red) connect at node e. R1, R4 (red), and Ry (red) connect at node f. R5 (red) and Ry (red) connect at node b.</shortdescription>
 							<latex-image>
@@ -3137,7 +3137,7 @@
 					<p>Re-draw the circuit to include the resistor values as well as to emphasize the two nodes to calculate equivalent resistance between.</p>
 
 					<figure>
-  						<caption>Re-drawn circuit with resistor values, highlighting nodes b and c.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit24figans1">
     						<shortdescription>Circuit is functionally equivalent to previous question figure, changes described in text.</shortdescription>
 							<latex-image>
@@ -3160,7 +3160,7 @@
 					<p>Start by combining all series resistors together, then re-draw the circuit. There is only one set of three resistors in series, all the way on the left-hand side of the circuit.</p>
 
 					<figure>
-  						<caption>Re-drawn circuit with series resistors combined.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit24figans2">
     						<shortdescription>Circuit has two meshes. Left mesh contains a 3k and one 1k resistor. Right mesh shares the 1k resistor and has three additional 1k resistors. Nodes b and c defined between one of these 1k resistors.</shortdescription>
 							<latex-image>
@@ -3182,7 +3182,7 @@
 					<p>Combine the 3<nbsp />k&#8486; and 1<nbsp />k&#8486; resistors that are in parallel with each other. These are the only two parallel resistors in the circuit at this point. The parallel resistance of these two resistances is 0.75<nbsp />k&#8486;. Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Re-drawn circuit with parallel resistors combined.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit24figans3">
     						<shortdescription>Circuit has one mesh. The mesh contains a 0.75k and three 1k resistors. Nodes b and c defined between one of these 1k resistors.</shortdescription>
 							<latex-image>
@@ -3201,7 +3201,7 @@
 					<p>Now there are three resistors in series, two of the 1<nbsp />k&#8486; resistors and the 0.75<nbsp />k&#8486; resistor. The series resistance is equal to 2.75<nbsp />k&#8486;. Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Re-drawn circuit with series resistors combined.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit24figans4">
     						<shortdescription>Circuit has one mesh. The mesh contains a 2.75k and one 1k resistor. Nodes b and c defined between both of the resistors.</shortdescription>
 							<latex-image>
@@ -3268,7 +3268,7 @@
 					<p>There are two sets of series resistors that can be combined. The first set is the 4.7<nbsp />k&#8486; and 18<nbsp />k&#8486; resistors, with an equivalent series resistance of 22.7<nbsp />k&#8486;. The second set is the 6.8<nbsp />k&#8486; and 5.6<nbsp />k&#8486; resistors, with an equivalent series resistance of 12.4<nbsp />k&#8486;. The circuit can be re-drawn.</p>
 
 					<figure>
-  						<caption>Circuit re-drawn with series resistances combined.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit25figans1">
     						<shortdescription>Circuit with 10k, 1.8k, 24k, 22.7k, 2k, and 12.4k resistors and five nodes. Nodes are labeled same as previous. 10k, 1.8k, and 22.7k connect at node b. 1.8k, 2k, and 24k connect at node a. 24k and 12.4k connect at node c. 2k, 18k, and 12.4k connect at node e. 10k connects at g.</shortdescription>
 							<latex-image>
@@ -3289,7 +3289,7 @@
 					<p>Either a wye-delta transform or a delta-wye transform can be done to reduce the circuit. The following solution utilizes a wye-delta transform. The wye resistances are highlighted in red.</p>
 
 					<figure>
-  						<caption>Circuit re-drawn with wye resistances highlighted in red.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit25figans2">
     						<shortdescription>Same circuit as previous with 2k, 22.7k, and 12.4k resistors in red.</shortdescription>
 							<latex-image>
@@ -3323,19 +3323,18 @@
 					<p>Re-draw the circuit.</p>
 
 					<figure>
-  						<caption>Circuit re-drawn after the wye-delta transform.</caption>
-  						<image width="60%" xml:id="ch2-circuit25figans3">
+  						<caption></caption>
+  						<image width="65%" xml:id="ch2-circuit25figans3">
     						<shortdescription>Circuit with 10k, 1.8k, 24k, 28.36k, 15.49k, and 175.84k resistors and four nodes. Nodes are labeled same as previous. 10k, 1.8k, 28.36k, and 175.84k connect at node b. 1.8k, 24k, 28.36k, and 15.49k connect at node a. 24k, 15.49k, and 175.84k connect at node c. 10k connects at g.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
-									\draw[]	(0,5) to [R, l^=10~k$\Omega$, o-]		(2.5,5);
-									\draw[]	(2.5,5) to [short]					(5,5);
-									\draw[]	(2.5,5) to [R, l_=1.8~k$\Omega$, *-*]		(2.5,2.5);
-									\draw[]	(2.5,2.5) to [R, l_=24~k$\Omega$, -*]	(2.5,0);
-									\draw[]	(5,5) node[above] {b} to [R, l^=175.84~k$\Omega$, *-*]		(5,0);
-									\draw[]	(2.5,2.5) node[left] {a} to [R, l^=28.36~k$\Omega$]		(5,5);	
-									\draw[]	(2.5,2.5) to [R, l^=15.49~k$\Omega$]		(5,0) node[below] {c};
-									\draw[]	(0,0) to [short, o-]					(5,0);
+									\draw[]	(0,5) to [R, l^=10~k$\Omega$, o-]			(2.5,5) --++ (right:3.5);
+									\draw[]	(2.5,5) to [R, l_=1.8~k$\Omega$, *-*]		++(down:2.5);
+									\draw[]	(2.5,2.5) to [R, l_=24~k$\Omega$, -*]		(2.5,0);
+									\draw[]	(6,5) node[above] {b} to [R, l^=175.84~k$\Omega$, *-*]	++(down:5);
+									\draw[]	(2.5,2.5) node[left] {a} to [R, l^=28.36~k$\Omega$]	++(3.5,2.5);
+									\draw[]	(2.5,2.5) to [R, l^=~~~~15.49~k$\Omega$]	++(3.5,-2.5) node[below] {c};
+									\draw[]	(0,0) to [short, o-]						(6,0);
 								\end{tikzpicture}
 							</latex-image>
   						</image>
@@ -3344,7 +3343,7 @@
 					<p>The two resistances (1.8<nbsp />k&#8486; and 28.36<nbsp />k&#8486;) between nodes a and b are in parallel and can be combined, with a parallel resistance of 1.69<nbsp />k&#8486;. The two resistances (24<nbsp />k&#8486; and 15.49<nbsp />k&#8486;) between nodes a and c are in parallel and can be combined, with a parallel resistance of 9.41<nbsp />k&#8486;. The circuit can be re-drawn.</p>
 
 					<figure>
-  						<caption>Circuit re-drawn with parallel resistances combined.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit25figans4">
     						<shortdescription>Circuit with 10k, 1.69k, 9.41k, and 175.84k resistors and four nodes. Nodes are labeled same as previous. 10k, 1.69k, and 175.84k connect at node b. 1.69k and 9.41k connect at node a. 9.41k and 175.84k connect at node c. 10k connects at g.</shortdescription>
 							<latex-image>
@@ -3363,7 +3362,7 @@
 					<p>The 1.69<nbsp />k&#8486; resistance is in series with the 9.41<nbsp />k&#8486; resistance. The equivalent resistance is 11.11<nbsp />k&#8486;. The circuit can be re-drawn.</p>
 
 					<figure>
-  						<caption>Circuit re-drawn with series resistances combined.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit25figans5">
     						<shortdescription>Circuit with 10k, 11.11k and 175.84k resistors and three nodes. Nodes are labeled same as previous. 10k, 11.11k, and 175.84k connect at node b. 11.11k and 175.84k connect at node c. 10k connects at g.</shortdescription>
 							<latex-image>
@@ -3381,7 +3380,7 @@
 					<p>The 11.11<nbsp />k&#8486; and 175.84<nbsp />k&#8486; resistances are in parallel with each other. They have an equivalent resistance of 10.45<nbsp />k&#8486;. The circuit can be re-drawn.</p>
 
 					<figure>
-  						<caption>Circuit re-drawn with parallel resistances combined.</caption>
+  						<caption></caption>
   						<image width="30%" xml:id="ch2-circuit25figans6">
     						<shortdescription>Circuit with 10k and 10.45k resistors and three nodes. Nodes are labeled same as previous. 10k and 10.45k connect at node b. 10.45k connects at node c. 10k connects at g.</shortdescription>
 							<latex-image>
@@ -3403,10 +3402,10 @@
 						</md>
 					</p>
 
-					<p>This will not be solved using delta-wye transforms. Do this as a practice exercise. The equivalent resistance calculation should be 20.45<nbsp />k&#8486; regardless of the method used to calculate it. As a hint, the following circuit diagrams show the two possible delta configurations that can be used in a delta-wye transform. The delta resistances are highlighted in red.</p>
+					<p>For additional practice, perform a delta-wye transform instead of a wye-delta transform. The equivalent resistance calculation should be 20.45<nbsp />k&#8486; regardless of the method used to calculate it. As a hint, the following circuit diagrams show the two possible delta configurations that can be used in a delta-wye transform. The delta resistances are highlighted in red.</p>
 
 					<figure>
-  						<caption>Circuit highlighting one possible delta configuration.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit25figansdelta1">
     						<shortdescription>Circuit with 10k, 1.8k (red), 24k, 22.7k (red), 2k (red), and 12.4k resistors and five nodes. Nodes are labeled same as previous. 10k, 1.8k, and 22.7k connect at node b. 1.8k, 2k, and 24k connect at node a. 24k and 12.4k connect at node c. 2k, 18k, and 12.4k connect at node e. 10k connects at g.</shortdescription>
 							<latex-image>
@@ -3425,7 +3424,7 @@
 					</figure>
 
 					<figure>
-  						<caption>Circuit highlighting another possible delta configuration.</caption>
+  						<caption></caption>
   						<image width="50%" xml:id="ch2-circuit25figansdelta2">
     						<shortdescription>Circuit with 10k, 1.8k, 24k (red), 22.7k, 2k (red), and 12.4k (red) resistors and five nodes. Nodes are labeled same as previous. 10k, 1.8k, and 22.7k connect at node b. 1.8k, 2k, and 24k connect at node a. 24k and 12.4k connect at node c. 2k, 18k, and 12.4k connect at node e. 10k connects at g.</shortdescription>
 							<latex-image>
@@ -3982,7 +3981,7 @@
 					<p>The two <q>halves</q> of the circuit can be treated separately from each other. This is because the two halves are in parallel, and, from a standpoint of voltage, have identical voltage drops. First, let's consider the left <q>half,</q> re-drawn below.</p>
 
 					<figure>
-  						<caption>Left <q>half</q> of the circuit.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit215ans1">
     						<shortdescription>Circuit half has one mesh and 4 nodes, and contains only R1, R2, R3, and Vs.</shortdescription>
 							<latex-image>
@@ -4006,7 +4005,7 @@
 					<p>Now, let's consider the right <q>half,</q>, re-drawn below.</p>
 
 					<figure>
-  						<caption>Right <q>half</q> of the circuit.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit215ans2">
     						<shortdescription>Circuit half has two meshes and 4 nodes, and contains only Vs, R4, R5, R6, and R7.</shortdescription>
 							<latex-image>
@@ -4164,7 +4163,7 @@
 					<p>Let's start with the first approach. The circuit has been re-drawn to define the unknown voltage (let's call it <m>V_X</m>) and label the node of interest.</p>
 
 					<figure>
-  						<caption>Circuit re-drawn to define <m>V_X</m> and label the node of interest for performing KCL.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit218figans1">
     						<shortdescription>Same circuit as above, with Vx defined as dropping over the 100ohm resistor from node B to node D.</shortdescription>
 							<latex-image>
@@ -4224,7 +4223,7 @@
 					<p>Now let's use the second approach to solve for <m>I_X</m>. We will explicitly define branch currents to use in our calculations. The circuit is re-drawn with these branch currents defined below. (The direction of each branch current is chosen arbitrarily.)</p>
 
 					<figure>
-  						<caption>Circuit re-drawn to define unknown branch currents.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit218figans2">
     						<shortdescription>Same circuit as above with I1 defined through the 1k resistor flowing out of node A into node B. I2 flows through the other 1k resistor flowing out of node B into node C.</shortdescription>
 							<latex-image>
@@ -4319,7 +4318,7 @@
 					<p>KCL and KVL equations will be used to derive branch currents. Then, Ohm's law will be used to relate the branch current through the 1<nbsp />k&#8486; resistor to calculate <m>V_X</m>. There are three branches, so the circuit will be re-drawn to define each branch current (the directions have been selected arbitrarily). The perfect node in the circuit is also labeled on the circuit diagram.</p>
 
 					<figure>
-  						<caption>Circuit diagram with all branch currents defined and the perfect node labeled.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch2-circuit219figans1">
     						<shortdescription>Same circuit as above. I1 is defined through the 100ohm resistor flowing out of node A and into node B. I2 is defined through the 50ohm resistor flowing out of node B and into node E. I3 is defined through the 200ohm resistor flowing out of node C into node D.</shortdescription>
 							<latex-image>
@@ -4421,8 +4420,8 @@
 					<p>As drawn, the circuit contains zero perfect nodes and zero perfect loops. To remedy this, the branch current through the 100<nbsp />k&#8486; resistor will be defined. The re-drawn circuit is shown below.</p>
 
 					<figure>
-  						<caption>Circuit diagram with all branch currents defined and the perfect node labeled.</caption>
-  						<image width="60%" xml:id="ch2-circuit220figans1">
+  						<caption></caption>
+  						<image width="70%" xml:id="ch2-circuit220figans1">
     						<shortdescription>Same circuit as above with I1 defined through the 100k resistor flowing out of node B into node C.</shortdescription>
 							<latex-image>
 								\begin{tikzpicture}[font=\sffamily]
@@ -4580,7 +4579,7 @@
 					<p>Draw the circuit to define the mesh and branch currents. The branch current is labeled <m>I_X</m>.</p>
 
 					<figure>
-  						<caption>Circuit diagram corresponding to <xref ref="ch2meshq2" />.</caption>
+  						<caption></caption>
   						<image width="60%" xml:id="ch2-circuit222fig">
     						<shortdescription>Circuit with 2 meshes, 4 nodes, and 5 unknown circuit elements (E1-E5). E1 and E2 connect at node A. E2, E3, and E4 connect at node B. E4 and E5 connect at node C. E1, E3, and E5 connect at node D. A mesh current of 3A flows through E1, E2, and E3 through nodes D, A, B, and D. A mesh current of -6A flows through E3, E4, and E5 through nodes D, B, C, and D. Branch current Ix is defined as flowing through E3 from node B to node D.</shortdescription>
 							<latex-image>
@@ -4664,7 +4663,7 @@
 					<p>Draw the circuit with each mesh current defined. Because there are no current sources, there are no relationships between sources and mesh currents either directly or via a supermesh.</p>
 
 					<figure>
-  						<caption>Circuit diagram with all mesh currents defined.</caption>
+  						<caption></caption>
   						<image width="100%" xml:id="ch2-circuit224figans1">
     						<shortdescription>Circuit with 2 meshes and 5 nodes containing a 10V source, 100ohm resistor, 50ohm resistor, 2V source, 200ohm resistor, and 1k resistor. The high-potential end of the 10V source connects to the 100ohm resistor at node A. The 100ohm resistor, 50ohm resistor, and high-potential end of the 2V source connect at node B. The low-potential end of the 2V source connects to the 200ohm resistor at node C. The 200ohm and 1k resistors connect at node D. The low-potential end of the 10V source connects to the 50ohm and 1k resistors at node E. Voltage Vx is defined as dropping over the 1k resistor from node D to node E. Mesh current Ia flows through the 10V source, 100ohm resistor, and 50ohm resistor through nodes E, A, B, and E. Mesh current Ib flows through the 50ohm resistor, 2V source, 200ohm resistor, and 1k resistor through nodes E, B, C, D, and E.</shortdescription>
 							<latex-image>
@@ -4765,7 +4764,7 @@
 					<p>Redraw the circuit to define the mesh currents. (Note that some parameter values have been removed to make it easier to read the mesh current labels.)</p>
 
 					<figure>
-  						<caption>Circuit re-drawn to display mesh currents.</caption>
+  						<caption></caption>
   						<image width="80%" xml:id="ch2-circuit225figans1">
     						<shortdescription>Same circuit as above. Mesh current Ia flows through the 20V source, 10ohm resistor, and 20ohm resistor through nodes D, A, B, and D. Mesh current Ib flows through the 20ohm resistor, 60ohm resistor, and 8mA source through nodes D, , C, and D. Mesh current Ic flows through the 8mA source and 10ohm resistor through nodes D, C, and D.</shortdescription>
 							<latex-image>

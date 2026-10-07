@@ -23,24 +23,15 @@
 <div class="displaymath process-math">
 \begin{align*}
 i(t) \amp= C\frac{dv(t)}{dt}\\
-\amp= C\frac{d}{dt}\left(v(0^+) \textrm{e}^{-\frac{t}{\tau}}\right)\\
-\amp= Cv(0^+)\frac{d}{dt}\left(\textrm{e}^{-\frac{t}{\tau}}\right)\\
-\amp= -\frac{Cv(0^+)}{\tau}\textrm{e}^{-\frac{t}{\tau}}\\
-\amp= -\frac{Cv(0^+)}{RC}\textrm{e}^{-\frac{t}{\tau}}\\
-\amp= -\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}
+\amp= C\frac{d}{dt}\left(v(0^+) \textrm{e}^{-\frac{t}{\tau}}u(t) + v(0^-)u(-t)\right)\\
+\amp= C\frac{d}{dt}\left(v(0^+) \textrm{e}^{-\frac{t}{\tau}}u(t)\right) + C\frac{d}{dt}\left(v(0^-)u(-t)\right)\\
+\amp= Cv(0^+)\frac{d}{dt}\left( \textrm{e}^{-\frac{t}{\tau}}\right)u(t) + Cv(0^-)\frac{d}{dt}\left(1\right)u(-t)\\
+\amp= -\frac{Cv(0^+)}{\tau}\textrm{e}^{-\frac{t}{\tau}}u(t) + 0u(-t)\\
+\amp= -\frac{Cv(0^+)}{RC}\textrm{e}^{-\frac{t}{\tau}}u(t)\\
+\amp= -\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)
 \end{align*}
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccurrentderivation-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para">Because this was derived for times where <span class="process-math">\(t \geq 0\text{,}\)</span> that can be explicitly described mathematically by multiplying the equation by the unit step function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccurrentderivation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para logical">
-<div class="displaymath process-math">
-\begin{equation*}
-i(t) = -\frac{v(0^+)}{R}\textrm{e}^{-\frac{t}{\tau}}u(t)
-\end{equation*}
-</div>
-<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ch5-homogeneousrccurrentderivation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Derivation 5.7.1.2"><a tabindex="-1" href="#ch5-homogeneousrccurrentderivation" title="Copy heading and permalink for Derivation 5.7.1.2" aria-label="Copy heading and permalink for Derivation 5.7.1.2">🔗</a></div>
 </article><span class="incontext"><a class="internal" href="ch5-rccircuits.html#ch5-homogeneousrccurrentderivation">In Context</a></span>
